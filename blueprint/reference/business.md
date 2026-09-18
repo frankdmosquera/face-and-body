@@ -217,3 +217,25 @@ worth more revenue this month than the site launch.
 Treat the Instagram hours as correct for the build, still **verify** with her,
 and put the same seven rows on the site so there is one published source to
 point the other listings at.
+
+## Google Maps listing, read 2026-09-18
+
+The public Maps listing (search "Face and Body Wellness Centre 290 Midpark Way
+SE Calgary") corrects two things above:
+
+- **Rating is 4.7 from 79 Google reviews**, not "5.0 across every public
+  review". Facebook's 5.0 is from 3. The site prints the Google figure; the
+  project plan's line should be corrected.
+- **The owner's name is Sandra.** Reviews and her replies use it. Not yet in
+  any site copy; the About page will need it confirmed.
+
+Google shows the listing as "Facial spa", "LGBTQ+ friendly", "Identifies as
+women-owned", and the review topics people mention most: laser hair removal
+(6), relaxing massage (4), skin consultation (2), microneedling (2).
+
+Three reviews were readable in full and are used as verbatim excerpts in
+`data/reviews.ts` with the author shortened to first name and initial:
+O.O. B (a month ago, deep cleansing facial, acne-prone skin), Daniela Flores
+Samame (2 years ago, massages and laser hair removal), Irene Regier (a year
+ago, facial). Their Google star counts were not confirmed from the text; the
+cards do not print stars per review until they are.

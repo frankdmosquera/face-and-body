@@ -34,6 +34,13 @@ export type SiteConfig = {
   geo: { lat: number; lng: number };
   timezone: string;
   hours: readonly DayHours[];
+  founded: number;
+  ratings: readonly {
+    source: "google" | "facebook";
+    value: number;
+    count: number;
+  }[];
+  consultation: { durationMin: number; price: number };
   social: { instagram: string; facebook: string };
   nav: SiteLink[];
   footer: { heading: string; links: SiteLink[] }[];
@@ -83,6 +90,15 @@ export const siteConfig: SiteConfig = {
     { day: "saturday", open: "07:00", close: "11:30" },
     { day: "sunday", closed: true },
   ],
+  founded: 2023,
+  // Read from the public listings on 2026-09-18. project-plan.md said "5.0 across
+  // every public review"; Google Maps actually shows 4.7 from 79. Google first: it
+  // is the one the hero quotes.
+  ratings: [
+    { source: "google", value: 4.7, count: 79 },
+    { source: "facebook", value: 5, count: 3 },
+  ],
+  consultation: { durationMin: 15, price: 0 },
   social,
   nav: [...treatments.slice(0, 4), { label: "About", href: "/about" }],
   footer: [

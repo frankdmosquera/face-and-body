@@ -17,7 +17,7 @@ Everything needed for her to have a working, findable website. No AI.
 - [x] 2. **Business facts and services data** - one typed module for address,
   phone, hours and socials, and the 45 services with price, duration,
   category and concerns, so nothing is hard-coded twice
-- [ ] 3. **Home page** - hero, trust strip, browse by concern, treatment
+- [x] 3. **Home page** - hero, trust strip, browse by concern, treatment
   categories, signature treatment, results, Eminence, reviews, consultation,
   hours and location
 - [ ] 4. **Treatment category pages** - Facials, Skin Treatments, Body,
