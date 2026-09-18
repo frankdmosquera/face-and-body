@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Facials - Face and Body Wellness Centre</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="theme.css">
+<style>
+  .page-head { position: relative; padding: 80px 0 56px; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: end; overflow: hidden; }
+  .page-head .watermark { right: -120px; top: -140px; }
+  .page-head h1 { margin-top: 16px; }
+  .crumbs { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 24px; }
+  .crumbs a:hover { color: var(--accent-text); }
+  .head-banner { position: relative; }
+  .head-banner .ph { aspect-ratio: 21 / 8; }
+
+  .filters { position: sticky; top: 76px; z-index: 10; background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .filters-inner { display: flex; align-items: center; gap: 8px; height: 64px; overflow-x: auto; }
+  .filters-label { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-right: 12px; white-space: nowrap; }
+  .filter { padding: 8px 16px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); font-size: 13px; cursor: pointer; white-space: nowrap; transition: .15s; font-family: inherit; }
+  .filter:hover { border-color: var(--accent); }
+  .filter.on { background: var(--text); color: var(--bg); border-color: var(--text); }
+  .count { margin-left: auto; font-size: 13px; color: var(--muted); white-space: nowrap; }
+
+  .group { padding: 72px 0 24px; }
+  .group.hide { display: none; }
+  .group-head { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: end; margin-bottom: 40px; }
+  .group-head h2 { font-size: 40px; }
+  .group-head p { color: var(--muted); font-size: 15px; line-height: 1.7; max-width: 60ch; }
+  .group-head small { display: block; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-text); margin-bottom: 10px; }
+
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; display: flex; flex-direction: column; transition: transform .25s, box-shadow .25s; }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 18px 48px rgba(28,26,23,.08); }
+  .card.hide { display: none; }
+  .card .ph { aspect-ratio: 4 / 3; border-radius: 0; }
+  .card-body { padding: 24px 26px 26px; display: flex; flex-direction: column; flex: 1; }
+  .card .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+  .card h3 { font-size: 26px; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: var(--muted); line-height: 1.55; flex: 1; }
+  .card-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border); }
+  .price { font-family: var(--font-serif); font-size: 26px; color: var(--price); line-height: 1; }
+  .price small { font-family: var(--font-sans); font-size: 12px; color: var(--price-from); margin-right: 4px; letter-spacing: .04em; }
+  .dur { font-size: 12px; color: var(--muted); display: block; margin-top: 6px; letter-spacing: .04em; }
+  .card-foot .btn { padding: 10px 18px; font-size: 12px; }
+  .card.featured { grid-column: span 3; flex-direction: row; }
+  .card.featured .ph { aspect-ratio: auto; width: 48%; }
+  .card.featured .card-body { padding: 40px 44px; justify-content: center; }
+  .card.featured h3 { font-size: 38px; }
+  .card.featured p { flex: 0; font-size: 16px; }
+  .card.featured .card-foot { margin-top: 28px; }
+
+  .addons { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 40px 44px; margin-top: 72px; display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: center; }
+  .addons ul { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; }
+  .addons li { display: flex; justify-content: space-between; padding: 12px 0; border-top: 1px solid var(--border); font-size: 14px; }
+  .addons li span { color: var(--muted); }
+
+  .strip { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .strip .ph { aspect-ratio: 16 / 10; }
+  .strip ul { margin: 24px 0 32px; }
+  .strip li { padding: 12px 0; border-top: 1px solid var(--border); font-size: 15px; }
+  .strip li:last-child { border-bottom: 1px solid var(--border); }
+
+  @media (max-width: 900px) {
+    .page-head, .group-head, .addons, .strip { grid-template-columns: 1fr; gap: 20px; }
+    .page-head { padding: 48px 0 32px; }
+    .filters { top: 64px; }
+    .grid { grid-template-columns: 1fr; }
+    .card.featured { grid-column: span 1; flex-direction: column; }
+    .card.featured .ph { width: auto; aspect-ratio: 4 / 3; }
+    .card.featured .card-body { padding: 24px 26px; }
+    .card.featured h3 { font-size: 30px; }
+    .addons ul { grid-template-columns: 1fr; }
+    .addons { padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="home.html">
+      <div class="brand-mark"><img src="ig/logo.jpg" alt="Face and Body Wellness Centre"></div>
+      <div class="brand-name">Face &amp; Body<small>Wellness Centre</small></div>
+    </a>
+    <nav class="nav-links" id="menu">
+      <a class="active" href="facials.html">Facials</a>
+      <a href="microneedling.html">Skin Treatments</a>
+      <a href="#">Body</a>
+      <a href="#">Massage</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-cta">
+      <span class="nav-phone">(587) 969-3796</span>
+      <a class="btn btn-primary" href="#">Book on Square</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('menu').classList.toggle('open')"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="container page-head">
+  <div class="watermark"></div>
+  <div>
+    <div class="crumbs"><a href="home.html">Home</a> &nbsp;/&nbsp; Facials</div>
+    <span class="eyebrow">22 treatments &middot; from $60</span>
+    <h1>Facials</h1>
+  </div>
+  <p class="lede">Every facial starts with a look at your skin, not a menu. Pick by what you want to change, or book a free consultation and we'll pick together. All facials use Eminence Organics.</p>
+</div>
+<div class="container head-banner"><div class="ph ph-lg"><img src="ig/post-03.jpg" alt=""></div></div>
+
+<div class="filters" style="margin-top:48px">
+  <div class="container filters-inner">
+    <span class="filters-label">Filter by concern</span>
+    <button class="filter on" data-f="all">All</button>
+    <button class="filter" data-f="ageing">Fine lines</button>
+    <button class="filter" data-f="acne">Acne</button>
+    <button class="filter" data-f="pigment">Pigmentation</button>
+    <button class="filter" data-f="hydration">Hydration</button>
+    <button class="filter" data-f="texture">Texture</button>
+    <button class="filter" data-f="bright">Brightening</button>
+    <span class="count"><b id="n">22</b> facials</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <section class="group">
+    <div class="group-head">
+      <div><small>01 &middot; Cleansing and clearing</small><h2>For congested and breakout-prone skin</h2></div>
+      <p>Extractions, ultrasonic peeling, high-frequency and LED. These are the facials that empty the pores and calm the skin down. If your face feels like it needs a reset, start here.</p>
+    </div>
+    <div class="grid">
+      <div class="card featured" data-c="acne hydration">
+        <div class="ph"><img src="ig/post-04.jpg" alt=""></div>
+        <div class="card-body">
+          <div class="tags"><span class="tag">Most booked</span><span class="tag">Acne</span><span class="tag">Congestion</span></div>
+          <h3>Deep Cleansing Facial</h3>
+          <p>Eight steps, one visit. Extractions, ultrasonic peeling, high-frequency to calm breakouts, then LED and an oxygen boost. The one to book if your skin feels congested and you want it handled properly.</p>
+          <div class="card-foot"><div><span class="price">$159</span><span class="dur">1 hr 15 min</span></div><a class="btn btn-primary" href="#">Book</a></div>
+        </div>
+      </div>
+      <div class="card" data-c="hydration acne texture">
+        <div class="ph"><img src="https://images.pexels.com/photos/6568231/pexels-photo-6568231.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Hydration</span><span class="tag">Texture</span></div><h3>Hydra Spa Facial</h3><p>Vortex tip lifts impurities while infusing hydrating serums. No downtime, results the same day.</p><div class="card-foot"><div><span class="price">$159</span><span class="dur">1 hr 10 min</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="bright hydration">
+        <div class="ph"><img src="https://images.pexels.com/photos/19572633/pexels-photo-19572633.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Eminence</span><span class="tag">Brightening</span></div><h3>Detoxifying Facial</h3><p>Blueberry, raspberry and pineapple enzyme peel. Deep pore cleanse with lactic acid, all organic.</p><div class="card-foot"><div><span class="price">$145</span><span class="dur">1 hr</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="acne">
+        <div class="ph"><img src="https://images.pexels.com/photos/19695981/pexels-photo-19695981.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Acne</span><span class="tag">Body</span></div><h3>Back Facial</h3><p>Deep cleanse, extractions and massage for the skin you can't reach.</p><div class="card-foot"><div><span class="price">$189</span><span class="dur">1 hr 15 min</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="acne ageing">
+        <div class="ph"><img src="https://images.pexels.com/photos/9146381/pexels-photo-9146381.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Acne</span><span class="tag">Fine lines</span></div><h3>LED Light Therapy</h3><p>Blue for acne, red for collagen. A quiet 30 minutes, good as an add-on.</p><div class="card-foot"><div><span class="price">$60</span><span class="dur">30 min</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="group">
+    <div class="group-head">
+      <div><small>02 &middot; Resurfacing</small><h2>For texture, scarring and dullness</h2></div>
+      <p>Diamond tips, blades, acids and lasers. Each one takes off the top layer in a different way, and each suits a different skin. Most work best as a short course.</p>
+    </div>
+    <div class="grid">
+      <div class="card" data-c="texture ageing pigment">
+        <div class="ph"><img src="https://images.pexels.com/photos/6978043/pexels-photo-6978043.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Texture</span><span class="tag">Fine lines</span></div><h3>Microdermabrasion Facial</h3><p>Diamond-tip exfoliation for uneven tone, enlarged pores and sun-damaged skin. Best as a course.</p><div class="card-foot"><div><span class="price">$145</span><span class="dur">1 hr</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="texture bright">
+        <div class="ph"><img src="https://images.pexels.com/photos/29755259/pexels-photo-29755259.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Texture</span><span class="tag">Brightening</span></div><h3>Dermaplaning Facial</h3><p>Removes dead skin and fine facial hair with a precise blade. Makeup goes on smoother for weeks.</p><div class="card-foot"><div><span class="price">$145</span><span class="dur">1 hr</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="hydration texture acne">
+        <div class="ph"><img src="https://images.pexels.com/photos/7691112/pexels-photo-7691112.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Hydration</span><span class="tag">Acne</span></div><h3>Hydrodermabrasion</h3><p>Water-jet resurfacing with antioxidants and hyaluronic acid. Microdermabrasion's gentler sibling.</p><div class="card-foot"><div><span class="price">$155</span><span class="dur">1 hr 15 min</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="pigment texture acne">
+        <div class="ph"><img src="https://images.pexels.com/photos/27544680/pexels-photo-27544680.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Pigmentation</span><span class="tag">Texture</span></div><h3>Chemical Peel</h3><p>Strength chosen for your skin at consultation. Light peels have no downtime.</p><div class="card-foot"><div><span class="price"><small>from</small>$80</span><span class="dur">30 min</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="acne texture">
+        <div class="ph"><img src="https://images.pexels.com/photos/7648163/pexels-photo-7648163.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Acne</span><span class="tag">Pores</span></div><h3>Carbon Peel</h3><p>Carbon lotion, then laser. Deep-cleans pores and tightens texture in one visit.</p><div class="card-foot"><div><span class="price">$150</span><span class="dur">45 min</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="bright pigment">
+        <div class="ph"><img src="https://images.pexels.com/photos/1138531/pexels-photo-1138531.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Brightening</span><span class="tag">Pigmentation</span></div><h3>Hollywood Peel Facial</h3><p>The extended carbon laser facial. Red-carpet glow for events.</p><div class="card-foot"><div><span class="price">$260</span><span class="dur">1 hr 45 min</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="texture bright">
+        <div class="ph"><img src="https://images.pexels.com/photos/7900680/pexels-photo-7900680.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Eminence</span><span class="tag">Texture</span></div><h3>Fire and Ice Facial</h3><p>Warming enzyme resurfacing followed by a cooling treatment. Intense, then calm.</p><div class="card-foot"><div><span class="price">$169</span><span class="dur">1 hr</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="group">
+    <div class="group-head">
+      <div><small>03 &middot; Hydrating and brightening</small><h2>For dull, dry or tired skin</h2></div>
+      <p>Oxygen, enzymes, gold and organics. No downtime, immediate glow. These are the facials to book before an event, or every month to keep skin that's looked after rather than rescued.</p>
+    </div>
+    <div class="grid">
+      <div class="card" data-c="hydration ageing">
+        <div class="ph"><img src="https://images.pexels.com/photos/16008945/pexels-photo-16008945.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Hydration</span></div><h3>Oxygen Rejuvenating Facial</h3><p>Pressurised oxygen infuses serums deep into the skin. Plump, calm, rested.</p><div class="card-foot"><div><span class="price">$155</span><span class="dur">1 hr</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="bright pigment">
+        <div class="ph"><img src="https://images.pexels.com/photos/7255933/pexels-photo-7255933.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Brightening</span><span class="tag">Pigmentation</span></div><h3>Oxygen Brightening Facial</h3><p>Oxygen infusion with brightening actives for dull skin and uneven tone.</p><div class="card-foot"><div><span class="price">$155</span><span class="dur">1 hr</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="texture bright">
+        <div class="ph"><img src="https://images.pexels.com/photos/10574048/pexels-photo-10574048.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Eminence</span><span class="tag">Texture</span></div><h3>Revitalizing Facial</h3><p>Self-neutralising enzyme lactic peel. Immediate results, safe on sensitive skin, no downtime.</p><div class="card-foot"><div><span class="price">$155</span><span class="dur">1 hr</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="hydration">
+        <div class="ph"><img src="https://images.pexels.com/photos/36930637/pexels-photo-36930637.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Eminence</span><span class="tag">Hydration</span></div><h3>Eminence Facial</h3><p>The classic organic facial, customised to your skin on the day.</p><div class="card-foot"><div><span class="price">$159</span><span class="dur">1 hr 20 min</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="ageing bright">
+        <div class="ph"><img src="https://images.pexels.com/photos/6925480/pexels-photo-6925480.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Fine lines</span><span class="tag">Brightening</span></div><h3>Gold Facial</h3><p>24K gold leaf over microdermabrasion and hand-blended masks. Visible tightening and a warm glow.</p><div class="card-foot"><div><span class="price">$159</span><span class="dur">1 hr 15 min</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="hydration">
+        <div class="ph"><img src="https://images.pexels.com/photos/38167596/pexels-photo-38167596.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Quick</span></div><h3>Mini Facial</h3><p>Cleanse, exfoliate, tone and mask in thirty minutes. For the lunch break.</p><div class="card-foot"><div><span class="price">$60</span><span class="dur">30 min</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="hydration">
+        <div class="ph"><img src="https://images.pexels.com/photos/16655676/pexels-photo-16655676.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Maintenance</span></div><h3>SPF Treatment</h3><p>Hydration and sun protection layered in. The between-facials visit.</p><div class="card-foot"><div><span class="price">$80</span><span class="dur">30 min</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="group">
+    <div class="group-head">
+      <div><small>04 &middot; Lifting and firming</small><h2>For skin that's losing its bounce</h2></div>
+      <p>Ultrasound, radio-frequency and firming massage. No needles, no downtime. The device facials, for the jaw, the eyes and the neck.</p>
+    </div>
+    <div class="grid">
+      <div class="card" data-c="ageing">
+        <div class="ph"><img src="https://images.pexels.com/photos/7480271/pexels-photo-7480271.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Fine lines</span><span class="tag">Lifting</span></div><h3>HIFU Facial</h3><p>Cleanse and polish, then focused ultrasound along the jaw, eyes and neck to tighten from below.</p><div class="card-foot"><div><span class="price">$155</span><span class="dur">1 hr</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="ageing">
+        <div class="ph"><img src="https://images.pexels.com/photos/14697557/pexels-photo-14697557.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Fine lines</span><span class="tag">Lifting</span></div><h3>Radio Frequency Facial</h3><p>Heats the dermis to stimulate collagen. Non-surgical tightening, no needles.</p><div class="card-foot"><div><span class="price">$160</span><span class="dur">1 hr</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+      <div class="card" data-c="ageing">
+        <div class="ph"><img src="https://images.pexels.com/photos/12698454/pexels-photo-12698454.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop" alt=""></div>
+        <div class="card-body"><div class="tags"><span class="tag">Fine lines</span></div><h3>Lifting Facial</h3><p>Firming massage and masks for skin that's starting to lose its bounce.</p><div class="card-foot"><div><span class="price">$159</span><span class="dur">1 hr</span></div><a class="btn btn-primary" href="#">Book</a></div></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="addons">
+    <div><span class="eyebrow">Add to any facial</span><h2 style="margin-top:14px;font-size:36px">Add-ons</h2><p style="color:var(--muted);font-size:14px;margin-top:12px">Ask when you book, or at the start of your visit. <span class="verify">confirm list</span></p></div>
+    <ul>
+      <li>LED light therapy <span>+ $40</span></li>
+      <li>Head massage, 15 min <span>+ $35</span></li>
+      <li>Eye treatment <span>+ $25</span></li>
+      <li>Lip treatment <span>+ $20</span></li>
+      <li>Neck and decolletage <span>+ $30</span></li>
+      <li>Oxygen boost <span>+ $30</span></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="divider" style="padding-top:var(--section)"><div class="orchid"></div></div>
+
+<section class="section section-2" style="padding-top:0">
+  <div class="container strip" style="padding-top:var(--section)">
+    <div class="ph ph-lg"><img src="https://images.pexels.com/photos/32428850/pexels-photo-32428850.jpeg?auto=compress&cs=tinysrgb&w=900&h=560&fit=crop" alt=""></div>
+    <div>
+      <span class="eyebrow">Can't decide</span>
+      <h2 style="margin-top:16px">Let us look first</h2>
+      <ul>
+        <li>Free 15 minute skin consultation</li>
+        <li>We'll tell you which of these will actually work for you</li>
+        <li>Written plan with pricing, no obligation</li>
+      </ul>
+      <a class="btn btn-primary" href="#">Book a consultation</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:20px"><div class="brand-mark"><img src="ig/logo.jpg" alt="Face and Body Wellness Centre"></div><div class="brand-name">Face &amp; Body<small>Wellness Centre</small></div></div>
+        <p class="footer-address">Unit 330, 290 Midpark Way SE<br>Calgary, AB T2X 1P1<br>(587) 969-3796<br>faceandbodywellnesscentre@gmail.com</p>
+      </div>
+      <div><h4>Treatments</h4><ul><li><a href="facials.html">Facials</a></li><li><a href="microneedling.html">Skin treatments</a></li><li><a href="#">Body contouring</a></li><li><a href="#">Massage</a></li><li><a href="#">Laser and IPL</a></li></ul></div>
+      <div><h4>Clinic</h4><ul><li><a href="about.html">About</a></li><li><a href="#">Eminence Organics</a></li><li><a href="#">Before and after</a></li><li><a href="#">FAQ</a></li></ul></div>
+      <div><h4>Book</h4><ul><li><a href="#">Book on Square</a></li><li><a href="#">Free consultation</a></li><li><a href="#">Gift cards</a></li><li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li></ul></div>
+    </div>
+    <div class="footer-wordmark">Face &amp; Body</div>
+    <div class="footer-bottom"><span>&copy; 2026 Face and Body Wellness Centre</span><span>Privacy &middot; Terms</span></div>
+  </div>
+</footer>
+
+<div class="note"><b>Prototype.</b> Her real logo, photos and hours are in. Remaining grey-toned photos are stock stand-ins. Reviews and offers are placeholders marked to confirm.</div>
+
+<script>
+  // view toggle only: filter cards by concern, hide groups that empty out
+  const cards = [...document.querySelectorAll('.card')];
+  const groups = [...document.querySelectorAll('.group')];
+  document.querySelectorAll('.filter').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('.filter').forEach(x => x.classList.remove('on'));
+    b.classList.add('on');
+    const f = b.dataset.f;
+    let n = 0;
+    cards.forEach(c => { const show = f === 'all' || c.dataset.c.split(' ').includes(f); c.classList.toggle('hide', !show); if (show) n++; });
+    groups.forEach(g => g.classList.toggle('hide', !g.querySelector('.card:not(.hide)')));
+    document.getElementById('n').textContent = n;
+  }));
+</script>
+
+</body>
+</html>

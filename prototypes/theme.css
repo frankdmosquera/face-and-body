@@ -1,0 +1,217 @@
+/* Theme - the durable output of /prototype.
+   The :root block is what ports into the app's globals.css @theme.
+   Everything under "Base layer" is prototype plumbing shared by the mockups
+   and gets rebuilt as components in the real app.
+
+   Palette is sampled from the Instagram logo. Replace the copper values with
+   exact picks from the original logo file when it lands in blueprint/reference. */
+
+:root {
+  /* surfaces */
+  --bg: #f7f2ea;          /* page ground, warm cream          */
+  --surface: #fffdf9;     /* cards, inputs                     */
+  --surface-2: #efe6d8;   /* sand bands, alternating sections  */
+  --border: #e2d7c6;
+  --dark: #1c1a17;        /* dark bands, footer                */
+  --dark-surface: #2a2723;
+
+  /* text */
+  --text: #1c1a17;
+  --muted: #6b645b;
+  --faint: #a49c90;
+  --on-dark: #f7f2ea;
+  --on-dark-muted: #b8b0a4;
+
+  /* accent - copper from the logo, rose gold for tints */
+  --accent: #c0704f;
+  --accent-hover: #a05030;
+  --accent-soft: #f0b090;
+  --accent-tint: #fbeade;  /* tag backgrounds, hover fills     */
+  --accent-ink: #fffdf9;   /* text on accent                   */
+  --accent-text: #96492a;  /* copper for small text; the base accent fails contrast under 18px */
+
+  /* component states */
+  --price: var(--text);
+  --price-from: var(--muted);
+  --tag-bg: var(--accent-tint);
+  --tag-text: #96492a;
+  --placeholder-bg: #e6ddd0;
+  --placeholder-text: #8f867a;
+
+  /* type */
+  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+
+  /* scale */
+  --radius: 4px;
+  --radius-lg: 20px;
+  --container: 1200px;
+  --section: 112px;
+  --gutter: 32px;
+}
+
+/* ----------------------------------------------------------------------
+   Base layer - prototype only
+   ---------------------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img, video { display: block; max-width: 100%; }
+ul { margin: 0; padding: 0; list-style: none; }
+h1, h2, h3, h4 { margin: 0; font-family: var(--font-serif); font-weight: 500; line-height: 1.1; letter-spacing: -0.01em; }
+h1 { font-size: 72px; }
+h2 { font-size: 48px; }
+h3 { font-size: 28px; }
+p { margin: 0; }
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  font-weight: 500;
+}
+.lede { font-size: 19px; color: var(--muted); max-width: 56ch; }
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
+.section { padding: var(--section) 0; }
+.section-2 { background: var(--surface-2); }
+.section-dark { background: var(--dark); color: var(--on-dark); }
+.section-dark .eyebrow { color: var(--accent-soft); }
+.section-dark .lede { color: var(--on-dark-muted); }
+.rule { height: 1px; background: var(--border); border: 0; margin: 0; }
+.rule-accent { width: 56px; height: 1px; background: var(--accent); margin: 20px 0 28px; }
+
+/* buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+.btn-primary:hover { background: var(--accent-hover); }
+.btn-ghost { border-color: var(--text); color: var(--text); background: transparent; }
+.btn-ghost:hover { background: var(--text); color: var(--bg); }
+.section-dark .btn-ghost { border-color: var(--on-dark); color: var(--on-dark); }
+.section-dark .btn-ghost:hover { background: var(--on-dark); color: var(--dark); }
+.btn-link { display: inline-flex; gap: 8px; align-items: center; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; border-bottom: 1px solid var(--accent); padding-bottom: 2px; color: var(--text); }
+
+/* nav */
+.nav {
+  position: sticky; top: 0; z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-mark { width: 44px; height: 44px; border-radius: 50%; overflow: hidden; flex: none; background: #fff; }
+.brand-mark img { width: 100%; height: 100%; object-fit: cover; }
+.brand-name { font-family: var(--font-serif); font-size: 21px; letter-spacing: 0.04em; line-height: 1; }
+.brand-name small { display: block; font-family: var(--font-sans); font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-top: 4px; }
+.nav-links { display: flex; gap: 32px; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
+.nav-links a { padding: 6px 0; border-bottom: 1px solid transparent; }
+.nav-links a:hover, .nav-links a.active { border-bottom-color: var(--accent); }
+.nav-cta { display: flex; align-items: center; gap: 22px; }
+.nav-phone { font-size: 13px; color: var(--muted); }
+
+/* announcement */
+.announce { background: var(--dark); color: var(--on-dark); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; text-align: center; padding: 10px; }
+.announce a { color: var(--accent-soft); border-bottom: 1px solid currentColor; }
+
+/* placeholders for media that hasn't been supplied yet */
+.ph {
+  background: var(--placeholder-bg);
+  color: var(--placeholder-text);
+  display: grid; place-items: center; text-align: center;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  border-radius: var(--radius);
+  position: relative; overflow: hidden;
+}
+.ph::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(135deg, transparent 45%, rgba(0,0,0,.04) 50%, transparent 55%);
+}
+.ph::before {
+  content: ""; position: absolute; width: 38%; height: 38%; max-width: 160px; max-height: 160px;
+  background: var(--accent); opacity: .12;
+  -webkit-mask: url(orchid.svg) center / contain no-repeat; mask: url(orchid.svg) center / contain no-repeat;
+}
+.ph > * { position: relative; }
+.ph img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+.ph img + .ph-label { z-index: 2; color: #fff; background: rgba(28,26,23,.55); padding: 4px 8px; border-radius: 3px; opacity: 1; }
+.ph span, .ph { line-height: 1.7; }
+.ph-label { position: absolute; left: 12px; bottom: 10px; font-size: 10px; letter-spacing: .12em; opacity: .7; }
+
+/* mobile menu */
+.burger { display: none; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 50%; background: var(--surface); cursor: pointer; padding: 0; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+.burger span { display: block; width: 16px; height: 1px; background: var(--text); }
+.ph-arch { border-radius: 999px 999px var(--radius) var(--radius); }
+.ph-round { border-radius: 50%; }
+.ph-lg { border-radius: var(--radius-lg); }
+
+/* tags */
+.tag { display: inline-block; padding: 4px 10px; border-radius: 999px; background: var(--tag-bg); color: var(--tag-text); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+/* footer */
+.footer { background: var(--dark); color: var(--on-dark); padding: 80px 0 32px; overflow: hidden; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 72px; }
+.footer h4 { font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent-soft); margin-bottom: 18px; }
+.footer li { margin-bottom: 10px; font-size: 14px; color: var(--on-dark-muted); }
+.footer li a:hover { color: var(--on-dark); }
+.footer-address { font-size: 14px; color: var(--on-dark-muted); line-height: 1.8; }
+.footer-wordmark { font-family: var(--font-serif); font-size: clamp(64px, 11vw, 160px); line-height: .9; letter-spacing: -0.02em; color: var(--dark-surface); white-space: nowrap; margin: 0 -8px 40px; }
+.footer-bottom { display: flex; justify-content: space-between; font-size: 12px; color: var(--on-dark-muted); padding-top: 24px; border-top: 1px solid var(--dark-surface); }
+
+/* orchid - the logo motif, drawn once in orchid.svg and coloured from the theme */
+.orchid {
+  display: block; width: 44px; height: 46px;
+  background: var(--accent);
+  -webkit-mask: url(orchid.svg) center / contain no-repeat;
+  mask: url(orchid.svg) center / contain no-repeat;
+}
+.divider { display: flex; align-items: center; gap: 24px; justify-content: center; padding: 8px 0 var(--section); }
+.divider::before, .divider::after { content: ""; flex: 0 0 96px; height: 1px; background: var(--border); }
+.section-dark .divider::before, .section-dark .divider::after { background: var(--dark-surface); }
+.watermark { position: absolute; width: 520px; height: 540px; background: var(--accent); opacity: .07; pointer-events: none;
+  -webkit-mask: url(orchid.svg) center / contain no-repeat; mask: url(orchid.svg) center / contain no-repeat; }
+
+/* phone - enough to not embarrass on a first open, the real build does it properly */
+@media (max-width: 900px) {
+  :root { --section: 64px; --gutter: 20px; }
+  h1 { font-size: 44px; }
+  h2 { font-size: 34px; }
+  .lede { font-size: 17px; }
+  .nav-inner { height: 64px; }
+  .nav-phone { display: none; }
+  .burger { display: flex; }
+  .nav-cta { gap: 10px; }
+  .nav-links { display: none; position: absolute; left: 0; right: 0; top: 64px; flex-direction: column; gap: 0; background: var(--bg); border-bottom: 1px solid var(--border); padding: 8px var(--gutter) 16px; font-size: 15px; }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 14px 0; border-bottom: 1px solid var(--border); }
+  .nav-links a.active, .nav-links a:hover { border-bottom-color: var(--border); color: var(--accent-text); }
+  .brand-name { font-size: 18px; }
+  .btn { padding: 12px 20px; font-size: 12px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer-wordmark { font-size: 64px; }
+  .footer-bottom { flex-direction: column; gap: 8px; }
+  .note { display: none; }
+  .divider::before, .divider::after { flex-basis: 48px; }
+}
+
+/* notes to the reviewer - visible in the mockup, gone in the build */
+.note { position: fixed; bottom: 16px; left: 16px; z-index: 30; background: var(--dark); color: var(--on-dark); font-size: 12px; padding: 10px 14px; border-radius: var(--radius); max-width: 320px; opacity: .92; }
+.note b { color: var(--accent-soft); }
