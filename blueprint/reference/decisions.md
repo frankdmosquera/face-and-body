@@ -35,6 +35,10 @@ forms, treatment notes or client photos. Frank confirmed she handles all of
 that in person at the clinic, so the booking layer only has to take bookings.
 Revisit only if she later wants records online.
 
+**The UI never names the provider either.** Buttons say "Book now", not "Book
+on Square" or "Book on Cal.com". A label naming the provider becomes a lie the
+day it is swapped, and it leaks the implementation into copy for no gain.
+
 **This does not block the build.** The Book control is one component and one
 destination. Pages get built first; the booking layer drops in at the end.
 Deliberately sequenced so she is not migrating booking systems in the same
