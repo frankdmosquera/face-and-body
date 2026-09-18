@@ -26,7 +26,7 @@ faceandbodywellnesscentre@gmail.com
 | Square site | Bare service menu. No branding, no photos, no pages. This is the whole current website. |
 | Square booking | The real booking engine. Works. Keep it. |
 | Instagram | @faceandbodywellnesscentre, 458 followers. The strongest asset by far. |
-| Facebook | 240+ followers, 5.0 from 3 reviews |
+| Facebook | 240+ followers, 5.0 from 3 reviews. `https://www.facebook.com/FACEANDBODYWELLNESSCENTRE/`, found by web search 2026-09-18 |
 | Yelp | Listed under Medical Spas |
 | Eminence Organics | Authorised stockist, has an official spa link |
 | Directory noise | bookbeauty.ca, cityofcalgary.com, wheree, wanderboat, maptons, trip.com. Scraped listings, not hers. |
