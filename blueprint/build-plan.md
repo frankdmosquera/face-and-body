@@ -14,7 +14,7 @@ Everything needed for her to have a working, findable website. No AI.
 - [x] 1. **Design foundation** - port `prototypes/theme.css` into `globals.css`
   `@theme`, add the fonts, the orchid motif, and the shared layout shell of
   nav, footer and section primitives
-- [ ] 2. **Business facts and services data** - one typed module for address,
+- [x] 2. **Business facts and services data** - one typed module for address,
   phone, hours and socials, and the 45 services with price, duration,
   category and concerns, so nothing is hard-coded twice
 - [ ] 3. **Home page** - hero, trust strip, browse by concern, treatment
