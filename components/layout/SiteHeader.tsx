@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Brand } from "@/components/layout/Brand";
 import { Container } from "@/components/layout/Container";
 import { NavMenu } from "@/components/layout/NavMenu";
+import { ModeToggle } from "@/components/theme/ModeToggle";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/data/siteConfig";
 
@@ -11,6 +12,7 @@ export function SiteHeader() {
       <Container className="relative flex h-16 items-center justify-between lg:h-[76px]">
         <Brand />
         <NavMenu links={siteConfig.nav}>
+          <ModeToggle />
           <a
             href={siteConfig.phone.tel}
             className="hidden text-[13px] text-muted-foreground lg:inline"

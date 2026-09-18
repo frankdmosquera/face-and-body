@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { siteConfig } from "@/data/siteConfig";
 import "./globals.css";
 
@@ -26,10 +27,6 @@ export const metadata: Metadata = {
   description: siteConfig.description,
 };
 
-// Runs before first paint so a dark-preference visitor never sees a cream flash.
-// localStorage.theme is only read here; a future toggle is what writes it.
-const themeScript = `try{var t=localStorage.getItem("theme");if(t?t==="dark":matchMedia("(prefers-color-scheme: dark)").matches)document.documentElement.classList.add("dark")}catch(e){}`;
-
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -37,13 +34,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       suppressHydrationWarning
       className={`${cormorant.variable} ${inter.variable} h-full`}
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-      </head>
       <body className="flex min-h-full flex-col">
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
+        <ThemeProvider>
+          <SiteHeader />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
+        </ThemeProvider>
       </body>
     </html>
   );
