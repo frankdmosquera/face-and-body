@@ -705,7 +705,7 @@
   <aside class="side">
     <div class="brand">
       <div class="brand-name">face-and-body</div>
-      <div class="brand-sub">Build log<br>Not yet published</div>
+      <div class="brand-sub">Build log<br>17 Sep 2026</div>
     </div>
 
     <nav class="nav-group" aria-label="Project sections">
@@ -716,7 +716,7 @@
 
     <nav class="nav-group" aria-label="Features">
       <div class="nav-head">Features</div>
-      <div class="nav-note">A group lands here each time <code>/feature</code> specs one. Nothing has been specced yet.</div>
+      <div class="nav-note">A group lands here each time <code>/feature</code> specs one. Nothing has been specced yet &mdash; feature 1 is next.</div>
     </nav>
 
     <div class="legend" aria-label="What the markers mean">
@@ -752,49 +752,52 @@
         <div class="rows">
           <div class="row">
             <div class="row-key">1 &middot; Problem</div>
-            <div class="row-val placeholder">Written by <code>/overview</code> from <code>project-plan.md</code> section 1.</div>
+            <div class="row-val">A licensed medical aesthetics clinic running since 2023 with <strong>no website</strong>. Its whole web presence is a bare Square menu: 45 services in one flat list, no photographs, no reason to choose her. Her $290 and $350 treatments are line items in a dropdown, and her Google profile publishes wrong hours on six of seven days.</div>
           </div>
           <div class="row">
             <div class="row-key">2 &middot; Users</div>
-            <div class="row-val placeholder">Section 2.</div>
+            <div class="row-val">Primary: a woman in SE Calgary, roughly 30&ndash;55, with a specific skin concern, comparison-shopping clinics on her phone at night. Secondary: the local regular rebooking every four to six weeks. Tertiary: the gift buyer. No accounts, every visitor anonymous.</div>
           </div>
           <div class="row">
             <div class="row-key">3 &middot; Features</div>
-            <div class="row-val placeholder">Section 3.</div>
+            <div class="row-val">Eleven Phase&nbsp;1 features: design foundation, services data, home, category pages, treatment detail, browse by concern, about, hours and location, contact, SEO, and booking. Out of scope: product sales, accounts, consent forms, records, blog.</div>
           </div>
           <div class="row">
             <div class="row-key">4 &middot; Data</div>
-            <div class="row-val placeholder">Section 4.</div>
+            <div class="row-val"><strong>No database.</strong> Typed constants in the repo: Service, Concern, BusinessFacts, Review. Bookings live in Cal.com, deposits in Stripe. Nothing about a visitor is stored.</div>
           </div>
           <div class="row">
             <div class="row-key">5 &middot; Tech</div>
-            <div class="row-val placeholder">Section 5.</div>
+            <div class="row-val">Next.js&nbsp;16, React&nbsp;19, TypeScript, Tailwind&nbsp;v4, shadcn. ImageKit for images, Resend for the contact fallback, Cal.com for booking behind a swappable component. No database, no auth, no backend.</div>
           </div>
           <div class="row">
             <div class="row-key">6 &middot; Monetize</div>
-            <div class="row-val placeholder">Section 6.</div>
+            <div class="row-val">Not in v1. The site earns nothing directly; success is booked appointments. Commercially an agency client project, with the arrangement still unverified.</div>
           </div>
           <div class="row">
             <div class="row-key">7 &middot; UI/UX</div>
-            <div class="row-val placeholder">Section 7.</div>
+            <div class="row-val">Warm editorial with clinic credibility. Palette sampled from her real logo: copper <code>#c0704f</code>, cream <code>#f7f2ea</code>, near-black ink. Cormorant Garamond over Inter, the orchid as watermark, motion in CSS only. <strong>Mobile matters more than desktop.</strong></div>
           </div>
           <div class="row">
             <div class="row-key">8 &middot; Deployment</div>
-            <div class="row-val placeholder">Section 8.</div>
+            <div class="row-val">Vercel, <code>npm run build</code>, single deploy unit. One env var, <code>RESEND_API_KEY</code>, for feature&nbsp;9 only. No database, storage, workers or cron. <strong>No domain owned yet.</strong></div>
           </div>
         </div>
       </section>
 
       <section>
         <h2>Locked decisions</h2>
-        <div class="empty">
-          <span>No decisions locked yet.</span>
-          <span class="mono">Anything a later feature depends on staying stable gets listed here by <code>/overview</code>.</span>
+        <div class="rows">
+          <div class="row"><div class="row-key">Service shape</div><div class="row-val">Features 3&ndash;11 and all of Phase&nbsp;2 read it. <code>durationMin</code> blocks her calendar and <code>price</code> is legitimately <code>null</code> on three services.</div></div>
+          <div class="row"><div class="row-key">Seven-day hours</div><div class="row-val">Her hours differ every day and total about 24 hours a week. They render as seven explicit rows, never collapsed into ranges.</div></div>
+          <div class="row"><div class="row-key">Booking is swappable</div><div class="row-val">Cal.com is the first provider, not a commitment. No Cal.com import, call or id appears outside the booking component, so Frank&rsquo;s own booker can replace it in one file.</div></div>
+          <div class="row"><div class="row-key">Positioning</div><div class="row-val">Medical aesthetics clinic, not wellness sanctuary. Results and expertise lead.</div></div>
+          <div class="row"><div class="row-key">No database</div><div class="row-val">Marketing site. Adding one is a project-plan change, not a feature decision.</div></div>
         </div>
       </section>
 
       <footer>
-        <span>Not yet generated</span>
+        <span>17 Sep 2026</span>
         <span>&middot;</span>
         <span>Sources: blueprint/project-plan.md, build-plan.md, project-overview.md</span>
       </footer>
@@ -815,7 +818,7 @@
           this log the moment it starts.
         </p>
         <div class="facts">
-          <span class="pill pill--plan">0 planned</span>
+          <span class="pill pill--plan">18 planned</span>
           <span class="sep">/</span>
           <span class="pill pill--live">0 in progress</span>
           <span class="sep">/</span>
@@ -824,15 +827,37 @@
       </header>
 
       <section>
-        <h2>Build plan</h2>
-        <div class="empty">
-          <span>No build plan yet.</span>
-          <span class="mono">Run <code>/overview</code> after both plan docs are written.</span>
-        </div>
+        <h2>Phase 1 &mdash; the site that books appointments</h2>
+        <div class="item" data-state="planned"><div class="item-num">01</div><div class="item-body"><div class="item-name">Design foundation</div><div class="item-text">Port <code>prototypes/theme.css</code> into <code>globals.css</code> <code>@theme</code>, fonts, orchid motif, nav and footer shell.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">02</div><div class="item-body"><div class="item-name">Business facts and services data</div><div class="item-text">One typed module for hours, address and the 45 services. Everything downstream reads it.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">03</div><div class="item-body"><div class="item-name">Home page</div><div class="item-text">Hero, trust strip, browse by concern, categories, signature treatment, results, Eminence, reviews, hours, location.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">04</div><div class="item-body"><div class="item-name">Treatment category pages</div><div class="item-text">Five categories, grouped within each page, with concern filtering.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">05</div><div class="item-body"><div class="item-name">Treatment detail pages</div><div class="item-text">One template for every service, deep for the high-value ones.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">06</div><div class="item-body"><div class="item-name">Browse by concern</div><div class="item-text">Landing pages per concern, for visitors who know the problem and not the treatment name.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">07</div><div class="item-body"><div class="item-name">About page</div><div class="item-text">Her story, credentials, the room, Eminence partnership.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">08</div><div class="item-body"><div class="item-name">Hours and location</div><div class="item-text">Seven-day hours with an open-now state, map, directions, parking, click-to-call and text.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">09</div><div class="item-body"><div class="item-name">Contact and enquiry</div><div class="item-text">Text-first, Resend form as fallback, and the ask-about-pricing path for treatments with no published price.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">10</div><div class="item-body"><div class="item-name">Local SEO foundations</div><div class="item-text">LocalBusiness and Service schema, metadata, Open Graph, sitemap, robots.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">11</div><div class="item-body"><div class="item-name">Booking integration</div><div class="item-text">One booking component with a service-shaped interface, Cal.com behind it, plus the event-type generator. <strong>The headline feature.</strong></div></div></div>
+      </section>
+
+      <section>
+        <h2>Phase 1b &mdash; after launch</h2>
+        <div class="item" data-state="planned"><div class="item-num">12</div><div class="item-body"><div class="item-name">Before and after gallery</div><div class="item-text">Filterable by treatment and concern, built to grow as she photographs more.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">13</div><div class="item-body"><div class="item-name">Deployment readiness</div><div class="item-text">Vercel config, production build check, domain, smoke-test path.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">14</div><div class="item-body"><div class="item-name">Reviews</div><div class="item-text">A maintainable way to add reviews as they accumulate.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">15</div><div class="item-body"><div class="item-name">Gift cards and series</div><div class="item-text">Present the packages, link to Square for purchase.</div></div></div>
+      </section>
+
+      <section>
+        <h2>Phase 2 &mdash; AI automation</h2>
+        <div class="item" data-state="planned"><div class="item-num">16</div><div class="item-body"><div class="item-name">After-hours enquiry assistant</div><div class="item-text">Answers which treatment suits which concern, cost, what happens in a session, where she is. <strong>Must not give medical advice.</strong></div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">17</div><div class="item-body"><div class="item-name">Booking handoff</div><div class="item-text">Hands a qualified enquiry into the booking component rather than ending in a dead end.</div></div></div>
+        <div class="item" data-state="planned"><div class="item-num">18</div><div class="item-body"><div class="item-name">Enquiry triage</div><div class="item-text">Summarises what came in overnight, so she opens one list not a week of unread texts.</div></div></div>
       </section>
 
       <footer>
-        <span>Not yet generated</span>
+        <span>17 Sep 2026</span>
         <span>&middot;</span>
         <span>Source: blueprint/build-plan.md</span>
       </footer>
