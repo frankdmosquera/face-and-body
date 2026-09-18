@@ -11,7 +11,7 @@ Features 1 to 4 give a site that could go live; everything after deepens it.
 
 Everything needed for her to have a working, findable website. No AI.
 
-- [ ] 1. **Design foundation** - port `prototypes/theme.css` into `globals.css`
+- [x] 1. **Design foundation** - port `prototypes/theme.css` into `globals.css`
   `@theme`, add the fonts, the orchid motif, and the shared layout shell of
   nav, footer and section primitives
 - [ ] 2. **Business facts and services data** - one typed module for address,
