@@ -32,7 +32,10 @@ export type ConcernSlug =
 export type Concern = {
   slug: ConcernSlug;
   label: string;
+  /** lede on the concern landing page */
   description: string;
+  /** under 155 characters, so Google shows all of it */
+  metaDescription: string;
 };
 
 export type Service = {

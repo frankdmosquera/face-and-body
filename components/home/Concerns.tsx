@@ -3,7 +3,7 @@ import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
-import { CONCERNS } from "@/data/concerns";
+import { CONCERNS, concernHref } from "@/data/concerns";
 import { getConcernCount } from "@/lib/services";
 
 export function Concerns() {
@@ -27,7 +27,7 @@ export function Concerns() {
             return (
               <Link
                 key={concern.slug}
-                href={`/concerns/${concern.slug}`}
+                href={concernHref(concern)}
                 className="inline-flex items-center gap-2.5 rounded-full border border-border bg-card px-[22px] py-3.5 text-sm transition-colors hover:border-copper hover:text-accent-foreground"
               >
                 {concern.label}

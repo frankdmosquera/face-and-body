@@ -1,7 +1,12 @@
 import { CATEGORIES } from "@/data/categories";
 import { CONCERNS } from "@/data/concerns";
 import { SERVICES } from "@/data/services";
-import type { CategorySlug, ConcernSlug, Service } from "@/types/services";
+import type {
+  Category,
+  CategorySlug,
+  ConcernSlug,
+  Service,
+} from "@/types/services";
 
 export function getService(slug: string): Service | undefined {
   return SERVICES.find((service) => service.slug === slug);
@@ -49,4 +54,31 @@ export function getConcernsInCategory(
     count: services.filter((service) => service.concerns.includes(concern.slug))
       .length,
   })).filter((chip) => chip.count > 0);
+}
+
+export type CategoryBlock = { category: Category; services: readonly Service[] };
+
+/** Matches grouped into category blocks, in CATEGORIES order so a concern page
+ *  and a category page never disagree about sequence. Empty blocks are dropped,
+ *  so there is no empty state to render. */
+export function getServicesByConcernGrouped(
+  concern: ConcernSlug,
+): readonly CategoryBlock[] {
+  const matches = getServicesByConcern(concern);
+  return CATEGORIES.map((category) => ({
+    category,
+    services: matches.filter((service) => service.category === category.slug),
+  })).filter((block) => block.services.length > 0);
+}
+
+/** The category holding most of a concern's treatments, for the hero photo.
+ *  Ties go to CATEGORIES order, which is how the blocks are already sorted.
+ *  Falls back to the first category for a concern with no treatments yet, so
+ *  adding one to the data cannot break the build. */
+export function getDominantCategory(concern: ConcernSlug): Category {
+  const blocks = getServicesByConcernGrouped(concern);
+  if (blocks.length === 0) return CATEGORIES[0];
+  return blocks.reduce((best, block) =>
+    block.services.length > best.services.length ? block : best,
+  ).category;
 }

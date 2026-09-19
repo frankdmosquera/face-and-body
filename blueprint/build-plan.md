@@ -29,7 +29,7 @@ Everything needed for her to have a working, findable website. No AI.
   added as copy is written: what it is, who it suits, what happens, pricing,
   FAQ, related treatments, with in-body links between them and from the
   concern pages
-- [ ] 6. **Browse by concern** - landing pages per concern that route to the
+- [x] 6. **Browse by concern** - landing pages per concern that route to the
   treatments that address it, for the visitor who knows the problem and not
   the treatment name
 - [ ] 7. **About page** - her story, credentials, the room, how she works,
