@@ -4,14 +4,30 @@
     {
       "name": "dev",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 3000
     },
     {
       "name": "prototypes",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["prototypes/serve.mjs"],
+      "runtimeArgs": [
+        "prototypes/serve.mjs"
+      ],
       "port": 5050
+    },
+    {
+      "name": "prod",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "next",
+        "start",
+        "-p",
+        "3002"
+      ],
+      "port": 3002
     }
   ]
 }

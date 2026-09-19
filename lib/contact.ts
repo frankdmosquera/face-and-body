@@ -1,0 +1,30 @@
+import { siteConfig } from "@/data/siteConfig";
+import { SERVICES } from "@/data/services";
+import type { Service } from "@/types/services";
+
+/** `?&body=` is the one form that opens a prefilled text on both iOS and Android. */
+export function smsLink(message: string): string {
+  return `${siteConfig.phone.sms}?&body=${encodeURIComponent(message)}`;
+}
+
+export function pricingMessage(service: Service): string {
+  return `Hi! Can I get pricing for ${service.name}?`;
+}
+
+export function getUnpricedServices(): readonly Service[] {
+  return SERVICES.filter((service) => service.price === null);
+}
+
+export const GENERAL_TOPIC = "A question about a treatment";
+
+export function pricingTopic(service: Service): string {
+  return `Pricing for ${service.name}`;
+}
+
+export const CONTACT_TOPICS: readonly string[] = [
+  GENERAL_TOPIC,
+  ...getUnpricedServices().map(pricingTopic),
+  "Am I a candidate for this",
+  "Gift cards",
+  "Something else",
+];

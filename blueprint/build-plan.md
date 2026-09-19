@@ -21,10 +21,14 @@ Everything needed for her to have a working, findable website. No AI.
   categories, signature treatment, results, Eminence, reviews, consultation,
   hours and location
 - [ ] 4. **Treatment category pages** - Facials, Skin Treatments, Body,
-  Massage, Laser and IPL, grouped within each page with concern filtering
-- [ ] 5. **Treatment detail pages** - one template covering every service,
-  deep for the high-value ones: what it is, who it suits, what happens,
-  pricing, FAQ, related treatments
+  Massage, Laser and IPL, every treatment listed with description, price,
+  duration and a Book button, grouped with concern filtering. Built to rank
+  for the category terms; treatments without their own page are anchors here
+- [ ] 5. **Treatment detail pages** - only for treatments with their own
+  search demand, roughly ten to twelve, flagged in the services data and
+  added as copy is written: what it is, who it suits, what happens, pricing,
+  FAQ, related treatments, with in-body links between them and from the
+  concern pages
 - [ ] 6. **Browse by concern** - landing pages per concern that route to the
   treatments that address it, for the visitor who knows the problem and not
   the treatment name
@@ -32,7 +36,7 @@ Everything needed for her to have a working, findable website. No AI.
   Eminence partnership
 - [ ] 8. **Hours and location** - seven-day hours with an open-now state, map,
   directions, parking, click-to-call and text
-- [ ] 9. **Contact and enquiry** - text-first contact page, click-to-text with
+- [x] 9. **Contact and enquiry** - text-first contact page, click-to-text with
   a prefilled message, short form via Resend as the fallback, and an ask-about-
   pricing path on the treatments that have no price yet
 - [ ] 10. **Local SEO foundations** - LocalBusiness and Service schema,
