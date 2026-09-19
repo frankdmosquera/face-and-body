@@ -238,3 +238,16 @@
     }
   }
 }
+
+/* The theme button crossfades the page through the View Transitions API; 400ms per Frank. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 400ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none;
+  }
+}

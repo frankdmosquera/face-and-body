@@ -1,17 +1,25 @@
 import { CATEGORIES, categoryHref } from "@/data/categories";
 import { CONCERNS, concernHref } from "@/data/concerns";
+import { getServicesByCategory, serviceHref } from "@/lib/services";
+import type { CategorySlug, Service } from "@/types/services";
 
 export type SiteLink = { label: string; href: string };
 
-/** A link inside a header dropdown or accordion; the blurb shows on desktop only. */
-export type NavLink = SiteLink & { blurb: string };
+/** One column of a header panel, or one block of a sheet row. */
+export type NavSection = { label?: string; href?: string; links: SiteLink[] };
 
-export type NavGroup = { label: string; items: NavLink[] };
+/** A top-level nav entry that opens a panel. `href` is where its own name goes. */
+export type NavGroup = {
+  label: string;
+  href: string;
+  sections: NavSection[];
+  more?: string;
+};
 
 export type NavItem = SiteLink | NavGroup;
 
 export function isNavGroup(item: NavItem): item is NavGroup {
-  return "items" in item;
+  return "sections" in item;
 }
 
 export type Day =
@@ -63,17 +71,92 @@ const social = {
   facebook: "https://www.facebook.com/FACEANDBODYWELLNESSCENTRE/",
 };
 
-const treatments: NavLink[] = CATEGORIES.map((category) => ({
+const treatments: SiteLink[] = CATEGORIES.map((category) => ({
   label: category.label,
   href: categoryHref(category),
-  blurb: category.blurb,
 }));
 
-const concerns: NavLink[] = CONCERNS.map((concern) => ({
-  label: concern.label,
-  href: concernHref(concern),
-  blurb: concern.description,
-}));
+function category(slug: CategorySlug) {
+  const entry = CATEGORIES.find((item) => item.slug === slug);
+  if (!entry) throw new Error(`Unknown category ${slug}`);
+  return entry;
+}
+
+function serviceLinks(services: readonly Service[]): SiteLink[] {
+  return services.map((service) => ({
+    label: service.name,
+    href: serviceHref(service),
+  }));
+}
+
+function categorySection(slug: CategorySlug, label?: string): NavSection {
+  return {
+    label,
+    href: label ? categoryHref(category(slug)) : undefined,
+    links: serviceLinks(getServicesByCategory(slug)),
+  };
+}
+
+// The header shows Skin and Laser under one button; the data keeps five categories.
+function treatmentGroup(
+  label: string,
+  slugs: CategorySlug[],
+  sections: NavSection[],
+): NavGroup {
+  const total = sections.reduce((sum, section) => sum + section.links.length, 0);
+  return {
+    label,
+    href: categoryHref(category(slugs[0])),
+    sections,
+    more: `See all ${total}`,
+  };
+}
+
+const facialSections: NavSection[] = (category("facial").groups ?? []).map(
+  (group) => ({
+    label: group.label,
+    links: serviceLinks(
+      getServicesByCategory("facial").filter(
+        (service) => service.group === group.slug,
+      ),
+    ),
+  }),
+);
+
+const nav: NavItem[] = [
+  treatmentGroup("Facials", ["facial"], facialSections),
+  treatmentGroup(
+    "Skin and Laser",
+    ["skin", "laser"],
+    [
+      categorySection("skin", "Skin Treatments"),
+      categorySection("laser", "Laser and IPL"),
+    ],
+  ),
+  treatmentGroup("Body", ["body"], [categorySection("body")]),
+  treatmentGroup("Massage", ["massage"], [categorySection("massage")]),
+  {
+    label: "More",
+    href: "/about",
+    sections: [
+      {
+        label: "What to treat",
+        links: CONCERNS.map((concern) => ({
+          label: concern.label,
+          href: concernHref(concern),
+        })),
+      },
+      {
+        label: "Clinic",
+        links: [
+          { label: "Our story", href: "/about" },
+          { label: "Hours and location", href: "/visit" },
+          { label: "Contact", href: "/contact" },
+        ],
+      },
+    ],
+  },
+];
 
 export const siteConfig: SiteConfig = {
   name: "Face and Body Wellness Centre",
@@ -119,11 +202,7 @@ export const siteConfig: SiteConfig = {
   ],
   consultation: { durationMin: 15, price: 0 },
   social,
-  nav: [
-    { label: "Treatments", items: treatments },
-    { label: "Concerns", items: concerns },
-    { label: "About", href: "/about" },
-  ],
+  nav,
   footer: [
     { heading: "Treatments", links: treatments },
     {

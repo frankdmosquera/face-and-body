@@ -15,27 +15,42 @@ import {
   isNavGroup,
   type NavGroup,
   type NavItem,
-  type NavLink,
+  type NavSection,
 } from "@/data/siteConfig";
 import { cn } from "@/lib/utils";
 
 const TOP_LINK =
   "h-auto rounded-none border-b border-transparent bg-transparent px-0 py-1.5 text-[13px] font-normal tracking-[0.06em] uppercase transition-colors hover:border-copper hover:bg-transparent focus:bg-transparent focus-visible:ring-0 focus-visible:border-copper";
 
+const HEADING =
+  "mb-2 block text-[11px] tracking-[0.12em] text-accent-foreground uppercase";
+
+const PANEL_WIDTH: Record<number, string> = {
+  1: "w-[280px] grid-cols-1",
+  2: "w-[520px] grid-cols-2",
+  3: "w-[720px] grid-cols-3",
+  4: "w-[920px] grid-cols-4",
+};
+
 function isActive(href: string, pathname: string) {
   return pathname === href || pathname.startsWith(href + "/");
 }
 
 function isGroupActive(group: NavGroup, pathname: string) {
-  return group.items.some((link) => isActive(link.href, pathname));
+  return (
+    isActive(group.href, pathname) ||
+    group.sections.some((section) =>
+      section.links.some((link) => isActive(link.href, pathname)),
+    )
+  );
 }
 
 export function DesktopNav({ items }: { items: NavItem[] }) {
   const pathname = usePathname();
 
   return (
-    <NavigationMenu aria-label="Main" className="hidden lg:flex">
-      <NavigationMenuList className="gap-8">
+    <NavigationMenu aria-label="Main" align="center" className="hidden lg:flex">
+      <NavigationMenuList className="gap-7">
         {items.map((item) =>
           isNavGroup(item) ? (
             <NavigationMenuItem key={item.label}>
@@ -49,15 +64,31 @@ export function DesktopNav({ items }: { items: NavItem[] }) {
                 {item.label}
               </NavigationMenuTrigger>
               <NavigationMenuContent className="p-0">
-                <ul className="grid w-[600px] grid-cols-2 gap-1 p-3">
-                  {item.items.map((link) => (
-                    <PanelLink
-                      key={link.href}
-                      link={link}
-                      active={isActive(link.href, pathname)}
+                <div
+                  className={cn(
+                    "grid max-w-[calc(100vw-2rem)] gap-7 p-7",
+                    PANEL_WIDTH[Math.min(item.sections.length, 4)],
+                  )}
+                >
+                  {item.sections.map((section, index) => (
+                    <Column
+                      key={section.label ?? index}
+                      section={section}
+                      pathname={pathname}
                     />
                   ))}
-                </ul>
+                </div>
+                {item.more && (
+                  <div className="border-t border-border px-7 py-3">
+                    <NavigationMenuLink
+                      closeOnClick
+                      className="inline-block rounded-none border-b border-copper p-0 pb-0.5 text-[11px] tracking-[0.1em] text-accent-foreground uppercase hover:bg-transparent focus:bg-transparent"
+                      render={<Link href={item.href} />}
+                    >
+                      {item.more}
+                    </NavigationMenuLink>
+                  </div>
+                )}
               </NavigationMenuContent>
             </NavigationMenuItem>
           ) : (
@@ -83,24 +114,45 @@ export function DesktopNav({ items }: { items: NavItem[] }) {
   );
 }
 
-function PanelLink({ link, active }: { link: NavLink; active: boolean }) {
+function Column({
+  section,
+  pathname,
+}: {
+  section: NavSection;
+  pathname: string;
+}) {
   return (
-    <li>
-      <NavigationMenuLink
-        closeOnClick
-        className="group/panel-link flex flex-col items-start gap-1 rounded-sm p-3.5 hover:bg-muted focus:bg-muted"
-        render={
-          <Link href={link.href} aria-current={active ? "page" : undefined} />
-        }
-      >
-        <span className="font-serif text-[22px] leading-tight text-foreground">
-          {link.label}
-        </span>
-        <span className="text-[13px] leading-snug text-muted-foreground">
-          {link.blurb}
-        </span>
-        <span className="mt-1.5 h-px w-6 bg-copper transition-[width] duration-300 group-hover/panel-link:w-10 group-aria-[current=page]/panel-link:w-10" />
-      </NavigationMenuLink>
-    </li>
+    <div className="flex flex-col">
+      {section.label &&
+        (section.href ? (
+          <NavigationMenuLink
+            closeOnClick
+            className={cn(HEADING, "rounded-none p-0 hover:bg-transparent hover:text-foreground focus:bg-transparent")}
+            render={<Link href={section.href} />}
+          >
+            {section.label}
+          </NavigationMenuLink>
+        ) : (
+          <span className={HEADING}>{section.label}</span>
+        ))}
+      <ul className="flex flex-col">
+        {section.links.map((link) => (
+          <li key={link.href}>
+            <NavigationMenuLink
+              closeOnClick
+              className="-mx-2 block rounded-sm px-2 py-1.5 text-[13px] leading-snug text-muted-foreground hover:bg-muted hover:text-foreground focus:bg-muted aria-[current=page]:text-accent-foreground"
+              render={
+                <Link
+                  href={link.href}
+                  aria-current={isActive(link.href, pathname) ? "page" : undefined}
+                />
+              }
+            >
+              {link.label}
+            </NavigationMenuLink>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

@@ -1,3 +1,4 @@
+import { CATEGORIES } from "@/data/categories";
 import { SERVICES } from "@/data/services";
 import type { CategorySlug, ConcernSlug, Service } from "@/types/services";
 
@@ -27,4 +28,9 @@ export function getCategoryFromPrice(category: CategorySlug): number | null {
 
 export function getConcernCount(concern: ConcernSlug): number {
   return getServicesByConcern(concern).length;
+}
+
+export function serviceHref(service: Service): string {
+  const category = CATEGORIES.find((entry) => entry.slug === service.category);
+  return `/treatments/${category?.segment ?? service.category}/${service.slug}`;
 }
