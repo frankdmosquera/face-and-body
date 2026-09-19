@@ -36,9 +36,15 @@ export function getConcernCount(concern: ConcernSlug): number {
   return getServicesByConcern(concern).length;
 }
 
+/** A published treatment gets its own route; everything else points at its card
+ *  on the category page. The header links every treatment through here, so the
+ *  whole nav follows the flag without knowing anything about it. */
 export function serviceHref(service: Service): string {
   const category = CATEGORIES.find((entry) => entry.slug === service.category);
-  return `/treatments/${category?.segment ?? service.category}/${service.slug}`;
+  const segment = category?.segment ?? service.category;
+  return service.detailPage
+    ? `/treatments/${segment}/${service.slug}`
+    : `/treatments/${segment}#${service.slug}`;
 }
 
 export type ConcernChip = { slug: ConcernSlug; label: string; count: number };

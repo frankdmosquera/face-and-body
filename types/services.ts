@@ -59,4 +59,8 @@ export type Service = {
   eminence?: true;
   /** slug of the base service this is a length variant of */
   variantOf?: string;
+  /** Published: this treatment has its own page with real content behind it.
+   *  Absent means it lives as a card on its category page and links to that
+   *  anchor. Flipped on per treatment in feature 5 as copy gets written. */
+  detailPage?: true;
 };

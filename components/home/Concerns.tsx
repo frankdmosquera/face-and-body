@@ -12,7 +12,7 @@ export function Concerns() {
       <Container>
         <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
           <div>
-            <Eyebrow>Start with the concern</Eyebrow>
+            <Eyebrow>What to treat</Eyebrow>
             <h2 className="mt-4">I&apos;m interested in treating</h2>
           </div>
           <Lede>

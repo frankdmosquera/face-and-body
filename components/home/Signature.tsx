@@ -5,7 +5,7 @@ import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import { Photo } from "@/components/media/Photo";
 import { buttonVariants } from "@/components/ui/button";
-import { getService } from "@/lib/services";
+import { getService, serviceHref } from "@/lib/services";
 
 const SLUGS = [
   "microneedling-face",
@@ -50,7 +50,7 @@ export function Signature() {
             ))}
           </ul>
           <Link
-            href="/treatments/skin/microneedling-face"
+            href={lead ? serviceHref(lead) : "/treatments/skin"}
             className={buttonVariants({ variant: "outline" })}
           >
             About microneedling
