@@ -15,6 +15,8 @@ export function getUnpricedServices(): readonly Service[] {
   return SERVICES.filter((service) => service.price === null);
 }
 
+export const CONSULTATION_TOPIC = "Book a free consultation";
+
 export const GENERAL_TOPIC = "A question about a treatment";
 
 export function pricingTopic(service: Service): string {
@@ -22,6 +24,8 @@ export function pricingTopic(service: Service): string {
 }
 
 export const CONTACT_TOPICS: readonly string[] = [
+  // First, because every "Book a consultation" button on the site lands here.
+  CONSULTATION_TOPIC,
   GENERAL_TOPIC,
   ...getUnpricedServices().map(pricingTopic),
   "Am I a candidate for this",

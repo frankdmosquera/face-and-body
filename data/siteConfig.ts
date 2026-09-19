@@ -137,7 +137,8 @@ const nav: NavItem[] = [
   treatmentGroup("Massage", ["massage"], [categorySection("massage")]),
   {
     label: "More",
-    href: "/about",
+    // Feature 7 points this back at /about once that page exists.
+    href: "/hours",
     sections: [
       {
         label: "What to treat",
@@ -149,8 +150,7 @@ const nav: NavItem[] = [
       {
         label: "Clinic",
         links: [
-          { label: "Our story", href: "/about" },
-          { label: "Hours and location", href: "/visit" },
+          { label: "Hours and location", href: "/hours" },
           { label: "Contact", href: "/contact" },
         ],
       },
@@ -208,7 +208,6 @@ export const siteConfig: SiteConfig = {
     {
       heading: "Clinic",
       links: [
-        { label: "About", href: "/about" },
         { label: "Contact", href: "/contact" },
       ],
     },

@@ -34,7 +34,7 @@ Everything needed for her to have a working, findable website. No AI.
   the treatment name
 - [ ] 7. **About page** - her story, credentials, the room, how she works,
   Eminence partnership
-- [ ] 8. **Hours and location** - seven-day hours with an open-now state, map,
+- [x] 8. **Hours and location** - seven-day hours with an open-now state, map,
   directions, parking, click-to-call and text
 - [x] 9. **Contact and enquiry** - text-first contact page, click-to-text with
   a prefilled message, short form via Resend as the fallback, and an ask-about-
