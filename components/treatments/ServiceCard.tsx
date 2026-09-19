@@ -42,7 +42,9 @@ export function ServiceCard({ service }: { service: Service }) {
       <p className="mt-2 flex-1 text-[14px] leading-relaxed text-muted-foreground">
         {service.description}
       </p>
-      <div className="mt-6 flex items-end justify-between gap-4 border-t border-border pt-4">
+      {/* Wraps because "At consultation" beside "Ask about pricing" exceeds a
+          phone-width card, and neither is allowed to shrink. */}
+      <div className="mt-6 flex flex-wrap items-end justify-between gap-4 border-t border-border pt-4">
         <div>
           <Price service={service} />
           <span className="mt-1.5 block text-xs tracking-[0.04em] text-muted-foreground">
