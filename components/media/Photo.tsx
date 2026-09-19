@@ -2,7 +2,28 @@ import { Image } from "@imagekit/next";
 import { IMAGES, type ImageSlot } from "@/data/images";
 import { cn } from "@/lib/utils";
 
-const urlEndpoint = process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT;
+/**
+ * The media library folder for this project. It lives here rather than inside
+ * the endpoint variable on purpose: a folder name is a fact about the repo, not
+ * about a deployment, and hiding it in an env var let local and production
+ * drift apart. Production spent a day serving 404s from
+ * `/b5xayf4mq/hero-led.jpg` while local served `/b5xayf4mq/face-and-body/hero-led.jpg`,
+ * because only one of the two endpoints had the folder appended by hand.
+ *
+ * Accepting the endpoint with or without the folder keeps both spellings
+ * working, so nothing breaks whichever value a given environment holds.
+ */
+const FOLDER = "face-and-body";
+
+function resolveEndpoint(raw: string | undefined): string | undefined {
+  if (!raw) return undefined;
+  const base = raw.replace(/\/+$/, "");
+  return base.endsWith(`/${FOLDER}`) ? base : `${base}/${FOLDER}`;
+}
+
+const urlEndpoint = resolveEndpoint(
+  process.env.NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT,
+);
 
 // A deploy without the endpoint is a mistake; a local build without it is
 // just the account not existing yet, so it gets a labelled box instead.
