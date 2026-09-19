@@ -37,19 +37,25 @@ export function ServiceList({ category }: { category: Category }) {
   const ungrouped = services.filter((service) => !placed.has(service.slug));
 
   return (
-    <div className="grid gap-16">
+    <div data-group-stack className="grid gap-16">
       {blocks.map(({ group, services: inGroup }) => (
         <section key={group.slug} data-group>
-          <span className="block text-[11px] tracking-[0.12em] text-accent-foreground uppercase">
-            {group.label}
-          </span>
-          <h2 className="mt-2.5 mb-8 text-[40px]">{group.heading}</h2>
+          {/* The group name leads and the concern line supports it. Reversed,
+              the concern reads as a second filter competing with the real one. */}
+          <div data-group-head className="mb-8">
+            <h2 className="text-[40px]">{group.label}</h2>
+            <p className="mt-2 text-[15px] text-muted-foreground">
+              {group.heading}
+            </p>
+          </div>
           <Grid services={inGroup} />
         </section>
       ))}
       {ungrouped.length > 0 && (
         <section data-group>
-          <h2 className="mb-8 text-[40px]">More treatments</h2>
+          <div data-group-head className="mb-8">
+            <h2 className="text-[40px]">More treatments</h2>
+          </div>
           <Grid services={ungrouped} />
         </section>
       )}

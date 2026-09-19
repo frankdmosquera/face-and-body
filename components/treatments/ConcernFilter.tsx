@@ -29,6 +29,20 @@ export function ConcernFilter({
           <span className="mr-2 shrink-0 text-xs tracking-[0.12em] text-muted-foreground uppercase">
             Filter
           </span>
+          {/* Clicking the active chip again clears it, but nobody guesses that. */}
+          <button
+            type="button"
+            aria-pressed={active === ""}
+            onClick={() => setActive("")}
+            className={cn(
+              CHIP,
+              active === ""
+                ? "border-foreground bg-foreground text-background"
+                : "border-border bg-card hover:border-copper",
+            )}
+          >
+            All
+          </button>
           {chips.map((chip) => {
             const on = active === chip.slug;
             return (
@@ -68,12 +82,30 @@ export function ConcernFilter({
  * Slugs come from the closed ConcernSlug union, so there is nothing to escape.
  */
 export function ConcernFilterStyles({ chips }: { chips: readonly ConcernChip[] }) {
-  const css = chips
+  // Once a concern is chosen, the group headings are the same axis at lower
+  // resolution and read as a second, contradicting filter: picking fine lines
+  // should not answer with "For congested and breakout-prone skin". The
+  // remaining cards collapse into one list instead.
+  // Filtering also has to reflow. Each group owns its own grid, so hiding cards
+  // in place leaves the survivors stranded in four sparse rows. display:contents
+  // dissolves the group and list boxes while filtering, so every remaining card
+  // becomes a child of one grid and they pack from the top.
+  const on = `[data-concern]:not([data-concern=""])`;
+  const whileFiltering =
+    `${on} [data-group-head]{display:none}` +
+    `${on} [data-group]{display:contents}` +
+    `${on} [data-group]>ul{display:contents}` +
+    `${on} [data-group-stack]{display:grid;gap:1.5rem;grid-template-columns:1fr}` +
+    `@media(min-width:768px){${on} [data-group-stack]{grid-template-columns:repeat(2,1fr)}}` +
+    `@media(min-width:1024px){${on} [data-group-stack]{grid-template-columns:repeat(3,1fr)}}`;
+
+  const perConcern = chips
     .map(
       ({ slug }) =>
         `[data-concern="${slug}"] [data-concerns]:not([data-concerns~="${slug}"]){display:none}` +
         `[data-concern="${slug}"] [data-group]:not(:has([data-concerns~="${slug}"])){display:none}`,
     )
     .join("");
-  return <style>{css}</style>;
+
+  return <style>{whileFiltering + perConcern}</style>;
 }
