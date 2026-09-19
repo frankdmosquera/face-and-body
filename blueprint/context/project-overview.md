@@ -1,6 +1,6 @@
 # Face and Body Wellness Centre - Project Overview
 
-<!-- blueprint:source-hash 5eb285d58a58e92b8e1618e7dcc8ed79a3ef3da96493206da88937ab27392eb5 -->
+<!-- blueprint:source-hash 3610dc4cbf1a2ce1e01639473aad9ab995f374072e56555ae553aaf45b96ea11 -->
 
 > A first website for a licensed medical aesthetics clinic in Midnapore,
 > Calgary SE, turning high-intent local searches into booked appointments.

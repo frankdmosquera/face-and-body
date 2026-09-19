@@ -1,3 +1,4 @@
+import { HoursTable } from "@/components/business/HoursTable";
 import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
@@ -5,10 +6,9 @@ import { Section } from "@/components/layout/Section";
 import { Photo } from "@/components/media/Photo";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/data/siteConfig";
-import { dayLabel, formatHours } from "@/lib/hours";
 
 export function Location() {
-  const { address, phone, hours } = siteConfig;
+  const { address, phone } = siteConfig;
   return (
     <Section>
       <Container className="grid gap-10 lg:grid-cols-[1fr_1.3fr] lg:items-stretch lg:gap-16">
@@ -20,21 +20,7 @@ export function Location() {
             <br />
             {address.city}, {address.province} {address.postalCode}
           </Lede>
-          <table className="my-7 w-full border-collapse text-[15px]">
-            <tbody>
-              {hours.map((entry) => (
-                <tr
-                  key={entry.day}
-                  className="border-t border-border last:border-b"
-                >
-                  <td className="py-2.5">{dayLabel(entry.day)}</td>
-                  <td className="py-2.5 text-right text-muted-foreground">
-                    {formatHours(entry)}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+          <HoursTable className="my-7" />
           <div className="mt-2 flex flex-wrap gap-4">
             <a
               href={phone.tel}

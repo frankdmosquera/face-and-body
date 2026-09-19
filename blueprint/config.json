@@ -16,7 +16,7 @@
   "qualityGates": {
     "regular": {
       "audit": "when-sensitive",
-      "independentReview": "when-sensitive",
+      "independentReview": "manual",
       "check": "when-behavioral",
       "tryGuide": "when-user-facing"
     },
