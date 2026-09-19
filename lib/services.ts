@@ -1,4 +1,5 @@
 import { CATEGORIES } from "@/data/categories";
+import { CONCERNS } from "@/data/concerns";
 import { SERVICES } from "@/data/services";
 import type { CategorySlug, ConcernSlug, Service } from "@/types/services";
 
@@ -33,4 +34,19 @@ export function getConcernCount(concern: ConcernSlug): number {
 export function serviceHref(service: Service): string {
   const category = CATEGORIES.find((entry) => entry.slug === service.category);
   return `/treatments/${category?.segment ?? service.category}/${service.slug}`;
+}
+
+export type ConcernChip = { slug: ConcernSlug; label: string; count: number };
+
+/** Only concerns with at least one service here, so a filter can never empty the list. */
+export function getConcernsInCategory(
+  category: CategorySlug,
+): readonly ConcernChip[] {
+  const services = getServicesByCategory(category);
+  return CONCERNS.map((concern) => ({
+    slug: concern.slug,
+    label: concern.label,
+    count: services.filter((service) => service.concerns.includes(concern.slug))
+      .length,
+  })).filter((chip) => chip.count > 0);
 }

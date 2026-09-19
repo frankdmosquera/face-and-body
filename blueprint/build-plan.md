@@ -20,7 +20,7 @@ Everything needed for her to have a working, findable website. No AI.
 - [x] 3. **Home page** - hero, trust strip, browse by concern, treatment
   categories, signature treatment, results, Eminence, reviews, consultation,
   hours and location
-- [ ] 4. **Treatment category pages** - Facials, Skin Treatments, Body,
+- [x] 4. **Treatment category pages** - Facials, Skin Treatments, Body,
   Massage, Laser and IPL, every treatment listed with description, price,
   duration and a Book button, grouped with concern filtering. Built to rank
   for the category terms; treatments without their own page are anchors here
