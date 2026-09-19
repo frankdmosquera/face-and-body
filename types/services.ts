@@ -12,6 +12,10 @@ export type Category = {
   /** URL segment under /treatments/ */
   segment: string;
   blurb: string;
+  /** lede on the category page */
+  intro: string;
+  /** under 155 characters, so Google shows all of it */
+  metaDescription: string;
   groups?: readonly CategoryGroup[];
 };
 
