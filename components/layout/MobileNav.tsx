@@ -27,7 +27,16 @@ import { isNavGroup, siteConfig, type NavItem } from "@/data/siteConfig";
 import { cn } from "@/lib/utils";
 
 const ROW =
-  "flex w-full items-center justify-between border-b border-border py-3.5 text-[15px] tracking-[0.06em] uppercase";
+  "flex w-full items-center justify-between border-b border-border py-3.5 font-sans text-[15px] tracking-[0.06em] uppercase";
+
+const SUB_LINK =
+  "group/sub flex items-center justify-between py-2.5 text-muted-foreground transition-colors hover:text-accent-foreground aria-[current=page]:text-accent-foreground";
+
+const CHEVRON =
+  "size-4 -translate-x-1 opacity-0 transition-all group-hover/sub:translate-x-0 group-hover/sub:opacity-100 group-aria-[current=page]/sub:translate-x-0 group-aria-[current=page]/sub:opacity-100";
+
+const HEADING =
+  "mt-3 mb-1 block text-[11px] tracking-[0.12em] text-accent-foreground uppercase first:mt-0";
 
 function isActive(href: string, pathname: string) {
   return pathname === href || pathname.startsWith(href + "/");
@@ -65,7 +74,7 @@ export function MobileNav({ items }: { items: NavItem[] }) {
           <Brand />
           <SheetTitle className="sr-only">Menu</SheetTitle>
           <SheetDescription className="sr-only">
-            Treatments, concerns and how to reach the clinic
+            Treatments and how to reach the clinic
           </SheetDescription>
         </SheetHeader>
         <nav
@@ -83,29 +92,58 @@ export function MobileNav({ items }: { items: NavItem[] }) {
                     className={cn(
                       ROW,
                       "rounded-none border-x-0 border-t-0 font-normal hover:no-underline focus-visible:border-b-copper focus-visible:ring-0",
+                      isActive(item.href, pathname) && "text-accent-foreground",
                     )}
                   >
                     {item.label}
                   </AccordionTrigger>
-                  <AccordionContent className="pb-2 text-[15px] [&_a]:no-underline">
-                    <ul className="ml-1 border-l border-copper/40 pl-4">
-                      {item.items.map((link) => {
-                        const active = isActive(link.href, pathname);
-                        return (
-                          <li key={link.href}>
-                            <Link
-                              href={link.href}
-                              onClick={close}
-                              aria-current={active ? "page" : undefined}
-                              className="group/sub flex items-center justify-between py-2.5 text-muted-foreground transition-colors hover:text-accent-foreground aria-[current=page]:text-accent-foreground"
-                            >
-                              {link.label}
-                              <ChevronRight className="size-4 -translate-x-1 opacity-0 transition-all group-hover/sub:translate-x-0 group-hover/sub:opacity-100 group-aria-[current=page]/sub:translate-x-0 group-aria-[current=page]/sub:opacity-100" />
-                            </Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
+                  <AccordionContent className="pb-3 text-[15px] [&_a]:no-underline">
+                    <div className="ml-1 border-l border-copper/40 pl-4">
+                      {item.sections.map((section, index) => (
+                        <div key={section.label ?? index}>
+                          {section.label &&
+                            (section.href ? (
+                              <Link
+                                href={section.href}
+                                onClick={close}
+                                className={HEADING}
+                              >
+                                {section.label}
+                              </Link>
+                            ) : (
+                              <span className={HEADING}>{section.label}</span>
+                            ))}
+                          <ul>
+                            {section.links.map((link) => (
+                              <li key={link.href}>
+                                <Link
+                                  href={link.href}
+                                  onClick={close}
+                                  aria-current={
+                                    isActive(link.href, pathname)
+                                      ? "page"
+                                      : undefined
+                                  }
+                                  className={SUB_LINK}
+                                >
+                                  {link.label}
+                                  <ChevronRight className={CHEVRON} />
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                      {item.more && (
+                        <Link
+                          href={item.href}
+                          onClick={close}
+                          className="mt-2 inline-block border-b border-copper pb-0.5 text-[11px] tracking-[0.1em] text-accent-foreground uppercase"
+                        >
+                          {item.more}
+                        </Link>
+                      )}
+                    </div>
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
