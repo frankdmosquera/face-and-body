@@ -192,3 +192,49 @@
     }
   }
 }
+
+/* Sheet rows slide in one after another; the sheet unmounts on close so it replays each open. */
+@keyframes nav-item-in {
+  from {
+    opacity: 0;
+    translate: 24px 0;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@layer components {
+  .stagger > * {
+    --stagger-i: 0;
+    animation: nav-item-in 300ms ease-out both;
+    animation-delay: calc(60ms + 50ms * var(--stagger-i));
+  }
+  .stagger > :nth-child(2) {
+    --stagger-i: 1;
+  }
+  .stagger > :nth-child(3) {
+    --stagger-i: 2;
+  }
+  .stagger > :nth-child(4) {
+    --stagger-i: 3;
+  }
+  .stagger > :nth-child(5) {
+    --stagger-i: 4;
+  }
+  .stagger > :nth-child(6) {
+    --stagger-i: 5;
+  }
+  .stagger > :nth-child(7) {
+    --stagger-i: 6;
+  }
+  .stagger > :nth-child(8) {
+    --stagger-i: 7;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .stagger > * {
+      animation: none;
+    }
+  }
+}

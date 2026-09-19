@@ -51,3 +51,7 @@ export const CONCERNS: readonly Concern[] = [
       "Relaxation, deep tissue and therapeutic massage for tight shoulders and tired backs.",
   },
 ] as const;
+
+export function concernHref(concern: Concern): string {
+  return `/concerns/${concern.slug}`;
+}

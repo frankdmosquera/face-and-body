@@ -1,6 +1,18 @@
 import { CATEGORIES, categoryHref } from "@/data/categories";
+import { CONCERNS, concernHref } from "@/data/concerns";
 
 export type SiteLink = { label: string; href: string };
+
+/** A link inside a header dropdown or accordion; the blurb shows on desktop only. */
+export type NavLink = SiteLink & { blurb: string };
+
+export type NavGroup = { label: string; items: NavLink[] };
+
+export type NavItem = SiteLink | NavGroup;
+
+export function isNavGroup(item: NavItem): item is NavGroup {
+  return "items" in item;
+}
 
 export type Day =
   | "monday"
@@ -42,7 +54,7 @@ export type SiteConfig = {
   }[];
   consultation: { durationMin: number; price: number };
   social: { instagram: string; facebook: string };
-  nav: SiteLink[];
+  nav: NavItem[];
   footer: { heading: string; links: SiteLink[] }[];
 };
 
@@ -51,9 +63,16 @@ const social = {
   facebook: "https://www.facebook.com/FACEANDBODYWELLNESSCENTRE/",
 };
 
-const treatments: SiteLink[] = CATEGORIES.map((category) => ({
+const treatments: NavLink[] = CATEGORIES.map((category) => ({
   label: category.label,
   href: categoryHref(category),
+  blurb: category.blurb,
+}));
+
+const concerns: NavLink[] = CONCERNS.map((concern) => ({
+  label: concern.label,
+  href: concernHref(concern),
+  blurb: concern.description,
 }));
 
 export const siteConfig: SiteConfig = {
@@ -100,7 +119,11 @@ export const siteConfig: SiteConfig = {
   ],
   consultation: { durationMin: 15, price: 0 },
   social,
-  nav: [...treatments.slice(0, 4), { label: "About", href: "/about" }],
+  nav: [
+    { label: "Treatments", items: treatments },
+    { label: "Concerns", items: concerns },
+    { label: "About", href: "/about" },
+  ],
   footer: [
     { heading: "Treatments", links: treatments },
     {

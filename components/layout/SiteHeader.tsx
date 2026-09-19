@@ -1,17 +1,20 @@
 import Link from "next/link";
 import { Brand } from "@/components/layout/Brand";
 import { Container } from "@/components/layout/Container";
-import { NavMenu } from "@/components/layout/NavMenu";
+import { DesktopNav } from "@/components/layout/DesktopNav";
+import { HeaderScrollHider } from "@/components/layout/HeaderScrollHider";
+import { MobileNav } from "@/components/layout/MobileNav";
 import { ModeToggle } from "@/components/theme/ModeToggle";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/data/siteConfig";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-20 border-b border-border bg-background/88 backdrop-blur-[10px]">
+    <HeaderScrollHider>
       <Container className="relative flex h-16 items-center justify-between lg:h-[76px]">
         <Brand />
-        <NavMenu links={siteConfig.nav}>
+        <DesktopNav items={siteConfig.nav} />
+        <div className="flex items-center gap-2.5 lg:gap-[22px]">
           <ModeToggle />
           <a
             href={siteConfig.phone.tel}
@@ -22,8 +25,9 @@ export function SiteHeader() {
           <Link href="/contact" className={buttonVariants()}>
             Book now
           </Link>
-        </NavMenu>
+          <MobileNav items={siteConfig.nav} />
+        </div>
       </Container>
-    </header>
+    </HeaderScrollHider>
   );
 }
