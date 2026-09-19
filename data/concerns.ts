@@ -69,5 +69,5 @@ export const CONCERNS: readonly Concern[] = [
 ] as const;
 
 export function concernHref(concern: Concern): string {
-  return `/concerns/${concern.slug}`;
+  return `/treat/${concern.slug}`;
 }

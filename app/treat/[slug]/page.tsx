@@ -90,8 +90,8 @@ export default async function ConcernPage({ params }: Props) {
 
       <Section tone="sand" className="pt-0 lg:pt-0">
         <Container className="pt-16 lg:pt-24">
-          <Eyebrow>Something else bothering you</Eyebrow>
-          <h2 className="mt-4">Browse another concern</h2>
+          <Eyebrow>Also treating</Eyebrow>
+          <h2 className="mt-4">What else we treat</h2>
           <div className="mt-8 flex flex-wrap gap-3">
             {others.map((other) => (
               <Link

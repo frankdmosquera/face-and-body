@@ -29,9 +29,11 @@ export function ServiceCard({ service }: { service: Service }) {
 
   return (
     <li
+      id={service.slug}
       data-concerns={service.concerns.join(" ")}
       className={cn(
-        "flex flex-col rounded-lg border border-border bg-card p-7 transition-transform duration-200 hover:-translate-y-0.5",
+        // scroll-mt clears the sticky header when the nav jumps to this card.
+        "flex scroll-mt-24 flex-col rounded-lg border border-border bg-card p-7 transition-transform duration-200 hover:-translate-y-0.5",
         service.featured && "lg:col-span-3",
       )}
     >
