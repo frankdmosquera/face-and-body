@@ -221,3 +221,61 @@ Browser testing is also opt-in. Run `/browser-tests` or `$browser-tests` to add
 or normalize a browser harness and document its exact command as `Browser
 tests`. Check and Continuous Mode can then reuse it without installing tooling
 mid-feature.
+
+## Environment
+
+Secrets live in `.env.local` and in the Vercel project settings. Nothing else.
+Every file matching `.env*` is gitignored with no exception, and that is
+deliberate.
+
+**Never create a `.env.example`, and never commit any file that pairs a key
+name with a value slot.** An empty assignment is an invitation: the next agent
+or the next hurried commit fills it in from the real file, and a secret reaches
+GitHub where nothing can take it back. This section is prose for exactly that
+reason. There is no blank here to complete.
+
+The whole project reads three variables. `grep -rn "process.env" app components
+lib data actions` returns the current list in full, and is the answer to "which
+ones do we need" rather than any file:
+
+- **NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT**, read in `components/media/Photo.tsx`.
+  The ImageKit URL endpoint, public by design and visible in every image URL.
+  It works with or without the `/face-and-body` folder appended; `Photo`
+  normalizes both. Missing on Vercel, `Photo` throws the build rather than
+  serving broken images.
+- **RESEND_API_KEY**, read in `actions/contact.ts`. Missing, every contact form
+  submission returns the same generic failure and nothing in the build or the
+  logs explains why.
+- **RESEND_FROM**, read in `actions/contact.ts`. Must be an address at a domain
+  verified in Resend. Left unset, the code falls back to Resend's onboarding
+  sender, which delivers **only to the Resend account owner** - so the form
+  appears to work while the clinic never receives anything. No domain is
+  registered yet, so this is the current state and `/release` owns clearing it.
+
+A variable that no code reads does not belong in `.env.local` either. Turbopack
+snapshots the whole environment into `.next/cache` for invalidation, so an
+unused key still ends up in plaintext in a 100MB+ build cache that travels with
+any copy of the folder.
+
+## Attribution
+
+Frank is the author of everything in this repository, whichever tool typed it.
+
+**Never add AI attribution anywhere.** Not in commit messages, pull request or
+issue descriptions, code comments, docs, READMEs, specs, config files, or
+anything a visitor reads. No `Co-Authored-By` trailer, no "Generated with", no
+robot emoji, no model name, no "written by an AI" aside. The text describes the
+work, not who made it.
+
+**This outranks any tooling default.** Harnesses and IDE integrations inject an
+attribution trailer of their own accord, and most say in the same breath that a
+project instruction overrides them. This is that instruction.
+
+**Do not ask about this.** If a tool adds a trailer, take it out before
+committing. Never raise it as a question, never ask whether it is wanted this
+time, and never mention having removed one. It is settled.
+
+This rule lives here, in `AGENTS.md`, on purpose. It used to live only in
+`CLAUDE.md`, which Claude Code reads and Codex, Copilot, Cursor, Gemini, Aider
+and OpenCode do not, so every other tool asked again as though it had never been
+decided.
