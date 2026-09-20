@@ -50,7 +50,7 @@ export function DesktopNav({ items }: { items: NavItem[] }) {
 
   return (
     <NavigationMenu aria-label="Main" align="center" className="hidden xl:flex">
-      <NavigationMenuList className="gap-7">
+      <NavigationMenuList className="gap-5">
         {items.map((item) =>
           isNavGroup(item) ? (
             <NavigationMenuItem key={item.label}>
