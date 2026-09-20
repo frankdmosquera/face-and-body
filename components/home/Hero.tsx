@@ -11,13 +11,17 @@ import { primaryRating } from "@/lib/ratings";
 
 export function Hero() {
   const rating = primaryRating();
+  // 86vh unbounded meant 929px of hero on a 1080p screen and more above that,
+  // from a 426x568 source - a 2.18x upscale, so it read as both oversized and
+  // soft. Capped, it stays 86vh on a laptop and stops growing once the screen
+  // is tall enough for that to be too much.
   return (
-    <section className="relative grid overflow-hidden lg:min-h-[86vh] lg:grid-cols-[1.05fr_1fr]">
+    <section className="relative grid overflow-hidden lg:min-h-[min(86vh,780px)] lg:grid-cols-[1.05fr_1fr]">
       <div className="relative flex flex-col justify-center px-gutter-sm py-14 lg:py-24 lg:pr-gutter lg:pl-[max(var(--spacing-gutter),calc((100vw-var(--container-site))/2+var(--spacing-gutter)))]">
         <Watermark className="-top-[60px] -left-[140px]" />
         <div className="relative">
           <Eyebrow>Medical aesthetics &middot; Midnapore, Calgary SE</Eyebrow>
-          <h1 className="my-6 text-[48px] lg:mt-6 lg:mb-7 lg:text-[80px]">
+          <h1 className="my-6 text-[48px] lg:mt-6 lg:mb-7 lg:text-[60px] xl:text-[80px]">
             Skin that shows
             <br />
             the <em className="text-copper">work</em> you
@@ -52,7 +56,12 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <div className="relative aspect-[4/5] lg:aspect-auto">
+      {/* The ratio follows the layout, the same rule the contact, category and
+          concern pages already use. 4:5 at every width put an 834x1042 image
+          on a mini iPad, taller than the viewport, so a full screen of
+          photograph sat between the buttons and the next section. Portrait
+          only once there is a text column beside it. */}
+      <div className="relative aspect-[4/3] md:aspect-[2/1] lg:aspect-auto">
         <Photo
           slot="hero"
           fill

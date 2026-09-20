@@ -79,7 +79,7 @@ export default async function CategoryPage({ params }: Props) {
               full viewport of photograph before reaching a word. Landscape
               on phones and tablets, portrait only when there is a column
               next to it. */}
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:aspect-[2/1] lg:aspect-[4/5]">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:aspect-[2/1] lg:aspect-auto lg:h-[min(72vh,620px)]">
             <Photo
               slot={PHOTO[category.slug]}
               fill
