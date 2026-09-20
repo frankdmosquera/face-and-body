@@ -11,13 +11,33 @@ import { primaryRating } from "@/lib/ratings";
 
 export function Hero() {
   const rating = primaryRating();
-  // 86vh unbounded meant 929px of hero on a 1080p screen and more above that,
-  // from a 426x568 source - a 2.18x upscale, so it read as both oversized and
-  // soft. Capped, it stays 86vh on a laptop and stops growing once the screen
+  // The photograph is capped in both directions, because the source is small.
+  //
+  // HEIGHT. 86vh unbounded meant 929px of hero on a 1080p screen and more above
+  // that. Capped, it stays 86vh on a laptop and stops growing once the screen
   // is tall enough for that to be too much.
+  //
+  // WIDTH. A `1fr` image column kept taking half the viewport however wide it
+  // got: 929px at 1920 and 1249px at 2560, from a 426x568 file, which is a
+  // 2.18x upscale and then a 2.93x one. It read as oversized and soft for the
+  // same reason at both. From `xl` the column is a fixed 620px, which is what
+  // `1fr` already resolved to at 1280, so nothing moves at the breakpoint and
+  // nothing grows past it. The text column absorbs the difference; its copy is
+  // capped at 56ch and the headline breaks by hand, so neither stretches.
+  //
+  // The real fix is a bigger photograph. This keeps the upscale at 1.46x until
+  // one arrives.
   return (
-    <section className="relative grid overflow-hidden lg:min-h-[min(86vh,780px)] lg:grid-cols-[1.05fr_1fr]">
-      <div className="relative flex flex-col justify-center px-gutter-sm py-14 lg:py-24 lg:pr-gutter lg:pl-[max(var(--spacing-gutter),calc((100vw-var(--container-site))/2+var(--spacing-gutter)))]">
+    <section className="relative grid overflow-hidden lg:min-h-[min(86vh,780px)] lg:grid-cols-[1.05fr_1fr] xl:grid-cols-[1fr_620px]">
+      {/* Queried on height, not width, the same reason the sheet footer is.
+          `min-h` is a floor, and below about 905px of viewport it never binds:
+          the hero is whatever this column measures, which is 585px of copy
+          plus the padding. At 96px a side that is 777px on every laptop alike,
+          so a 720px screen wore 134px of hero below the fold and lost the
+          trust strip entirely. 64px under 850px tall brings it to 713 and the
+          strip peeks there too. Above 850 nothing changes, which is where it
+          already lands right. */}
+      <div className="relative flex flex-col justify-center px-gutter-sm py-14 lg:py-16 lg:pr-gutter lg:pl-[max(var(--spacing-gutter),calc((100vw-var(--container-site))/2+var(--spacing-gutter)))] lg:[@media(min-height:850px)]:py-24">
         <Watermark className="-top-[60px] -left-[140px]" />
         <div className="relative">
           <Eyebrow>Medical aesthetics &middot; Midnapore, Calgary SE</Eyebrow>
