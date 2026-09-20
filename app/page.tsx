@@ -1,7 +1,8 @@
+import type { Metadata } from "next";
 import { Categories } from "@/components/home/Categories";
-import { Concerns } from "@/components/home/Concerns";
 import { Consultation } from "@/components/home/Consultation";
 import { Eminence } from "@/components/home/Eminence";
+import { Facials } from "@/components/home/Facials";
 import { Faq } from "@/components/home/Faq";
 import { Hero } from "@/components/home/Hero";
 import { Results } from "@/components/home/Results";
@@ -31,19 +32,49 @@ import { Divider } from "@/components/layout/Divider";
  */
 export const revalidate = 86400;
 
+/**
+ * The home page was the one page on the site without its own metadata, so it
+ * fell back to the layout default and went to search as the bare business
+ * name. Every other page already sets its own.
+ *
+ * `absolute` rather than a plain string, because the layout template appends
+ * " | Face and Body Wellness Centre", which would run the title past the 60
+ * characters Google shows. The name is shortened to keep the whole thing
+ * visible.
+ *
+ * Facials only, as of 2026-09-20. This page carries the full facial menu and
+ * is the one page built to rank for that term, so the title names it and
+ * nothing else. Laser came out when it stopped being a headline service, and
+ * massage lives on /other-treatments, which has its own title.
+ *
+ * The layout default stays general on purpose. It is the fallback for any
+ * page added later that sets nothing, so nothing home-specific belongs in it.
+ */
+export const metadata: Metadata = {
+  title: {
+    absolute: "Facials in Midnapore, Calgary SE | Face & Body Wellness",
+  },
+  description:
+    "Twenty-two facials in Midnapore, Calgary SE, from deep cleansing to microneedling and gold leaf. A qualified aesthetician who looks at your skin first.",
+};
+
 export default function Home() {
   return (
     <>
       <Hero />
       <TrustStrip />
-      <Concerns />
-      {/* Straight after "what to treat", not down at eighth of ten where it
-          used to sit. The order is now: say what is wrong, see that she
-          fixes it, then go and look at the treatments. Proof belongs between
-          the problem and the price list, and almost nobody scrolls past
-          Eminence. Tones still alternate - Concerns is plain, this brings
-          its own soft gradient, Categories is sand. */}
+      {/* Browse-by-concern came out on 2026-09-20 with the nine
+          /what-we-treat pages it linked to. It was the entry point to a
+          parallel set of landing pages competing with this one for the same
+          searches, on a site with no authority to spend on both. The concern
+          taxonomy stays in the data and still labels the results below. */}
       <Reviews />
+      {/* The full facial menu, moved here from /treatments/facials on
+          2026-09-20. It is below the proof rather than above it because most
+          visitors today arrive from her Google listing or her Instagram
+          already knowing the business; Google reads the whole document, so
+          nothing is lost by making them meet the reviews first. */}
+      <Facials />
       <Categories />
       <Signature />
       <Divider className="pb-section-sm lg:pb-section" />

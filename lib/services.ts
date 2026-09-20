@@ -36,15 +36,24 @@ export function getConcernCount(concern: ConcernSlug): number {
   return getServicesByConcern(concern).length;
 }
 
-/** A published treatment gets its own route; everything else points at its card
- *  on the category page. The header links every treatment through here, so the
- *  whole nav follows the flag without knowing anything about it. */
+/** A published treatment gets its own route; everything else points at its card,
+ *  on the home page for facials and on /other-treatments for the rest. The header
+ *  links every treatment through here, so the whole nav follows the flag
+ *  without knowing anything about it.
+ *
+ *  No service carries `detailPage` yet. The branch stays because the flag is
+ *  the agreed mechanism for splitting a treatment out once it has earned its
+ *  own page, and that split is a planned step rather than an abandoned one.
+ *
+ *  It returns /treatments/<slug> deliberately. The listing page is
+ *  /other-treatments, so /treatments is free, and a treatment detail page
+ *  reads better under it than under a path with "other" in the name. Nothing
+ *  reaches this branch today. */
 export function serviceHref(service: Service): string {
-  const category = CATEGORIES.find((entry) => entry.slug === service.category);
-  const segment = category?.segment ?? service.category;
-  return service.detailPage
-    ? `/treatments/${segment}/${service.slug}`
-    : `/treatments/${segment}#${service.slug}`;
+  if (service.detailPage) return `/treatments/${service.slug}`;
+  return service.category === "facial"
+    ? `/#${service.slug}`
+    : `/other-treatments#${service.slug}`;
 }
 
 export type ConcernChip = { slug: ConcernSlug; label: string; count: number };

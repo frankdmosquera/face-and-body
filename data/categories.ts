@@ -80,6 +80,21 @@ export function getCategoryBySegment(segment: string): Category | undefined {
   return CATEGORIES.find((category) => category.segment === segment);
 }
 
+/**
+ * A category is an anchor on one of two pages, not a route of its own. Facials
+ * live on the home page; the other four live on /other-treatments.
+ *
+ * Decided 2026-09-20, reversing the five-category-page structure. On a new
+ * domain only the home page has any authority, so it is the only page that can
+ * rank quickly. A second page about facials would split that signal rather than
+ * add to it, and two similar pages on a site with no authority can mean ranking
+ * for nothing for a year. Branching happens after something ranks, not before.
+ *
+ * `segment` stays on the type because it still names the anchor, and because
+ * the split back out to real routes is a planned later step.
+ */
 export function categoryHref(category: Category): string {
-  return `/treatments/${category.segment}`;
+  return category.slug === "facial"
+    ? "/#facials"
+    : `/other-treatments#${category.segment}`;
 }

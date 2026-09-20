@@ -68,11 +68,14 @@ export const CONCERNS: readonly Concern[] = [
   },
 ] as const;
 
-export function concernHref(concern: Concern): string {
-  // /what-we-treat, not /treat. /treat/acne sat one letter-group away from
-  // /treatments/skin and the two are different things - a problem versus a
-  // price list - which was unreadable in a URL bar or a search result. The
-  // longer path also says what the page is to a reader and to a crawler,
-  // and it has a real index page behind it so the breadcrumb is honest.
-  return `/what-we-treat/${concern.slug}`;
-}
+/**
+ * `concernHref` was removed on 2026-09-20 along with the nine /what-we-treat
+ * routes. A function returning a URL to a deleted page is a trap for whoever
+ * reads this next, so it is gone rather than left pointing at a 404.
+ *
+ * The taxonomy itself stays. `data/services.ts` tags every treatment with the
+ * concerns it addresses, `data/results.ts` tags every before-and-after, and
+ * `components/home/Results.tsx` reads these labels. It is also what the pages
+ * would be rebuilt from if branching by concern is ever worth doing again,
+ * which is a question for after the home page ranks rather than before.
+ */
