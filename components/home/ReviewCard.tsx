@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 
 /**
@@ -36,6 +36,55 @@ export type ReviewCardData = {
   /** One treatment, several, or none. */
   service?: string | readonly string[];
 };
+
+/**
+ * The star, defined once per page.
+ *
+ * Every rating draws each star twice - a grey outline and a gold copy clipped
+ * to a percentage on top - which is what lets a 4.7 show as four and a bit. At
+ * 5 stars across 8 cards and the section heading that is 90 stars, and while
+ * each one was its own inline `<Star>` from lucide the home page carried 90
+ * copies of the same 695-byte path: 62.5KB, 40% of its markup, more than every
+ * other icon on the page put together by a factor of four.
+ *
+ * Render this once, above anything that draws stars, and the 90 become
+ * `<use>` references to it. The shape and the clipping are untouched.
+ */
+export function StarSprite() {
+  return (
+    <svg width="0" height="0" aria-hidden="true" className="absolute">
+      {/* GEOMETRY ONLY. No `fill` and no `stroke` here, which lucide's own
+          markup carries and which is the trap: a presentation attribute on the
+          symbol beats the value inherited from whatever `<use>` references it,
+          so `fill="none"` made every star render hollow while the wrapper
+          still reported amber. Colour is the caller's job - the outline layer
+          asks for a transparent fill, the gold layer for amber - and leaving
+          both off here is what lets one shape serve both. */}
+      <symbol
+        id="fb-star"
+        viewBox="0 0 24 24"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+      </symbol>
+    </svg>
+  );
+}
+
+function Star({ size, className }: { size: number; className: string }) {
+  return (
+    <svg
+      aria-hidden="true"
+      stroke="currentColor"
+      className={className}
+      style={{ width: size, height: size, maxWidth: "none" }}
+    >
+      <use href="#fb-star" />
+    </svg>
+  );
+}
 
 /**
  * Stars, including a partial one.
@@ -86,9 +135,8 @@ export function StarRating({
             style={{ width: size, height: size }}
           >
             <Star
-              aria-hidden="true"
+              size={size}
               className="absolute inset-0 fill-transparent text-foreground/25"
-              style={{ width: size, height: size }}
             />
             {fill > 0 && (
               <span
@@ -96,9 +144,8 @@ export function StarRating({
                 style={{ width: size * fill }}
               >
                 <Star
-                  aria-hidden="true"
+                  size={size}
                   className="fill-amber-400 text-amber-400"
-                  style={{ width: size, height: size, maxWidth: "none" }}
                 />
               </span>
             )}
@@ -129,28 +176,31 @@ export function ReviewCard({ review }: { review: ReviewCardData }) {
   return (
     <figure className="flex h-full flex-col rounded-2xl border border-border bg-card/90 p-6 shadow-sm backdrop-blur-sm sm:p-7">
       <div className="flex items-start gap-3">
-        {/* A plain img, not the shadcn Avatar, and not next/image.
+        {/* `next/image`, not the shadcn Avatar and not a plain `img`.
             `AvatarImage` mounts only once the file has loaded in the browser,
-            so the photo was absent from the server HTML and every card
-            flashed its initials first. These files are local and known to
-            exist, so there is nothing to detect. next/image is also wrong
-            here: a 40px square that is already the right size gains nothing
-            from an optimisation pipeline.
+            so the photo was absent from the server HTML and every card flashed
+            its initials first. `next/image` has no such problem: it renders a
+            real `img` into the server markup.
+
+            It used to be a plain `img` on the reasoning that a 36px square
+            already the right size gains nothing from an optimisation pipeline.
+            That was wrong about these files - they are 160px masters, so the
+            browser was fetching 4.4x the pixels it draws, 109KB across the
+            eight of them. Next serves a 36 and a 72 from the same source in
+            AVIF, which is the whole saving without touching the originals.
 
             Decorative on purpose. The name is rendered right beside it, so
             alt text would make a screen reader say it twice. */}
         {review.avatarUrl ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={review.avatarUrl}
             alt=""
             width={36}
             height={36}
             // Eager, not lazy. Five of the eight start off-screen inside the
             // carousel, so lazy loading fetches them as they slide in and the
-            // face pops into a card someone is already reading. All eight
-            // together are ~124KB, which is less than one hero photograph.
-            decoding="async"
+            // face pops into a card someone is already reading.
+            priority
             className="size-9 shrink-0 rounded-full object-cover"
           />
         ) : (
@@ -185,13 +235,11 @@ export function ReviewCard({ review }: { review: ReviewCardData }) {
             itself is readable - so it carries real alt text instead of
             aria-hidden, and a screen reader and a crawler both still get the
             attribution the picture conveys to everyone else. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="/google-g.png"
           alt="Posted on Google"
           width={22}
           height={22}
-          decoding="async"
           className="mt-0.5 size-[22px] shrink-0"
         />
       </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
 import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/layout/Eyebrow";
@@ -5,6 +6,7 @@ import { Section } from "@/components/layout/Section";
 import {
   ReviewCard,
   StarRating,
+  StarSprite,
   type ReviewCardData,
 } from "@/components/home/ReviewCard";
 import { ReviewsCarousel } from "@/components/home/ReviewsCarousel";
@@ -137,6 +139,7 @@ export async function Reviews() {
       <div className="pointer-events-none absolute top-1/4 -right-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
       <div className="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
 
+      <StarSprite />
       <Container className="relative">
         {/* Wider than LATAM's `max-w-4xl`. Theirs holds two cards; three in
             896px is 288px each, which clamped seven of the eight quotes and
@@ -152,14 +155,12 @@ export async function Reviews() {
             <div className="mt-5 flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
               {/* Google's own mark, unmodified, establishing the source
                   before anyone reaches a card. */}
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src="/google-g.png"
                 alt=""
                 aria-hidden="true"
                 width={32}
                 height={32}
-                decoding="async"
                 className="size-8"
               />
               {/* Unrounded on purpose: 4.7 draws four full stars and 70% of
