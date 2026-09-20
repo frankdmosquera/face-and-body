@@ -27,6 +27,12 @@ export function makeContactSchema(topics: readonly string[]) {
     name: z
       .string()
       .trim()
+      // One line, always. `.trim()` only strips the ends, so a name holding a
+      // carriage return survives validation and reaches the Resend subject
+      // header. Resend builds its MIME from a JSON payload rather than raw
+      // SMTP, so this is near-certainly safe already - but nothing in this
+      // project proves that, and the guard costs one line.
+      .regex(/^[^\r\n]+$/, "Tell us your name")
       .min(2, "Tell us your name")
       .max(80, "Keep it under 80 characters"),
     contact: z
