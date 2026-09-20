@@ -45,7 +45,7 @@ export const revalidate = 86400;
  * Facials only, as of 2026-09-20. This page carries the full facial menu and
  * is the one page built to rank for that term, so the title names it and
  * nothing else. Laser came out when it stopped being a headline service, and
- * massage lives on /treatments, which has its own title.
+ * massage lives on /other-treatments, which has its own title.
  *
  * The layout default stays general on purpose. It is the fallback for any
  * page added later that sets nothing, so nothing home-specific belongs in it.

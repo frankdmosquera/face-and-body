@@ -82,7 +82,7 @@ export function getCategoryBySegment(segment: string): Category | undefined {
 
 /**
  * A category is an anchor on one of two pages, not a route of its own. Facials
- * live on the home page; the other four live on /treatments.
+ * live on the home page; the other four live on /other-treatments.
  *
  * Decided 2026-09-20, reversing the five-category-page structure. On a new
  * domain only the home page has any authority, so it is the only page that can
@@ -96,5 +96,5 @@ export function getCategoryBySegment(segment: string): Category | undefined {
 export function categoryHref(category: Category): string {
   return category.slug === "facial"
     ? "/#facials"
-    : `/treatments#${category.segment}`;
+    : `/other-treatments#${category.segment}`;
 }

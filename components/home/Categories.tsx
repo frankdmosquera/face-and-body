@@ -17,7 +17,7 @@ const PHOTO: Record<CategorySlug, ImageSlot> = {
 };
 
 /**
- * The four non-facial categories, as a route into /treatments.
+ * The four non-facial categories, as a route into /other-treatments.
  *
  * Facials used to be the fifth card here, linking out to their own page. They
  * are now the section directly above this one, so a card pointing at them would
@@ -76,7 +76,7 @@ export function Categories() {
           })}
         </div>
         <Link
-          href="/treatments"
+          href="/other-treatments"
           className="mt-12 inline-block text-[15px] underline underline-offset-4 hover:text-copper"
         >
           See all {total} treatments

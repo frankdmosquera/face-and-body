@@ -49,8 +49,12 @@ export function Signature() {
               </li>
             ))}
           </ul>
+          {/* The fallback below was /treatments/skin, a route deleted on
+              2026-09-20. It never rendered, because `lead` is always set while
+              microneedling is in the catalogue, so nothing caught it.
+              /other-treatments#skin is where those treatments live now. */}
           <Link
-            href={lead ? serviceHref(lead) : "/treatments/skin"}
+            href={lead ? serviceHref(lead) : "/other-treatments#skin"}
             className={buttonVariants({ variant: "outline" })}
           >
             About microneedling
