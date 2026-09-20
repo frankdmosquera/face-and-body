@@ -214,8 +214,31 @@ permanent truth.
 - Nothing ships with placeholder text. Before a page is called done, every
   string a visitor can read is either real or comes from `siteConfig`. That
   includes the page title, which is the headline Google shows.
-- Images go through the ImageKit wrapper rather than `next/image` directly, and
-  are hosted on ImageKit. Only icons and the favicon belong in `public/`.
+- **Site photography lives on ImageKit** and is rendered through the `Photo`
+  wrapper rather than `next/image` directly. Anything that is a photograph of
+  the clinic, the treatments or the work - anything that has a slot in
+  `data/images.ts` - belongs there, at full size, and stays there.
+- **Small fixed-size assets stay in `public/` and go through `next/image`**: the
+  logo mark, the Google mark, the reviewer avatars. Local file, local optimiser.
+  Never a bare `<img>`: the source in the repo is a master, not the thing the
+  browser should download, and Next is what turns one into the other.
+  Keep the masters small anyway: past about 50KB it is probably a photograph in
+  the wrong place and belongs on ImageKit.
+
+  Two things were settled here on 2026-09-19, both of them corrections.
+
+  The rule used to read "only icons and the favicon belong in `public/`", which
+  the eight reviewer avatars had quietly broken since `063b105`. The line is
+  what the file is for, not what kind of picture it is.
+
+  And those avatars were rendered with a plain `<img>` carrying an
+  eslint-disable, on the reasoning that "a 40px square already the right size
+  gains nothing from an optimisation pipeline". The files are 160px, not 40px,
+  so the browser was fetching 4.4x the pixels it drew - 109KB across the eight.
+  Through `next/image` the same masters serve at 0.6KB each, 5.7KB for the page.
+  The other half of that comment was sound and still is: shadcn's `AvatarImage`
+  mounts after hydration and flashed the initials first. `next/image` does not
+  have that problem, because it renders a real `img` into the server markup.
 - Server components by default. `"use client"` needs a reason you can name in
   one line: state, an effect, an event handler, or a browser API. Reaching for
   a hook out of habit is not a reason.

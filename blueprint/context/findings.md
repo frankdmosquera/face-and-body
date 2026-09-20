@@ -24,58 +24,53 @@ visitor can read be true.
 privacy policy to the build plan.
 **Resolution:**
 
-### F-03 [P2] open - The whole 41-service catalogue ships to the browser
+### F-08 [P1] open - The feature 10 spec targets three routes this site no longer has
 
-**File:** components/contact/ContactForm.tsx:14
-**Found:** 2026-09-18 by /audit (scope: changed; lens: performance)
-**Why it matters:** `ContactForm` is the first `"use client"` file in the project
-to import `@/lib/contact` and `@/lib/services`, both of which pull in
-`data/services.ts` (15.5 KB of source, 41 services, every description).
-Confirmed in the build output: `.next/static/chunks/2awfbqj392sk9.js` is 53 KB
-and contains the service descriptions, and both `/` and `/contact` reference it,
-so the home page pays for it too. The client needs three service names for the
-topic list and one slug lookup for the prefill.
-**Suggested fix:** Resolve both on the server. Pass `CONTACT_TOPICS` and the
-prefilled topic and message into `ContactForm` as props from `app/contact/page.tsx`,
-and keep `SERVICES` out of the client graph.
+**File:** blueprint/context/current-feature.md:38
+**Found:** 2026-09-19 by /audit (scope: full; lens: quality)
+**Why it matters:** The spec's in-scope list, build steps 1 and 2, Files/Changed
+and both Done when lines name `/hours`, `/treat/[slug]`, `app/hours/page.tsx`
+and `app/treat/[slug]/page.tsx`. None exist. 9ffb12c folded hours into
+`/contact` and renamed the concern route, and `next.config.ts` now 308-redirects
+both old paths. The spec also never mentions `/what-we-treat`, which is a real
+page with its own metadata and is the hub all eight concern pages breadcrumb
+back to. Implemented as written, step 1 emits a sitemap listing a URL that
+redirects and omitting a page that ranks, and step 2 writes canonical and Open
+Graph blocks for two files that are not there. This is the one feature whose
+entire job is making the sitemap, the canonical tag and the schema agree.
+**Suggested fix:** Rewrite the route list against `find app -name page.tsx`
+before starting: `/`, `/contact`, `/what-we-treat`, five
+`/treatments/[category]`, eight `/what-we-treat/[slug]`. Sixteen URLs, the same
+count the spec predicted, a different set.
+**Resolution:** Left open on 2026-09-20. Offered a surgical fix to the spec's
+route list and Frank declined for now, so the spec stays as written - but the
+finding stays open, not accepted, because it is still a defect waiting to be
+built into feature 10 rather than a decision to live with.
+
+What that means in practice, recorded so it is not a surprise later: the spec
+still instructs a sitemap containing `/hours` and canonical tags for
+`app/hours/page.tsx` and `app/treat/[slug]/page.tsx`. `/hours` 308-redirects to
+`/contact#hours` and neither file exists. `/what-we-treat`, which does exist and
+is the hub all eight concern pages breadcrumb back to, is absent from the spec
+entirely. The spec's own Done when line would pass on a wrong sitemap, because
+it only counts 16 URLs and the wrong set also totals 16.
+
+Read the routes off `find app -name page.tsx` before starting feature 10, not off
+this spec.
+
+### F-10 [P2] open - Ninety copies of one star icon are 40% of the home page markup
+
+**File:** components/home/ReviewCard.tsx:88
+**Found:** 2026-09-19 by /audit (scope: full; lens: performance)
+**Why it matters:** `StarRating` renders two lucide `<Star>` elements per star,
+an outline and a clipped fill, five stars per widget, across eight cards and the
+section header. Measured in the build output: `.next/server/app/index.html` is
+296 KB, 157 KB of it markup, and 62.5 KB of that markup is 90 inline copies of
+the identical star path. Every other icon on the page comes to 14 KB combined.
+It compresses well, but it is still parsed and it is still in the DOM, on the
+one page that carries the LCP hero and the standards that say these sites exist
+to rank.
+**Suggested fix:** Emit the path once as an SVG `<symbol>` and reference it with
+`<use href="#star">`. The shape and the clipping box stay exactly as they are.
 **Resolution:**
 
-### F-04 [P2] open - RESEND_API_KEY and RESEND_FROM have no committed record
-
-**File:** .gitignore:34
-**Found:** 2026-09-18 by /audit (scope: changed; lens: quality)
-**Why it matters:** The Next scaffold's `.env*` rule also swallows
-`.env.example`, so the two variables this feature depends on exist only on this
-machine. A deploy without `RESEND_API_KEY` returns the same `FAILED` result for
-every submission, and nothing in the build, the logs, or the repo says why. The
-ignore rule predates this feature, but this feature is the first thing that
-breaks because of it.
-**Suggested fix:** Add `!.env.example` below the `.env*` line and commit the
-file.
-**Resolution:**
-
-### F-05 [P3] open - The contact page meta description runs to about 230 characters
-
-**File:** app/contact/page.tsx:19
-**Found:** 2026-09-18 by /audit (scope: changed; lens: quality)
-**Why it matters:** `LEDE` does double duty as the on-page lede and the meta
-description. Google truncates around 155 to 160 characters, so the tail is cut
-in the snippet. On a build where the standards call SEO the product rather than
-a finishing pass, that is a wasted result line.
-**Suggested fix:** A separate `DESCRIPTION` constant under 155 characters, front
-loaded with the clinic and the city.
-**Resolution:**
-
-### F-06 [P3] unverified - Visitor name reaches the Resend subject with no newline restriction
-
-**File:** actions/contact.ts:39
-**Found:** 2026-09-18 by /audit (scope: changed; lens: security)
-**Why it matters:** `subject: \`New enquiry from ${name}\`` and the schema's
-`.trim()` only strips leading and trailing whitespace, so a name containing a
-carriage return or newline survives validation. Resend builds the MIME from a
-JSON payload rather than raw SMTP, which almost certainly encodes it safely, but
-nothing in this project proves that, so the classic header-injection shape is
-present without confirming evidence. Recorded as a lead, not a defect.
-**Suggested fix:** Add `.regex(/^[^\r\n]+$/)` to the name field. It costs one
-line and removes the question.
-**Resolution:**

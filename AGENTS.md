@@ -234,9 +234,10 @@ or the next hurried commit fills it in from the real file, and a secret reaches
 GitHub where nothing can take it back. This section is prose for exactly that
 reason. There is no blank here to complete.
 
-The whole project reads three variables. `grep -rn "process.env" app components
+The whole project reads five variables. `grep -rn "process.env" app components
 lib data actions` returns the current list in full, and is the answer to "which
-ones do we need" rather than any file:
+ones do we need" rather than any file. The first three are below; `CONTACT_TO`
+and `GOOGLE_MAPS_API_KEY` are covered further down, with the settled decisions:
 
 - **NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT**, read in `components/media/Photo.tsx`.
   The ImageKit URL endpoint, public by design and visible in every image URL.
@@ -255,7 +256,25 @@ ones do we need" rather than any file:
 A variable that no code reads does not belong in `.env.local` either. Turbopack
 snapshots the whole environment into `.next/cache` for invalidation, so an
 unused key still ends up in plaintext in a 100MB+ build cache that travels with
-any copy of the folder.
+any copy of the folder. Deleting `.next` is what clears those copies; a rebuild
+on its own does not, and leaves them behind.
+
+Two variables sit in `.env.local` that no code reads, and both are settled. Do
+not raise either again.
+
+- **`CONTACT_TO`** is read, and is the one that decides whether her enquiries
+  arrive at all. Until a domain is verified in Resend, `RESEND_FROM` falls back
+  to the onboarding sender, which delivers only to the Resend account owner -
+  so point `CONTACT_TO` at that address on the deploy or the form will report
+  success while she receives nothing. Delete it the day a domain exists.
+- **`GOOGLE_MAPS_API_KEY`** is read by `lib/googleReviews.ts` and is optional.
+  Without it the reviews section falls back to the curated quotes in
+  `data/reviews.ts` rather than breaking.
+- **`IMAGE_KIT_PRIVATE_KEY`** is genuinely unread, and stays anyway, by Frank's
+  decision on 2026-09-20. The site needs only the public URL endpoint; nothing
+  signs uploads or URLs. It never appeared in the build cache at any point,
+  which is why it was the one of the four unused keys worth keeping. The three
+  that were removed were stale SMTP settings from before Resend.
 
 ## Attribution
 
