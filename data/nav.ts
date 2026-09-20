@@ -98,6 +98,9 @@ export const NAV: NavItem[] = [
    * in `data/concerns.ts`, and the pages come back from git history if they
    * are ever worth rebuilding.
    */
+  /** Eminence retail. Sold in the clinic, not online, so this is a catalogue
+   *  and a reason to come in rather than a shop. */
+  { label: "Products", href: "/products" },
   /** Hours and location live on /contact now, so one item covers both. */
   { label: "Contact", href: "/contact" },
 ];
@@ -106,7 +109,10 @@ export const FOOTER: { heading: string; links: SiteLink[] }[] = [
   { heading: "Treatments", links: treatments },
   {
     heading: "Clinic",
-    links: [{ label: "Contact", href: "/contact" }],
+    links: [
+      { label: "Products", href: "/products" },
+      { label: "Contact", href: "/contact" },
+    ],
   },
   {
     heading: "Book",
