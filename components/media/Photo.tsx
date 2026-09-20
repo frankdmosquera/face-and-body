@@ -15,6 +15,22 @@ import { cn } from "@/lib/utils";
  */
 const FOLDER = "face-and-body";
 
+/**
+ * Cache-busting token appended to every ImageKit URL.
+ *
+ * ImageKit serves images with `max-age=31536000` - a one-year browser cache -
+ * and a photo swapped in under its existing filename keeps the same URL. So a
+ * replaced photo keeps showing the old file to anyone who had already loaded
+ * it, which on 2026-09-19 made a whole set of new images look like a failed
+ * upload. curl is no help diagnosing it: curl has no cache, so it reports the
+ * new image while every real browser still shows the old one.
+ *
+ * Bump this whenever a file in the media library is replaced in place. It
+ * changes the URL, so every browser refetches once and then caches again for
+ * the year. Leaving it alone costs nothing.
+ */
+const MEDIA_VERSION = "2026-09-19";
+
 function resolveEndpoint(raw: string | undefined): string | undefined {
   if (!raw) return undefined;
   const base = raw.replace(/\/+$/, "");
@@ -66,6 +82,7 @@ export function Photo({ slot, className, sizes, priority, fill }: Props) {
       width={fill ? undefined : image.w}
       height={fill ? undefined : image.h}
       fill={fill}
+      queryParameters={{ v: MEDIA_VERSION }}
       sizes={sizes}
       priority={priority}
       className={className}
