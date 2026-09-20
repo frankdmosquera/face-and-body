@@ -12,7 +12,23 @@ export type Result = {
   treatment: string | null;
 };
 
-export const RESULTS: readonly Result[] = [
+/**
+ * Empty on purpose, which hides the whole section: `Results` returns null
+ * when this array is.
+ *
+ * One entry rendered a single narrow card into a three-column grid with
+ * two-thirds of the row empty beside it, captioned "from her Instagram" and
+ * unable to name the treatment. A "Before and after" heading over one
+ * unattributed photo undersells her more than having no section at all.
+ *
+ * Restore by putting three or four back. The photo she already gave us is
+ * kept below so it is not lost, and the `resultRedness` slot still exists
+ * in the image library.
+ */
+export const RESULTS: readonly Result[] = [];
+
+/** Waiting on more before-and-afters from her. */
+const PENDING: readonly Result[] = [
   {
     slot: "resultRedness",
     concerns: ["acne"],
@@ -21,3 +37,4 @@ export const RESULTS: readonly Result[] = [
     treatment: null,
   },
 ];
+void PENDING;

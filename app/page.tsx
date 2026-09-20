@@ -2,8 +2,8 @@ import { Categories } from "@/components/home/Categories";
 import { Concerns } from "@/components/home/Concerns";
 import { Consultation } from "@/components/home/Consultation";
 import { Eminence } from "@/components/home/Eminence";
+import { Faq } from "@/components/home/Faq";
 import { Hero } from "@/components/home/Hero";
-import { Location } from "@/components/home/Location";
 import { Results } from "@/components/home/Results";
 import { Reviews } from "@/components/home/Reviews";
 import { Signature } from "@/components/home/Signature";
@@ -49,8 +49,16 @@ export default function Home() {
       <Divider className="pb-section-sm lg:pb-section" />
       <Results />
       <Eminence />
+      {/* Location removed. Hours and the address moved to /contact when the
+          two were folded together, and the footer carries the full NAP on
+          every page, so a "Find us" band here was the third copy of the same
+          facts on one scroll. */}
+      {/* Objection handling, which every other section on this page lacks:
+          the rest showcase, this one answers the reasons someone closes the
+          tab. It sits where Find us used to, directly before the consultation
+          CTA, so the last thing before the ask is the answer to why not. */}
+      <Faq />
       <Consultation />
-      <Location />
     </>
   );
 }
