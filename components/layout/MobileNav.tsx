@@ -61,7 +61,7 @@ export function MobileNav({ items }: { items: NavItem[] }) {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger
         aria-label="Menu"
-        className="flex size-10 flex-col items-center justify-center gap-[5px] rounded-full border border-border bg-card lg:hidden"
+        className="flex size-10 flex-col items-center justify-center gap-[5px] rounded-full border border-border bg-card xl:hidden"
       >
         <span className="block h-px w-4 bg-foreground" />
         <span className="block h-px w-4 bg-foreground" />

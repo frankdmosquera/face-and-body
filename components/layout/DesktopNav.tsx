@@ -49,7 +49,7 @@ export function DesktopNav({ items }: { items: NavItem[] }) {
   const pathname = usePathname();
 
   return (
-    <NavigationMenu aria-label="Main" align="center" className="hidden lg:flex">
+    <NavigationMenu aria-label="Main" align="center" className="hidden xl:flex">
       <NavigationMenuList className="gap-7">
         {items.map((item) =>
           isNavGroup(item) ? (

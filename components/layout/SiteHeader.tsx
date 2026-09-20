@@ -35,13 +35,13 @@ export function SiteHeader() {
           <a
             href={siteConfig.phone.tel}
             aria-label={`Call ${siteConfig.phone.display}`}
-            className="flex size-10 items-center justify-center rounded-full border border-border bg-card lg:hidden"
+            className="flex size-10 items-center justify-center rounded-full border border-border bg-card xl:hidden"
           >
             <Phone className="size-4" />
           </a>
           <a
             href={siteConfig.phone.tel}
-            className="hidden text-[13px] text-muted-foreground lg:inline"
+            className="hidden text-[13px] text-muted-foreground xl:inline"
           >
             {siteConfig.phone.display}
           </a>
