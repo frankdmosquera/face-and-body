@@ -1,5 +1,4 @@
 import { CATEGORIES, categoryHref } from "@/data/categories";
-import { CONCERNS, concernHref } from "@/data/concerns";
 import {
   siteConfig,
   type NavGroup,
@@ -92,29 +91,13 @@ export const NAV: NavItem[] = [
   treatmentGroup("Body", ["body"], [categorySection("body")]),
   treatmentGroup("Massage", ["massage"], [categorySection("massage")]),
   /**
-   * Was "More", holding the concerns and a "Clinic" column with Hours and
-   * Contact in it. Two problems with that. A menu item called More tells a
-   * visitor nothing, so the eight concerns underneath went unfound; and
-   * Contact, which is the page people actually go looking for, sat two
-   * levels deep behind a word that means nothing.
-   *
-   * Now the label says what is in it, and Contact is its own item below.
+   * "What we treat" and its eight concern links came out on 2026-09-20, with
+   * the pages behind them. They were a second set of landing pages aimed at
+   * the same searches as the home page, and on a domain with no authority yet
+   * that splits the signal instead of widening it. The concern taxonomy stays
+   * in `data/concerns.ts`, and the pages come back from git history if they
+   * are ever worth rebuilding.
    */
-  {
-    label: "What we treat",
-    // Points at the real index page. "We" rather than "to": the clinic
-    // saying what it handles reads warmer than an instruction, and it is
-    // the question a visitor actually has - can they help me.
-    href: "/what-we-treat",
-    sections: [
-      {
-        links: CONCERNS.map((concern) => ({
-          label: concern.label,
-          href: concernHref(concern),
-        })),
-      },
-    ],
-  },
   /** Hours and location live on /contact now, so one item covers both. */
   { label: "Contact", href: "/contact" },
 ];

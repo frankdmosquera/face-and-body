@@ -41,9 +41,13 @@ export function ServiceList({ category }: { category: Category }) {
       {blocks.map(({ group, services: inGroup }) => (
         <section key={group.slug} data-group>
           {/* The group name leads and the concern line supports it. Reversed,
-              the concern reads as a second filter competing with the real one. */}
+              the concern reads as a second filter competing with the real one.
+
+              h3, not h2: this list renders inside the facials section on the
+              home page, under that section's own h2. It used to sit under the
+              category page's h1, where h2 was right. */}
           <div data-group-head className="mb-8">
-            <h2 className="text-[40px]">{group.label}</h2>
+            <h3 className="text-[40px]">{group.label}</h3>
             <p className="mt-2 text-[15px] text-muted-foreground">
               {group.heading}
             </p>
@@ -54,7 +58,7 @@ export function ServiceList({ category }: { category: Category }) {
       {ungrouped.length > 0 && (
         <section data-group>
           <div data-group-head className="mb-8">
-            <h2 className="text-[40px]">More treatments</h2>
+            <h3 className="text-[40px]">More treatments</h3>
           </div>
           <Grid services={ungrouped} />
         </section>
