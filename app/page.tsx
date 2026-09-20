@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Categories } from "@/components/home/Categories";
 import { Concerns } from "@/components/home/Concerns";
 import { Consultation } from "@/components/home/Consultation";
@@ -30,6 +31,29 @@ import { Divider } from "@/components/layout/Divider";
  * permanently static and never retry. This line means it retries tomorrow.
  */
 export const revalidate = 86400;
+
+/**
+ * The home page was the one page on the site without its own metadata, so it
+ * fell back to the layout default and went to search as the bare business
+ * name. Every other page already sets its own.
+ *
+ * `absolute` rather than a plain string, because the layout template appends
+ * " | Face and Body Wellness Centre". A templated title here would run to 71
+ * characters and Google cuts it around 60, so the name is shortened to keep
+ * the whole thing visible. "Wellness" stays in: this is a wellness centre
+ * treating face and body, not a facial bar, and the services named are three
+ * of the five categories rather than the skin ones alone.
+ *
+ * The layout default stays general on purpose. It is the fallback for any
+ * page added later that sets nothing, so nothing home-specific belongs in it.
+ */
+export const metadata: Metadata = {
+  title: {
+    absolute: "Facials, Laser and Massage in Calgary SE | Face & Body Wellness",
+  },
+  description:
+    "Facials, microneedling, laser, massage and body treatments in Midnapore, Calgary SE, from a qualified aesthetician who looks at your skin before the menu.",
+};
 
 export default function Home() {
   return (
