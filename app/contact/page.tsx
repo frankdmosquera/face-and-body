@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Directions } from "@/components/business/Directions";
+import { HoursTable } from "@/components/business/HoursTable";
+import { OpenNow } from "@/components/business/OpenNow";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { PricingEnquiry } from "@/components/contact/PricingEnquiry";
 import { Container } from "@/components/layout/Container";
@@ -11,18 +14,34 @@ import { Watermark } from "@/components/layout/Watermark";
 import { Photo } from "@/components/media/Photo";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/data/siteConfig";
-import { smsLink } from "@/lib/contact";
+import {
+  buildPrefills,
+  CONTACT_TOPICS,
+  GENERAL_TOPIC,
+  smsLink,
+} from "@/lib/contact";
 
 const LEDE =
   "We're usually mid-treatment, so a text gets answered properly rather than a call going to voicemail. Ask anything: which treatment suits your skin, what something costs, whether you're a candidate.";
 
+/**
+ * Contact, hours and location on one page.
+ *
+ * These were split apart earlier - /contact for getting in touch, /hours for
+ * where and when - on the reasoning that they are two different jobs. In
+ * practice they are one: nobody wants to reach a clinic without also knowing
+ * when it is open, and a visitor who clicks Contact and cannot find the hours
+ * has to go looking. /hours now redirects here and #hours deep-links to the
+ * table, so nothing that pointed at the old URL breaks.
+ */
 export const metadata: Metadata = {
-  title: "Contact",
-  description: LEDE,
+  title: "Contact, hours and location",
+  description:
+    "Text or message Face and Body Wellness Centre in Midnapore, Calgary SE. Seven-day hours, directions and parking.",
 };
 
 export default function ContactPage() {
-  const { phone } = siteConfig;
+  const { address, phone } = siteConfig;
 
   return (
     <>
@@ -46,7 +65,14 @@ export default function ContactPage() {
             </h1>
             <Lede>{LEDE}</Lede>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+          {/* The ratio follows the layout. 4:5 is right only when the photo sits
+              beside the text, which starts at lg. Below that it is a single
+              column, so a 4:5 image is as wide as the page: at 834px it
+              rendered 779x974, 97% of an iPad screen, and you scrolled a
+              full viewport of photograph before reaching a word. Landscape
+              on phones and tablets, portrait only when there is a column
+              next to it. */}
+          <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:aspect-[2/1] lg:aspect-[4/5]">
             <Photo
               slot="consultation"
               fill
@@ -85,12 +111,13 @@ export default function ContactPage() {
                 Call instead
               </a>
             </div>
-            <Link
-              href="/hours"
+            {/* Jumps down the page now rather than across to /hours. */}
+            <a
+              href="#hours"
               className="mt-7 inline-block border-b border-copper pb-0.5 text-xs tracking-[0.06em] uppercase"
             >
-              Hours and location &rarr;
-            </Link>
+              Hours and location &darr;
+            </a>
           </div>
           <div
             id="form"
@@ -102,8 +129,47 @@ export default function ContactPage() {
               Goes to the same inbox she reads. Useful when your question needs more
               than a line.
             </p>
-            <ContactForm />
+            <ContactForm
+              topics={CONTACT_TOPICS}
+              generalTopic={GENERAL_TOPIC}
+              prefills={buildPrefills()}
+            />
           </div>
+        </Container>
+      </Section>
+
+      {/* Hours and location, moved here from the page that used to hold them
+          on its own. `scroll-mt-24` keeps the heading clear of the sticky
+          header when someone arrives on #hours from the link above, from the
+          menu, or from the old /hours URL. */}
+      <Section id="hours" className="scroll-mt-24">
+        <Container className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
+          <div>
+            <Eyebrow>When we&apos;re here</Eyebrow>
+            <h2 className="mt-4 mb-6">Hours</h2>
+            <OpenNow>
+              <HoursTable />
+            </OpenNow>
+          </div>
+          <div>
+            <Eyebrow>Where to find us</Eyebrow>
+            <h2 className="mt-4 mb-6">Getting here</h2>
+            <address className="text-[17px] not-italic">
+              {address.unit}, {address.street}
+              <br />
+              {address.city}, {address.province} {address.postalCode}
+            </address>
+            <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
+              Off Macleod Trail at Midlake Boulevard, next to the Midnapore
+              lake. Free parking right outside the door.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="pt-0 lg:pt-0">
+        <Container className="pt-4 lg:pt-8">
+          <Directions />
         </Container>
       </Section>
 

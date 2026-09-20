@@ -72,7 +72,14 @@ export default async function CategoryPage({ params }: Props) {
             <h1 className="my-5 lg:text-[66px]">{category.label}</h1>
             <Lede>{category.intro}</Lede>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+          {/* The ratio follows the layout. 4:5 is right only when the photo sits
+              beside the text, which starts at lg. Below that it is a single
+              column, so a 4:5 image is as wide as the page: at 834px it
+              rendered 779x974, 97% of an iPad screen, and you scrolled a
+              full viewport of photograph before reaching a word. Landscape
+              on phones and tablets, portrait only when there is a column
+              next to it. */}
+          <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:aspect-[2/1] lg:aspect-[4/5]">
             <Photo
               slot={PHOTO[category.slug]}
               fill

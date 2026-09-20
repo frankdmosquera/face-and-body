@@ -7,12 +7,15 @@ import { CONCERNS, concernHref } from "@/data/concerns";
 import { getConcernCount } from "@/lib/services";
 
 export function Concerns() {
+  // Anchored so the home page can be deep-linked to this strip. The menu
+  // label no longer points here - it goes to /what-we-treat, which is a
+  // real page now - but the id is cheap and an anchor is useful.
   return (
-    <Section>
+    <Section id="what-we-treat" className="scroll-mt-24">
       <Container>
         <div className="grid gap-8 lg:grid-cols-2 lg:items-end lg:gap-16">
           <div>
-            <Eyebrow>What to treat</Eyebrow>
+            <Eyebrow>What we treat</Eyebrow>
             <h2 className="mt-4">I&apos;m interested in treating</h2>
           </div>
           <Lede>

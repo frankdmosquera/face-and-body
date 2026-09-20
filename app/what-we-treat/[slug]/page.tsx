@@ -16,7 +16,28 @@ import { siteConfig } from "@/data/siteConfig";
 import { getDominantCategory, getServicesByConcern } from "@/lib/services";
 import type { CategorySlug } from "@/types/services";
 
-const PHOTO: Record<CategorySlug, ImageSlot> = {
+/**
+ * Each concern's own photograph.
+ *
+ * This used to be a map from the concern's dominant CATEGORY to that
+ * category's image, which meant eight pages drew on five photos and acne,
+ * fine lines, pigmentation, dull skin and scarring all showed the identical
+ * facial shot. A page about your acne that looks exactly like the page about
+ * your wrinkles is a page nobody believes.
+ */
+const PHOTO: Record<string, ImageSlot> = {
+  acne: "concernAcne",
+  "fine-lines": "concernFineLines",
+  pigmentation: "concernPigmentation",
+  "dull-dehydrated": "concernDullDehydrated",
+  "scarring-texture": "concernScarringTexture",
+  "unwanted-hair": "concernUnwantedHair",
+  "body-contouring": "concernBodyContouring",
+  "muscle-tension": "concernMuscleTension",
+};
+
+/** Falls back to the category photo if a concern is ever added without one. */
+const CATEGORY_PHOTO: Record<CategorySlug, ImageSlot> = {
   facial: "catFacial",
   skin: "catSkin",
   body: "catBody",
@@ -62,6 +83,14 @@ export default async function ConcernPage({ params }: Props) {
                 Home
               </Link>
               <span aria-hidden="true"> &nbsp;/&nbsp; </span>
+              {/* A real rung, not a decorative one: /what-we-treat is a page
+                  that exists and lists all eight. A breadcrumb naming a
+                  level with nothing behind it is the thing Google's own
+                  guidance tells you not to do. */}
+              <Link href="/what-we-treat" className="hover:text-foreground">
+                What we treat
+              </Link>
+              <span aria-hidden="true"> &nbsp;/&nbsp; </span>
               <span aria-current="page">{concern.label}</span>
             </nav>
             <Eyebrow>
@@ -70,9 +99,19 @@ export default async function ConcernPage({ params }: Props) {
             <h1 className="my-5 lg:text-[66px]">{concern.label}</h1>
             <Lede>{concern.description}</Lede>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-lg">
+          {/* The ratio follows the layout. 4:5 is right only when the photo sits
+              beside the text, which starts at lg. Below that it is a single
+              column, so a 4:5 image is as wide as the page: at 834px it
+              rendered 779x974, 97% of an iPad screen, and you scrolled a
+              full viewport of photograph before reaching a word. Landscape
+              on phones and tablets, portrait only when there is a column
+              next to it. */}
+          <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:aspect-[2/1] lg:aspect-[4/5]">
             <Photo
-              slot={PHOTO[getDominantCategory(concern.slug).slug]}
+              slot={
+                PHOTO[concern.slug] ??
+                CATEGORY_PHOTO[getDominantCategory(concern.slug).slug]
+              }
               fill
               priority
               sizes="(min-width: 1024px) 45vw, 100vw"

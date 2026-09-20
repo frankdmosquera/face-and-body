@@ -69,5 +69,10 @@ export const CONCERNS: readonly Concern[] = [
 ] as const;
 
 export function concernHref(concern: Concern): string {
-  return `/treat/${concern.slug}`;
+  // /what-we-treat, not /treat. /treat/acne sat one letter-group away from
+  // /treatments/skin and the two are different things - a problem versus a
+  // price list - which was unreadable in a URL bar or a search result. The
+  // longer path also says what the page is to a reader and to a crawler,
+  // and it has a real index page behind it so the breadcrumb is honest.
+  return `/what-we-treat/${concern.slug}`;
 }

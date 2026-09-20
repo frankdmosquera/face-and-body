@@ -97,6 +97,76 @@ export const IMAGES = {
     w: 361,
     h: 640,
   },
+
+  // The eight concern pages. Before these, all eight borrowed their
+  // category's photo, so five of them showed the identical facial shot.
+  //
+  // The rule they are picked against: it has to look like a service being
+  // provided - a professional doing something to a client in a calm room -
+  // not someone at home doing it to themselves, and never a photograph of
+  // the condition itself. A stock close-up of skin could be mistaken for
+  // one of her clients or her results; a treatment in progress cannot be.
+  //
+  // STILL TO REPLACE: concernAcne, concernFineLines and concernDullDehydrated
+  // do not meet that rule - they are at-home or ambiguous shots, kept only
+  // because they beat five pages sharing one image. Re-pick when there is
+  // time. The other five are correct.
+  concernAcne: {
+    path: "/concern-acne.jpg",
+    alt: "A deep cleansing facial being carried out",
+    source: "pexels 6475989",
+    w: 1600,
+    h: 2400,
+  },
+  concernFineLines: {
+    path: "/concern-fine-lines.jpg",
+    alt: "A facial massage tool resting in an open hand",
+    source: "pexels 5927834",
+    w: 1600,
+    h: 2398,
+  },
+  concernPigmentation: {
+    path: "/concern-pigmentation.jpg",
+    alt: "Sunlight falling across freckled skin",
+    source: "pexels 16069404",
+    w: 1600,
+    h: 1600,
+  },
+  concernDullDehydrated: {
+    path: "/concern-dull-dehydrated.jpg",
+    alt: "A hydrating serum being applied to the cheek",
+    source: "pexels 29745247",
+    w: 1600,
+    h: 2401,
+  },
+  concernScarringTexture: {
+    path: "/concern-scarring-texture.jpg",
+    alt: "A microneedling pen being used on the face",
+    source: "pexels 29648626",
+    w: 1600,
+    h: 2400,
+  },
+  concernUnwantedHair: {
+    path: "/concern-unwanted-hair.jpg",
+    alt: "A laser hair removal handpiece in use",
+    source: "pexels 36930637",
+    w: 1600,
+    h: 2845,
+  },
+  concernBodyContouring: {
+    path: "/concern-body-contouring.jpg",
+    alt: "A wood therapy tool used on the thigh",
+    source: "pexels 9165651",
+    w: 1600,
+    h: 1067,
+  },
+  concernMuscleTension: {
+    path: "/concern-muscle-tension.jpg",
+    alt: "Hands working the muscles of the back",
+    source: "pexels 38407786",
+    w: 1600,
+    h: 1067,
+  },
 } as const;
 
 export type ImageSlot = keyof typeof IMAGES;
