@@ -1,7 +1,15 @@
-import { CATEGORIES, categoryHref } from "@/data/categories";
-import { CONCERNS, concernHref } from "@/data/concerns";
-import { getServicesByCategory, serviceHref } from "@/lib/services";
-import type { CategorySlug, Service } from "@/types/services";
+/**
+ * Business facts only. This module must never import the service catalogue,
+ * directly or transitively.
+ *
+ * It is imported by client components - `OpenNow` for the hours, `MobileNav`
+ * for the phone links, `ContactForm` for both - so whatever it pulls in ships
+ * to the browser on every page. The header and footer menus are built from all
+ * 41 services, and while that derivation lived here, `OpenNow` was shipping
+ * every treatment description to render "open now" from an array of times:
+ * 56KB, on every route. The menus now live in `data/nav.ts`, which server
+ * components import and pass down as props.
+ */
 
 export type SiteLink = { label: string; href: string };
 
@@ -62,101 +70,13 @@ export type SiteConfig = {
   }[];
   consultation: { durationMin: number; price: number };
   social: { instagram: string; facebook: string };
-  nav: NavItem[];
-  footer: { heading: string; links: SiteLink[] }[];
+  reviews: { placeId: string };
 };
 
 const social = {
   instagram: "https://www.instagram.com/faceandbodywellnesscentre/",
   facebook: "https://www.facebook.com/FACEANDBODYWELLNESSCENTRE/",
 };
-
-const treatments: SiteLink[] = CATEGORIES.map((category) => ({
-  label: category.label,
-  href: categoryHref(category),
-}));
-
-function category(slug: CategorySlug) {
-  const entry = CATEGORIES.find((item) => item.slug === slug);
-  if (!entry) throw new Error(`Unknown category ${slug}`);
-  return entry;
-}
-
-function serviceLinks(services: readonly Service[]): SiteLink[] {
-  return services.map((service) => ({
-    label: service.name,
-    href: serviceHref(service),
-  }));
-}
-
-function categorySection(slug: CategorySlug, label?: string): NavSection {
-  return {
-    label,
-    href: label ? categoryHref(category(slug)) : undefined,
-    links: serviceLinks(getServicesByCategory(slug)),
-  };
-}
-
-// The header shows Skin and Laser under one button; the data keeps five categories.
-function treatmentGroup(
-  label: string,
-  slugs: CategorySlug[],
-  sections: NavSection[],
-): NavGroup {
-  const total = sections.reduce((sum, section) => sum + section.links.length, 0);
-  return {
-    label,
-    href: categoryHref(category(slugs[0])),
-    sections,
-    more: `See all ${total}`,
-  };
-}
-
-const facialSections: NavSection[] = (category("facial").groups ?? []).map(
-  (group) => ({
-    label: group.label,
-    links: serviceLinks(
-      getServicesByCategory("facial").filter(
-        (service) => service.group === group.slug,
-      ),
-    ),
-  }),
-);
-
-const nav: NavItem[] = [
-  treatmentGroup("Facials", ["facial"], facialSections),
-  treatmentGroup(
-    "Skin and Laser",
-    ["skin", "laser"],
-    [
-      categorySection("skin", "Skin Treatments"),
-      categorySection("laser", "Laser and IPL"),
-    ],
-  ),
-  treatmentGroup("Body", ["body"], [categorySection("body")]),
-  treatmentGroup("Massage", ["massage"], [categorySection("massage")]),
-  {
-    label: "More",
-    // Feature 7 points this back at /about once that page exists.
-    href: "/hours",
-    sections: [
-      {
-        label: "What to treat",
-        links: CONCERNS.map((concern) => ({
-          label: concern.label,
-          href: concernHref(concern),
-        })),
-      },
-      {
-        label: "Clinic",
-        links: [
-          { label: "Hours and location", href: "/hours" },
-          { label: "Contact", href: "/contact" },
-        ],
-      },
-    ],
-  },
-];
 
 export const siteConfig: SiteConfig = {
   name: "Face and Body Wellness Centre",
@@ -202,22 +122,7 @@ export const siteConfig: SiteConfig = {
   ],
   consultation: { durationMin: 15, price: 0 },
   social,
-  nav,
-  footer: [
-    { heading: "Treatments", links: treatments },
-    {
-      heading: "Clinic",
-      links: [
-        { label: "Contact", href: "/contact" },
-      ],
-    },
-    {
-      heading: "Book",
-      links: [
-        { label: "Book now", href: "/contact" },
-        { label: "Instagram", href: social.instagram },
-        { label: "Facebook", href: social.facebook },
-      ],
-    },
-  ],
+  // Her Google listing, confirmed 2026-09-19 by a Places text search on the name
+  // and address. Feeds the live review fetch in lib/googleReviews.ts.
+  reviews: { placeId: "ChIJiRuswV91cVMRsuRTwgJ6hJ0" },
 };

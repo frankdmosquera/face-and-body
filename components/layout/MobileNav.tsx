@@ -68,7 +68,16 @@ export function MobileNav({ items }: { items: NavItem[] }) {
       </SheetTrigger>
       <SheetContent
         side="right"
-        className="w-full gap-0 border-border bg-background p-0 text-base sm:max-w-sm"
+        // The base sheet sets `data-[side=right]:w-3/4`. A bare `w-full` does not
+        // beat it: tailwind-merge only dedupes classes sharing a variant prefix, so
+        // both survive, and the attribute selector then wins on specificity. Match
+        // the variant and the sheet goes full width below `sm`, capped above it.
+        // `100dvh`, not the base sheet's `h-full`: `h-full` resolves against the
+        // large viewport on a phone, so the footer lands under the browser chrome
+        // and the Book now button needs a scroll to reach. Variant-prefixed for the
+        // same reason as the width above - a bare `h-[100dvh]` loses to
+        // `data-[side=right]:h-full` on specificity.
+        className="gap-0 border-border bg-background p-0 text-base data-[side=right]:h-[100dvh] data-[side=right]:w-full sm:max-w-sm"
       >
         <SheetHeader className="h-16 flex-row items-center border-b border-border px-gutter-sm py-0 pr-16">
           <Brand />
@@ -79,7 +88,12 @@ export function MobileNav({ items }: { items: NavItem[] }) {
         </SheetHeader>
         <nav
           aria-label="Main"
-          className="stagger flex-1 overflow-y-auto px-gutter-sm py-2"
+          // Not `flex-1`. Growing swallowed every spare pixel and pinned the
+          // footer to the floor - 196px of nothing between the last row and the
+          // Call button at 320x640. Default `flex: 0 1 auto` keeps the nav at its
+          // content height, so the footer follows the links; `min-h-0` still lets
+          // it shrink and scroll once an accordion opens past the sheet.
+          className="stagger min-h-0 overflow-y-auto px-gutter-sm py-2"
         >
           {items.map((item) =>
             isNavGroup(item) ? (
@@ -160,7 +174,15 @@ export function MobileNav({ items }: { items: NavItem[] }) {
             ),
           )}
         </nav>
-        <SheetFooter className="gap-3 border-t border-border px-gutter-sm pt-4 pb-[calc(env(safe-area-inset-bottom)+1.25rem)]">
+        {/* The buttons stay floored by `SheetFooter`'s own `mt-auto`; on a tall
+            screen they just sit further off the floor. Releasing the margin
+            instead put them a third of the way up an iPhone 16 with 400px of
+            nothing underneath, which is worse than the gap it fixed.
+
+            Queried on height, not width. Width is the usual proxy and it gets the
+            16 wrong: 393px wide reads as a small phone, so a width rule would
+            treat the tallest screen we care about as the tightest. */}
+        <SheetFooter className="gap-3 border-t border-border px-gutter-sm pt-4 pb-[calc(env(safe-area-inset-bottom)+1.25rem)] [@media(min-height:700px)]:pb-[calc(env(safe-area-inset-bottom)+3rem)]">
           <div className="grid grid-cols-2 gap-2.5">
             <a
               href={siteConfig.phone.tel}

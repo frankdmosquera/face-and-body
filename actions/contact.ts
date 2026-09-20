@@ -2,7 +2,8 @@
 
 import { Resend } from "resend";
 import { siteConfig } from "@/data/siteConfig";
-import { contactSchema, isEmail, type ContactValues } from "@/lib/contactSchema";
+import { CONTACT_TOPICS } from "@/lib/contact";
+import { makeContactSchema, isEmail, type ContactValues } from "@/lib/contactSchema";
 
 export type ContactResult = { success: true } | { success: false; error: string };
 
@@ -16,7 +17,9 @@ const FAILED: ContactResult = {
 export async function submitContact(
   values: ContactValues,
 ): Promise<ContactResult> {
-  const parsed = contactSchema.safeParse(values);
+  // The authoritative list. The client validates against the topics it was
+  // handed; this is the copy that decides.
+  const parsed = makeContactSchema(CONTACT_TOPICS).safeParse(values);
   if (!parsed.success) return { success: false, error: "Invalid submission." };
 
   // A filled honeypot reports success so a bot cannot learn which field gave it away.
@@ -33,7 +36,13 @@ export async function submitContact(
     // takes over once a domain is verified.
     const { data, error } = await resend.emails.send({
       from: process.env.RESEND_FROM ?? "onboarding@resend.dev",
-      to: [siteConfig.email],
+      // Her inbox is where these belong, and where they will go once a domain
+      // is verified. Until then `from` falls back to Resend's onboarding sender,
+      // which delivers only to the address that owns the Resend account - any
+      // other recipient is rejected outright and the visitor sees a failure. So
+      // the recipient is overridable: point `CONTACT_TO` at the account owner
+      // while the domain is missing, and delete it the day one exists.
+      to: [process.env.CONTACT_TO ?? siteConfig.email],
       replyTo: isEmail(contact) ? contact : undefined,
       subject: `New enquiry from ${name}`,
       text: [
@@ -45,7 +54,10 @@ export async function submitContact(
       ].join("\n"),
     });
     // Resend reports failures in the response rather than by throwing.
-    if (error || !data) return FAILED;
+    if (error || !data) {
+      console.error("[contact] resend rejected:", JSON.stringify(error));
+      return FAILED;
+    }
     return { success: true };
   } catch {
     return FAILED;

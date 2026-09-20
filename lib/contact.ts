@@ -23,6 +23,27 @@ export function pricingTopic(service: Service): string {
   return `Pricing for ${service.name}`;
 }
 
+export type ContactPrefill = { topic: string; message: string };
+
+/**
+ * Every `?treatment=<slug>` the contact form might be handed, resolved to the
+ * two strings it actually sets. Built on the server and passed in as a prop:
+ * the form is a client component, and importing `getService` there pulled the
+ * whole catalogue - descriptions included - into the browser bundle to read a
+ * name and a null check. This ships the answers instead of the data.
+ */
+export function buildPrefills(): Record<string, ContactPrefill> {
+  return Object.fromEntries(
+    SERVICES.map((service) => [
+      service.slug,
+      {
+        topic: service.price === null ? pricingTopic(service) : GENERAL_TOPIC,
+        message: `Hi, I have a question about ${service.name}. `,
+      },
+    ]),
+  );
+}
+
 export const CONTACT_TOPICS: readonly string[] = [
   // First, because every "Book a consultation" button on the site lands here.
   CONSULTATION_TOPIC,

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
+import { FOOTER } from "@/data/nav";
 import { siteConfig, type SiteLink } from "@/data/siteConfig";
 
 function FooterLink({ label, href }: SiteLink) {
@@ -45,7 +46,7 @@ export function SiteFooter() {
               </a>
             </p>
           </div>
-          {siteConfig.footer.map((group) => (
+          {FOOTER.map((group) => (
             <div key={group.heading}>
               <h4 className="mb-[18px] font-sans text-[11px] font-normal tracking-[0.18em] uppercase text-copper-soft">
                 {group.heading}
