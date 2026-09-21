@@ -35,7 +35,7 @@ import { siteConfig } from "@/data/siteConfig";
  * NEVER THROWS. Every failure path returns empty. A dead key, a rotated place
  * id, a Google outage or a quota stop should cost the section its live data,
  * not take the page down. The caller falls back to the curated quotes in
- * `data/reviews.ts`, so the section never renders empty either.
+ * `data/reviewsData.ts`, so the section never renders empty either.
  */
 
 const ENDPOINT = "https://places.googleapis.com/v1/places";

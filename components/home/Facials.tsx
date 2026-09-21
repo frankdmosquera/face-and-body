@@ -3,7 +3,7 @@ import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import { ServiceList } from "@/components/treatments/ServiceList";
-import { CATEGORIES } from "@/data/categories";
+import { CATEGORIES } from "@/data/categoriesData";
 import { getServicesByCategory } from "@/lib/services";
 import type { Category } from "@/types/services";
 

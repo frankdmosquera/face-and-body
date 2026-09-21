@@ -3,8 +3,8 @@ import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Section } from "@/components/layout/Section";
 import { Photo } from "@/components/media/Photo";
-import { CATEGORIES, categoryHref } from "@/data/categories";
-import type { ImageSlot } from "@/data/images";
+import { CATEGORIES, categoryHref } from "@/data/categoriesData";
+import type { ImageSlot } from "@/data/imagesData";
 import { getCategoryFromPrice, getServicesByCategory } from "@/lib/services";
 import type { CategorySlug } from "@/types/services";
 

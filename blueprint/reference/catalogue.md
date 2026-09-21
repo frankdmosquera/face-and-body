@@ -91,6 +91,6 @@ Left as separate services until she answers.
 
 Square's descriptions are supplier copy with pasted-in artefacts ("4o mini",
 "eminenceorganics", "The HydroFacial in is"). The site does not reuse them.
-Each service carries one plain sentence in `data/services.ts`, all awaiting
+Each service carries one plain sentence in `data/servicesData.ts`, all awaiting
 her sign-off (project-plan blocker 6). Words deliberately not used anywhere:
 detox, fat reduction, cellulite, cures, treats a condition.

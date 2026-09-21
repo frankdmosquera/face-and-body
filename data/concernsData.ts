@@ -73,8 +73,8 @@ export const CONCERNS: readonly Concern[] = [
  * routes. A function returning a URL to a deleted page is a trap for whoever
  * reads this next, so it is gone rather than left pointing at a 404.
  *
- * The taxonomy itself stays. `data/services.ts` tags every treatment with the
- * concerns it addresses, `data/results.ts` tags every before-and-after, and
+ * The taxonomy itself stays. `data/servicesData.ts` tags every treatment with the
+ * concerns it addresses, `data/resultsData.ts` tags every before-and-after, and
  * `components/home/Results.tsx` reads these labels. It is also what the pages
  * would be rebuilt from if branching by concern is ever worth doing again,
  * which is a question for after the home page ranks rather than before.

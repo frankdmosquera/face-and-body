@@ -8,10 +8,10 @@ import { Section } from "@/components/layout/Section";
 import { Watermark } from "@/components/layout/Watermark";
 import { Photo } from "@/components/media/Photo";
 import { buttonVariants } from "@/components/ui/button";
-import { COLLECTIONS, PRODUCTS, getProductsByCollection } from "@/data/products";
+import { COLLECTIONS, PRODUCTS, getProductsByCollection } from "@/data/productsData";
 
 /**
- * ⚠️ The product list this renders is a placeholder. See `data/products.ts`.
+ * ⚠️ The product list this renders is a placeholder. See `data/productsData.ts`.
  *
  * The page is finished; the data is not. Everything here reads from that array,
  * so replacing it with her real shelf changes nothing in this file.
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
  * products. That is the correct kind of wrong for a placeholder: the layout is
  * true, the photography is visibly provisional, and nobody mistakes it for
  * finished. Real product shots replace it one for one by adding slots to
- * `data/images.ts` and indexing them by `product.slug` instead.
+ * `data/imagesData.ts` and indexing them by `product.slug` instead.
  *
  * Deliberately not a hot-linked picsum or Unsplash URL. next/image would need
  * `remotePatterns` in next.config, which is configuration that outlives the

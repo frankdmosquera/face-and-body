@@ -3,8 +3,8 @@ import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Section } from "@/components/layout/Section";
 import { Tag } from "@/components/layout/Tag";
 import { Photo } from "@/components/media/Photo";
-import { CONCERNS } from "@/data/concerns";
-import { RESULTS } from "@/data/results";
+import { CONCERNS } from "@/data/concernsData";
+import { RESULTS } from "@/data/resultsData";
 
 function concernLabel(slug: string): string {
   return CONCERNS.find((concern) => concern.slug === slug)?.label ?? slug;

@@ -269,7 +269,7 @@ not raise either again.
   success while she receives nothing. Delete it the day a domain exists.
 - **`GOOGLE_MAPS_API_KEY`** is read by `lib/googleReviews.ts` and is optional.
   Without it the reviews section falls back to the curated quotes in
-  `data/reviews.ts` rather than breaking.
+  `data/reviewsData.ts` rather than breaking.
 - **`IMAGE_KIT_PRIVATE_KEY`** is genuinely unread, and stays anyway, by Frank's
   decision on 2026-09-20. The site needs only the public URL endpoint; nothing
   signs uploads or URLs. It never appeared in the build cache at any point,

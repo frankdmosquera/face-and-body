@@ -217,7 +217,7 @@ permanent truth.
 - **Site photography lives on ImageKit** and is rendered through the `Photo`
   wrapper rather than `next/image` directly. Anything that is a photograph of
   the clinic, the treatments or the work - anything that has a slot in
-  `data/images.ts` - belongs there, at full size, and stays there.
+  `data/imagesData.ts` - belongs there, at full size, and stays there.
 - **Small fixed-size assets stay in `public/` and go through `next/image`**: the
   logo mark, the Google mark, the reviewer avatars. Local file, local optimiser.
   Never a bare `<img>`: the source in the repo is a master, not the thing the

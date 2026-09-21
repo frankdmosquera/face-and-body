@@ -1,5 +1,5 @@
 import { siteConfig } from "@/data/siteConfig";
-import { SERVICES } from "@/data/services";
+import { SERVICES } from "@/data/servicesData";
 import type { Service } from "@/types/services";
 
 /** `?&body=` is the one form that opens a prefilled text on both iOS and Android. */

@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { FAQ } from "@/data/faq";
+import { FAQ } from "@/data/faqData";
 
 /**
  * Anatomy ported from Primo's FAQ, surface rebuilt for this site.

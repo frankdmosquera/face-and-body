@@ -1,4 +1,4 @@
-import { CATEGORIES, categoryHref } from "@/data/categories";
+import { CATEGORIES, categoryHref } from "@/data/categoriesData";
 import { siteConfig, type NavItem, type SiteLink } from "@/data/siteConfig";
 
 /**

@@ -7,7 +7,7 @@ export type Review = {
   sourceUrl: string;
   /** first name and initial as shown publicly */
   author: string;
-  /** 1-5, as Google records it. Every entry in data/reviews.ts is a 5. */
+  /** 1-5, as Google records it. Every entry in data/reviewsData.ts is a 5. */
   rating: number;
   /**
    * Approximate date of the review, `YYYY-MM-DD`, anchored from the phrase

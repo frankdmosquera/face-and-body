@@ -1,4 +1,4 @@
-import type { ImageSlot } from "@/data/images";
+import type { ImageSlot } from "@/data/imagesData";
 import type { ConcernSlug } from "@/types/services";
 
 export type Result = {

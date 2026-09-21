@@ -1,5 +1,5 @@
 import { Image } from "@imagekit/next";
-import { IMAGES, type ImageSlot } from "@/data/images";
+import { IMAGES, type ImageSlot } from "@/data/imagesData";
 import { cn } from "@/lib/utils";
 
 /**

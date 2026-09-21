@@ -8,7 +8,7 @@ import { Section } from "@/components/layout/Section";
 import { Watermark } from "@/components/layout/Watermark";
 import { ServiceList } from "@/components/treatments/ServiceList";
 import { buttonVariants } from "@/components/ui/button";
-import { CATEGORIES } from "@/data/categories";
+import { CATEGORIES } from "@/data/categoriesData";
 import { siteConfig } from "@/data/siteConfig";
 import { getServicesByCategory } from "@/lib/services";
 

@@ -1,5 +1,5 @@
 import { Container } from "@/components/layout/Container";
-import { SERVICES } from "@/data/services";
+import { SERVICES } from "@/data/servicesData";
 import { siteConfig } from "@/data/siteConfig";
 
 export function TrustStrip() {

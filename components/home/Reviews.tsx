@@ -10,7 +10,7 @@ import {
   type ReviewCardData,
 } from "@/components/home/ReviewCard";
 import { ReviewsCarousel } from "@/components/home/ReviewsCarousel";
-import { REVIEWS } from "@/data/reviews";
+import { REVIEWS } from "@/data/reviewsData";
 import { siteConfig } from "@/data/siteConfig";
 import { getGoogleReviews } from "@/lib/googleReviews";
 import { relativeTime } from "@/lib/relativeTime";
@@ -41,12 +41,12 @@ import { relativeTime } from "@/lib/relativeTime";
  *
  * NEVER EMPTY. `getGoogleReviews` returns empty rather than throwing, so a
  * dead key, a rotated place id or a quota stop falls back to the curated
- * quotes in `data/reviews.ts` instead of taking the social proof off the page.
+ * quotes in `data/reviewsData.ts` instead of taking the social proof off the page.
  */
 
 /**
  * How many cards the carousel holds. Eight at two per view is four laps,
- * enough for autoplay to have somewhere to go. The rest of `data/reviews.ts`
+ * enough for autoplay to have somewhere to go. The rest of `data/reviewsData.ts`
  * is a pool: it backfills when Google is short and is the whole section when
  * Google fails, but it does not all render.
  */
@@ -92,7 +92,7 @@ export async function Reviews() {
   ).map((review) => ({
     text: review.quote,
     author: review.author,
-    // Every entry in data/reviews.ts is a verified 5, read off the listing
+    // Every entry in data/reviewsData.ts is a verified 5, read off the listing
     // one by one, so these carry stars rather than looking unrated.
     rating: review.rating,
     avatarUrl: review.avatar,

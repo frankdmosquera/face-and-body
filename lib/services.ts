@@ -1,6 +1,6 @@
-import { CATEGORIES } from "@/data/categories";
-import { CONCERNS } from "@/data/concerns";
-import { SERVICES } from "@/data/services";
+import { CATEGORIES } from "@/data/categoriesData";
+import { CONCERNS } from "@/data/concernsData";
+import { SERVICES } from "@/data/servicesData";
 import type {
   Category,
   CategorySlug,

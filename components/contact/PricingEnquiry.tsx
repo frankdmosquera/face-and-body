@@ -5,7 +5,7 @@ import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import { Photo } from "@/components/media/Photo";
 import { buttonVariants } from "@/components/ui/button";
-import { CATEGORIES } from "@/data/categories";
+import { CATEGORIES } from "@/data/categoriesData";
 import { siteConfig } from "@/data/siteConfig";
 import { getUnpricedServices, pricingMessage, smsLink } from "@/lib/contact";
 
