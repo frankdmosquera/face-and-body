@@ -12,6 +12,15 @@
       "autoPort": true
     },
     {
+      "name": "email",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "email"
+      ],
+      "port": 3003
+    },
+    {
       "name": "prototypes",
       "runtimeExecutable": "node",
       "runtimeArgs": [

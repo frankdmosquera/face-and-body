@@ -126,12 +126,12 @@ export default function ContactPage() {
             id="form"
             className="scroll-mt-24 rounded-lg border border-border bg-card p-7 lg:p-11"
           >
-            {/* The heading, and nothing else. It used to carry an eyebrow
-                reading "Or write it out", the heading, and a line explaining
-                that a form is useful when a question needs more than a line:
-                three pieces of text to introduce a box with labelled fields
-                and a Send button. */}
-            <h2 className="text-[34px]">Send a message</h2>
+            {/* The heading lives inside `ContactForm`, not here. It used to sit
+                at this level, which left "Send a message" standing over the
+                confirmation that replaced the form - the card told you to send
+                a message directly above the words saying you already had.
+                Owning the heading lets the component swap it for the
+                confirmation instead of stacking one on the other. */}
             <ContactForm
               topics={CONTACT_TOPICS}
               generalTopic={GENERAL_TOPIC}
