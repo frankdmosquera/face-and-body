@@ -114,7 +114,10 @@ export default function OtherTreatmentsPage() {
 
       <Section className="pt-0">
         <Container>
-          <GroupTabs groupOf={ANCHOR_TO_TAB} defaultValue={OTHERS[0].segment}>
+          <GroupTabs
+            groupOf={ANCHOR_TO_TAB}
+            order={OTHERS.map((category) => category.segment)}
+          >
             <TabsList aria-label="Other treatments by kind">
               {OTHERS.map((category) => (
                 <TabsTab key={category.slug} value={category.segment}>

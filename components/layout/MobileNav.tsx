@@ -1,7 +1,7 @@
 "use client";
 
 // Client because the sheet has open state and closes itself after navigation.
-import { ChevronRight, MessageSquare, Phone } from "lucide-react";
+import { ChevronRight, MessageSquare, Phone, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -68,6 +68,10 @@ export function MobileNav({ items }: { items: NavItemType[] }) {
       </SheetTrigger>
       <SheetContent
         side="right"
+        // The base sheet's own close button is `absolute top-3 right-3` against
+        // the popup, so it cannot centre itself against a header whose height is
+        // the logo. Ours goes in the header row instead, see below.
+        showCloseButton={false}
         // The base sheet sets `data-[side=right]:w-3/4`. A bare `w-full` does not
         // beat it: tailwind-merge only dedupes classes sharing a variant prefix, so
         // both survive, and the attribute selector then wins on specificity. Match
@@ -79,8 +83,29 @@ export function MobileNav({ items }: { items: NavItemType[] }) {
         // `data-[side=right]:h-full` on specificity.
         className="gap-0 border-border bg-background p-0 text-base data-[side=right]:h-[100dvh] data-[side=right]:w-full sm:max-w-sm"
       >
-        <SheetHeader className="h-16 flex-row items-center border-b border-border px-gutter-sm py-0 pr-16">
+        {/* HEIGHT IS THE CONTENT, WITH A FLOOR, exactly as `SiteHeader` puts
+            it. This was `h-16` with `py-0` around an 80px disc: 16px of logo
+            hung out of a 64px band, clipped at the top edge of the sheet and
+            crossing the border into the first row below it. Padding instead of
+            a height means the logo can never disagree with the band it sits in.
+
+            The close button is a row item rather than the sheet's absolute one,
+            so it centres on the logo for free and `pr-16` is no longer needed
+            to hold a lane open for it. Dressed as the burger it replaces:
+            same 40px circle, same `border-border bg-card`, same right gutter,
+            so opening the menu reads as that button turning into an X. */}
+        <SheetHeader className="min-h-16 flex-row items-center gap-3 border-b border-border px-gutter-sm py-3">
           <Brand />
+          <SheetClose
+            aria-label="Close menu"
+            className={buttonVariants({
+              variant: "outline",
+              size: "icon",
+              className: "ml-auto border-border bg-card",
+            })}
+          >
+            <X />
+          </SheetClose>
           <SheetTitle className="sr-only">Menu</SheetTitle>
           <SheetDescription className="sr-only">
             Treatments and how to reach the clinic
@@ -93,7 +118,10 @@ export function MobileNav({ items }: { items: NavItemType[] }) {
           // Call button at 320x640. Default `flex: 0 1 auto` keeps the nav at its
           // content height, so the footer follows the links; `min-h-0` still lets
           // it shrink and scroll once an accordion opens past the sheet.
-          className="stagger min-h-0 overflow-y-auto px-gutter-sm py-2"
+          // `pt-4`, not `pt-2`: the first row is a word in a band with no box
+          // around it, so it needs more air under the header border than the
+          // rows need between each other, or it reads as attached to the logo.
+          className="stagger min-h-0 overflow-y-auto px-gutter-sm pt-4 pb-2"
         >
           {items.map((item) =>
             isNavGroup(item) ? (
