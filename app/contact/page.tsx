@@ -16,6 +16,7 @@ import { siteConfig } from "@/data/siteConfig";
 import {
   buildPrefills,
   CONTACT_TOPICS,
+  GENERAL_OPENER,
   GENERAL_TOPIC,
   smsLink,
 } from "@/lib/contactPrefills";
@@ -104,8 +105,8 @@ export default function ContactPage() {
                 number they belong to is directly above and a heading would be
                 the page explaining itself again. */}
             <a
-              href={smsLink("Hi! I'd like to ask about ")}
-              className="mt-9 block font-serif text-[34px] leading-none hover:text-accent-foreground lg:text-[40px]"
+              href={smsLink(GENERAL_OPENER)}
+              className="mt-9 block font-serif text-[28px] leading-none hover:text-accent-foreground lg:text-[32px]"
             >
               {phone.display}
             </a>
@@ -150,7 +151,7 @@ export default function ContactPage() {
           <Eyebrow>What happens next</Eyebrow>
           <ol className="mt-7 grid gap-8 md:grid-cols-3 md:gap-10">
             {STEPS.map((step, index) => (
-              <li key={step} className="border-t border-border pt-5">
+              <li key={step} className="reveal-step relative pt-5">
                 <span className="block font-serif text-[26px] text-copper">
                   {index + 1}
                 </span>

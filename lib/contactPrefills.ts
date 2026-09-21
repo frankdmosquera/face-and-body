@@ -2,9 +2,30 @@ import { siteConfig } from "@/data/siteConfig";
 import { servicesData } from "@/data/servicesData";
 import type { ServiceType } from "@/types/servicesTypes";
 
+/**
+ * The opener both channels use, so a reword cannot land on one and miss the
+ * other. It ends in a space on purpose: the visitor's cursor lands after it
+ * and they finish the sentence.
+ */
+export const GENERAL_OPENER = "Hi! I'd like to ask about ";
+
 /** `?&body=` is the one form that opens a prefilled text on both iOS and Android. */
 export function smsLink(message: string): string {
   return `${siteConfig.phone.sms}?&body=${encodeURIComponent(message)}`;
+}
+
+/**
+ * WhatsApp's own click-to-chat form. `?text=` is its prefill, the equivalent
+ * of `?&body=` above, and the number in `siteConfig` must stay digits only
+ * with the country code and no +, spaces or dashes or wa.me will not resolve
+ * it.
+ *
+ * Returns "" when WhatsApp is not configured, which cannot reach the page:
+ * `ContactChannels` gates the whole channel on the same value.
+ */
+export function whatsappLink(message: string): string {
+  const base = siteConfig.phone.whatsapp;
+  return base ? `${base}?text=${encodeURIComponent(message)}` : "";
 }
 
 export function pricingMessage(service: ServiceType): string {
