@@ -5,6 +5,14 @@ export function ProductCard({ product }: { product: ProductType }) {
   return (
     <li
       id={product.slug}
+      /* The sort keys ride on the card rather than being shipped to the
+         browser a second time. `ProductSort` reads them straight off the DOM
+         and sets a CSS `order`, so reordering 133 products costs no payload
+         at all and the descriptions never cross the server boundary. Same
+         trick `data-concerns` on `ServiceCard` was left in place for. */
+      data-product=""
+      data-name={product.name}
+      data-price={product.priceCad}
       className="flex scroll-mt-24 flex-col rounded-lg border border-border bg-card p-4 transition-transform duration-200 hover:-translate-y-0.5"
     >
       {/* A white well rather than a white card. The packshots are the product
