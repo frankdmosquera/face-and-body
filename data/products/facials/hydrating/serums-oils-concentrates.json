@@ -1,0 +1,2682 @@
+{
+  "scrapedAt": "2026-09-21",
+  "category": "serums-oils-concentrates",
+  "tab": "facials/hydrating",
+  "sourceListing": "https://eminenceorganics.com/ca/face/serums-oils-concentrates?sz=100",
+  "products": [
+    {
+      "slug": "facial-recovery-oil",
+      "name": "Facial Recovery Oil",
+      "itemNo": "5110",
+      "sku": "EM010",
+      "priceCad": 98,
+      "retailSize": "0.5 oz / 15 ml",
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": "With micellar technology",
+      "tagline": "Hydrating oil with herbs and nourishing oils to soothe and renew sensitive, aging skin.",
+      "description": "Toning and hydrating oil created with precious herbs and nourishing oils to soothe and renew sensitive and aging skin. This is a luxurious facial oil suitable for all skin types. \n\nMade with Biodynamic® ingredients from Demeter International Certified Biodynamic® farms.",
+      "howToUse": "Add 2-3 drops to face and neck with circular motions working your way from the center to the sides of the face.",
+      "ingredients": [
+        {
+          "name": "Sage Leaf Extract",
+          "note": "antioxidant; rejuvenates and tones the look of skin"
+        },
+        {
+          "name": "Olive Oil",
+          "note": "calms and soothes the look of skin while deeply hydrating the skin"
+        },
+        {
+          "name": "Clary Sage Oil",
+          "note": "calming; balances oil production"
+        },
+        {
+          "name": "Ylang Ylang",
+          "note": "cleanser; calming and balancing"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin appears deeply nourished and hydrated"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin appears smoother and softer"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Epidermis appears regenerated, healing is augmented"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Complexion appears even"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "992288543",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/992288543?h=e3b5754eeb",
+          "watchUrl": "https://vimeo.com/992288543/e3b5754eeb"
+        },
+        {
+          "id": "988145510",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988145510?h=ea0e7dffe9",
+          "watchUrl": "https://vimeo.com/988145510/ea0e7dffe9"
+        },
+        {
+          "id": "988145233",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988145233?h=4580bbfaf3",
+          "watchUrl": "https://vimeo.com/988145233/4580bbfaf3"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM166",
+          "name": "Kombucha Microbiome Foaming Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EMA03",
+          "name": "Radish Seed Refining Peel",
+          "category": "Exfoliants",
+          "priceCad": 66,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Mask",
+          "sku": "EM127",
+          "name": "Snow Mushroom & Reishi Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Treat",
+          "sku": "EM010",
+          "name": "Facial Recovery Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 98,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 6,
+          "action": "Moisturize",
+          "sku": "EM005",
+          "name": "Apricot Calendula Nourishing Cream",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Organic Category, LNE & Spa’s Best Product Awards, 2024",
+        "Winner of Top Face Oil, Organic Spa Media Beauty Awards, 2023",
+        "Winner of Best Green Product, WellSpa 360 Readers' Choice Awards, 2021",
+        "Winner of Organic Category, Best Product Awards, LNE & Spa’s, 2021",
+        "Winner of Top Face Oil, Organic Spa Media Beauty Awards, 2020",
+        "Winner of Editor's Choice - Beauty, Beauty Shortlist Awards, 2019",
+        "Winner of Best Face Treatment Oil, Product Awards, Spa Professional Mexico, 2015"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/facial-recovery-oil/EM010.html?variant=5110",
+      "image": "/images/product-images/facials/hydrating/facial-recovery-oil.jpg"
+    },
+    {
+      "slug": "rosehip-triple-ce-firming-oil",
+      "name": "Rosehip Triple C+E Firming Oil",
+      "itemNo": "1315",
+      "sku": "EM315",
+      "priceCad": 125,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "For use with all skin types including sensitive",
+      "cardBlurb": "Anti-aging cleanser",
+      "tagline": "Rosehip Triple C+E Firming Oil: Hydrating facial treatment to fight aging, smooth wrinkles and protect skin.",
+      "description": "The Rosehip Triple C+E Firming Oil is an effective facial treatment comprised of a blend of results-oriented actives and ingredients that provide intense hydration and protection. Designed as a complementary product to the Citrus & Kale Potent C+E Serum , this facial oil fights the signs of aging, smooths wrinkles and hydrates deeply. For use with all skin types.",
+      "howToUse": "Apply a thin layer of oil (2–3 drops) to face and neck with circular motions once or twice daily. Leave on. May be followed with a moisturizer.",
+      "ingredients": [
+        {
+          "name": "Rosehip Oil",
+          "note": "rich in Vitamins C, E, and beta-carotene and essential fatty acids; essential fatty acids improve skin’s moisture, tone, texture as well as the look of pigmentation"
+        },
+        {
+          "name": "Seabuckthorn Oil",
+          "note": "a superfruit packed full of powerful antioxidants, vitamins and essential fatty acids; essential fatty acids promote skin hydration and elasticity, and also help problem skin"
+        },
+        {
+          "name": "Jojoba Oil",
+          "note": "helps in issues with sebum and soothes dry skin"
+        },
+        {
+          "name": "Milk Thistle",
+          "note": "contains silymarin, a polyphenol; milk thistle helps maintain hydration in skin and prevents the signs of aging"
+        },
+        {
+          "name": "Rosemary Leaf Extract",
+          "note": "conditions and smooths the skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Skin is firmed and plumped"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Dry skin is soothed and hydrated"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Protects dry skin from environmental stressors"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Visible Signs Of Aging are reduced"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988517717",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988517717?h=20e8656339",
+          "watchUrl": "https://vimeo.com/988517717/20e8656339"
+        },
+        {
+          "id": "988146295",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988146295?h=690fb6090a",
+          "watchUrl": "https://vimeo.com/988146295/690fb6090a"
+        },
+        {
+          "id": "988147785",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988147785?h=422dd3aca6",
+          "watchUrl": "https://vimeo.com/988147785/422dd3aca6"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM253",
+          "name": "Firm Skin Acai Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM314",
+          "name": "Firm Skin Acai Exfoliating Peel",
+          "category": "Exfoliants",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM303",
+          "name": "Bamboo Age Corrective Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM315",
+          "name": "Rosehip Triple C+E Firming Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM297",
+          "name": "Arctic Berry Peptide Radiance Cream",
+          "category": "Moisturizers",
+          "priceCad": 109,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Face Oil, Dermascope Aestheticians’ Choice Awards, 2024",
+        "Highly Commended Facial Oil, Natural Health International Beauty Awards, 2019",
+        "Winner of Best Facial Oil, Best Product Awards, LNE & Spa's, 2019",
+        "Winner of Best Treatment Facial Oil, Spa & Wellness Mexicaribe Product Awards, 2018",
+        "Winner of Silver Medal for Oils & Serums, Free From Awards, UK 2018",
+        "Winner of Best Firming Oil, Earth Day Beauty Awards, Healing Lifestyles, 2018",
+        "Winner of Best New Skincare Launch of 2016, Beauty Shortlist Awards, UK"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/rosehip-triple-ce-firming-oil/EM315.html?variant=1315",
+      "image": "/images/product-images/facials/hydrating/rosehip-triple-ce-firming-oil.jpg"
+    },
+    {
+      "slug": "bamboo-firming-fluid",
+      "name": "Bamboo Firming Fluid",
+      "itemNo": "1157",
+      "sku": "EM157",
+      "priceCad": 79,
+      "retailSize": "1.2 oz / 35 ml",
+      "skinType": "Normal to dry skin types, especially mature",
+      "cardBlurb": "Restore and smooth",
+      "tagline": "Firming Fluid: Tightens skin with bamboo, coconut, Natural Retinol Alternative & Swiss Green Apple Stem Cells",
+      "description": "For tighter-looking skin, our Bamboo Firming Fluid is the answer. The strengthening agents of bamboo and coconut deeply hydrates, with the help of a Natural Retinol Alternative and Swiss Green Apple Stem Cells.",
+      "howToUse": "Apply a thin layer of firming fluid to cleansed skin once or twice daily. Leave on. Follow with a moisturizer.",
+      "ingredients": [
+        {
+          "name": "Bamboo",
+          "note": "contains soluble and insoluble fiber, antioxidants, proteins, vitamins and minerals"
+        },
+        {
+          "name": "PhytoCellTec™ Swiss Green Apple Stem Cells",
+          "note": "plant stem cell concentrate; delays the appearance of visible signs of aging"
+        },
+        {
+          "name": "Monoi",
+          "note": "soothing and fragrant Tahitian oil; hydrates and firms the skin"
+        },
+        {
+          "name": "Coconut Water",
+          "note": "moisture and pH balancing; toning; source of electrolytes, Vitamin C, calcium, potassium, phosphorus to improve the appearance of skin"
+        },
+        {
+          "name": "Natural Retinol Alternative Complex",
+          "note": "contains chicory root oligosaccharides and tara tree; collagen boosting; firms and smooths the appearance of skin"
+        },
+        {
+          "name": "Coconut Oil",
+          "note": "moisturizer, antioxidant; restores the skin's moisture barrier"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Skin feels firmer and tighter"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "The appearance of elasticity is improved"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The visible Signs Of Aging are reduced"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin appears smooth and silky"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "992288922",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/992288922?h=06449df1d5",
+          "watchUrl": "https://vimeo.com/992288922/06449df1d5"
+        },
+        {
+          "id": "988144980",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988144980?h=c901a9e890",
+          "watchUrl": "https://vimeo.com/988144980/c901a9e890"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM330",
+          "name": "Mangosteen Daily Resurfacing Cleanser",
+          "category": "Cleansers",
+          "priceCad": 54,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM173",
+          "name": "Pineapple Refining Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM237",
+          "name": "Strawberry Rhubarb Dermafoliant",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Mask",
+          "sku": "EM303",
+          "name": "Bamboo Age Corrective Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Treat",
+          "sku": "EM157",
+          "name": "Bamboo Firming Fluid",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 6,
+          "action": "Moisturize",
+          "sku": "EM162",
+          "name": "Marine Flower Peptide Night Cream",
+          "category": "Moisturizers",
+          "priceCad": 109,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Firming Serum, Dermascope Aestheticians’ Choice Awards, 2024",
+        "Winner of Best Stem Cell Facial Product, Spa & Wellness MexiCaribe Product Awards, 2023",
+        "Winner of Favorite Anti-Aging Line, ASCP Skin Deep Readers' Choice Awards, 2022",
+        "Winner of Best Stem Cell Product, LNE & Spa’s Best Product Award, 2020",
+        "Winner of Best Anti-Aging Range, Natural Health International Beauty Awards, 2019",
+        "Winner of Favorite Firming Serum, Aestheticians’ Choice Awards, Dermascope, 2018",
+        "Winner of Best Skin Serum, International Beauty Awards 2017, Natural Health UK, 2017"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/bamboo-firming-fluid/EM157.html?variant=1157",
+      "image": "/images/product-images/facials/hydrating/bamboo-firming-fluid.jpg"
+    },
+    {
+      "slug": "strawberry-rhubarb-hyaluronic-serum",
+      "name": "Strawberry Rhubarb Hyaluronic Serum",
+      "itemNo": "1147",
+      "sku": "EM147",
+      "priceCad": 64,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "All skin types, especially when dehydrated",
+      "cardBlurb": "Restore and smooth",
+      "tagline": "Strawberry Rhubarb Hyaluronic Serum: Hydrating for all skin types, especially dry skin, for a youthful complexion.",
+      "description": "Discover a radiant, youthful-looking complexion with the potent Strawberry Rhubarb Hyaluronic Serum. Our unique Botanical Hyaluronic Acid Complex combines with cica, succulent strawberry and rhubarb to deeply hydrate for visibly smoother, softer skin. Suitable for all skin types, especially dry or dehydrated.",
+      "howToUse": "Apply a thin layer to cleansed skin once or twice daily. Leave on. May be followed with a moisturizer.",
+      "ingredients": [
+        {
+          "name": "Rhubarb",
+          "note": "contains polyphenols to rejuvenate and preserve youthful-looking skin"
+        },
+        {
+          "name": "Botanical Hyaluronic Acid Complex",
+          "note": "unique blend of multi-weight Hyaluronic Acid and Marshmallow Root that deeply hydrates and preserves moisture in the skin"
+        },
+        {
+          "name": "Cica",
+          "note": "gentle on the skin, with soothing hydration to help strengthen the skin’s moisture barrier"
+        },
+        {
+          "name": "Strawberry",
+          "note": "naturally contains salicylic acid that gently exfoliates and removes impurities to brighten the look of the skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Delivers deep hydration, supporting the moisture barrier to lock in and maintain skin's moisture"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin feels plumped and refreshed"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Softens and smooths"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Minimizes appearance of fine lines and wrinkles"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "994149189",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/994149189?h=22ec6754a0",
+          "watchUrl": "https://vimeo.com/994149189/22ec6754a0"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM330",
+          "name": "Mangosteen Daily Resurfacing Cleanser",
+          "category": "Cleansers",
+          "priceCad": 54,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM089",
+          "name": "Chocolate Mousse Hydration Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM147",
+          "name": "Strawberry Rhubarb Hyaluronic Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 64,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM164",
+          "name": "Strawberry Rhubarb Hyaluronic Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Natural Cosmetics, Cosmopolitan Beauty Awards, Cosmopolitan, Croatia, 2015",
+        "Winner of Best In Natural Beauty Award, Editor's Choice, Sweet Violet Bride, 2015"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/strawberry-rhubarb-hyaluronic-serum/EM147.html?variant=1147",
+      "image": "/images/product-images/facials/hydrating/strawberry-rhubarb-hyaluronic-serum.jpg"
+    },
+    {
+      "slug": "citrus-kale-potent-ce-serum",
+      "name": "Citrus & Kale Potent C+E Serum",
+      "itemNo": "1300",
+      "sku": "EM300",
+      "priceCad": 125,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": "With micellar technology",
+      "tagline": "Boost collagen & brighten skin with our potent citrus & kale serum. Get powerful antioxidant protection & reduce signs of aging for a youthful look.",
+      "description": "Lightweight, advanced serum for all skin types. The potent Vitamin C in this serum is stabilized by botanically-derived ferulic acid delivering antioxidants to help brighten skin, improve the look of fine lines and wrinkles, and reduce the appearance of free radical damage.",
+      "howToUse": "Apply 3-4 drops to cleansed skin once or twice daily. Leave on. May be followed with a moisturizer.",
+      "ingredients": [
+        {
+          "name": "Stabilized Vitamin C (L-Ascorbic Acid)",
+          "note": "a potent antioxidant that helps reduce the look of fine lines and wrinkles"
+        },
+        {
+          "name": "Sodium Ascorbyl Phosphate",
+          "note": "also known as Vitamin C salt, this unique form of Vitamin C remains a salt until it transforms to ascorbic acid"
+        },
+        {
+          "name": "Vitamin E",
+          "note": "improves the appearance of skin health"
+        },
+        {
+          "name": "Botanical Ferulic Acid",
+          "note": "a powerful antioxidant naturally derived from the leaves of plants; helps stabilize Vitamin C to retain its potency"
+        },
+        {
+          "name": "Leafy Greens (Kale, Spinach & Broccoli Sprouts)",
+          "note": "rich in antioxidants to help improve the appearance of skin elasticity and skin hydration for younger-looking skin"
+        },
+        {
+          "name": "Citrus Fruit Oils (Lemon & Grapefruit)",
+          "note": "tones and refreshes the skin; source of naturally occurring Vitamin C that helps protect skin against the visible signs of aging; astringent properties help to remove excess oil on the skin"
+        },
+        {
+          "name": "Avocado",
+          "note": "moisturizing and hydrating to relieve dry skin"
+        },
+        {
+          "name": "Hydrolyzed Botanical Hyaluronic Acid (from grass extract)",
+          "note": "deeply hydrating; natural substance that keeps skin looking plump"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Skin appears bright, firm and plumped"
+        },
+        {
+          "concern": "Redness",
+          "outcome": "The appearance of dry, red skin is reduced"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Visible Signs Of Aging are diminished"
+        }
+      ],
+      "features": [
+        "Nut Free",
+        "Soy Free"
+      ],
+      "videos": [
+        {
+          "id": "992288339",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/992288339?h=7adce4bc92",
+          "watchUrl": "https://vimeo.com/992288339/7adce4bc92"
+        },
+        {
+          "id": "988148429",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988148429?h=8e64eb3199",
+          "watchUrl": "https://vimeo.com/988148429/8e64eb3199"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM166",
+          "name": "Kombucha Microbiome Foaming Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM206",
+          "name": "Lime Refresh Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM134",
+          "name": "Turmeric Energizing Treatment",
+          "category": "Masks & Treatments",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM300",
+          "name": "Citrus & Kale Potent C+E Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EM181",
+          "name": "Daily Defense Tinted SPF",
+          "category": "Sun Care",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Vitamin C Serum, Aestheticians’ Choice Awards, Dermascope, 2020",
+        "Winner of Best Vitamin C Serum, Aestheticians’ Choice Awards, Dermascope, 2016",
+        "Winner of the Serum Category, Natural Beauty Awards, Nature & Health, 2016"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/citrus-kale-potent-ce-serum/EM300.html?variant=1300",
+      "image": "/images/product-images/facials/hydrating/citrus-kale-potent-ce-serum.jpg"
+    },
+    {
+      "slug": "copper-tripeptide-serum",
+      "name": "Copper Tripeptide Serum",
+      "itemNo": "1199",
+      "sku": "EM199",
+      "priceCad": 178,
+      "retailSize": "30 ml / 1 fl oz",
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": "Facial cleansing milk",
+      "tagline": "Eminence Organics Copper Tripeptide Serum calms post-treatment skin and enhances elasticity for an even-looking complexion.",
+      "description": "Refresh and support post-treatment skin with a multi-action blend of copper tripeptide, resveratrol and zinc hyaluronate. This lightweight gel serum calms the appearance of skin, helps reduce the look of redness due to dryness and enhances elasticity for a more even-looking complexion.",
+      "howToUse": "Apply a thin layer (1–3 pumps) on cleansed skin once or twice daily. Leave on. May be followed with a moisturizer. If skin is compromised or needs extra care, use up to three times per day.",
+      "ingredients": [
+        {
+          "name": "Polyglutamic Acid",
+          "note": "powerful humectant with water-holding capacity; helps to support the skin moisture barrier"
+        },
+        {
+          "name": "Zinc Hyaluronate",
+          "note": "encourages skin hydration; calms the appearance of inflammation"
+        },
+        {
+          "name": "Copper Tripeptide 3%",
+          "note": "improves skin’s firmness and elasticity; protects the skin’s moisture barrier"
+        },
+        {
+          "name": "Resveratrol (from Grape)",
+          "note": "antioxidant which reduces appearance of oxidative stress; lowers appearance of inflammation"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Redness",
+          "outcome": "showed a reduction in appearance of skin redness*"
+        },
+        {
+          "concern": "Lack of Firmness",
+          "outcome": "agreed skin appears firmer*"
+        },
+        {
+          "concern": "Lack of Firmness",
+          "outcome": "Helps restore the look of elasticity"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free",
+        "fragranceFree"
+      ],
+      "videos": [
+        {
+          "id": "1159487847",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1159487847?h=69e28ae7d9",
+          "watchUrl": "https://vimeo.com/1159487847/69e28ae7d9"
+        },
+        {
+          "id": "1159525410",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/1159525410?h=0a1bc126ff",
+          "watchUrl": "https://vimeo.com/1159525410/0a1bc126ff"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM193",
+          "name": "Tulsi & Snow Mushroom Cleansing Milk",
+          "category": "Cleansers",
+          "priceCad": 68,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EMA07",
+          "name": "Stone Crop Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM314",
+          "name": "Firm Skin Acai Exfoliating Peel",
+          "category": "Exfoliants",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Mask",
+          "sku": "EM238",
+          "name": "Strawberry Rhubarb Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Treat",
+          "sku": "EM199",
+          "name": "Copper Tripeptide Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 178,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 6,
+          "action": "Moisturize",
+          "sku": "EM200",
+          "name": "Ceramide Repair Balm",
+          "category": "Moisturizers",
+          "priceCad": 88,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 7,
+          "action": "Eye Care",
+          "sku": "EM329",
+          "name": "Marine Flower Peptide Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 129,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 8,
+          "action": "Protect SPF",
+          "sku": "EM181",
+          "name": "Daily Defense Tinted SPF",
+          "category": "Sun Care",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 9,
+          "action": "Body Care",
+          "sku": "EM195",
+          "name": "Ashwagandha Ultra-Rich Restorative Cream",
+          "category": "Moisturizers",
+          "priceCad": 74,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner in Top Skincare, SheFinds, New Beauty Awards, 2026"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/copper-tripeptide-serum/EM199.html?variant=1199",
+      "image": "/images/product-images/facials/hydrating/copper-tripeptide-serum.jpg"
+    },
+    {
+      "slug": "camellia-glow-solid-face-oil",
+      "name": "Camellia Glow Solid Face Oil",
+      "itemNo": "2133",
+      "sku": "EM133",
+      "priceCad": 93,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "Normal to dry skin types including dull and fatigued skin",
+      "cardBlurb": "Gentle cleansing and hydration",
+      "tagline": "Hydrating solid face oil with camellia, pink tourmaline and marula to soften skin.",
+      "description": "This beautiful solid face oil is blended with luxurious camellia oil, pink tourmaline gemstones and marula oil to soften and deeply hydrate the skin. Melt a small dab into your palm, close your eyes and let your senses guide you as you massage in to reveal your healthiest glow.",
+      "howToUse": "Melt a pea-sized amount of product in palms and apply to the face and neck with circular motions. Leave on. May be followed with a moisturizer.",
+      "ingredients": [
+        {
+          "name": "Marula Oil",
+          "note": "rich in fatty acids; super hydrator for soft, smooth skin; combats the visible signs of aging due to drying environmental stressors"
+        },
+        {
+          "name": "Pink Tourmaline Gemstones",
+          "note": "encourages the mind and spirit to feel positive thoughts, boosting a glow from within"
+        },
+        {
+          "name": "Camellia Oil",
+          "note": "highly moisturizing; revitalizes and rejuvenates the look of skin, leaving the complexion looking soft and supple"
+        },
+        {
+          "name": "Hemp Seed Oil",
+          "note": "rich in vitamins and antioxidants that improve the appearance of aging; moisturizes the skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin looks nourished and oxygenated"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin is left with a healthy glow"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Complexion appears soft and bright"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1101673974",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1101673974?h=440a1991c2",
+          "watchUrl": "https://vimeo.com/1101673974/440a1991c2"
+        },
+        {
+          "id": "988148658",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988148658?h=459cc0742c",
+          "watchUrl": "https://vimeo.com/988148658/459cc0742c"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM207",
+          "name": "Coconut Milk Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM238",
+          "name": "Strawberry Rhubarb Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM133",
+          "name": "Camellia Glow Solid Face Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 93,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM126",
+          "name": "Snow Mushroom Moisture Cloud Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Top Face Oil, Organic Spa Media Beauty Awards, 2025",
+        "Winner of Best Crystal/Gemstone Product, WellSpa 360 Readers' Choice Awards, 2022",
+        "Winner of Top Face Oil, Organic Spa Media Beauty Awards, 2022",
+        "Winner of Editors' Choice - Face Oil, TotalBeauty Awards, 2021",
+        "Winner of Best Face Oil - Skin Hydrators, 2021 New Beauty Awards",
+        "Winner of Best Crystal-Infused Balm - Crystal Beauty, The Beauty Shortlist Awards 2021"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/camellia-glow-solid-face-oil/EM133.html?variant=2133",
+      "image": "/images/product-images/facials/hydrating/camellia-glow-solid-face-oil.jpg"
+    },
+    {
+      "slug": "marine-flower-peptide-concentrate",
+      "name": "Marine Flower Peptide Concentrate",
+      "itemNo": "1161",
+      "sku": "EM161",
+      "priceCad": 89,
+      "retailSize": "1.2 oz / 35 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Anti-aging cleanser",
+      "tagline": "Innovative cream-gel concentrate supports firming and targets aging signs. Lightweight formula revitalizes for smoother, more supple skin.",
+      "description": "This innovative cream-gel concentrate supports the benefits of the Marine Flower Peptide Serum, helping the skin look firm as well as targeting the visible signs of aging. Give your skin a revitalizing boost with this lightweight formula that reveals smooth, more supple-looking skin. Suitable for all skin types.",
+      "howToUse": "Apply 1 to 2 pumps to cleansed skin once or twice daily. Leave on. May be followed with a moisturizer.",
+      "ingredients": [
+        {
+          "name": "Botanical Peptides (from Rice Protein)",
+          "note": "plant-based and naturally derived; helps reduce the appearance of fine lines and wrinkles, leaving the skin looking energized"
+        },
+        {
+          "name": "Brown Algae Extract (from Pelvetia Canaliculata)",
+          "note": "helps the skin appear firm and supple"
+        },
+        {
+          "name": "Blue-Green Algae Extract",
+          "note": "a natural retinoid-alternative that reduces the appearance of wrinkles without the harmful side effects"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "of users showed an improvement in wrinkle depth in just 4 weeks*"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "of users noted smoother-looking skin in just 4 weeks*"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "of users noted more supple-looking skin in just 4 weeks*"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1159512081",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1159512081?h=d196c60dfc",
+          "watchUrl": "https://vimeo.com/1159512081/d196c60dfc"
+        },
+        {
+          "id": "990359149",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/990359149?h=e5985f24e0",
+          "watchUrl": "https://vimeo.com/990359149/e5985f24e0"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM253",
+          "name": "Firm Skin Acai Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM255",
+          "name": "Neroli Age Corrective Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM127",
+          "name": "Snow Mushroom & Reishi Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM161",
+          "name": "Marine Flower Peptide Concentrate",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 89,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM297",
+          "name": "Arctic Berry Peptide Radiance Cream",
+          "category": "Moisturizers",
+          "priceCad": 109,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Eye Care",
+          "sku": "EM329",
+          "name": "Marine Flower Peptide Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 129,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Gold, Vegan and Eco Awards in Normal Skin Category, Organic Beauty Awards, 2024",
+        "Winner for Peptide Face Product Category, Spa & Wellness Mexicaribe 2022 Product Awards, 2022",
+        "Winner of Editor's Choice - Beauty, The Beauty Shortlist Awards, 2022"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/marine-flower-peptide-concentrate/EM161.html?variant=1161",
+      "image": "/images/product-images/facials/hydrating/marine-flower-peptide-concentrate.jpg"
+    },
+    {
+      "slug": "vitamin-c-serum",
+      "name": "Vitamin C⁺ Serum",
+      "itemNo": "1333",
+      "sku": "EM333",
+      "priceCad": 178,
+      "retailSize": "1 fl oz / 30 ml",
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": "Uneven skin corrective cleanser",
+      "tagline": "",
+      "description": "Our Vitamin C⁺ Serum pairs antioxidant-rich cloudberry with glutathione and mulberry in a lightweight gel-cream that leaves skin looking radiant and refined. Over time, this formulation softens the appearance of dark spots and fine lines while restoring firmness.",
+      "howToUse": "Apply a thin layer (1-3 pumps) on cleansed skin once or twice daily. Leave on. Follow with a moisturizer.",
+      "ingredients": [
+        {
+          "name": "Mulberry",
+          "note": "brightening; rich in polyphenols to help visibly fade the appearance of dark spots and uneven skin tone"
+        },
+        {
+          "name": "Vitamin C⁺ (3-O-Ethyl Ascorbic Acid)",
+          "note": "stable, dual-soluble vitamin C derivative with high absorption that brightens the appearance of skin while minimizing the look of fine lines and wrinkles"
+        },
+        {
+          "name": "Glutathione",
+          "note": "naturally occurring, powerful, multifunctional antioxidant that helps visibly reduce the appearance of dark spots and uneven skin tone"
+        },
+        {
+          "name": "Cloudberry",
+          "note": "rich in ellagic acid to help protect skin from environmental stressors by reducing the appearance of dryness and the early signs of aging"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Achieve brighter-looking skin & fade the appearance of dark spots"
+        },
+        {
+          "concern": "Lack of Firmness",
+          "outcome": "Improves the look of elasticity, plumpness & smoothness"
+        },
+        {
+          "concern": "Signs of Aging",
+          "outcome": "Minimizes the look of fine lines & wrinkles"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "agree their skin texture appears smoother and more refined*"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "say product feels gentle and non-irritating*"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "showed improvement in overall skin brightness**"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1215938917",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1215938917?h=783224a329",
+          "watchUrl": "https://vimeo.com/1215938917/783224a329"
+        },
+        {
+          "id": "1219730826",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/1219730826?h=b1d5165a63",
+          "watchUrl": "https://vimeo.com/1219730826/b1d5165a63"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM270",
+          "name": "Bright Skin Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM206",
+          "name": "Lime Refresh Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM237",
+          "name": "Strawberry Rhubarb Dermafoliant",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Mask",
+          "sku": "EM301",
+          "name": "Citrus & Kale Potent C+E Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Treat",
+          "sku": "EM333",
+          "name": "Vitamin C⁺ Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 178,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 6,
+          "action": "Moisturize",
+          "sku": "EM297",
+          "name": "Arctic Berry Peptide Radiance Cream",
+          "category": "Moisturizers",
+          "priceCad": 109,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 7,
+          "action": "Eye Care",
+          "sku": "EM334",
+          "name": "Vitamin C⁺ Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 122,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 8,
+          "action": "Protect SPF",
+          "sku": "EM177",
+          "name": "Radiant Protection SPF Fluid",
+          "category": "Sun Care",
+          "priceCad": 66,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 9,
+          "action": "Body Care",
+          "sku": "EM170",
+          "name": "Yuzu Solid Body Oil",
+          "category": "Body Lotions & Oils",
+          "priceCad": 59,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/vitamin-c-serum/EM333.html?variant=1333",
+      "image": "/images/product-images/facials/hydrating/vitamin-c-serum.jpg"
+    },
+    {
+      "slug": "charcoal-black-seed-clarifying-oil",
+      "name": "Charcoal & Black Seed Clarifying Oil",
+      "itemNo": "1179",
+      "sku": "EM179",
+      "priceCad": 118,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "All skin types with congestion, in particular oily & combination skin types",
+      "cardBlurb": "Restore and smooth",
+      "tagline": "Lightweight, non-greasy clarifying oil with activated charcoal and black seed oil. Reduces uneven tone, absorbs sebum, hydrates and softens.",
+      "description": "Visibly transform skin with a lightweight clarifying oil. Ideal for all skin types, including oily and combination skins, this non-greasy formula is infused with activated charcoal and black seed oil to visibly reduce the look of uneven skin tone while absorbing excess sebum and leaving your complexion hydrated and soft.",
+      "howToUse": "Shake well before use. Apply 2–3 drops to face and neck with circular motions once or twice daily. Leave on. May be followed with a moisturizer.",
+      "ingredients": [
+        {
+          "name": "Immortelle Oil",
+          "note": "rich in antioxidants; soothes and moisturizes skin"
+        },
+        {
+          "name": "Black Seed Oil",
+          "note": "balances sebum and prevents clogged pores; helps address the look of dark spots and blemishes; rich in antioxidants and omega fatty acids"
+        },
+        {
+          "name": "Activated Charcoal",
+          "note": "derived from oak wood; absorbs excess oils and draws out impurities"
+        },
+        {
+          "name": "Squalane",
+          "note": "plant-sourced emollient that hydrates and protects skin"
+        },
+        {
+          "name": "Cica Oil",
+          "note": "soothes, calms and moisturizes skin"
+        },
+        {
+          "name": "Moringa Oil",
+          "note": "packed with antioxidants and oleic fatty acids that promote healthy-looking skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Reduces the appearance of blemishes and dark spots"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin appears balanced"
+        },
+        {
+          "concern": "Redness",
+          "outcome": "Soothes occasional redness due to dry skin"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "Absorbs excess oil and sebum"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Moisturizes, nourishes and softens the skin"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "994149608",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/994149608?h=9e7801caf2",
+          "watchUrl": "https://vimeo.com/994149608/9e7801caf2"
+        },
+        {
+          "id": "988144265",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988144265?h=c302d0270e",
+          "watchUrl": "https://vimeo.com/988144265/c302d0270e"
+        },
+        {
+          "id": "988142690",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988142690?h=17c5c223a6",
+          "watchUrl": "https://vimeo.com/988142690/17c5c223a6"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM330",
+          "name": "Mangosteen Daily Resurfacing Cleanser",
+          "category": "Cleansers",
+          "priceCad": 54,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM173",
+          "name": "Pineapple Refining Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM115",
+          "name": "Acne Advanced Clarifying Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM179",
+          "name": "Charcoal & Black Seed Clarifying Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 118,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM129",
+          "name": "Mangosteen Gel Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/charcoal-black-seed-clarifying-oil/EM179.html?variant=1179",
+      "image": "/images/product-images/facials/hydrating/charcoal-black-seed-clarifying-oil.jpg"
+    },
+    {
+      "slug": "bright-skin-licorice-root-booster-serum",
+      "name": "Bright Skin Licorice Root Booster-Serum",
+      "itemNo": "1278",
+      "sku": "EM278",
+      "priceCad": 69,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "All skin types, including oily to mature, lack of tone, irritated and hyperpigmented",
+      "cardBlurb": "Uneven skin corrective cleanser",
+      "tagline": "Extra-strength brightening serum with Natural Hydroquinone Alternative and Swiss Alpine Plant Extracts for a luminous complexion.",
+      "description": "Reveal the look of your skin’s luminous complexion with this extra strength brightening serum and product enhancer, infused with Natural Hydroquinone Alternative and Swiss Alpine Plant Extracts.",
+      "howToUse": "Apply a thin layer over the entire face, or apply to affected areas 1–3 times per day. Alternatively, combine 2-3 drops with an Eminence masque or moisturizer.",
+      "ingredients": [
+        {
+          "name": "Lactic Acid",
+          "note": "sloughs off dead skin cells to rejuvenate the appearance of skin"
+        },
+        {
+          "name": "Lemongrass",
+          "note": "tones and cleanses skin"
+        },
+        {
+          "name": "Natural Hydroquinone Alternative Complex",
+          "note": "brightening with African potato and tara tree; antioxidant rich"
+        },
+        {
+          "name": "Licorice",
+          "note": "brightens skin appearance"
+        },
+        {
+          "name": "Stone Crop",
+          "note": "hydrates, moisturizes and heals dry skin; brightens and revitalizes the look of uneven skin tone; reduces the appearance of redness due to dryness"
+        },
+        {
+          "name": "Swiss Alpine Plant Extracts",
+          "note": "brightens the look of skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Skin appears smoother, calmer and firmer"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin is moisturized, more vitalized"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Complexion appears brighter"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin appearance is healthier"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1175669407",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1175669407?h=4fd62f9be4",
+          "watchUrl": "https://vimeo.com/1175669407/4fd62f9be4"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM270",
+          "name": "Bright Skin Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM173",
+          "name": "Pineapple Refining Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM134",
+          "name": "Turmeric Energizing Treatment",
+          "category": "Masks & Treatments",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM278",
+          "name": "Bright Skin Licorice Root Booster-Serum",
+          "category": "PHA, AHA, BHA",
+          "priceCad": 69,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM176",
+          "name": "Bakuchiol + Niacinamide Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EM181",
+          "name": "Daily Defense Tinted SPF",
+          "category": "Sun Care",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Honorable Mention of ASCP Readers' Choice Awards: Favorite Hyperpigmentation Line, ASCP Skin Deep, 2019",
+        "Winner of Best Hyperpigmentation Collection, ASCP Skin Deep Readers’ Choice Awards, 2018"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/bright-skin-licorice-root-booster-serum/EM278.html?variant=1278",
+      "image": "/images/product-images/facials/hydrating/bright-skin-licorice-root-booster-serum.jpg"
+    },
+    {
+      "slug": "firm-skin-acai-booster-serum",
+      "name": "Firm Skin Acai Booster-Serum",
+      "itemNo": "1281",
+      "sku": "EM281",
+      "priceCad": 69,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "All skin types, especially mature",
+      "cardBlurb": "Anti-aging cleanser",
+      "tagline": "Antioxidant-rich serum with acai and hyaluronic acid to reduce signs of aging.",
+      "description": "Reduce the signs of aging with this antioxidant-rich extra strength serum and product enhancer infused with acai and naturally derived hyaluronic acid from marshmallow plant.",
+      "howToUse": "Apply a thin layer over the entire face, or apply to affected areas 1–3 times per day. Alternatively, combine 2-3 drops with an Eminence masque or moisturizer.",
+      "ingredients": [
+        {
+          "name": "Wild Jujube",
+          "note": "toning; skin brightener high in Vitamin C to reduce the appearance of signs of aging"
+        },
+        {
+          "name": "Homeostatine® (Marine Algae, Tara Tree)",
+          "note": "antioxidant; helps to prevent dehydration; reduces the appearance of wrinkle depth"
+        },
+        {
+          "name": "Botanical Hyaluronic Acid (from marshmallow plant extract)",
+          "note": "deeply hydrating; natural substance that smooths and plumps skin to minimize the appearance of fine lines and wrinkles"
+        },
+        {
+          "name": "Acai Berry",
+          "note": "nourishing with high antioxidant and vitamin content to improve skin tone appearance"
+        },
+        {
+          "name": "Maral Root",
+          "note": "rich in Vitamin C to improve the appearance of skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The visible Signs Of Aging are reduced"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin appears soft and noticeably smoother"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is hydrated and appears plump"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Skin appears firmed and revitalized"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "992288595",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/992288595?h=2128712aa9",
+          "watchUrl": "https://vimeo.com/992288595/2128712aa9"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM253",
+          "name": "Firm Skin Acai Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM314",
+          "name": "Firm Skin Acai Exfoliating Peel",
+          "category": "Exfoliants",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM301",
+          "name": "Citrus & Kale Potent C+E Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM281",
+          "name": "Firm Skin Acai Booster-Serum",
+          "category": "Hyaluronic Acid",
+          "priceCad": 69,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM256",
+          "name": "Coconut Age Corrective Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/firm-skin-acai-booster-serum/EM281.html?variant=1281",
+      "image": "/images/product-images/facials/hydrating/firm-skin-acai-booster-serum.jpg"
+    },
+    {
+      "slug": "stone-crop-serum",
+      "name": "Stone Crop Serum",
+      "itemNo": "144",
+      "sku": "EM044",
+      "priceCad": 64,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "Hyperpigmented, reactive, sensitive and dehydrated skin types",
+      "cardBlurb": "Gentle wash for all skin types",
+      "tagline": "Intense hydrator with super antioxidant benefits. Reduces visible signs of aging and leaves skin looking years younger after one application.",
+      "description": "Look years younger after one application of our Stone Crop Serum. This intense hydrator relieves the appearance of signs of aging as you benefit from its super antioxidant benefits.",
+      "howToUse": "Apply a thin layer over the entire face, or apply to affected areas 1–3 times per day.",
+      "ingredients": [
+        {
+          "name": "Green Tea",
+          "note": "high in antioxidants, polyphenols, flavonoids, and vitamins for youthful-looking skin"
+        },
+        {
+          "name": "Bearberry Extract",
+          "note": "reduces the appearance of dark spots"
+        },
+        {
+          "name": "Stone Crop",
+          "note": "hydrates and reduces the appearance of age spots and skin blotches"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin tone appears brighter and more even"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin surface is rehydrated and soft"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Skin appears firmer and tighter"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Skin appears revitalized and protected against free radicals"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Skin appears more youthful"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Sensitive and problems areas are improved"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "994148970",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/994148970?h=2b3cc0f718",
+          "watchUrl": "https://vimeo.com/994148970/2b3cc0f718"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM066",
+          "name": "Stone Crop Gel Wash",
+          "category": "Cleansers",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM238",
+          "name": "Strawberry Rhubarb Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM044",
+          "name": "Stone Crop Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 64,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM053",
+          "name": "Stone Crop Whip Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Teen Skincare – Normal Skin: Stone Crop Collection, Spa & Wellness MexiCaribe Product Awards, 2019",
+        "Winner of Best Men's Line, Best Product Awards, LNE & Spa's, 2019",
+        "Winner of Best Serum, LNE's Best, Les Nouvelles Esthétiques & Spa, 2015"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/stone-crop-serum/EM044.html?variant=144",
+      "image": "/images/product-images/facials/hydrating/stone-crop-serum.jpg"
+    },
+    {
+      "slug": "clear-skin-willow-bark-booster-serum",
+      "name": "Clear Skin Willow Bark Booster-Serum",
+      "itemNo": "1280",
+      "sku": "EM280",
+      "priceCad": 69,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "Oily to normal skin types, especially acne-prone skin",
+      "cardBlurb": "For problem prone skin types",
+      "tagline": "Serum with willow bark and tea tree oil to heal irritation and reduce problem skin.",
+      "description": "Help heal irritation and reduce the appearance of problem skin with this concentrated serum and product enhancer infused with willow bark and tea tree oil.",
+      "howToUse": "Apply a thin layer over the entire face, or apply to affected areas 1–3 times per day. Alternatively, combine 2-3 drops with an Eminence masque or moisturizer.",
+      "ingredients": [
+        {
+          "name": "Tea Tree Oil",
+          "note": "essential oil"
+        },
+        {
+          "name": "Horsetail",
+          "note": "softens and tones the skin’s appearance and promotes the look of elasticity"
+        },
+        {
+          "name": "Anise",
+          "note": "antioxidant rich"
+        },
+        {
+          "name": "Willow Bark",
+          "note": "calms skin"
+        },
+        {
+          "name": "Walnut Leaf",
+          "note": "provides gentle exfoliation"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Problem areas are improved"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Skin appears purified and detoxified"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "The appearance of pore size is minimized"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin appears soft and noticeably smoother"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "994149800",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/994149800?h=523afd3ce2",
+          "watchUrl": "https://vimeo.com/994149800/523afd3ce2"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM249",
+          "name": "Clear Skin Probiotic Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM313",
+          "name": "Clear Skin Willow Bark Exfoliating Peel",
+          "category": "Exfoliants",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM178",
+          "name": "Charcoal & Black Seed Clay Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM280",
+          "name": "Clear Skin Willow Bark Booster-Serum",
+          "category": "Natural Oils",
+          "priceCad": 69,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM129",
+          "name": "Mangosteen Gel Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Acne Collection, ASCP Skin Deep Readers’ Choice Awards, 2018",
+        "Winner of Best Acne Collection, DaySpa Professional Choice Awards, 2017",
+        "Winner of Best Acne Treatment, Beauty Awards, The Knot, 2015",
+        "Winner of Premium Organic Skin Care Product, Sister's Beauty Pro Awards, Hong Kong, 2013"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/clear-skin-willow-bark-booster-serum/EM280.html?variant=1280",
+      "image": "/images/product-images/facials/hydrating/clear-skin-willow-bark-booster-serum.jpg"
+    },
+    {
+      "slug": "lavender-age-corrective-night-concentrate",
+      "name": "Lavender Age Corrective Night Concentrate",
+      "itemNo": "1277",
+      "sku": "EM277",
+      "priceCad": 79,
+      "retailSize": "1.2 oz / 35 ml",
+      "skinType": "Normal to dry skin types, especially mature",
+      "cardBlurb": "Gentle, balancing facial cleanser",
+      "tagline": "Overnight treatment hydrates and replenishes. Argan oil, jojoba oil and shea butter improve skin density and reduce appearance of wrinkles.",
+      "description": "Hydrate and replenish your skin’s appearance with this overnight treatment. Rich argan oil, jojoba oil and shea butter improve the look of your skin’s density and aid in reducing the appearance of wrinkles.",
+      "howToUse": "Apply a thin layer to cleansed skin once or twice daily. Massage in a circular motion. Leave on. Follow with a moisturizer.",
+      "ingredients": [
+        {
+          "name": "Lavender",
+          "note": "soothes and softens the look of dry skin by replenishing moisture"
+        },
+        {
+          "name": "Argan Stem Cell Complex (Argan Stem Cells and Nutmeg Seed)",
+          "note": "contains PhytoCellTec™ Argan stem cells and Nutmeg Seed; results in smoother looking skin"
+        },
+        {
+          "name": "Argan Oil",
+          "note": "antioxidant; softens and moisturizes"
+        },
+        {
+          "name": "Evening Primrose Oil",
+          "note": "moisturizes"
+        },
+        {
+          "name": "Shea Butter",
+          "note": "high in triglycerides and fatty acids, it is an excellent emollient that revitalizes and helps to repair the skin"
+        },
+        {
+          "name": "Jojoba Oil",
+          "note": "supports and hydrates with one of the best absorption rates"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Wrinkles appear filled, skin appears firmer"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The appearance of elasticity is improved"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The visible Signs Of Aging are reduced"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Skin appears and feels smooth"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "994149076",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/994149076?h=7cebcdefb9",
+          "watchUrl": "https://vimeo.com/994149076/7cebcdefb9"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM325",
+          "name": "Stone Crop Cleansing Oil",
+          "category": "Cleansers",
+          "priceCad": 68,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EMA03",
+          "name": "Radish Seed Refining Peel",
+          "category": "Exfoliants",
+          "priceCad": 66,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM303",
+          "name": "Bamboo Age Corrective Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM277",
+          "name": "Lavender Age Corrective Night Concentrate",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM162",
+          "name": "Marine Flower Peptide Night Cream",
+          "category": "Moisturizers",
+          "priceCad": 109,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Anti-Aging Collection, ASCP Skin Deep Readers’ Choice Awards, 2018 ​",
+        "Winner of Best Stem Cell Product, Product Awards, Spa & Wellness Mexicaribe, 2017"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/lavender-age-corrective-night-concentrate/EM277.html?variant=1277",
+      "image": "/images/product-images/facials/hydrating/lavender-age-corrective-night-concentrate.jpg"
+    },
+    {
+      "slug": "calm-skin-arnica-booster-serum",
+      "name": "Calm Skin Arnica Booster-Serum",
+      "itemNo": "1279",
+      "sku": "EM279",
+      "priceCad": 69,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "All skin types, especially those with rosacea",
+      "cardBlurb": "With micellar technology",
+      "tagline": "Extra-strength serum and product enhancer with arnica, chamomile and lavender. Calms and balances skin, tightens the appearance of pores.",
+      "description": "Calm and balance your skin with this extra strength serum and product enhancer infused with arnica, chamomile and lavender.",
+      "howToUse": "Apply a thin layer over the entire face, or apply to affected areas 1–3 times per day. Alternatively, combine 2-3 drops with an Eminence masque or moisturizer.",
+      "ingredients": [
+        {
+          "name": "Rosehip",
+          "note": "vitamin-C rich"
+        },
+        {
+          "name": "Ivy",
+          "note": "tones and tightens the appearance of pores"
+        },
+        {
+          "name": "Horse Chestnut",
+          "note": "tones and tightens the appearance of skin"
+        },
+        {
+          "name": "Lavender",
+          "note": "restores moisture to dry skin"
+        },
+        {
+          "name": "Chamomile",
+          "note": "revitalizes, soothes and balances the appearance of dry skin"
+        },
+        {
+          "name": "Arnica",
+          "note": "cleanser"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Redness",
+          "outcome": "The appearance of redness is reduced"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin is moisturized, more vitalized"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Complexion appears brighter"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin appearance is healthier"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "994144066",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/994144066?h=2b94b61aa7",
+          "watchUrl": "https://vimeo.com/994144066/2b94b61aa7"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM166",
+          "name": "Kombucha Microbiome Foaming Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EMA03",
+          "name": "Radish Seed Refining Peel",
+          "category": "Exfoliants",
+          "priceCad": 66,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM009",
+          "name": "Yellow Sweet Clover Anti-Redness Masque",
+          "category": "Natural Oils",
+          "priceCad": 62,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM279",
+          "name": "Calm Skin Arnica Booster-Serum",
+          "category": null,
+          "priceCad": 69,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM024",
+          "name": "Linden Calendula Treatment",
+          "category": "Masks & Treatments",
+          "priceCad": 75,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Honorable Mention of ASCP Readers' Choice Awards: Favorite Sensitive Skin Line, ASCP Skin Deep, 2019",
+        "Winner of Best Organic Facial, Harper's Bazaar Malaysia Spa Awards, 2017",
+        "Winner of Premium Organic Skincare Product, Sister's Beauty Pro Awards, Hong Kong, 2015"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/calm-skin-arnica-booster-serum/EM279.html?variant=1279",
+      "image": "/images/product-images/facials/hydrating/calm-skin-arnica-booster-serum.jpg"
+    },
+    {
+      "slug": "eight-greens-youth-serum",
+      "name": "Eight Greens Youth Serum",
+      "itemNo": "142",
+      "sku": "EM042",
+      "priceCad": 64,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "All skin types, especially dehydrated, oily, hormonal or dry, devitalized mature",
+      "cardBlurb": "Gentle wash for all skin types",
+      "tagline": "Treat signs of aging with organic phytoestrogens and antioxidants. Yucca, chasteberry and flax seed extract for tight, bright skin.",
+      "description": "Treat the visible signs of aging with this powerful combination of organic phytoestrogens. Concentrated whole plant yucca, chasteberry and flax seed extract are all active ingredients in helping with the appearance of tight and bright skin.",
+      "howToUse": "Apply a thin layer over the entire face, or apply to affected areas 1–3 times per day.",
+      "ingredients": [
+        {
+          "name": "Yucca Extract",
+          "note": "antioxidant; source of phytoestrogens"
+        },
+        {
+          "name": "Paprika",
+          "note": "invigorates and revitalizes the appearance of skin"
+        },
+        {
+          "name": "Chasteberry",
+          "note": "source of antioxidant bioflavanoids"
+        },
+        {
+          "name": "Hops Extract",
+          "note": "antioxidant that calms and tones the appearance of skin"
+        },
+        {
+          "name": "Flaxseed/Linseed Extract",
+          "note": "omega 3s, antioxidant"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Epidermis appears firmer and tighter"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "The appearance of skin elasticity is improved"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Skin appears less oily"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is more hydrated without appearing oily"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Skin appears smoother and more silky"
+        }
+      ],
+      "features": [
+        "Nut Free",
+        "Soy Free"
+      ],
+      "videos": [
+        {
+          "id": "992288493",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/992288493?h=1c1fc66333",
+          "watchUrl": "https://vimeo.com/992288493/1c1fc66333"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM066",
+          "name": "Stone Crop Gel Wash",
+          "category": "Cleansers",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM237",
+          "name": "Strawberry Rhubarb Dermafoliant",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM057",
+          "name": "Eight Greens Phyto Masque – Hot",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM042",
+          "name": "Eight Greens Youth Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 64,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM053",
+          "name": "Stone Crop Whip Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/eight-greens-youth-serum/EM042.html?variant=142",
+      "image": "/images/product-images/facials/hydrating/eight-greens-youth-serum.jpg"
+    },
+    {
+      "slug": "marine-flower-peptide-serum",
+      "name": "Marine Flower Peptide Serum",
+      "itemNo": "1328",
+      "sku": "EM328",
+      "priceCad": 125,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Multi-action exfoliating cleanser",
+      "tagline": "Potent gel serum for all skin types. Plant peptides and botanicals diminish fine lines for smoother, plumper, youthful-looking skin.",
+      "description": "This easily absorbed, potent gel serum delivers concentrated plant peptides and botanicals to diminish the appearance of fine lines and wrinkles for visibly smoother, plumper and more youthful-looking skin. Ideal for all skin types, especially aging skin, the Smart Collagen+ Complex rejuvenates the look of the complexion while unique algae extracts increase firmness and provide long-lasting hydration.",
+      "howToUse": "Apply a thin layer over the entire face, or apply to affected areas 1–3 times per day.",
+      "ingredients": [
+        {
+          "name": "Red Algae Extract",
+          "note": "nutrient rich and contains vitamins, minerals, and amino-acids for the visible signs of aging"
+        },
+        {
+          "name": "Botanical Peptides (from Rice Protein)",
+          "note": "naturally derived for reducing the look of fine lines and wrinkles"
+        },
+        {
+          "name": "Smart Collagen+ Complex",
+          "note": "minerals, amino acids and botanicals reveal significantly smoother skin with the appearance of fewer fines lines and wrinkles"
+        },
+        {
+          "name": "Blue-Green Algae Extract",
+          "note": "a natural retinoid-alternative that reduces the appearance of wrinkles without the harmful side effects"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Dullness",
+          "outcome": "Visibly smoother and more radiant looking skin"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Moisture and hydration levels are improved"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1133696022",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1133696022?h=db3a4874f1",
+          "watchUrl": "https://vimeo.com/1133696022/db3a4874f1"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM302",
+          "name": "Monoi Age Corrective Exfoliating Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM241",
+          "name": "Firm Skin Acai Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM328",
+          "name": "Marine Flower Peptide Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM162",
+          "name": "Marine Flower Peptide Night Cream",
+          "category": "Moisturizers",
+          "priceCad": 109,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM275",
+          "name": "Lavender Night Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Peptide Face Product, Spa & Wellness Mexicaribe Product Awards, 2020",
+        "Winner of Best Natural and Organic Product, Best Product Awards, LNE & Spa's, 2019",
+        "Winner of Best Daily Serum, Beauty Shortlist Awards, 2018"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/marine-flower-peptide-serum/EM328.html?variant=1328",
+      "image": "/images/product-images/facials/hydrating/marine-flower-peptide-serum.jpg"
+    },
+    {
+      "slug": "mangosteen-daily-resurfacing-concentrate",
+      "name": "Mangosteen Daily Resurfacing Concentrate",
+      "itemNo": "2331",
+      "sku": "EM331",
+      "priceCad": 79,
+      "retailSize": "1.2 oz / 35 ml",
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": "Exfoliating gel cleanser",
+      "tagline": "Mangosteen Daily Resurfacing Concentrate: Gently resurfaces and refines pores for radiant skin.",
+      "description": "Gently resurface and refine pores to refresh the skin’s natural appearance. The mangosteen in this leave-on concentrate promotes radiance while the Lactic Acid Complex removes and prevents buildup.",
+      "howToUse": "Apply 1-2 pumps to cleansed skin once or twice daily. Leave on. May be followed with a moisturizer.",
+      "ingredients": [
+        {
+          "name": "Mangosteen",
+          "note": "an antioxidant-rich super fruit that helps the appearance of skin and minimizes the look of environmental stress, all while promoting natural radiance"
+        },
+        {
+          "name": "Lactic Acid Complex (Lactic Acid, Ribose, Red Clover Flower Extract)",
+          "note": "a proprietary blend of actives; gently resurfaces skin and refines pores for a more luminous, even, and youthful looking complexion"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Dullness",
+          "outcome": "Dull skin is immediately refreshed and revitalized"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Evens skin tone and texture for a natural, luminous glow"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "Pore size is minimized"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin feels smooth and silky"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin is more receptive to further treatment"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free",
+        "Soy Free"
+      ],
+      "videos": [
+        {
+          "id": "991691095",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/991691095?h=d7b1de1419",
+          "watchUrl": "https://vimeo.com/991691095/d7b1de1419"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM132",
+          "name": "Charcoal Exfoliating Gel Cleanser",
+          "category": "Cleansers",
+          "priceCad": 68,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM128",
+          "name": "Mangosteen Revitalizing Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM331",
+          "name": "Mangosteen Daily Resurfacing Concentrate",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM129",
+          "name": "Mangosteen Gel Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM130",
+          "name": "Mangosteen Body Lotion",
+          "category": "Body Lotions & Oils",
+          "priceCad": 47,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/mangosteen-daily-resurfacing-concentrate/EM331.html?variant=2331",
+      "image": "/images/product-images/facials/hydrating/mangosteen-daily-resurfacing-concentrate.jpg"
+    },
+    {
+      "slug": "cornflower-recovery-serum",
+      "name": "Cornflower Recovery Serum",
+      "itemNo": "5111",
+      "sku": "EM011",
+      "priceCad": 64,
+      "retailSize": "0.5 oz / 15 ml",
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": "For sensitive prone skin types",
+      "tagline": "Recover and detoxify with cornflower, chamomile and hibiscus. Improves skin elasticity for age-defying results using Biodynamic® ingredients.",
+      "description": "Recover and detoxify with the power of cornflower, chamomile and hibiscus. This serum will improve the look of elasticity in your skin, giving you the look of age-defying results. \n\nMade with Biodynamic® ingredients from Demeter International Certified Biodynamic® farms.",
+      "howToUse": "Apply serum to cleansed face and neckline until absorbed.",
+      "ingredients": [
+        {
+          "name": "Cornflower",
+          "note": "antioxidant; gentle astringent; soothing"
+        },
+        {
+          "name": "Seabuckthorn",
+          "note": "vitamin and nutrient-rich antioxidant"
+        },
+        {
+          "name": "Chamomile",
+          "note": "revitalizes, soothes and balances the appearance of dry skin"
+        },
+        {
+          "name": "Clary Sage",
+          "note": "calming; balances oil production"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Epidermis appears firmer and tighter"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The appearance of skin elasticity is improved"
+        },
+        {
+          "concern": "Redness",
+          "outcome": "The appearance of redness and irritation is reduced"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is more hydrated without appearing oily"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin feels smooth and silky"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM251",
+          "name": "Calm Skin Chamomile Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EMA03",
+          "name": "Radish Seed Refining Peel",
+          "category": "Exfoliants",
+          "priceCad": 66,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM169",
+          "name": "Kombucha Microbiome Leave-On Masque",
+          "category": "Kombucha Microbiome",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM011",
+          "name": "Cornflower Recovery Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 64,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM008",
+          "name": "Echinacea Recovery Cream",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Organic Category, Best Product Awards, LNE & Spa’s, 2021",
+        "Winner of Organic Category, Best Product Awards, LNE & Spa's, 2018",
+        "Winner of Best Natural Face Serum, Natural Beauty Awards, Yoga Journal, 2014"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/cornflower-recovery-serum/EM011.html?variant=5111",
+      "image": "/images/product-images/facials/hydrating/cornflower-recovery-serum.jpg"
+    },
+    {
+      "slug": "kombucha-microbiome-luminosity-serum",
+      "name": "Kombucha Microbiome Luminosity Serum",
+      "itemNo": "1168",
+      "sku": "EM168",
+      "priceCad": 110,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "With micellar technology",
+      "tagline": "Lightweight serum for vibrant skin. Kombucha, ginger, jasmine & pre/pro/postbiotics renew, even tone & boost luminosity for all skin types.",
+      "description": "Illuminate the appearance of the skin with a lightweight serum designed to give you a vibrant-looking glow. Kombucha, white tea, ginger and jasmine unite with microbiome-friendly pre, pro* and postbiotics to bring out a visibly renewed look. Perfect for all skin types, this gel serum can be used daily to even tone and boost the look of the skin’s luminosity. \n\n*Products do not contain live probiotic cultures.",
+      "howToUse": "Apply a thin layer to cleansed skin once or twice daily. Leave on. It may be followed with a moisturizer.",
+      "ingredients": [
+        {
+          "name": "Prebiotic (Inulin)",
+          "note": "a substrate (fuel) that is utilized by host microorganisms to support a balanced skin microbiome"
+        },
+        {
+          "name": "White Tea",
+          "note": "rich in antioxidants to help maintain healthy-looking skin by combating the look of dullness"
+        },
+        {
+          "name": "Probiotic (Lactococcus Ferment Lysate — does not contain live cultures)",
+          "note": "supports and balances the skin microbiota and replenishes the skin's moisture barrier to repair dry skin and maintain healthy-looking skin"
+        },
+        {
+          "name": "Kombucha Ferment (Postbiotic)",
+          "note": "derived from fermenting black tea, this superfood is rich in postbiotics and nourishes the skin microbiota, enhancing the look of skin smoothness, luminosity and clarity"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Dullness",
+          "outcome": "Improves the look of skin renewal, revealing visibly revitalized skin"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin will appear smooth, luminous, vibrant and healthy-looking"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "of users noted their skin appears luminous**"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Introduces beneficial prebiotics, probiotics* and postbiotics to maintain the skin’s natural microbiome"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "992288710",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/992288710?h=57f73cfc2f",
+          "watchUrl": "https://vimeo.com/992288710/57f73cfc2f"
+        },
+        {
+          "id": "988149911",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988149911?h=3c974e596f",
+          "watchUrl": "https://vimeo.com/988149911/3c974e596f"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM166",
+          "name": "Kombucha Microbiome Foaming Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM167",
+          "name": "Kombucha Microbiome Balancing Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM168",
+          "name": "Kombucha Microbiome Luminosity Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 110,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM164",
+          "name": "Strawberry Rhubarb Hyaluronic Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM104",
+          "name": "Wild Plum Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/kombucha-microbiome-luminosity-serum/EM168.html?variant=1168",
+      "image": "/images/product-images/facials/hydrating/kombucha-microbiome-luminosity-serum.jpg"
+    }
+  ]
+}

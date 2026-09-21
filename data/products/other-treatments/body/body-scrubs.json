@@ -1,0 +1,349 @@
+{
+  "scrapedAt": "2026-09-21",
+  "category": "body-scrubs",
+  "tab": "other-treatments/body",
+  "sourceListing": "https://eminenceorganics.com/ca/body/scrubs?sz=100",
+  "products": [
+    {
+      "slug": "cranberry-pomegranate-sugar-scrub",
+      "name": "Cranberry Pomegranate Sugar Scrub",
+      "itemNo": "287",
+      "sku": "EM087",
+      "priceCad": 48,
+      "retailSize": "8.4 oz / 250 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Hydrating and replenishing mask",
+      "tagline": "Cranberry Pomegranate Scrub: Exfoliates with natural sugar, enriches skin with vitamins.",
+      "description": "Vitamin-rich cranberry and pomegranate enriches your skin’s appearance, while a natural sugar scrub exfoliates and buffs.",
+      "howToUse": "Apply a layer of the scrub to damp skin, preferably during the last part of a shower or bath. Massage in circular motions on legs, hand arms, elbows and any part of the body that needs soothing. Rinse well with warm water and pat dry. If needed, follow with a body lotion according to skin type.",
+      "ingredients": [
+        {
+          "name": "Green Tea",
+          "note": "high in antioxidants, polyphenols, flavonoids, and vitamins for youthful-looking skin"
+        },
+        {
+          "name": "Sweet Almond",
+          "note": "softens and relieves the appearance of skin"
+        },
+        {
+          "name": "Comfrey",
+          "note": "improves skin’s appearance with moisture"
+        },
+        {
+          "name": "Butcher’s Broom",
+          "note": "helps skin appear firmer"
+        },
+        {
+          "name": "Cranberry",
+          "note": "high in vitamins and antioxidants to reduce the appearance of wrinkles"
+        },
+        {
+          "name": "Natural Sugar Cane Crystals",
+          "note": "contain natural Alpha Hydroxy Acid for exfoliation"
+        },
+        {
+          "name": "Flaxseed",
+          "note": "contains Omega 3s and antioxidants to support the skin"
+        },
+        {
+          "name": "Grape Seed Oil",
+          "note": "contain antioxidants that promote hydrated-looking skin"
+        },
+        {
+          "name": "Pomegranate",
+          "note": "high in polyphenol and antioxidants to protect and balance skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Dullness",
+          "outcome": "Skin appears silky smooth and radiant"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin tone appears tightened and refined"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin appears nourished and healthy"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Soy Free"
+      ],
+      "videos": [],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Mask",
+          "sku": "EM238",
+          "name": "Strawberry Rhubarb Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Treat",
+          "sku": "EM147",
+          "name": "Strawberry Rhubarb Hyaluronic Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Moisturize",
+          "sku": "EM297",
+          "name": "Arctic Berry Peptide Radiance Cream",
+          "category": "Moisturizers",
+          "priceCad": 109,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM087",
+          "name": "Cranberry Pomegranate Sugar Scrub",
+          "category": "Body Scrubs",
+          "priceCad": 48,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/cranberry-pomegranate-sugar-scrub/EM087.html?variant=287",
+      "image": "/images/product-images/other-treatments/body/cranberry-pomegranate-sugar-scrub.jpg"
+    },
+    {
+      "slug": "stone-crop-revitalizing-body-scrub",
+      "name": "Stone Crop Revitalizing Body Scrub",
+      "itemNo": "2121",
+      "sku": "EM121",
+      "priceCad": 48,
+      "retailSize": "8.4 oz / 250 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Brighten and invigorate",
+      "tagline": "Sugar & salt polish skin with hydrating stone crop and lemon peel. Rich in AHAs, vitamins. Lathers into a creamy foam for bright, smooth skin.",
+      "description": "Polish your skin with the hydrating qualities of sugar and the invigorating benefits of salt. This resurfacing exfoliant lathers into a creamy foam and is infused with comforting stone crop and antioxidant-rich lemon peel to brighten and smooth skin.",
+      "howToUse": "Apply a layer of the product to damp skin, preferably during the last part of a shower or bath. Massage in circular motions on legs, hands, arms, elbows and any part of the body that needs smoothing. Rinse well with warm water and pat dry. If needed, follow with a body lotion according to skin type.",
+      "ingredients": [
+        {
+          "name": "Sea Salt",
+          "note": "mineral-rich; exfoliating and refining for fresher looking skin"
+        },
+        {
+          "name": "Green Tea",
+          "note": "high in polyphenols and antioxidants to minimize the visible effects of free radical damage"
+        },
+        {
+          "name": "Natural Sugar Cane Crystals",
+          "note": "contain natural Alpha Hydroxy Acid for exfoliation"
+        },
+        {
+          "name": "Stone Crop",
+          "note": "hydrates, moisturizes and heals dry skin; brightens and revitalizes the look of uneven skin tone; reduces the appearance of redness due to dryness"
+        },
+        {
+          "name": "Lemon Peel",
+          "note": "antioxidant, natural and mild exfoliant, rich in vitamin C"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is hydrated and appears soft and supple"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "The overall look of skin is improved"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Long lasting, luxurious exfoliation"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "997629811",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/997629811?h=8b0560d7b2",
+          "watchUrl": "https://vimeo.com/997629811/8b0560d7b2"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Exfoliate",
+          "sku": "EM326",
+          "name": "Stone Crop Oxygenating Fizzofoliant™",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM048",
+          "name": "Stone Crop Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 62,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Moisturize",
+          "sku": "EM054",
+          "name": "Stone Crop Body Lotion",
+          "category": "Body Lotions & Oils",
+          "priceCad": 39,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM121",
+          "name": "Stone Crop Revitalizing Body Scrub",
+          "category": "Body Scrubs",
+          "priceCad": 48,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [
+        "Winner of Top Body Scrub, Organic Spa Beauty Awards, 2026",
+        "Winner of Best Body Exfoliant, WellSpa 360 Readers' Choice Awards, 2023",
+        "Winner of Best Body Scrub, HiStyle Best Beauty Buys, 2020​​​",
+        "Winner of Best Teen Skincare – Normal Skin: Stone Crop Collection, Spa & Wellness MexiCaribe Product Awards, 2019",
+        "Winner of Best Body Product, Fall Beauty O-Wards, 2019"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/stone-crop-revitalizing-body-scrub/EM121.html?variant=2121",
+      "image": "/images/product-images/other-treatments/body/stone-crop-revitalizing-body-scrub.jpg"
+    },
+    {
+      "slug": "coconut-sugar-scrub",
+      "name": "Coconut Sugar Scrub",
+      "itemNo": "2213",
+      "sku": "EM213",
+      "priceCad": 48,
+      "retailSize": "8.4 oz / 250 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Plumping toner for all skin types",
+      "tagline": "Exfoliate and deeply hydrate with this coconut sugar scrub. Packed with antioxidants for smooth, nourished skin.",
+      "description": "Exfoliate your skin with this sugar scrub while benefitting from coconut oil’s deep hydrating properties. Coconut contains high levels of antioxidants and hydrators.",
+      "howToUse": "Apply a layer of the scrub to damp skin, preferably during the last part of a shower or bath. Massage in circular motions on legs, hand arms, elbows and any part of the body that needs soothing. Rinse well with warm water and pat dry. If needed, follow with a body lotion according to skin type.",
+      "ingredients": [
+        {
+          "name": "Comfrey",
+          "note": "improves skin’s appearance with moisture"
+        },
+        {
+          "name": "Natural Sugar Cane Crystals",
+          "note": "contain natural Alpha Hydroxy Acid for exfoliation"
+        },
+        {
+          "name": "Cucumber",
+          "note": "revitalizes and tones"
+        },
+        {
+          "name": "Coconut Oil",
+          "note": "hydrates skin and prevents damage caused by drying"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin is effectively exfoliated"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Hydration is returned to the skin"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin appears soft and silky"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Vegan"
+      ],
+      "videos": [],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Tone",
+          "sku": "EM255",
+          "name": "Neroli Age Corrective Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM238",
+          "name": "Strawberry Rhubarb Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Moisturize",
+          "sku": "EM258",
+          "name": "Coconut Firming Body Lotion",
+          "category": "Body Lotions & Oils",
+          "priceCad": 43,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM213",
+          "name": "Coconut Sugar Scrub",
+          "category": "Body Scrubs",
+          "priceCad": 48,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [
+        "Winner of Best Sugar Scrub, Aestheticians’ Choice Awards 2016, Dermascope 2016"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/coconut-sugar-scrub/EM213.html?variant=2213",
+      "image": "/images/product-images/other-treatments/body/coconut-sugar-scrub.jpg"
+    }
+  ]
+}

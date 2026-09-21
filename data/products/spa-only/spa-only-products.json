@@ -1,0 +1,1240 @@
+{
+  "scrapedAt": "2026-09-21",
+  "category": "spa-only-products",
+  "tab": "spa-only",
+  "sourceListing": "https://eminenceorganics.com/ca/spa-only-products?sz=100",
+  "products": [
+    {
+      "slug": "squalane-pro-multi-oil",
+      "name": "Squalane Pro Multi-Oil",
+      "itemNo": "4196",
+      "sku": "EM196",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "All skin types",
+      "cardBlurb": null,
+      "tagline": "",
+      "description": "Elevate treatments with a hydrating multi-purpose oil. Blending ingredients like squalane and bisabolol with botanicals from elderberry seed and jojoba oil, this versatile formula pairs well with massage and dermaplaning treatments. Featuring a soft, nourishing feel and a smooth glide, this oil absorbs seamlessly to hydrate the skin. \r\n\r\nProfessional Size: 120 ml / 4 fl oz \r\n\r\nBest for skin type:\r\n\n\r\nAll skin types",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Bisabolol",
+          "note": "reduces redness due to dryness; hydrates skin"
+        },
+        {
+          "name": "Jojoba Oil",
+          "note": "nourishes and hydrates"
+        },
+        {
+          "name": "Elderberry Seed Oil",
+          "note": "nourishes the skin with essential fatty acids for a healthy-looking skin barrier"
+        },
+        {
+          "name": "Squalane",
+          "note": "non-comedogenic, hydrating oil; supports barrier function"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Leaves skin looking nourished, hydrated and soft"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Provides smooth slip during massage and dermaplaning"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1160274441",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1160274441?h=ae105f7f2b",
+          "watchUrl": "https://vimeo.com/1160274441/ae105f7f2b"
+        }
+      ],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/squalane-pro-multi-oil/EM196.html?variant=4196",
+      "image": "/images/product-images/spa-only/squalane-pro-multi-oil.jpg"
+    },
+    {
+      "slug": "charcoal-black-seed-pro-desincrustation-gel",
+      "name": "Charcoal & Black Seed Pro Desincrustation Gel",
+      "itemNo": "4180",
+      "sku": "EM180",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "All skin types",
+      "cardBlurb": null,
+      "tagline": "Professional gel prepares skin for extractions. Softens skin, dilates follicles, reduces uneven tone and absorbs excess sebum.",
+      "description": "Prepare skin for extractions with this alkaline gel formula. Ideal for all skin types, this formula includes sodium bicarbonate to soften skin and dilate follicles for easier extraction. Binchotan charcoal and black seed oil visibly reduce the look of uneven skin tone while absorbing excess sebum. Skin appears more refined and pores reduced. \n\nProfessional Size: 4 oz / 120 ml \n\nBest for skin type:\n\nAll skin types",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Glycerin",
+          "note": "helps retain moisture"
+        },
+        {
+          "name": "Cica Extract",
+          "note": "improves the look of skin tone"
+        },
+        {
+          "name": "Black Seed Oil",
+          "note": "balances sebum and prevents clogged pores; rich in antioxidants and omega fatty acids"
+        },
+        {
+          "name": "Binchotan Charcoal",
+          "note": "derived from Japanese ubame oak wood; absorbs impurities; balances skin"
+        },
+        {
+          "name": "Sodium Bicarbonate",
+          "note": "alkalizing agent; softens skin; dilates follicles to facilitate extractions"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Large Pores",
+          "outcome": "Prepares skin for extractions by dilating pores and softening sebum"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "Clears clogged pores"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "Skin appears more refined"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "Reduces the appearance of pores"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/charcoal-black-seed-pro-desincrustation-gel/EM180.html?variant=4180",
+      "image": "/images/product-images/spa-only/charcoal-black-seed-pro-desincrustation-gel.jpg"
+    },
+    {
+      "slug": "arctic-berry-enzyme-exfoliant",
+      "name": "Arctic Berry Enzyme Exfoliant",
+      "itemNo": "8295",
+      "sku": "EM295",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "All skin types except in active acne areas",
+      "cardBlurb": null,
+      "tagline": "Removes dead skin, refreshes. Antioxidant-rich plants prevent aging; vitamins, minerals and Omega 3 replenish moisture and restore elasticity.",
+      "description": "Our arctic berry enzyme exfoliant breaks down and removes dead skin to leave your skin feeling refreshed and new. A blend of four antioxidant-rich plants prevent the visible signs of aging, while essential vitamins, minerals and Omega 3 fatty acids replenish the skin’s moisture and restore the appearance of elasticity. \r\n\r\nThe Arctic Berry Enzyme Exfoliant is part 1 of a 3-step Professional system:\n\r\nStep 1: Arctic Berry Enzyme Exfoliant\n\r\nStep 2: Arctic Berry Pro Advanced Peel Activator MA20\n\r\nStep 3: Arctic Berry Peptide Radiance Cream \r\n\r\nAlso available is the complete at home care Arctic Berry Peel & Peptide Illuminating System which is great for in-between spa treatments that will awaken the skin’s natural inner beauty (includes Arctic Berry Enzyme Exfoliant, Arctic Berry Advanced Peel Activator MA10 & Arctic Berry Peptide Radiance Cream). \r\n\r\nProfessional Size: 8.4 oz / 250 ml \r\n\r\nBest for skin type:\r\n\n\r\nAll skin types except in active acne areas",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Arctic Plants & Berries",
+          "note": "a blend of 4 antioxidant-rich plants (cloudberry, arctic roseroot, arctic meadowsweet and juniper); helps prevent the visible signs of aging"
+        },
+        {
+          "name": "Lingonberry Seed Oil",
+          "note": "essential vitamins and minerals and omega 3 fatty acids for healthy-looking skin; replenishes the skin’s moisture"
+        },
+        {
+          "name": "Botanical Peptides",
+          "note": "diminish the look of wrinkles and protect the skin from aging"
+        },
+        {
+          "name": "Azelaic Acid",
+          "note": "reduces the look of inflammation"
+        },
+        {
+          "name": "Salicylic Acid",
+          "note": "gentle exfoliant; reduces pores and smooths the skin’s surface"
+        },
+        {
+          "name": "Papain (from Papaya)",
+          "note": "exfoliates to visibly improve overall appearance of skin"
+        },
+        {
+          "name": "Ground Wild Cherry Bark",
+          "note": "gentle, natural astringent"
+        },
+        {
+          "name": "Gotu-Kola Stem Cells",
+          "note": "improves skin's firmness, hydration levels and elasticity"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin clarity and texture appear improved"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Complexion appears revitalized, even and luminous"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The visible Signs Of Aging appear reduced"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin is prepared to receive further treatments for increased benefits"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/arctic-berry-enzyme-exfoliant/EM295.html?variant=8295",
+      "image": "/images/product-images/spa-only/arctic-berry-enzyme-exfoliant.jpg"
+    },
+    {
+      "slug": "yam-pumpkin-pro-enzyme-peel-20",
+      "name": "Yam & Pumpkin Pro Enzyme Peel 20%",
+      "itemNo": "881",
+      "sku": "EM081",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "All skin types except in active acne areas",
+      "cardBlurb": null,
+      "tagline": "Deeply exfoliate & brighten with our potent yam and pumpkin enzyme peel. Refine skin texture, clarify dullness & reveal a radiant glow.",
+      "description": "Accelerate the exfoliation process with this enzyme peel that removes dead skin cells, reduces the appearance of pigmentation, fine lines and sun damage. The natural enzyme content of yam and pumpkin leave skin appearing firm and radiant. \n\nProfessional Size: 8.4 oz / 250 ml \n\nBest for skin type:\n\nAll skin types except in active acne areas",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Lactic Acid",
+          "note": "sloughs off dead skin cells to improve texture of skin"
+        },
+        {
+          "name": "Willow Bark Extract",
+          "note": "natural beta-hydroxy to minimize the appearance of pores"
+        },
+        {
+          "name": "Pumpkin Pulp Purée",
+          "note": "rich in enzymes, beta-carotene, amino acids, and antioxidants to fight the appearance of aging"
+        },
+        {
+          "name": "Glycolic Acid",
+          "note": "soothing and smoothing agent"
+        },
+        {
+          "name": "Botanical Hyaluronic Acid",
+          "note": "deeply hydrating; natural substance that smooths and plumps skin to minimize the appearance of fine lines and wrinkles"
+        },
+        {
+          "name": "Papaya",
+          "note": "contains vitamins and fruit enzymes to improve the appearance of skin"
+        },
+        {
+          "name": "Pineapple",
+          "note": "purifies skin by removing dirt and proteins"
+        },
+        {
+          "name": "Yam Pulp Purée",
+          "note": "high in beta-carotene and vitamins to fight the signs of aging"
+        },
+        {
+          "name": "Green Tea Extract",
+          "note": "high in antioxidants, polyphenols, flavonoids, and vitamins for youthful looking skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin is refined and smoothed, the appearance of dark spots are reduced"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Skin appears firm and plumped"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The appearance of wrinkle depth and fine lines are reduced"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/yam-pumpkin-pro-enzyme-peel-20/EM081.html?variant=881",
+      "image": "/images/product-images/spa-only/yam-pumpkin-pro-enzyme-peel-20.jpg"
+    },
+    {
+      "slug": "chocolate-truffle-body-wrap",
+      "name": "Chocolate Truffle Body Wrap",
+      "itemNo": "890",
+      "sku": "EM090",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "Normal to dry and dehydrated skin types",
+      "cardBlurb": null,
+      "tagline": "",
+      "description": "Reduce the visible signs of aging with our Chocolate Truffle Body Wrap. The active ingredients are rich with antioxidants to help refine your skin’s appearance. \n\nProfessional Size: 8.4 oz / 250 ml \n\nBest for skin type:\n\nNormal to dry and dehydrated skin types",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Ginseng",
+          "note": "revitalizing"
+        },
+        {
+          "name": "Macadamia Nut Oil",
+          "note": "toning and softening"
+        },
+        {
+          "name": "Jojoba Oil",
+          "note": "supports and hydrates with one of the best absorption rates"
+        },
+        {
+          "name": "Almond Oil",
+          "note": "softens and relieves the appearance of skin"
+        },
+        {
+          "name": "Cocoa",
+          "note": "high in antioxidants to moisturize the skin"
+        },
+        {
+          "name": "Lecithin",
+          "note": "softening; reduces the appearance of paper-thin skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Silhouette appears toned and smoothed"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Collagen formation appears boosted"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin appears deeply hydrated and comforted"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Wrinkled areas appear improved and tightened"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Vegan"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/chocolate-truffle-body-wrap/EM090.html?variant=890",
+      "image": "/images/product-images/spa-only/chocolate-truffle-body-wrap.jpg"
+    },
+    {
+      "slug": "lip-comfort-plumping-masque",
+      "name": "Lip Comfort Plumping Masque",
+      "itemNo": "202",
+      "sku": "EM202",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "All skin types",
+      "cardBlurb": null,
+      "tagline": "Age-defying lip mask deeply hydrates, replenishes, stimulates collagen and plumps lips. Also in Lip Trio Kit or for professional spa use.",
+      "description": "This antioxidant, vitamin rich and age-defying mask deeply hydrates and replenishes, stimulates collagen production and plumps lips. This is also available for at-home care as part of our Lip Trio Kit . \n\nProfessional Size: 0.27 oz / 8 ml \n\nBest for skin type:\n\nAll skin types",
+      "howToUse": "Following the lip exfoliation (STEP 1), apply a layer of the mask to the lip surface and outline. Leave on for 5 minutes. Remove with a damp sponge, then blot with a tissue or a clean towel. Follow with the Citrus Lip Balm for best results. Note: as an add-on treatment, apply after the face mask has been applied.",
+      "ingredients": [
+        {
+          "name": "Shea Butter",
+          "note": "high in triglycerides and fatty acids, it is an excellent emollient that revitalizes and helps to repair the skin"
+        },
+        {
+          "name": "Avocado Oil",
+          "note": "antioxidant, moisturizer; rich in proteins, amino acids and vitamins A, D and E"
+        },
+        {
+          "name": "Green Tea",
+          "note": "antioxidant, polyphenol; combats free radicals, high in Vitamin C"
+        },
+        {
+          "name": "Hawthorn Berry",
+          "note": "rich in antioxidants and vitamin C"
+        },
+        {
+          "name": "Botanical Peptides",
+          "note": "diminish the look of wrinkles and protect the skin from aging"
+        },
+        {
+          "name": "Pomegranate Extract",
+          "note": "polyphenol-rich with high levels of antioxidants"
+        },
+        {
+          "name": "Papaya",
+          "note": "gentle enzyme exfoliation, contains phytonutrients that renew the skin"
+        },
+        {
+          "name": "Paprika",
+          "note": "stimulates and plumps the skin; increases circulation"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Fine vertical lines around lip area are diminished"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Roughness is smoothed"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Collagen production is increased"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Soy Free"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [
+        "Winner of Best Lip Treatment, LNE & Spa's Best Product Awards, 2017"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/lip-comfort-plumping-masque/EM202.html?variant=202",
+      "image": "/images/product-images/spa-only/lip-comfort-plumping-masque.jpg"
+    },
+    {
+      "slug": "barbados-cherry-superfood-pro-enzyme-exfoliant",
+      "name": "Barbados Cherry Superfood Pro Enzyme Exfoliant",
+      "itemNo": "8184",
+      "sku": "EM184",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "All skin types",
+      "cardBlurb": null,
+      "tagline": "",
+      "description": "Refine the skin and reduce the visible signs of aging across all skin types with this invigorating exfoliant. It delivers a warming sensation to the skin while vitamin-rich Barbados cherry brightens and tightens its appearance. With a jam-textured formula, this product contains actinidin, papain and bromelain enzymes to target dull, aging skin. \n\nProfessional Size: 8.4 fl oz / 250 ml \n\nBest for skin type:\n\nAll skin types",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Actinidin",
+          "note": "an exfoliating enzyme derived from kiwi; refines skin without irritation"
+        },
+        {
+          "name": "Capsicum",
+          "note": "derived from chili pepper; provides a warming sensation to the skin"
+        },
+        {
+          "name": "Bromelain",
+          "note": "offers gentle yet effective enzymatic exfoliation that removes dead skin cells to soften skin and visibly boost elasticity"
+        },
+        {
+          "name": "Papain",
+          "note": "enzyme derived from papaya; gently resurfaces skin for a smooth and glowy complexion"
+        },
+        {
+          "name": "Barbados Cherry (Acerola)",
+          "note": "rich in vitamin C and polyphenols, this superfood leaves the skin looking bright, even and radiant"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Skin appears plumped, brightened and tightened"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Visible fine lines and wrinkles are reduced"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin texture appears improved"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Gently exfoliates to remove dead skin cells"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Vegan"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/barbados-cherry-superfood-pro-enzyme-exfoliant/EM184.html?variant=8184",
+      "image": "/images/product-images/spa-only/barbados-cherry-superfood-pro-enzyme-exfoliant.jpg"
+    },
+    {
+      "slug": "mangosteen-lactic-pro-peel-10",
+      "name": "Mangosteen Lactic Pro Peel 10%",
+      "itemNo": "8332",
+      "sku": "EM332",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": null,
+      "tagline": "",
+      "description": "Experience immediate results with this professional-only lactic acid peel. Provides a complete surface and pore-refining treatment by removing impurities and dead skin cells while minimizing pores and smoothing the look of skin. This revitalizing peel is self-neutralizing and non-irritating, even for sensitive skin. \r\n\r\nProfessional Size: 8.4 oz / 250 ml \r\n\r\nBest for skin type:\r\n\n\r\nAll skin types including sensitive",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Lactic Acid Complex (Lactic Acid, Ribose, Red Clover Flower Extract)",
+          "note": "a proprietary blend of actives; gently resurfaces skin and refines pores for a more luminous, even, and youthful looking complexion"
+        },
+        {
+          "name": "Mangosteen",
+          "note": "an antioxidant-rich super fruit that helps the appearance of skin and minimizes the look of environmental stress, all while promoting natural radiance"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Large Pores",
+          "outcome": "Surface build-up is removed and pore size is minimized"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin appears supple and radiant"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin feels smooth and conditioned"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Immediate visible results with no irritation or downtime"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free",
+        "Soy Free"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/mangosteen-lactic-pro-peel-10/EM332.html?variant=8332",
+      "image": "/images/product-images/spa-only/mangosteen-lactic-pro-peel-10.jpg"
+    },
+    {
+      "slug": "menthol-rosehip-treatment",
+      "name": "Menthol Rosehip Treatment",
+      "itemNo": "827",
+      "sku": "EM027",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "Sensitive, reactive, oily, problem, blemished, rosacea or acne skin types",
+      "cardBlurb": null,
+      "tagline": "",
+      "description": "Hydrate and improve the appearance of your skin with our Menthol Rosehip Treatment – an excellent source of antioxidants and vitamin C. Honey moisturizes and nourishes the skin while menthol leaves a refreshing cooling sensation. \n\nProfessional Size: 8.4 oz / 250 ml \n\nBest for skin type:\n\nSensitive, reactive, oily, problem, blemished, rosacea or acne skin types",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Rosehip",
+          "note": "hydrates and improves the appearance of skin; antioxidant; source of vitamin C"
+        },
+        {
+          "name": "Menthol",
+          "note": "cooling sensation on skin"
+        },
+        {
+          "name": "Honey",
+          "note": "moisturizes and nourishes the skin’s appearance"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin appears moisturized and balanced"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Complexion looks clear and more even"
+        },
+        {
+          "concern": "Redness",
+          "outcome": "Sensitive areas appear calm and the look of redness is reduced"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin appears rapidly cooled and softened"
+        }
+      ],
+      "features": [
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/menthol-rosehip-treatment/EM027.html?variant=827",
+      "image": "/images/product-images/spa-only/menthol-rosehip-treatment.png"
+    },
+    {
+      "slug": "arctic-berry-pro-advanced-peel-activator-ma20",
+      "name": "Arctic Berry Pro Advanced Peel Activator MA20",
+      "itemNo": "4298",
+      "sku": "EM298",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "All skin types except in active acne areas",
+      "cardBlurb": null,
+      "tagline": "Deeply exfoliates, refines and evens skin tone. Antioxidant benefits help reduce redness.",
+      "description": "Deeply exfoliates skin and refines and evens the look of skin tone. Contains very strong antioxidant and age-defying benefits which helps to reduce the appearance of inflammation and redness. \r\n\r\nThe Arctic Berry Pro Advanced Peel Activator MA20 is part 2 of a 3-step Professional system:\n\r\nStep 1: Arctic Berry Enzyme Exfoliant\n\r\nStep 2: Arctic Berry Pro Advanced Peel Activator MA20\n\r\nStep 3: Arctic Berry Peptide Radiance Cream \r\n\r\nAlso available is the complete at home care Arctic Berry Peel & Peptide Illuminating System which is great for in-between spa treatments that will awaken the skin’s natural inner beauty (includes Arctic Berry Enzyme Exfoliant, Arctic Berry Advanced Peel Activator MA10 & Arctic Berry Peptide Radiance Cream). \r\n\r\nProfessional Size: 4 oz / 120 ml \r\n\r\nBest for skin type:\r\n\n\r\nAll skin types except in active acne areas",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Arctic Plants & Berries",
+          "note": "a blend of 4 antioxidant-rich plants (cloudberry, arctic roseroot, arctic meadowsweet and juniper); helps prevent the visible signs of aging"
+        },
+        {
+          "name": "Lingonberry Seed Oil",
+          "note": "essential vitamins and minerals and omega 3 fatty acids for healthy-looking skin; replenishes the skin’s moisture"
+        },
+        {
+          "name": "Flower Acids",
+          "note": "exfoliates without irritation to smooth skin"
+        },
+        {
+          "name": "Azelaic Acid",
+          "note": "reduces the look of inflammation"
+        },
+        {
+          "name": "Mandelic Acid",
+          "note": "gentle exfoliant suitable for acne-prone and hyperpigmented skin types"
+        },
+        {
+          "name": "Malic Acid",
+          "note": "gentle exfoliant that helps to tighten pores and reduce fine lines and wrinkles"
+        },
+        {
+          "name": "Citric Acid",
+          "note": "helps to gently remove dead skin cells; balances skin tone"
+        },
+        {
+          "name": "Lactic Acid",
+          "note": "a mild form of AHA, aids with hydration"
+        },
+        {
+          "name": "English Pea Extract",
+          "note": "helps to reduce the appearance of dark spots and restore luminosity to the skin"
+        },
+        {
+          "name": "Gardenia Stem Cells",
+          "note": "improves the appearance of skin tone and elasticity"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin appears dramatically refined and smoothed"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "The appearance of uneven skin is reduced"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Collagen formation appears boosted and skin appears firmed and plumped"
+        },
+        {
+          "concern": "Redness",
+          "outcome": "Skin appears less inflamed and less red"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/arctic-berry-pro-advanced-peel-activator-ma20/EM298.html?variant=4298",
+      "image": "/images/product-images/spa-only/arctic-berry-pro-advanced-peel-activator-ma20.jpg"
+    },
+    {
+      "slug": "citrus-enzyme-lip-exfoliator",
+      "name": "Citrus Enzyme Lip Exfoliator",
+      "itemNo": "201",
+      "sku": "EM201",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "All skin types",
+      "cardBlurb": null,
+      "tagline": "Antioxidant-rich lip exfoliator refines, hydrates and plumps for youthful-looking lips. Available for at-home use or professional spa treatment.",
+      "description": "This antioxidant, vitamin rich and age-defying lip exfoliator gently refines, hydrates and plumps the lip area for a smooth and youthful appearance. This is also available for at-home care as part of our Lip Trio Kit . \n\nProfessional Size: 0.27 oz / 8 ml \n\nBest for skin type:\n\nAll skin types",
+      "howToUse": "Remove lipstick or foundation from lip surface and outline areas. Apply a thin layer of exfoliant to lip surface and outline. Leave on for 5 minutes. Remove with a damp sponge, then blot with tissue or clean towel. Follow with STEP 2. Note: as an add-on treatment, apply after the face exfoliation has been applied.",
+      "ingredients": [
+        {
+          "name": "Orange Peel",
+          "note": "exfoliant, antioxidant; rejuvenates, normalizes and supplies antioxidants and vitamin C"
+        },
+        {
+          "name": "Lemon Peel",
+          "note": "antioxidant, natural and mild exfoliant, rich in vitamin C"
+        },
+        {
+          "name": "Pectin",
+          "note": "moisturizes, enriches, nourishes, protects the look of skin"
+        },
+        {
+          "name": "Pineapple",
+          "note": "gentle enzyme exfoliation, calms and supplies vitamin C to the skin"
+        },
+        {
+          "name": "Papaya",
+          "note": "gentle enzyme exfoliation, contains phytonutrients that renew the skin"
+        },
+        {
+          "name": "Walnut Shell Powder",
+          "note": "removes dead skin cells naturally and gently"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Fine vertical lines around lip area appear diminished"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Roughness is smoothed"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Lips look silky smooth"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Soy Free",
+        "Vegan"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/citrus-enzyme-lip-exfoliator/EM201.html?variant=201",
+      "image": "/images/product-images/spa-only/citrus-enzyme-lip-exfoliator.jpg"
+    },
+    {
+      "slug": "paprika-herbal-treatment",
+      "name": "Paprika Herbal Treatment",
+      "itemNo": "833",
+      "sku": "EM033",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "Mature, fatigued, hyperpigmented or blemished skin types",
+      "cardBlurb": null,
+      "tagline": "",
+      "description": "This active herbal treatment is perfect for mature, uneven or problem skin. Paprika rejuvenates the skin, while the other active ingredients, including St. John’s Wort, sage, lavender and honey, work to soothe and restore the skin’s appearance. \n\nProfessional Size: 8.4 oz / 250 ml \n\nBest for skin type:\n\nMature, fatigued, hyperpigmented or blemished skin types",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "St. John's Wort",
+          "note": "antioxidant; soothing"
+        },
+        {
+          "name": "Cinnamon",
+          "note": "revitalizes the appearance of skin"
+        },
+        {
+          "name": "Lavender",
+          "note": "calms skin, restorative agent"
+        },
+        {
+          "name": "Paprika",
+          "note": "invigorates and revitalizes the appearance of skin"
+        },
+        {
+          "name": "Horsetail",
+          "note": "softening and calming; source of silica"
+        },
+        {
+          "name": "Sage",
+          "note": "tones the skin; rejuvenating"
+        },
+        {
+          "name": "Honey",
+          "note": "soothing and hydrating"
+        },
+        {
+          "name": "Walnut",
+          "note": "omega 3s, antioxidant"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Dullness",
+          "outcome": "Leaves skin looking brighter and radiant"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Reduces the look of breakouts and blemishes"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Visible Signs Of Aging are diminished"
+        }
+      ],
+      "features": [
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/paprika-herbal-treatment/EM033.html?variant=833",
+      "image": "/images/product-images/spa-only/paprika-herbal-treatment.jpg"
+    },
+    {
+      "slug": "aha-fruit-pulp-treatment",
+      "name": "AHA Fruit Pulp Treatment",
+      "itemNo": "823",
+      "sku": "EM023",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "Dry, dehydrated, oil-deficient, clogged, blemished or acne skin types",
+      "cardBlurb": null,
+      "tagline": "",
+      "description": "This professional treatment contains whole fruit pulp from apples and grapes to help nourish, tone and brighten the look of skin. Lactic acid and naseberry help remove dead skin cells to refine the skin’s appearance allowing more effective penetration of other products. \n\nProfessional Size: 8.4 oz / 250 ml \n\nBest for skin type:\n\nDry, dehydrated, oil-deficient, clogged, blemished or acne skin types",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Quince/Apple",
+          "note": "provides essential oils while adding moisture to the skin"
+        },
+        {
+          "name": "Grape",
+          "note": "assists in skin renewal"
+        },
+        {
+          "name": "Apple",
+          "note": "nourishes and tones the look of skin"
+        },
+        {
+          "name": "Lactic Acid",
+          "note": "helps accelerate the removal of dead cells"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Dullness",
+          "outcome": "Promotes a clear, radiant looking complexion"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Reduction of the appearance of visible Signs Of Aging"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Refined looking epidermis"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Soy Free",
+        "Vegan"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/aha-fruit-pulp-treatment/EM023.html?variant=823",
+      "image": "/images/product-images/spa-only/aha-fruit-pulp-treatment.jpg"
+    },
+    {
+      "slug": "blueberry-detox-firming-peel",
+      "name": "Blueberry Detox Firming Peel",
+      "itemNo": "8230",
+      "sku": "EM230",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "All skin types, especially dry, mature, thick and sun-damaged; not for extremely sensitive or rosacea skins",
+      "cardBlurb": null,
+      "tagline": "",
+      "description": "This naturally exfoliating peel cleanses the pores deeply and tones the look of skin. The combination of blueberry juice, raspberry juice, blackberry juice and pineapple extract is high in vitamins and antioxidants that will nourish and refresh your skin. Plus, lactic acid will remove dead skin cells and improve the appearance of your skin’s texture. \n\nProfessional Size: 8.4 oz / 250 ml \n\nBest for skin type:\n\nAll skin types, especially dry, mature, thick and sun-damaged; not for extremely sensitive or rosacea skins",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Lactic Acid",
+          "note": "sloughs off dead skin cells to improve texture of skin"
+        },
+        {
+          "name": "Blueberry Juice",
+          "note": "astringent; deep cleans pores, tightens and tones skin’s appearance"
+        },
+        {
+          "name": "Paprika",
+          "note": "invigorates and revitalizes the appearance of skin"
+        },
+        {
+          "name": "Grape Extract",
+          "note": "hydrates and provides the appearance of youthful skin"
+        },
+        {
+          "name": "Raspberry Juice",
+          "note": "high in vitamins and antioxidants to fight the appearance of visible signs of aging"
+        },
+        {
+          "name": "Blackberry Juice",
+          "note": "tightens the appearance of pores and is high in vitamins and Omega-3"
+        },
+        {
+          "name": "Pineapple Extract (Bromelain)",
+          "note": "purifies skin by removing dirt and proteins"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Large Pores",
+          "outcome": "Pores size appear reduced"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin appears refined, purified, clear and radiant"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Skin is immediately stimulated resulting in the appearance of a rosy glow and a more youthful look"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/blueberry-detox-firming-peel/EM230.html?variant=8230",
+      "image": "/images/product-images/spa-only/blueberry-detox-firming-peel.jpg"
+    },
+    {
+      "slug": "pineapple-nourishing-pro-enzyme-exfoliant",
+      "name": "Pineapple Nourishing Pro Enzyme Exfoliant",
+      "itemNo": "8182",
+      "sku": "EM182",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "Normal to dry skin types",
+      "cardBlurb": null,
+      "tagline": "Gently exfoliate & nourish with our pineapple enzyme exfoliant. Brighten dull skin for a smooth, radiant complexion with natural fruit power.",
+      "description": "Indulge skin with a smoothing and replenishing treatment for normal to dry skin types. This creamy exfoliant unites ripe pineapple, hydrating polyglutamic acid and gentle papain, bromelain and actinidin enzymes to refine the skin’s surface. \n\nProfessional Size: 8.4 fl oz / 250 ml \n\nBest for skin type:\n\nNormal to dry skin types",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Polyglutamic Acid",
+          "note": "powerful humectant with water-holding capacity; helps to support the skin moisture barrier"
+        },
+        {
+          "name": "Actinidin",
+          "note": "an exfoliating enzyme derived from kiwi; refines skin without irritation"
+        },
+        {
+          "name": "Pineapple",
+          "note": "a natural source of antioxidants, including vitamin C; leaves the skin with a calm appearance"
+        },
+        {
+          "name": "Bromelain",
+          "note": "offers gentle yet effective enzymatic exfoliation that removes dead skin cells to soften skin and visibly boost elasticity"
+        },
+        {
+          "name": "Papain",
+          "note": "enzyme derived from papaya; gently resurfaces skin for a smooth and glowy complexion"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Dullness",
+          "outcome": "Gently exfoliates to remove dead skin cells"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Improves the appearance of skin texture"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Leaves skin looking glowing and radiant"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Improves skin hydration"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/pineapple-nourishing-pro-enzyme-exfoliant/EM182.html?variant=8182",
+      "image": "/images/product-images/spa-only/pineapple-nourishing-pro-enzyme-exfoliant.jpg"
+    },
+    {
+      "slug": "amla-berry-oil-control-pro-enzyme-exfoliant",
+      "name": "Amla Berry Oil Control Pro Enzyme Exfoliant",
+      "itemNo": "8183",
+      "sku": "EM183",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "Oily to combination skin types",
+      "cardBlurb": null,
+      "tagline": "",
+      "description": "Tackle excess oil to achieve a balanced and even-looking complexion. Ideal for oily and combination skin types, this treatment is made with lipase enzymes to target excess sebum on problem skin, and bromelain and papain to resurface the skin, leaving the complexion silky-smooth. \n\nProfessional Size: 8.4 fl oz / 250 ml \n\nBest for skin type:\n\nOily to combination skin types",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Amla (Indian Gooseberry)",
+          "note": "antioxidant; rich source of vitamin C; brightens the look of skin"
+        },
+        {
+          "name": "Allantoin",
+          "note": "derived from the comfrey plant; helps visibly reduce the look of blemishes and dark spots"
+        },
+        {
+          "name": "Bromelain",
+          "note": "offers gentle yet effective enzymatic exfoliation that removes dead skin cells to soften skin and visibly boost elasticity"
+        },
+        {
+          "name": "Papain",
+          "note": "enzyme derived from papaya; gently resurfaces skin for a smooth and glowy complexion"
+        },
+        {
+          "name": "Lipase",
+          "note": "derived from microbial fermentation with plant sugars; targets breakdown of excess sebum and oil buildup; metabolizes lipids to help with visible skin renewal and turnover"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Excess oil on the skin is broken down"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "Appearance of large pores is minimized"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Improves the look of skin texture"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Leaves skin looking more glowing and radiant"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Gently exfoliates to remove dead skin cells"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/amla-berry-oil-control-pro-enzyme-exfoliant/EM183.html?variant=8183",
+      "image": "/images/product-images/spa-only/amla-berry-oil-control-pro-enzyme-exfoliant.jpg"
+    },
+    {
+      "slug": "herbal-cellulite-treatment",
+      "name": "Herbal Cellulite Treatment",
+      "itemNo": "846",
+      "sku": "EM046",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "Cellulite or lack of elasticity",
+      "cardBlurb": null,
+      "tagline": "",
+      "description": "Regenerating and toning body wrap that helps increase the appearance of elasticity. Paprika and stinging nettle help stimulating and energize the appearance of skin for a healthy looking glow, while honey nourishes and hydrates. \n\nProfessional Size: 8.4 oz / 250 ml \n\nBest for skin type:\n\nCellulite or lack of elasticity",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Stinging Nettle",
+          "note": "energizes and invigorates the appearance of skin"
+        },
+        {
+          "name": "Ivy",
+          "note": "tones and tightens the appearance of pores"
+        },
+        {
+          "name": "Paprika",
+          "note": "invigorates and revitalizes the appearance of skin"
+        },
+        {
+          "name": "Honey",
+          "note": "supports the appearance of skin with moisture"
+        },
+        {
+          "name": "Bioflavonoids",
+          "note": "enrich, support and moisturize the appearance of skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Epidermis appears firmer and more elastic"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Visible signs of cellulite appear reduced"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Skin appears softer, smoother and glowing"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Soy Free"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/herbal-cellulite-treatment/EM046.html?variant=846",
+      "image": "/images/product-images/spa-only/herbal-cellulite-treatment.jpg"
+    },
+    {
+      "slug": "mango-enzyme-body-wrap",
+      "name": "Mango Enzyme Body Wrap",
+      "itemNo": "8211",
+      "sku": "EM211",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "All skin types",
+      "cardBlurb": null,
+      "tagline": "",
+      "description": "Active enzymes and vitamins in this body wrap infuse your skin with hydration and gently exfoliate to leave a refreshed look. \n\nProfessional Size: 8.4 oz / 250 ml \n\nBest for skin type:\n\nAll skin types",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Mango",
+          "note": "high in antioxidants and vitamin A; moisturizes the skin while relieving the appearance of clogged pores"
+        },
+        {
+          "name": "Carrot Oil",
+          "note": "antioxidant and nutrient; source of vitamin A and nourishes the skin with carotene oils"
+        },
+        {
+          "name": "Pineapple",
+          "note": "exfoliant; source of vitamin C and B1"
+        },
+        {
+          "name": "Lactic Acid",
+          "note": "exfoliant"
+        },
+        {
+          "name": "Glycolic Acid",
+          "note": "rejuvenator; toner; smoothes the appearance of wrinkles"
+        },
+        {
+          "name": "Lemon",
+          "note": "antioxidant and toner; source of vitamin C and refreshes the appearance of skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "The skin appears tightened and toned"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The appearance of elasticity and a look of youthfulness is restored to the skin"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "The skin appears smooth and hydrated"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/mango-enzyme-body-wrap/EM211.html?variant=8211",
+      "image": "/images/product-images/spa-only/mango-enzyme-body-wrap.jpg"
+    },
+    {
+      "slug": "stone-crop-restorative-body-wrap",
+      "name": "Stone Crop Restorative Body Wrap",
+      "itemNo": "8123",
+      "sku": "EM123",
+      "priceCad": null,
+      "retailSize": null,
+      "skinType": "All skin types",
+      "cardBlurb": null,
+      "tagline": "",
+      "description": "Impart the benefits of our signature stone crop ingredient in a relaxing spa treatment. This restorative gel body wrap contains stone crop, aloe and powerful actives to hydrate, rejuvenate and brighten the look of skin from head to toe. \n\nProfessional Size: 8.4 oz / 120 ml \n\nBest for skin type:\n\nAll skin types",
+      "howToUse": "This is a professional product and should only be used by an esthetician in a spa environment.",
+      "ingredients": [
+        {
+          "name": "Horsetail",
+          "note": "softening; reduces the look of cellulite; supplies silica (supports collagen production) to the skin"
+        },
+        {
+          "name": "Aloe",
+          "note": "heals and moisturizes dry skin; reduces redness and itching from the drying effects of sun exposure; hydrates and softens skin"
+        },
+        {
+          "name": "Horse Chestnut",
+          "note": "high in flavonoids that visibly tone the skin; minimizes the appearance of varicose veins"
+        },
+        {
+          "name": "Caffeine (sourced from coffee)",
+          "note": "reduces puffiness and redness due to dryness; diminishes the appearance of wrinkles and improves the look of cellulite; revitalizes and brightens the appearance of skin"
+        },
+        {
+          "name": "Stone Crop",
+          "note": "hydrates, moisturizes and heals dry skin; brightens and revitalizes the look of uneven skin tone; reduces the appearance of redness due to dryness"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is hydrated"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Dry skin is soothed and refreshed"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "The look of age and sun spots is reduced"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Vegan"
+      ],
+      "videos": [],
+      "routine": [],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/stone-crop-restorative-body-wrap/EM123.html?variant=8123",
+      "image": "/images/product-images/spa-only/stone-crop-restorative-body-wrap.jpg"
+    }
+  ]
+}

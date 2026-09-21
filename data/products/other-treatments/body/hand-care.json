@@ -1,0 +1,120 @@
+{
+  "scrapedAt": "2026-09-21",
+  "category": "hand-care",
+  "tab": "other-treatments/body",
+  "sourceListing": "https://eminenceorganics.com/ca/body/hand-care?sz=100",
+  "products": [
+    {
+      "slug": "mangosteen-replenishing-hand-cream",
+      "name": "Mangosteen Replenishing Hand Cream",
+      "itemNo": "2131",
+      "sku": "EM131",
+      "priceCad": 38,
+      "retailSize": "2 oz / 60 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Restore and smooth",
+      "tagline": "Treat hands to mangosteen bliss! This silky cream resurfaces for soft, youthful skin and provides long-lasting hydration.",
+      "description": "Treat your hands to mangosteen bliss with this luxurious hand cream. With each application, this silky formula gently resurfaces to reveal soft, youthful-looking skin and provides long-lasting hydration.",
+      "howToUse": "Apply a small amount to cleansed skin and massage in until completely absorbed. Apply as often as needed.",
+      "ingredients": [
+        {
+          "name": "Mangosteen",
+          "note": "an antioxidant-rich super fruit that helps the appearance of skin and minimizes the look of environmental stress, all while promoting natural radiance"
+        },
+        {
+          "name": "Lactic Acid Complex (Lactic Acid, Ribose, Red Clover Flower Extract)",
+          "note": "a proprietary blend of actives; gently resurfaces skin and refines pores for a more luminous, even, and youthful looking complexion"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Evens skin tone and texture for ageless looking hands"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Hands maintain hydration between handwashings"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Hands feel silky, soft and supple"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988518006",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988518006?h=86bc6906cb",
+          "watchUrl": "https://vimeo.com/988518006/86bc6906cb"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM330",
+          "name": "Mangosteen Daily Resurfacing Cleanser",
+          "category": "Cleansers",
+          "priceCad": 54,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM128",
+          "name": "Mangosteen Revitalizing Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM331",
+          "name": "Mangosteen Daily Resurfacing Concentrate",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM129",
+          "name": "Mangosteen Gel Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Body Care",
+          "sku": "EM130",
+          "name": "Mangosteen Body Lotion",
+          "category": "Body Lotions & Oils",
+          "priceCad": 47,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Anti-Ageing Hand Cream, Social & Personal Best Beauty Buys Awards, 2021"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/mangosteen-replenishing-hand-cream/EM131.html?variant=2131",
+      "image": "/images/product-images/other-treatments/body/mangosteen-replenishing-hand-cream.jpg"
+    }
+  ]
+}
