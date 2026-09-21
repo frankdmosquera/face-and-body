@@ -58,4 +58,14 @@ blueprint/reference/upload/
 # with a slot in data/imagesData.ts, and these belong in the same place. Vercel
 # builds from this repo, so an ignored image is a 404 in production that works
 # perfectly on localhost - the most confusing failure available here.
+#
+# DONE, 2026-09-21. All 193 are on ImageKit and public/images/ was deleted.
+# public/ now holds two files, logo-mark.jpg and google-g.png, and nothing else.
+#
+# This line stays even though the folder is gone, as a guard rail. The scraped
+# json still carries an "image" field pointing at /images/product-images/...,
+# so the obvious move after re-running the scraper is to drop the files back
+# in here. Do not. Upload them, then delete the local copies:
+#
+#   node scripts/uploadImagesToImageKit.mjs public/images/product-images product-images
 /public/images/
