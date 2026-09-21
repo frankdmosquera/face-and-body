@@ -20,10 +20,21 @@ Three of those need explaining, because the site contradicts the tick:
 - **4, category pages** shipped and was then replaced. The five category pages
   collapsed into `/other-treatments` on 2026-09-20. The tick stands for work
   done, not for pages that exist.
-- **5, treatment detail pages** and **7, About page**: "maybe next year, but
-  for now nope." The `/treatments/<slug>` path stays free and `serviceHref`
-  still returns it behind the `detailPage` flag, which no treatment carries.
-  That is a door left open, not a plan.
+- **7, About page**: "maybe next year, but for now nope."
+- **5, treatment detail pages** is closed with a condition rather than a date,
+  reviewed again on 2026-09-20: not until the domain has real authority and the
+  home page is actually ranking for facials. Ten thin pages before that splits
+  the signal the home page is building, which is precisely what the nine
+  /what-we-treat pages did. The `/treatments/<slug>` path stays free and
+  `serviceHref` already returns it behind the `detailPage` flag, which no
+  treatment carries. A door left open, not a plan.
+
+  The blocker is not code. It is that no treatment has a story written: every
+  facial description is 9 to 17 words, and at 353px wide exactly one card of
+  22 is truncated at all. Card flips, modals and detail pages are all windows
+  onto an empty room until she writes the copy. That is the thing to ask her
+  for, and one good one will show whether it wants a page or something
+  smaller.
 - **6, browse by concern** shipped and was deleted. The taxonomy survives and
   is marked parked in `data/concernsData.ts`, `lib/serviceQueries.ts` and
   `ServiceCard.tsx`. Frank's open thought is a section on an existing page

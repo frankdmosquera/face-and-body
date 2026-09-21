@@ -29,7 +29,7 @@ function TabsList({ className, ...props }: TabsPrimitive.List.Props) {
            into view on mount, and without scroll-padding it scrolls the
            padding away, leaving the first tab flush against the screen edge
            while the heading above it sits in the gutter. */
-        "-mx-gutter-sm flex snap-x gap-7 overflow-x-auto scroll-pl-gutter-sm border-b border-border px-gutter-sm [scrollbar-width:none] lg:-mx-gutter lg:scroll-pl-gutter lg:px-gutter [&::-webkit-scrollbar]:hidden",
+        "-mx-gutter-sm flex snap-x gap-2.5 overflow-x-auto scroll-pl-gutter-sm px-gutter-sm py-1 [scrollbar-width:none] lg:-mx-gutter lg:scroll-pl-gutter lg:px-gutter [&::-webkit-scrollbar]:hidden",
         className,
       )}
       {...props}
@@ -37,20 +37,34 @@ function TabsList({ className, ...props }: TabsPrimitive.List.Props) {
   );
 }
 
-/* Copper underline on the active tab, matching the header's TOP_LINK, so the
-   two controls on the page read as the same system. -mb-px sits the underline
-   on the list's own border rather than above it. */
+/**
+ * An outlined chip that fills copper when it is the open one.
+ *
+ * It started as a copper underline borrowed from the header nav, and that was
+ * the wrong borrow: the header is a menu you already expect to be clickable,
+ * sitting alone on a bar. Dropped into the middle of a page, the same
+ * treatment reads as a caption above a list. Two things made it worse -
+ * `cursor` stayed `default` on hover while every other button on the site
+ * turns to `pointer`, and the only hover feedback was a slight shift in text
+ * colour. A control nobody can tell is a control is a control nobody uses.
+ *
+ * So: a border to make each one an object, a filled state that cannot be read
+ * as anything but "this is the selected one", and a real pointer. The pill
+ * shape echoes the Book buttons, but outlined rather than solid, so it reads
+ * as a selector rather than a call to action.
+ */
 function TabsTab({ className, ...props }: TabsPrimitive.Tab.Props) {
   return (
     <TabsPrimitive.Tab
       data-slot="tabs-tab"
       className={cn(
-        "-mb-px shrink-0 snap-start border-b-2 border-transparent pb-3 font-sans text-[13px] tracking-[0.06em] whitespace-nowrap text-muted-foreground uppercase transition-colors outline-none",
-        "hover:text-foreground focus-visible:border-copper focus-visible:text-foreground",
+        "group shrink-0 cursor-pointer snap-start rounded-full border border-border bg-card px-4 py-2 font-sans text-[12px] tracking-[0.08em] whitespace-nowrap text-muted-foreground uppercase transition-colors outline-none",
+        "hover:border-copper hover:text-foreground",
+        "focus-visible:border-copper focus-visible:ring-2 focus-visible:ring-copper/40",
         /* data-active, not data-selected. Base UI names it `active` on Tab
            (see TabsTabDataAttributes), and the wrong one fails silently:
            the tabs work, they just all look inactive. */
-        "data-active:border-copper data-active:text-foreground",
+        "data-active:border-copper data-active:bg-copper data-active:text-copper-ink",
         className,
       )}
       {...props}
@@ -65,12 +79,60 @@ function TabsTab({ className, ...props }: TabsPrimitive.Tab.Props) {
  * not. Every panel stays in the document and the inactive ones are hidden by
  * the `hidden` attribute.
  */
+/**
+ * No enter animation, and that is a decision rather than an omission. Do not
+ * add one back without reading this.
+ *
+ * A 180ms fade-and-rise was built here and it looked good. It also broke the
+ * tabs outright: Base UI will not put `hidden` back on a closing panel until
+ * the animations in that panel's subtree have finished, and with no exit
+ * animation there was nothing to finish. Every tab a visitor opened stayed
+ * open underneath the next one. Four panels stacked, the section 2,802px
+ * instead of 1,111, at any clicking speed a person can manage - 60ms apart or
+ * 700ms, it made no difference.
+ *
+ * Four attempts, all verified failures:
+ *
+ * - `data-ending-style:transition-none`. Still leaks. The transition is
+ *   declared while the panel is opening, which is when it matters.
+ * - Scoping the transition off exiting panels with `:not([data-ending-style])`.
+ *   Worse: `duration-180` stays behind on its own and CSS defaults
+ *   transition-property to `all`, so exiting panels transition everything.
+ * - Moving the animation to a child div. Base UI inspects the subtree, so the
+ *   child blocks the hide exactly as the panel did.
+ * - Removing it entirely. The only one that works: panels settle to one.
+ *
+ * Proven by stripping the animation from the source and re-testing, not by
+ * reasoning about it. If this is ever wanted, it needs a real exit animation
+ * that actually completes, or a Base UI version that stops waiting.
+ */
 function TabsPanel({ className, ...props }: TabsPrimitive.Panel.Props) {
   return (
     <TabsPrimitive.Panel
       data-slot="tabs-panel"
       keepMounted
-      className={cn("outline-none", className)}
+      className={cn(
+        "outline-none",
+        /**
+         * `data-ending-style:hidden` is not styling. Without it the tabs are
+         * broken.
+         *
+         * Base UI marks a closing panel with `data-ending-style` and `inert`,
+         * then waits to put `hidden` back on it. That second step never
+         * happens here: the panels sit at 604px each with `hidden` absent and
+         * zero animations running, so every tab a visitor opens stays in the
+         * layout underneath the next one. Four panels, the facials section
+         * 2,804px instead of 800, at 900ms between clicks - slower than anyone
+         * browses.
+         *
+         * Removing the enter animation was not enough on its own, which is
+         * where this was first misdiagnosed. The attribute is reliable even
+         * though the hiding is not, so the display is driven from the
+         * attribute directly. There is no exit animation to interrupt.
+         */
+        "data-ending-style:hidden",
+        className,
+      )}
       {...props}
     />
   );

@@ -7,7 +7,6 @@ import { Faq } from "@/components/home/Faq";
 import { Hero } from "@/components/home/Hero";
 import { Results } from "@/components/home/Results";
 import { Reviews } from "@/components/home/Reviews";
-import { Signature } from "@/components/home/Signature";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { Divider } from "@/components/layout/Divider";
 
@@ -76,10 +75,21 @@ export default function HomePage() {
           nothing is lost by making them meet the reviews first. */}
       <Facials />
       <Categories />
-      <Signature />
+      {/* Eminence moved up to sit directly under "Also at the clinic", on
+          Frank's call: the retail line should get more exposure than the
+          other treatment categories, and below the results band it was the
+          second-last thing on a long page. */}
+      <Eminence />
+      {/* The microneedling signature section came out here. It led on the
+          clinic's most expensive treatment, $290, which is not a facial at
+          all - it is a skin treatment and it lives on /other-treatments. The
+          home page is built to rank for facials, so a full band about
+          something else sat between the facial menu and the store for no
+          reason the page could justify. `Categories` still routes visitors to
+          skin, body and massage, and Signature is in git history if it is ever
+          wanted. */}
       <Divider className="pb-section-sm lg:pb-section" />
       <Results />
-      <Eminence />
       {/* Location removed. Hours and the address moved to /contact when the
           two were folded together, and the footer carries the full NAP on
           every page, so a "Find us" band here was the third copy of the same

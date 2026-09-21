@@ -6,8 +6,10 @@ import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import { Watermark } from "@/components/layout/Watermark";
+import { GroupTabs } from "@/components/treatments/GroupTabs";
 import { ServiceList } from "@/components/treatments/ServiceList";
 import { buttonVariants } from "@/components/ui/button";
+import { TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs";
 import { categoriesData } from "@/data/categoriesData";
 import { siteConfig } from "@/data/siteConfig";
 import { getServicesByCategory } from "@/lib/serviceQueries";
@@ -26,6 +28,29 @@ import { getServicesByCategory } from "@/lib/serviceQueries";
  */
 const OTHERS = categoriesData.filter((category) => category.slug !== "facial");
 
+/**
+ * Every anchor this page answers to, mapped to the tab that has to be open for
+ * it to exist on screen.
+ *
+ * Two kinds, and both were already published. The four category segments are
+ * linked from the footer, from `categoryHref`, and from seven permanent
+ * redirects in `next.config.ts` covering the concern and category pages
+ * deleted on 2026-09-20. The eighteen treatment slugs come from
+ * `serviceHref`. A hidden panel has no layout, so without this every one of
+ * those links would land at the top of the page and look broken.
+ *
+ * A segment maps to itself because the panel carries it as an `id`.
+ */
+const ANCHOR_TO_TAB: Record<string, string> = Object.fromEntries(
+  OTHERS.flatMap((category) => [
+    [category.segment, category.segment],
+    ...getServicesByCategory(category.slug).map((service) => [
+      service.slug,
+      category.segment,
+    ]),
+  ]),
+);
+
 export const metadata: Metadata = {
   title: "Other treatments",
   description:
@@ -41,15 +66,30 @@ export default function OtherTreatmentsPage() {
 
   return (
     <>
-      <section className="relative overflow-hidden">
-        <Container className="relative py-10 lg:py-[72px]">
-          <Watermark className="-top-[140px] -left-[180px]" />
+      {/**
+       * A dark header band, so arriving here reads as somewhere else.
+       *
+       * Every page on this site opens on the same cream, which is why moving
+       * between them feels like scrolling rather than navigating. `tone="dark"`
+       * already existed for exactly this and had never been used: its own
+       * comment calls it a brand band rather than a theme surface, and it stays
+       * dark in both light and dark mode, so the page keeps its identity either
+       * way.
+       *
+       * A tone rather than a new colour, on purpose. The palette is one accent
+       * on cream and sand, and that restraint is most of why the site reads as
+       * a clinic. Signalling "different page" is worth a band, not a second
+       * palette.
+       */}
+      <Section tone="dark" className="relative overflow-hidden py-0 lg:py-0">
+        <Container className="relative py-12 lg:py-[84px]">
+          <Watermark className="-top-[140px] -left-[180px] opacity-[0.07]" />
           <div className="relative max-w-2xl">
             <nav
               aria-label="Breadcrumb"
-              className="mb-5 text-xs tracking-[0.08em] text-muted-foreground uppercase"
+              className="mb-5 text-xs tracking-[0.08em] text-on-dark-muted uppercase"
             >
-              <Link href="/" className="hover:text-foreground">
+              <Link href="/" className="hover:text-on-dark">
                 Home
               </Link>
               <span aria-hidden="true"> &nbsp;/&nbsp; </span>
@@ -57,38 +97,59 @@ export default function OtherTreatmentsPage() {
             </nav>
             <Eyebrow>{total} treatments</Eyebrow>
             <h1 className="my-5 lg:text-[66px]">Other treatments</h1>
-            <Lede>
+            <Lede className="text-on-dark-muted">
               Massage, body work, skin treatments and laser. The facials are on
               the{" "}
-              <Link href="/#facials" className="underline underline-offset-4">
+              <Link
+                href="/#facials"
+                className="text-on-dark underline underline-offset-4"
+              >
                 home page
               </Link>
               , where there are another 22.
             </Lede>
           </div>
         </Container>
-      </section>
+      </Section>
 
       <Section className="pt-0">
-        <Container className="grid gap-20">
-          {OTHERS.map((category) => (
-            /* scroll-mt clears the sticky header, because the nav and the
-               footer both link straight to these anchors. */
-            <section
-              key={category.slug}
-              id={category.segment}
-              className="scroll-mt-24"
-            >
-              <div className="mb-10">
-                <Eyebrow>
-                  {getServicesByCategory(category.slug).length} treatments
-                </Eyebrow>
-                <h2 className="mt-4">{category.label}</h2>
-                <Lede className="mt-4 max-w-2xl">{category.intro}</Lede>
-              </div>
-              <ServiceList category={category} />
-            </section>
-          ))}
+        <Container>
+          <GroupTabs groupOf={ANCHOR_TO_TAB} defaultValue={OTHERS[0].segment}>
+            <TabsList aria-label="Other treatments by kind">
+              {OTHERS.map((category) => (
+                <TabsTab key={category.slug} value={category.segment}>
+                  {category.label}
+                  <span className="ml-2 text-muted-foreground/70 group-data-active:text-copper-ink/70">
+                    {getServicesByCategory(category.slug).length}
+                  </span>
+                </TabsTab>
+              ))}
+            </TabsList>
+
+            {OTHERS.map((category) => (
+              /* The segment stays an `id`, now on the panel rather than a
+                 section. The footer, `categoryHref` and seven redirects in
+                 `next.config.ts` all point at these four anchors, and
+                 `GroupTabs` opens the tab before scrolling so a closed panel
+                 does not swallow the link. scroll-mt clears the sticky
+                 header. */
+              <TabsPanel
+                key={category.slug}
+                value={category.segment}
+                id={category.segment}
+                className="scroll-mt-24"
+              >
+                {/* The label is the tab now, so a visible h2 would say it
+                    twice. It stays in the outline for screen readers and for
+                    anything reading the document structure, because the page
+                    would otherwise jump from the h1 straight to the treatment
+                    h3s. */}
+                <h2 className="sr-only">{category.label}</h2>
+                <Lede className="mb-10 max-w-2xl">{category.intro}</Lede>
+                <ServiceList category={category} />
+              </TabsPanel>
+            ))}
+          </GroupTabs>
         </Container>
       </Section>
 
