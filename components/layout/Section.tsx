@@ -6,9 +6,17 @@ type Tone = "default" | "sand" | "dark";
 const tones: Record<Tone, string> = {
   default: "",
   sand: "bg-secondary",
-  // A brand band, not a theme surface: stays dark in both themes, one step
-  // lighter than the page in dark mode so it still reads as a band.
-  dark: "bg-dark text-on-dark dark:bg-dark-surface",
+  // A brand band, not a theme surface: the same dark in both themes.
+  //
+  // dark-surface rather than dark, and that is the whole of it. It used to be
+  // #1c1a17 in the light theme and #2a2723 in the dark one, five points of
+  // lightness apart, and the dark theme's was the better band: the cards are a
+  // translucent white wash, so on the lighter ground they composite brighter
+  // and lift further off it. Now both themes get that one.
+  //
+  // The footer keeps #1c1a17 on purpose. A band is espresso, the floor under
+  // the page is darker still.
+  dark: "bg-dark-surface text-on-dark",
 };
 
 export function Section({

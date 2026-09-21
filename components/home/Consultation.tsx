@@ -15,7 +15,7 @@ export function Consultation() {
   ];
 
   return (
-    <Section>
+    <Section tone="sand">
       <Container className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-20">
         <div className="relative aspect-[5/4] overflow-hidden rounded-lg">
           <Photo

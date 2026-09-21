@@ -80,7 +80,7 @@ export function ReviewsCarousel({ slides }: { slides: ReactNode[] }) {
   // circles under every card and pulled the eye off the reviews; on hover it
   // ties to the theme at the moment you are actually reaching for it.
   const control =
-    "grid size-9 shrink-0 place-items-center rounded-full border border-foreground/20 text-foreground/60 transition-colors hover:border-primary hover:text-primary focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none";
+    "grid size-9 shrink-0 place-items-center rounded-full border border-foreground/20 text-foreground/60 transition-colors hover:border-primary hover:text-primary focus-visible:ring-3 focus-visible:ring-ring/50 focus-visible:outline-none in-data-[tone=dark]:border-on-dark/25 in-data-[tone=dark]:text-on-dark/70 in-data-[tone=dark]:hover:border-copper-soft in-data-[tone=dark]:hover:text-copper-soft";
 
   return (
     <>
@@ -137,8 +137,8 @@ export function ReviewsCarousel({ slides }: { slides: ReactNode[] }) {
                 className={cn(
                   "block h-1.5 rounded-full transition-all duration-300",
                   current === i
-                    ? "w-6 bg-primary"
-                    : "w-1.5 bg-foreground/25 hover:bg-foreground/50",
+                    ? "w-6 bg-primary in-data-[tone=dark]:bg-copper-soft"
+                    : "w-1.5 bg-foreground/25 hover:bg-foreground/50 in-data-[tone=dark]:bg-on-dark/30 in-data-[tone=dark]:hover:bg-on-dark/60",
                 )}
               />
             </button>

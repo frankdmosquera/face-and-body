@@ -136,7 +136,7 @@ export function StarRating({
           >
             <Star
               size={size}
-              className="absolute inset-0 fill-transparent text-foreground/25"
+              className="absolute inset-0 fill-transparent text-foreground/25 in-data-[tone=dark]:text-on-dark/25"
             />
             {fill > 0 && (
               <span
@@ -171,7 +171,7 @@ export function ReviewCard({ review }: { review: ReviewCardDataType }) {
         : [review.service as string];
 
   return (
-    <figure className="flex h-full flex-col rounded-2xl border border-border bg-card/90 p-6 shadow-sm backdrop-blur-sm sm:p-7">
+    <figure className="flex h-full flex-col rounded-2xl border border-border bg-card/90 p-6 shadow-sm backdrop-blur-sm sm:p-7 in-data-[tone=dark]:border-on-dark/10 in-data-[tone=dark]:bg-on-dark/[0.055] in-data-[tone=dark]:shadow-none">
       <div className="flex items-start gap-3">
         {/* `next/image`, not the shadcn Avatar and not a plain `img`.
             `AvatarImage` mounts only once the file has loaded in the browser,
@@ -203,7 +203,7 @@ export function ReviewCard({ review }: { review: ReviewCardDataType }) {
         ) : (
           <span
             aria-hidden="true"
-            className="grid size-9 shrink-0 place-items-center rounded-full bg-primary/10 text-sm font-medium text-primary"
+            className="grid size-9 shrink-0 place-items-center rounded-full bg-primary/10 text-sm font-medium text-primary in-data-[tone=dark]:bg-copper-soft/15 in-data-[tone=dark]:text-copper-soft"
           >
             {initialsOf(review.author)}
           </span>
@@ -215,7 +215,7 @@ export function ReviewCard({ review }: { review: ReviewCardDataType }) {
             grey date on the star line. Matching that order is what makes it
             read as a Google review rather than a generic testimonial. */}
         <figcaption className="min-w-0 flex-1">
-          <span className="block truncate text-[15px] text-foreground">
+          <span className="block truncate text-[15px] text-foreground in-data-[tone=dark]:text-on-dark">
             {review.author}
           </span>
         </figcaption>
@@ -248,7 +248,7 @@ export function ReviewCard({ review }: { review: ReviewCardDataType }) {
             <StarRating rating={review.rating} size={16} />
           )}
           {review.date && (
-            <span className="text-[13px] text-muted-foreground">
+            <span className="text-[13px] text-muted-foreground in-data-[tone=dark]:text-on-dark-muted">
               {review.date}
             </span>
           )}
@@ -265,7 +265,7 @@ export function ReviewCard({ review }: { review: ReviewCardDataType }) {
           more" because expanding one card inside a carousel grows it
           mid-autoplay and shunts everything around it; the button under the
           carousel goes to the same review on Google, where it is whole. */}
-      <blockquote className="mt-3.5 line-clamp-4 flex-1 text-[14.5px] leading-[1.55] text-pretty text-foreground">
+      <blockquote className="mt-3.5 line-clamp-4 flex-1 text-[14.5px] leading-[1.55] text-pretty text-foreground in-data-[tone=dark]:text-on-dark">
         {review.text}
       </blockquote>
 
@@ -274,9 +274,13 @@ export function ReviewCard({ review }: { review: ReviewCardDataType }) {
           disappears entirely when a review names no treatment, rather than
           leaving an empty rule across the bottom of the card. */}
       {services.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-1.5 border-t border-border/60 pt-4">
+        <div className="mt-4 flex flex-wrap gap-1.5 border-t border-border/60 pt-4 in-data-[tone=dark]:border-on-dark/10">
           {services.map((service) => (
-            <Badge key={service} variant="secondary">
+            <Badge
+              key={service}
+              variant="secondary"
+              className="in-data-[tone=dark]:bg-on-dark/10 in-data-[tone=dark]:text-on-dark-muted"
+            >
               {service}
             </Badge>
           ))}

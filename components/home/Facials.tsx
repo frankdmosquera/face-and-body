@@ -38,9 +38,10 @@ export function Facials() {
   const count = getServicesByCategory("facial").length;
 
   return (
-    /* Sand, taking the tone Categories used to carry in this slot, so the
-       alternation down the page is unchanged: Concerns plain, Reviews with its
-       own gradient, this sand. */
+    /* Sand, shared with Categories below it. The page runs in chapters
+       rather than alternating every section: cream arrival, dark reviews,
+       this sand band holding the menu and the other treatments, cream for
+       Eminence, sand for the FAQ and the ask. */
     <Section id="facials" tone="sand" className="scroll-mt-24">
       <Container>
         <Eyebrow>{count} treatments</Eyebrow>

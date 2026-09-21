@@ -6,7 +6,7 @@ import { Photo } from "@/components/media/Photo";
 
 export function Eminence() {
   return (
-    <Section tone="sand">
+    <Section>
       <Container className="grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-16">
         <div>
           <Eyebrow>Products we trust</Eyebrow>

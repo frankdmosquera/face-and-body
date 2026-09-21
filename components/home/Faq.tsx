@@ -36,12 +36,17 @@ export function Faq() {
         <Accordion className="mt-10">
           {faqData.map((item) => (
             <AccordionItem key={item.question} value={item.question}>
-              <AccordionTrigger className="gap-6 py-5 text-left [&_[data-slot=accordion-trigger-icon]]:hidden">
+              {/* `hover:no-underline` cancels the stock trigger's own
+                  `hover:underline`, which ran under the ringed +/- glyph as
+                  well as the question - the trigger wraps both. The underline
+                  is put back on the question span alone, so components/ui
+                  stays stock. */}
+              <AccordionTrigger className="gap-6 py-5 text-left hover:no-underline [&_[data-slot=accordion-trigger-icon]]:hidden">
                 {/* A span, not a heading. AccordionPrimitive.Header already
                     renders an h3 around this, so an h3 here nested one
                     heading inside another and the outline listed every
                     question twice. */}
-                <span className="font-serif text-[19px] leading-snug lg:text-[21px]">
+                <span className="font-serif text-[19px] leading-snug underline-offset-4 group-hover/accordion-trigger:underline lg:text-[21px]">
                   {item.question}
                 </span>
                 {/* One ringed glyph, swapped on aria-expanded. The chevrons the
