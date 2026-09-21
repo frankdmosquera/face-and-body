@@ -6,8 +6,10 @@ import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import { Watermark } from "@/components/layout/Watermark";
+import { GroupTabs } from "@/components/treatments/GroupTabs";
 import { ServiceList } from "@/components/treatments/ServiceList";
 import { buttonVariants } from "@/components/ui/button";
+import { TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs";
 import { categoriesData } from "@/data/categoriesData";
 import { siteConfig } from "@/data/siteConfig";
 import { getServicesByCategory } from "@/lib/serviceQueries";
@@ -25,6 +27,29 @@ import { getServicesByCategory } from "@/lib/serviceQueries";
  * its own gets split back out later, through the `detailPage` flag.
  */
 const OTHERS = categoriesData.filter((category) => category.slug !== "facial");
+
+/**
+ * Every anchor this page answers to, mapped to the tab that has to be open for
+ * it to exist on screen.
+ *
+ * Two kinds, and both were already published. The four category segments are
+ * linked from the footer, from `categoryHref`, and from seven permanent
+ * redirects in `next.config.ts` covering the concern and category pages
+ * deleted on 2026-09-20. The eighteen treatment slugs come from
+ * `serviceHref`. A hidden panel has no layout, so without this every one of
+ * those links would land at the top of the page and look broken.
+ *
+ * A segment maps to itself because the panel carries it as an `id`.
+ */
+const ANCHOR_TO_TAB: Record<string, string> = Object.fromEntries(
+  OTHERS.flatMap((category) => [
+    [category.segment, category.segment],
+    ...getServicesByCategory(category.slug).map((service) => [
+      service.slug,
+      category.segment,
+    ]),
+  ]),
+);
 
 export const metadata: Metadata = {
   title: "Other treatments",
@@ -70,25 +95,43 @@ export default function OtherTreatmentsPage() {
       </section>
 
       <Section className="pt-0">
-        <Container className="grid gap-20">
-          {OTHERS.map((category) => (
-            /* scroll-mt clears the sticky header, because the nav and the
-               footer both link straight to these anchors. */
-            <section
-              key={category.slug}
-              id={category.segment}
-              className="scroll-mt-24"
-            >
-              <div className="mb-10">
-                <Eyebrow>
-                  {getServicesByCategory(category.slug).length} treatments
-                </Eyebrow>
-                <h2 className="mt-4">{category.label}</h2>
-                <Lede className="mt-4 max-w-2xl">{category.intro}</Lede>
-              </div>
-              <ServiceList category={category} />
-            </section>
-          ))}
+        <Container>
+          <GroupTabs groupOf={ANCHOR_TO_TAB} defaultValue={OTHERS[0].segment}>
+            <TabsList aria-label="Other treatments by kind">
+              {OTHERS.map((category) => (
+                <TabsTab key={category.slug} value={category.segment}>
+                  {category.label}
+                  <span className="ml-2 text-muted-foreground/70 group-data-active:text-copper-ink/70">
+                    {getServicesByCategory(category.slug).length}
+                  </span>
+                </TabsTab>
+              ))}
+            </TabsList>
+
+            {OTHERS.map((category) => (
+              /* The segment stays an `id`, now on the panel rather than a
+                 section. The footer, `categoryHref` and seven redirects in
+                 `next.config.ts` all point at these four anchors, and
+                 `GroupTabs` opens the tab before scrolling so a closed panel
+                 does not swallow the link. scroll-mt clears the sticky
+                 header. */
+              <TabsPanel
+                key={category.slug}
+                value={category.segment}
+                id={category.segment}
+                className="scroll-mt-24"
+              >
+                {/* The label is the tab now, so a visible h2 would say it
+                    twice. It stays in the outline for screen readers and for
+                    anything reading the document structure, because the page
+                    would otherwise jump from the h1 straight to the treatment
+                    h3s. */}
+                <h2 className="sr-only">{category.label}</h2>
+                <Lede className="mb-10 max-w-2xl">{category.intro}</Lede>
+                <ServiceList category={category} />
+              </TabsPanel>
+            ))}
+          </GroupTabs>
         </Container>
       </Section>
 
