@@ -123,7 +123,15 @@ export default function OtherTreatmentsPage() {
             groupOf={ANCHOR_TO_TAB}
             order={OTHERS.map((category) => category.segment)}
           >
-            <TabsList aria-label="Other treatments by kind">
+            {/* Pinned at every width, same as `/products` and the facials
+                strip. See the note on the matching `TabsList` in
+                `components/treatments/ServiceList.tsx` for the reasoning. This
+                page is the worst case that prompted it: Massage is eight
+                cards, 2,209px against an 812px viewport. */}
+            <TabsList
+              aria-label="Other treatments by kind"
+              className="sticky top-0 z-10 bg-background py-3"
+            >
               {OTHERS.map((category) => (
                 <TabsTab key={category.slug} value={category.segment}>
                   {category.label}
