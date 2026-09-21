@@ -42,7 +42,7 @@ export function Results() {
                   {result.caption}
                 </p>
                 <small className="mt-3 block text-[13px] text-muted-foreground">
-                  Her Instagram
+                  Our Instagram
                   {result.treatment ? ` · ${result.treatment}` : ""}
                 </small>
               </figcaption>

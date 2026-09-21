@@ -36,7 +36,10 @@ export const categoriesData: readonly CategoryType[] = [
   },
   {
     slug: "skin",
-    label: "Skin Treatments",
+    // One word, like Body, Massage and Laser and IPL beside it. "Skin
+    // Treatments" was the only label carrying the noun, and on a row of tabs
+    // that reads as the odd one rather than the specific one.
+    label: "Skin",
     segment: "skin",
     blurb: "Microneedling, peels, RF",
     intro:

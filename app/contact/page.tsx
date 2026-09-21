@@ -21,8 +21,22 @@ import {
   smsLink,
 } from "@/lib/contactPrefills";
 
+/**
+ * THIS PAGE LEADS WITH THE OFFER, NOT THE CHANNEL. It used to open on "Text
+ * us. It's the fastest way." over a paragraph explaining that a call goes to
+ * voicemail and the hours change daily. Every line of that was the clinic
+ * describing its own constraint, which reads as an apology for being hard to
+ * reach - and being booked out is a signal in a clinic's favour, not something
+ * to explain away.
+ *
+ * It was also arguing a point nobody disputes. A visitor on the contact page
+ * has already decided to make contact; talking them into one channel solves a
+ * problem they do not have. The channels are buttons now and the copy is spent
+ * on the thing that was previously last on the page: the free consultation,
+ * which until now appeared only in the final section as an afterthought.
+ */
 const LEDE =
-  "We're usually mid-treatment, so a text gets answered properly rather than a call going to voicemail. Ask anything: which treatment suits your skin, what something costs, whether you're a candidate.";
+  "A free consultation, or just a question. Either way you get a straight answer about what your skin needs and what it costs, from someone who has looked at it first.";
 
 /**
  * Contact, hours and location on one page.
@@ -41,7 +55,7 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  const { address, phone } = siteConfig;
+  const { address, phone, consultation } = siteConfig;
 
   return (
     <>
@@ -61,9 +75,31 @@ export default function ContactPage() {
             </nav>
             <Eyebrow>Get in touch</Eyebrow>
             <h1 className="my-5 lg:text-[66px]">
-              Text us. It&apos;s the fastest way.
+              Start with a look at your skin.
             </h1>
             <Lede>{LEDE}</Lede>
+            {/* THE ACTION LIVES IN THE HERO, and on this page of all pages it
+                has to. A visitor who has already decided should not have to
+                read anything first; one who has not decided scrolls on to
+                What happens next and the form, which is the order they want
+                it in anyway. The buttons do not repeat lower down, because
+                the number below is itself the text link and two identical
+                pairs inside one screen reads as a mistake rather than a
+                reminder. */}
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href={smsLink("Hi! I'd like to ask about ")}
+                className={buttonVariants()}
+              >
+                Send a text
+              </a>
+              <a
+                href={phone.tel}
+                className={buttonVariants({ variant: "outline" })}
+              >
+                Call instead
+              </a>
+            </div>
           </div>
           {/* The ratio follows the layout. 4:5 is right only when the photo sits
               beside the text, which starts at lg. Below that it is a single
@@ -87,30 +123,42 @@ export default function ContactPage() {
       <Section tone="sand" className="pt-10 lg:pt-14">
         <Container className="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:items-start lg:gap-16">
           <div>
-            <Eyebrow>Fastest way</Eyebrow>
-            <h2 className="mt-4">Text her</h2>
-            <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
-              She is usually mid-treatment, so a text gets read between clients
-              and a call often goes to voicemail. Her hours change every day,
-              which is the other reason a text beats trying to catch her.
-            </p>
+            <Eyebrow>Reach us</Eyebrow>
+            <h2 className="mt-4">Text, call or write</h2>
             <a
               href={smsLink("Hi! I'd like to ask about ")}
               className="mt-7 block font-serif text-[34px] leading-none hover:text-accent-foreground lg:text-[40px]"
             >
               {phone.display}
             </a>
-            <div className="mt-6 flex flex-wrap gap-3">
-              <a href={smsLink("Hi! I'd like to ask about ")} className={buttonVariants()}>
-                Send a text
-              </a>
-              <a
-                href={phone.tel}
-                className={buttonVariants({ variant: "outline" })}
-              >
-                Call instead
-              </a>
-            </div>
+            {/* One line, and it is the only thing the old paragraph was
+                actually for. What a visitor needs is the expectation, not the
+                reasoning behind it. Same claim the form already makes below,
+                so the two cannot contradict each other. */}
+            <p className="mt-5 text-[13px] text-muted-foreground">
+              We reply within a day.
+            </p>
+            {/* The persuasion, and the reason the page no longer needs to
+                argue for a channel. It answers the only question someone
+                hesitating actually has, which is what they are signing up
+                for. Every line of it was already true and already on the
+                site, just scattered across three other pages. */}
+            <Eyebrow className="mt-10">What happens next</Eyebrow>
+            <ol className="mt-4 space-y-3 text-[15px] leading-relaxed text-muted-foreground">
+              <li className="flex gap-3.5">
+                <span className="font-serif text-copper">1</span>
+                Tell us what you are hoping to change.
+              </li>
+              <li className="flex gap-3.5">
+                <span className="font-serif text-copper">2</span>
+                We look at your skin in person, {consultation.durationMin}{" "}
+                minutes, free, no commitment.
+              </li>
+              <li className="flex gap-3.5">
+                <span className="font-serif text-copper">3</span>
+                You leave with a plan and real prices, in writing.
+              </li>
+            </ol>
             {/* Jumps down the page now rather than across to /hours. */}
             <a
               href="#hours"
@@ -126,8 +174,7 @@ export default function ContactPage() {
             <Eyebrow>Or write it out</Eyebrow>
             <h2 className="mt-3 text-[34px]">Send a message</h2>
             <p className="mt-2.5 text-[14px] text-muted-foreground">
-              Goes to the same inbox she reads. Useful when your question needs more
-              than a line.
+              Useful when your question needs more than a line.
             </p>
             <ContactForm
               topics={CONTACT_TOPICS}

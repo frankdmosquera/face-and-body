@@ -45,3 +45,12 @@ next-env.d.ts
 
 # staging folder for ImageKit uploads; photos live in ImageKit, never in the repo
 blueprint/reference/upload/
+
+# Eminence product research, local only and deliberately not pushed.
+# The scraped catalogue and the product shots downloaded from their site,
+# both still raw: descriptions are Eminence's own words, and the shipping
+# assets should come from her Spa Partner portal rather than from here.
+# Un-ignore whichever parts survive the rewrite; until then nothing about
+# this belongs on GitHub.
+/data/products/
+/public/images/
