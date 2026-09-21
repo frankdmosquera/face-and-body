@@ -111,28 +111,28 @@ function TabsPanel({ className, ...props }: TabsPrimitive.Panel.Props) {
     <TabsPrimitive.Panel
       data-slot="tabs-panel"
       keepMounted
-      className={cn(
-        "outline-none",
-        /**
-         * `data-ending-style:hidden` is not styling. Without it the tabs are
-         * broken.
-         *
-         * Base UI marks a closing panel with `data-ending-style` and `inert`,
-         * then waits to put `hidden` back on it. That second step never
-         * happens here: the panels sit at 604px each with `hidden` absent and
-         * zero animations running, so every tab a visitor opens stays in the
-         * layout underneath the next one. Four panels, the facials section
-         * 2,804px instead of 800, at 900ms between clicks - slower than anyone
-         * browses.
-         *
-         * Removing the enter animation was not enough on its own, which is
-         * where this was first misdiagnosed. The attribute is reliable even
-         * though the hiding is not, so the display is driven from the
-         * attribute directly. There is no exit animation to interrupt.
-         */
-        "data-ending-style:hidden",
-        className,
-      )}
+      /**
+       * DO NOT hide panels with `data-ending-style`. It was tried, it shipped,
+       * and it took the page down.
+       *
+       * The reasoning looked sound: Base UI marks a closing panel
+       * `data-ending-style` and `inert`, then fails to put `hidden` back on it,
+       * so panels stack up in the layout. Driving `display` off the attribute
+       * instead seemed like the fix, and it tested clean on a freshly loaded
+       * page.
+       *
+       * The attribute is never cleared. Once a panel has been closed once it
+       * keeps `data-ending-style` for the life of the page, so after a visitor
+       * had opened each tab, every panel was `display: none` and the section
+       * showed nothing at all. Verified live, on all four panels of
+       * /other-treatments.
+       *
+       * The stacking is the lesser bug: a section that is too tall still shows
+       * every treatment. A section that is empty shows none. Until there is a
+       * real fix - an exit animation that completes, or a Base UI version that
+       * stops waiting - the panels stay as Base UI leaves them.
+       */
+      className={cn("outline-none", className)}
       {...props}
     />
   );
