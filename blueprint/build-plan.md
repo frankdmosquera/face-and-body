@@ -25,7 +25,7 @@ Three of those need explaining, because the site contradicts the tick:
   still returns it behind the `detailPage` flag, which no treatment carries.
   That is a door left open, not a plan.
 - **6, browse by concern** shipped and was deleted. The taxonomy survives and
-  is marked parked in `data/concernsData.ts`, `lib/services.ts` and
+  is marked parked in `data/concernsData.ts`, `lib/serviceQueries.ts` and
   `ServiceCard.tsx`. Frank's open thought is a section on an existing page
   rather than pages of its own. Undecided, and his to decide.
 

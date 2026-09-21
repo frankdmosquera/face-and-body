@@ -8,7 +8,7 @@ import { Section } from "@/components/layout/Section";
 import { Watermark } from "@/components/layout/Watermark";
 import { ServiceList } from "@/components/treatments/ServiceList";
 import { buttonVariants } from "@/components/ui/button";
-import { CATEGORIES } from "@/data/categoriesData";
+import { categoriesData } from "@/data/categoriesData";
 import { siteConfig } from "@/data/siteConfig";
 import { getServicesByCategory } from "@/lib/serviceQueries";
 
@@ -24,7 +24,7 @@ import { getServicesByCategory } from "@/lib/serviceQueries";
  * compete for a search term. A treatment that turns out to have real demand of
  * its own gets split back out later, through the `detailPage` flag.
  */
-const OTHERS = CATEGORIES.filter((category) => category.slug !== "facial");
+const OTHERS = categoriesData.filter((category) => category.slug !== "facial");
 
 export const metadata: Metadata = {
   title: "Other treatments",

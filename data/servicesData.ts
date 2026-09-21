@@ -2,7 +2,7 @@ import type { Service } from "@/types/servicesTypes";
 
 // Mirrors blueprint/reference/catalogue.md. Prices and durations are hers, from Square;
 // names, grouping and every description are ours and await her sign-off.
-export const SERVICES: readonly Service[] = [
+export const servicesData: readonly Service[] = [
   // Facials
   {
     slug: "microdermabrasion-facial",
@@ -340,7 +340,12 @@ export const SERVICES: readonly Service[] = [
     durationMin: 90,
     description:
       "The same collagen-induction treatment as the face, over the abdomen for stretch marks and loose texture.",
-    concerns: ["scarring-texture", "fine-lines", "pigmentation", "body-contouring"],
+    concerns: [
+      "scarring-texture",
+      "fine-lines",
+      "pigmentation",
+      "body-contouring",
+    ],
     bookingId: null,
     featured: true,
   },
@@ -563,7 +568,7 @@ export const SERVICES: readonly Service[] = [
 ] as const;
 
 const seen = new Set<string>();
-for (const service of SERVICES) {
+for (const service of servicesData) {
   if (seen.has(service.slug)) {
     throw new Error(`Duplicate service slug: ${service.slug}`);
   }

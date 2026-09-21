@@ -52,7 +52,7 @@ export type Product = {
   concerns: readonly ConcernSlug[];
 };
 
-export const COLLECTIONS: readonly Collection[] = [
+export const collectionsData: readonly Collection[] = [
   {
     slug: "stone-crop",
     label: "Stone Crop",
@@ -85,7 +85,7 @@ export const COLLECTIONS: readonly Collection[] = [
   },
 ] as const;
 
-export const PRODUCTS: readonly Product[] = [
+export const productsData: readonly Product[] = [
   // Stone Crop
   {
     slug: "stone-crop-gel-wash",
@@ -290,5 +290,5 @@ export const PRODUCTS: readonly Product[] = [
 export function getProductsByCollection(
   collection: CollectionSlug,
 ): readonly Product[] {
-  return PRODUCTS.filter((product) => product.collection === collection);
+  return productsData.filter((product) => product.collection === collection);
 }

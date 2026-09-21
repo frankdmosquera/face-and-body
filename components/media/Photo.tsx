@@ -1,5 +1,5 @@
 import { Image } from "@imagekit/next";
-import { IMAGES, type ImageSlot } from "@/data/imagesData";
+import { imagesData, type ImageSlot } from "@/data/imagesData";
 import { cn } from "@/lib/cn";
 
 /**
@@ -56,7 +56,7 @@ type Props = {
 };
 
 export function Photo({ slot, className, sizes, priority, fill }: Props) {
-  const image = IMAGES[slot];
+  const image = imagesData[slot];
 
   if (!urlEndpoint) {
     return (

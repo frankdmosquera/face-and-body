@@ -10,7 +10,7 @@ import {
   type ReviewCardData,
 } from "@/components/home/ReviewCard";
 import { ReviewsCarousel } from "@/components/home/ReviewsCarousel";
-import { REVIEWS } from "@/data/reviewsData";
+import { reviewsData } from "@/data/reviewsData";
 import { siteConfig } from "@/data/siteConfig";
 import { getGoogleReviews } from "@/lib/googleReviews";
 import { relativeTime } from "@/lib/relativeTime";
@@ -87,20 +87,20 @@ export async function Reviews() {
   // What it does not cost: the 4.7 and the count above them are still read
   // from Google every day, so the numbers stay honest even as the quotes sit
   // still. The live text is the fallback if this list is ever emptied.
-  const photoCards: ReviewCardData[] = REVIEWS.filter(
-    (review) => review.avatar,
-  ).map((review) => ({
-    text: review.quote,
-    author: review.author,
-    // Every entry in data/reviewsData.ts is a verified 5, read off the listing
-    // one by one, so these carry stars rather than looking unrated.
-    rating: review.rating,
-    avatarUrl: review.avatar,
-    // Formatted now, not stored. The page revalidates daily, so the wording
-    // moves on its own instead of insisting it is still 2024.
-    date: review.reviewedAt ? relativeTime(review.reviewedAt) : undefined,
-    service: review.treatment ?? undefined,
-  }));
+  const photoCards: ReviewCardData[] = reviewsData
+    .filter((review) => review.avatar)
+    .map((review) => ({
+      text: review.quote,
+      author: review.author,
+      // Every entry in data/reviewsData.ts is a verified 5, read off the listing
+      // one by one, so these carry stars rather than looking unrated.
+      rating: review.rating,
+      avatarUrl: review.avatar,
+      // Formatted now, not stored. The page revalidates daily, so the wording
+      // moves on its own instead of insisting it is still 2024.
+      date: review.reviewedAt ? relativeTime(review.reviewedAt) : undefined,
+      service: review.treatment ?? undefined,
+    }));
 
   // LIVE FIRST, THEN THE PHOTO SET.
   //

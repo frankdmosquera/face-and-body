@@ -1,4 +1,4 @@
-import { CATEGORIES, categoryHref } from "@/data/categoriesData";
+import { categoriesData, categoryHref } from "@/data/categoriesData";
 import { siteConfig, type NavItem, type SiteLink } from "@/data/siteConfig";
 
 /**
@@ -23,7 +23,7 @@ import { siteConfig, type NavItem, type SiteLink } from "@/data/siteConfig";
  * massage list stays one click from any page.
  */
 
-const treatments: SiteLink[] = CATEGORIES.map((category) => ({
+const treatments: SiteLink[] = categoriesData.map((category) => ({
   label: category.label,
   href: categoryHref(category),
 }));

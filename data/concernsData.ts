@@ -21,7 +21,7 @@ import type { Concern } from "@/types/servicesTypes";
  * - `next.config.ts` redirects the nine deleted URLs using these slugs
  *
  * Parked alongside it, and listed here so nobody has to go looking: the five
- * concern functions in `lib/services.ts`, and the `data-concerns` attribute
+ * concern functions in `lib/serviceQueries.ts`, and the `data-concerns` attribute
  * that `ServiceCard` writes onto every card. Both are marked where they sit.
  *
  * If concern-based browsing comes back it is likelier to be a section on an
@@ -30,7 +30,7 @@ import type { Concern } from "@/types/servicesTypes";
  */
 
 // Descriptions are the landing-page intros and await her sign-off.
-export const CONCERNS: readonly Concern[] = [
+export const concernsData: readonly Concern[] = [
   {
     slug: "fine-lines",
     label: "Fine lines and wrinkles",

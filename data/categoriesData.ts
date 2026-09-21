@@ -1,7 +1,7 @@
 import type { Category } from "@/types/servicesTypes";
 
 // Blurbs and group headings are copy and await her sign-off with the rest.
-export const CATEGORIES: readonly Category[] = [
+export const categoriesData: readonly Category[] = [
   {
     slug: "facial",
     label: "Facials",
@@ -77,7 +77,7 @@ export const CATEGORIES: readonly Category[] = [
 ] as const;
 
 export function getCategoryBySegment(segment: string): Category | undefined {
-  return CATEGORIES.find((category) => category.segment === segment);
+  return categoriesData.find((category) => category.segment === segment);
 }
 
 /**

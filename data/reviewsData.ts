@@ -78,7 +78,7 @@ const g = (
   treatment,
 });
 
-export const REVIEWS: readonly Review[] = [
+export const reviewsData: readonly Review[] = [
   g(
     "I've been seeing Sandra at Face & Body Wellness for about a year for my acne-prone skin, and the improvement has been amazing.",
     "O.O. B",
@@ -300,7 +300,11 @@ export const REVIEWS: readonly Review[] = [
     "Lucy L.",
     null,
   ),
-  g("Excellent service, very professional, highly recommended.", "José R.", null),
+  g(
+    "Excellent service, very professional, highly recommended.",
+    "José R.",
+    null,
+  ),
   g("I love it. Excellent service.", "Jenny A.", null),
   g(
     "Excellent costumer service, products and body treatments.",

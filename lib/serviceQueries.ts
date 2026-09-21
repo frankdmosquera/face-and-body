@@ -1,6 +1,6 @@
-import { CATEGORIES } from "@/data/categoriesData";
-import { CONCERNS } from "@/data/concernsData";
-import { SERVICES } from "@/data/servicesData";
+import { categoriesData } from "@/data/categoriesData";
+import { concernsData } from "@/data/concernsData";
+import { servicesData } from "@/data/servicesData";
 import type {
   Category,
   CategorySlug,
@@ -9,13 +9,13 @@ import type {
 } from "@/types/servicesTypes";
 
 export function getService(slug: string): Service | undefined {
-  return SERVICES.find((service) => service.slug === slug);
+  return servicesData.find((service) => service.slug === slug);
 }
 
 export function getServicesByCategory(
   category: CategorySlug,
 ): readonly Service[] {
-  return SERVICES.filter((service) => service.category === category);
+  return servicesData.filter((service) => service.category === category);
 }
 
 /**
@@ -31,7 +31,7 @@ export function getServicesByCategory(
  * Do not delete them, do not call them, and do not report them as dead code.
  */
 export function getServicesByConcern(concern: ConcernSlug): readonly Service[] {
-  return SERVICES.filter((service) => service.concerns.includes(concern));
+  return servicesData.filter((service) => service.concerns.includes(concern));
 }
 
 /** Lowest listed price in the category; null when every service is priced at consultation. */
@@ -76,12 +76,15 @@ export function getConcernsInCategory(
   category: CategorySlug,
 ): readonly ConcernChip[] {
   const services = getServicesByCategory(category);
-  return CONCERNS.map((concern) => ({
-    slug: concern.slug,
-    label: concern.label,
-    count: services.filter((service) => service.concerns.includes(concern.slug))
-      .length,
-  })).filter((chip) => chip.count > 0);
+  return concernsData
+    .map((concern) => ({
+      slug: concern.slug,
+      label: concern.label,
+      count: services.filter((service) =>
+        service.concerns.includes(concern.slug),
+      ).length,
+    }))
+    .filter((chip) => chip.count > 0);
 }
 
 export type CategoryBlock = {
@@ -91,28 +94,30 @@ export type CategoryBlock = {
 
 /** Parked, see `getServicesByConcern` above.
  *
- *  Matches grouped into category blocks, in CATEGORIES order so a concern page
+ *  Matches grouped into category blocks, in categoriesData order so a concern page
  *  and a category page never disagree about sequence. Empty blocks are dropped,
  *  so there is no empty state to render. */
 export function getServicesByConcernGrouped(
   concern: ConcernSlug,
 ): readonly CategoryBlock[] {
   const matches = getServicesByConcern(concern);
-  return CATEGORIES.map((category) => ({
-    category,
-    services: matches.filter((service) => service.category === category.slug),
-  })).filter((block) => block.services.length > 0);
+  return categoriesData
+    .map((category) => ({
+      category,
+      services: matches.filter((service) => service.category === category.slug),
+    }))
+    .filter((block) => block.services.length > 0);
 }
 
 /** Parked, see `getServicesByConcern` above.
  *
  *  The category holding most of a concern's treatments, for the hero photo.
- *  Ties go to CATEGORIES order, which is how the blocks are already sorted.
+ *  Ties go to categoriesData order, which is how the blocks are already sorted.
  *  Falls back to the first category for a concern with no treatments yet, so
  *  adding one to the data cannot break the build. */
 export function getDominantCategory(concern: ConcernSlug): Category {
   const blocks = getServicesByConcernGrouped(concern);
-  if (blocks.length === 0) return CATEGORIES[0];
+  if (blocks.length === 0) return categoriesData[0];
   return blocks.reduce((best, block) =>
     block.services.length > best.services.length ? block : best,
   ).category;

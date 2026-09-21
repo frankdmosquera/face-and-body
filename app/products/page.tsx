@@ -8,7 +8,11 @@ import { Section } from "@/components/layout/Section";
 import { Watermark } from "@/components/layout/Watermark";
 import { Photo } from "@/components/media/Photo";
 import { buttonVariants } from "@/components/ui/button";
-import { COLLECTIONS, PRODUCTS, getProductsByCollection } from "@/data/productsData";
+import {
+  collectionsData,
+  productsData,
+  getProductsByCollection,
+} from "@/data/productsData";
 
 /**
  * ⚠️ The product list this renders is a placeholder. See `data/productsData.ts`.
@@ -73,7 +77,7 @@ export default function ProductsPage() {
               <span aria-hidden="true"> &nbsp;/&nbsp; </span>
               <span aria-current="page">Products</span>
             </nav>
-            <Eyebrow>{PRODUCTS.length} products</Eyebrow>
+            <Eyebrow>{productsData.length} products</Eyebrow>
             <h1 className="my-5 lg:text-[66px]">Eminence Organics</h1>
             <Lede>
               We are an authorised stockist of Eminence Organics, the Hungarian
@@ -96,7 +100,7 @@ export default function ProductsPage() {
 
       <Section className="pt-0">
         <Container className="grid gap-20">
-          {COLLECTIONS.map((collection) => {
+          {collectionsData.map((collection) => {
             const products = getProductsByCollection(collection.slug);
             if (products.length === 0) return null;
             return (

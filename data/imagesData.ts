@@ -5,7 +5,7 @@
 // at best, which is the photography launch blocker: a real photo replaces one
 // by changing its path. Stock is Pexels and Unsplash, sized here at the crop
 // requested at download.
-export const IMAGES = {
+export const imagesData = {
   hero: {
     path: "/hero-led.jpg",
     alt: "The aesthetician working an LED light device over a client's face",
@@ -173,4 +173,4 @@ export const IMAGES = {
   },
 } as const;
 
-export type ImageSlot = keyof typeof IMAGES;
+export type ImageSlot = keyof typeof imagesData;

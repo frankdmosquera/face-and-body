@@ -5,9 +5,13 @@ import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import { Photo } from "@/components/media/Photo";
 import { buttonVariants } from "@/components/ui/button";
-import { CATEGORIES } from "@/data/categoriesData";
+import { categoriesData } from "@/data/categoriesData";
 import { siteConfig } from "@/data/siteConfig";
-import { getUnpricedServices, pricingMessage, smsLink } from "@/lib/contactPrefills";
+import {
+  getUnpricedServices,
+  pricingMessage,
+  smsLink,
+} from "@/lib/contactPrefills";
 
 export function PricingEnquiry() {
   const services = getUnpricedServices();
@@ -34,7 +38,7 @@ export function PricingEnquiry() {
           </Lede>
           <ul className="mt-7">
             {services.map((service) => {
-              const category = CATEGORIES.find(
+              const category = categoriesData.find(
                 (entry) => entry.slug === service.category,
               );
               return (

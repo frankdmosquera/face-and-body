@@ -1,5 +1,5 @@
 import { siteConfig } from "@/data/siteConfig";
-import { SERVICES } from "@/data/servicesData";
+import { servicesData } from "@/data/servicesData";
 import type { Service } from "@/types/servicesTypes";
 
 /** `?&body=` is the one form that opens a prefilled text on both iOS and Android. */
@@ -12,7 +12,7 @@ export function pricingMessage(service: Service): string {
 }
 
 export function getUnpricedServices(): readonly Service[] {
-  return SERVICES.filter((service) => service.price === null);
+  return servicesData.filter((service) => service.price === null);
 }
 
 export const CONSULTATION_TOPIC = "Book a free consultation";
@@ -34,7 +34,7 @@ export type ContactPrefill = { topic: string; message: string };
  */
 export function buildPrefills(): Record<string, ContactPrefill> {
   return Object.fromEntries(
-    SERVICES.map((service) => [
+    servicesData.map((service) => [
       service.slug,
       {
         topic: service.price === null ? pricingTopic(service) : GENERAL_TOPIC,

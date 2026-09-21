@@ -25,7 +25,7 @@ export type Result = {
  * kept below so it is not lost, and the `resultRedness` slot still exists
  * in the image library.
  */
-export const RESULTS: readonly Result[] = [];
+export const resultsData: readonly Result[] = [];
 
 /** Waiting on more before-and-afters from her. */
 const PENDING: readonly Result[] = [

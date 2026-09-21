@@ -3,7 +3,7 @@ import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import { ServiceList } from "@/components/treatments/ServiceList";
-import { CATEGORIES } from "@/data/categoriesData";
+import { categoriesData } from "@/data/categoriesData";
 import { getServicesByCategory } from "@/lib/serviceQueries";
 import type { Category } from "@/types/servicesTypes";
 
@@ -26,8 +26,9 @@ import type { Category } from "@/types/servicesTypes";
    category is a broken data file, not a state this page should degrade into.
    A function, not a bare const, so the narrowing survives into the component. */
 function facialCategory(): Category {
-  const found = CATEGORIES.find((entry) => entry.slug === "facial");
-  if (!found) throw new Error("The facial category is missing from CATEGORIES");
+  const found = categoriesData.find((entry) => entry.slug === "facial");
+  if (!found)
+    throw new Error("The facial category is missing from categoriesData");
   return found;
 }
 
