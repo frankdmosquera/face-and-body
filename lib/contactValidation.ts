@@ -4,7 +4,7 @@ import { z } from "zod";
  * The topic list is a parameter, not an import.
  *
  * This module is pulled into the browser by `ContactForm`, and importing
- * `CONTACT_TOPICS` from `lib/contact` meant importing `SERVICES` with it -
+ * `CONTACT_TOPICS` from `lib/contactPrefills` meant importing `servicesData` with it -
  * every treatment's price, duration and description - so that a dropdown could
  * be validated. Turbopack then hoisted the catalogue into a chunk shared by
  * every route, so the home page paid for it too.
@@ -53,4 +53,4 @@ export function makeContactSchema(topics: readonly string[]) {
   });
 }
 
-export type ContactValues = z.infer<ReturnType<typeof makeContactSchema>>;
+export type ContactValuesType = z.infer<ReturnType<typeof makeContactSchema>>;

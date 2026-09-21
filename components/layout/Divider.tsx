@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react";
 import { Orchid } from "@/components/brand/Orchid";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 
 const hairline =
   "h-px w-12 bg-border lg:w-24 in-data-[tone=dark]:bg-dark-surface";

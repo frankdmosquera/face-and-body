@@ -13,11 +13,11 @@ import {
 } from "@/components/ui/navigation-menu";
 import {
   isNavGroup,
-  type NavGroup,
-  type NavItem,
-  type NavSection,
+  type NavGroupType,
+  type NavItemType,
+  type NavSectionType,
 } from "@/data/siteConfig";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 
 const TOP_LINK =
   "h-auto rounded-none border-b border-transparent bg-transparent px-0 py-1.5 text-[13px] font-normal tracking-[0.06em] uppercase transition-colors hover:border-copper hover:bg-transparent focus:bg-transparent focus-visible:ring-0 focus-visible:border-copper";
@@ -36,7 +36,7 @@ function isActive(href: string, pathname: string) {
   return pathname === href || pathname.startsWith(href + "/");
 }
 
-function isGroupActive(group: NavGroup, pathname: string) {
+function isGroupActive(group: NavGroupType, pathname: string) {
   return (
     isActive(group.href, pathname) ||
     group.sections.some((section) =>
@@ -45,7 +45,7 @@ function isGroupActive(group: NavGroup, pathname: string) {
   );
 }
 
-export function DesktopNav({ items }: { items: NavItem[] }) {
+export function DesktopNav({ items }: { items: NavItemType[] }) {
   const pathname = usePathname();
 
   return (
@@ -118,7 +118,7 @@ function Column({
   section,
   pathname,
 }: {
-  section: NavSection;
+  section: NavSectionType;
   pathname: string;
 }) {
   return (
@@ -127,7 +127,10 @@ function Column({
         (section.href ? (
           <NavigationMenuLink
             closeOnClick
-            className={cn(HEADING, "rounded-none p-0 hover:bg-transparent hover:text-foreground focus:bg-transparent")}
+            className={cn(
+              HEADING,
+              "rounded-none p-0 hover:bg-transparent hover:text-foreground focus:bg-transparent",
+            )}
             render={<Link href={section.href} />}
           >
             {section.label}
@@ -144,7 +147,9 @@ function Column({
               render={
                 <Link
                   href={link.href}
-                  aria-current={isActive(link.href, pathname) ? "page" : undefined}
+                  aria-current={
+                    isActive(link.href, pathname) ? "page" : undefined
+                  }
                 />
               }
             >

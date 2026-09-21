@@ -1,7 +1,7 @@
 /**
  * Google's relative wording, recomputed rather than frozen.
  *
- * THE PROBLEM THIS SOLVES. The hand-written reviews in `data/reviews.ts` used
+ * THE PROBLEM THIS SOLVES. The hand-written reviews in `data/reviewsData.ts` used
  * to store the phrase Google showed on the day they were read - "2 years
  * ago". That string never changes. Two years from now the card still claims
  * two years, and the older the file gets the more wrong every card becomes.

@@ -1,10 +1,10 @@
 import { GroupTabs } from "@/components/treatments/GroupTabs";
 import { ServiceCard } from "@/components/treatments/ServiceCard";
 import { TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs";
-import { getServicesByCategory } from "@/lib/services";
-import type { Category, Service } from "@/types/services";
+import { getServicesByCategory } from "@/lib/serviceQueries";
+import type { CategoryType, ServiceType } from "@/types/servicesTypes";
 
-function Grid({ services }: { services: readonly Service[] }) {
+function Grid({ services }: { services: readonly ServiceType[] }) {
   return (
     <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
       {services.map((service) => (
@@ -36,7 +36,7 @@ const UNGROUPED = "more";
  * than the old one, where a group `h3` and a treatment `h3` were siblings at
  * the same level.
  */
-export function ServiceList({ category }: { category: Category }) {
+export function ServiceList({ category }: { category: CategoryType }) {
   const services = getServicesByCategory(category.slug);
   const groups = category.groups ?? [];
 

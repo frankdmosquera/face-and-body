@@ -1,5 +1,5 @@
 import { Container } from "@/components/layout/Container";
-import { SERVICES } from "@/data/services";
+import { servicesData } from "@/data/servicesData";
 import { siteConfig } from "@/data/siteConfig";
 
 export function TrustStrip() {
@@ -12,7 +12,7 @@ export function TrustStrip() {
     },
     {
       glyph: "◆",
-      title: `${SERVICES.length} treatments`,
+      title: `${servicesData.length} treatments`,
       text: "Face, body, skin and massage",
     },
     {

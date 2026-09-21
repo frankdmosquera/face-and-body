@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     "Twenty-two facials in Midnapore, Calgary SE, from deep cleansing to microneedling and gold leaf. A qualified aesthetician who looks at your skin first.",
 };
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Hero />

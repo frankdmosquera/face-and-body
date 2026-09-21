@@ -6,7 +6,7 @@
 import { useSyncExternalStore, type ReactNode } from "react";
 import { siteConfig } from "@/data/siteConfig";
 import { getOpenState, openStateText } from "@/lib/openNow";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 
 // Mount detection without an effect, which the project's lint rules forbid for
 // setState. Both snapshots are stable primitives, so there is nothing to loop on.

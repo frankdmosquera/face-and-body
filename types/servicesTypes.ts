@@ -1,13 +1,13 @@
-export type CategorySlug = "facial" | "skin" | "body" | "massage" | "laser";
+export type CategorySlugType = "facial" | "skin" | "body" | "massage" | "laser";
 
-export type CategoryGroup = {
+export type CategoryGroupType = {
   slug: string;
   label: string;
   heading: string;
 };
 
-export type Category = {
-  slug: CategorySlug;
+export type CategoryType = {
+  slug: CategorySlugType;
   label: string;
   /** URL segment under /treatments/ */
   segment: string;
@@ -16,10 +16,10 @@ export type Category = {
   intro: string;
   /** under 155 characters, so Google shows all of it */
   metaDescription: string;
-  groups?: readonly CategoryGroup[];
+  groups?: readonly CategoryGroupType[];
 };
 
-export type ConcernSlug =
+export type ConcernSlugType =
   | "fine-lines"
   | "acne"
   | "pigmentation"
@@ -29,8 +29,8 @@ export type ConcernSlug =
   | "body-contouring"
   | "muscle-tension";
 
-export type Concern = {
-  slug: ConcernSlug;
+export type ConcernType = {
+  slug: ConcernSlugType;
   label: string;
   /** lede on the concern landing page */
   description: string;
@@ -38,11 +38,11 @@ export type Concern = {
   metaDescription: string;
 };
 
-export type Service = {
+export type ServiceType = {
   /** kebab-case, unique across every category */
   slug: string;
   name: string;
-  category: CategorySlug;
+  category: CategorySlugType;
   /** a slug from the category's groups; facials only */
   group?: string;
   /** CAD, whole dollars; null means priced at consultation */
@@ -51,7 +51,7 @@ export type Service = {
   /** minutes; for "15 min+" listings the listed minimum */
   durationMin: number;
   description: string;
-  concerns: readonly ConcernSlug[];
+  concerns: readonly ConcernSlugType[];
   /** opaque handle for the booking provider; null until feature 11 */
   bookingId: string | null;
   featured: boolean;

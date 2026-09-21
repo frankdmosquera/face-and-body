@@ -3,12 +3,15 @@ import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Section } from "@/components/layout/Section";
 import { Photo } from "@/components/media/Photo";
-import { CATEGORIES, categoryHref } from "@/data/categories";
-import type { ImageSlot } from "@/data/images";
-import { getCategoryFromPrice, getServicesByCategory } from "@/lib/services";
-import type { CategorySlug } from "@/types/services";
+import { categoriesData, categoryHref } from "@/data/categoriesData";
+import type { ImageSlotType } from "@/data/imagesData";
+import {
+  getCategoryFromPrice,
+  getServicesByCategory,
+} from "@/lib/serviceQueries";
+import type { CategorySlugType } from "@/types/servicesTypes";
 
-const PHOTO: Record<CategorySlug, ImageSlot> = {
+const PHOTO: Record<CategorySlugType, ImageSlotType> = {
   facial: "catFacial",
   skin: "catSkin",
   body: "catBody",
@@ -25,7 +28,7 @@ const PHOTO: Record<CategorySlug, ImageSlot> = {
  * the menu that does not live on this page, and this is how it stays visible
  * without being given the weight that facials get.
  */
-const OTHERS = CATEGORIES.filter((category) => category.slug !== "facial");
+const OTHERS = categoriesData.filter((category) => category.slug !== "facial");
 
 export function Categories() {
   const total = OTHERS.reduce(

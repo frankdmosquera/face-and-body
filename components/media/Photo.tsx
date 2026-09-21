@@ -1,6 +1,6 @@
 import { Image } from "@imagekit/next";
-import { IMAGES, type ImageSlot } from "@/data/images";
-import { cn } from "@/lib/utils";
+import { imagesData, type ImageSlotType } from "@/data/imagesData";
+import { cn } from "@/lib/cn";
 
 /**
  * The media library folder for this project. It lives here rather than inside
@@ -48,7 +48,7 @@ if (!urlEndpoint && process.env.VERCEL === "1") {
 }
 
 type Props = {
-  slot: ImageSlot;
+  slot: ImageSlotType;
   className?: string;
   sizes?: string;
   priority?: boolean;
@@ -56,7 +56,7 @@ type Props = {
 };
 
 export function Photo({ slot, className, sizes, priority, fill }: Props) {
-  const image = IMAGES[slot];
+  const image = imagesData[slot];
 
   if (!urlEndpoint) {
     return (

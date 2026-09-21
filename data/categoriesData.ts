@@ -1,7 +1,7 @@
-import type { Category } from "@/types/services";
+import type { CategoryType } from "@/types/servicesTypes";
 
 // Blurbs and group headings are copy and await her sign-off with the rest.
-export const CATEGORIES: readonly Category[] = [
+export const categoriesData: readonly CategoryType[] = [
   {
     slug: "facial",
     label: "Facials",
@@ -76,8 +76,10 @@ export const CATEGORIES: readonly Category[] = [
   },
 ] as const;
 
-export function getCategoryBySegment(segment: string): Category | undefined {
-  return CATEGORIES.find((category) => category.segment === segment);
+export function getCategoryBySegment(
+  segment: string,
+): CategoryType | undefined {
+  return categoriesData.find((category) => category.segment === segment);
 }
 
 /**
@@ -93,7 +95,7 @@ export function getCategoryBySegment(segment: string): Category | undefined {
  * `segment` stays on the type because it still names the anchor, and because
  * the split back out to real routes is a planned later step.
  */
-export function categoryHref(category: Category): string {
+export function categoryHref(category: CategoryType): string {
   return category.slug === "facial"
     ? "/#facials"
     : `/other-treatments#${category.segment}`;

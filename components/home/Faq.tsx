@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { FAQ } from "@/data/faq";
+import { faqData } from "@/data/faqData";
 
 /**
  * Anatomy ported from Primo's FAQ, surface rebuilt for this site.
@@ -34,7 +34,7 @@ export function Faq() {
         <h2 className="mt-4">Questions we get asked</h2>
 
         <Accordion className="mt-10">
-          {FAQ.map((item) => (
+          {faqData.map((item) => (
             <AccordionItem key={item.question} value={item.question}>
               <AccordionTrigger className="gap-6 py-5 text-left [&_[data-slot=accordion-trigger-icon]]:hidden">
                 {/* A span, not a heading. AccordionPrimitive.Header already

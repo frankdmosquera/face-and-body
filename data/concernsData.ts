@@ -1,7 +1,36 @@
-import type { Concern } from "@/types/services";
+import type { ConcernType } from "@/types/servicesTypes";
+
+/**
+ * PARKED. Kept deliberately. Do not wire this up, and do not raise it as a
+ * gap.
+ *
+ * A concern is what a customer wants fixed - acne, fine lines, muscle tension
+ * - rather than what a treatment is called. It is a third way of slicing the
+ * same 40 treatments, alongside `category` (which page) and `group` (which
+ * tab).
+ *
+ * There is no concerns page and no concerns filter on this site, on purpose.
+ * The nine /what-we-treat routes this was built for were deleted on
+ * 2026-09-20 because they competed with the home page for the same searches
+ * on a domain with no authority to spend on both. Branching happens after
+ * something ranks, not before.
+ *
+ * Still live, so this file is not dead weight:
+ * - `components/home/Results.tsx` reads these labels for the
+ *   before-and-after section
+ * - `next.config.ts` redirects the nine deleted URLs using these slugs
+ *
+ * Parked alongside it, and listed here so nobody has to go looking: the five
+ * concern functions in `lib/serviceQueries.ts`, and the `data-concerns` attribute
+ * that `ServiceCard` writes onto every card. Both are marked where they sit.
+ *
+ * If concern-based browsing comes back it is likelier to be a section on an
+ * existing page than a page of its own. That is Frank's call and it is not
+ * decided.
+ */
 
 // Descriptions are the landing-page intros and await her sign-off.
-export const CONCERNS: readonly Concern[] = [
+export const concernsData: readonly ConcernType[] = [
   {
     slug: "fine-lines",
     label: "Fine lines and wrinkles",
@@ -73,8 +102,8 @@ export const CONCERNS: readonly Concern[] = [
  * routes. A function returning a URL to a deleted page is a trap for whoever
  * reads this next, so it is gone rather than left pointing at a 404.
  *
- * The taxonomy itself stays. `data/services.ts` tags every treatment with the
- * concerns it addresses, `data/results.ts` tags every before-and-after, and
+ * The taxonomy itself stays. `data/servicesData.ts` tags every treatment with the
+ * concerns it addresses, `data/resultsData.ts` tags every before-and-after, and
  * `components/home/Results.tsx` reads these labels. It is also what the pages
  * would be rebuilt from if branching by concern is ever worth doing again,
  * which is a question for after the home page ranks rather than before.

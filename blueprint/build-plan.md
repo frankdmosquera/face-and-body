@@ -7,6 +7,43 @@ Ordered so the site is useful as early as possible. Content and layout first,
 booking last, because booking is one component and the least certain decision.
 Features 1 to 4 give a site that could go live; everything after deepens it.
 
+## Status, reviewed 2026-09-20
+
+Frank went through this list item by item. **Read this section before reading
+the checkboxes**, because some of them are now wrong on their own.
+
+**Closed. Do not propose these, do not report them as gaps, do not ask whether
+he wants them.** Features 1, 2, 3, 4, 5, 6, 7, 8, 9.
+
+Three of those need explaining, because the site contradicts the tick:
+
+- **4, category pages** shipped and was then replaced. The five category pages
+  collapsed into `/other-treatments` on 2026-09-20. The tick stands for work
+  done, not for pages that exist.
+- **5, treatment detail pages** and **7, About page**: "maybe next year, but
+  for now nope." The `/treatments/<slug>` path stays free and `serviceHref`
+  still returns it behind the `detailPage` flag, which no treatment carries.
+  That is a door left open, not a plan.
+- **6, browse by concern** shipped and was deleted. The taxonomy survives and
+  is marked parked in `data/concernsData.ts`, `lib/serviceQueries.ts` and
+  `ServiceCard.tsx`. Frank's open thought is a section on an existing page
+  rather than pages of its own. Undecided, and his to decide.
+
+**Open:**
+
+| # | | When |
+|---|---|---|
+| 10 | Local SEO foundations | Not now, but it has to happen. No sitemap, no robots, no schema, and the restructure bet the site on the home page ranking |
+| 11 | Booking integration | Not now |
+| 12 | Before and after gallery | Blocked on photographs, not on code. `resultsData.ts` is empty on purpose and `Results` hides itself when it is |
+| 13 | Deployment readiness | Open. The `RESEND_FROM` question inside it is known to Frank and does not need raising again |
+| 14 | Reviews | Open. Widget built, live Google fetch deliberately unused |
+| 15 | Gift cards and series | Open |
+| 16-18 | Phase 2, AI | Open |
+
+This section exists because these decisions kept getting re-litigated every
+session. They are settled until Frank says otherwise.
+
 ## Phase 1 - the site that books appointments
 
 Everything needed for her to have a working, findable website. No AI.

@@ -3,15 +3,15 @@ import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Section } from "@/components/layout/Section";
 import { Tag } from "@/components/layout/Tag";
 import { Photo } from "@/components/media/Photo";
-import { CONCERNS } from "@/data/concerns";
-import { RESULTS } from "@/data/results";
+import { concernsData } from "@/data/concernsData";
+import { resultsData } from "@/data/resultsData";
 
 function concernLabel(slug: string): string {
-  return CONCERNS.find((concern) => concern.slug === slug)?.label ?? slug;
+  return concernsData.find((concern) => concern.slug === slug)?.label ?? slug;
 }
 
 export function Results() {
-  if (RESULTS.length === 0) return null;
+  if (resultsData.length === 0) return null;
 
   return (
     <Section>
@@ -19,7 +19,7 @@ export function Results() {
         <Eyebrow>Real results</Eyebrow>
         <h2 className="mt-4">Before and after</h2>
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
-          {RESULTS.map((result) => (
+          {resultsData.map((result) => (
             <figure
               key={result.slot}
               className="overflow-hidden rounded-lg border border-border bg-card"

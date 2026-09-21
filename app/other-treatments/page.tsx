@@ -8,9 +8,9 @@ import { Section } from "@/components/layout/Section";
 import { Watermark } from "@/components/layout/Watermark";
 import { ServiceList } from "@/components/treatments/ServiceList";
 import { buttonVariants } from "@/components/ui/button";
-import { CATEGORIES } from "@/data/categories";
+import { categoriesData } from "@/data/categoriesData";
 import { siteConfig } from "@/data/siteConfig";
-import { getServicesByCategory } from "@/lib/services";
+import { getServicesByCategory } from "@/lib/serviceQueries";
 
 /**
  * Everything that is not a facial, on one page.
@@ -24,7 +24,7 @@ import { getServicesByCategory } from "@/lib/services";
  * compete for a search term. A treatment that turns out to have real demand of
  * its own gets split back out later, through the `detailPage` flag.
  */
-const OTHERS = CATEGORIES.filter((category) => category.slug !== "facial");
+const OTHERS = categoriesData.filter((category) => category.slug !== "facial");
 
 export const metadata: Metadata = {
   title: "Other treatments",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "Massage, body contouring, skin treatments and laser at Face and Body Wellness Centre in Midnapore, Calgary SE. Eighteen treatments with prices.",
 };
 
-export default function TreatmentsPage() {
+export default function OtherTreatmentsPage() {
   const total = OTHERS.reduce(
     (sum, category) => sum + getServicesByCategory(category.slug).length,
     0,

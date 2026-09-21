@@ -1,4 +1,4 @@
-import type { ConcernSlug } from "@/types/services";
+import type { ConcernSlugType } from "@/types/servicesTypes";
 
 /**
  * ⚠️ PLACEHOLDER. NOT HER STOCK LIST. DO NOT DEPLOY WITHOUT HER SIGN-OFF.
@@ -27,7 +27,7 @@ import type { ConcernSlug } from "@/types/services";
  * facial that uses it can be tied together later without a second vocabulary.
  */
 
-export type CollectionSlug =
+export type CollectionSlugType =
   | "stone-crop"
   | "clear-skin"
   | "bright-skin"
@@ -35,24 +35,24 @@ export type CollectionSlug =
   | "calm-skin"
   | "sun-defense";
 
-export type Collection = {
-  slug: CollectionSlug;
+export type CollectionType = {
+  slug: CollectionSlugType;
   label: string;
   /** One line on who it is for, in the voice the category groups use. */
   heading: string;
 };
 
-export type Product = {
+export type ProductType = {
   slug: string;
   name: string;
-  collection: CollectionSlug;
+  collection: CollectionSlugType;
   /** Cleanser, Serum, Moisturiser and so on. Shown as the card's eyebrow. */
   format: string;
   description: string;
-  concerns: readonly ConcernSlug[];
+  concerns: readonly ConcernSlugType[];
 };
 
-export const COLLECTIONS: readonly Collection[] = [
+export const collectionsData: readonly CollectionType[] = [
   {
     slug: "stone-crop",
     label: "Stone Crop",
@@ -85,7 +85,7 @@ export const COLLECTIONS: readonly Collection[] = [
   },
 ] as const;
 
-export const PRODUCTS: readonly Product[] = [
+export const productsData: readonly ProductType[] = [
   // Stone Crop
   {
     slug: "stone-crop-gel-wash",
@@ -288,7 +288,7 @@ export const PRODUCTS: readonly Product[] = [
 ] as const;
 
 export function getProductsByCollection(
-  collection: CollectionSlug,
-): readonly Product[] {
-  return PRODUCTS.filter((product) => product.collection === collection);
+  collection: CollectionSlugType,
+): readonly ProductType[] {
+  return productsData.filter((product) => product.collection === collection);
 }

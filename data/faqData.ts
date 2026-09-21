@@ -1,6 +1,6 @@
 import { siteConfig } from "@/data/siteConfig";
 
-export type FaqItem = {
+export type FaqItemType = {
   question: string;
   answer: string;
   /** shows the consultation link under the answer */
@@ -25,7 +25,7 @@ const { address, phone, consultation } = siteConfig;
  * array so the markup and the page can never disagree; that is why this stays
  * a plain const rather than being inlined into the component.
  */
-export const FAQ: readonly FaqItem[] = [
+export const faqData: readonly FaqItemType[] = [
   {
     question: "Do I need a consultation first?",
     answer: `For anything beyond a straightforward facial, yes, and it is free. ${consultation.durationMin} minutes, no commitment. It is the only way to tell which treatment suits your skin, and the only way to price the treatments listed at consultation.`,

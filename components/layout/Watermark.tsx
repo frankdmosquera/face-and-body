@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react";
 import { Orchid } from "@/components/brand/Orchid";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 
 // The parent supplies `relative` and the offset classes.
 export function Watermark({ className, ...props }: ComponentProps<"svg">) {

@@ -1,7 +1,7 @@
-import { siteConfig, type Day, type DayHours } from "@/data/siteConfig";
+import { siteConfig, type DayType, type DayHoursType } from "@/data/siteConfig";
 import { dayLabel } from "@/lib/hours";
 
-const DAYS: readonly Day[] = [
+const DAYS: readonly DayType[] = [
   "sunday",
   "monday",
   "tuesday",
@@ -11,15 +11,18 @@ const DAYS: readonly Day[] = [
   "saturday",
 ];
 
-export type OpenState =
-  | { open: true; today: Day; until: string }
-  | { open: false; today: Day; opensToday: string }
-  | { open: false; today: Day; nextDay: Day; nextOpen: string }
-  | { open: false; today: Day };
+export type OpenStateType =
+  | { open: true; today: DayType; until: string }
+  | { open: false; today: DayType; opensToday: string }
+  | { open: false; today: DayType; nextDay: DayType; nextOpen: string }
+  | { open: false; today: DayType };
 
 /** Weekday and minutes-since-midnight where the clinic is, not where the
  *  visitor is. Someone checking from Toronto must get the same answer. */
-function clinicTime(now: Date, timeZone: string): { day: Day; minutes: number } {
+function clinicTime(
+  now: Date,
+  timeZone: string,
+): { day: DayType; minutes: number } {
   const parts = new Intl.DateTimeFormat("en-CA", {
     timeZone,
     weekday: "short",
@@ -49,7 +52,7 @@ function clockLabel(time: string): string {
   return `${twelve}:${String(mins).padStart(2, "0")} ${hours >= 12 ? "p.m." : "a.m."}`;
 }
 
-function entryFor(day: Day): DayHours | undefined {
+function entryFor(day: DayType): DayHoursType | undefined {
   return siteConfig.hours.find((entry) => entry.day === day);
 }
 
@@ -57,7 +60,7 @@ function entryFor(day: Day): DayHours | undefined {
 export function getOpenState(
   now: Date,
   timeZone: string = siteConfig.timezone,
-): OpenState {
+): OpenStateType {
   const { day, minutes } = clinicTime(now, timeZone);
   const today = entryFor(day);
 
@@ -90,7 +93,7 @@ export function getOpenState(
   return { open: false, today: day };
 }
 
-export function openStateText(state: OpenState): string {
+export function openStateText(state: OpenStateType): string {
   if (state.open) return `Open now, until ${state.until}`;
   if ("opensToday" in state) return `Closed, opens at ${state.opensToday}`;
   if ("nextDay" in state) {

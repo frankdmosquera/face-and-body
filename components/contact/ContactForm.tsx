@@ -5,15 +5,21 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
-import { submitContact, type ContactResult } from "@/actions/contact";
+import {
+  submitContactAction,
+  type ContactResultType,
+} from "@/actions/contactAction";
 import { buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { siteConfig } from "@/data/siteConfig";
-import type { ContactPrefill } from "@/lib/contact";
-import { makeContactSchema, type ContactValues } from "@/lib/contactSchema";
-import { cn } from "@/lib/utils";
+import type { ContactPrefillType } from "@/lib/contactPrefills";
+import {
+  makeContactSchema,
+  type ContactValuesType,
+} from "@/lib/contactValidation";
+import { cn } from "@/lib/cn";
 
 const FIELD =
   "h-auto w-full rounded-sm border-border bg-background px-4 py-3 text-[15px] shadow-none focus-visible:border-copper focus-visible:ring-0 aria-invalid:border-destructive";
@@ -30,19 +36,19 @@ const LABEL =
 type Props = {
   topics: readonly string[];
   generalTopic: string;
-  prefills: Record<string, ContactPrefill>;
+  prefills: Record<string, ContactPrefillType>;
 };
 
 export function ContactForm({ topics, generalTopic, prefills }: Props) {
   const id = useId();
   const doneRef = useRef<HTMLHeadingElement>(null);
-  const [result, setResult] = useState<ContactResult | null>(null);
+  const [result, setResult] = useState<ContactResultType | null>(null);
   const {
     register,
     handleSubmit,
     setValue,
     formState: { errors, isSubmitting },
-  } = useForm<ContactValues>({
+  } = useForm<ContactValuesType>({
     resolver: zodResolver(useMemo(() => makeContactSchema(topics), [topics])),
     defaultValues: {
       name: "",
@@ -57,7 +63,9 @@ export function ContactForm({ topics, generalTopic, prefills }: Props) {
   // the browser after mount keeps the markup identical through hydration and
   // avoids a Suspense boundary, which the dev server streams unreliably.
   useEffect(() => {
-    const treatment = new URLSearchParams(window.location.search).get("treatment");
+    const treatment = new URLSearchParams(window.location.search).get(
+      "treatment",
+    );
     if (!treatment) return;
     const values = prefills[treatment];
     if (!values) return;
@@ -70,9 +78,9 @@ export function ContactForm({ topics, generalTopic, prefills }: Props) {
     if (result?.success) doneRef.current?.focus();
   }, [result]);
 
-  async function onSubmit(values: ContactValues) {
+  async function onSubmit(values: ContactValuesType) {
     setResult(null);
-    setResult(await submitContact(values));
+    setResult(await submitContactAction(values));
   }
 
   if (result?.success) {
@@ -89,7 +97,7 @@ export function ContactForm({ topics, generalTopic, prefills }: Props) {
     );
   }
 
-  const describe = (field: keyof ContactValues) =>
+  const describe = (field: keyof ContactValuesType) =>
     errors[field] ? `${id}-${field}-error` : undefined;
 
   return (
@@ -181,11 +189,17 @@ export function ContactForm({ topics, generalTopic, prefills }: Props) {
           className="mt-5 rounded-sm border border-destructive/40 bg-background px-4 py-3 text-[14px]"
         >
           {result.error}{" "}
-          <a href={siteConfig.phone.sms} className="underline underline-offset-2">
+          <a
+            href={siteConfig.phone.sms}
+            className="underline underline-offset-2"
+          >
             Text {siteConfig.phone.display}
           </a>{" "}
           or{" "}
-          <a href={siteConfig.phone.tel} className="underline underline-offset-2">
+          <a
+            href={siteConfig.phone.tel}
+            className="underline underline-offset-2"
+          >
             call
           </a>{" "}
           instead.

@@ -8,10 +8,14 @@ import { Section } from "@/components/layout/Section";
 import { Watermark } from "@/components/layout/Watermark";
 import { Photo } from "@/components/media/Photo";
 import { buttonVariants } from "@/components/ui/button";
-import { COLLECTIONS, PRODUCTS, getProductsByCollection } from "@/data/products";
+import {
+  collectionsData,
+  productsData,
+  getProductsByCollection,
+} from "@/data/productsData";
 
 /**
- * ⚠️ The product list this renders is a placeholder. See `data/products.ts`.
+ * ⚠️ The product list this renders is a placeholder. See `data/productsData.ts`.
  *
  * The page is finished; the data is not. Everything here reads from that array,
  * so replacing it with her real shelf changes nothing in this file.
@@ -34,7 +38,7 @@ export const metadata: Metadata = {
  * products. That is the correct kind of wrong for a placeholder: the layout is
  * true, the photography is visibly provisional, and nobody mistakes it for
  * finished. Real product shots replace it one for one by adding slots to
- * `data/images.ts` and indexing them by `product.slug` instead.
+ * `data/imagesData.ts` and indexing them by `product.slug` instead.
  *
  * Deliberately not a hot-linked picsum or Unsplash URL. next/image would need
  * `remotePatterns` in next.config, which is configuration that outlives the
@@ -73,7 +77,7 @@ export default function ProductsPage() {
               <span aria-hidden="true"> &nbsp;/&nbsp; </span>
               <span aria-current="page">Products</span>
             </nav>
-            <Eyebrow>{PRODUCTS.length} products</Eyebrow>
+            <Eyebrow>{productsData.length} products</Eyebrow>
             <h1 className="my-5 lg:text-[66px]">Eminence Organics</h1>
             <Lede>
               We are an authorised stockist of Eminence Organics, the Hungarian
@@ -96,7 +100,7 @@ export default function ProductsPage() {
 
       <Section className="pt-0">
         <Container className="grid gap-20">
-          {COLLECTIONS.map((collection) => {
+          {collectionsData.map((collection) => {
             const products = getProductsByCollection(collection.slug);
             if (products.length === 0) return null;
             return (

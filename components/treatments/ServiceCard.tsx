@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { Tag } from "@/components/layout/Tag";
 import { buttonVariants } from "@/components/ui/button";
-import type { Service } from "@/types/services";
-import { cn } from "@/lib/utils";
+import type { ServiceType } from "@/types/servicesTypes";
+import { cn } from "@/lib/cn";
 
-function Price({ service }: { service: Service }) {
+function Price({ service }: { service: ServiceType }) {
   if (service.price === null) {
     return (
       <span className="font-serif text-[22px] leading-none text-copper">
@@ -24,12 +24,17 @@ function Price({ service }: { service: Service }) {
   );
 }
 
-export function ServiceCard({ service }: { service: Service }) {
+export function ServiceCard({ service }: { service: ServiceType }) {
   const unpriced = service.price === null;
 
   return (
     <li
       id={service.slug}
+      /* Parked, and nothing reads it. It was the hook a concern filter would
+         have used to show and hide cards without a re-render. The filter went
+         with the /what-we-treat pages on 2026-09-20; see the header of
+         `data/concernsData.ts`. Left in place because it costs one attribute
+         and is exactly what the filter would need again. */
       data-concerns={service.concerns.join(" ")}
       className={cn(
         // scroll-mt clears the sticky header when the nav jumps to this card.
@@ -37,7 +42,9 @@ export function ServiceCard({ service }: { service: Service }) {
         service.featured && "lg:col-span-3",
       )}
     >
-      {service.eminence && <Tag className="mb-3 self-start">Eminence Organics</Tag>}
+      {service.eminence && (
+        <Tag className="mb-3 self-start">Eminence Organics</Tag>
+      )}
       <h3 className={cn("text-[26px]", service.featured && "lg:text-[34px]")}>
         {service.name}
       </h3>

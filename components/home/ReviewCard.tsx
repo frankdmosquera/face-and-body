@@ -25,7 +25,7 @@ import { Badge } from "@/components/ui/badge";
  * date or a star count nobody gave it.
  */
 
-export type ReviewCardData = {
+export type ReviewCardDataType = {
   text: string;
   author: string;
   /** Google's own wording, e.g. "a month ago". Not a date we format. */
@@ -143,10 +143,7 @@ export function StarRating({
                 className="absolute inset-0 overflow-hidden"
                 style={{ width: size * fill }}
               >
-                <Star
-                  size={size}
-                  className="fill-amber-400 text-amber-400"
-                />
+                <Star size={size} className="fill-amber-400 text-amber-400" />
               </span>
             )}
           </span>
@@ -165,7 +162,7 @@ function initialsOf(name: string) {
     .join("");
 }
 
-export function ReviewCard({ review }: { review: ReviewCardData }) {
+export function ReviewCard({ review }: { review: ReviewCardDataType }) {
   const services =
     review.service == null
       ? []

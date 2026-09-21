@@ -234,7 +234,7 @@ women-owned", and the review topics people mention most: laser hair removal
 (6), relaxing massage (4), skin consultation (2), microneedling (2).
 
 Three reviews were readable in full and are used as verbatim excerpts in
-`data/reviews.ts` with the author shortened to first name and initial:
+`data/reviewsData.ts` with the author shortened to first name and initial:
 O.O. B (a month ago, deep cleansing facial, acne-prone skin), Daniela Flores
 Samame (2 years ago, massages and laser hair removal), Irene Regier (a year
 ago, facial). Their Google star counts were not confirmed from the text; the

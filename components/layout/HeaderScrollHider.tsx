@@ -3,7 +3,7 @@
 // Client because it listens to scroll; the header markup it wraps stays on the server.
 import type { ReactNode } from "react";
 import { useScrollDirection } from "@/hooks/useScrollDirection";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 
 export function HeaderScrollHider({ children }: { children: ReactNode }) {
   const { visible, show } = useScrollDirection();

@@ -4,8 +4,8 @@ import type { NextConfig } from "next";
  * Redirects for URLs this site used to serve.
  *
  * Every entry is a dead URL, frozen at the moment it died. That is why the
- * slugs are written out here instead of derived from `data/concerns.ts` or
- * `data/categories.ts`: deriving would tie a record of the past to data that
+ * slugs are written out here instead of derived from `data/concernsData.ts` or
+ * `data/categoriesData.ts`: deriving would tie a record of the past to data that
  * describes the present. Rename a concern in the data and the redirect for its
  * old URL has to survive the rename, not follow it. A redirect table is a
  * history, and histories do not get recomputed.

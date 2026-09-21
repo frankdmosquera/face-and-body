@@ -1,5 +1,9 @@
-import { CATEGORIES, categoryHref } from "@/data/categories";
-import { siteConfig, type NavItem, type SiteLink } from "@/data/siteConfig";
+import { categoriesData, categoryHref } from "@/data/categoriesData";
+import {
+  siteConfig,
+  type NavItemType,
+  type SiteLinkType,
+} from "@/data/siteConfig";
 
 /**
  * The header and footer menus.
@@ -23,12 +27,12 @@ import { siteConfig, type NavItem, type SiteLink } from "@/data/siteConfig";
  * massage list stays one click from any page.
  */
 
-const treatments: SiteLink[] = CATEGORIES.map((category) => ({
+const treatments: SiteLinkType[] = categoriesData.map((category) => ({
   label: category.label,
   href: categoryHref(category),
 }));
 
-export const NAV: NavItem[] = [
+export const NAV: NavItemType[] = [
   /** Facials are the home page, so this is an anchor rather than a route. It
    *  skips the hero and lands on the menu itself. */
   { label: "Facials", href: "/#facials" },
@@ -41,7 +45,7 @@ export const NAV: NavItem[] = [
   { label: "Contact", href: "/contact" },
 ];
 
-export const FOOTER: { heading: string; links: SiteLink[] }[] = [
+export const FOOTER: { heading: string; links: SiteLinkType[] }[] = [
   { heading: "Treatments", links: treatments },
   {
     heading: "Clinic",

@@ -3,9 +3,9 @@ import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import { ServiceList } from "@/components/treatments/ServiceList";
-import { CATEGORIES } from "@/data/categories";
-import { getServicesByCategory } from "@/lib/services";
-import type { Category } from "@/types/services";
+import { categoriesData } from "@/data/categoriesData";
+import { getServicesByCategory } from "@/lib/serviceQueries";
+import type { CategoryType } from "@/types/servicesTypes";
 
 /**
  * The full facial menu, on the home page rather than behind a link.
@@ -25,9 +25,10 @@ import type { Category } from "@/types/services";
 /* Thrown at module load rather than rendered around, because a missing facial
    category is a broken data file, not a state this page should degrade into.
    A function, not a bare const, so the narrowing survives into the component. */
-function facialCategory(): Category {
-  const found = CATEGORIES.find((entry) => entry.slug === "facial");
-  if (!found) throw new Error("The facial category is missing from CATEGORIES");
+function facialCategory(): CategoryType {
+  const found = categoriesData.find((entry) => entry.slug === "facial");
+  if (!found)
+    throw new Error("The facial category is missing from categoriesData");
   return found;
 }
 
