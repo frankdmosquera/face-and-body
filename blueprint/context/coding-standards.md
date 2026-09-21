@@ -218,27 +218,37 @@ permanent truth.
   wrapper rather than `next/image` directly. Anything that is a photograph of
   the clinic, the treatments or the work - anything that has a slot in
   `data/imagesData.ts` - belongs there, at full size, and stays there.
-- **Small fixed-size assets stay in `public/` and go through `next/image`**: the
-  logo mark, the Google mark, the reviewer avatars. Local file, local optimiser.
-  Never a bare `<img>`: the source in the repo is a master, not the thing the
-  browser should download, and Next is what turns one into the other.
-  Keep the masters small anyway: past about 50KB it is probably a photograph in
-  the wrong place and belongs on ImageKit.
+- **Two files live in `public/`, and only two**: `logo-mark.jpg` and
+  `google-g.png`. Everything else with pixels in it is on ImageKit. Settled
+  2026-09-21 by Frank, and it replaced a softer rule that let anything
+  "small and fixed" stay local, which in practice meant nobody could say where
+  a given picture came from without grepping.
 
-  Two things were settled here on 2026-09-19, both of them corrections.
+  The logo is in the header of every page and must render with no external
+  dependency. The Google mark is the harder case and the reason the list is
+  two rather than one: its brand terms require it be served unmodified, never
+  recoloured or stretched, and transforming images is the entire purpose of an
+  image CDN. Keeping it local keeps it untouched.
 
-  The rule used to read "only icons and the favicon belong in `public/`", which
-  the eight reviewer avatars had quietly broken since `063b105`. The line is
-  what the file is for, not what kind of picture it is.
+  Both go through `next/image`, never a bare `<img>`: the file in the repo is
+  a master, not the thing the browser should download.
 
-  And those avatars were rendered with a plain `<img>` carrying an
-  eslint-disable, on the reasoning that "a 40px square already the right size
-  gains nothing from an optimisation pipeline". The files are 160px, not 40px,
-  so the browser was fetching 4.4x the pixels it drew - 109KB across the eight.
-  Through `next/image` the same masters serve at 0.6KB each, 5.7KB for the page.
-  The other half of that comment was sound and still is: shadcn's `AvatarImage`
-  mounts after hydration and flashed the initials first. `next/image` does not
-  have that problem, because it renders a real `img` into the server markup.
+  What moved out, and why the old rule was wrong about each:
+
+  The eight reviewer avatars were local because they are 160px squares that
+  `next/image` serves at about 0.6KB. True, but `scarlett-p.png` was 44KB of
+  PNG for a 160px face, and reviews accumulate, so every new one meant
+  committing a binary. On ImageKit a new review is an upload, not a deploy.
+
+  The three Eminence band shots were local because routing them through
+  ImageKit once meant the band showed nothing until somebody uploaded files by
+  hand. That was a real failure and the wrong lesson: they were catalogue
+  packshots, and now that the whole catalogue is on ImageKit the band reads the
+  same records `/products` does instead of keeping its own copy.
+
+  The part of the old rule that survives: shadcn's `AvatarImage` mounts after
+  hydration and flashes initials first, so it is not used. Both `Photo` and
+  `PhotoByPath` render a real `img` into the server markup.
 - Server components by default. `"use client"` needs a reason you can name in
   one line: state, an effect, an event handler, or a browser API. Reaching for
   a hook out of habit is not a reason.

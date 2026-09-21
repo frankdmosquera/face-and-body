@@ -1,35 +1,54 @@
 /**
- * Uploads the Eminence packshots to the ImageKit media library.
+ * Uploads a local folder of images into the ImageKit media library.
  *
- *   node scripts/uploadProductImagesToImageKit.mjs
- *   node scripts/uploadProductImagesToImageKit.mjs --dry-run
+ *   node scripts/uploadImagesToImageKit.mjs <local-dir> <remote-folder> [--dry-run]
+ *   node scripts/uploadImagesToImageKit.mjs public/images/product-images product-images
+ *   node scripts/uploadImagesToImageKit.mjs public/reviews reviews
  *
- * `public/images/` is gitignored, so the 193 packshots exist on one machine
- * and would 404 on Vercel. This puts them where every other photograph on the
- * site already lives.
+ * Every photograph on this site is served from ImageKit. Only two files stay
+ * in `public/`: the clinic logo, which the header needs on every page with no
+ * external dependency, and the Google mark, whose brand terms require it be
+ * served unmodified, which is the one thing an image CDN exists to not do.
  *
- * The folder structure is mirrored exactly, minus the `/images` prefix, so
+ * Subfolders are mirrored exactly under `<remote-folder>`, so
  * `public/images/product-images/facials/cleansing/x.jpg` becomes
  * `face-and-body/product-images/facials/cleansing/x.jpg`. That mirroring is
- * what lets `toMediaPath` in `data/productsData.ts` be a one-line string
- * replace instead of a lookup table, so do not flatten the folders here
- * without changing that function too.
+ * what lets `toMediaPath` in `data/productsData.ts` be a one-line replace
+ * rather than a lookup table, so do not flatten the folders here without
+ * changing that function too.
  *
  * Safe to re-run: `overwriteFile` replaces a file in place and
  * `useUniqueFileName` is off, so filenames stay predictable and nothing is
- * ever duplicated with a `_ABC123` suffix. Re-running after replacing a photo
- * means bumping MEDIA_VERSION in `lib/imagekitConfig.ts`, or browsers keep
- * showing the old one for a year.
+ * ever duplicated with a suffix. Re-running after replacing a photo means
+ * bumping MEDIA_VERSION in `lib/imagekitConfig.ts`, or browsers keep showing
+ * the old one for a year.
+ *
+ * The private key is read from .env.local at run time and never printed.
  */
 import fs from "node:fs/promises";
 import path from "node:path";
 
 const ROOT = process.cwd();
-const SOURCE = path.join(ROOT, "public", "images", "product-images");
-const REMOTE_ROOT = "face-and-body/product-images";
 const ENDPOINT = "https://upload.imagekit.io/api/v1/files/upload";
 const CONCURRENCY = 4;
+
+/** Must match IMAGEKIT_FOLDER in lib/imagekitConfig.ts. */
+const IMAGEKIT_FOLDER = "face-and-body";
+
 const DRY_RUN = process.argv.includes("--dry-run");
+const [localDir, remoteFolder] = process.argv
+  .slice(2)
+  .filter((arg) => arg !== "--dry-run");
+
+if (!localDir || !remoteFolder) {
+  console.error(
+    "usage: node scripts/uploadImagesToImageKit.mjs <local-dir> <remote-folder> [--dry-run]",
+  );
+  process.exit(1);
+}
+
+const SOURCE = path.resolve(ROOT, localDir);
+const REMOTE_ROOT = `${IMAGEKIT_FOLDER}/${remoteFolder.replace(/^\/+|\/+$/g, "")}`;
 
 const TYPES = {
   ".jpg": "image/jpeg",
@@ -66,7 +85,7 @@ async function upload(file, auth) {
   const fileName = relative.pop();
   const folder = [REMOTE_ROOT, ...relative].join("/");
 
-  if (DRY_RUN) return { file, folder, fileName, ok: true, skipped: true };
+  if (DRY_RUN) return { folder, fileName };
 
   const body = new FormData();
   const bytes = await fs.readFile(file);
@@ -85,12 +104,12 @@ async function upload(file, auth) {
 
   if (!response.ok) {
     const detail = await response.text();
-    // The key is in the Authorization header, never in the response, so this
-    // is safe to print. Keep it that way.
+    // The key travels in the Authorization header and never comes back in the
+    // response, so this is safe to print. Keep it that way.
     throw new Error(`${response.status} ${detail.slice(0, 200)}`);
   }
 
-  return { file, folder, fileName, ok: true };
+  return { folder, fileName };
 }
 
 async function main() {
@@ -100,7 +119,7 @@ async function main() {
   const files = await collectImages(SOURCE);
   files.sort();
   console.log(
-    `${files.length} images in public/images/product-images${DRY_RUN ? " (dry run, nothing will be sent)" : ""}`,
+    `${files.length} images in ${localDir} -> ${REMOTE_ROOT}${DRY_RUN ? " (dry run, nothing will be sent)" : ""}`,
   );
 
   let done = 0;
@@ -115,7 +134,9 @@ async function main() {
         const result = await upload(next, auth);
         done += 1;
         if (done % 20 === 0 || done === files.length) {
-          console.log(`  ${done}/${files.length}  ${result.folder}/${result.fileName}`);
+          console.log(
+            `  ${done}/${files.length}  ${result.folder}/${result.fileName}`,
+          );
         }
       } catch (error) {
         failures.push({ file: next, message: String(error.message ?? error) });
@@ -129,7 +150,9 @@ async function main() {
 
   console.log(`\nuploaded ${done}, failed ${failures.length}`);
   for (const failure of failures) {
-    console.log(`  FAILED ${path.relative(ROOT, failure.file)}: ${failure.message}`);
+    console.log(
+      `  FAILED ${path.relative(ROOT, failure.file)}: ${failure.message}`,
+    );
   }
   if (failures.length > 0) process.exitCode = 1;
 }

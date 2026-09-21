@@ -84,23 +84,21 @@ export const imagesData = {
     w: 480,
     h: 640,
   },
-  // The Eminence band's three product shots are NOT here, and that is
-  // deliberate. They are `/eminence-gel-wash.jpg`, `/eminence-serum.jpg` and
-  // `/eminence-moisturizer.jpg` in `public/`, rendered by `next/image`
-  // straight from `Eminence.tsx` and `app/products/page.tsx`.
+  // The Eminence band's product shots are not here, and neither are the
+  // reviewer avatars or the 133 packshots on /products. They are all in
+  // ImageKit, addressed by path through `PhotoByPath` rather than by a slot in
+  // this file. A slot carries alt text and an intrinsic size written by hand,
+  // which is right for the handful of photographs chosen one at a time and
+  // wrong for a set of 141 whose alt text is either a product name already in
+  // `productsData` or deliberately empty.
   //
-  // WHY THEY BROKE THE RULE. Everything else on this site lives in ImageKit
-  // and this manifest is how it gets addressed, which is right for
-  // photographs: they are large, they need resizing per breakpoint, and they
-  // change without a deploy. These three are none of that. They are 55-80KB
-  // catalogue packshots that only change when the product line does, and
-  // routing them through ImageKit meant the band showed nothing at all until
-  // somebody remembered to upload three files by hand.
+  // This manifest is for photographs somebody picked: the hero, the category
+  // shots, the room. If you are about to add a slot per row of a data file,
+  // that is the signal to use `PhotoByPath` instead.
   //
-  // `public/logo-mark.jpg` is the same exception for the same reason, so this
-  // is the second instance of a rule rather than a one-off: small, fixed
-  // artwork that must be on screen the moment the page renders goes in
-  // `public/`. Anything that is a photograph still goes to ImageKit.
+  // `public/` now holds exactly two files, `logo-mark.jpg` and `google-g.png`.
+  // See the photography rules in `blueprint/context/coding-standards.md` for
+  // why those two and nothing else.
   // REPOINTED 2026-09-21, AND THE OLD FILE IS NOT COMING BACK.
   //
   // `/consultation.jpg` was a photograph of eyelash extensions being applied

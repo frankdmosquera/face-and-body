@@ -1,4 +1,4 @@
-import { ProductPhoto } from "@/components/media/ProductPhoto";
+import { PhotoByPath } from "@/components/media/PhotoByPath";
 import type { ProductType } from "@/types/productsTypes";
 
 export function ProductCard({ product }: { product: ProductType }) {
@@ -19,9 +19,11 @@ export function ProductCard({ product }: { product: ProductType }) {
           letterbox and the product is as large as the well allows. Re-measure
           if the shots are ever reshot at another ratio. */}
       <div className="relative aspect-[4/3] overflow-hidden rounded-sm bg-white">
-        <ProductPhoto
+        <PhotoByPath
           path={product.image}
           alt={product.name}
+          width={1500}
+          height={1125}
           sizes="(min-width: 1280px) 20vw, (min-width: 768px) 33vw, 50vw"
           className="absolute inset-0 h-full w-full object-contain p-3"
         />
