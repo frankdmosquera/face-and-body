@@ -80,8 +80,6 @@ Everything needed for her to have a working, findable website. No AI.
 - [x] 6. **Browse by concern** - landing pages per concern that route to the
   treatments that address it, for the visitor who knows the problem and not
   the treatment name
-- [ ] 7. **About page** - her story, credentials, the room, how she works,
-  Eminence partnership
 - [x] 8. **Hours and location** - seven-day hours with an open-now state, map,
   directions, parking, click-to-call and text
 - [x] 9. **Contact and enquiry** - text-first contact page, click-to-text with
@@ -96,6 +94,18 @@ Everything needed for her to have a working, findable website. No AI.
 
 ## Phase 1b - after launch
 
+Numbers here are identifiers, not an order. Feature 7 moved down from
+Phase 1 on 2026-09-21 and kept its number on purpose: `blueprint/history/`
+files are named by it, and renumbering would break every reference to
+everything after it for the sake of a tidier list.
+
+- [ ] 7. **About page** - her story, credentials, the room, how she works,
+  Eminence partnership. Moved out of Phase 1 because it is the only feature
+  blocked on facts nobody has asked her for yet: her name as she wants it
+  published, her qualification and where she trained, when she started, and
+  a photograph. Without those it is a mission statement on an empty page.
+  The site can launch without it; it cannot launch without schema or a way
+  to book
 - [ ] 12. **Before and after gallery** - filterable by treatment and concern,
   built to grow as she photographs more
 - [ ] 13. **Deployment readiness** - Vercel config, production build check,
