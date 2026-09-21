@@ -84,53 +84,57 @@ export const imagesData = {
     w: 480,
     h: 640,
   },
-  // THE EMINENCE BAND'S THREE PICTURES, AND WHY NONE OF THEM IS A PRODUCT
-  // YOU CAN NAME.
+  // THE EMINENCE BAND'S THREE PICTURES, AND WHY THEY ARE NAMED PRODUCTS NOW.
   //
   // What was here until 2026-09-21 was a woman applying lipstick, a man
   // reaching for hair conditioner, and an orchid, under a heading that says
-  // "Authorised Eminence Organics stockist". The alt text described a shelf,
-  // a cream jar and botanical ingredients - three photographs that were
-  // never at those paths.
+  // "Authorised Eminence Organics stockist". Those were replaced the same day
+  // with three unbranded amber-glass stock shots: honest, atmospheric, and
+  // still illustrating a specific brand claim with pictures of nothing.
   //
-  // Replacing them turned up a structural problem worth writing down, because
-  // it will come back: **you cannot illustrate "we stock brand X" with stock
-  // photography.** Every good product shot carries a real label. The search
-  // returned a Wella and DSD hair shelf with rouble price tags, a Cyrillic
-  // AHA serum line, a zero-waste refill shop selling shower gel, and an
-  // entire miSolo Cosmetics catalogue. A rival's brand name under that
-  // heading is worse than the orchid: the orchid is merely irrelevant, a
-  // competitor's jar contradicts the sentence above it.
+  // The structural problem that forced the stock shots is worth keeping,
+  // because it explains why this is the right fix rather than a fourth
+  // attempt: **you cannot illustrate "we stock brand X" with stock
+  // photography.** Every good product shot carries a real label, and the
+  // search turned up a Wella and DSD hair shelf with rouble price tags, a
+  // Cyrillic AHA serum line, a zero-waste refill shop and an entire rival
+  // cosmetics catalogue. A competitor's jar under that heading contradicts
+  // the sentence above it.
   //
-  // So all three are from one unbranded shoot - amber glass with BLANK
-  // labels, dried botanicals, warm grounds that sit on the cream. They claim
-  // nothing they cannot back up. One photographer and one styling across all
-  // three, so the cluster reads as chosen rather than assembled.
+  // So the answer was never a better stock photograph. It was real product
+  // shots, which now exist: 193 of them, collected 2026-09-21, one per
+  // product, mirroring `data/products/`.
   //
-  // THIS IS STILL A PATCH. The band names a specific line and shows none of
-  // it. The real version is her own Eminence shelf plus the product shots
-  // from the stockist portal she has a login for, and that ask is
-  // outstanding. When it lands, these three go.
-  eminenceWide: {
-    path: "/products-wide.jpg",
-    alt: "A dropper bottle of serum laid among dried botanicals",
-    source: "pexels 7797450",
-    w: 2000,
-    h: 1333,
+  // WHY THESE THREE. A cleanser, a serum and a moisturiser, which is a
+  // routine rather than three jars. Three different silhouettes and three
+  // different colours, so the row does not read as one bottle photographed
+  // three times. Two are Stone Crop, Eminence's best known line, and the
+  // third is Bright Skin.
+  //
+  // ⚠️ SOURCE. These came from eminenceorganics.com, not from the Spa Partner
+  // portal she has a login for. For an authorised stockist showing the brand
+  // it stocks that is ordinary use, but the portal is the correct source and
+  // that ask is still outstanding. Swap the files, keep the paths.
+  eminenceGelWash: {
+    path: "/eminence-gel-wash.jpg",
+    alt: "Eminence Stone Crop Gel Wash, a tall olive green bottle with a botanical print label",
+    source: "eminenceorganics.com",
+    w: 1500,
+    h: 1125,
   },
-  eminenceA: {
-    path: "/products-bottles.jpg",
-    alt: "Three amber glass skincare bottles arranged with dried flowers",
-    source: "pexels 7797440",
-    w: 2000,
-    h: 3000,
+  eminenceSerum: {
+    path: "/eminence-serum.jpg",
+    alt: "Eminence Bright Skin Licorice Root Booster-Serum in an amber glass dropper bottle",
+    source: "eminenceorganics.com",
+    w: 1500,
+    h: 1125,
   },
-  eminenceB: {
-    path: "/products-serum.jpg",
-    alt: "An amber serum bottle surrounded by dried white botanicals",
-    source: "pexels 7797527",
-    w: 2000,
-    h: 3000,
+  eminenceMoisturizer: {
+    path: "/eminence-moisturizer.jpg",
+    alt: "Eminence Stone Crop Whip Moisturizer in a squat pale green glass jar",
+    source: "eminenceorganics.com",
+    w: 1500,
+    h: 1125,
   },
   consultation: {
     path: "/consultation.jpg",

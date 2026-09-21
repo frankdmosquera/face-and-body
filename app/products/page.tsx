@@ -45,16 +45,24 @@ export const metadata: Metadata = {
  * placeholder, and the alternative is a bare <img> that loses sizing and
  * lazy-loading. The project already solved this problem; this uses that.
  */
-const TILES = ["eminenceA", "eminenceB", "eminenceWide"] as const;
+const TILES = [
+  "eminenceGelWash",
+  "eminenceSerum",
+  "eminenceMoisturizer",
+] as const;
 
 function ProductTile({ index }: { index: number }) {
   return (
-    <div className="relative mb-5 aspect-[4/5] overflow-hidden rounded-sm">
+    /* `contain` on a card, not `cover`. These are catalogue packshots now
+       rather than atmospheric stock, and a cropped packshot is a product you
+       cannot identify. The card colour is near-white, so the shot’s own
+       background disappears into it. */
+    <div className="relative mb-5 aspect-[4/5] overflow-hidden rounded-sm border border-border bg-card">
       <Photo
         slot={TILES[index % TILES.length]}
         fill
         sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-        className="object-cover"
+        className="object-contain p-4"
       />
     </div>
   );
