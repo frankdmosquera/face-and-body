@@ -66,15 +66,30 @@ export default function OtherTreatmentsPage() {
 
   return (
     <>
-      <section className="relative overflow-hidden">
-        <Container className="relative py-10 lg:py-[72px]">
-          <Watermark className="-top-[140px] -left-[180px]" />
+      {/**
+       * A dark header band, so arriving here reads as somewhere else.
+       *
+       * Every page on this site opens on the same cream, which is why moving
+       * between them feels like scrolling rather than navigating. `tone="dark"`
+       * already existed for exactly this and had never been used: its own
+       * comment calls it a brand band rather than a theme surface, and it stays
+       * dark in both light and dark mode, so the page keeps its identity either
+       * way.
+       *
+       * A tone rather than a new colour, on purpose. The palette is one accent
+       * on cream and sand, and that restraint is most of why the site reads as
+       * a clinic. Signalling "different page" is worth a band, not a second
+       * palette.
+       */}
+      <Section tone="dark" className="relative overflow-hidden py-0 lg:py-0">
+        <Container className="relative py-12 lg:py-[84px]">
+          <Watermark className="-top-[140px] -left-[180px] opacity-[0.07]" />
           <div className="relative max-w-2xl">
             <nav
               aria-label="Breadcrumb"
-              className="mb-5 text-xs tracking-[0.08em] text-muted-foreground uppercase"
+              className="mb-5 text-xs tracking-[0.08em] text-on-dark-muted uppercase"
             >
-              <Link href="/" className="hover:text-foreground">
+              <Link href="/" className="hover:text-on-dark">
                 Home
               </Link>
               <span aria-hidden="true"> &nbsp;/&nbsp; </span>
@@ -82,17 +97,20 @@ export default function OtherTreatmentsPage() {
             </nav>
             <Eyebrow>{total} treatments</Eyebrow>
             <h1 className="my-5 lg:text-[66px]">Other treatments</h1>
-            <Lede>
+            <Lede className="text-on-dark-muted">
               Massage, body work, skin treatments and laser. The facials are on
               the{" "}
-              <Link href="/#facials" className="underline underline-offset-4">
+              <Link
+                href="/#facials"
+                className="text-on-dark underline underline-offset-4"
+              >
                 home page
               </Link>
               , where there are another 22.
             </Lede>
           </div>
         </Container>
-      </section>
+      </Section>
 
       <Section className="pt-0">
         <Container>

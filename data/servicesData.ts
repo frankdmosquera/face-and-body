@@ -2,6 +2,25 @@ import type { ServiceType } from "@/types/servicesTypes";
 
 // Mirrors blueprint/reference/catalogue.md. Prices and durations are hers, from Square;
 // names, grouping and every description are ours and await her sign-off.
+
+/**
+ * DESCRIPTIONS: 15 words maximum, about 100 characters.
+ *
+ * Not a style preference, a measurement. `ServiceCard` gives the description
+ * four lines and reserves the space whether it is used or not, which is what
+ * keeps every card the same height. The narrowest a card ever gets is 254px,
+ * in the four-column layout from xl up, and 15 words is what fits in four
+ * lines at that width. Past it the text is clipped with an ellipsis: nothing
+ * is lost from the HTML, but the visitor stops reading mid-sentence.
+ *
+ * Every description currently sits between 9 and 13 words. One ran to 32 and
+ * was the only card on the site being truncated; it was cut rather than given
+ * a scroll area or a flip, because the tail was sales copy with no search
+ * terms in it.
+ *
+ * Front-load the words someone would type. The visible part is what earns the
+ * click; the rest is only there for a crawler.
+ */
 export const servicesData: readonly ServiceType[] = [
   // Facials
   {
@@ -27,7 +46,7 @@ export const servicesData: readonly ServiceType[] = [
     priceFrom: false,
     durationMin: 75,
     description:
-      "Eight steps, one visit. Extractions, ultrasonic peeling, high-frequency to calm breakouts, then LED and an oxygen boost. The one to book if your skin feels congested and you want it handled properly.",
+      "Eight steps. Extractions, ultrasonic peeling, high-frequency for breakouts, then LED and oxygen.",
     concerns: ["acne"],
     bookingId: null,
     featured: false,

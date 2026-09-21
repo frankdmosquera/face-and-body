@@ -37,7 +37,7 @@ export function ServiceCard({ service }: { service: ServiceType }) {
       data-concerns={service.concerns.join(" ")}
       className={cn(
         // scroll-mt clears the sticky header when the nav jumps to this card.
-        "flex scroll-mt-24 flex-col rounded-lg border border-border bg-card p-5 transition-transform duration-200 hover:-translate-y-0.5",
+        "flex scroll-mt-24 flex-col rounded-lg border border-border bg-card p-4 transition-transform duration-200 hover:-translate-y-0.5",
         service.featured && "lg:col-span-3",
       )}
     >
@@ -58,18 +58,18 @@ export function ServiceCard({ service }: { service: ServiceType }) {
        */}
       <h3
         className={cn(
-          "line-clamp-2 min-h-[2lh] text-[22px] leading-tight",
+          "line-clamp-2 min-h-[1lh] text-[22px] leading-[1.15] xl:min-h-[2lh]",
           service.featured && "lg:text-[30px]",
         )}
       >
         {service.name}
       </h3>
-      <p className="mt-2 line-clamp-3 min-h-[3lh] text-[14px] leading-relaxed text-muted-foreground">
+      <p className="mt-1 line-clamp-4 min-h-[4lh] text-[14px] leading-relaxed text-muted-foreground">
         {service.description}
       </p>
       {/* Wraps because "At consultation" beside "Ask about pricing" exceeds a
           phone-width card, and neither is allowed to shrink. */}
-      <div className="mt-4 flex flex-wrap items-end justify-between gap-3 border-t border-border pt-3.5">
+      <div className="mt-3 flex flex-wrap items-end justify-between gap-3 border-t border-border pt-3">
         <div>
           <Price service={service} />
           {/* Eminence rides on the duration line rather than as a badge above

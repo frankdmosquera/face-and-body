@@ -111,7 +111,28 @@ function TabsPanel({ className, ...props }: TabsPrimitive.Panel.Props) {
     <TabsPrimitive.Panel
       data-slot="tabs-panel"
       keepMounted
-      className={cn("outline-none", className)}
+      className={cn(
+        "outline-none",
+        /**
+         * `data-ending-style:hidden` is not styling. Without it the tabs are
+         * broken.
+         *
+         * Base UI marks a closing panel with `data-ending-style` and `inert`,
+         * then waits to put `hidden` back on it. That second step never
+         * happens here: the panels sit at 604px each with `hidden` absent and
+         * zero animations running, so every tab a visitor opens stays in the
+         * layout underneath the next one. Four panels, the facials section
+         * 2,804px instead of 800, at 900ms between clicks - slower than anyone
+         * browses.
+         *
+         * Removing the enter animation was not enough on its own, which is
+         * where this was first misdiagnosed. The attribute is reliable even
+         * though the hiding is not, so the display is driven from the
+         * attribute directly. There is no exit animation to interrupt.
+         */
+        "data-ending-style:hidden",
+        className,
+      )}
       {...props}
     />
   );
