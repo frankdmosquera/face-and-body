@@ -84,7 +84,35 @@ export function ServiceList({ category }: { category: CategoryType }) {
         groupOf={groupOf}
         order={blocks.map((block) => block.slug)}
       >
-        <TabsList aria-label={`${category.label} by what they do`}>
+        {/* PINNED, at every width, exactly as `/products` is.
+
+            This reverses the "Only here" line in the commit that pinned the
+            products strip, which argued 22 cards is one screen so a bar over
+            them would cost a band of the page and solve nothing. That was
+            measured on a desktop grid. On a phone `Grid` stacks single column
+            and one group runs 1.5 to 2.7 screens - Massage on
+            `/other-treatments` is 2,209px against an 812px viewport - so the
+            problem the products strip solves exists here too.
+
+            It was briefly pinned below `md` only, on the reasoning that
+            desktop did not need it. Frank asked for the same behaviour as
+            products, saw the desktop difference immediately and said so. The
+            consistency is worth more than the band of page it costs: three
+            pages with chips should not behave three ways.
+
+            No scroll listener. A sticky element sticks only inside its own
+            parent's box, and that parent is the Tabs root, which ends with
+            the last panel. It pins through the cards and releases itself once
+            you are past them.
+
+            z-10 against the header's z-20 on purpose. The header hides on
+            scroll down, so the strip is alone at the top while you read; on
+            the way back up the header slides over it, which is the right
+            loser. */}
+        <TabsList
+          aria-label={`${category.label} by what they do`}
+          className="sticky top-0 z-10 bg-background py-3"
+        >
           {blocks.map((block) => (
             <TabsTab key={block.slug} value={block.slug}>
               {block.label}

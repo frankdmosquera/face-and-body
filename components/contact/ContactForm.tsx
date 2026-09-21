@@ -42,6 +42,7 @@ type Props = {
 export function ContactForm({ topics, generalTopic, prefills }: Props) {
   const id = useId();
   const doneRef = useRef<HTMLHeadingElement>(null);
+  const alertRef = useRef<HTMLParagraphElement>(null);
   const [result, setResult] = useState<ContactResultType | null>(null);
   const {
     register,
@@ -52,7 +53,8 @@ export function ContactForm({ topics, generalTopic, prefills }: Props) {
     resolver: zodResolver(useMemo(() => makeContactSchema(topics), [topics])),
     defaultValues: {
       name: "",
-      contact: "",
+      email: "",
+      phone: "",
       company: "",
       topic: generalTopic,
       message: "",
@@ -74,8 +76,19 @@ export function ContactForm({ topics, generalTopic, prefills }: Props) {
   }, [setValue, prefills]);
 
   // Focus lands on the confirmation once it exists, so the change is announced.
+  //
+  // AND THE PAGE SCROLLS TO IT, which is the part that was missing. On a phone
+  // the Send button sits near the bottom of a tall card, so both answers -
+  // the confirmation that replaces the form, and the error that appears above
+  // the button - could land outside the viewport. You tapped Send, nothing
+  // appeared to move, and the only way to learn what happened was to scroll
+  // and go looking. `focus()` alone did not reliably bring it into view.
   useEffect(() => {
-    if (result?.success) doneRef.current?.focus();
+    if (!result) return;
+    const target = result.success ? doneRef.current : alertRef.current;
+    if (!target) return;
+    target.scrollIntoView({ behavior: "smooth", block: "center" });
+    if (result.success) doneRef.current?.focus();
   }, [result]);
 
   async function onSubmit(values: ContactValuesType) {
@@ -83,13 +96,15 @@ export function ContactForm({ topics, generalTopic, prefills }: Props) {
     setResult(await submitContactAction(values));
   }
 
+  // The confirmation takes the heading's place rather than appearing under it,
+  // so the card reads as one state at a time.
   if (result?.success) {
     return (
-      <div role="status" className="mt-6">
-        <h3 ref={doneRef} tabIndex={-1} className="text-[26px] outline-none">
+      <div role="status">
+        <h2 ref={doneRef} tabIndex={-1} className="text-[34px] outline-none">
           Sent. We reply within a day.
-        </h3>
-        <p className="mt-2 text-[14px] text-muted-foreground">
+        </h2>
+        <p className="mt-3 text-[15px] text-muted-foreground">
           If it is quicker, a text to {siteConfig.phone.display} reaches the
           same person.
         </p>
@@ -101,6 +116,8 @@ export function ContactForm({ topics, generalTopic, prefills }: Props) {
     errors[field] ? `${id}-${field}-error` : undefined;
 
   return (
+    <>
+    <h2 className="text-[34px]">Send a message</h2>
     <form noValidate onSubmit={handleSubmit(onSubmit)} className="mt-6">
       <div className="grid gap-4 lg:grid-cols-2">
         <div>
@@ -118,24 +135,46 @@ export function ContactForm({ topics, generalTopic, prefills }: Props) {
           />
           <FieldError id={`${id}-name-error`} message={errors.name?.message} />
         </div>
+        {/* Two fields, either one enough. The schema requires one of them and
+            pins the "we need one" message under Email, so a visitor who fills
+            neither is told once rather than twice. */}
         <div>
-          <Label htmlFor={`${id}-contact`} className={LABEL}>
-            Phone or email
+          <Label htmlFor={`${id}-email`} className={LABEL}>
+            Email
           </Label>
           <Input
-            id={`${id}-contact`}
-            autoComplete="tel email"
-            placeholder="How to reach you"
-            aria-invalid={errors.contact ? true : undefined}
-            aria-describedby={describe("contact")}
+            id={`${id}-email`}
+            type="email"
+            inputMode="email"
+            autoComplete="email"
+            placeholder="you@example.com"
+            aria-invalid={errors.email ? true : undefined}
+            aria-describedby={describe("email")}
             className={FIELD}
-            {...register("contact")}
+            {...register("email")}
           />
-          <FieldError
-            id={`${id}-contact-error`}
-            message={errors.contact?.message}
-          />
+          <FieldError id={`${id}-email-error`} message={errors.email?.message} />
         </div>
+      </div>
+      <div className="mt-4">
+        <Label htmlFor={`${id}-phone`} className={LABEL}>
+          Phone
+        </Label>
+        <Input
+          id={`${id}-phone`}
+          type="tel"
+          inputMode="tel"
+          autoComplete="tel"
+          placeholder="(587) 000-0000"
+          aria-invalid={errors.phone ? true : undefined}
+          aria-describedby={describe("phone")}
+          className={FIELD}
+          {...register("phone")}
+        />
+        <FieldError id={`${id}-phone-error`} message={errors.phone?.message} />
+        <p className="mt-1.5 text-[13px] text-muted-foreground">
+          Either one is enough. Both is quicker.
+        </p>
       </div>
       <div className="mt-4">
         <Label htmlFor={`${id}-topic`} className={LABEL}>
@@ -185,6 +224,7 @@ export function ContactForm({ topics, generalTopic, prefills }: Props) {
       </div>
       {result && !result.success && (
         <p
+          ref={alertRef}
           role="alert"
           className="mt-5 rounded-sm border border-destructive/40 bg-background px-4 py-3 text-[14px]"
         >
@@ -221,6 +261,7 @@ export function ContactForm({ topics, generalTopic, prefills }: Props) {
         </button>
       </div>
     </form>
+    </>
   );
 }
 
