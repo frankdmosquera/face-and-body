@@ -1,4 +1,5 @@
 import { ProductCard } from "@/components/products/ProductCard";
+import { ProductSort } from "@/components/products/ProductSort";
 import { GroupTabs } from "@/components/treatments/GroupTabs";
 import { TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs";
 import { productGroupsData } from "@/data/productsData";
@@ -31,8 +32,37 @@ export function ProductList() {
 
   return (
     <div data-group-stack>
+      {/* Above the sticky strip rather than inside it. Sort is a decision you
+          make once and then scroll, so it does not need to follow you down the
+          page, and the strip is already a horizontal scroller full of chips
+          with nowhere to put a second control that would not fight them. */}
+      <div className="mb-6 flex justify-end">
+        <ProductSort />
+      </div>
       <GroupTabs groupOf={groupOf} order={blocks.map((block) => block.slug)}>
-        <TabsList aria-label="Products by what they do">
+        {/* STICKY, AND ONLY HERE. The facials menu passes no className and is
+            untouched: 22 cards is one screen, so a bar pinned over them would
+            solve nothing and cost a strip of the page.
+
+            133 products is many screens, and a visitor three screens into
+            Hydrating and brightening has no way back to the other six groups
+            without scrolling up past everything they just read.
+
+            It needs no scroll listener. A sticky element only sticks inside
+            its own parent's box, and this one's parent is the Tabs root, which
+            ends with the last panel. So it pins through the cards and leaves
+            by itself the moment you are past them, which is the behaviour
+            without the machinery.
+
+            z-10 against the header's z-20, deliberately. The header hides on
+            scroll down, so while you are reading cards the strip is alone at
+            the top, which is the common case. Scrolling back up the header
+            slides in over it, and that is the right loser: the header is the
+            way out of the page and these chips are not. */}
+        <TabsList
+          aria-label="Products by what they do"
+          className="sticky top-0 z-10 bg-background py-3"
+        >
           {blocks.map((block) => (
             <TabsTab key={block.slug} value={block.slug}>
               {block.label}
