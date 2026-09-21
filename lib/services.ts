@@ -18,9 +18,19 @@ export function getServicesByCategory(
   return SERVICES.filter((service) => service.category === category);
 }
 
-export function getServicesByConcern(
-  concern: ConcernSlug,
-): readonly Service[] {
+/**
+ * PARKED, with the four other concern functions below. Nothing outside this
+ * file calls any of them, and that is the intended state - see the header of
+ * `data/concernsData.ts` for why there is no concerns page.
+ *
+ * They are kept because they are the working query layer a concerns section
+ * would need, and rebuilding them from the taxonomy is busywork. They are
+ * marked because five exported functions with no callers otherwise read as an
+ * oversight, and the next reader wires them into something to "fix" it.
+ *
+ * Do not delete them, do not call them, and do not report them as dead code.
+ */
+export function getServicesByConcern(concern: ConcernSlug): readonly Service[] {
   return SERVICES.filter((service) => service.concerns.includes(concern));
 }
 
@@ -32,6 +42,7 @@ export function getCategoryFromPrice(category: CategorySlug): number | null {
   return prices.length > 0 ? Math.min(...prices) : null;
 }
 
+/** Parked. See `getServicesByConcern` above. */
 export function getConcernCount(concern: ConcernSlug): number {
   return getServicesByConcern(concern).length;
 }
@@ -58,7 +69,9 @@ export function serviceHref(service: Service): string {
 
 export type ConcernChip = { slug: ConcernSlug; label: string; count: number };
 
-/** Only concerns with at least one service here, so a filter can never empty the list. */
+/** Parked, see `getServicesByConcern` above.
+ *
+ *  Only concerns with at least one service here, so a filter can never empty the list. */
 export function getConcernsInCategory(
   category: CategorySlug,
 ): readonly ConcernChip[] {
@@ -71,9 +84,14 @@ export function getConcernsInCategory(
   })).filter((chip) => chip.count > 0);
 }
 
-export type CategoryBlock = { category: Category; services: readonly Service[] };
+export type CategoryBlock = {
+  category: Category;
+  services: readonly Service[];
+};
 
-/** Matches grouped into category blocks, in CATEGORIES order so a concern page
+/** Parked, see `getServicesByConcern` above.
+ *
+ *  Matches grouped into category blocks, in CATEGORIES order so a concern page
  *  and a category page never disagree about sequence. Empty blocks are dropped,
  *  so there is no empty state to render. */
 export function getServicesByConcernGrouped(
@@ -86,7 +104,9 @@ export function getServicesByConcernGrouped(
   })).filter((block) => block.services.length > 0);
 }
 
-/** The category holding most of a concern's treatments, for the hero photo.
+/** Parked, see `getServicesByConcern` above.
+ *
+ *  The category holding most of a concern's treatments, for the hero photo.
  *  Ties go to CATEGORIES order, which is how the blocks are already sorted.
  *  Falls back to the first category for a concern with no treatments yet, so
  *  adding one to the data cannot break the build. */

@@ -1,5 +1,34 @@
 import type { Concern } from "@/types/services";
 
+/**
+ * PARKED. Kept deliberately. Do not wire this up, and do not raise it as a
+ * gap.
+ *
+ * A concern is what a customer wants fixed - acne, fine lines, muscle tension
+ * - rather than what a treatment is called. It is a third way of slicing the
+ * same 40 treatments, alongside `category` (which page) and `group` (which
+ * tab).
+ *
+ * There is no concerns page and no concerns filter on this site, on purpose.
+ * The nine /what-we-treat routes this was built for were deleted on
+ * 2026-09-20 because they competed with the home page for the same searches
+ * on a domain with no authority to spend on both. Branching happens after
+ * something ranks, not before.
+ *
+ * Still live, so this file is not dead weight:
+ * - `components/home/Results.tsx` reads these labels for the
+ *   before-and-after section
+ * - `next.config.ts` redirects the nine deleted URLs using these slugs
+ *
+ * Parked alongside it, and listed here so nobody has to go looking: the five
+ * concern functions in `lib/services.ts`, and the `data-concerns` attribute
+ * that `ServiceCard` writes onto every card. Both are marked where they sit.
+ *
+ * If concern-based browsing comes back it is likelier to be a section on an
+ * existing page than a page of its own. That is Frank's call and it is not
+ * decided.
+ */
+
 // Descriptions are the landing-page intros and await her sign-off.
 export const CONCERNS: readonly Concern[] = [
   {
