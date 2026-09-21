@@ -54,7 +54,14 @@ export type SiteConfigType = {
   subName: string;
   tagline: string;
   description: string;
-  phone: { display: string; tel: string; sms: string };
+  /**
+   * `whatsapp` is optional and its absence is meaningful: `ContactChannels`
+   * renders the WhatsApp button only when it is set, because a `wa.me` link
+   * to a number that is not registered lands the visitor on "this phone
+   * number is not on WhatsApp". Set it to
+   * `https://wa.me/15879693796` once the account is confirmed.
+   */
+  phone: { display: string; tel: string; sms: string; whatsapp?: string };
   email: string;
   address: {
     unit: string;
@@ -93,6 +100,7 @@ export const siteConfig: SiteConfigType = {
     display: "(587) 969-3796",
     tel: "tel:+15879693796",
     sms: "sms:+15879693796",
+    whatsapp: "https://wa.me/15879693796",
   },
   email: "faceandbodywellnesscentre@gmail.com",
   address: {

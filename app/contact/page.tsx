@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Directions } from "@/components/business/Directions";
 import { HoursTable } from "@/components/business/HoursTable";
 import { OpenNow } from "@/components/business/OpenNow";
+import { ContactChannels } from "@/components/contact/ContactChannels";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { PricingEnquiry } from "@/components/contact/PricingEnquiry";
 import { Container } from "@/components/layout/Container";
@@ -11,8 +12,6 @@ import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import { Watermark } from "@/components/layout/Watermark";
-import { Photo } from "@/components/media/Photo";
-import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/data/siteConfig";
 import {
   buildPrefills,
@@ -57,10 +56,32 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   const { address, phone, consultation } = siteConfig;
 
+  /* Data, not three near-identical list items. Written out as markup, a
+     change to the wording lands on two of the three and nobody notices the
+     one that was missed. */
+  const STEPS = [
+    "Tell us what you are hoping to change.",
+    `We look at your skin in person, ${consultation.durationMin} minutes, free, no commitment.`,
+    "You leave with a plan and real prices, in writing.",
+  ];
+
   return (
     <>
+      {/* ONE PLACE TO REACH US, NOT FOUR. The page carried the same two
+          actions in four separate blocks: buttons in the hero, a number and a
+          heading in a band of its own, icons under the form, and icons again
+          beside the map. Ten generic text, call and WhatsApp links on one
+          page. Offered four times, an action reads as four different
+          offers rather than one, and the visitor stops to work out which is
+          which.
+
+          So the band went, and what was worth keeping came up here. The form
+          takes the photograph's place: on the one page whose job is being
+          contactable, a form above the fold beats a picture, and the page is
+          not left without one because the pricing section below carries its
+          own. */}
       <section className="relative overflow-hidden">
-        <Container className="relative grid gap-8 py-10 lg:grid-cols-[1.1fr_1fr] lg:items-center lg:gap-[72px] lg:py-[72px]">
+        <Container className="relative grid gap-10 py-10 lg:grid-cols-[1fr_1.05fr] lg:items-start lg:gap-[72px] lg:py-[72px]">
           <Watermark className="-top-[140px] -left-[180px]" />
           <div className="relative">
             <nav
@@ -78,91 +99,24 @@ export default function ContactPage() {
               Start with a look at your skin.
             </h1>
             <Lede>{LEDE}</Lede>
-            {/* THE ACTION LIVES IN THE HERO, and on this page of all pages it
-                has to. A visitor who has already decided should not have to
-                read anything first; one who has not decided scrolls on to
-                What happens next and the form, which is the order they want
-                it in anyway. The buttons do not repeat lower down, because
-                the number below is itself the text link and two identical
-                pairs inside one screen reads as a mistake rather than a
-                reminder. */}
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a
-                href={smsLink("Hi! I'd like to ask about ")}
-                className={buttonVariants()}
-              >
-                Send a text
-              </a>
-              <a
-                href={phone.tel}
-                className={buttonVariants({ variant: "outline" })}
-              >
-                Call instead
-              </a>
-            </div>
-          </div>
-          {/* The ratio follows the layout. 4:5 is right only when the photo sits
-              beside the text, which starts at lg. Below that it is a single
-              column, so a 4:5 image is as wide as the page: at 834px it
-              rendered 779x974, 97% of an iPad screen, and you scrolled a
-              full viewport of photograph before reaching a word. Landscape
-              on phones and tablets, portrait only when there is a column
-              next to it. */}
-          <div className="relative aspect-[4/3] overflow-hidden rounded-lg md:aspect-[2/1] lg:aspect-auto lg:h-[min(72vh,620px)]">
-            <Photo
-              slot="consultation"
-              fill
-              priority
-              sizes="(min-width: 1024px) 45vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-        </Container>
-      </section>
-
-      <Section tone="sand" className="pt-10 lg:pt-14">
-        <Container className="grid gap-12 lg:grid-cols-[1fr_1.15fr] lg:items-start lg:gap-16">
-          <div>
-            <Eyebrow>Reach us</Eyebrow>
-            <h2 className="mt-4">Text, call or write</h2>
+            {/* The number is the display and the link; the icons under it are
+                the three ways to use it. No label above them, because the
+                number they belong to is directly above and a heading would be
+                the page explaining itself again. */}
             <a
               href={smsLink("Hi! I'd like to ask about ")}
-              className="mt-7 block font-serif text-[34px] leading-none hover:text-accent-foreground lg:text-[40px]"
+              className="mt-9 block font-serif text-[34px] leading-none hover:text-accent-foreground lg:text-[40px]"
             >
               {phone.display}
             </a>
-            {/* One line, and it is the only thing the old paragraph was
-                actually for. What a visitor needs is the expectation, not the
-                reasoning behind it. Same claim the form already makes below,
-                so the two cannot contradict each other. */}
-            <p className="mt-5 text-[13px] text-muted-foreground">
+            <ContactChannels label={null} className="mt-5" />
+            <p className="mt-6 text-[13px] text-muted-foreground">
               We reply within a day.
             </p>
-            {/* The persuasion, and the reason the page no longer needs to
-                argue for a channel. It answers the only question someone
-                hesitating actually has, which is what they are signing up
-                for. Every line of it was already true and already on the
-                site, just scattered across three other pages. */}
-            <Eyebrow className="mt-10">What happens next</Eyebrow>
-            <ol className="mt-4 space-y-3 text-[15px] leading-relaxed text-muted-foreground">
-              <li className="flex gap-3.5">
-                <span className="font-serif text-copper">1</span>
-                Tell us what you are hoping to change.
-              </li>
-              <li className="flex gap-3.5">
-                <span className="font-serif text-copper">2</span>
-                We look at your skin in person, {consultation.durationMin}{" "}
-                minutes, free, no commitment.
-              </li>
-              <li className="flex gap-3.5">
-                <span className="font-serif text-copper">3</span>
-                You leave with a plan and real prices, in writing.
-              </li>
-            </ol>
-            {/* Jumps down the page now rather than across to /hours. */}
+            {/* Jumps down the page rather than across to the old /hours. */}
             <a
               href="#hours"
-              className="mt-7 inline-block border-b border-copper pb-0.5 text-xs tracking-[0.06em] uppercase"
+              className="mt-8 inline-block border-b border-copper pb-0.5 text-xs tracking-[0.06em] uppercase"
             >
               Hours and location &darr;
             </a>
@@ -171,17 +125,41 @@ export default function ContactPage() {
             id="form"
             className="scroll-mt-24 rounded-lg border border-border bg-card p-7 lg:p-11"
           >
-            <Eyebrow>Or write it out</Eyebrow>
-            <h2 className="mt-3 text-[34px]">Send a message</h2>
-            <p className="mt-2.5 text-[14px] text-muted-foreground">
-              Useful when your question needs more than a line.
-            </p>
+            {/* The heading, and nothing else. It used to carry an eyebrow
+                reading "Or write it out", the heading, and a line explaining
+                that a form is useful when a question needs more than a line:
+                three pieces of text to introduce a box with labelled fields
+                and a Send button. */}
+            <h2 className="text-[34px]">Send a message</h2>
             <ContactForm
               topics={CONTACT_TOPICS}
               generalTopic={GENERAL_TOPIC}
               prefills={buildPrefills()}
             />
           </div>
+        </Container>
+      </section>
+
+      {/* A band of its own now rather than a column beside the form, and
+          three across rather than stacked. It answers the only question
+          someone hesitating actually has, which is what they are signing up
+          for, and every line of it was already true and already on the site,
+          just scattered across three other pages. */}
+      <Section tone="sand">
+        <Container>
+          <Eyebrow>What happens next</Eyebrow>
+          <ol className="mt-7 grid gap-8 md:grid-cols-3 md:gap-10">
+            {STEPS.map((step, index) => (
+              <li key={step} className="border-t border-border pt-5">
+                <span className="block font-serif text-[26px] text-copper">
+                  {index + 1}
+                </span>
+                <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
+                  {step}
+                </p>
+              </li>
+            ))}
+          </ol>
         </Container>
       </Section>
 
