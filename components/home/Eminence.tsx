@@ -4,6 +4,7 @@ import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import Image from "next/image";
 import Link from "next/link";
+import { buttonVariants } from "@/components/ui/button";
 
 /**
  * A cleanser, a serum and a moisturiser, in that order, because three named
@@ -75,7 +76,23 @@ export function Eminence() {
             Every facial uses Eminence Organics, the Hungarian skincare line
             built on organic, biodynamic ingredients. It&apos;s the brand behind
             our Detoxifying, Revitalizing and Fire and Ice facials, and you can
-            take it home from the clinic.
+            take it home from the{" "}
+            {/* Two words, not the whole phrase. Linking "take it home from the
+                clinic" wrapped across two lines at most widths and broke the
+                underline mid-sentence; two short words survive any wrap.
+
+                It stays even though the button below goes to the same place.
+                They are not the same reader: this one is following the
+                sentence and finds the route inside it, the button is for
+                someone who has already decided and is scanning for the way
+                through. */}
+            <Link
+              href="/products"
+              className="border-b border-copper pb-0.5 text-foreground hover:text-accent-foreground"
+            >
+              clinic shelf
+            </Link>
+            .
           </Lede>
         </div>
         <ul className="mt-12 grid gap-5 sm:grid-cols-3 lg:mt-14 lg:gap-8">
@@ -133,15 +150,27 @@ export function Eminence() {
             </li>
           ))}
         </ul>
-        {/* The cards carry people who click pictures. This carries everyone
-            else, and it is the line that answers "so where do I get it" -
-            which the band asserted and never resolved. */}
-        <Link
-          href="/products"
-          className="mt-10 inline-block border-b border-copper pb-0.5 text-xs tracking-[0.08em] uppercase hover:text-accent-foreground"
-        >
-          See what we stock &rarr;
-        </Link>
+        {/* A BUTTON, MATCHING `Consultation` FURTHER DOWN THE PAGE, and it
+            sits alongside the link in the lede rather than instead of it. An
+            earlier "See what we stock" line was dropped because it repeated
+            the lede in weaker words; this does not repeat anything, it just
+            gives the decided visitor something obvious to aim at. The cards
+            are links too, so the section has four routes out and no reader
+            has to hunt.
+
+            Outlined rather than solid. The hero's Book a treatment and the
+            consultation band's Book a consultation are both solid copper, and
+            three solid slabs down one page means none of them is the loud
+            one. Buying products is the smaller intent here; booking is the
+            page's job. */}
+        <div className="mt-10 lg:mt-12">
+          <Link
+            href="/products"
+            className={buttonVariants({ variant: "outline" })}
+          >
+            See the full range
+          </Link>
+        </div>
       </Container>
     </Section>
   );
