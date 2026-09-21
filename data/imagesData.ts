@@ -6,12 +6,34 @@
 // by changing its path. Stock is Pexels and Unsplash, sized here at the crop
 // requested at download.
 export const imagesData = {
+  // A PEXELS STAND-IN, UPLOADED 2026-09-21, AND IT IS NOT MEANT TO LAST.
+  //
+  // Frank's pick out of a shortlist of ten, itself filtered from twenty.
+  // The brief he held to throughout, and the reason this one won: the
+  // product has to be visibly ON the face. Every prettier frame in the set
+  // was hands and nothing else, which sells calm rather than treatment.
+  //
+  // Watch the red bandana at her jaw. It is the most saturated object in the
+  // frame and it is near enough the copper to argue with it rather than
+  // match it.
+  //
+  // What it replaced: /hero-led.jpg, her own photograph, still in the
+  // library. That file is a 480x640 Instagram download and the hero column is
+  // about 805px wide on a desktop, so it was being upscaled 1.7x, and more
+  // than 3x on a retina screen.
+  //
+  // THE REAL FIX IS STILL HER PHOTOGRAPHS. This is a stranger in somebody
+  // else's spa, and the better it looks the worse the gap when a visitor
+  // walks into the actual clinic. The moment her camera-roll originals
+  // arrive, this slot goes back to being hers and this file can go.
+  //
+  // No MEDIA_VERSION bump: new filename, new URL, nothing cached to beat.
   hero: {
-    path: "/hero-led.jpg",
-    alt: "The aesthetician working an LED light device over a client's face",
-    source: "instagram post-04",
-    w: 480,
-    h: 640,
+    path: "/hero-mask-warm.jpg",
+    alt: "An aesthetician's hands smoothing a treatment mask across a client's face, in warm daylight",
+    source: "pexels 5240820",
+    w: 2400,
+    h: 3595,
   },
   catFacial: {
     path: "/cat-facial.jpg",
@@ -62,26 +84,53 @@ export const imagesData = {
     w: 480,
     h: 640,
   },
+  // THE EMINENCE BAND'S THREE PICTURES, AND WHY NONE OF THEM IS A PRODUCT
+  // YOU CAN NAME.
+  //
+  // What was here until 2026-09-21 was a woman applying lipstick, a man
+  // reaching for hair conditioner, and an orchid, under a heading that says
+  // "Authorised Eminence Organics stockist". The alt text described a shelf,
+  // a cream jar and botanical ingredients - three photographs that were
+  // never at those paths.
+  //
+  // Replacing them turned up a structural problem worth writing down, because
+  // it will come back: **you cannot illustrate "we stock brand X" with stock
+  // photography.** Every good product shot carries a real label. The search
+  // returned a Wella and DSD hair shelf with rouble price tags, a Cyrillic
+  // AHA serum line, a zero-waste refill shop selling shower gel, and an
+  // entire miSolo Cosmetics catalogue. A rival's brand name under that
+  // heading is worse than the orchid: the orchid is merely irrelevant, a
+  // competitor's jar contradicts the sentence above it.
+  //
+  // So all three are from one unbranded shoot - amber glass with BLANK
+  // labels, dried botanicals, warm grounds that sit on the cream. They claim
+  // nothing they cannot back up. One photographer and one styling across all
+  // three, so the cluster reads as chosen rather than assembled.
+  //
+  // THIS IS STILL A PATCH. The band names a specific line and shows none of
+  // it. The real version is her own Eminence shelf plus the product shots
+  // from the stockist portal she has a login for, and that ask is
+  // outstanding. When it lands, these three go.
   eminenceWide: {
-    path: "/eminence-1.jpg",
-    alt: "Skincare products arranged on a shelf",
-    source: "pexels 4482931",
-    w: 1600,
-    h: 800,
+    path: "/products-wide.jpg",
+    alt: "A dropper bottle of serum laid among dried botanicals",
+    source: "pexels 7797450",
+    w: 2000,
+    h: 1333,
   },
   eminenceA: {
-    path: "/eminence-2.jpg",
-    alt: "A jar of organic skincare cream",
-    source: "pexels 7440140",
-    w: 1000,
-    h: 1000,
+    path: "/products-bottles.jpg",
+    alt: "Three amber glass skincare bottles arranged with dried flowers",
+    source: "pexels 7797440",
+    w: 2000,
+    h: 3000,
   },
   eminenceB: {
-    path: "/eminence-3.jpg",
-    alt: "Botanical skincare ingredients",
-    source: "pexels 21528800",
-    w: 1000,
-    h: 1000,
+    path: "/products-serum.jpg",
+    alt: "An amber serum bottle surrounded by dried white botanicals",
+    source: "pexels 7797527",
+    w: 2000,
+    h: 3000,
   },
   consultation: {
     path: "/consultation.jpg",

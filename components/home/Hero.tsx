@@ -17,6 +17,13 @@ export function Hero() {
   // that. Capped, it stays 86vh on a laptop and stops growing once the screen
   // is tall enough for that to be too much.
   //
+  // Trimmed 2rem on 2026-09-21: the cap from 780 to 748 and the tall-screen
+  // padding from 96px a side to 80px. Both, because they were within 3px of
+  // each other - the column measures 585px of copy plus its padding, so the
+  // floor and the content took turns setting the height and moving one alone
+  // moved nothing. It reads tall on a large desktop and fine on a phone,
+  // which is the screen the untouched mobile padding serves.
+  //
   // WIDTH. A `1fr` image column kept taking half the viewport however wide it
   // got: 929px at 1920 and 1249px at 2560, from a 426x568 file, which is a
   // 2.18x upscale and then a 2.93x one. It read as oversized and soft for the
@@ -28,7 +35,7 @@ export function Hero() {
   // The real fix is a bigger photograph. This keeps the upscale at 1.46x until
   // one arrives.
   return (
-    <section className="relative grid overflow-hidden lg:min-h-[min(86vh,780px)] lg:grid-cols-[1.05fr_1fr] xl:grid-cols-[1fr_620px]">
+    <section className="relative grid overflow-hidden lg:min-h-[min(86vh,748px)] lg:grid-cols-[1.05fr_1fr] xl:grid-cols-[1fr_620px]">
       {/* Queried on height, not width, the same reason the sheet footer is.
           `min-h` is a floor, and below about 905px of viewport it never binds:
           the hero is whatever this column measures, which is 585px of copy
@@ -37,7 +44,7 @@ export function Hero() {
           trust strip entirely. 64px under 850px tall brings it to 713 and the
           strip peeks there too. Above 850 nothing changes, which is where it
           already lands right. */}
-      <div className="relative flex flex-col justify-center px-gutter-sm py-14 lg:py-16 lg:pr-gutter lg:pl-[max(var(--spacing-gutter),calc((100vw-var(--container-site))/2+var(--spacing-gutter)))] lg:[@media(min-height:850px)]:py-24">
+      <div className="relative flex flex-col justify-center px-gutter-sm py-14 lg:py-16 lg:pr-gutter lg:pl-[max(var(--spacing-gutter),calc((100vw-var(--container-site))/2+var(--spacing-gutter)))] lg:[@media(min-height:850px)]:py-20">
         <Watermark className="-top-[60px] -left-[140px]" />
         <div className="relative">
           <Eyebrow>Medical aesthetics &middot; Midnapore, Calgary SE</Eyebrow>
@@ -69,10 +76,6 @@ export function Hero() {
               <b className="font-medium text-foreground">{rating.value}</b> on{" "}
               {rating.source}, {rating.count} reviews
             </span>
-            <span>
-              Licensed since{" "}
-              <b className="font-medium text-foreground">{siteConfig.founded}</b>
-            </span>
           </div>
         </div>
       </div>
@@ -87,7 +90,15 @@ export function Hero() {
           fill
           priority
           sizes="(min-width: 1024px) 50vw, 100vw"
-          className="object-cover"
+          /* Crop off the TOP on desktop, not the bottom. The column is 620x748
+             and the photograph covers to 620x928, so 180px has to go
+             somewhere; centred, it took 90 off each end and cut her shoulder.
+             At 88% the window sits low - 158px comes off the top, 22 off the
+             bottom - and the shoulder stays in.
+
+             Desktop only. The mobile box is 4:3, where the same rule would
+             crop 280px off the top and leave a pillow where her face was. */
+          className="object-cover object-center lg:object-[50%_88%]"
         />
         <div className="absolute right-5 bottom-5 z-10 flex items-center gap-3.5 rounded-sm bg-card px-[18px] py-3.5 shadow-[0_12px_40px_rgba(28,26,23,0.12)] lg:right-8 lg:bottom-8">
           <Orchid className="h-8 w-[30px] shrink-0 text-copper" />
