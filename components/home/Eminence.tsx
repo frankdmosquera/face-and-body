@@ -2,8 +2,8 @@ import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
-import { Photo } from "@/components/media/Photo";
-import type { ImageSlotType } from "@/data/imagesData";
+import Image from "next/image";
+import Link from "next/link";
 
 /**
  * A cleanser, a serum and a moisturiser, in that order, because three named
@@ -15,19 +15,26 @@ import type { ImageSlotType } from "@/data/imagesData";
  * on the home page is a design decision about this band, not a fact about the
  * product.
  */
-const PICKS: readonly { slot: ImageSlotType; name: string; role: string }[] = [
-  { slot: "eminenceGelWash", name: "Stone Crop Gel Wash", role: "Cleanse" },
+const PICKS = [
   {
-    slot: "eminenceSerum",
+    src: "/eminence-gel-wash.jpg",
+    name: "Stone Crop Gel Wash",
+    role: "Cleanse",
+    alt: "Eminence Stone Crop Gel Wash, a tall olive green bottle with a botanical print label",
+  },
+  {
+    src: "/eminence-serum.jpg",
     name: "Bright Skin Licorice Root Booster-Serum",
     role: "Treat",
+    alt: "Eminence Bright Skin Licorice Root Booster-Serum in an amber glass dropper bottle",
   },
   {
-    slot: "eminenceMoisturizer",
+    src: "/eminence-moisturizer.jpg",
     name: "Stone Crop Whip Moisturizer",
     role: "Hydrate",
+    alt: "Eminence Stone Crop Whip Moisturizer in a squat pale green glass jar",
   },
-];
+] as const;
 
 /**
  * THE STOCKIST BAND, SHOWING THE STOCK.
@@ -73,8 +80,15 @@ export function Eminence() {
         </div>
         <ul className="mt-12 grid gap-5 sm:grid-cols-3 lg:mt-14 lg:gap-8">
           {PICKS.map((pick) => (
-            <li
-              key={pick.slot}
+            <li key={pick.src} className="contents">
+              {/* THE CARD IS THE LINK, and until now nothing here was. The
+                  band claimed a brand, showed its products and gave the
+                  visitor nowhere to go; the only route to /products was the
+                  header menu. A product on a page is the thing people try to
+                  click, so it is the link, and `Categories` on this same page
+                  already works exactly this way. */}
+              <Link
+                href="/products"
               /* WHITE, NOT `bg-card`, AND FIXED IN BOTH THEMES. Measured:
                   `bg-card` is rgb(255,253,249) and the packshot background is
                   pure rgb(255,255,255). Six points apart is nothing as a
@@ -88,36 +102,46 @@ export function Eminence() {
                   a surface that flips with the theme cannot hold it. That
                   means the text colour has to be pinned too, or dark mode
                   would put near-white type on a white card. */
-              className="flex flex-col rounded-lg border border-border bg-white p-6 text-center text-dark lg:p-8"
-            >
-              {/* THE WELL MATCHES THE ASSET, 4:3 against 1500x1125. It was a
-                  square, which letterboxed every photograph and left about
-                  12% of the card empty above and below the product for no
-                  reason. Matching the ratio means `object-contain` has
-                  nothing to pad, so the product is as large as the card can
-                  make it without cropping. Re-measure this if the shots are
-                  ever reshot at another ratio. */}
-              <div className="relative aspect-[4/3]">
-                <Photo
-                  slot={pick.slot}
-                  fill
-                  sizes="(min-width: 640px) 30vw, 80vw"
-                  className="object-contain"
-                />
-              </div>
-              <span className="mt-5 block text-[11px] tracking-[0.14em] text-copper uppercase">
-                {pick.role}
-              </span>
-              {/* Nothing pins this to the floor, and it does not need it:
-                  grid items stretch, so the two-line name on the serum sets
-                  the height and all three cards take it. Measured at 455px
-                  each on a 1280 screen. */}
-              <h3 className="mt-2 font-serif text-[19px] leading-snug">
-                {pick.name}
-              </h3>
+                className="group flex flex-col rounded-lg border border-border bg-white p-6 text-center text-dark transition-transform duration-200 hover:-translate-y-0.5 lg:p-8"
+              >
+                {/* THE WELL MATCHES THE ASSET, 4:3 against 1500x1125. It was
+                    a square, which letterboxed every photograph and left about
+                    12% of the card empty above and below the product for no
+                    reason. Matching the ratio means `object-contain` has
+                    nothing to pad, so the product is as large as the card can
+                    make it without cropping. Re-measure this if the shots are
+                    ever reshot at another ratio. */}
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={pick.src}
+                    alt={pick.alt}
+                    fill
+                    sizes="(min-width: 640px) 30vw, 80vw"
+                    className="object-contain"
+                  />
+                </div>
+                <span className="mt-5 block text-[11px] tracking-[0.14em] text-copper uppercase">
+                  {pick.role}
+                </span>
+                {/* Nothing pins this to the floor, and it does not need it:
+                    grid items stretch, so the two-line name on the serum sets
+                    the height and all three cards take it. */}
+                <h3 className="mt-2 font-serif text-[19px] leading-snug group-hover:text-accent-foreground">
+                  {pick.name}
+                </h3>
+              </Link>
             </li>
           ))}
         </ul>
+        {/* The cards carry people who click pictures. This carries everyone
+            else, and it is the line that answers "so where do I get it" -
+            which the band asserted and never resolved. */}
+        <Link
+          href="/products"
+          className="mt-10 inline-block border-b border-copper pb-0.5 text-xs tracking-[0.08em] uppercase hover:text-accent-foreground"
+        >
+          See what we stock &rarr;
+        </Link>
       </Container>
     </Section>
   );

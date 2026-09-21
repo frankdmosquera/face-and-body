@@ -84,62 +84,43 @@ export const imagesData = {
     w: 480,
     h: 640,
   },
-  // THE EMINENCE BAND'S THREE PICTURES, AND WHY THEY ARE NAMED PRODUCTS NOW.
+  // The Eminence band's three product shots are NOT here, and that is
+  // deliberate. They are `/eminence-gel-wash.jpg`, `/eminence-serum.jpg` and
+  // `/eminence-moisturizer.jpg` in `public/`, rendered by `next/image`
+  // straight from `Eminence.tsx` and `app/products/page.tsx`.
   //
-  // What was here until 2026-09-21 was a woman applying lipstick, a man
-  // reaching for hair conditioner, and an orchid, under a heading that says
-  // "Authorised Eminence Organics stockist". Those were replaced the same day
-  // with three unbranded amber-glass stock shots: honest, atmospheric, and
-  // still illustrating a specific brand claim with pictures of nothing.
+  // WHY THEY BROKE THE RULE. Everything else on this site lives in ImageKit
+  // and this manifest is how it gets addressed, which is right for
+  // photographs: they are large, they need resizing per breakpoint, and they
+  // change without a deploy. These three are none of that. They are 55-80KB
+  // catalogue packshots that only change when the product line does, and
+  // routing them through ImageKit meant the band showed nothing at all until
+  // somebody remembered to upload three files by hand.
   //
-  // The structural problem that forced the stock shots is worth keeping,
-  // because it explains why this is the right fix rather than a fourth
-  // attempt: **you cannot illustrate "we stock brand X" with stock
-  // photography.** Every good product shot carries a real label, and the
-  // search turned up a Wella and DSD hair shelf with rouble price tags, a
-  // Cyrillic AHA serum line, a zero-waste refill shop and an entire rival
-  // cosmetics catalogue. A competitor's jar under that heading contradicts
-  // the sentence above it.
+  // `public/logo-mark.jpg` is the same exception for the same reason, so this
+  // is the second instance of a rule rather than a one-off: small, fixed
+  // artwork that must be on screen the moment the page renders goes in
+  // `public/`. Anything that is a photograph still goes to ImageKit.
+  // REPOINTED 2026-09-21, AND THE OLD FILE IS NOT COMING BACK.
   //
-  // So the answer was never a better stock photograph. It was real product
-  // shots, which now exist: 193 of them, collected 2026-09-21, one per
-  // product, mirroring `data/products/`.
+  // `/consultation.jpg` was a photograph of eyelash extensions being applied
+  // with tweezers. She does not offer lash work, so the one image attached to
+  // "Book a free consultation" advertised a service that does not exist, and
+  // the alt text called it "A skin consultation in progress", which described
+  // a photograph that was never at that path. Wrong twice over.
   //
-  // WHY THESE THREE. A cleanser, a serum and a moisturiser, which is a
-  // routine rather than three jars. Three different silhouettes and three
-  // different colours, so the row does not read as one bottle photographed
-  // three times. Two are Stone Crop, Eminence's best known line, and the
-  // third is Bright Skin.
+  // This points at `/concern-dull-dehydrated.jpg` instead: a mask being
+  // worked across a client's face in gloved hands, which is the treatment the
+  // consultation leads to. It was uploaded for the concern pages that were
+  // deleted on 2026-09-20, so it was already paid for and already unused -
+  // nothing else reads any `concern*` slot.
   //
-  // ⚠️ SOURCE. These came from eminenceorganics.com, not from the Spa Partner
-  // portal she has a login for. For an authorised stockist showing the brand
-  // it stocks that is ordinary use, but the portal is the correct source and
-  // that ask is still outstanding. Swap the files, keep the paths.
-  eminenceGelWash: {
-    path: "/eminence-gel-wash.jpg",
-    alt: "Eminence Stone Crop Gel Wash, a tall olive green bottle with a botanical print label",
-    source: "eminenceorganics.com",
-    w: 1500,
-    h: 1125,
-  },
-  eminenceSerum: {
-    path: "/eminence-serum.jpg",
-    alt: "Eminence Bright Skin Licorice Root Booster-Serum in an amber glass dropper bottle",
-    source: "eminenceorganics.com",
-    w: 1500,
-    h: 1125,
-  },
-  eminenceMoisturizer: {
-    path: "/eminence-moisturizer.jpg",
-    alt: "Eminence Stone Crop Whip Moisturizer in a squat pale green glass jar",
-    source: "eminenceorganics.com",
-    w: 1500,
-    h: 1125,
-  },
+  // The slot keeps its name because the name describes the job it does on the
+  // page, not the file behind it. Replace the file, keep the slot.
   consultation: {
-    path: "/consultation.jpg",
-    alt: "A skin consultation in progress",
-    source: "pexels 6135650",
+    path: "/concern-dull-dehydrated.jpg",
+    alt: "An aesthetician working a treatment mask across a client's face in gloved hands",
+    source: "pexels, via the deleted concern pages",
     w: 1600,
     h: 1280,
   },
