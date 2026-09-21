@@ -19,7 +19,7 @@ import {
   CONTACT_TOPICS,
   GENERAL_TOPIC,
   smsLink,
-} from "@/lib/contact";
+} from "@/lib/contactPrefills";
 
 const LEDE =
   "We're usually mid-treatment, so a text gets answered properly rather than a call going to voicemail. Ask anything: which treatment suits your skin, what something costs, whether you're a candidate.";

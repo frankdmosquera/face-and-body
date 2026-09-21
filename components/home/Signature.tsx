@@ -5,7 +5,7 @@ import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import { Photo } from "@/components/media/Photo";
 import { buttonVariants } from "@/components/ui/button";
-import { getService, serviceHref } from "@/lib/services";
+import { getService, serviceHref } from "@/lib/serviceQueries";
 
 const SLUGS = [
   "microneedling-face",

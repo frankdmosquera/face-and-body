@@ -1,6 +1,6 @@
 import { Image } from "@imagekit/next";
 import { IMAGES, type ImageSlot } from "@/data/imagesData";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 
 /**
  * The media library folder for this project. It lives here rather than inside

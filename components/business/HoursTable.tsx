@@ -1,6 +1,6 @@
 import { siteConfig } from "@/data/siteConfig";
 import { dayLabel, formatHours } from "@/lib/hours";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 
 export function HoursTable({ className }: { className?: string }) {
   return (

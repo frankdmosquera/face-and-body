@@ -7,7 +7,7 @@ import { Photo } from "@/components/media/Photo";
 import { buttonVariants } from "@/components/ui/button";
 import { CATEGORIES } from "@/data/categoriesData";
 import { siteConfig } from "@/data/siteConfig";
-import { getUnpricedServices, pricingMessage, smsLink } from "@/lib/contact";
+import { getUnpricedServices, pricingMessage, smsLink } from "@/lib/contactPrefills";
 
 export function PricingEnquiry() {
   const services = getUnpricedServices();

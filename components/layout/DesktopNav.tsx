@@ -17,7 +17,7 @@ import {
   type NavItem,
   type NavSection,
 } from "@/data/siteConfig";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 
 const TOP_LINK =
   "h-auto rounded-none border-b border-transparent bg-transparent px-0 py-1.5 text-[13px] font-normal tracking-[0.06em] uppercase transition-colors hover:border-copper hover:bg-transparent focus:bg-transparent focus-visible:ring-0 focus-visible:border-copper";

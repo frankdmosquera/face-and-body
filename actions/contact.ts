@@ -2,8 +2,8 @@
 
 import { Resend } from "resend";
 import { siteConfig } from "@/data/siteConfig";
-import { CONTACT_TOPICS } from "@/lib/contact";
-import { makeContactSchema, isEmail, type ContactValues } from "@/lib/contactSchema";
+import { CONTACT_TOPICS } from "@/lib/contactPrefills";
+import { makeContactSchema, isEmail, type ContactValues } from "@/lib/contactValidation";
 
 export type ContactResult = { success: true } | { success: false; error: string };
 

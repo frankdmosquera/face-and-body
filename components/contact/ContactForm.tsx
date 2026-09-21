@@ -11,9 +11,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { siteConfig } from "@/data/siteConfig";
-import type { ContactPrefill } from "@/lib/contact";
-import { makeContactSchema, type ContactValues } from "@/lib/contactSchema";
-import { cn } from "@/lib/utils";
+import type { ContactPrefill } from "@/lib/contactPrefills";
+import { makeContactSchema, type ContactValues } from "@/lib/contactValidation";
+import { cn } from "@/lib/cn";
 
 const FIELD =
   "h-auto w-full rounded-sm border-border bg-background px-4 py-3 text-[15px] shadow-none focus-visible:border-copper focus-visible:ring-0 aria-invalid:border-destructive";

@@ -5,7 +5,7 @@ import { Section } from "@/components/layout/Section";
 import { Photo } from "@/components/media/Photo";
 import { CATEGORIES, categoryHref } from "@/data/categoriesData";
 import type { ImageSlot } from "@/data/imagesData";
-import { getCategoryFromPrice, getServicesByCategory } from "@/lib/services";
+import { getCategoryFromPrice, getServicesByCategory } from "@/lib/serviceQueries";
 import type { CategorySlug } from "@/types/servicesTypes";
 
 const PHOTO: Record<CategorySlug, ImageSlot> = {

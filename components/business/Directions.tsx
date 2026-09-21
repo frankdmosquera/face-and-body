@@ -1,6 +1,6 @@
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/data/siteConfig";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 
 const { address, geo, phone } = siteConfig;
 

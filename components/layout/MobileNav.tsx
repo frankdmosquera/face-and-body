@@ -24,7 +24,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { isNavGroup, siteConfig, type NavItem } from "@/data/siteConfig";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/cn";
 
 const ROW =
   "flex w-full items-center justify-between border-b border-border py-3.5 font-sans text-[15px] tracking-[0.06em] uppercase";

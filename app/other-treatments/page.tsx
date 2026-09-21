@@ -10,7 +10,7 @@ import { ServiceList } from "@/components/treatments/ServiceList";
 import { buttonVariants } from "@/components/ui/button";
 import { CATEGORIES } from "@/data/categoriesData";
 import { siteConfig } from "@/data/siteConfig";
-import { getServicesByCategory } from "@/lib/services";
+import { getServicesByCategory } from "@/lib/serviceQueries";
 
 /**
  * Everything that is not a facial, on one page.

@@ -4,7 +4,7 @@ import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import { ServiceList } from "@/components/treatments/ServiceList";
 import { CATEGORIES } from "@/data/categoriesData";
-import { getServicesByCategory } from "@/lib/services";
+import { getServicesByCategory } from "@/lib/serviceQueries";
 import type { Category } from "@/types/servicesTypes";
 
 /**
