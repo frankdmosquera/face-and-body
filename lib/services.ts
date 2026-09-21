@@ -6,7 +6,7 @@ import type {
   CategorySlug,
   ConcernSlug,
   Service,
-} from "@/types/services";
+} from "@/types/servicesTypes";
 
 export function getService(slug: string): Service | undefined {
   return SERVICES.find((service) => service.slug === slug);

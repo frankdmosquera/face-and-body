@@ -1,5 +1,5 @@
 import type { ImageSlot } from "@/data/imagesData";
-import type { ConcernSlug } from "@/types/services";
+import type { ConcernSlug } from "@/types/servicesTypes";
 
 export type Result = {
   /** one image that already contains before and after */

@@ -1,6 +1,6 @@
 import { siteConfig } from "@/data/siteConfig";
 import { SERVICES } from "@/data/servicesData";
-import type { Service } from "@/types/services";
+import type { Service } from "@/types/servicesTypes";
 
 /** `?&body=` is the one form that opens a prefilled text on both iOS and Android. */
 export function smsLink(message: string): string {

@@ -5,7 +5,7 @@ import { Section } from "@/components/layout/Section";
 import { ServiceList } from "@/components/treatments/ServiceList";
 import { CATEGORIES } from "@/data/categoriesData";
 import { getServicesByCategory } from "@/lib/services";
-import type { Category } from "@/types/services";
+import type { Category } from "@/types/servicesTypes";
 
 /**
  * The full facial menu, on the home page rather than behind a link.

@@ -1,4 +1,4 @@
-import type { Concern } from "@/types/services";
+import type { Concern } from "@/types/servicesTypes";
 
 /**
  * PARKED. Kept deliberately. Do not wire this up, and do not raise it as a

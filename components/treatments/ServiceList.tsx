@@ -2,7 +2,7 @@ import { GroupTabs } from "@/components/treatments/GroupTabs";
 import { ServiceCard } from "@/components/treatments/ServiceCard";
 import { TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs";
 import { getServicesByCategory } from "@/lib/services";
-import type { Category, Service } from "@/types/services";
+import type { Category, Service } from "@/types/servicesTypes";
 
 function Grid({ services }: { services: readonly Service[] }) {
   return (

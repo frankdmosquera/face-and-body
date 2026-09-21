@@ -6,7 +6,7 @@ import { Photo } from "@/components/media/Photo";
 import { CATEGORIES, categoryHref } from "@/data/categoriesData";
 import type { ImageSlot } from "@/data/imagesData";
 import { getCategoryFromPrice, getServicesByCategory } from "@/lib/services";
-import type { CategorySlug } from "@/types/services";
+import type { CategorySlug } from "@/types/servicesTypes";
 
 const PHOTO: Record<CategorySlug, ImageSlot> = {
   facial: "catFacial",

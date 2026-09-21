@@ -1,4 +1,4 @@
-import type { Category } from "@/types/services";
+import type { Category } from "@/types/servicesTypes";
 
 // Blurbs and group headings are copy and await her sign-off with the rest.
 export const CATEGORIES: readonly Category[] = [

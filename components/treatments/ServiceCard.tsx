@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Tag } from "@/components/layout/Tag";
 import { buttonVariants } from "@/components/ui/button";
-import type { Service } from "@/types/services";
+import type { Service } from "@/types/servicesTypes";
 import { cn } from "@/lib/utils";
 
 function Price({ service }: { service: Service }) {

@@ -1,4 +1,4 @@
-import type { ConcernSlug } from "@/types/services";
+import type { ConcernSlug } from "@/types/servicesTypes";
 
 /**
  * ⚠️ PLACEHOLDER. NOT HER STOCK LIST. DO NOT DEPLOY WITHOUT HER SIGN-OFF.

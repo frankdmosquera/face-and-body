@@ -1,4 +1,4 @@
-import type { Review } from "@/types/reviews";
+import type { Review } from "@/types/reviewsTypes";
 
 // Verbatim excerpts (whole sentences, nothing rewritten) from the public
 // Google reviews on her listing, read on 2026-09-19. Authors as Google shows

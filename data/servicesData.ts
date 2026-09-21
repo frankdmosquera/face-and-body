@@ -1,4 +1,4 @@
-import type { Service } from "@/types/services";
+import type { Service } from "@/types/servicesTypes";
 
 // Mirrors blueprint/reference/catalogue.md. Prices and durations are hers, from Square;
 // names, grouping and every description are ours and await her sign-off.
