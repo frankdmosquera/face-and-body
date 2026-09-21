@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Tag } from "@/components/layout/Tag";
 import { buttonVariants } from "@/components/ui/button";
 import type { ServiceType } from "@/types/servicesTypes";
 import { cn } from "@/lib/cn";
@@ -42,18 +41,30 @@ export function ServiceCard({ service }: { service: ServiceType }) {
         service.featured && "lg:col-span-3",
       )}
     >
-      {service.eminence && (
-        <Tag className="mb-3 self-start">Eminence Organics</Tag>
-      )}
+      {/**
+       * Two lines of room for the title and three for the description, on
+       * every card, whether or not the words need them. That is what makes
+       * the grid even.
+       *
+       * `line-clamp` on its own only sets a ceiling: a three-word treatment
+       * still made a shorter card than a wordy one, so the rows stayed ragged.
+       * The `min-h` is the half that fixes it. Both are in `lh` rather than
+       * pixels so they follow the font size instead of breaking the first time
+       * the type changes.
+       *
+       * The clamp is clear of descenders. The description runs at
+       * `leading-relaxed`, a 22.75px line box for 14px text, so the tails on
+       * g, y and p sit well above the cut.
+       */}
       <h3
         className={cn(
-          "text-[22px] leading-tight",
+          "line-clamp-2 min-h-[2lh] text-[22px] leading-tight",
           service.featured && "lg:text-[30px]",
         )}
       >
         {service.name}
       </h3>
-      <p className="mt-2 flex-1 text-[14px] leading-relaxed text-muted-foreground">
+      <p className="mt-2 line-clamp-3 min-h-[3lh] text-[14px] leading-relaxed text-muted-foreground">
         {service.description}
       </p>
       {/* Wraps because "At consultation" beside "Ask about pricing" exceeds a
@@ -61,8 +72,17 @@ export function ServiceCard({ service }: { service: ServiceType }) {
       <div className="mt-4 flex flex-wrap items-end justify-between gap-3 border-t border-border pt-3.5">
         <div>
           <Price service={service} />
+          {/* Eminence rides on the duration line rather than as a badge above
+              the title. Only 4 of the 40 treatments carry it, so a badge row
+              meant either 36 cards reserving empty space for it or 4 cards
+              standing taller than the rest. Neither survives "all the same
+              height". Here it costs nothing and still sits beside the price,
+              which is where a brand claim earns its keep. */}
           <span className="mt-1.5 block text-xs tracking-[0.04em] text-muted-foreground">
             {service.durationMin} min
+            {service.eminence && (
+              <span className="text-accent-foreground">{" · "}Eminence</span>
+            )}
           </span>
         </div>
         <Link

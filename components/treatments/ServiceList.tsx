@@ -6,7 +6,7 @@ import type { CategoryType, ServiceType } from "@/types/servicesTypes";
 
 function Grid({ services }: { services: readonly ServiceType[] }) {
   return (
-    <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 xl:gap-8 xl:grid-cols-4">
+    <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10 xl:grid-cols-4">
       {services.map((service) => (
         <ServiceCard key={service.slug} service={service} />
       ))}
@@ -98,18 +98,24 @@ export function ServiceList({ category }: { category: CategoryType }) {
 
         {blocks.map((block) => (
           <TabsPanel key={block.slug} value={block.slug} data-group>
-            {/* The concern line survives the move to tabs. It carries the words
-                someone actually searches - congested, breakout-prone, dull -
-                which the group label on its own does not. */}
+            <Grid services={block.services} />
+            {/* Below the cards, not above them. This line carries the words
+                people actually search - congested, breakout-prone, dull, dry -
+                which the group labels do not, so it earns its place on the
+                page. Between the tabs and the cards it bought that at the
+                price of pushing the cards down and reading as leftover
+                furniture under a row of chips. Down here it costs the visitor
+                nothing: the cards are the first thing under the tabs, and the
+                sentence is still in the document for anyone, or anything,
+                reading it. */}
             {block.heading && (
               <p
                 data-group-head
-                className="mb-8 text-[15px] text-muted-foreground"
+                className="mt-8 text-[14px] text-muted-foreground"
               >
                 {block.heading}
               </p>
             )}
-            <Grid services={block.services} />
           </TabsPanel>
         ))}
       </GroupTabs>

@@ -79,34 +79,39 @@ function TabsTab({ className, ...props }: TabsPrimitive.Tab.Props) {
  * not. Every panel stays in the document and the inactive ones are hidden by
  * the `hidden` attribute.
  */
+/**
+ * No enter animation, and that is a decision rather than an omission. Do not
+ * add one back without reading this.
+ *
+ * A 180ms fade-and-rise was built here and it looked good. It also broke the
+ * tabs outright: Base UI will not put `hidden` back on a closing panel until
+ * the animations in that panel's subtree have finished, and with no exit
+ * animation there was nothing to finish. Every tab a visitor opened stayed
+ * open underneath the next one. Four panels stacked, the section 2,802px
+ * instead of 1,111, at any clicking speed a person can manage - 60ms apart or
+ * 700ms, it made no difference.
+ *
+ * Four attempts, all verified failures:
+ *
+ * - `data-ending-style:transition-none`. Still leaks. The transition is
+ *   declared while the panel is opening, which is when it matters.
+ * - Scoping the transition off exiting panels with `:not([data-ending-style])`.
+ *   Worse: `duration-180` stays behind on its own and CSS defaults
+ *   transition-property to `all`, so exiting panels transition everything.
+ * - Moving the animation to a child div. Base UI inspects the subtree, so the
+ *   child blocks the hide exactly as the panel did.
+ * - Removing it entirely. The only one that works: panels settle to one.
+ *
+ * Proven by stripping the animation from the source and re-testing, not by
+ * reasoning about it. If this is ever wanted, it needs a real exit animation
+ * that actually completes, or a Base UI version that stops waiting.
+ */
 function TabsPanel({ className, ...props }: TabsPrimitive.Panel.Props) {
   return (
     <TabsPrimitive.Panel
       data-slot="tabs-panel"
       keepMounted
-      className={cn(
-        "outline-none",
-        /**
-         * 180ms of fade and rise when a panel opens.
-         *
-         * Both groups are rows of cards that look alike, so an instant swap
-         * reads as a flicker or as nothing at all: you click, and you cannot
-         * tell whether the page heard you. Starting the cards 8px low and
-         * transparent means the eye watches them arrive, which is what says
-         * "this is different content" rather than "the screen blinked".
-         *
-         * Base UI puts `data-starting-style` on the panel for the first frame
-         * after it opens, which is the only hook this needs. It runs on a tab
-         * change and never on first paint, so nothing is slowed down or
-         * delayed for someone arriving on the page.
-         */
-        "transition-[opacity,translate] duration-180 ease-out data-starting-style:translate-y-2 data-starting-style:opacity-0",
-        /* Off for anyone who asked their system for less motion. Vestibular
-           disorders make movement like this genuinely unpleasant, and the
-           tabs work identically without it. */
-        "motion-reduce:transition-none motion-reduce:data-starting-style:translate-y-0 motion-reduce:data-starting-style:opacity-100",
-        className,
-      )}
+      className={cn("outline-none", className)}
       {...props}
     />
   );
