@@ -5,7 +5,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
-import { submitContact, type ContactResult } from "@/actions/contact";
+import { submitContactAction, type ContactResult } from "@/actions/contactAction";
 import { buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -72,7 +72,7 @@ export function ContactForm({ topics, generalTopic, prefills }: Props) {
 
   async function onSubmit(values: ContactValues) {
     setResult(null);
-    setResult(await submitContact(values));
+    setResult(await submitContactAction(values));
   }
 
   if (result?.success) {

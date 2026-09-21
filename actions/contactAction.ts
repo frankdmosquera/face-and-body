@@ -14,7 +14,7 @@ const FAILED: ContactResult = {
   error: "We couldn't send that.",
 };
 
-export async function submitContact(
+export async function submitContactAction(
   values: ContactValues,
 ): Promise<ContactResult> {
   // The authoritative list. The client validates against the topics it was
