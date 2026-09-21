@@ -84,58 +84,43 @@ export const imagesData = {
     w: 480,
     h: 640,
   },
-  // THE EMINENCE BAND'S THREE PICTURES, AND WHY NONE OF THEM IS A PRODUCT
-  // YOU CAN NAME.
+  // The Eminence band's three product shots are NOT here, and that is
+  // deliberate. They are `/eminence-gel-wash.jpg`, `/eminence-serum.jpg` and
+  // `/eminence-moisturizer.jpg` in `public/`, rendered by `next/image`
+  // straight from `Eminence.tsx` and `app/products/page.tsx`.
   //
-  // What was here until 2026-09-21 was a woman applying lipstick, a man
-  // reaching for hair conditioner, and an orchid, under a heading that says
-  // "Authorised Eminence Organics stockist". The alt text described a shelf,
-  // a cream jar and botanical ingredients - three photographs that were
-  // never at those paths.
+  // WHY THEY BROKE THE RULE. Everything else on this site lives in ImageKit
+  // and this manifest is how it gets addressed, which is right for
+  // photographs: they are large, they need resizing per breakpoint, and they
+  // change without a deploy. These three are none of that. They are 55-80KB
+  // catalogue packshots that only change when the product line does, and
+  // routing them through ImageKit meant the band showed nothing at all until
+  // somebody remembered to upload three files by hand.
   //
-  // Replacing them turned up a structural problem worth writing down, because
-  // it will come back: **you cannot illustrate "we stock brand X" with stock
-  // photography.** Every good product shot carries a real label. The search
-  // returned a Wella and DSD hair shelf with rouble price tags, a Cyrillic
-  // AHA serum line, a zero-waste refill shop selling shower gel, and an
-  // entire miSolo Cosmetics catalogue. A rival's brand name under that
-  // heading is worse than the orchid: the orchid is merely irrelevant, a
-  // competitor's jar contradicts the sentence above it.
+  // `public/logo-mark.jpg` is the same exception for the same reason, so this
+  // is the second instance of a rule rather than a one-off: small, fixed
+  // artwork that must be on screen the moment the page renders goes in
+  // `public/`. Anything that is a photograph still goes to ImageKit.
+  // REPOINTED 2026-09-21, AND THE OLD FILE IS NOT COMING BACK.
   //
-  // So all three are from one unbranded shoot - amber glass with BLANK
-  // labels, dried botanicals, warm grounds that sit on the cream. They claim
-  // nothing they cannot back up. One photographer and one styling across all
-  // three, so the cluster reads as chosen rather than assembled.
+  // `/consultation.jpg` was a photograph of eyelash extensions being applied
+  // with tweezers. She does not offer lash work, so the one image attached to
+  // "Book a free consultation" advertised a service that does not exist, and
+  // the alt text called it "A skin consultation in progress", which described
+  // a photograph that was never at that path. Wrong twice over.
   //
-  // THIS IS STILL A PATCH. The band names a specific line and shows none of
-  // it. The real version is her own Eminence shelf plus the product shots
-  // from the stockist portal she has a login for, and that ask is
-  // outstanding. When it lands, these three go.
-  eminenceWide: {
-    path: "/products-wide.jpg",
-    alt: "A dropper bottle of serum laid among dried botanicals",
-    source: "pexels 7797450",
-    w: 2000,
-    h: 1333,
-  },
-  eminenceA: {
-    path: "/products-bottles.jpg",
-    alt: "Three amber glass skincare bottles arranged with dried flowers",
-    source: "pexels 7797440",
-    w: 2000,
-    h: 3000,
-  },
-  eminenceB: {
-    path: "/products-serum.jpg",
-    alt: "An amber serum bottle surrounded by dried white botanicals",
-    source: "pexels 7797527",
-    w: 2000,
-    h: 3000,
-  },
+  // This points at `/concern-dull-dehydrated.jpg` instead: a mask being
+  // worked across a client's face in gloved hands, which is the treatment the
+  // consultation leads to. It was uploaded for the concern pages that were
+  // deleted on 2026-09-20, so it was already paid for and already unused -
+  // nothing else reads any `concern*` slot.
+  //
+  // The slot keeps its name because the name describes the job it does on the
+  // page, not the file behind it. Replace the file, keep the slot.
   consultation: {
-    path: "/consultation.jpg",
-    alt: "A skin consultation in progress",
-    source: "pexels 6135650",
+    path: "/concern-dull-dehydrated.jpg",
+    alt: "An aesthetician working a treatment mask across a client's face in gloved hands",
+    source: "pexels, via the deleted concern pages",
     w: 1600,
     h: 1280,
   },

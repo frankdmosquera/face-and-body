@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { Divider } from "@/components/layout/Divider";
@@ -6,7 +7,6 @@ import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import { Watermark } from "@/components/layout/Watermark";
-import { Photo } from "@/components/media/Photo";
 import { buttonVariants } from "@/components/ui/button";
 import {
   collectionsData,
@@ -45,16 +45,34 @@ export const metadata: Metadata = {
  * placeholder, and the alternative is a bare <img> that loses sizing and
  * lazy-loading. The project already solved this problem; this uses that.
  */
-const TILES = ["eminenceA", "eminenceB", "eminenceWide"] as const;
+const TILES = [
+  {
+    src: "/eminence-gel-wash.jpg",
+    alt: "Eminence Stone Crop Gel Wash, a tall olive green bottle with a botanical print label",
+  },
+  {
+    src: "/eminence-serum.jpg",
+    alt: "Eminence Bright Skin Licorice Root Booster-Serum in an amber glass dropper bottle",
+  },
+  {
+    src: "/eminence-moisturizer.jpg",
+    alt: "Eminence Stone Crop Whip Moisturizer in a squat pale green glass jar",
+  },
+] as const;
 
 function ProductTile({ index }: { index: number }) {
   return (
-    <div className="relative mb-5 aspect-[4/5] overflow-hidden rounded-sm">
-      <Photo
-        slot={TILES[index % TILES.length]}
+    /* `contain` on a card, not `cover`. These are catalogue packshots now
+       rather than atmospheric stock, and a cropped packshot is a product you
+       cannot identify. The card colour is near-white, so the shot’s own
+       background disappears into it. */
+    <div className="relative mb-5 aspect-[4/5] overflow-hidden rounded-sm border border-border bg-card">
+      <Image
+        src={TILES[index % TILES.length].src}
+        alt={TILES[index % TILES.length].alt}
         fill
         sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
-        className="object-cover"
+        className="object-contain p-4"
       />
     </div>
   );
