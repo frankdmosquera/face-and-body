@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
 import { FOOTER } from "@/data/nav";
-import { siteConfig, type SiteLink } from "@/data/siteConfig";
+import { siteConfig, type SiteLinkType } from "@/data/siteConfig";
 
-function FooterLink({ label, href }: SiteLink) {
+function FooterLink({ label, href }: SiteLinkType) {
   const className = "hover:text-on-dark";
   if (href.startsWith("http")) {
     return (

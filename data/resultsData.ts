@@ -1,10 +1,10 @@
-import type { ImageSlot } from "@/data/imagesData";
-import type { ConcernSlug } from "@/types/servicesTypes";
+import type { ImageSlotType } from "@/data/imagesData";
+import type { ConcernSlugType } from "@/types/servicesTypes";
 
-export type Result = {
+export type ResultType = {
   /** one image that already contains before and after */
-  slot: ImageSlot;
-  concerns: readonly ConcernSlug[];
+  slot: ImageSlotType;
+  concerns: readonly ConcernSlugType[];
   /** factual, no outcome claim */
   caption: string;
   source: string;
@@ -25,10 +25,10 @@ export type Result = {
  * kept below so it is not lost, and the `resultRedness` slot still exists
  * in the image library.
  */
-export const resultsData: readonly Result[] = [];
+export const resultsData: readonly ResultType[] = [];
 
 /** Waiting on more before-and-afters from her. */
-const PENDING: readonly Result[] = [
+const PENDING: readonly ResultType[] = [
   {
     slot: "resultRedness",
     concerns: ["acne"],

@@ -2,19 +2,19 @@ import { categoriesData } from "@/data/categoriesData";
 import { concernsData } from "@/data/concernsData";
 import { servicesData } from "@/data/servicesData";
 import type {
-  Category,
-  CategorySlug,
-  ConcernSlug,
-  Service,
+  CategoryType,
+  CategorySlugType,
+  ConcernSlugType,
+  ServiceType,
 } from "@/types/servicesTypes";
 
-export function getService(slug: string): Service | undefined {
+export function getService(slug: string): ServiceType | undefined {
   return servicesData.find((service) => service.slug === slug);
 }
 
 export function getServicesByCategory(
-  category: CategorySlug,
-): readonly Service[] {
+  category: CategorySlugType,
+): readonly ServiceType[] {
   return servicesData.filter((service) => service.category === category);
 }
 
@@ -30,12 +30,16 @@ export function getServicesByCategory(
  *
  * Do not delete them, do not call them, and do not report them as dead code.
  */
-export function getServicesByConcern(concern: ConcernSlug): readonly Service[] {
+export function getServicesByConcern(
+  concern: ConcernSlugType,
+): readonly ServiceType[] {
   return servicesData.filter((service) => service.concerns.includes(concern));
 }
 
 /** Lowest listed price in the category; null when every service is priced at consultation. */
-export function getCategoryFromPrice(category: CategorySlug): number | null {
+export function getCategoryFromPrice(
+  category: CategorySlugType,
+): number | null {
   const prices = getServicesByCategory(category)
     .map((service) => service.price)
     .filter((price): price is number => price !== null);
@@ -43,7 +47,7 @@ export function getCategoryFromPrice(category: CategorySlug): number | null {
 }
 
 /** Parked. See `getServicesByConcern` above. */
-export function getConcernCount(concern: ConcernSlug): number {
+export function getConcernCount(concern: ConcernSlugType): number {
   return getServicesByConcern(concern).length;
 }
 
@@ -60,21 +64,25 @@ export function getConcernCount(concern: ConcernSlug): number {
  *  /other-treatments, so /treatments is free, and a treatment detail page
  *  reads better under it than under a path with "other" in the name. Nothing
  *  reaches this branch today. */
-export function serviceHref(service: Service): string {
+export function serviceHref(service: ServiceType): string {
   if (service.detailPage) return `/treatments/${service.slug}`;
   return service.category === "facial"
     ? `/#${service.slug}`
     : `/other-treatments#${service.slug}`;
 }
 
-export type ConcernChip = { slug: ConcernSlug; label: string; count: number };
+export type ConcernChipType = {
+  slug: ConcernSlugType;
+  label: string;
+  count: number;
+};
 
 /** Parked, see `getServicesByConcern` above.
  *
  *  Only concerns with at least one service here, so a filter can never empty the list. */
 export function getConcernsInCategory(
-  category: CategorySlug,
-): readonly ConcernChip[] {
+  category: CategorySlugType,
+): readonly ConcernChipType[] {
   const services = getServicesByCategory(category);
   return concernsData
     .map((concern) => ({
@@ -87,9 +95,9 @@ export function getConcernsInCategory(
     .filter((chip) => chip.count > 0);
 }
 
-export type CategoryBlock = {
-  category: Category;
-  services: readonly Service[];
+export type CategoryBlockType = {
+  category: CategoryType;
+  services: readonly ServiceType[];
 };
 
 /** Parked, see `getServicesByConcern` above.
@@ -98,8 +106,8 @@ export type CategoryBlock = {
  *  and a category page never disagree about sequence. Empty blocks are dropped,
  *  so there is no empty state to render. */
 export function getServicesByConcernGrouped(
-  concern: ConcernSlug,
-): readonly CategoryBlock[] {
+  concern: ConcernSlugType,
+): readonly CategoryBlockType[] {
   const matches = getServicesByConcern(concern);
   return categoriesData
     .map((category) => ({
@@ -115,7 +123,7 @@ export function getServicesByConcernGrouped(
  *  Ties go to categoriesData order, which is how the blocks are already sorted.
  *  Falls back to the first category for a concern with no treatments yet, so
  *  adding one to the data cannot break the build. */
-export function getDominantCategory(concern: ConcernSlug): Category {
+export function getDominantCategory(concern: ConcernSlugType): CategoryType {
   const blocks = getServicesByConcernGrouped(concern);
   if (blocks.length === 0) return categoriesData[0];
   return blocks.reduce((best, block) =>

@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { Tag } from "@/components/layout/Tag";
 import { buttonVariants } from "@/components/ui/button";
-import type { Service } from "@/types/servicesTypes";
+import type { ServiceType } from "@/types/servicesTypes";
 import { cn } from "@/lib/cn";
 
-function Price({ service }: { service: Service }) {
+function Price({ service }: { service: ServiceType }) {
   if (service.price === null) {
     return (
       <span className="font-serif text-[22px] leading-none text-copper">
@@ -24,7 +24,7 @@ function Price({ service }: { service: Service }) {
   );
 }
 
-export function ServiceCard({ service }: { service: Service }) {
+export function ServiceCard({ service }: { service: ServiceType }) {
   const unpriced = service.price === null;
 
   return (

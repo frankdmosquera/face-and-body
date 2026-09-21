@@ -3,20 +3,25 @@
 import { Resend } from "resend";
 import { siteConfig } from "@/data/siteConfig";
 import { CONTACT_TOPICS } from "@/lib/contactPrefills";
-import { makeContactSchema, isEmail, type ContactValues } from "@/lib/contactValidation";
+import {
+  makeContactSchema,
+  isEmail,
+  type ContactValuesType,
+} from "@/lib/contactValidation";
 
-export type ContactResult = { success: true } | { success: false; error: string };
+export type ContactResultType =
+  { success: true } | { success: false; error: string };
 
 // Every failure past validation says the same thing; the form adds the text
 // and call links, so a visitor the form let down still has a way to reach the clinic.
-const FAILED: ContactResult = {
+const FAILED: ContactResultType = {
   success: false,
   error: "We couldn't send that.",
 };
 
 export async function submitContactAction(
-  values: ContactValues,
-): Promise<ContactResult> {
+  values: ContactValuesType,
+): Promise<ContactResultType> {
   // The authoritative list. The client validates against the topics it was
   // handed; this is the copy that decides.
   const parsed = makeContactSchema(CONTACT_TOPICS).safeParse(values);

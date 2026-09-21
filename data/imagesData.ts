@@ -173,4 +173,4 @@ export const imagesData = {
   },
 } as const;
 
-export type ImageSlot = keyof typeof imagesData;
+export type ImageSlotType = keyof typeof imagesData;

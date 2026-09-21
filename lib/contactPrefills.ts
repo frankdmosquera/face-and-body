@@ -1,17 +1,17 @@
 import { siteConfig } from "@/data/siteConfig";
 import { servicesData } from "@/data/servicesData";
-import type { Service } from "@/types/servicesTypes";
+import type { ServiceType } from "@/types/servicesTypes";
 
 /** `?&body=` is the one form that opens a prefilled text on both iOS and Android. */
 export function smsLink(message: string): string {
   return `${siteConfig.phone.sms}?&body=${encodeURIComponent(message)}`;
 }
 
-export function pricingMessage(service: Service): string {
+export function pricingMessage(service: ServiceType): string {
   return `Hi! Can I get pricing for ${service.name}?`;
 }
 
-export function getUnpricedServices(): readonly Service[] {
+export function getUnpricedServices(): readonly ServiceType[] {
   return servicesData.filter((service) => service.price === null);
 }
 
@@ -19,11 +19,11 @@ export const CONSULTATION_TOPIC = "Book a free consultation";
 
 export const GENERAL_TOPIC = "A question about a treatment";
 
-export function pricingTopic(service: Service): string {
+export function pricingTopic(service: ServiceType): string {
   return `Pricing for ${service.name}`;
 }
 
-export type ContactPrefill = { topic: string; message: string };
+export type ContactPrefillType = { topic: string; message: string };
 
 /**
  * Every `?treatment=<slug>` the contact form might be handed, resolved to the
@@ -32,7 +32,7 @@ export type ContactPrefill = { topic: string; message: string };
  * whole catalogue - descriptions included - into the browser bundle to read a
  * name and a null check. This ships the answers instead of the data.
  */
-export function buildPrefills(): Record<string, ContactPrefill> {
+export function buildPrefills(): Record<string, ContactPrefillType> {
   return Object.fromEntries(
     servicesData.map((service) => [
       service.slug,

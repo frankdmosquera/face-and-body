@@ -1,5 +1,5 @@
 import { Image } from "@imagekit/next";
-import { imagesData, type ImageSlot } from "@/data/imagesData";
+import { imagesData, type ImageSlotType } from "@/data/imagesData";
 import { cn } from "@/lib/cn";
 
 /**
@@ -48,7 +48,7 @@ if (!urlEndpoint && process.env.VERCEL === "1") {
 }
 
 type Props = {
-  slot: ImageSlot;
+  slot: ImageSlotType;
   className?: string;
   sizes?: string;
   priority?: boolean;

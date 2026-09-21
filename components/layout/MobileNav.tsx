@@ -23,7 +23,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { isNavGroup, siteConfig, type NavItem } from "@/data/siteConfig";
+import { isNavGroup, siteConfig, type NavItemType } from "@/data/siteConfig";
 import { cn } from "@/lib/cn";
 
 const ROW =
@@ -42,7 +42,7 @@ function isActive(href: string, pathname: string) {
   return pathname === href || pathname.startsWith(href + "/");
 }
 
-export function MobileNav({ items }: { items: NavItem[] }) {
+export function MobileNav({ items }: { items: NavItemType[] }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const [seenPathname, setSeenPathname] = useState(pathname);
@@ -166,8 +166,13 @@ export function MobileNav({ items }: { items: NavItem[] }) {
                 key={item.href}
                 href={item.href}
                 onClick={close}
-                aria-current={isActive(item.href, pathname) ? "page" : undefined}
-                className={cn(ROW, "aria-[current=page]:text-accent-foreground")}
+                aria-current={
+                  isActive(item.href, pathname) ? "page" : undefined
+                }
+                className={cn(
+                  ROW,
+                  "aria-[current=page]:text-accent-foreground",
+                )}
               >
                 {item.label}
               </Link>

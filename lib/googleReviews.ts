@@ -46,7 +46,7 @@ const MIN_RATING = 4;
 /** One day. See the note above before changing it. */
 const REVALIDATE_SECONDS = 86_400;
 
-export type GoogleReview = {
+export type GoogleReviewType = {
   rating: number;
   author: string;
   /** The reviewer's avatar, hosted by Google. */
@@ -58,16 +58,16 @@ export type GoogleReview = {
   text: string;
 };
 
-export type GoogleReviewsResult = {
+export type GoogleReviewsResultType = {
   /** Null when Google returned nothing, so callers can tell it from 0. */
   rating: number | null;
   total: number;
-  reviews: GoogleReview[];
+  reviews: GoogleReviewType[];
   /** The listing on Maps, for a "read or leave a review" link. */
   mapsUrl: string | null;
 };
 
-const EMPTY: GoogleReviewsResult = {
+const EMPTY: GoogleReviewsResultType = {
   rating: null,
   total: 0,
   reviews: [],
@@ -114,7 +114,7 @@ function uploadedPhoto(uri: string | undefined) {
   return uri?.includes("googleusercontent.com/a-/") ? uri : undefined;
 }
 
-export async function getGoogleReviews(): Promise<GoogleReviewsResult> {
+export async function getGoogleReviews(): Promise<GoogleReviewsResultType> {
   const key = process.env.GOOGLE_MAPS_API_KEY;
   const placeId = siteConfig.reviews.placeId;
 
@@ -135,7 +135,7 @@ export async function getGoogleReviews(): Promise<GoogleReviewsResult> {
 
     const data = (await response.json()) as PlacesResponse;
 
-    const reviews: GoogleReview[] = (data.reviews ?? [])
+    const reviews: GoogleReviewType[] = (data.reviews ?? [])
       // A review can be a star rating with no words. Nothing to quote.
       .filter((review) => review.text?.text)
       // Fours and fives only. A three or below is a real review and it stays

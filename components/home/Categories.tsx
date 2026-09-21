@@ -4,14 +4,14 @@ import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Section } from "@/components/layout/Section";
 import { Photo } from "@/components/media/Photo";
 import { categoriesData, categoryHref } from "@/data/categoriesData";
-import type { ImageSlot } from "@/data/imagesData";
+import type { ImageSlotType } from "@/data/imagesData";
 import {
   getCategoryFromPrice,
   getServicesByCategory,
 } from "@/lib/serviceQueries";
-import type { CategorySlug } from "@/types/servicesTypes";
+import type { CategorySlugType } from "@/types/servicesTypes";
 
-const PHOTO: Record<CategorySlug, ImageSlot> = {
+const PHOTO: Record<CategorySlugType, ImageSlotType> = {
   facial: "catFacial",
   skin: "catSkin",
   body: "catBody",

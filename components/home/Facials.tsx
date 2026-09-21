@@ -5,7 +5,7 @@ import { Section } from "@/components/layout/Section";
 import { ServiceList } from "@/components/treatments/ServiceList";
 import { categoriesData } from "@/data/categoriesData";
 import { getServicesByCategory } from "@/lib/serviceQueries";
-import type { Category } from "@/types/servicesTypes";
+import type { CategoryType } from "@/types/servicesTypes";
 
 /**
  * The full facial menu, on the home page rather than behind a link.
@@ -25,7 +25,7 @@ import type { Category } from "@/types/servicesTypes";
 /* Thrown at module load rather than rendered around, because a missing facial
    category is a broken data file, not a state this page should degrade into.
    A function, not a bare const, so the narrowing survives into the component. */
-function facialCategory(): Category {
+function facialCategory(): CategoryType {
   const found = categoriesData.find((entry) => entry.slug === "facial");
   if (!found)
     throw new Error("The facial category is missing from categoriesData");

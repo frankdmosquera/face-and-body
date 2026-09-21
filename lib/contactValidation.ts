@@ -53,4 +53,4 @@ export function makeContactSchema(topics: readonly string[]) {
   });
 }
 
-export type ContactValues = z.infer<ReturnType<typeof makeContactSchema>>;
+export type ContactValuesType = z.infer<ReturnType<typeof makeContactSchema>>;

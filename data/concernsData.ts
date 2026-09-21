@@ -1,4 +1,4 @@
-import type { Concern } from "@/types/servicesTypes";
+import type { ConcernType } from "@/types/servicesTypes";
 
 /**
  * PARKED. Kept deliberately. Do not wire this up, and do not raise it as a
@@ -30,7 +30,7 @@ import type { Concern } from "@/types/servicesTypes";
  */
 
 // Descriptions are the landing-page intros and await her sign-off.
-export const concernsData: readonly Concern[] = [
+export const concernsData: readonly ConcernType[] = [
   {
     slug: "fine-lines",
     label: "Fine lines and wrinkles",

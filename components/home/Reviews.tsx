@@ -7,7 +7,7 @@ import {
   ReviewCard,
   StarRating,
   StarSprite,
-  type ReviewCardData,
+  type ReviewCardDataType,
 } from "@/components/home/ReviewCard";
 import { ReviewsCarousel } from "@/components/home/ReviewsCarousel";
 import { reviewsData } from "@/data/reviewsData";
@@ -67,7 +67,7 @@ export async function Reviews() {
 
   // Google gives no treatment name, so live cards carry no badge - inventing
   // one would be putting a service in a client's mouth.
-  const liveCards: ReviewCardData[] = live.reviews.map((review) => ({
+  const liveCards: ReviewCardDataType[] = live.reviews.map((review) => ({
     text: review.text,
     author: review.author,
     date: review.relativeTime,
@@ -87,7 +87,7 @@ export async function Reviews() {
   // What it does not cost: the 4.7 and the count above them are still read
   // from Google every day, so the numbers stay honest even as the quotes sit
   // still. The live text is the fallback if this list is ever emptied.
-  const photoCards: ReviewCardData[] = reviewsData
+  const photoCards: ReviewCardDataType[] = reviewsData
     .filter((review) => review.avatar)
     .map((review) => ({
       text: review.quote,

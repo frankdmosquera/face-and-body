@@ -11,26 +11,30 @@
  * components import and pass down as props.
  */
 
-export type SiteLink = { label: string; href: string };
+export type SiteLinkType = { label: string; href: string };
 
 /** One column of a header panel, or one block of a sheet row. */
-export type NavSection = { label?: string; href?: string; links: SiteLink[] };
+export type NavSectionType = {
+  label?: string;
+  href?: string;
+  links: SiteLinkType[];
+};
 
 /** A top-level nav entry that opens a panel. `href` is where its own name goes. */
-export type NavGroup = {
+export type NavGroupType = {
   label: string;
   href: string;
-  sections: NavSection[];
+  sections: NavSectionType[];
   more?: string;
 };
 
-export type NavItem = SiteLink | NavGroup;
+export type NavItemType = SiteLinkType | NavGroupType;
 
-export function isNavGroup(item: NavItem): item is NavGroup {
+export function isNavGroup(item: NavItemType): item is NavGroupType {
   return "sections" in item;
 }
 
-export type Day =
+export type DayType =
   | "monday"
   | "tuesday"
   | "wednesday"
@@ -40,11 +44,11 @@ export type Day =
   | "sunday";
 
 /** Times are 24-hour local strings ("16:00"); feature 8 turns them into an open-now state. */
-export type DayHours =
-  | { day: Day; open: string; close: string }
-  | { day: Day; closed: true };
+export type DayHoursType =
+  | { day: DayType; open: string; close: string }
+  | { day: DayType; closed: true };
 
-export type SiteConfig = {
+export type SiteConfigType = {
   name: string;
   shortName: string;
   subName: string;
@@ -61,7 +65,7 @@ export type SiteConfig = {
   };
   geo: { lat: number; lng: number };
   timezone: string;
-  hours: readonly DayHours[];
+  hours: readonly DayHoursType[];
   founded: number;
   ratings: readonly {
     source: "google" | "facebook";
@@ -78,7 +82,7 @@ const social = {
   facebook: "https://www.facebook.com/FACEANDBODYWELLNESSCENTRE/",
 };
 
-export const siteConfig: SiteConfig = {
+export const siteConfig: SiteConfigType = {
   name: "Face and Body Wellness Centre",
   shortName: "Face & Body",
   subName: "Wellness Centre",

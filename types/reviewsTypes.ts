@@ -1,8 +1,8 @@
-export type ReviewSource = "google" | "facebook" | "instagram";
+export type ReviewSourceType = "google" | "facebook" | "instagram";
 
-export type Review = {
+export type ReviewType = {
   quote: string;
-  source: ReviewSource;
+  source: ReviewSourceType;
   /** where the quote can be read */
   sourceUrl: string;
   /** first name and initial as shown publicly */

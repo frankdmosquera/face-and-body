@@ -1,4 +1,4 @@
-import type { Review } from "@/types/reviewsTypes";
+import type { ReviewType } from "@/types/reviewsTypes";
 
 // Verbatim excerpts (whole sentences, nothing rewritten) from the public
 // Google reviews on her listing, read on 2026-09-19. Authors as Google shows
@@ -67,7 +67,7 @@ const g = (
   avatar?: string,
   reviewedAt?: string,
   rating = 5,
-): Review => ({
+): ReviewType => ({
   quote,
   source: "google",
   sourceUrl: GOOGLE_LISTING,
@@ -78,7 +78,7 @@ const g = (
   treatment,
 });
 
-export const reviewsData: readonly Review[] = [
+export const reviewsData: readonly ReviewType[] = [
   g(
     "I've been seeing Sandra at Face & Body Wellness for about a year for my acne-prone skin, and the improvement has been amazing.",
     "O.O. B",
