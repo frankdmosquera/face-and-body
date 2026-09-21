@@ -6,7 +6,11 @@ import { cn } from "@/lib/cn";
 function Price({ service }: { service: ServiceType }) {
   if (service.price === null) {
     return (
-      <span className="font-serif text-[22px] leading-none text-copper">
+      /* Smaller than a numeric price on purpose. "At consultation" is five
+         times the width of "$290" at the same size, and at 254px - the
+         narrowest a card gets - it pushed the button onto a second line and
+         made those cards 48px taller than every other card on the page. */
+      <span className="font-serif text-[17px] leading-none text-copper">
         At consultation
       </span>
     );
@@ -35,10 +39,26 @@ export function ServiceCard({ service }: { service: ServiceType }) {
          `data/concernsData.ts`. Left in place because it costs one attribute
          and is exactly what the filter would need again. */
       data-concerns={service.concerns.join(" ")}
+      /**
+       * `featured` no longer changes how a card looks, and the flag stays in
+       * the data.
+       *
+       * It used to give a card `lg:col-span-3` and a larger title, which suited
+       * the old three-column category pages where spanning the row made a
+       * treatment the hero of its section. In the four-column tabbed grid it
+       * spanned three of four columns and pushed the rest into new rows: the
+       * Skin tab laid four cards out over three rows at 273, 303 and 255px,
+       * which is what read as the cards not lining up.
+       *
+       * All four flagged treatments - Microneedling Face and Abdomen, IPL and
+       * Laser Hair Removal - are on /other-treatments, so this never touched
+       * the facials. The flag is kept because "this is the one to look at" is
+       * still a real thing to say about a treatment; it just needs a treatment
+       * that does not break the row it sits in.
+       */
       className={cn(
         // scroll-mt clears the sticky header when the nav jumps to this card.
         "flex scroll-mt-24 flex-col rounded-lg border border-border bg-card p-4 transition-transform duration-200 hover:-translate-y-0.5",
-        service.featured && "lg:col-span-3",
       )}
     >
       {/**
@@ -56,12 +76,7 @@ export function ServiceCard({ service }: { service: ServiceType }) {
        * `leading-relaxed`, a 22.75px line box for 14px text, so the tails on
        * g, y and p sit well above the cut.
        */}
-      <h3
-        className={cn(
-          "line-clamp-2 min-h-[1lh] text-[22px] leading-[1.15] xl:min-h-[2lh]",
-          service.featured && "lg:text-[30px]",
-        )}
-      >
+      <h3 className="line-clamp-2 min-h-[1lh] text-[22px] leading-[1.15] xl:min-h-[2lh]">
         {service.name}
       </h3>
       <p className="mt-1 line-clamp-4 min-h-[4lh] text-[14px] leading-relaxed text-muted-foreground">
@@ -95,7 +110,7 @@ export function ServiceCard({ service }: { service: ServiceType }) {
             "shrink-0",
           )}
         >
-          {unpriced ? "Ask about pricing" : "Book"}
+          {unpriced ? "Enquire" : "Book"}
         </Link>
       </div>
     </li>
