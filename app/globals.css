@@ -205,7 +205,77 @@
   }
 }
 
+/**
+ * A step that arrives as you reach it: its rule draws left to right, then the
+ * number and the sentence rise into place.
+ *
+ * SCROLL DRIVEN, NOT MOUNT DRIVEN, and that is the whole reason this is not
+ * `.stagger`. That one fires on mount, which is correct for the menu sheet it
+ * was written for, because the sheet mounts at the moment you see it. A band
+ * in the middle of a page mounts on page load, so a mount animation has always
+ * finished by the time anyone scrolls down to it: the work is done and nobody
+ * is there to see it.
+ *
+ * NO JAVASCRIPT, AND NO INTERSECTION OBSERVER. `animation-timeline: view()`
+ * drives this from the element's own position in the scrollport, so a band
+ * that is currently server rendered stays server rendered rather than becoming
+ * a client component for the sake of a fade.
+ *
+ * The `@supports` guard is doing real work rather than being polite. Where
+ * scroll driven animations are missing the rules never apply at all, so the
+ * steps render exactly as they did before this existed, fully visible. That
+ * failure mode is the one that matters: an entry animation behind a failed
+ * feature query would otherwise leave the whole band stuck at `opacity: 0`,
+ * and a section nobody can read is far worse than one that does not move.
+ */
+@keyframes step-rule-in {
+  from {
+    scale: 0 1;
+  }
+  to {
+    scale: 1 1;
+  }
+}
+
+@keyframes step-body-in {
+  from {
+    opacity: 0;
+    translate: 0 18px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
 @layer components {
+  /* The rule is a pseudo-element rather than a border, because a border cannot
+     be scaled from one end and this one has to draw. */
+  .reveal-step::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 1px;
+    background: var(--color-border);
+    transform-origin: left center;
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal-step::before {
+        animation: step-rule-in linear both;
+        animation-timeline: view();
+        animation-range: entry 4% cover 20%;
+      }
+      .reveal-step > * {
+        animation: step-body-in linear both;
+        animation-timeline: view();
+        animation-range: entry 8% cover 30%;
+      }
+    }
+  }
+
   .stagger > * {
     --stagger-i: 0;
     animation: nav-item-in 300ms ease-out both;

@@ -151,7 +151,7 @@ export default function ContactPage() {
           <Eyebrow>What happens next</Eyebrow>
           <ol className="mt-7 grid gap-8 md:grid-cols-3 md:gap-10">
             {STEPS.map((step, index) => (
-              <li key={step} className="border-t border-border pt-5">
+              <li key={step} className="reveal-step relative pt-5">
                 <span className="block font-serif text-[26px] text-copper">
                   {index + 1}
                 </span>
