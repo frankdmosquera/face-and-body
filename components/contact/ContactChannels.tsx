@@ -2,6 +2,11 @@ import { MessageSquare, Phone } from "lucide-react";
 import type { ReactElement } from "react";
 import { siteConfig } from "@/data/siteConfig";
 import { cn } from "@/lib/cn";
+import {
+  GENERAL_OPENER,
+  smsLink,
+  whatsappLink,
+} from "@/lib/contactPrefills";
 
 type ChannelType = {
   key: string;
@@ -76,14 +81,20 @@ export function ContactChannels({
   if (phone.whatsapp) {
     channels.push({
       key: "whatsapp",
-      href: phone.whatsapp,
+      /* Opens with the same sentence the text link does, rather than an
+         empty box. Both come from `GENERAL_OPENER`, so they cannot drift. */
+      href: whatsappLink(GENERAL_OPENER),
       title: "WhatsApp",
       /**
-       * BIGGER THAN THE OTHER TWO, AND NOT BY EYE. 22px against their 18, to
-       * cancel a difference that is real rather than imagined: lucide icons
-       * are 2px strokes and this one is a solid fill, and a filled glyph reads
-       * smaller and denser than an outlined one at the same box. Matching the
-       * numbers would keep them looking mismatched.
+       * BIGGER THAN THE OTHER TWO, AND NOT BY EYE. 32px against their 21, in
+       * the same 48px circle, so it carries noticeably less padding than they
+       * do. Two reasons, and the first is measurable: lucide icons are 2px
+       * strokes and this one is a solid fill, and a filled glyph reads smaller
+       * and denser than an outlined one at the same box. The second is that
+       * WhatsApp draws its own mark nearly edge to edge inside its badge, so a
+       * politely inset version stops looking like the thing people recognise.
+       * The circle itself stays 48 like the others; only the glyph inside it
+       * grows.
        *
        * The green is WhatsApp's own, #25D366, and it stays a literal rather
        * than becoming a token. The palette is one copper accent on cream; a
@@ -92,23 +103,23 @@ export function ContactChannels({
        * any other colour stops being recognisable, which is the entire reason
        * to carry the icon at all.
        */
-      icon: <WhatsAppIcon className="size-[22px] text-[#25D366]" />,
+      icon: <WhatsAppIcon className="size-[32px] text-[#25D366]" />,
       external: true,
     });
   }
   channels.push(
     {
       key: "sms",
-      href: phone.sms,
+      href: smsLink(GENERAL_OPENER),
       title: `Text ${phone.display}`,
-      icon: <MessageSquare className="size-[18px] text-copper" />,
+      icon: <MessageSquare className="size-[21px] text-copper" />,
       external: false,
     },
     {
       key: "tel",
       href: phone.tel,
       title: `Call ${phone.display}`,
-      icon: <Phone className="size-[18px] text-copper" />,
+      icon: <Phone className="size-[21px] text-copper" />,
       external: false,
     },
   );
@@ -120,7 +131,7 @@ export function ContactChannels({
           {label}
         </span>
       )}
-      <div className={cn("flex gap-2.5", label && "mt-3")}>
+      <div className={cn("flex gap-4", label && "mt-3")}>
         {channels.map((channel) => (
           <a
             key={channel.key}
@@ -138,7 +149,7 @@ export function ContactChannels({
                border is what still reacts to hover, so the affordance survives
                icons that no longer inherit `currentColor`. */
             className={cn(
-              "flex size-11 items-center justify-center rounded-full border border-border bg-card transition-colors",
+              "flex size-12 items-center justify-center rounded-full border border-border bg-card transition-colors",
               "hover:border-copper hover:bg-secondary",
               "focus-visible:border-copper focus-visible:ring-2 focus-visible:ring-copper/40 focus-visible:outline-none",
             )}
