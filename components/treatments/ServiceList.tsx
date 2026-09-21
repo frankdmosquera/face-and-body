@@ -86,8 +86,10 @@ export function ServiceList({ category }: { category: CategoryType }) {
             <TabsTab key={block.slug} value={block.slug}>
               {block.label}
               {/* The count belongs on the tab: it is the one thing that tells
-                  someone whether a group is worth opening before they open it. */}
-              <span className="ml-2 text-muted-foreground/70">
+                  someone whether a group is worth opening before they open it.
+                  It follows the chip into its filled state, or it disappears
+                  against the copper. */}
+              <span className="ml-2 text-muted-foreground/70 group-data-active:text-copper-ink/70">
                 {block.services.length}
               </span>
             </TabsTab>

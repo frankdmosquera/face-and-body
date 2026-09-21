@@ -29,7 +29,7 @@ function TabsList({ className, ...props }: TabsPrimitive.List.Props) {
            into view on mount, and without scroll-padding it scrolls the
            padding away, leaving the first tab flush against the screen edge
            while the heading above it sits in the gutter. */
-        "-mx-gutter-sm flex snap-x gap-7 overflow-x-auto scroll-pl-gutter-sm border-b border-border px-gutter-sm [scrollbar-width:none] lg:-mx-gutter lg:scroll-pl-gutter lg:px-gutter [&::-webkit-scrollbar]:hidden",
+        "-mx-gutter-sm flex snap-x gap-2.5 overflow-x-auto scroll-pl-gutter-sm px-gutter-sm py-1 [scrollbar-width:none] lg:-mx-gutter lg:scroll-pl-gutter lg:px-gutter [&::-webkit-scrollbar]:hidden",
         className,
       )}
       {...props}
@@ -37,20 +37,34 @@ function TabsList({ className, ...props }: TabsPrimitive.List.Props) {
   );
 }
 
-/* Copper underline on the active tab, matching the header's TOP_LINK, so the
-   two controls on the page read as the same system. -mb-px sits the underline
-   on the list's own border rather than above it. */
+/**
+ * An outlined chip that fills copper when it is the open one.
+ *
+ * It started as a copper underline borrowed from the header nav, and that was
+ * the wrong borrow: the header is a menu you already expect to be clickable,
+ * sitting alone on a bar. Dropped into the middle of a page, the same
+ * treatment reads as a caption above a list. Two things made it worse -
+ * `cursor` stayed `default` on hover while every other button on the site
+ * turns to `pointer`, and the only hover feedback was a slight shift in text
+ * colour. A control nobody can tell is a control is a control nobody uses.
+ *
+ * So: a border to make each one an object, a filled state that cannot be read
+ * as anything but "this is the selected one", and a real pointer. The pill
+ * shape echoes the Book buttons, but outlined rather than solid, so it reads
+ * as a selector rather than a call to action.
+ */
 function TabsTab({ className, ...props }: TabsPrimitive.Tab.Props) {
   return (
     <TabsPrimitive.Tab
       data-slot="tabs-tab"
       className={cn(
-        "-mb-px shrink-0 snap-start border-b-2 border-transparent pb-3 font-sans text-[13px] tracking-[0.06em] whitespace-nowrap text-muted-foreground uppercase transition-colors outline-none",
-        "hover:text-foreground focus-visible:border-copper focus-visible:text-foreground",
+        "group shrink-0 cursor-pointer snap-start rounded-full border border-border bg-card px-4 py-2 font-sans text-[12px] tracking-[0.08em] whitespace-nowrap text-muted-foreground uppercase transition-colors outline-none",
+        "hover:border-copper hover:text-foreground",
+        "focus-visible:border-copper focus-visible:ring-2 focus-visible:ring-copper/40",
         /* data-active, not data-selected. Base UI names it `active` on Tab
            (see TabsTabDataAttributes), and the wrong one fails silently:
            the tabs work, they just all look inactive. */
-        "data-active:border-copper data-active:text-foreground",
+        "data-active:border-copper data-active:bg-copper data-active:text-copper-ink",
         className,
       )}
       {...props}
