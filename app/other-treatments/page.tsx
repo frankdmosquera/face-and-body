@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "Massage, body contouring, skin treatments and laser at Face and Body Wellness Centre in Midnapore, Calgary SE. Eighteen treatments with prices.",
 };
 
-export default function TreatmentsPage() {
+export default function OtherTreatmentsPage() {
   const total = OTHERS.reduce(
     (sum, category) => sum + getServicesByCategory(category.slug).length,
     0,
