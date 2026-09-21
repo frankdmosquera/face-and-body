@@ -1,4 +1,5 @@
 import { ProductCard } from "@/components/products/ProductCard";
+import { ProductSearch } from "@/components/products/ProductSearch";
 import { ProductSort } from "@/components/products/ProductSort";
 import { GroupTabs } from "@/components/treatments/GroupTabs";
 import { TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs";
@@ -32,11 +33,15 @@ export function ProductList() {
 
   return (
     <div data-group-stack>
-      {/* Above the sticky strip rather than inside it. Sort is a decision you
-          make once and then scroll, so it does not need to follow you down the
-          page, and the strip is already a horizontal scroller full of chips
-          with nowhere to put a second control that would not fight them. */}
-      <div className="mb-6 flex justify-end">
+      {/* Above the sticky strip rather than inside it, and staying there.
+          Both are decisions you make once and then scroll, unlike the chips,
+          which are navigation you use the whole way down. Pinning them too
+          would cost about 115px of the chip strip on a phone, or make the
+          stuck bar 112px on an 812px screen, and the chips are what earns
+          that space. Reconsider if anyone is ever seen scrolling back up to
+          change a sort. */}
+      <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <ProductSearch />
         <ProductSort />
       </div>
       <GroupTabs groupOf={groupOf} order={blocks.map((block) => block.slug)}>
@@ -66,7 +71,14 @@ export function ProductList() {
           {blocks.map((block) => (
             <TabsTab key={block.slug} value={block.slug}>
               {block.label}
-              <span className="ml-2 text-muted-foreground/70 group-data-active:text-copper-ink/70">
+              {/* `data-total` parks the real number so clearing the search can
+                  put it back. Recalculating it would mean counting the DOM to
+                  recover something the server already knew. */}
+              <span
+                data-count-for={block.slug}
+                data-total={block.products.length}
+                className="ml-2 text-muted-foreground/70 group-data-active:text-copper-ink/70"
+              >
                 {block.products.length}
               </span>
             </TabsTab>
@@ -74,12 +86,30 @@ export function ProductList() {
         </TabsList>
 
         {blocks.map((block) => (
-          <TabsPanel key={block.slug} value={block.slug} data-group>
+          <TabsPanel
+            key={block.slug}
+            value={block.slug}
+            data-group
+            data-group-slug={block.slug}
+          >
             <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-8">
               {block.products.map((product) => (
                 <ProductCard key={product.slug} product={product} />
               ))}
             </ul>
+            {/* Rendered always and hidden by `ProductSearch`, rather than
+                created when a search empties the panel. It is one line of
+                markup per group, and building it in JavaScript would mean the
+                empty state is the one part of this page that does not exist
+                until something goes wrong. */}
+            <p
+              data-empty
+              style={{ display: "none" }}
+              className="py-10 text-center text-[15px] text-muted-foreground"
+            >
+              Nothing in {block.label} matches. Check the numbers on the other
+              groups above.
+            </p>
             <p data-group-head className="mt-8 text-[14px] text-muted-foreground">
               {block.heading}
             </p>
