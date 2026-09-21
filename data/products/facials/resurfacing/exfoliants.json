@@ -1,0 +1,1295 @@
+{
+  "scrapedAt": "2026-09-21",
+  "category": "exfoliants",
+  "tab": "facials/resurfacing",
+  "sourceListing": "https://eminenceorganics.com/ca/face/exfoliants?sz=100",
+  "products": [
+    {
+      "slug": "strawberry-rhubarb-dermafoliant",
+      "name": "Strawberry Rhubarb Dermafoliant",
+      "itemNo": "2237",
+      "sku": "EM237",
+      "priceCad": 64,
+      "retailSize": "4.2 oz / 120 g",
+      "skinType": "All skin types",
+      "cardBlurb": "Anti-aging cleanser",
+      "tagline": "Strawberry Rhubarb Dermafoliant: Gently removes impurities and excess oil for smooth, radiant skin.",
+      "description": "Reveal bright, refined skin with the award-winning Strawberry Rhubarb Dermafoliant. Formulated with lactic acid, a blend of polishing flours and our Botanical Hyaluronic Acid Complex, this vegan exfoliant gently removes impurities and excess oil from the skin to reveal a visibly smooth, radiant complexion. Suitable for all skin types.",
+      "howToUse": "After cleansing skin with an Eminence facial cleanser, dispense a small amount of dry product to the wet palm of your hand and add a few drops of water. Rub hands together to create a creamy paste and apply to your face using circular motions, careful to avoid the delicate areas around the eye. Massage into the skin before rinsing thoroughly with water and patting skin dry.",
+      "ingredients": [
+        {
+          "name": "Rhubarb",
+          "note": "contains polyphenols to rejuvenate and preserve youthful-looking skin"
+        },
+        {
+          "name": "Heilmoor Clay",
+          "note": "contains high amounts of organic compounds and mineral trace elements to deeply clean and soften the skin"
+        },
+        {
+          "name": "Exfoliating Flour (Rice, Chickpea, Oat)",
+          "note": "gentle exfoliant; buffs and smooths skin texture"
+        },
+        {
+          "name": "Botanical Hyaluronic Acid Complex",
+          "note": "unique blend of multi-weight Hyaluronic Acid and Marshmallow Root that deeply hydrates and preserves moisture in the skin"
+        },
+        {
+          "name": "Lactic Acid",
+          "note": "exfoliant; gentle alpha-hydroxy-acid (AHA) exfoliant that removes a build up of dead skin cells"
+        },
+        {
+          "name": "Strawberry",
+          "note": "naturally contains salicylic acid that gently exfoliates and removes impurities to brighten the look of the skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Delivers intense hydration"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Skin is perfectly cleansed and gently exfoliated"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Skin is plumped and refined"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988517821",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988517821?h=6475c76f40",
+          "watchUrl": "https://vimeo.com/988517821/6475c76f40"
+        },
+        {
+          "id": "987840258",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987840258?h=de1707b987",
+          "watchUrl": "https://vimeo.com/987840258/de1707b987"
+        },
+        {
+          "id": "987839840",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987839840?h=fc32f5e326",
+          "watchUrl": "https://vimeo.com/987839840/fc32f5e326"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM253",
+          "name": "Firm Skin Acai Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM237",
+          "name": "Strawberry Rhubarb Dermafoliant",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM044",
+          "name": "Stone Crop Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM164",
+          "name": "Strawberry Rhubarb Hyaluronic Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Favorite Exfoliating Scrub, Dermascope Aestheticians’ Choice Awards, 2021",
+        "Winner of Best Facial Exfoliator, Spa & Wellness Mexicaribe Product Awards, 2020",
+        "Winner of Best Exfoliating Products for Sensitive Skin, The Zoe Report Awards, 2020",
+        "Winner of Best Tried and True Beauty Products, Popsugar Power Your Pretty Awards, 2019",
+        "Winner of Best Powder Skincare, Prevention’s Beauty Awards, 2019",
+        "Winner of Best Exfoliator, Spa & Wellness Mexicaribe Product Awards, 2018",
+        "Winner of Best “Farm to Table” Skin Care Product, NewBeauty Beauty Choice Awards, 2017"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/strawberry-rhubarb-dermafoliant/EM237.html?variant=2237",
+      "image": "/images/product-images/facials/resurfacing/strawberry-rhubarb-dermafoliant.jpg"
+    },
+    {
+      "slug": "stone-crop-oxygenating-fizzofoliant",
+      "name": "Stone Crop Oxygenating Fizzofoliant™",
+      "itemNo": "2326",
+      "sku": "EM326",
+      "priceCad": 64,
+      "retailSize": "4.2 oz / 120 g",
+      "skinType": "All skin types especially congested",
+      "cardBlurb": "With micellar technology",
+      "tagline": "Cleanse, exfoliate & brighten with our oxygenating fizzofoliant™. Invigorate & oxygenate skin for a smooth, radiant, effervescent experience.",
+      "description": "This powder-to-foam exfoliant employs microgreens, stone crop and rice flour with adzuki flour to infuse skin with a youthful looking glow. With its light fizzing action, this revitalizing formula gently invigorates the skin and removes impurities to reveal a beautiful, brighter looking complexion.",
+      "howToUse": "Dispense a small amount of dry product to wet palm of hand and add a few drops of water. Rub hands together to create a foam and apply to face using circular motions, careful to avoid the delicate areas around the eye. Massage into skin before rinsing thoroughly with water and patting dry.",
+      "ingredients": [
+        {
+          "name": "Detoxifying Microgreens Complex (Broccoli, Radish and Clover, and Detoxophane from Swiss cress sprouts)",
+          "note": "a potent blend of microgreens that protects against the drying effects of environmental stressors and reduces the signs of aging for brighter, younger looking skin"
+        },
+        {
+          "name": "Adzuki Flour",
+          "note": "exfoliates, rejuvenates and brightens skin’s appearance"
+        },
+        {
+          "name": "Rice",
+          "note": "gentle exfoliant; buffs and smoothes skin texture"
+        },
+        {
+          "name": "Stone Crop",
+          "note": "hydrates, moisturizes and heals dry skin; brightens and revitalizes the look of uneven skin tone; reduces the appearance of redness due to dryness"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Skin is perfectly cleansed and gently exfoliated"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Skin is softened for easier extractions"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Skin appears plumped and refined"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Complexion is polished and smoothed"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988517804",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988517804?h=fd7a411dc3",
+          "watchUrl": "https://vimeo.com/988517804/fd7a411dc3"
+        },
+        {
+          "id": "987841172",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987841172?h=2e84abf7e7",
+          "watchUrl": "https://vimeo.com/987841172/2e84abf7e7"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM166",
+          "name": "Kombucha Microbiome Foaming Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EMA07",
+          "name": "Stone Crop Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM326",
+          "name": "Stone Crop Oxygenating Fizzofoliant™",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM179",
+          "name": "Charcoal & Black Seed Clarifying Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 118,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM164",
+          "name": "Strawberry Rhubarb Hyaluronic Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Eye Care",
+          "sku": "EM104",
+          "name": "Wild Plum Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 7,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Detox Category, LNE & Spa’s Best Product Awards, 2024",
+        "Winner for Exfoliator Category, Spa & Wellness Mexicaribe 2022 Product Awards, 2022",
+        "Winner of Best Teen Skincare – Normal Skin: Stone Crop Collection, Spa & Wellness MexiCaribe Product Awards, 2019",
+        "Winner of Best Men's Line, Best Product Awards, LNE & Spa's, 2019",
+        "Winner of Best Exfoliator, Product Awards, Spa & Wellness Mexicaribe, 2017"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/stone-crop-oxygenating-fizzofoliant/EM326.html?variant=2326",
+      "image": "/images/product-images/facials/resurfacing/stone-crop-oxygenating-fizzofoliant.jpg"
+    },
+    {
+      "slug": "radish-seed-refining-peel",
+      "name": "Radish Seed Refining Peel",
+      "itemNo": "5103",
+      "sku": "EMA03",
+      "priceCad": 66,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "All skin types, avoid active acne or extremely sensitive skins",
+      "cardBlurb": "Gentle wash for all skin types",
+      "tagline": "Hypoallergenic peel with detoxifying herbal extracts. Prevents breakouts, stimulates renewal and smooths lines using Biodynamic® ingredients.",
+      "description": "This hypoallergenic peel helps prevent the appearance of breakouts with its detoxifying herbal extracts. Nettle, whole grain oat and willow bark stimulate skin renewal and smooth the appearance of lines. \n\nMade with Biodynamic® ingredients from Demeter International Certified Biodynamic® farms.",
+      "howToUse": "For sensitive skin: Dilute with water and apply a thin layer of the peel onto clean and dry skin of the face and neck areas avoiding the eye area and active lesions. Allow to remain on the skin for 3–5 minutes before removing with cool water. \n\nFor normal skin: Apply a thin layer of the peel onto clean and dry skin of the face and neck areas, avoiding the eye area and active lesions. Allow to remain on the skin for 3–5 minutes before removing with cool water. Dilution not required. \n\nFor extra exfoliation and non-sensitive skin: Apply a thin layer of the peel onto clean and dry skin of the face and neck areas, avoiding the eye area and active lesions. Allow to remain on the skin for 5–10 minutes before removing with cool water. Dilution not required. If desired, these products can neutralize the masque: Yellow Sweet Clover Anti-Redness Masque , Apricot Calendula Nourishing Cream , Echinacea Recovery Cream , Seabuckthorn Balancing Masque .",
+      "ingredients": [
+        {
+          "name": "Whole Grain Oat",
+          "note": "deeply cleanses and smoothes skin"
+        },
+        {
+          "name": "Radish Seed Extract",
+          "note": "reduces the appearance of signs of aging"
+        },
+        {
+          "name": "Nettle",
+          "note": "energizes skin"
+        },
+        {
+          "name": "Lemon Balm",
+          "note": "purifies"
+        },
+        {
+          "name": "Willow Bark",
+          "note": "calms and soothes"
+        },
+        {
+          "name": "Naseberry",
+          "note": "improves tone and texture"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Dullness",
+          "outcome": "Skin appears smoother and more refined"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Skin appears firmer and plumped"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Wrinkle depth and fine lines appear reduced"
+        }
+      ],
+      "features": [
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988103125",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988103125?h=1e10811634",
+          "watchUrl": "https://vimeo.com/988103125/1e10811634"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM066",
+          "name": "Stone Crop Gel Wash",
+          "category": "Cleansers",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EMA03",
+          "name": "Radish Seed Refining Peel",
+          "category": "Exfoliants",
+          "priceCad": 66,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM240",
+          "name": "Calm Skin Arnica Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM010",
+          "name": "Facial Recovery Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM053",
+          "name": "Stone Crop Whip Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Organic Category, Best Product Awards, LNE & Spa’s, 2021"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/radish-seed-refining-peel/EMA03.html?variant=5103",
+      "image": "/images/product-images/facials/resurfacing/radish-seed-refining-peel.jpg"
+    },
+    {
+      "slug": "charcoal-exfoliating-gel-cleanser",
+      "name": "Charcoal Exfoliating Gel Cleanser",
+      "itemNo": "2132",
+      "sku": "EM132",
+      "priceCad": 68,
+      "retailSize": "5 oz / 150 ml",
+      "skinType": "Oily to normal skin types including congested, dull and large pores",
+      "cardBlurb": "Exfoliating gel cleanser",
+      "tagline": "Purifying cleanser with charcoal, malachite and blue matcha. Exfoliates to reveal balanced skin.",
+      "description": "Formulated with charcoal, malachite gemstones and blue matcha, this supercharged purifying cleanser transforms from a gel to an exfoliating lather to wash away impurities and reveal a balanced complexion.",
+      "howToUse": "Mix a small amount of product with water in hands, apply and massage gently with fingertips in a circular motion covering the face and neck areas. Rinse thoroughly and pat dry. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Blue Matcha (Butterfly Pea Flower)",
+          "note": "rich in antioxidants that improve the visible signs of aging; increases the appearance of skin’s vitality"
+        },
+        {
+          "name": "Peppermint",
+          "note": "rich in antioxidants and Vitamins A and C that target and improve the appearance of aging"
+        },
+        {
+          "name": "Charcoal",
+          "note": "draws out oil, dirt and other harmful substances from clogged pores due to its absorption powers; improves the appearance of skin health"
+        },
+        {
+          "name": "Malachite Gemstones",
+          "note": "stone of transformation, helps the mind release stress and feel optimistic and balanced"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Dullness",
+          "outcome": "Skin is left invigorated and looking energized"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "Pores are refined and minimized"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Excess oil is removed from the surface of the skin"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1133695315",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1133695315?h=39e5b3dc46",
+          "watchUrl": "https://vimeo.com/1133695315/39e5b3dc46"
+        },
+        {
+          "id": "987838702",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987838702?h=dfc846f9c7",
+          "watchUrl": "https://vimeo.com/987838702/dfc846f9c7"
+        },
+        {
+          "id": "987836592",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987836592?h=2235edfe23",
+          "watchUrl": "https://vimeo.com/987836592/2235edfe23"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM132",
+          "name": "Charcoal Exfoliating Gel Cleanser",
+          "category": "Cleansers",
+          "priceCad": 68,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM178",
+          "name": "Charcoal & Black Seed Clay Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM179",
+          "name": "Charcoal & Black Seed Clarifying Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 118,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM129",
+          "name": "Mangosteen Gel Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Top Facial Cleanser, Organic Spa Media Beauty Awards, 2025"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/charcoal-exfoliating-gel-cleanser/EM132.html?variant=2132",
+      "image": "/images/product-images/facials/resurfacing/charcoal-exfoliating-gel-cleanser.jpg"
+    },
+    {
+      "slug": "yam-pumpkin-enzyme-peel-5",
+      "name": "Yam & Pumpkin Enzyme Peel 5%",
+      "itemNo": "282",
+      "sku": "EM082",
+      "priceCad": 62,
+      "retailSize": "2 oz / 60 ml",
+      "skinType": "All skin types except in active acne areas",
+      "cardBlurb": "With micellar technology",
+      "tagline": "Enzyme peel to exfoliate, reduce pigmentation, fine lines and sun damage.",
+      "description": "Accelerate the exfoliation process with this enzyme peel that removes dead skin cells, reduces the appearance of pigmentation, fine lines and sun damage. This delicious purée of yam and pumpkin leaves skin looking firm and radiant.",
+      "howToUse": "Apply a thin layer of product over clean and dry face and neck with a fan applicator brush. Avoid the eye area or active acne lesions. Allow to remain on the skin for 10–15 minutes. Gently massage with fingertips to loosen dead skin cells. \n\nIn the case of excessive stinging or irritation, remove product quickly and immediately using a towel soaked in cool water or tea. Follow with cotton pads soaked in the Soothing Chamomile Tonique to deactivate the product. Rinse again with towels soaked in cool water. \n\nFor use as a bi-weekly treatment at home in conjunction with professional in–spa enzyme peel treatments. An application of Mineral (Sun) Defense 30 to finish is highly recommended with peeling products. Not recommended for use on active acne areas of the skin.",
+      "ingredients": [
+        {
+          "name": "Lactic Acid",
+          "note": "sloughs off dead skin cells to improve texture of skin"
+        },
+        {
+          "name": "Willow Bark Extract",
+          "note": "natural beta-hydroxy to minimize the appearance of pores"
+        },
+        {
+          "name": "Pumpkin Pulp Purée",
+          "note": "rich in enzymes, beta-carotene, amino acids, and antioxidants to fight the appearance of aging"
+        },
+        {
+          "name": "Glycolic Acid",
+          "note": "soothing and smoothing agent"
+        },
+        {
+          "name": "Yam",
+          "note": "high in beta-carotene and vitamins to fight the appearance of aging"
+        },
+        {
+          "name": "Botanical Hyaluronic Acid",
+          "note": "deeply hydrating; natural substance that smooths and plumps skin to minimize the appearance of fine lines and wrinkles"
+        },
+        {
+          "name": "Papaya",
+          "note": "contains vitamins and fruit enzymes to improve the appearance of skin"
+        },
+        {
+          "name": "Pineapple",
+          "note": "purifies skin by removing dirt and proteins"
+        },
+        {
+          "name": "Green Tea Extract",
+          "note": "high in antioxidants, polyphenols, flavonoids, and vitamins for youthful looking skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin appears refined and smoothed, the appearance of dark spots are reduced"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Skin appears firmed and plumped"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The appearance of wrinkle depth and fine lines are reduced"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "996839892",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/996839892?h=f892da557e",
+          "watchUrl": "https://vimeo.com/996839892/f892da557e"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM166",
+          "name": "Kombucha Microbiome Foaming Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM082",
+          "name": "Yam & Pumpkin Enzyme Peel 5%",
+          "category": "Exfoliants",
+          "priceCad": 62,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM000",
+          "name": "Seabuckthorn Balancing Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 62,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM157",
+          "name": "Bamboo Firming Fluid",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Favorite Facial Peel, Sarah Afshar's Best in Beauty, Beauty Examiner, 2015"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/yam-pumpkin-enzyme-peel-5/EM082.html?variant=282",
+      "image": "/images/product-images/facials/resurfacing/yam-pumpkin-enzyme-peel-5.jpg"
+    },
+    {
+      "slug": "calm-skin-chamomile-exfoliating-peel",
+      "name": "Calm Skin Chamomile Exfoliating Peel",
+      "itemNo": "919EPCLM",
+      "sku": "EM312",
+      "priceCad": 98,
+      "retailSize": "1.7 oz / 50 ml",
+      "skinType": "All skin types, especially sensitive and rosacea-prone",
+      "cardBlurb": "For sensitive prone skin types",
+      "tagline": "Gently exfoliate & soothe sensitive skin with our calming chamomile peel. Calm redness & irritation for a refined, balanced complexion.",
+      "description": "A gentle exfoliating peel solution with cotton round pads for sensitive skin types. Renew sensitive skin without irritation with lactic and mandelic acids. Chamomile refreshes, calendula moisturizes and soothes the look of redness, and the arnica flower reduces the appearance of inflammation. Reveal a calm, balanced and more luminous complexion with this peel solution that is mild enough to use on sensitive skin two to three times a week.",
+      "howToUse": "Dispense one to two pumps of the solution on one of the dual-textured cotton round pads provided. Apply in circular motions covering the face and neck, avoiding the eye area and leave on. \n\nUse up to three times per week as required. \n\nIMPORTANT: Skin will be more sensitive to the sun. Use a sunscreen, wear protective clothing, and limit sun exposure while using this product.",
+      "ingredients": [
+        {
+          "name": "Grapeseed",
+          "note": "potent antioxidant, rich in polyphenols"
+        },
+        {
+          "name": "Mandelic Acid",
+          "note": "gently exfoliates, effective at treating the look of fine lines and redness"
+        },
+        {
+          "name": "Chamomile",
+          "note": "revitalizes, soothes and balances the appearance of dry skin"
+        },
+        {
+          "name": "White Genepi",
+          "note": "antioxidant"
+        },
+        {
+          "name": "Arnica Flower",
+          "note": "reduces the look of inflammation"
+        },
+        {
+          "name": "Lactic Acid",
+          "note": "gentle alpha-hydroxy-acid (AHA) exfoliant; removes surface build-up and improves skin hydration for a brighter, smoother complexion"
+        },
+        {
+          "name": "Calendula",
+          "note": "soothes and nourishes dry skin; promotes skin repair"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Redness",
+          "outcome": "Relieves the look of redness"
+        },
+        {
+          "concern": "Redness",
+          "outcome": "Reduces the appearance of irritation and inflammation"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is left feeling soft, smooth and revitalized"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin is prepared to receive further treatments for increased benefits"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Results are enhanced when using entire Calm Skin VitaSkin™ Solution"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Soy Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "987841691",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987841691?h=f5caf6b706",
+          "watchUrl": "https://vimeo.com/987841691/f5caf6b706"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM251",
+          "name": "Calm Skin Chamomile Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM167",
+          "name": "Kombucha Microbiome Balancing Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM312",
+          "name": "Calm Skin Chamomile Exfoliating Peel",
+          "category": "Exfoliants",
+          "priceCad": 98,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 4,
+          "action": "Mask",
+          "sku": "EM240",
+          "name": "Calm Skin Arnica Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Treat",
+          "sku": "EM279",
+          "name": "Calm Skin Arnica Booster-Serum",
+          "category": null,
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Moisturize",
+          "sku": "EM252",
+          "name": "Calm Skin Chamomile Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 74,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 7,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Honorable Mention of ASCP Readers' Choice Awards: Favorite Sensitive Skin Line, ASCP Skin Deep, 2019",
+        "Winner of Best Organic Facial, Harper's Bazaar Malaysia Spa Awards, 2017",
+        "Winner of Best Organic Beauty, New You 2015 Beaty Award Winner, 2015"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/calm-skin-chamomile-exfoliating-peel/EM312.html?variant=919EPCLM",
+      "image": "/images/product-images/facials/resurfacing/calm-skin-chamomile-exfoliating-peel.jpg"
+    },
+    {
+      "slug": "clear-skin-willow-bark-exfoliating-peel",
+      "name": "Clear Skin Willow Bark Exfoliating Peel",
+      "itemNo": "919EPCLR",
+      "sku": "EM313",
+      "priceCad": 98,
+      "retailSize": "1.7 oz / 50 ml",
+      "skinType": "All skin types, especially acne-prone skin",
+      "cardBlurb": "For problem prone skin types",
+      "tagline": "Clear pores & prevent breakouts with our willow bark exfoliating peel. Improve skin texture & reduce imperfections for a smooth, clear finish.",
+      "description": "A deep-cleansing, clarifying peel solution with cotton round pads for problem skin types. Clarify and refine the complexion without irritation while reducing the appearance of problem skin. Gentle salicylic acid removes surface impurities and dirt from the skin, allowing the synergistic action of biosulphur and tomato extract to help balance sebum. Willow bark calms the look of skin while lilac and azelaic acid help to reduce the appearance of redness and inflammation. The peel reduces pore size and skin is left feeling clear, smooth and revitalized.",
+      "howToUse": "Dispense one to two pumps of the solution on one of the dual-textured cotton round pads provided. Apply in circular motions covering the face and neck, avoiding the eye area and leave on. \n\nUse up to three times per week as required. \n\nIMPORTANT: Skin will be more sensitive to the sun. Use a sunscreen, wear protective clothing, and limit sun exposure while using this product.",
+      "ingredients": [
+        {
+          "name": "Biosulphur",
+          "note": "combats the look of redness and the appearance of inflammation; cleans pores"
+        },
+        {
+          "name": "Salicylic Acid",
+          "note": "gentle exfoliant; reduces pores and smooths the skin’s surface"
+        },
+        {
+          "name": "Willow Bark",
+          "note": "astringent; calms and soothes the look of inflammation"
+        },
+        {
+          "name": "Azelaic Acid",
+          "note": "antioxidant, reduces the look of inflammation"
+        },
+        {
+          "name": "Tomato Extract",
+          "note": "rich in vitamins, minerals and lycopene; balances the look of skin"
+        },
+        {
+          "name": "Lactic Acid",
+          "note": "gentle alpha-hydroxy-acid (AHA) exfoliant; removes surface build-up and improves skin hydration for a brighter, smoother complexion"
+        },
+        {
+          "name": "Lilac Extract",
+          "note": "reduces the look of redness"
+        },
+        {
+          "name": "Fruit Acids",
+          "note": "increases the skin’s moisture levels"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Problem areas are improved"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Results are enhanced when using the entire Clear Skin VitaSkin™ Solution"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "Pores are minimized"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is left soft and noticeably smoother"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin is prepared to receive further treatments for increased benefits"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Soy Free",
+        "Vegan"
+      ],
+      "videos": [],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM249",
+          "name": "Clear Skin Probiotic Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM167",
+          "name": "Kombucha Microbiome Balancing Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM313",
+          "name": "Clear Skin Willow Bark Exfoliating Peel",
+          "category": "Exfoliants",
+          "priceCad": 98,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 4,
+          "action": "Mask",
+          "sku": "EM239",
+          "name": "Clear Skin Probiotic Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Treat",
+          "sku": "EM280",
+          "name": "Clear Skin Willow Bark Booster-Serum",
+          "category": "Natural Oils",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Moisturize",
+          "sku": "EM250",
+          "name": "Clear Skin Probiotic Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 74,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 7,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Acne Collection, ASCP Skin Deep Readers’ Choice Awards, 2018",
+        "Winner of Best Acne Collection, DaySpa Professional Choice Awards, 2017"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/clear-skin-willow-bark-exfoliating-peel/EM313.html?variant=919EPCLR",
+      "image": "/images/product-images/facials/resurfacing/clear-skin-willow-bark-exfoliating-peel.jpg"
+    },
+    {
+      "slug": "firm-skin-acai-exfoliating-peel",
+      "name": "Firm Skin Acai Exfoliating Peel",
+      "itemNo": "919EPFRM",
+      "sku": "EM314",
+      "priceCad": 98,
+      "retailSize": "1.7 oz / 50 ml",
+      "skinType": "All skin types, especially mature and dry skin types",
+      "cardBlurb": "Anti-aging cleanser",
+      "tagline": "Firm & revitalize aging skin with our acai exfoliating peel. Smooth lines, boost radiance & achieve younger-looking skin with powerful exfoliation.",
+      "description": "A firming peel solution with cotton round pads for normal to dry or mature skin types. Hydrate your skin deeply and reduce the appearance of fine lines and wrinkles with this active, exfoliating peel solution. Packed with antioxidants sourced from acai berry, grapefruit and goji, the peel also includes lactic and glycolic acids which result in firmer looking skin. Regular use of this peel will visibly increase skin’s firmness, restore its elasticity and reveal a smoother, softer, younger looking complexion.",
+      "howToUse": "Dispense one to two pumps of the solution on one of the dual-textured cotton round pads provided. Apply in circular motions covering the face and neck, avoiding the eye area and leave on. \n\nUse up to three times per week as required. \n\nIMPORTANT: Skin will be more sensitive to the sun. Use a sunscreen, wear protective clothing, and limit sun exposure while using this product.",
+      "ingredients": [
+        {
+          "name": "Acai Berry",
+          "note": "a powerhouse with high antioxidant, additional phytonutrient and vitamin content"
+        },
+        {
+          "name": "Grapefruit",
+          "note": "rich in antioxidants and vitamin C; tones the skin"
+        },
+        {
+          "name": "Lactic Acid",
+          "note": "gentle alpha-hydroxy-acid (AHA) exfoliant; removes surface build-up and improves skin hydration for a brighter, smoother complexion"
+        },
+        {
+          "name": "Glycolic Acid",
+          "note": "exfoliant that rejuvenates, balances and smooths the look of wrinkles"
+        },
+        {
+          "name": "Goji",
+          "note": "antioxidants and carotenoids"
+        },
+        {
+          "name": "Noni Fruit",
+          "note": "reduces the look of inflammation and the appearance of wrinkles"
+        },
+        {
+          "name": "Fruit Acids",
+          "note": "increases the skin’s moisture levels"
+        },
+        {
+          "name": "English Pea",
+          "note": "improves skin elasticity and firmness"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Visible Signs Of Aging are reduced"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is plumped and hydrated"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is left soft and noticeably smoother"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Skin is firmed and revitalized"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin is prepared to receive further treatments for increased benefits"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Results are enhanced when using entire Firm Skin VitaSkin™ Solution"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free"
+      ],
+      "videos": [],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM253",
+          "name": "Firm Skin Acai Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM314",
+          "name": "Firm Skin Acai Exfoliating Peel",
+          "category": "Exfoliants",
+          "priceCad": 98,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 4,
+          "action": "Mask",
+          "sku": "EM241",
+          "name": "Firm Skin Acai Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Treat",
+          "sku": "EM281",
+          "name": "Firm Skin Acai Booster-Serum",
+          "category": "Hyaluronic Acid",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Moisturize",
+          "sku": "EM254",
+          "name": "Firm Skin Acai Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 74,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 7,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Editor's Must Haves, Yoga Journal, 2017",
+        "Winner of Best Firming Peel, Elite Magazine Green Beauty Awards, China, 2016"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/firm-skin-acai-exfoliating-peel/EM314.html?variant=919EPFRM",
+      "image": "/images/product-images/facials/resurfacing/firm-skin-acai-exfoliating-peel.jpg"
+    },
+    {
+      "slug": "bright-skin-licorice-root-exfoliating-peel",
+      "name": "Bright Skin Licorice Root Exfoliating Peel",
+      "itemNo": "919EPBRT",
+      "sku": "EM311",
+      "priceCad": 98,
+      "retailSize": "1.7 oz / 50 ml",
+      "skinType": "All skin types, including hyperpigmented",
+      "cardBlurb": "Uneven skin corrective cleanser",
+      "tagline": "Brighten & exfoliate hyperpigmentation with our licorice root peel. Even skin tone & reveal a radiant complexion with natural brighteners.",
+      "description": "A results-oriented peel solution with cotton round pads that reduces the look of uneven pigmentation. Lactic and mandelic acids gently exfoliate dead skin cells while licorice root and our Natural Hydroquinone Alternative from African potato and tara tree brighten the appearance of dark spots and hyperpigmentation.",
+      "howToUse": "Dispense one to two pumps of the solution on one of the dual-textured cotton round pads provided. Apply in circular motions covering the face and neck, avoiding the eye area and leave on. \n\nUse up to three times per week as required. \n\nIMPORTANT: Skin will be more sensitive to the sun. Use a sunscreen, wear protective clothing, and limit sun exposure while using this product.",
+      "ingredients": [
+        {
+          "name": "Daisy Blossom",
+          "note": "cleans skin, brightens the appearance of pigmentation"
+        },
+        {
+          "name": "Licorice Root",
+          "note": "promotes skin elasticity, brightens the appearance of pigmentation, fights the look of wrinkles"
+        },
+        {
+          "name": "Baobab",
+          "note": "antioxidant, brightens and tones the skin, moisturizes, reduces the look of inflammation"
+        },
+        {
+          "name": "Mandelic Acid",
+          "note": "gently exfoliates, effective at treating the look of fine lines and redness"
+        },
+        {
+          "name": "Azelaic Acid",
+          "note": "antioxidant, reduces the look of inflammation"
+        },
+        {
+          "name": "Clary Sage Oil",
+          "note": "calming; balances oil production"
+        },
+        {
+          "name": "Lactic Acid",
+          "note": "gentle alpha-hydroxy-acid (AHA) exfoliant; removes surface build-up and improves skin hydration for a brighter, smoother complexion"
+        },
+        {
+          "name": "Natural Hydroquinone Alternative",
+          "note": "a natural brightening agent made with African potato and tara tree for the appearance of a smooth, radiant complexion"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Reduces the look of dark spots"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin tone is improved"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin looks refined and smoothed with reduced appearance in hyperpigmentation"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Complexion appears bright and even"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is moisturized and more vitalized"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin is prepared to receive further treatments for increased benefits"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Results are enhanced when using entire Bright Skin VitaSkin™ Solution"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Soy Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "988062089",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988062089?h=0aa5010546",
+          "watchUrl": "https://vimeo.com/988062089/0aa5010546"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM270",
+          "name": "Bright Skin Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM311",
+          "name": "Bright Skin Licorice Root Exfoliating Peel",
+          "category": "Exfoliants",
+          "priceCad": 98,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 4,
+          "action": "Mask",
+          "sku": "EM271",
+          "name": "Bright Skin Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Treat",
+          "sku": "EM278",
+          "name": "Bright Skin Licorice Root Booster-Serum",
+          "category": "PHA, AHA, BHA",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Moisturize",
+          "sku": "EM176",
+          "name": "Bakuchiol + Niacinamide Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 7,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Honorable Mention of ASCP Readers' Choice Awards: Favorite Hyperpigmentation Line, ASCP Skin Deep, 2019",
+        "Winner of Best Exfoliator, Hi Style Best Beauty Buys, 2019",
+        "Winner of Best Hyperpigmentation Collection, ASCP Skin Deep Readers’ Choice Awards, 2018​",
+        "Winner of Best Brightening Peel, Elite Magazine Green Beauty Awards, China, 2016"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/bright-skin-licorice-root-exfoliating-peel/EM311.html?variant=919EPBRT",
+      "image": "/images/product-images/facials/resurfacing/bright-skin-licorice-root-exfoliating-peel.jpg"
+    }
+  ]
+}

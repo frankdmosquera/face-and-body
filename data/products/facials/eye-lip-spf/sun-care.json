@@ -1,0 +1,841 @@
+{
+  "scrapedAt": "2026-09-21",
+  "category": "sun-care",
+  "tab": "facials/eye-lip-spf",
+  "sourceListing": "https://eminenceorganics.com/ca/face/sun-care?sz=100",
+  "products": [
+    {
+      "slug": "sun-defense-minerals",
+      "name": "Sun Defense Minerals",
+      "itemNo": "5187C",
+      "sku": "EMSDM",
+      "priceCad": 64,
+      "retailSize": "5.5 g / 0.19 oz",
+      "skinType": "All skin types",
+      "cardBlurb": "Hydrating and soothing toner",
+      "tagline": "Protect our skin daily with our mineral defense powders. Our mineral formula provides broad-spectrum SPF & light coverage for natural sun defense.",
+      "description": "Treat your skin to this feather-light, mattifying broad-spectrum mineral sunscreen. Designed to protect your skin from UVA, UVB and blue light, this soft powder sunscreen with SPF 30 perfects your complexion with a touch of tint. Sweep on buildable coverage to achieve your ideal finish, delivering a nearly invisible, matte look. Enriched with botanical vitamins and antioxidants from green tea extract and buriti oil, this formula keeps your skin nourished and hydrated. The innovative flow-through brush makes on-the-go reapplication effortless, so you can step out with confidence, knowing your skin is protected and radiant. \r\n\r\nWith six shades to choose from, achieving flawless, protected skin is as easy as shake, apply and go!",
+      "howToUse": "How To Activate And Apply: \r\n\r\nTwist and remove blocker at center of brush. Replace cap and firmly tap downward on hard surface 2-3 times. Swipe finger over bristles to ensure powder is flowing. Your brush is activated. \r\n\r\nSweep powder generously over skin in circular motions. \r\n\r\nTo release more powder after brush activation, you only need to shake cap-side down 1–2 times. Check again that powder is flowing. Apply and blend. \r\n\r\nApply liberally 15 minutes prior to sun exposure. Reapply at least every 2 hours and after 40 minutes of swimming or sweating and immediately after towel drying. Consult a doctor before using on children under 6 months of age. \r\n\r\nSun Protection Measures: Spending time in the sun increases your risk of skin cancer and early skin aging. To decrease this risk, regularly use a sunscreen with a broad spectrum SPF value of 15 or higher and other sun protection measures including: Limit time in the sun, especially from 10am–2pm and wear long-sleeved shirts, pants, hats and sunglasses. \r\n\r\nHow To Clean Brush: \r\n\r\nSpray brush cleaner on cotton pad and swipe cotton pad across the bristles of your upright brush. Repeat as needed. Take another clean cotton pad to remove remaining residue. Ensure bristles are dry before next use.",
+      "ingredients": [
+        {
+          "name": "Buriti Oil",
+          "note": "rich in vitamin E and essential fatty acids to provide deep hydration; nourishes and replenishes the look of skin"
+        },
+        {
+          "name": "Green Tea Extract",
+          "note": "high in antioxidants, polyphenols, flavonoids and vitamins; encourages youthful-looking skin; minimizes dryness associated with exposure to environmental stressors"
+        },
+        {
+          "name": "Zinc Oxide",
+          "note": "natural mineral; protects from UVA and UVB rays"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Effects of the Sun",
+          "outcome": "Provides SPF 30 UVA & UVB protection"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Helps even and smooth the look of the complexion and reduce shine"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Water and sweat resistant for 40 minutes"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Protects against blue light"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Vitamins and antioxidants improve the skin’s appearance"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Provides a silky matte finish to the skin"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Long wearing, even coverage"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1032481513",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1032481513?h=8acf37179c",
+          "watchUrl": "https://vimeo.com/1032481513/8acf37179c"
+        },
+        {
+          "id": "1062593331",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/1062593331?h=bf029fa437",
+          "watchUrl": "https://vimeo.com/1062593331/bf029fa437"
+        },
+        {
+          "id": "1060706049",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/1060706049?h=13a7fc3fc4",
+          "watchUrl": "https://vimeo.com/1060706049/13a7fc3fc4"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Tone",
+          "sku": "EMA07",
+          "name": "Stone Crop Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM048",
+          "name": "Stone Crop Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 62,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM328",
+          "name": "Marine Flower Peptide Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM164",
+          "name": "Strawberry Rhubarb Hyaluronic Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [
+        "Winner of Best Bronzing Brush, Social & Personal Best Beauty Buys, 2026",
+        "Winner of Best Facial Sun Protection, Spa & Wellness MexiCaribe Product Awards, 2025",
+        "Winner of Best Powder Sunscreen, Cosmopolitan Holy Grail Beauty Awards, 2025"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/sun-defense-minerals/EMSDM.html?variant=5187C",
+      "image": "/images/product-images/facials/eye-lip-spf/sun-defense-minerals.jpg"
+    },
+    {
+      "slug": "radiant-protection-spf-fluid",
+      "name": "Radiant Protection SPF Fluid",
+      "itemNo": "5177",
+      "sku": "EM177",
+      "priceCad": 66,
+      "retailSize": "1.7 oz / 50 ml",
+      "skinType": "Combination to dry skin types",
+      "cardBlurb": "Anti-aging cleanser",
+      "tagline": "Hydrating, nourishing SPF 30 fluid protects skin from sun, smooths fine lines and offers a dewy finish. Perfect for combination to dry skin.",
+      "description": "Help protect skin from the harsh effects of the sun while smoothing the look of fine lines and wrinkles. With a hydrating, nourishing feel and dewy finish, this SPF keeps skin looking ageless while offering broad spectrum SPF 30 protection for combination to dry skin.",
+      "howToUse": "For The Best Application Experience: \r\n\r\nShake well before use \r\nDispense a ¼ - ½ teaspoon to start \r\nWarm up in hands \r\nApply liberally and evenly on cleansed face, neck & chest area, 15 minutes before sun exposure \r\nLet skin absorb SPF before adding more \r\nAdd gradually for more coverage \r\nReapply at least every 2 hours \r\nUse water-resistant sunscreen if swimming or sweating \r\n\r\n\r\n\n\r\n\r\nSun Protection Measures: \r\nSpending time in the sun increases your risk of skin cancer and early skin aging. To decrease the risk, regularly use a sunscreen with a broad spectrum SPF value of 15 or higher and other sun protection measures including: \r\n\r\nLimiting time in the sun, especially between 10:00am – 2:00pm \r\nWearing hats, sunglasses, pants and long-sleeved shirts \r\n\r\n\r\n\n\r\n\r\nConsult a doctor before use on children under 6 months of age.",
+      "ingredients": [
+        {
+          "name": "Bakuchiol",
+          "note": "a retinol alternative; smooths skin’s texture to minimize the visible signs of aging"
+        },
+        {
+          "name": "Zinc Oxide",
+          "note": "natural mineral; protects from UVA and UVB rays"
+        },
+        {
+          "name": "Niacinamide",
+          "note": "vitamin B3; visibly reduces pore size, retains hydration, supports the skin barrier and smooths uneven texture"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Effects Of The Sun",
+          "outcome": "Provides broad spectrum SPF protection – SPF 30"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Minimizes the appearance of fine lines and wrinkles"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Leaves skin with a dewy finish"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Applies smoothly and lightly on skin"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Absorbs well"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM253",
+          "name": "Firm Skin Acai Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM172",
+          "name": "Superfood Booster-Powder",
+          "category": "Tropical Superfood",
+          "priceCad": 72,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM300",
+          "name": "Citrus & Kale Potent C+E Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM176",
+          "name": "Bakuchiol + Niacinamide Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EM177",
+          "name": "Radiant Protection SPF Fluid",
+          "category": "Sun Care",
+          "priceCad": 66,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [
+        "Winner of Best Sunscreen for Aging Skin, NewBeauty Awards, 2024"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/radiant-protection-spf-fluid/EM177.html?variant=5177",
+      "image": "/images/product-images/facials/eye-lip-spf/radiant-protection-spf-fluid.jpg"
+    },
+    {
+      "slug": "lilikoi-mineral-defense-sport-sunscreen-spf-30",
+      "name": "Lilikoi Mineral Defense Sport Sunscreen SPF 30",
+      "itemNo": "2120",
+      "sku": "EM120",
+      "priceCad": 58,
+      "retailSize": "5 oz / 147 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Gentle, balancing facial cleanser",
+      "tagline": "Easy-to-apply, non-greasy, water-resistant SPF 30 mineral sunscreen with zinc oxide. Stays on when swimming or sweating, lightweight finish.",
+      "description": "An easy-to-apply sport formulation for face and body, this SPF 30 mineral filter sunscreen is non-greasy and water-resistant up to 40 minutes. Highly effective for outdoor activities like swimming and high-performance sports where perspiration can impact standard sunscreen efficacy, this zinc oxide sunscreen protects from head to toe.",
+      "howToUse": "Apply a liberal layer over the face and body 15 minutes before sun exposure and leave on. Reapply at least every 2 hours. Reapply after 40 minutes of swimming or sweating and immediately after towel drying.",
+      "ingredients": [
+        {
+          "name": "Zinc Oxide",
+          "note": "natural mineral; protects from UVA and UVB rays"
+        },
+        {
+          "name": "Lilikoi (Passion Fruit) Seed Oil",
+          "note": "contains Vitamin C and antioxidants which help with the visible signs of aging"
+        },
+        {
+          "name": "Raspberry Seed Oil",
+          "note": "moisturizer; antioxidant and rich in Vitamin C which minimize the appearance of aging"
+        },
+        {
+          "name": "Aloe Vera",
+          "note": "moisturizer; soothes dry skin, alleviates the appearance of damage from sun exposure, hydrates and softens the skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Antioxidants minimizes the appearance of accelerated aging"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Water-resistant 'sport' formulation helps protect skin from UV damage, even when swimming or sweating"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Delivers a lightweight finish with a fresh, natural look to the skin"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "988154329",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988154329?h=6dc46153e3",
+          "watchUrl": "https://vimeo.com/988154329/6dc46153e3"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM325",
+          "name": "Stone Crop Cleansing Oil",
+          "category": "Cleansers",
+          "priceCad": 68,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM326",
+          "name": "Stone Crop Oxygenating Fizzofoliant™",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM300",
+          "name": "Citrus & Kale Potent C+E Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Protect SPF",
+          "sku": "EM120",
+          "name": "Lilikoi Mineral Defense Sport Sunscreen SPF 30",
+          "category": "Sun Care",
+          "priceCad": 58,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM054",
+          "name": "Stone Crop Body Lotion",
+          "category": "Body Lotions & Oils",
+          "priceCad": 39,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Favorite Body Sunscreen, Dermascope Aestheticians’ Choice Awards, 2023"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/lilikoi-mineral-defense-sport-sunscreen-spf-30/EM120.html?variant=2120",
+      "image": "/images/product-images/facials/eye-lip-spf/lilikoi-mineral-defense-sport-sunscreen-spf-30.jpg"
+    },
+    {
+      "slug": "lilikoi-daily-defense-moisturizer-spf-40",
+      "name": "Lilikoi Daily Defense Moisturizer SPF 40",
+      "itemNo": "2139",
+      "sku": "EM139",
+      "priceCad": 79,
+      "retailSize": "2 oz / 60 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Gentle, balancing facial cleanser",
+      "tagline": "Lightweight daily moisturizer with SPF 40 mineral protection. Cocoa seed, mandarin peel and SPF protect against blue light and pollution.",
+      "description": "An all-in-one lightweight daily moisturizer formulated with cocoa seed extract, satsuma mandarin peel and SPF 40 mineral filter protection to improve the appearance of skin exposed to blue-light stress and pollution. Suitable for all skin types.",
+      "howToUse": "Apply liberally 15 minutes before sun exposure \r\nReapply at least every 2 hours \r\nUse a water-resistant sunscreen if swimming or sweating \r\nChildren under 6 months of age: Ask a doctor \r\n\r\n\r\n\n\r\n\r\nSUN PROTECTION MEASURES: \r\n\r\nSpending time in the sun increases your risk of skin cancer and early skin aging. To decrease this risk, regularly use a sunscreen with a broad spectrum SPF value of 15 or higher and other sun protection measures including: \r\n\r\n\r\nLimit time in the sun, especially from 10 a.m. – 2 p.m.; and \r\nWear long-sleeved shirts, pants, hats, and sunglasses \r\n\r\n\r\n\n\r\n\r\nFOR THE BEST APPLICATION EXPERIENCE: \r\n\r\n1. Apply a serum, oil or concentrate to prep and hydrate skin\n\r\n2. Dispense a pea-sized amount of SPF moisturizer to start\n\r\n3. Warm up in hands\n\r\n4. Apply to forehead, nose & cheeks first\n\r\n5. Work into rest of face, neck & chest\n\r\n6. Let skin absorb the SPF moisturizer before adding more\n\r\n7. Add gradually for more coverage",
+      "ingredients": [
+        {
+          "name": "Cocoa Seed Extract",
+          "note": "a blend of cocoa peptides, saccharides and polyphenols to help improve the appearance of skin exposed to blue-light stress"
+        },
+        {
+          "name": "Larch Tree",
+          "note": "moisturizer, protects dry skin from dehydration and environmental stress"
+        },
+        {
+          "name": "Zinc Oxide",
+          "note": "natural mineral; protects from UVA and UVB rays"
+        },
+        {
+          "name": "Satsuma Mandarin Peel Extract",
+          "note": "minimizes the appearance of effects due to pollution stress"
+        },
+        {
+          "name": "Lilikoi (Passion Fruit) Seed Oil",
+          "note": "excellent source of Vitamin C and antioxidants that improve the appearance of dry skin exposed to environmental stressors"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Effects of the Sun",
+          "outcome": "Skin is left lightly hydrated and protected to help prevent sunburn"
+        },
+        {
+          "concern": "Effects of the Sun",
+          "outcome": "Visible effects of blue-light exposure is improved"
+        },
+        {
+          "concern": "Effects of the Sun",
+          "outcome": "Dry skin is protected from the effects of outside and indoor environmental stressors"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988509164",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988509164?h=e4b365345d",
+          "watchUrl": "https://vimeo.com/988509164/e4b365345d"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM325",
+          "name": "Stone Crop Cleansing Oil",
+          "category": "Cleansers",
+          "priceCad": 68,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM326",
+          "name": "Stone Crop Oxygenating Fizzofoliant™",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM300",
+          "name": "Citrus & Kale Potent C+E Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM139",
+          "name": "Lilikoi Daily Defense Moisturizer SPF 40",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM170",
+          "name": "Yuzu Solid Body Oil",
+          "category": "Body Lotions & Oils",
+          "priceCad": 59,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Sunscreen, Skin Inc. Readers' Choice Awards, 2023",
+        "Winner of Best Mineral Sunscreen, Health Beauty Awards, 2021"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/lilikoi-daily-defense-moisturizer-spf-40/EM139.html?variant=2139",
+      "image": "/images/product-images/facials/eye-lip-spf/lilikoi-daily-defense-moisturizer-spf-40.jpg"
+    },
+    {
+      "slug": "daily-defense-tinted-spf",
+      "name": "Daily Defense Tinted SPF",
+      "itemNo": "5181C",
+      "sku": "EM181",
+      "priceCad": 69,
+      "retailSize": "1.7 oz / 50 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "With micellar technology",
+      "tagline": "Lightweight, tinted SPF 50+ sunscreen. Non-comedogenic, antioxidant-rich, broad-spectrum and blue light protection.",
+      "description": "Formulated with all-mineral sunscreen actives, this non-comedogenic blend is enriched with antioxidants for hydration while offering broad-spectrum and blue light protection.",
+      "howToUse": "For The Best Application Experience: \r\n\r\n\r\nShake well before use \r\nDispense a ¼ – ½ teaspoon to start \r\nWarm up in hands \r\nApply liberally and evenly on cleansed face, neck and chest area, 15 minutes before sun exposure \r\nLet skin absorb SPF before adding more \r\nAdd gradually for more coverage \r\nReapply at least every 2 hours \r\nUse water-resistant sunscreen if swimming or sweating \r\n\r\n\r\n\n\r\n\r\nSun Protection Measures: \r\nSpending time in the sun increases your risk of skin cancer and early skin aging. To decrease the risk of sun damage, regularly use a sunscreen with a broad spectrum SPF value of 15 or higher and other sun protection measures including: \r\n\r\n\r\nLimiting time in the sun, especially between 10:00am – 2:00pm \r\nWearing hats, sunglasses, pants and long-sleeved shirts \r\n\r\n\r\n\n\r\n\r\nConsult a doctor before use on children under six months of age",
+      "ingredients": [
+        {
+          "name": "Rosemary Extract",
+          "note": "rich in antioxidants to protect skin from drying environmental stressors"
+        },
+        {
+          "name": "Prickly Pear Seed Oil",
+          "note": "botanical emollient; maintains hydration, supports skin’s moisture barrier and visibly minimizes dark spots"
+        },
+        {
+          "name": "Rice Bran Extract",
+          "note": "delivers powerful antioxidants to brighten and improve the overall appearance of the skin"
+        },
+        {
+          "name": "Aloe Leaf Juice",
+          "note": "derived from the leaves of the aloe plant; hydrates and softens skin"
+        },
+        {
+          "name": "Zinc Oxide",
+          "note": "natural mineral; protects from UVA and UVB rays"
+        },
+        {
+          "name": "Jojoba Seed Oil",
+          "note": "emollient; source of vitamin E to nourish the skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Effects Of The Sun",
+          "outcome": "Provides SPF 50+ broad spectrum UVA & UVB protection"
+        },
+        {
+          "concern": "Effects Of The Sun",
+          "outcome": "Provides blue light protection"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Enriches the skin with antioxidants for hydration"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Gently blurs visible blemishes, redness and minor imperfections, for smoother and more even-looking skin"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1101675606",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1101675606?h=1f2bff18e4",
+          "watchUrl": "https://vimeo.com/1101675606/1f2bff18e4"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM166",
+          "name": "Kombucha Microbiome Foaming Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM238",
+          "name": "Strawberry Rhubarb Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM300",
+          "name": "Citrus & Kale Potent C+E Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM053",
+          "name": "Stone Crop Whip Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EM181",
+          "name": "Daily Defense Tinted SPF",
+          "category": "Sun Care",
+          "priceCad": 69,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/daily-defense-tinted-spf/EM181.html?variant=5181C",
+      "image": "/images/product-images/facials/eye-lip-spf/daily-defense-tinted-spf.jpg"
+    },
+    {
+      "slug": "rosehip-lemongrass-lip-balm-spf-15",
+      "name": "Rosehip & Lemongrass Lip Balm SPF 15",
+      "itemNo": "1321",
+      "sku": "EM321",
+      "priceCad": 34,
+      "retailSize": "0.14 oz / 4 g",
+      "skinType": "For use with all skin types",
+      "cardBlurb": "Hydrating and soothing toner",
+      "tagline": "Protect, hydrate & nourish our lips with our rosehip & lemongrass lip balm with SPF 15. Soothe dryness while providing essential sun defense.",
+      "description": "Moisturize and protect dry lips with this hydrating lip balm stick. All natural SPF 15 defends dry lips against harmful UV exposure, while soothing rosehip oil relieves dryness and rejuvenating lavender restores softness. Dry, weather-ravaged lips are perfectly moisturized and protected from future damage.",
+      "howToUse": "For hydration, apply as often as needed. For sun protection, apply liberally 15 minutes before sun exposure. Reapply at least every 2 hours and after eating or drinking.",
+      "ingredients": [
+        {
+          "name": "Organic Extra Virgin Olive Oil",
+          "note": "rich in Vitamin A and E, helps to tone, repair and refresh dry, tired lips"
+        },
+        {
+          "name": "Rosehip Oil",
+          "note": "primary constituents are EFAs, Vitamins C and E and beta carotene which improve skin’s moisture, tone, texture"
+        },
+        {
+          "name": "Comfrey",
+          "note": "emollient, antioxidant; supplies skin with Vitamin E, gently lubricates, improves elasticity"
+        },
+        {
+          "name": "Lavender",
+          "note": "rejuvenates the look of skin"
+        },
+        {
+          "name": "Yarrow",
+          "note": "rich in nutrients; promotes healing by moisturizing"
+        },
+        {
+          "name": "Zinc Oxide",
+          "note": "natural mineral; protects from UVA and UVB rays"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Dry lips are restored, soothed and moisturized"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "The look of lips are plumped"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Lips are protected from drying environmental stressors"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Soy Free"
+      ],
+      "videos": [
+        {
+          "id": "988518163",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988518163?h=301dfd5c8a",
+          "watchUrl": "https://vimeo.com/988518163/301dfd5c8a"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Tone",
+          "sku": "EMA07",
+          "name": "Stone Crop Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM237",
+          "name": "Strawberry Rhubarb Dermafoliant",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM300",
+          "name": "Citrus & Kale Potent C+E Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM164",
+          "name": "Strawberry Rhubarb Hyaluronic Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EM181",
+          "name": "Daily Defense Tinted SPF",
+          "category": "Sun Care",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Organic Lip Balm with SPF, Women's Health Editors Choice Award, 2019",
+        "Winner of Best SPF Lip Balm, Yoga Journal Natural Beauty Awards, 2017"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/rosehip-lemongrass-lip-balm-spf-15/EM321.html?variant=1321",
+      "image": "/images/product-images/facials/eye-lip-spf/rosehip-lemongrass-lip-balm-spf-15.jpg"
+    },
+    {
+      "slug": "bright-skin-moisturizer-spf-40",
+      "name": "Bright Skin Moisturizer SPF 40",
+      "itemNo": "2136",
+      "sku": "EM136",
+      "priceCad": 74,
+      "retailSize": "2 fl oz / 60 ml",
+      "skinType": "Normal to combination skin types, especially those with hyperpigmentation",
+      "cardBlurb": "Uneven skin corrective cleanser",
+      "tagline": "Brightening daily moisturizer with Natural Hydroquinone Alternative and SPF 40. For normal or combination skin.",
+      "description": "A brightening daily moisturizer complete with Natural Hydroquinone Alternative and SPF 40 mineral filter protection to target the appearance of dark spots and help prevent sunburn. For normal to combination skin types.",
+      "howToUse": "Apply liberally 15 minutes before sun exposure \r\nReapply at least every 2 hours \r\nUse a water-resistant sunscreen if swimming or sweating \r\nChildren under 6 months of age: Ask a doctor \r\n\r\n\r\n\n\r\n\r\nSUN PROTECTION MEASURES: \r\n\r\nSpending time in the sun increases your risk of skin cancer and early skin aging. To decrease this risk, regularly use a sunscreen with a broad spectrum SPF value of 15 or higher and other sun protection measures including: \r\n\r\n\r\nLimit time in the sun, especially from 10 a.m. – 2 p.m.; and \r\nWear long-sleeved shirts, pants, hats, and sunglasses \r\n\r\n\r\n\n\r\n\r\nFOR THE BEST APPLICATION EXPERIENCE: \r\n\r\n1. Apply a serum, oil or concentrate to prep and hydrate skin\n\r\n2. Dispense a pea-sized amount of SPF moisturizer to start\n\r\n3. Warm up in hands\n\r\n4. Apply to forehead, nose & cheeks first\n\r\n5. Work into rest of face, neck & chest\n\r\n6. Let skin absorb the SPF moisturizer before adding more\n\r\n7. Add gradually for more coverage",
+      "ingredients": [
+        {
+          "name": "Natural Hydroquinone Alternative (African Potato, Tara Tree)",
+          "note": "aids in fading the appearance of dark spots for a smooth, even complexion"
+        },
+        {
+          "name": "Licorice Root",
+          "note": "addresses the appearance of uneven skin tone"
+        },
+        {
+          "name": "Bearberry Extract",
+          "note": "reduces the appearance of dark spots"
+        },
+        {
+          "name": "Zinc Oxide",
+          "note": "natural mineral; protects from UVA and UVB rays"
+        },
+        {
+          "name": "Swiss Alpine Plant Extracts",
+          "note": "mixture of 7 plant extracts; naturally brightens the look of skin and fades the appearance of dark spots"
+        },
+        {
+          "name": "Stone Crop",
+          "note": "evens out the appearance of uneven skin tone; moisturizes and heals dry skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Effects Of The Sun",
+          "outcome": "Skin is protected to help prevent sunburn"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "The appearance of dark spots is faded"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Overall complexion is bright and even"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988499076",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988499076?h=b182113e44",
+          "watchUrl": "https://vimeo.com/988499076/b182113e44"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM270",
+          "name": "Bright Skin Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM048",
+          "name": "Stone Crop Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 62,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM300",
+          "name": "Citrus & Kale Potent C+E Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM136",
+          "name": "Bright Skin Moisturizer SPF 40",
+          "category": "Online SKUs",
+          "priceCad": 74,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM007",
+          "name": "Bearberry Eye Repair Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/bright-skin-moisturizer-spf-40/EM136.html?variant=2136",
+      "image": "/images/product-images/facials/eye-lip-spf/bright-skin-moisturizer-spf-40.jpg"
+    }
+  ]
+}

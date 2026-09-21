@@ -100,7 +100,19 @@ export function Hero() {
              crop 280px off the top and leave a pillow where her face was. */
           className="object-cover object-center lg:object-[50%_88%]"
         />
-        <div className="absolute right-5 bottom-5 z-10 flex items-center gap-3.5 rounded-sm bg-card px-[18px] py-3.5 shadow-[0_12px_40px_rgba(28,26,23,0.12)] lg:right-8 lg:bottom-8">
+        {/* TOP LEFT UNTIL `lg`, BOTTOM RIGHT FROM IT, and the photograph is
+            why. Below `lg` the image is a 4:3 crop of a woman lying down, and
+            bottom right is her chin and mouth: the badge is 312px wide in a
+            375px box, so it does not clear her, it covers her. The top of the
+            same crop is blanket and out-of-focus warmth, which is the one part
+            of the picture nothing is lost to.
+
+            From `lg` the photograph becomes a tall column beside the text and
+            is cropped low (`object-[50%_88%]`, see above), so her face sits
+            high and the bottom right corner is blanket again. The corner the
+            badge wants is wherever the face is not, and that moves with the
+            crop. */}
+        <div className="absolute top-5 left-5 z-10 flex items-center gap-3.5 rounded-sm bg-card px-[18px] py-3.5 shadow-[0_12px_40px_rgba(28,26,23,0.12)] lg:top-auto lg:right-8 lg:bottom-8 lg:left-auto">
           <Orchid className="h-8 w-[30px] shrink-0 text-copper" />
           <div>
             <b className="block text-[13px] font-medium">

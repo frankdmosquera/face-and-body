@@ -1,0 +1,1207 @@
+{
+  "scrapedAt": "2026-09-21",
+  "category": "eye-care",
+  "tab": "facials/eye-lip-spf",
+  "sourceListing": "https://eminenceorganics.com/ca/face/eye-care?sz=100",
+  "products": [
+    {
+      "slug": "neroli-age-corrective-eye-serum",
+      "name": "Neroli Age Corrective Eye Serum",
+      "itemNo": "1106",
+      "sku": "EM106",
+      "priceCad": 79,
+      "retailSize": "1 oz / 30 ml",
+      "skinType": "All skin types, especially mature",
+      "cardBlurb": "Multi-action exfoliating cleanser",
+      "tagline": "Hydrating eye serum with neroli, coconut water and green apple stem cells to fight aging.",
+      "description": "Nourish and hydrate the look of the delicate skin around your eyes. Neroli oil, coconut water and green apple stem cell technology fight the visible signs of aging, including the appearance of crow’s feet and fine lines.",
+      "howToUse": "Apply a thin layer to cleansed eye area with light blending movements until absorbed. Leave on. Follow with an eye cream if necessary.",
+      "ingredients": [
+        {
+          "name": "Neroli Oil",
+          "note": "regenerating, refreshing and hydrating; fragrant antiseptic and skin softener"
+        },
+        {
+          "name": "Carrot Extract",
+          "note": "antioxidant; nutrient; source of vitamin A; nourishes and regenerates the skin with carotene oils"
+        },
+        {
+          "name": "PhytoCellTec™ Swiss Green Apple Stem Cells",
+          "note": "rejuvenating plant stem cell concentrate; promotes the look of skin’s elasticity and delays the appearance of visible signs of aging"
+        },
+        {
+          "name": "Coconut Milk",
+          "note": "moisturizes and softens the skin’s appearance"
+        },
+        {
+          "name": "Natural Retinol Alternative Complex",
+          "note": "contains chicory root oligosaccharides and tara tree; collagen boosting; firms and smooths the appearance of skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Epidermis appears firmer and tighter"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The appearance of fine lines are reduced"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Complexion appears smooth and rejuvenated"
+        },
+        {
+          "concern": "Eye Area",
+          "outcome": "Eye area moisture levels are balanced"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "990774375",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/990774375?h=6f1fad71d1",
+          "watchUrl": "https://vimeo.com/990774375/6f1fad71d1"
+        },
+        {
+          "id": "988065830",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988065830?h=9edceed3f4",
+          "watchUrl": "https://vimeo.com/988065830/9edceed3f4"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM302",
+          "name": "Monoi Age Corrective Exfoliating Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM241",
+          "name": "Firm Skin Acai Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM161",
+          "name": "Marine Flower Peptide Concentrate",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM093",
+          "name": "Blueberry Soy Night Recovery Cream",
+          "category": "Moisturizers",
+          "priceCad": 72,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM106",
+          "name": "Neroli Age Corrective Eye Serum",
+          "category": "Eye Care",
+          "priceCad": 79,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Favorite Anti-Aging Line, ASCP Skin Deep Readers' Choice Awards, 2022",
+        "Winner of Best Anti-Aging Range, Natural Health International Beauty Awards, 2019",
+        "Winner of Best Eye Serum, Spa & Wellness Mexicaribe Product Awards, 2018",
+        "Winner of Best Anti-Aging Collection, ASCP Skin Deep Readers’ Choice Awards, 2018 ​​",
+        "Winner of Best Eye Serum, Product Awards, Spa & Wellness Mexicaribe, 2017",
+        "Winner of Best Skin Care for Mom, Eco Excellence Awards, Natural Child World, 2015",
+        "Winner of Premium Organic Skin Care Product, Sister's Beauty Pro Awards, Hong Kong, 2013"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/neroli-age-corrective-eye-serum/EM106.html?variant=1106",
+      "image": "/images/product-images/facials/eye-lip-spf/neroli-age-corrective-eye-serum.jpg"
+    },
+    {
+      "slug": "wild-plum-eye-cream",
+      "name": "Wild Plum Eye Cream",
+      "itemNo": "1104",
+      "sku": "EM104",
+      "priceCad": 89,
+      "retailSize": "1.05 oz / 30 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Gentle wash for all skin types",
+      "tagline": "Reduce dark circles with wild plum. Brightens and re-energizes the eye area.",
+      "description": "Reduce the look of dark circles around your eyes with iron-rich wild plum. The skin around the eye area will appear brightened and re-energized.",
+      "howToUse": "Apply a thin layer of the cream to the entire eye area twice daily, patting gently with fingertips until fully absorbed.",
+      "ingredients": [
+        {
+          "name": "Shea Butter",
+          "note": "high in triglycerides and fatty acids, it is an excellent emollient that revitalizes and helps to repair the skin"
+        },
+        {
+          "name": "Green Tea",
+          "note": "high in antioxidants, polyphenols, flavonoids, and vitamins for youthful-looking skin"
+        },
+        {
+          "name": "Horse Chestnut",
+          "note": "improves the appearance of dark circles; toning and tightening"
+        },
+        {
+          "name": "Evening Primrose",
+          "note": "softens and soothes the appearance of skin"
+        },
+        {
+          "name": "Eyebright",
+          "note": "astringent that reduces the appearance of redness, swelling and eye area irritations"
+        },
+        {
+          "name": "Grape Oil",
+          "note": "contains antioxidants that rejuvenate the skin's appearance; moisturizing"
+        },
+        {
+          "name": "Wild Yam",
+          "note": "contains antioxidants, including beta-carotene and Vitamin B6, that help improve the visible signs of aging"
+        },
+        {
+          "name": "Calendula Oil",
+          "note": "contains antioxidants for rejuvenated-looking skin; soothes and heals dry skin"
+        },
+        {
+          "name": "Wild Plum",
+          "note": "contains antioxidants that brighten the look of dark circles under the eyes and improve the appearance of irritated skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin appears deeply hydrated and comforted"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The visible Signs Of Aging appear reduced"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Skin texture appears firm and supple"
+        },
+        {
+          "concern": "Eye Area",
+          "outcome": "Eye area appears radiant and revitalized"
+        },
+        {
+          "concern": "Redness",
+          "outcome": "The appearance of skin irritations are reduced and soothed"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free",
+        "Soy Free"
+      ],
+      "videos": [
+        {
+          "id": "1133697140",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1133697140?h=83e7a892b1",
+          "watchUrl": "https://vimeo.com/1133697140/83e7a892b1"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM066",
+          "name": "Stone Crop Gel Wash",
+          "category": "Cleansers",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM301",
+          "name": "Citrus & Kale Potent C+E Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM331",
+          "name": "Mangosteen Daily Resurfacing Concentrate",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM104",
+          "name": "Wild Plum Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Professional Eye Care Product Award, Sisters BeautyPro, Hong Kong, 2008"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/wild-plum-eye-cream/EM104.html?variant=1104",
+      "image": "/images/product-images/facials/eye-lip-spf/wild-plum-eye-cream.jpg"
+    },
+    {
+      "slug": "marine-flower-peptide-eye-cream",
+      "name": "Marine Flower Peptide Eye Cream",
+      "itemNo": "1329",
+      "sku": "EM329",
+      "priceCad": 129,
+      "retailSize": "1.05 fl oz / 30 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Anti-aging cleanser",
+      "tagline": "Ultra-rich cream for delicate eye area. Plant peptides and algae extracts reduce wrinkles, puffiness and dark circles. Long-lasting hydration.",
+      "description": "Uniquely formulated for the delicate eye area, this ultra-rich eye cream uses naturally derived plant peptides and innovative algae extracts to reduce the visible signs of aging. Suitable for use day and night, this versatile eye cream provides long-lasting hydration and visibly improves the appearance of wrinkles, puffiness, and dark circles.",
+      "howToUse": "Apply to the entire eye area twice daily, patting gently with fingertips until fully absorbed. Leave on.",
+      "ingredients": [
+        {
+          "name": "Red Algae Extract",
+          "note": "nutrient rich and contains vitamins, minerals, and amino-acids for the visible signs of aging"
+        },
+        {
+          "name": "Botanical Hyaluronic Acid (from Beetroot)",
+          "note": "smooths, plumps and protects skin against trans-epidermal water loss to help maintain long-lasting hydration and minimize the appearance of fine lines and wrinkles"
+        },
+        {
+          "name": "Botanical Peptides (from Rice Protein)",
+          "note": "naturally derived for reducing the look of fine lines and wrinkles"
+        },
+        {
+          "name": "Smart Collagen+ Complex",
+          "note": "minerals, amino acids and botanicals reveal significantly smoother skin with the appearance of fewer fines lines and wrinkles"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Eye Area",
+          "outcome": "Long-lasting ultra-hydration around the delicate eye area"
+        },
+        {
+          "concern": "Eye Area",
+          "outcome": "The appearance of dark circles and puffiness are minimized"
+        },
+        {
+          "concern": "Eye Area",
+          "outcome": "Eye area is radiant and revitalized."
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1133695872",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1133695872?h=9850381314",
+          "watchUrl": "https://vimeo.com/1133695872/9850381314"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM253",
+          "name": "Firm Skin Acai Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM127",
+          "name": "Snow Mushroom & Reishi Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM147",
+          "name": "Strawberry Rhubarb Hyaluronic Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM297",
+          "name": "Arctic Berry Peptide Radiance Cream",
+          "category": "Moisturizers",
+          "priceCad": 109,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM329",
+          "name": "Marine Flower Peptide Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 129,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Favorite Eye Product, ASCP Skin Deep Readers' Choice Awards, 2026",
+        "Winner of Best Eye Treatment, LNE & Spa's Best Product Awards, 2022",
+        "Winner of Best Eye Product, ASCP Skin Deep Readers’ Choice Awards, 2018"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/marine-flower-peptide-eye-cream/EM329.html?variant=1329",
+      "image": "/images/product-images/facials/eye-lip-spf/marine-flower-peptide-eye-cream.jpg"
+    },
+    {
+      "slug": "snow-mushroom-moisture-cloud-eye-cream",
+      "name": "Snow Mushroom Moisture Cloud Eye Cream",
+      "itemNo": "5126",
+      "sku": "EM126",
+      "priceCad": 89,
+      "retailSize": "0.5 oz / 15 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Gentle, balancing facial cleanser",
+      "tagline": "Luxuriously fluffy eye cream. Snow mushroom hydrates, botanical peptides smooth roughness, decrease puffiness and diminish under-eye bags.",
+      "description": "Revitalize the eye area with a luxuriously fluffy eye cream. Super-hydrating snow mushroom provides intense hydration while powerful botanical peptides smooth roughness, decrease puffiness and diminish the appearance of under eye bags to reveal a refreshed appearance.",
+      "howToUse": "Apply to the entire eye area twice daily, patting gently with fingertips until fully absorbed. Leave on.",
+      "ingredients": [
+        {
+          "name": "Botanical Peptides (from Quinoa Seed)",
+          "note": "dual acting natural peptides; help smooth roughness; reduce the appearance of under eye bags and puffiness for well-rested eyes"
+        },
+        {
+          "name": "Reishi Mushroom",
+          "note": "contains a high concentration of polysaccharides which improve hydration; powerful source of antioxidants which help reduce puffiness"
+        },
+        {
+          "name": "Birch Water",
+          "note": "nutrient-rich and helps minimize the visible effects of pollution; purifies and hydrates the skin, leaving it toned and tightened"
+        },
+        {
+          "name": "Snow Mushroom",
+          "note": "ultra-hydrating super-humectant that pulls moisture into the skin; enhances elasticity and improves skin barrier function; helps skin appear supple and plump"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Eye Area",
+          "outcome": "Eye area is hydrated, revitalized and appears lifted"
+        },
+        {
+          "concern": "Eye Area",
+          "outcome": "The appearance of under eye bags and puffiness is reduced"
+        },
+        {
+          "concern": "Eye Area",
+          "outcome": "Eye area looks well rested"
+        }
+      ],
+      "features": [
+        "Soy Free",
+        "Gluten Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "1133696125",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1133696125?h=46a86cd1b7",
+          "watchUrl": "https://vimeo.com/1133696125/46a86cd1b7"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM325",
+          "name": "Stone Crop Cleansing Oil",
+          "category": "Cleansers",
+          "priceCad": 68,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM237",
+          "name": "Strawberry Rhubarb Dermafoliant",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM300",
+          "name": "Citrus & Kale Potent C+E Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM162",
+          "name": "Marine Flower Peptide Night Cream",
+          "category": "Moisturizers",
+          "priceCad": 109,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM126",
+          "name": "Snow Mushroom Moisture Cloud Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Eye Cream, The Beauty Shortlist Awards, 2020",
+        "Winner of Editor's Choice - Beauty, The Beauty Shortlist Awards, 2020",
+        "Winner of Best Eye Cream, Spa & Wellness MexiCaribe Product Awards, 2019"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/snow-mushroom-moisture-cloud-eye-cream/EM126.html?variant=5126",
+      "image": "/images/product-images/facials/eye-lip-spf/snow-mushroom-moisture-cloud-eye-cream.jpg"
+    },
+    {
+      "slug": "hibiscus-ultra-lift-eye-cream",
+      "name": "Hibiscus Ultra Lift Eye Cream",
+      "itemNo": "1322",
+      "sku": "EM322",
+      "priceCad": 122,
+      "retailSize": "0.5 oz / 15 ml",
+      "skinType": "For use with all skin types",
+      "cardBlurb": "Gentle, effective makeup remover",
+      "tagline": "Rapidly de-puffs eyes, smooths wrinkles and minimizes dark circles. Cooling rollerball with hibiscus and ice wine visibly tightens and lifts.",
+      "description": "The Advanced Instant Lift fX eye treatment rapidly de-puffs tired eyes, smooths wrinkles and minimizes the appearance of dark under-eye circles. The cooling, stainless steel rollerball applicator massages hibiscus and ice wine actives into the areas around the eye, appearing to instantly tighten and lift the skin.",
+      "howToUse": "Gently depress the finger trigger nozzle to dispense a small amount of product and use the cool stainless steel rollerball to gently massage the cream under the eye area in a circular, upwards sweeping motion. Use once or twice daily under your favorite eye serum or cream. Leave on.",
+      "ingredients": [
+        {
+          "name": "Hibiscus",
+          "note": "increases elasticity; moisture rich to keep skin hydrated and supple"
+        },
+        {
+          "name": "Ice Wine Active",
+          "note": "tightens skin so it appears lifted; instantly smooths wrinkles"
+        },
+        {
+          "name": "Caffeine",
+          "note": "reduces puffiness and the look of dark under-eye circles"
+        },
+        {
+          "name": "Botanical Peptides (derived from Hibiscus)",
+          "note": "diminishes the look of wrinkles"
+        },
+        {
+          "name": "Green Algae",
+          "note": "increases the look of firm skin"
+        },
+        {
+          "name": "Stevia Extract",
+          "note": "decreases the look of wrinkles and increases hydration"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Eye Area",
+          "outcome": "Relieves puffiness around the eye area"
+        },
+        {
+          "concern": "Eye Area",
+          "outcome": "Eye area instantly feels firmer and tighter"
+        },
+        {
+          "concern": "Eye Area",
+          "outcome": "Eye area looks radiant and revitalized"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Signs Of Aging are reduced"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Visible results in as little as 2 minutes"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "991649069",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/991649069?h=e0af5d2e41",
+          "watchUrl": "https://vimeo.com/991649069/e0af5d2e41"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM045",
+          "name": "Herbal Eye Make-up Remover",
+          "category": "Eye Care",
+          "priceCad": 39,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM303",
+          "name": "Bamboo Age Corrective Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM328",
+          "name": "Marine Flower Peptide Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM176",
+          "name": "Bakuchiol + Niacinamide Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM322",
+          "name": "Hibiscus Ultra Lift Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 122,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Honorable Mention of ASCP Readers' Choice Awards: Favorite Eye Treatment, ASCP Skin Deep, 2021",
+        "Honorable Mention of ASCP Readers' Choice Awards: Favorite Eye Treatment, ASCP Skin Deep, 2019",
+        "Winner of Innovate Award for Products: Age Corrective Ultra Collection, International Spa Association Awards, 2017",
+        "Winner of Best Eye Treatment, LNE & Spa's Best Product Awards, 2017",
+        "Winner of Souped-Up Skin Care, OK! Magazine Beauty Awards, 2016"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/hibiscus-ultra-lift-eye-cream/EM322.html?variant=1322",
+      "image": "/images/product-images/facials/eye-lip-spf/hibiscus-ultra-lift-eye-cream.jpg"
+    },
+    {
+      "slug": "vitamin-c-eye-cream",
+      "name": "Vitamin C⁺ Eye Cream",
+      "itemNo": "1334",
+      "sku": "EM334",
+      "priceCad": 122,
+      "retailSize": "0.5 fl oz / 15 ml",
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": "Uneven skin corrective cleanser",
+      "tagline": "",
+      "description": "Formulated with high-stability vitamin C, cloudberry and caffeine from yerba mate, this lightweight eye cream visibly reduces dark circles and smooths fine lines. Tired-looking eyes appear instantly brighter, enhanced by a subtle illuminating boost.",
+      "howToUse": "Dispense one pump of product and divide evenly between both undereye areas. Apply three small dots per eye — under the eye, outer corner, and brow bone. Using the cooling applicator tip, glide outward beneath the eyes and below the brows until absorbed. Gently tap any excess product using your ring finger. Apply more if needed.",
+      "ingredients": [
+        {
+          "name": "Vitamin C⁺ (3-O-Ethyl Ascorbic Acid)",
+          "note": "stable, dual-soluble vitamin C derivative with high absorption that brightens the appearance of skin while minimizing the look of fine lines and wrinkles"
+        },
+        {
+          "name": "Yerba Mate",
+          "note": "contains caffeine, known to help invigorate the skin for a firmer appearance. An antioxidant; protects the delicate eye area from environmental stressors and the visible signs of premature aging"
+        },
+        {
+          "name": "Cloudberry",
+          "note": "rich in ellagic acid to help protect skin from environmental stressors by reducing the appearance of dryness and the early signs of aging"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Eye Area",
+          "outcome": "Improves the look of dark circles under the eye"
+        },
+        {
+          "concern": "Signs of Aging",
+          "outcome": "Visibly lifts the eye area and improves the look of fine lines"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Helps brighten and refresh the undereye area"
+        },
+        {
+          "concern": "Eye Area",
+          "outcome": "agreed using this eye cream has improved the appearance of their undereye area*"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "say product feels gentle and non-irritating**"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Clinically proven to improve eye contour brightness by 19% &dagger;"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1215938916",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1215938916?h=55f9fe2a6f",
+          "watchUrl": "https://vimeo.com/1215938916/55f9fe2a6f"
+        },
+        {
+          "id": "1219730826",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/1219730826?h=b1d5165a63",
+          "watchUrl": "https://vimeo.com/1219730826/b1d5165a63"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM270",
+          "name": "Bright Skin Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM206",
+          "name": "Lime Refresh Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM237",
+          "name": "Strawberry Rhubarb Dermafoliant",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Mask",
+          "sku": "EM301",
+          "name": "Citrus & Kale Potent C+E Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Treat",
+          "sku": "EM333",
+          "name": "Vitamin C⁺ Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 178,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Moisturize",
+          "sku": "EM297",
+          "name": "Arctic Berry Peptide Radiance Cream",
+          "category": "Moisturizers",
+          "priceCad": 109,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 7,
+          "action": "Eye Care",
+          "sku": "EM334",
+          "name": "Vitamin C⁺ Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 122,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 8,
+          "action": "Protect SPF",
+          "sku": "EM177",
+          "name": "Radiant Protection SPF Fluid",
+          "category": "Sun Care",
+          "priceCad": 66,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 9,
+          "action": "Body Care",
+          "sku": "EM170",
+          "name": "Yuzu Solid Body Oil",
+          "category": "Body Lotions & Oils",
+          "priceCad": 59,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/vitamin-c-eye-cream/EM334.html?variant=1334",
+      "image": "/images/product-images/facials/eye-lip-spf/vitamin-c-eye-cream.jpg"
+    },
+    {
+      "slug": "lavender-night-eye-cream",
+      "name": "Lavender Night Eye Cream",
+      "itemNo": "1275",
+      "sku": "EM275",
+      "priceCad": 89,
+      "retailSize": "1.05 oz / 30 ml",
+      "skinType": "Normal to dry skin types, especially mature",
+      "cardBlurb": "Multi-action exfoliating cleanser",
+      "tagline": "Rich, nourishing cream diminishes signs of aging overnight. Lavender and evening primrose offer aromatherapy; Stem Cell Complex fights crow's feet.",
+      "description": "This rich, nourishing eye cream will help diminish the visible signs of aging overnight. Lavender and evening primrose provide aromatherapy benefits while the unique Anti-Aging Stem Cell Complex fight the appearance of crow’s feet and leaves skin looking radiant.",
+      "howToUse": "Apply a thin layer to cleansed eye area at night, patting gently with fingertips until fully absorbed. For extra hydration, apply during the day as well.",
+      "ingredients": [
+        {
+          "name": "Argan Stem Cell Complex (Argan Stem Cells and Nutmeg Seed)",
+          "note": "contains PhytoCellTec™ Argan stem cells and Nutmeg Seed; results in smoother looking skin"
+        },
+        {
+          "name": "Calendula Oil",
+          "note": "antioxidant; relieves the appearance of dry skin"
+        },
+        {
+          "name": "Argan Oil",
+          "note": "antioxidant; softens and moisturizes"
+        },
+        {
+          "name": "Evening Primrose Oil",
+          "note": "moisturizes"
+        },
+        {
+          "name": "Shea Butter",
+          "note": "high in triglycerides and fatty acids, it is an excellent emollient that revitalizes and helps to repair the skin"
+        },
+        {
+          "name": "Lavender",
+          "note": "soothes and softens the look of dry skin by replenishing moisture"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The appearance of fine lines are reduced, skin appears firmer"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The visible Signs Of Aging appear reduced"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Skin looks and feels smooth"
+        },
+        {
+          "concern": "Eye Area",
+          "outcome": "Eye area moisture levels are balanced"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "997627466",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/997627466?h=825f373417",
+          "watchUrl": "https://vimeo.com/997627466/825f373417"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM302",
+          "name": "Monoi Age Corrective Exfoliating Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM303",
+          "name": "Bamboo Age Corrective Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM277",
+          "name": "Lavender Age Corrective Night Concentrate",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM162",
+          "name": "Marine Flower Peptide Night Cream",
+          "category": "Moisturizers",
+          "priceCad": 109,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM275",
+          "name": "Lavender Night Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Anti-Aging Collection, ASCP Skin Deep Readers’ Choice Awards, 2018 ​",
+        "Winner of Best Eye Cream, Beauty Awards, Natural Health Magazine 2013"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/lavender-night-eye-cream/EM275.html?variant=1275",
+      "image": "/images/product-images/facials/eye-lip-spf/lavender-night-eye-cream.jpg"
+    },
+    {
+      "slug": "bearberry-eye-repair-cream",
+      "name": "Bearberry Eye Repair Cream",
+      "itemNo": "5107",
+      "sku": "EM007",
+      "priceCad": 89,
+      "retailSize": "0.5 oz / 15 ml",
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": "Gentle wash for all skin types",
+      "tagline": "Ultra-hydrating eye cream with meadow eyebright, hop and bearberry to reduce aging signs.",
+      "description": "Ultra-hydrating eye cream with bioactive ingredients to hydrate and nourish the appearance of skin around the fragile eye contour area. Meadow eyebright, hop and bearberry help to reduce the visible signs of aging. \n\nMade with Biodynamic® ingredients from Demeter International Certified Biodynamic® farms.",
+      "howToUse": "Gently apply a thin layer to the eye contour area until absorbed.",
+      "ingredients": [
+        {
+          "name": "Bearberry Extract",
+          "note": "brightens and is rich in antioxidants"
+        },
+        {
+          "name": "Parsley Seed Extract",
+          "note": "improves the appearance of skin radiance"
+        },
+        {
+          "name": "Hops Extract",
+          "note": "antioxidant that calms and tones the appearance of skin"
+        },
+        {
+          "name": "Red Clover Extract",
+          "note": "antioxidant"
+        },
+        {
+          "name": "Eyebright",
+          "note": "firms and brightens the appearance of skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Eye Area",
+          "outcome": "Eye area moisture levels are balanced"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Complexion appears left more youthful and radiant"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The appearance of wrinkle depth is minimized"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Soy Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "990772584",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/990772584?h=cf6145bbfb",
+          "watchUrl": "https://vimeo.com/990772584/cf6145bbfb"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM066",
+          "name": "Stone Crop Gel Wash",
+          "category": "Cleansers",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM241",
+          "name": "Firm Skin Acai Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM157",
+          "name": "Bamboo Firming Fluid",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Eye Care",
+          "sku": "EM007",
+          "name": "Bearberry Eye Repair Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Organic Category, LNE & Spa’s Best Product Awards, 2023",
+        "Winner of Organic Category, Best Product Awards, LNE & Spa’s, 2021",
+        "Winner of Best Eye Cream, Spa & Wellness Mexico, 2016",
+        "Winner of Dayspa Magazine's Editors' Choice, 2009"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/bearberry-eye-repair-cream/EM007.html?variant=5107",
+      "image": "/images/product-images/facials/eye-lip-spf/bearberry-eye-repair-cream.jpg"
+    },
+    {
+      "slug": "herbal-eye-make-up-remover",
+      "name": "Herbal Eye Make-up Remover",
+      "itemNo": "545",
+      "sku": "EM045",
+      "priceCad": 39,
+      "retailSize": "5.07 oz / 150 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "With micellar technology",
+      "tagline": "Gentle pH-balanced makeup remover with cucumber, lavender, calendula and chamomile.",
+      "description": "This pH-balanced make-up remover uses cucumber, lavender, calendula and chamomile to gently soothe even the most sensitive eyes.",
+      "howToUse": "Saturate a cotton ball or pad with product and gently wipe over closed eyelids until all make-up has been removed. In case of direct eye contact, rinse eyes with cool water.",
+      "ingredients": [
+        {
+          "name": "Green Tea",
+          "note": "antioxidant, phenol and vitamin C-rich"
+        },
+        {
+          "name": "Lavender",
+          "note": "calms the appearance of irritated skin"
+        },
+        {
+          "name": "Comfrey",
+          "note": "source of vitamin E; gently lubricates and improves the look of elasticity"
+        },
+        {
+          "name": "Chamomile",
+          "note": "revitalizes, soothes and balances the appearance of dry skin"
+        },
+        {
+          "name": "Cucumber",
+          "note": "revitalizes and tones"
+        },
+        {
+          "name": "Calendula",
+          "note": "soothes and nourishes dry skin; promotes skin repair"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Eye Area",
+          "outcome": "Eye area is perfectly cleansed"
+        },
+        {
+          "concern": "Eye Area",
+          "outcome": "Eye area appears refreshed and revitalized"
+        },
+        {
+          "concern": "Eye Area",
+          "outcome": "Puffiness appears reduced and decongested"
+        },
+        {
+          "concern": "Eye Area",
+          "outcome": "Eye area is protected with antioxidant-rich herbs"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Soy Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "990776344",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/990776344?h=bc0c000192",
+          "watchUrl": "https://vimeo.com/990776344/bc0c000192"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM166",
+          "name": "Kombucha Microbiome Foaming Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM157",
+          "name": "Bamboo Firming Fluid",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Eye Care",
+          "sku": "EM045",
+          "name": "Herbal Eye Make-up Remover",
+          "category": "Eye Care",
+          "priceCad": 39,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Makeup Remover, DaySpa Professional Choice Awards, 2017"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/herbal-eye-make-up-remover/EM045.html?variant=545",
+      "image": "/images/product-images/facials/eye-lip-spf/herbal-eye-make-up-remover.jpg"
+    }
+  ]
+}

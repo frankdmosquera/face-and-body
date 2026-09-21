@@ -45,3 +45,17 @@ next-env.d.ts
 
 # staging folder for ImageKit uploads; photos live in ImageKit, never in the repo
 blueprint/reference/upload/
+
+# Eminence product research. The catalogue in data/products/ IS committed -
+# it is plain text, it is the work, and history is worth having on it. The
+# product shots are not, and stay local.
+#
+# So the "image" field in those json files points at paths that exist only on
+# Frank's machine. A fresh clone will read them and find nothing.
+#
+# THE IMAGES MUST GO TO IMAGEKIT BEFORE ANYTHING RENDERS THEM. Every other
+# photograph on this site is served from there through components/media/Photo.tsx
+# with a slot in data/imagesData.ts, and these belong in the same place. Vercel
+# builds from this repo, so an ignored image is a 404 in production that works
+# perfectly on localhost - the most confusing failure available here.
+/public/images/

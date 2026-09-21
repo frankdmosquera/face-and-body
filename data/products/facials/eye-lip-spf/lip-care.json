@@ -1,0 +1,445 @@
+{
+  "scrapedAt": "2026-09-21",
+  "category": "lip-care",
+  "tab": "facials/eye-lip-spf",
+  "sourceListing": "https://eminenceorganics.com/ca/face/lip-care?sz=100",
+  "products": [
+    {
+      "slug": "marine-flower-peptide-lip-serum",
+      "name": "Marine Flower Peptide Lip Serum",
+      "itemNo": "1160",
+      "sku": "EM160",
+      "priceCad": 59,
+      "retailSize": "0.33 oz / 10 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Enzymatic powder cleanser",
+      "tagline": "Silky serum for smoother, plumper lips. Improves fine lines, adds moisture and helps skin look firm. Wear alone or layer for an added boost.",
+      "description": "Ready, set, plump. Reach for this silky serum to reveal smoother, plumper-looking lips while improving the appearance of fine lines and wrinkles in the lips and surrounding area. Wear on its own or try layering it under your favorite lip balm or lipstick for an added boost.",
+      "howToUse": "Gently depress the finger trigger nozzle to dispense a small amount of product and use the oval tip applicator to massage the serum into lips and surrounding area. Use as often as needed. Leave on.",
+      "ingredients": [
+        {
+          "name": "Botanical Collagen (from Yeast)",
+          "note": "helps reduce the appearance of fine lines and wrinkles"
+        },
+        {
+          "name": "Botanical Hyaluronic Acid",
+          "note": "deeply hydrating; smooths and plumps the skin to minimize the appearance of fine lines and wrinkles"
+        },
+        {
+          "name": "Botanical Peptides (from Rice Protein)",
+          "note": "plant-based and naturally derived; helps reduce the appearance of fine lines and wrinkles, leaving the skin looking energized"
+        },
+        {
+          "name": "Brown Algae Extract (from Padina Pavonica)",
+          "note": "helps the skin look firm and elastic; hydrates for a plumping and rejuvenating effect"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Visibly plumps and hydrates lips"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "reduction in the appearance of lip furrows*"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "reduction in the appearance of wrinkles⁰"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988518061",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988518061?h=e95f67b275",
+          "watchUrl": "https://vimeo.com/988518061/e95f67b275"
+        },
+        {
+          "id": "988067150",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988067150?h=7d159f91ee",
+          "watchUrl": "https://vimeo.com/988067150/7d159f91ee"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM185",
+          "name": "Barbados Cherry Enzyme Cleansing Powder",
+          "category": "Cleansers",
+          "priceCad": 82,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Treat",
+          "sku": "EM323",
+          "name": "Hibiscus Instant Line Filler",
+          "category": "Masks & Treatments",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Moisturize",
+          "sku": "EM133",
+          "name": "Camellia Glow Solid Face Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 93,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Eye Care",
+          "sku": "EM329",
+          "name": "Marine Flower Peptide Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 129,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EM321",
+          "name": "Rosehip & Lemongrass Lip Balm SPF 15",
+          "category": "Sun Care",
+          "priceCad": 34,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Lip Care Product, Spa & Wellness Mexicaribe Product Awards, 2021"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/marine-flower-peptide-lip-serum/EM160.html?variant=1160",
+      "image": "/images/product-images/facials/eye-lip-spf/marine-flower-peptide-lip-serum.jpg"
+    },
+    {
+      "slug": "rosehip-lemongrass-lip-balm-spf-15",
+      "name": "Rosehip & Lemongrass Lip Balm SPF 15",
+      "itemNo": "1321",
+      "sku": "EM321",
+      "priceCad": 34,
+      "retailSize": "0.14 oz / 4 g",
+      "skinType": "For use with all skin types",
+      "cardBlurb": "Hydrating and soothing toner",
+      "tagline": "Protect, hydrate & nourish our lips with our rosehip & lemongrass lip balm with SPF 15. Soothe dryness while providing essential sun defense.",
+      "description": "Moisturize and protect dry lips with this hydrating lip balm stick. All natural SPF 15 defends dry lips against harmful UV exposure, while soothing rosehip oil relieves dryness and rejuvenating lavender restores softness. Dry, weather-ravaged lips are perfectly moisturized and protected from future damage.",
+      "howToUse": "For hydration, apply as often as needed. For sun protection, apply liberally 15 minutes before sun exposure. Reapply at least every 2 hours and after eating or drinking.",
+      "ingredients": [
+        {
+          "name": "Organic Extra Virgin Olive Oil",
+          "note": "rich in Vitamin A and E, helps to tone, repair and refresh dry, tired lips"
+        },
+        {
+          "name": "Rosehip Oil",
+          "note": "primary constituents are EFAs, Vitamins C and E and beta carotene which improve skin’s moisture, tone, texture"
+        },
+        {
+          "name": "Comfrey",
+          "note": "emollient, antioxidant; supplies skin with Vitamin E, gently lubricates, improves elasticity"
+        },
+        {
+          "name": "Lavender",
+          "note": "rejuvenates the look of skin"
+        },
+        {
+          "name": "Yarrow",
+          "note": "rich in nutrients; promotes healing by moisturizing"
+        },
+        {
+          "name": "Zinc Oxide",
+          "note": "natural mineral; protects from UVA and UVB rays"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Dry lips are restored, soothed and moisturized"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "The look of lips are plumped"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Lips are protected from drying environmental stressors"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Soy Free"
+      ],
+      "videos": [
+        {
+          "id": "988518163",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988518163?h=301dfd5c8a",
+          "watchUrl": "https://vimeo.com/988518163/301dfd5c8a"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Tone",
+          "sku": "EMA07",
+          "name": "Stone Crop Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM237",
+          "name": "Strawberry Rhubarb Dermafoliant",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM300",
+          "name": "Citrus & Kale Potent C+E Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM164",
+          "name": "Strawberry Rhubarb Hyaluronic Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EM181",
+          "name": "Daily Defense Tinted SPF",
+          "category": "Sun Care",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Organic Lip Balm with SPF, Women's Health Editors Choice Award, 2019",
+        "Winner of Best SPF Lip Balm, Yoga Journal Natural Beauty Awards, 2017"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/rosehip-lemongrass-lip-balm-spf-15/EM321.html?variant=1321",
+      "image": "/images/product-images/facials/eye-lip-spf/rosehip-lemongrass-lip-balm-spf-15.jpg"
+    },
+    {
+      "slug": "citrus-lip-balm",
+      "name": "Citrus Lip Balm",
+      "itemNo": "203",
+      "sku": "EM003",
+      "priceCad": 26,
+      "retailSize": "0.27 oz / 8 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Hydrating and replenishing mask",
+      "tagline": "Petroleum-free citrus balm with shea butter and sunflower seed oil provides maximum hydration, sexy sheen and voluptuous, youthful lips.",
+      "description": "A petroleum free citrus treat for the lips with shea butter and sunflower seed oil to give lips maximum hydration and a sexy sheen. With continued use the natural peptides make lips look voluptuous and youthful. This is also available for at-home care as part of our Lip Trio Kit .",
+      "howToUse": "Apply directly to the lips.",
+      "ingredients": [
+        {
+          "name": "Shea Butter",
+          "note": "high in triglycerides and fatty acids, it is an excellent emollient that revitalizes and helps to repair the skin"
+        },
+        {
+          "name": "Calendula",
+          "note": "soothes and nourishes dry skin; promotes skin repair"
+        },
+        {
+          "name": "Beeswax",
+          "note": "protects, soothes and calms"
+        },
+        {
+          "name": "Lemon Balm",
+          "note": "source of Vitamin C; helps to soothe and heal the skin"
+        },
+        {
+          "name": "Hawthorn Berry",
+          "note": "rich in antioxidants and vitamin C"
+        },
+        {
+          "name": "Papaya",
+          "note": "gentle enzyme exfoliation, contains phytonutrients that renew the skin"
+        },
+        {
+          "name": "Pineapple",
+          "note": "gentle enzyme exfoliation, calms and supplies vitamin C to the skin"
+        },
+        {
+          "name": "Botanical Peptides",
+          "note": "diminish the look of wrinkles and protect the skin from aging"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Lips appear plumped and well hydrated with a satin finish"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "The appearance of roughness is smoothed"
+        }
+      ],
+      "features": [
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988509006",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988509006?h=2a0d95c4f6",
+          "watchUrl": "https://vimeo.com/988509006/2a0d95c4f6"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Mask",
+          "sku": "EM238",
+          "name": "Strawberry Rhubarb Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Treat",
+          "sku": "EM160",
+          "name": "Marine Flower Peptide Lip Serum",
+          "category": "Lip Care",
+          "priceCad": 59,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Moisturize",
+          "sku": "EM129",
+          "name": "Mangosteen Gel Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Eye Care",
+          "sku": "EM104",
+          "name": "Wild Plum Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EM181",
+          "name": "Daily Defense Tinted SPF",
+          "category": "Sun Care",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Judge's Pick, Hot 150, Harper's Bazaar, 2014"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/citrus-lip-balm/EM003.html?variant=203",
+      "image": "/images/product-images/facials/eye-lip-spf/citrus-lip-balm.jpg"
+    },
+    {
+      "slug": "lip-trio",
+      "name": "Lip Trio",
+      "itemNo": "LIPR",
+      "sku": "EMLIPR",
+      "priceCad": 69,
+      "retailSize": "0.27 oz / 8 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "With micellar technology",
+      "tagline": "Combat dry lips with this 3-step treatment. Fruit enzymes, hydrating mask and minty balm for refined, deeply hydrated and plumped lips.",
+      "description": "Erase the appearance of winter dryness and treat your lips to a naturally effective three-step treatment. Gentle fruit enzymes refine the lip area, followed by an extra rich masque that deeply hydrates. Finish with a delicious minty non-petroleum based take-home balm that stimulates lip-plumping collagen. \r\n\r\nStep 1: Citrus Enzyme Lip Exfoliator \n\r\nEffective citrus and pineapple enzymes refine the lip area removing the appearance of dryness and the look of fine lip lines. Potent fruit pulp infuses bioflavonoids and vitamins to parched lips leaving them smooth and ready for the next step.",
+      "howToUse": "CITRUS ENZYME LIP EXFOLIATOR - STEP 1 \r\n\r\nRemove lipstick or foundation from lip surface and outline areas. Apply a thin layer of Exfoliant to lip surface and outline. Leave on for 5 minutes. Remove with a damp sponge, then blot with tissue or clean towel. Follow with STEP 2. \r\n\r\nLIP COMFORT PLUMPING MASQUE - STEP 2 \r\n\r\nFollowing the lip exfoliation (STEP 1), apply a layer of the masque to the lip surface and outline. Leave on for 5 minutes. Remove with a damp sponge, then blot with a tissue or a clean towel. Follow with the Eminence Citrus Lip Balm for best results (STEP 3). \r\n\r\nCITRUS LIP BALM - STEP 3 \r\n\r\nApply to the lips at the last stage of the three step treatment.",
+      "ingredients": [],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The appearance of fine vertical lines around lip area are diminished"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Lips appear silky smooth"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Roughness appears smoothed"
+        }
+      ],
+      "features": [],
+      "videos": [],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM166",
+          "name": "Kombucha Microbiome Foaming Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM173",
+          "name": "Pineapple Refining Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Moisturize",
+          "sku": "EM053",
+          "name": "Stone Crop Whip Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Eye Care",
+          "sku": "EM104",
+          "name": "Wild Plum Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EM181",
+          "name": "Daily Defense Tinted SPF",
+          "category": "Sun Care",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/lip-trio/EMLIPR.html?variant=LIPR",
+      "image": "/images/product-images/facials/eye-lip-spf/lip-trio.jpg"
+    }
+  ]
+}

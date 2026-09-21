@@ -1,0 +1,1377 @@
+{
+  "scrapedAt": "2026-09-21",
+  "category": "body-lotions-oils",
+  "tab": "other-treatments/body",
+  "sourceListing": "https://eminenceorganics.com/ca/body/lotions-oils?sz=100",
+  "products": [
+    {
+      "slug": "yuzu-solid-body-oil",
+      "name": "Yuzu Solid Body Oil",
+      "itemNo": "2170",
+      "sku": "EM170",
+      "priceCad": 59,
+      "retailSize": "5 oz / 150 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "With bromelain & PHA",
+      "tagline": "Transformative solid body oil with yuzu and camu camu. PHA and tropical oils enhance hydration for supple, glowing skin.",
+      "description": "This transformative solid body oil infuses dry, dull skin with dreamy yuzu and vitamin-rich camu camu for radiant skin from every angle. Refining PHA and lush tropical oils enhance hydration for all skin types to leave you with supple, glowing skin.",
+      "howToUse": "With clean, dry hands, scoop a small amount of product and massage directly onto skin. Leave on. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Camu Camu",
+          "note": "this superfood berry is rich in Vitamin C that acts as a powerful antioxidant, targeting the appearance of an uneven skin tone"
+        },
+        {
+          "name": "Yuzu",
+          "note": "this tart and aromatic citrus fruit is chock full of strong antioxidants that promote the appearance of firmness and improved elasticity to help visibly renew the skin"
+        },
+        {
+          "name": "Buriti Oil",
+          "note": "buriti oil is rich in essential fatty acids, carotenoids and omegas 3, 6 and 9 to nourish and replenish the look of the skin; this antioxidant-rich oil provides deep hydration and improves the appearance of the skin’s elasticity"
+        },
+        {
+          "name": "Passion Fruit Seed Oil",
+          "note": "this oil contains a high concentration of antioxidants and omegas 6 and 9 to promote the appearance of a nourished, radiant glow; this rich oil is fast absorbing and readily penetrates the skin to provide deep moisture and a visible reduction of dryness in the skin"
+        },
+        {
+          "name": "Polyhydroxy Acid (PHA)",
+          "note": "a gentle yet effective exfoliant that noticeably renews the feel of the skin while targeting dryness and the visible signs of aging"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Luxurious body oil that deeply hydrates the skin"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Reveals glowing, supple and visibly rejuvenated skin"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Targets the appearance of rough and bumpy skin"
+        }
+      ],
+      "features": [
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988517957",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988517957?h=cc85db889f",
+          "watchUrl": "https://vimeo.com/988517957/cc85db889f"
+        },
+        {
+          "id": "987799048",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987799048?h=2eadeb8ffe",
+          "watchUrl": "https://vimeo.com/987799048/2eadeb8ffe"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Tone",
+          "sku": "EM173",
+          "name": "Pineapple Refining Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM121",
+          "name": "Stone Crop Revitalizing Body Scrub",
+          "category": "Body Scrubs",
+          "priceCad": 48,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM172",
+          "name": "Superfood Booster-Powder",
+          "category": "Tropical Superfood",
+          "priceCad": 72,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM256",
+          "name": "Coconut Age Corrective Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Body Care",
+          "sku": "EM170",
+          "name": "Yuzu Solid Body Oil",
+          "category": "Body Lotions & Oils",
+          "priceCad": 59,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [
+        "Winner of Best Body Product, Skin Inc. Readers' Choice Awards, 2024",
+        "Winner of Best Massage Medium, WellSpa 360 Readers' Choice Awards, 2024",
+        "Winner of Editor’s Choice Award, Organic Beauty Awards, 2024",
+        "Winner of Best Body Moisturizer, Spa & Wellness MexiCaribe Product Awards, 2023",
+        "Winner of Clean Beauty Product, Allure Best of Beauty Awards, 2023"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/yuzu-solid-body-oil/EM170.html?variant=2170",
+      "image": "/images/product-images/other-treatments/body/yuzu-solid-body-oil.jpg"
+    },
+    {
+      "slug": "strawberry-rhubarb-hyaluronic-body-lotion",
+      "name": "Strawberry Rhubarb Hyaluronic Body Lotion",
+      "itemNo": "2163",
+      "sku": "EM163",
+      "priceCad": 43,
+      "retailSize": "5 oz / 147 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Refining & hydrating body scrub",
+      "tagline": "Quick-absorbing vegan lotion. Botanical Hyaluronic Acid Complex and panthenol provide immediate, head-to-toe hydration for soft, silky skin.",
+      "description": "Indulge skin with quick-absorbing moisture. Our Botanical Hyaluronic Acid Complex infuses the skin with immediate head-to-toe hydration, as panthenol protects the skin moisture barrier to prevent moisture loss. With its delicious scent and creamy feel, this vegan lotion leaves skin with a soft and silky finish. Suitable for all skin, especially dry.",
+      "howToUse": "Apply a small amount to cleansed skin. Massage in and leave on. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Rhubarb",
+          "note": "contains polyphenols to rejuvenate and preserve youthful-looking skin"
+        },
+        {
+          "name": "Aloe",
+          "note": "helps to repair and gently soothe dry skin"
+        },
+        {
+          "name": "Botanical Hyaluronic Acid Complex",
+          "note": "unique blend of multi-weight Hyaluronic Acid and Marshmallow Root that deeply hydrates and preserves moisture in the skin"
+        },
+        {
+          "name": "Panthenol",
+          "note": "vitamin B5; reinforces hydration and prevents moisture loss by protecting the skin moisture barrier"
+        },
+        {
+          "name": "Strawberry",
+          "note": "naturally contains salicylic acid that gently exfoliates and removes impurities to brighten the look of the skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "noted their dry, dehydrated skin is comforted*"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Immediately increase hydration lasting up to 48 hours⁰"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "noted skin feels immediately hydrated*"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Delivers deep hydration, supporting the moisture barrier to lock in and maintain skin's moisture"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Helps to treat dehydrated skin and soothe irritated, dry skin"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Instant hydration that is locked in for long-lasting moisturization"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988517840",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988517840?h=dc94519d21",
+          "watchUrl": "https://vimeo.com/988517840/dc94519d21"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Exfoliate",
+          "sku": "EM213",
+          "name": "Coconut Sugar Scrub",
+          "category": "Body Scrubs",
+          "priceCad": 48,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM238",
+          "name": "Strawberry Rhubarb Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Moisturize",
+          "sku": "EM164",
+          "name": "Strawberry Rhubarb Hyaluronic Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM163",
+          "name": "Strawberry Rhubarb Hyaluronic Body Lotion",
+          "category": "Body Lotions & Oils",
+          "priceCad": 43,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [
+        "Winner of Best Body Moisturizer, Spa & Wellness MexiCaribe Product Awards, 2025",
+        "Winner of Best Body Lotion, HollywoodLife 2022 Beauty Awards"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/strawberry-rhubarb-hyaluronic-body-lotion/EM163.html?variant=2163",
+      "image": "/images/product-images/other-treatments/body/strawberry-rhubarb-hyaluronic-body-lotion.jpg"
+    },
+    {
+      "slug": "monoi-age-corrective-night-body-cream",
+      "name": "Monoi Age Corrective Night Body Cream",
+      "itemNo": "2274",
+      "sku": "EM274",
+      "priceCad": 47,
+      "retailSize": "5 oz / 147 ml",
+      "skinType": "Normal to dry skin types",
+      "cardBlurb": "Multi-action exfoliating cleanser",
+      "tagline": "Ultra-rich night body cream with monoi and Argan Stem Cell Complex. Reveals softer, smoother, youthful skin, deeply hydrating all over.",
+      "description": "Replenish your skin’s moisture and enjoy a luxurious night’s sleep with this ultra-rich night body cream. Enticing monoi unites with our exclusive Argan Stem Cell Complex to reveal softer, smoother and more youthful-looking skin, while shea butter and jojoba oil help to deeply hydrate and repair dry skin from head to toe.",
+      "howToUse": "Apply a small amount to cleansed skin. Massage in. Leave on. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Argan Stem Cell Complex",
+          "note": "contains Argan Plant Stem Cells and Nutmeg Seed, rich in antioxidants, essential fatty acids, polyphenols; helps visibly firm and tighten to renew the look of healthy skin"
+        },
+        {
+          "name": "Argan Oil",
+          "note": "contains polyphenols, tocopherols, squalene, Vitamin E to nourish dry skin and promote skin hydration by restoring moisture"
+        },
+        {
+          "name": "Jojoba Oil",
+          "note": "rich source of fatty acids to hydrate and help repair dry skin"
+        },
+        {
+          "name": "Marshmallow Root Extract",
+          "note": "naturally deeply hydrating; helps visibly smooth and plump skin to minimize the appearance of fine lines and wrinkles"
+        },
+        {
+          "name": "Shea Butter",
+          "note": "high in triglycerides and fatty acids, it is an excellent emollient that revitalizes and helps to repair the skin"
+        },
+        {
+          "name": "Monoi",
+          "note": "fragrant Tahitian oil derived from soaking the petals of Tahitian gardenias in oil; hydrates and helps improve the appearance of skin’s surface resulting in firmer-looking skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Replenishes skin’s moisture"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Reveals softer, smoother, and more youthful-looking skin from head-to-toe"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "996841322",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/996841322?h=24be04b9b7",
+          "watchUrl": "https://vimeo.com/996841322/24be04b9b7"
+        },
+        {
+          "id": "987801765",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987801765?h=a71ffb946f",
+          "watchUrl": "https://vimeo.com/987801765/a71ffb946f"
+        },
+        {
+          "id": "987802447",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987802447?h=c472d1e139",
+          "watchUrl": "https://vimeo.com/987802447/c472d1e139"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM302",
+          "name": "Monoi Age Corrective Exfoliating Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM213",
+          "name": "Coconut Sugar Scrub",
+          "category": "Body Scrubs",
+          "priceCad": 48,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM157",
+          "name": "Bamboo Firming Fluid",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM273",
+          "name": "Monoi Age Corrective Night Cream for Face & Neck",
+          "category": "Moisturizers",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Body Care",
+          "sku": "EM274",
+          "name": "Monoi Age Corrective Night Body Cream",
+          "category": "Body Lotions & Oils",
+          "priceCad": 47,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [
+        "Winner of Best Body Serum/Lotion, WellSpa 360 Readers' Choice Awards, 2022",
+        "Winner of Best Night Body Cream, Earth Day Beauty Awards, Healing Lifestyles 2022",
+        "Winner of Best Anti-Aging Collection, ASCP Skin Deep Readers’ Choice Awards, 2018 ​"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/monoi-age-corrective-night-body-cream/EM274.html?variant=2274",
+      "image": "/images/product-images/other-treatments/body/monoi-age-corrective-night-body-cream.jpg"
+    },
+    {
+      "slug": "apricot-body-oil",
+      "name": "Apricot Body Oil",
+      "itemNo": "4222",
+      "sku": "EM222",
+      "priceCad": 39,
+      "retailSize": "8.2 oz / 240 ml",
+      "skinType": "Normal to dry skin types",
+      "cardBlurb": "Invigorating body scrub",
+      "tagline": "Ultra-hydrating apricot oil blend for soft, supple skin.",
+      "description": "Seduce your senses with our luxurious Apricot Body Oil. Ultra-hydrating apricot oil is blended with an assortment of essential oils, such as grape seed and jojoba, to create a luscious massage oil that leaves skin feeling irresistibly soft and supple.",
+      "howToUse": "Dispense an appropriate amount of oil for massage and warm in hands prior to application. \n\nTry our alternate uses: \n\n\nHydrate your skin from head to toe \nRemedy dry hands and elbows \nDeeply moisturize to relieve dry, flaky skin \nAdd a drop to your favorite Éminence body lotion to enhance your experience with a richer formula",
+      "ingredients": [
+        {
+          "name": "Apricot Kernel Oil",
+          "note": "high in Vitamins A, C and E with skin softening properties, assists the skin in retaining the look of elasticity, clarity and suppleness"
+        },
+        {
+          "name": "Jojoba Oil",
+          "note": "supports and hydrates with one of the best absorption rates"
+        },
+        {
+          "name": "Seabuckthorn Extract",
+          "note": "rich in antioxidants and vitamins that protect and soften the skin"
+        },
+        {
+          "name": "Pomegranate Seed Oil",
+          "note": "polyphenol-rich with high levels of antioxidants (even higher than green tea)"
+        },
+        {
+          "name": "Grape Seed Oil",
+          "note": "rejuvenating and restructuring qualities, moisturizes, reduces the look of lines and wrinkles"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Epidermis is moisturized and feels revitalized"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin tone appears improved"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin texture appears softer and more supple"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "986801195",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/986801195?h=48c161878e",
+          "watchUrl": "https://vimeo.com/986801195/48c161878e"
+        },
+        {
+          "id": "987801013",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987801013?h=f87c89feb3",
+          "watchUrl": "https://vimeo.com/987801013/f87c89feb3"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Exfoliate",
+          "sku": "EM121",
+          "name": "Stone Crop Revitalizing Body Scrub",
+          "category": "Body Scrubs",
+          "priceCad": 48,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Treat",
+          "sku": "EM315",
+          "name": "Rosehip Triple C+E Firming Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Moisturize",
+          "sku": "EM016",
+          "name": "Apricot Whip Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM222",
+          "name": "Apricot Body Oil",
+          "category": "Body Lotions & Oils",
+          "priceCad": 39,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [
+        "Winner of Best Massage Medium, WellSpa 360 Readers' Choice Awards, 2022",
+        "Winner of Best Body Oil, Her Campus College Beauty Awards, 2021",
+        "Runner-up​ for Favorite Body Care, ASCP Skin Deep Readers' Choice Awards, 2020",
+        "Winner of Best Massage Oil, DaySpa Professional Choice Awards, 2019",
+        "Winner of Best Massage Oil, DaySpa Professional Choice Awards, 2017",
+        "Winner of Best Product, LNE's Best, Les Nouvelles Esthétiques & Spa"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/apricot-body-oil/EM222.html?variant=4222",
+      "image": "/images/product-images/other-treatments/body/apricot-body-oil.jpg"
+    },
+    {
+      "slug": "ashwagandha-ultra-rich-restorative-cream",
+      "name": "Ashwagandha Ultra-Rich Restorative Cream",
+      "itemNo": "2195",
+      "sku": "EM195",
+      "priceCad": 74,
+      "retailSize": "150 ml / 5 fl oz",
+      "skinType": "All skin types",
+      "cardBlurb": "Lightweight, moisturizing essence",
+      "tagline": "Eminence Organics Ashwagandha Ultra-Rich Restorative Cream deeply hydrates and calms the look of your skin with adaptogens like ashwagandha.",
+      "description": "De-stress from head to toe with a hydrating cream made for relaxation. A calming, woodsy scent with a blend of ashwagandha, birch water, snow mushroom and reishi offers deep, nourishing hydration. Massage into the face and body for a sense of calm and lasting skin barrier protection.",
+      "howToUse": "Warm an appropriate amount in hands and apply to cleansed skin on face and body. Massage in with firm, circular motions and leave on. Reapply as often as needed or on dry, rough areas. May be used with skin care massage tools to enhance skin benefits. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Ashwagandha Root",
+          "note": "antioxidant; helps reduce the visible impact of stress on skin; protects the skin barrier; reduces the look of inflammation"
+        },
+        {
+          "name": "Reishi Mushroom",
+          "note": "contains a high concentration of polysaccharides which improve hydration; powerful source of antioxidants which help reduce puffiness"
+        },
+        {
+          "name": "Birch Water",
+          "note": "nutrient-rich; purifies and hydrates skin, leaving it toned and tightened; helps minimize the visible effects of pollution; hydrates to restore skin’s natural balance"
+        },
+        {
+          "name": "Snow Mushroom",
+          "note": "ultra-hydrating antioxidant which enhances elasticity; improves skin barrier function"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack of Hydration",
+          "outcome": "Leaves skin feeling hydrated"
+        },
+        {
+          "concern": "Redness",
+          "outcome": "Skin barrier is nourished and protected"
+        },
+        {
+          "concern": "Lack of Hydration",
+          "outcome": "noted moisture in their skin was restored*"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Promotes relaxation through woodsy, earthy scent"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "of users agreed they felt relaxed immediately after using⁰"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1101673477",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1101673477?h=9dfdf7a931",
+          "watchUrl": "https://vimeo.com/1101673477/9dfdf7a931"
+        },
+        {
+          "id": "1109464259",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/1109464259?h=0d930640b2",
+          "watchUrl": "https://vimeo.com/1109464259/0d930640b2"
+        },
+        {
+          "id": "1109511432",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/1109511432?h=850e027c02",
+          "watchUrl": "https://vimeo.com/1109511432/850e027c02"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM169",
+          "name": "Kombucha Microbiome Leave-On Masque",
+          "category": "Kombucha Microbiome",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM168",
+          "name": "Kombucha Microbiome Luminosity Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 110,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM195",
+          "name": "Ashwagandha Ultra-Rich Restorative Cream",
+          "category": "Moisturizers",
+          "priceCad": 74,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM126",
+          "name": "Snow Mushroom Moisture Cloud Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Body Lotion, Dermascope Aestheticians’ Choice Awards, 2026"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/ashwagandha-ultra-rich-restorative-cream/EM195.html?variant=2195",
+      "image": "/images/product-images/other-treatments/body/ashwagandha-ultra-rich-restorative-cream.jpg"
+    },
+    {
+      "slug": "stone-crop-body-oil",
+      "name": "Stone Crop Body Oil",
+      "itemNo": "2122",
+      "sku": "EM122",
+      "priceCad": 43,
+      "retailSize": "8.2 oz / 240 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Gentle wash for all skin types",
+      "tagline": "Lightweight body oil with stone crop and arnica. Soothes dry skin, absorbs quickly, matte satin finish. Ideal for massage.",
+      "description": "Soothe and soften dry skin with a lightweight body oil that absorbs quickly, leaving a matte satin finish. The combination of stone crop and arnica makes this lightly scented oil ideal for massage, hand and foot treatments or daily moisturizing.",
+      "howToUse": "Dispense an appropriate amount of oil for massage and warm in hands prior to application or apply to cleansed skin as a moisturizer. Leave on. Do not use on broken or abraded skin. Alternatively, mix 1–3 drops of oil in your hand with your favorite body lotion or add 1–2 capfuls to your bath.",
+      "ingredients": [
+        {
+          "name": "Rosehip Oil",
+          "note": "hydrating; antioxidant-rich; source of EFAs, Vitamins C, E and beta-carotene; improves moisture, tone and texture and minimizes the look of dark spots"
+        },
+        {
+          "name": "Arnica",
+          "note": "reduces the appearance of stretch marks"
+        },
+        {
+          "name": "Avocado Oil",
+          "note": "antioxidant, moisturizer; rich in proteins, amino acids and vitamins A, D and E"
+        },
+        {
+          "name": "Stone Crop",
+          "note": "hydrates, moisturizes and heals dry skin; brightens and revitalizes the look of uneven skin tone; reduces the appearance of redness due to dryness"
+        },
+        {
+          "name": "Indian Gooseberry",
+          "note": "antioxidant; firms, tones and softens skin; reduces the look of dark spots; assists in moisture retention and protects skin’s moisture barrier"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is hydrated"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Delivers a soft satin finish"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "994148866",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/994148866?h=5348f75b16",
+          "watchUrl": "https://vimeo.com/994148866/5348f75b16"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM066",
+          "name": "Stone Crop Gel Wash",
+          "category": "Cleansers",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM121",
+          "name": "Stone Crop Revitalizing Body Scrub",
+          "category": "Body Scrubs",
+          "priceCad": 48,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Moisturize",
+          "sku": "EM053",
+          "name": "Stone Crop Whip Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM122",
+          "name": "Stone Crop Body Oil",
+          "category": "Body Lotions & Oils",
+          "priceCad": 43,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [
+        "Winner of Best Body Oil, NewBeauty Awards, 2020",
+        "Winner of Best Teen Skincare – Normal Skin: Stone Crop Collection, Spa & Wellness MexiCaribe Product Awards, 2019"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/stone-crop-body-oil/EM122.html?variant=2122",
+      "image": "/images/product-images/other-treatments/body/stone-crop-body-oil.jpg"
+    },
+    {
+      "slug": "stone-crop-contouring-body-cream",
+      "name": "Stone Crop Contouring Body Cream",
+      "itemNo": "2124",
+      "sku": "EM124",
+      "priceCad": 82,
+      "retailSize": "5 oz / 147 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Invigorating body scrub",
+      "tagline": "Contouring cream to reduce cellulite and firm skin. Can be used all over or as a targeted treatment.",
+      "description": "Reduce the appearance of cellulite with a luxurious contouring cream. The active ingredients in this naturally potent cream smooth and firm the skin. Use it as an all-over moisturizer or as a targeted treatment to tighten and tone where you need it most.",
+      "howToUse": "Apply to cleansed skin, focusing on areas of concern. Massage in and leave on. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Stone Crop",
+          "note": "moisturizes and heals dry skin"
+        },
+        {
+          "name": "Coffee Extract",
+          "note": "a source of methylxanthines and caffeine; reduces the look of cellulite"
+        },
+        {
+          "name": "Jojoba Oil",
+          "note": "supports and hydrates with one of the best absorption rates"
+        },
+        {
+          "name": "Microalgae Extract",
+          "note": "improves the look of cellulite"
+        },
+        {
+          "name": "Shea Butter",
+          "note": "high in triglycerides and fatty acids, it is an excellent emollient that revitalizes and helps to repair the skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is left hydrated"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Skin is firmer and more toned"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "The look of cellulite is improved"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Vegan"
+      ],
+      "videos": [],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Exfoliate",
+          "sku": "EM121",
+          "name": "Stone Crop Revitalizing Body Scrub",
+          "category": "Body Scrubs",
+          "priceCad": 48,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Treat",
+          "sku": "EM044",
+          "name": "Stone Crop Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Moisturize",
+          "sku": "EM053",
+          "name": "Stone Crop Whip Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM124",
+          "name": "Stone Crop Contouring Body Cream",
+          "category": "Body Lotions & Oils",
+          "priceCad": 82,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [
+        "Winner of Best Cellulite Cream, Social & Personal Best Beauty Buys Awards, 2020",
+        "Winner of Best Firming Cream, HiStyle Best Beauty Buys, 2020​​​",
+        "Winner of Best Anti-Cellulite Product, LNE & Spa’s Best Product Award, 2020",
+        "Winner of Best Teen Skincare – Normal Skin: Stone Crop Collection, Spa & Wellness MexiCaribe Product Awards, 2019",
+        "Winner of Best in Beauty, HOLA! USA, 2019",
+        "Winner of Favorite Body Sculpting Product, Lipgloss+Aftershave Favs, 2019"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/stone-crop-contouring-body-cream/EM124.html?variant=2124",
+      "image": "/images/product-images/other-treatments/body/stone-crop-contouring-body-cream.jpg"
+    },
+    {
+      "slug": "stone-crop-body-lotion",
+      "name": "Stone Crop Body Lotion",
+      "itemNo": "854",
+      "sku": "EM054",
+      "priceCad": 39,
+      "retailSize": "8.4 oz / 250 ml",
+      "skinType": "All skin types including sensitive, hyperpigmented and sun-damaged skin",
+      "cardBlurb": "Invigorating body scrub",
+      "tagline": "Naturally healing stone crop helps even skin tone, leaving it looking younger, firmer & rejuvenated. Deeply hydrating for a smooth, radiant body.",
+      "description": "This body lotion contains naturally healing stone crop, which reduces the appearance of unevenness to leave the skin looking years younger.",
+      "howToUse": "Apply a small amount to cleansed skin. Massage in. Leave on. Recommended after exfoliation, shower, or body scrub. For a lighter application, dilute with water. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Stone Crop",
+          "note": "hydrating for uneven skin tones; helps to reduce the appearance of age spots and skin blotches"
+        },
+        {
+          "name": "Lemon",
+          "note": "tones and refreshes the appearance of skin"
+        },
+        {
+          "name": "Bioflavonoids",
+          "note": "enrich, support and moisturize the appearance of skin"
+        },
+        {
+          "name": "Corn Germ Oil",
+          "note": "enriches and moisturizes the skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Epidermis is moisturized and feels hydrated"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Complexion looks brighter"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin is moisturized and appears vitalized"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin appearance is healthier"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free"
+      ],
+      "videos": [
+        {
+          "id": "1133696263",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1133696263?h=0afd480731",
+          "watchUrl": "https://vimeo.com/1133696263/0afd480731"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Exfoliate",
+          "sku": "EM121",
+          "name": "Stone Crop Revitalizing Body Scrub",
+          "category": "Body Scrubs",
+          "priceCad": 48,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM048",
+          "name": "Stone Crop Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 62,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Moisturize",
+          "sku": "EM053",
+          "name": "Stone Crop Whip Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM054",
+          "name": "Stone Crop Body Lotion",
+          "category": "Body Lotions & Oils",
+          "priceCad": 39,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [
+        "Winner of Favorite Body Care, ASCP Skin Deep Readers' Choice Awards, 2020",
+        "Winner of Favorite Body Lotion, Aestheticians’ Choice Awards, Dermascope, 2019",
+        "Winner of Best Men's Line, Best Product Awards, LNE & Spa's, 2019"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/stone-crop-body-lotion/EM054.html?variant=854",
+      "image": "/images/product-images/other-treatments/body/stone-crop-body-lotion.jpg"
+    },
+    {
+      "slug": "mangosteen-body-lotion",
+      "name": "Mangosteen Body Lotion",
+      "itemNo": "8130",
+      "sku": "EM130",
+      "priceCad": 47,
+      "retailSize": "250 ml / 8.4 fl oz",
+      "skinType": "All skin types",
+      "cardBlurb": "Restore and smooth",
+      "tagline": "Blissful full-body hydration with Lactic Acid Complex. Lightweight formula gently resurfaces for bright, radiant skin.",
+      "description": "Take a blissful approach to full body hydration with this heavenly mangosteen body lotion. Formulated with a unique Lactic Acid Complex, this lightweight formula gently resurfaces to reveal bright, radiant skin. Absorbs quickly for a soft, satin finish.",
+      "howToUse": "Apply a small amount to cleansed skin. Massage in. Leave on. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Lactic Acid Complex (Lactic Acid, Ribose, Red Clover Flower Extract)",
+          "note": "a proprietary blend of actives; gently resurfaces skin and refines pores for a more luminous, even, and youthful looking complexion"
+        },
+        {
+          "name": "Mangosteen",
+          "note": "an antioxidant-rich super fruit that helps the appearance of skin and minimizes the look of environmental stress, all while promoting natural radiance"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is left hydrated"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin is lightly resurfaced to reveal a brighter, more even skin tone"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Absorbs quickly to a soft satin finish"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "996841132",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/996841132?h=25d5580532",
+          "watchUrl": "https://vimeo.com/996841132/25d5580532"
+        },
+        {
+          "id": "987804267",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987804267?h=e84c9c92e3",
+          "watchUrl": "https://vimeo.com/987804267/e84c9c92e3"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM330",
+          "name": "Mangosteen Daily Resurfacing Cleanser",
+          "category": "Cleansers",
+          "priceCad": 54,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM128",
+          "name": "Mangosteen Revitalizing Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM087",
+          "name": "Cranberry Pomegranate Sugar Scrub",
+          "category": "Body Scrubs",
+          "priceCad": 48,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM331",
+          "name": "Mangosteen Daily Resurfacing Concentrate",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM129",
+          "name": "Mangosteen Gel Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 7,
+          "action": "Body Care",
+          "sku": "EM130",
+          "name": "Mangosteen Body Lotion",
+          "category": "Body Lotions & Oils",
+          "priceCad": 47,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/mangosteen-body-lotion/EM130.html?variant=8130",
+      "image": "/images/product-images/other-treatments/body/mangosteen-body-lotion.jpg"
+    },
+    {
+      "slug": "coconut-firming-body-lotion",
+      "name": "Coconut Firming Body Lotion",
+      "itemNo": "8258",
+      "sku": "EM258",
+      "priceCad": 43,
+      "retailSize": "8.4 oz / 250 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Enzymatic powder cleanser",
+      "tagline": "Coconut, shea butter and grape seed oil firm and tighten skin. Provides deep, lasting hydration for a smooth, supple feel.",
+      "description": "Coconut, shea butter and grape seed oil will leave your skin looking tight and firm, while providing deep and lasting hydration.",
+      "howToUse": "Apply a small amount to cleansed skin. Massage in. Leave on. Recommended after exfoliation, shower, or body scrub. For a lighter application, dilute with water. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Coconut Water",
+          "note": "moisturizing and toning; source of electrolytes, vitamin C, calcium, potassium, phosphorus"
+        },
+        {
+          "name": "Coconut Milk",
+          "note": "moisturizes and softens the skin’s appearance"
+        },
+        {
+          "name": "PhytoCellTec™ Swiss Green Apple Stem Cells",
+          "note": "rejuvenating plant stem cell concentrate"
+        },
+        {
+          "name": "Botanical Hyaluronic Acid",
+          "note": "deeply hydrating; natural substance that smooths and plumps skin to minimize the appearance of fine lines and wrinkles"
+        },
+        {
+          "name": "Natural Retinol Alternative Complex",
+          "note": "contains chicory root oligosaccharides and tara tree; collagen boosting; firms and smooths the appearance of skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Epidermis instantly feels firmer and tighter"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin appears moisturized and revitalized"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin texture appears smooth and velvety"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "The appearance of elasticity is returned for smooth looking skin"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988509029",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988509029?h=0e0ef062eb",
+          "watchUrl": "https://vimeo.com/988509029/0e0ef062eb"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM185",
+          "name": "Barbados Cherry Enzyme Cleansing Powder",
+          "category": "Cleansers",
+          "priceCad": 82,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM213",
+          "name": "Coconut Sugar Scrub",
+          "category": "Body Scrubs",
+          "priceCad": 48,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM238",
+          "name": "Strawberry Rhubarb Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM256",
+          "name": "Coconut Age Corrective Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Body Care",
+          "sku": "EM258",
+          "name": "Coconut Firming Body Lotion",
+          "category": "Body Lotions & Oils",
+          "priceCad": 43,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [
+        "Winner of Favorite Anti-Aging Line, ASCP Skin Deep Readers' Choice Awards, 2022",
+        "Winner of Best Double-Duty Body Lotion, Beauty Choice Awards, NewBeauty 2016"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/coconut-firming-body-lotion/EM258.html?variant=8258",
+      "image": "/images/product-images/other-treatments/body/coconut-firming-body-lotion.jpg"
+    },
+    {
+      "slug": "quince-nourishing-body-lotion",
+      "name": "Quince Nourishing Body Lotion",
+      "itemNo": "5104",
+      "sku": "EM004",
+      "priceCad": 59,
+      "retailSize": "3.4 oz / 100 ml",
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": "Invigorating body scrub",
+      "tagline": "Hydrating body lotion with bioactive herbal ingredients. Soothes irritation and sensitive skin. Made with Biodynamic® ingredients.",
+      "description": "Hydrating body lotion created with bioactive herbal ingredients to soothe sensitive skin. \n\nMade with Biodynamic® ingredients from Demeter International Certified Biodynamic® farms.",
+      "howToUse": "Apply a small amount to cleansed skin. Massage in. Leave on. Recommended after exfoliation, shower, or body scrub. For a lighter application, dilute with water. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Alfalfa",
+          "note": "vitamin-rich nutrition to brighten the appearance of skin"
+        },
+        {
+          "name": "Yarrow Herb",
+          "note": "soothes and rejuvenates the look of skin"
+        },
+        {
+          "name": "Quince Juice",
+          "note": "supplies vitamins to improve the appearance of skin"
+        },
+        {
+          "name": "Carrot",
+          "note": "revitalizes the skin; reduces the appearance of fine lines"
+        },
+        {
+          "name": "Sunchoke",
+          "note": "protects and strengthens the look of skin"
+        },
+        {
+          "name": "Spelt Wheat",
+          "note": "softens the skin; improves elasticity and firmness"
+        },
+        {
+          "name": "Sesame Oil",
+          "note": "promotes the look of elasticity"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Redness",
+          "outcome": "Irritation and itchiness of skin are reduced"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Epidermis is moisturized and feels revitalized"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin texture appears smooth and velvety"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free"
+      ],
+      "videos": [],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Exfoliate",
+          "sku": "EM121",
+          "name": "Stone Crop Revitalizing Body Scrub",
+          "category": "Body Scrubs",
+          "priceCad": 48,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Treat",
+          "sku": "EM010",
+          "name": "Facial Recovery Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Moisturize",
+          "sku": "EM005",
+          "name": "Apricot Calendula Nourishing Cream",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Eye Care",
+          "sku": "EM007",
+          "name": "Bearberry Eye Repair Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Body Care",
+          "sku": "EM004",
+          "name": "Quince Nourishing Body Lotion",
+          "category": "Body Lotions & Oils",
+          "priceCad": 59,
+          "isCurrentProduct": true
+        }
+      ],
+      "awards": [
+        "Winner of Organic Category, Best Product Awards, LNE & Spa’s, 2021",
+        "Winner of Best Body Lotion, LNE's Best, Les Nouvelles Esthétiques & Spa, 2014"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/quince-nourishing-body-lotion/EM004.html?variant=5104",
+      "image": "/images/product-images/other-treatments/body/quince-nourishing-body-lotion.jpg"
+    }
+  ]
+}

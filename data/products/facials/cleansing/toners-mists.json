@@ -1,0 +1,1228 @@
+{
+  "scrapedAt": "2026-09-21",
+  "category": "toners-mists",
+  "tab": "facials/cleansing",
+  "sourceListing": "https://eminenceorganics.com/ca/face/toners-mists?sz=100",
+  "products": [
+    {
+      "slug": "stone-crop-hydrating-mist",
+      "name": "Stone Crop Hydrating Mist",
+      "itemNo": "407",
+      "sku": "EMA07",
+      "priceCad": 49,
+      "retailSize": "4.2 fl.oz / 125 ml",
+      "skinType": "All skin types including sensitive, hyperpigmented or sun-damaged",
+      "cardBlurb": "Gentle wash for all skin types",
+      "tagline": "Revitalizing toner for all skin types. Use with Sun Defense Minerals for increased hydration & smooth, moisturized skin",
+      "description": "A revitalizing and healing toner for all skin types, particularly uneven skin types. For use with Sun Defense Minerals to increase your skin’s hydration level and to leave it looking smooth and moisturized. Cruelty-free and formulated without parabens, sodium lauryl sulfates, animal by-products, synthetic dyes, petrochemicals, phthalates, GMOs and triclosan.",
+      "howToUse": "Cleanse skin and apply two to three sprays onto face and neck or apply with a cotton pad, avoiding the eye area. Leave on. Re-apply anytime during the day for a lift and to refresh the complexion.",
+      "ingredients": [
+        {
+          "name": "Jasmine",
+          "note": "supplies the skin with carotenoids and Vitamins C and P and nourishes the skin"
+        },
+        {
+          "name": "Lavender",
+          "note": "promotes restoration of the skin and calms irritated skin"
+        },
+        {
+          "name": "Stone Crop",
+          "note": "hydrates, moisturizes and heals dry skin; brightens and revitalizes the look of uneven skin tone; reduces the appearance of redness due to dryness"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "The skin appears perfectly clear, fresh and toned"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "The skin appears calmed, matte and hydrated"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "The skin appears vibrant with a brighter complexion"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988517782",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988517782?h=c5442e8714",
+          "watchUrl": "https://vimeo.com/988517782/c5442e8714"
+        },
+        {
+          "id": "988154853",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988154853?h=441ffa4eef",
+          "watchUrl": "https://vimeo.com/988154853/441ffa4eef"
+        },
+        {
+          "id": "988154672",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988154672?h=68944737c2",
+          "watchUrl": "https://vimeo.com/988154672/68944737c2"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM066",
+          "name": "Stone Crop Gel Wash",
+          "category": "Cleansers",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EMA07",
+          "name": "Stone Crop Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM147",
+          "name": "Strawberry Rhubarb Hyaluronic Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM164",
+          "name": "Strawberry Rhubarb Hyaluronic Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM126",
+          "name": "Snow Mushroom Moisture Cloud Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EM181",
+          "name": "Daily Defense Tinted SPF",
+          "category": "Sun Care",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Favorite Hydrating Toner, Dermascope Aestheticians’ Choice Awards, 2023",
+        "Winner of Best Teen Skincare – Normal Skin: Stone Crop Collection, Spa & Wellness MexiCaribe Product Awards, 2019",
+        "Winner of Best Men’s Aftershave Product, Spa & Wellness MexiCaribe Product Awards, 2019",
+        "Winner of Best Men's Line, Best Product Awards, LNE & Spa's, 2019",
+        "Winner of Best Toner, Associated Skin Care Professionals’ & Skin Deep Readers’ Choice Awards, 2017"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/stone-crop-hydrating-mist/EMA07.html?variant=407",
+      "image": "/images/product-images/facials/cleansing/stone-crop-hydrating-mist.jpg"
+    },
+    {
+      "slug": "neroli-age-corrective-hydrating-mist",
+      "name": "Neroli Age Corrective Hydrating Mist",
+      "itemNo": "4255",
+      "sku": "EM255",
+      "priceCad": 49,
+      "retailSize": "4.2 fl. oz / 125 ml",
+      "skinType": "All skin types, especially mature",
+      "cardBlurb": "Anti-aging cleanser",
+      "tagline": "Collagen-boosting, plumping toner with Natural Retinol Alternative & Swiss Green Apple Stem Cells. Smooths & tightens with fragrant neroli oil.",
+      "description": "A collagen boosting toner with Natural Retinol Alternative and Swiss Green Apple Stem Cells for all skin types, especially mature. Your skin will feel smoother and appear tighter with the energizing boost of fragrant neroli oil. Cruelty-free and formulated without parabens, sodium lauryl sulfates, animal by-products, synthetic dyes, petrochemicals, phthalates, GMOs and triclosan.",
+      "howToUse": "Spray directly on to face and neck, avoiding the eye area. Leave on. May also be applied with cotton pads.",
+      "ingredients": [
+        {
+          "name": "Neroli Oil",
+          "note": "regenerating, refreshing and hydrating; fragrant antiseptic and skin softener"
+        },
+        {
+          "name": "Coconut Milk",
+          "note": "moisturizes and softens the skin’s appearance"
+        },
+        {
+          "name": "Coconut Water",
+          "note": "moisture and pH balancing; toning; source of electrolytes, Vitamin C, calcium, potassium, phosphorus to improve the appearance of skin"
+        },
+        {
+          "name": "Natural Retinol Alternative Complex",
+          "note": "skin appears immediately lifted and tightened; contains chicory root oligosaccharides and tara tree gum; collagen boosting, firming and smoothing"
+        },
+        {
+          "name": "PhytoCellTec™ Swiss Green Apple Stem Cells",
+          "note": "rejuvenating plant stem cell concentrate; maintains the look of skin’s elasticity and regeneration by strengthening cells and delays the visible signs of aging"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Epidermis instantly looks firmer and tighter"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "The skin appears calmed, matte and hydrated"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "The skin appears perfectly clear, fresh and toned"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "The skin appears vibrant and revitalized"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "988500966",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988500966?h=96db510d8c",
+          "watchUrl": "https://vimeo.com/988500966/96db510d8c"
+        },
+        {
+          "id": "986844527",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/986844527?h=a2ce04e6b8",
+          "watchUrl": "https://vimeo.com/986844527/a2ce04e6b8"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM253",
+          "name": "Firm Skin Acai Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM255",
+          "name": "Neroli Age Corrective Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM237",
+          "name": "Strawberry Rhubarb Dermafoliant",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Mask",
+          "sku": "EM303",
+          "name": "Bamboo Age Corrective Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Treat",
+          "sku": "EM161",
+          "name": "Marine Flower Peptide Concentrate",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Moisturize",
+          "sku": "EM176",
+          "name": "Bakuchiol + Niacinamide Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Favorite Anti-Aging Line, ASCP Skin Deep Readers' Choice Awards, 2022",
+        "Winner of Best Anti-Aging Range, Natural Health International Beauty Awards, 2019",
+        "Winner of Best Anti-Aging Collection, ASCP Skin Deep Readers’ Choice Awards, 2018 ​"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/neroli-age-corrective-hydrating-mist/EM255.html?variant=4255",
+      "image": "/images/product-images/facials/cleansing/neroli-age-corrective-hydrating-mist.jpg"
+    },
+    {
+      "slug": "kombucha-microbiome-balancing-essence",
+      "name": "Kombucha Microbiome Balancing Essence",
+      "itemNo": "2167",
+      "sku": "EM167",
+      "priceCad": 67,
+      "retailSize": "4 oz / 120 ml",
+      "skinType": "All skin types including sensitive skin",
+      "cardBlurb": "For sensitive prone skin types",
+      "tagline": "Nourishing essence restores skin balance. Pre, pro, and postbiotics enhance luminosity, tone and prime skin for your full skin care ritual.",
+      "description": "Restore the look of balanced skin with this nourishing essence. A blend of pre, pro* and postbiotics works harmoniously to enhance the appearance of luminosity and gently primes the skin ahead of your full skin care ritual. White tea and jasmine flower soothe dry, dull skin for a healthy-looking glow. Suitable for all skin types. \r\n\r\n*Products do not contain live probiotic cultures.",
+      "howToUse": "Dispense a small amount of product in your hands or on a cotton pad and pat it onto cleansed and toned skin. Leave on.",
+      "ingredients": [
+        {
+          "name": "Prebiotic (Inulin)",
+          "note": "a substrate (fuel) that is utilized by host microorganisms to support a balanced skin microbiome"
+        },
+        {
+          "name": "Jasmine Flower",
+          "note": "soothes and relieves redness caused by dry skin to bring out a soft, even skin tone"
+        },
+        {
+          "name": "White Tea",
+          "note": "rich in antioxidants to help maintain healthy-looking skin by combating the look of dullness"
+        },
+        {
+          "name": "Probiotic (Lactococcus Ferment Lysate — does not contain live cultures)",
+          "note": "supports and balances the skin microbiota and replenishes the skin's moisture barrier to repair dry skin and maintain healthy-looking skin"
+        },
+        {
+          "name": "Kombucha Ferment (Postbiotic)",
+          "note": "derived from fermenting black tea, this superfood is rich in postbiotics and nourishes the skin microbiota, enhancing the look of skin smoothness, luminosity and clarity"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin appears nourished and hydrated"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Helps the skin return to its natural balance after cleansing"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Introduces beneficial prebiotics, probiotics* and postbiotics to help maintain the skin’s microbiome"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin is primed to receive further treatment"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988509133",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988509133?h=c8a54b3fe5",
+          "watchUrl": "https://vimeo.com/988509133/c8a54b3fe5"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM251",
+          "name": "Calm Skin Chamomile Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM167",
+          "name": "Kombucha Microbiome Balancing Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM238",
+          "name": "Strawberry Rhubarb Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM010",
+          "name": "Facial Recovery Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM053",
+          "name": "Stone Crop Whip Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Eye Care",
+          "sku": "EM104",
+          "name": "Wild Plum Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Gold, Vegan and Eco Awards in Normal Skin Category, Organic Beauty Awards, 2024",
+        "Winner in Toner Category, Health Skin Awards, 2024",
+        "Winner of Editor’s Choice - Cleansers & Toners, Social & Personal Best Beauty Buys, 2023",
+        "Winner of Best Green Product, WellSpa 360 Readers' Choice Awards, 2023",
+        "Winner of Best Probiotic Toner, Earth Day Beauty Awards, Healing Lifestyles 2023",
+        "Winner of Best Essence, NewBeauty Awards, 2023"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/kombucha-microbiome-balancing-essence/EM167.html?variant=2167",
+      "image": "/images/product-images/facials/cleansing/kombucha-microbiome-balancing-essence.jpg"
+    },
+    {
+      "slug": "pineapple-refining-tonique",
+      "name": "Pineapple Refining Tonique",
+      "itemNo": "2173",
+      "sku": "EM173",
+      "priceCad": 67,
+      "retailSize": "4 fl oz / 120 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Restore and smooth",
+      "tagline": "Sweetly scented tonic with PHA, bromelain and tranexamic acid. Renews dull skin, exfoliates, brightens and hydrates daily.",
+      "description": "Refresh your routine with a sweetly scented pineapple tonique! PHA, bromelain and tranexamic acid team up to visibly renew dull, textured skin without irritation. This tonique is designed to exfoliate, brighten and hydrate while preparing skin for the next step in your daily ritual. This mild exfoliating tonique is great for all skin types and can be used daily.",
+      "howToUse": "After cleansing, apply an even layer onto face and neck area with either your palms or a cotton round. Leave on. Start with one application every other day and increase to daily use if you do not experience irritation. Follow with SPF during the day.",
+      "ingredients": [
+        {
+          "name": "Tranexamic Acid",
+          "note": "this enlivening ingredient results in skin that appears brightened while also helping to reduce the visible appearance of dark spots"
+        },
+        {
+          "name": "Bromelain",
+          "note": "a gentle yet effective exfoliant, derived from the fruit and stem of the pineapple plant; enzymes soften the skin by removing dead skin cells with minimal irritation while also helping to increase the look of elasticity in the skin"
+        },
+        {
+          "name": "Polyhydroxy Acid (PHA)",
+          "note": "a gentle yet effective exfoliant that noticeably renews the feel of the skin while targeting dryness and the visible signs of aging"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Promotes a smooth, even-looking skin tone and radiant appearance"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Helps brighten the look of the skin and minimize the appearance of dark spots"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "Unclogs pores and hydrates the skin"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Brings skin to the optimal pH"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Helps prepare the skin for better absorption of other ingredients"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988518084",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988518084?h=872fc78d88",
+          "watchUrl": "https://vimeo.com/988518084/872fc78d88"
+        },
+        {
+          "id": "988623056",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988623056?h=d33df529d5",
+          "watchUrl": "https://vimeo.com/988623056/d33df529d5"
+        },
+        {
+          "id": "988156602",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988156602?h=22fed60ef5",
+          "watchUrl": "https://vimeo.com/988156602/22fed60ef5"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM330",
+          "name": "Mangosteen Daily Resurfacing Cleanser",
+          "category": "Cleansers",
+          "priceCad": 54,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM173",
+          "name": "Pineapple Refining Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM300",
+          "name": "Citrus & Kale Potent C+E Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Eye Care",
+          "sku": "EM007",
+          "name": "Bearberry Eye Repair Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM170",
+          "name": "Yuzu Solid Body Oil",
+          "category": "Body Lotions & Oils",
+          "priceCad": 59,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Gold, Vegan and Eco Awards in Dry Skin Category, Organic Beauty Awards, 2024"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/pineapple-refining-tonique/EM173.html?variant=2173",
+      "image": "/images/product-images/facials/cleansing/pineapple-refining-tonique.jpg"
+    },
+    {
+      "slug": "shiitake-ashwagandha-bi-phase-mist",
+      "name": "Shiitake & Ashwagandha Bi-Phase Mist",
+      "itemNo": "2194",
+      "sku": "EM194",
+      "priceCad": 58,
+      "retailSize": "60 ml / 2 fl oz",
+      "skinType": "All skin types",
+      "cardBlurb": "Lightweight, moisturizing essence",
+      "tagline": "Eminence Organics Shiitake & Ashwagandha Bi-Phase Mist hydrates and protects the look of skin from environmental stressors for a balanced-looking complexion.",
+      "description": "Find serenity with a refreshing bi-phase mist. The dual-layer formula combines to shield skin from drying environmental stressors while restoring hydration with every spritz. Made with Blue Light Complex, vitamin D-rich shiitake extract and ashwagandha, this mist helps the skin feel strengthened while supporting a balanced, hydrated complexion.",
+      "howToUse": "Shake well before each use to blend the bi-phase layers. Firmly press nozzle to spray directly onto the face and neck, avoiding the eye area. Leave on. Reapply as often as needed.",
+      "ingredients": [
+        {
+          "name": "Ashwagandha Root",
+          "note": "antioxidant; helps reduce the visible impact of stress on skin; protects the skin barrier; reduces the look of inflammation"
+        },
+        {
+          "name": "Shiitake Extract",
+          "note": "botanical source of vitamin D and antioxidants; a natural humectant that hydrates the skin barrier and improves the appearance of skin texture"
+        },
+        {
+          "name": "Blue Light Complex",
+          "note": "rich in antioxidants in the form of sunflower sprout and tara plant tannins; protects against the appearance of aging due to blue light"
+        },
+        {
+          "name": "Snow Mushroom",
+          "note": "ultra-hydrating antioxidant which enhances elasticity; improves skin barrier function"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Effects Of The Sun",
+          "outcome": "Minimizes the visible effects of blue light exposure"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Restores and revitalizes stressed skin"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Promotes a sense of calm and relaxation through a soothing scent"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1115224080",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1115224080?h=456470c774",
+          "watchUrl": "https://vimeo.com/1115224080/456470c774"
+        },
+        {
+          "id": "1109464328",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/1109464328?h=4178b73561",
+          "watchUrl": "https://vimeo.com/1109464328/4178b73561"
+        },
+        {
+          "id": "1109511432",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/1109511432?h=850e027c02",
+          "watchUrl": "https://vimeo.com/1109511432/850e027c02"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM127",
+          "name": "Snow Mushroom & Reishi Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM194",
+          "name": "Shiitake & Ashwagandha Bi-Phase Mist",
+          "category": "Toners & Mists",
+          "priceCad": 58,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 4,
+          "action": "Eye Care",
+          "sku": "EM126",
+          "name": "Snow Mushroom Moisture Cloud Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Dual-Layer Mist, Healing Lifestyles Earth Day Beauty Awards, 2026",
+        "Winner of New Product Launch, ISPA Innovate Awards 2025"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/shiitake-ashwagandha-bi-phase-mist/EM194.html?variant=2194",
+      "image": "/images/product-images/facials/cleansing/shiitake-ashwagandha-bi-phase-mist.jpg"
+    },
+    {
+      "slug": "soothing-chamomile-tonique",
+      "name": "Soothing Chamomile Tonique",
+      "itemNo": "413",
+      "sku": "EM013",
+      "priceCad": 49,
+      "retailSize": "4.2 fl. oz / 125 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Soothing toner for all skin types",
+      "tagline": "Calming toner infuses skin with herbs to restore balance and leave skin even. Can neutralize skin after peels. Cruelty-free, clean formula.",
+      "description": "This calming and soothing toner infuses your skin with comforting herbs to restore the skin’s balance. The toner can be applied after professional or home use peels to neutralize and restore the skin’s balance. Cruelty-free and formulated without parabens, sodium lauryl sulfates, animal by-products, synthetic dyes, petrochemicals, phthalates, GMOs and triclosan.",
+      "howToUse": "Cleanse skin and apply two to three sprays onto face and neck or apply with a cotton pad, avoiding eye area. Leave on. Re-apply anytime during the day for a lift and to refresh the complexion. \n\nTo neutralize peel products: Spray directly onto cotton pads and gently compress into the skin. Follow with damp sponges or rinse with cool water.",
+      "ingredients": [
+        {
+          "name": "Comfrey Root",
+          "note": "antioxidant, emollient; source of vitamin E; soothes and lubricates skin"
+        },
+        {
+          "name": "Lemon",
+          "note": "vitamin and bioflavonoid-rich"
+        },
+        {
+          "name": "Aloe Vera",
+          "note": "soothes, moisturizes and softens skin’s appearance"
+        },
+        {
+          "name": "Chamomile",
+          "note": "calming and soothing"
+        },
+        {
+          "name": "Licorice",
+          "note": "comforting and calming"
+        },
+        {
+          "name": "Sodium Bicarbonate",
+          "note": "soothing, neutralizing"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin appears hydrated and smooth"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin tone appears even"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Complexion appears calmed and restored"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "996839615",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/996839615?h=f96a73880f",
+          "watchUrl": "https://vimeo.com/996839615/f96a73880f"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Tone",
+          "sku": "EM013",
+          "name": "Soothing Chamomile Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Mask",
+          "sku": "EM178",
+          "name": "Charcoal & Black Seed Clay Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM082",
+          "name": "Yam & Pumpkin Enzyme Peel 5%",
+          "category": "Exfoliants",
+          "priceCad": 62,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM250",
+          "name": "Clear Skin Probiotic Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 74,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/soothing-chamomile-tonique/EM013.html?variant=413",
+      "image": "/images/product-images/facials/cleansing/soothing-chamomile-tonique.jpg"
+    },
+    {
+      "slug": "birch-water-purifying-essence",
+      "name": "Birch Water Purifying Essence",
+      "itemNo": "2125",
+      "sku": "EM125",
+      "priceCad": 67,
+      "retailSize": "4 oz / 120 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Gentle, balancing facial cleanser",
+      "tagline": "Lightweight essence with birch water purifies and restores moisture. Botanical collagen boosts elasticity, preparing skin for optimal absorption.",
+      "description": "Replenish skin with a lightweight essence that restores moisture levels. Birch water purifies the skin while botanical collagen increases elasticity and improves barrier function. An essential step that helps the skin better absorb and retain the benefits of subsequent products.",
+      "howToUse": "Dispense a small amount of product in hands or on a cotton pad and pat onto cleansed and toned skin. Leave on.",
+      "ingredients": [
+        {
+          "name": "Reishi Mushroom",
+          "note": "contains a high concentration of polysaccharides which improve hydration; powerful source of antioxidants which help reduce puffiness"
+        },
+        {
+          "name": "Botanical Collagen",
+          "note": "ultimate moisturizer to help skin retain hydration; reduces the look of wrinkles; skin appears tighter, firmer and plumper"
+        },
+        {
+          "name": "Birch Water",
+          "note": "nutrient-rich and helps minimize the visible effects of pollution; purifies and hydrates the skin, leaving it toned and tightened"
+        },
+        {
+          "name": "Snow Mushroom",
+          "note": "ultra-hydrating antioxidant which enhances elasticity; improves skin barrier function"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Replenishes moisture"
+        },
+        {
+          "concern": "Redness",
+          "outcome": "Visibly minimizes redness due to dryness"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Restores elasticity"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Rejuvenates for more radiant skin"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free",
+        "Soy Free"
+      ],
+      "videos": [
+        {
+          "id": "986803929",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/986803929?h=2806548998",
+          "watchUrl": "https://vimeo.com/986803929/2806548998"
+        },
+        {
+          "id": "988147785",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988147785?h=422dd3aca6",
+          "watchUrl": "https://vimeo.com/988147785/422dd3aca6"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM325",
+          "name": "Stone Crop Cleansing Oil",
+          "category": "Cleansers",
+          "priceCad": 68,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM169",
+          "name": "Kombucha Microbiome Leave-On Masque",
+          "category": "Kombucha Microbiome",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM147",
+          "name": "Strawberry Rhubarb Hyaluronic Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM164",
+          "name": "Strawberry Rhubarb Hyaluronic Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Men’s After-Shave Product, Spa & Wellness Mexicaribe Product Awards, 2020",
+        "Winner of Editor's Choice - Beauty, The Beauty Shortlist Awards, 2020"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/birch-water-purifying-essence/EM125.html?variant=2125",
+      "image": "/images/product-images/facials/cleansing/birch-water-purifying-essence.jpg"
+    },
+    {
+      "slug": "mangosteen-revitalizing-mist",
+      "name": "Mangosteen Revitalizing Mist",
+      "itemNo": "4128",
+      "sku": "EM128",
+      "priceCad": 49,
+      "retailSize": "4.2 fl. oz / 125 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Restore and smooth",
+      "tagline": "Invigorating facial mist with mangosteen, ribose and red clover. Revitalizes skin, refines pores and is packed with potent antioxidants.",
+      "description": "Escape to paradise with every spritz of this invigorating facial mist. A dreamy combination of antioxidant-packed mangosteen, energizing ribose and pore-refining red clover work in perfect harmony to revitalize the skin.",
+      "howToUse": "Cleanse skin and apply two to three sprays onto face and neck or apply with a cotton pad, avoiding the eye area. Leave on. Re-apply anytime during the day for a lift and to refresh the complexion.",
+      "ingredients": [
+        {
+          "name": "Red Clover Flower Extract",
+          "note": "refines and improves skin tone to minimize pore size"
+        },
+        {
+          "name": "Mangosteen",
+          "note": "an antioxidant-rich super fruit that helps the appearance of skin and minimizes the look of environmental stress, all while promoting natural radiance"
+        },
+        {
+          "name": "Ribose (from Corn Seeds)",
+          "note": "promotes the appearance of smoother and revitalized skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Dullness",
+          "outcome": "Skin feels energized"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin appears replenished with potent antioxidants"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "Pores are minimized"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988518036",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988518036?h=4b5ad47ab0",
+          "watchUrl": "https://vimeo.com/988518036/4b5ad47ab0"
+        },
+        {
+          "id": "988122423",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988122423?h=d3f07bb173",
+          "watchUrl": "https://vimeo.com/988122423/d3f07bb173"
+        },
+        {
+          "id": "988624910",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988624910?h=a8673ac405",
+          "watchUrl": "https://vimeo.com/988624910/a8673ac405"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM330",
+          "name": "Mangosteen Daily Resurfacing Cleanser",
+          "category": "Cleansers",
+          "priceCad": 54,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM128",
+          "name": "Mangosteen Revitalizing Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM227",
+          "name": "Raspberry Pore Refining Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 62,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM331",
+          "name": "Mangosteen Daily Resurfacing Concentrate",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM129",
+          "name": "Mangosteen Gel Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Editor's Choice - Beauty, The Beauty Shortlist Awards, 2021"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/mangosteen-revitalizing-mist/EM128.html?variant=4128",
+      "image": "/images/product-images/facials/cleansing/mangosteen-revitalizing-mist.jpg"
+    },
+    {
+      "slug": "lime-refresh-tonique",
+      "name": "Lime Refresh Tonique",
+      "itemNo": "4206",
+      "sku": "EM206",
+      "priceCad": 49,
+      "retailSize": "4.2 fl. oz / 125 ml",
+      "skinType": "All skin types, particularly oily to normal and acne",
+      "cardBlurb": "Restore and smooth",
+      "tagline": "Refreshing toner for normal to oily skin. Vitamin C and lime juice tones and balances.",
+      "description": "A refreshing toner for all skin types, particularly normal to oily skin. Rich in vitamin C, this invigorating mist tones and balances the skin’s appearance with freshly squeezed lime juice.",
+      "howToUse": "Cleanse skin and apply 2-3 sprays of toner over the entire skin surface. Re-apply anytime during the day for a lift and to refresh the complexion.",
+      "ingredients": [
+        {
+          "name": "Green Tea",
+          "note": "high in antioxidants, polyphenols, flavonoids, and vitamins for youthful-looking skin"
+        },
+        {
+          "name": "Lavender",
+          "note": "heals dry skin and restores moisture"
+        },
+        {
+          "name": "Lime Juice",
+          "note": "acts as an astringent and helps minimize pores"
+        },
+        {
+          "name": "Citrus Fruit Oils (Lemon & Grapefruit)",
+          "note": "tones and refreshes the skin; astringent properties help to remove excess oil on the skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "The skin is left toned and balanced"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "988517978",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988517978?h=82a0227a2b",
+          "watchUrl": "https://vimeo.com/988517978/82a0227a2b"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM330",
+          "name": "Mangosteen Daily Resurfacing Cleanser",
+          "category": "Cleansers",
+          "priceCad": 54,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM206",
+          "name": "Lime Refresh Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM301",
+          "name": "Citrus & Kale Potent C+E Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM300",
+          "name": "Citrus & Kale Potent C+E Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/lime-refresh-tonique/EM206.html?variant=4206",
+      "image": "/images/product-images/facials/cleansing/lime-refresh-tonique.jpg"
+    },
+    {
+      "slug": "hawthorn-tonique",
+      "name": "Hawthorn Tonique",
+      "itemNo": "5102",
+      "sku": "EM002",
+      "priceCad": 56,
+      "retailSize": "1.7 oz / 50 ml",
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": "For sensitive prone skin types",
+      "tagline": "For dehydrated, irritated and sensitive skin. Hawthorn, chamomile and marjoram reduce irritation for a revitalized, toned, balanced appearance.",
+      "description": "For dehydrated, irritated and sensitive skin, our Hawthorn Tonique will give your skin a revitalized appearance. Use the power of hawthorn, chamomile and marjoram to reduce the appearance of skin irritation. \n\nMade with Biodynamic® ingredients from Demeter International Certified Biodynamic® farms.",
+      "howToUse": "Spray directly on to face and neck, avoiding the eye area. Leave on. May also be applied with cotton pads.",
+      "ingredients": [
+        {
+          "name": "Eucalyptus Oil",
+          "note": "protects and tones"
+        },
+        {
+          "name": "Chamomile",
+          "note": "calms and balances"
+        },
+        {
+          "name": "Marjoram",
+          "note": "tones and energizes"
+        },
+        {
+          "name": "Carrot",
+          "note": "heals and provides vitamin A"
+        },
+        {
+          "name": "Hawthorn",
+          "note": "provides antioxidants and vitamin C"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin appears toned and balanced"
+        },
+        {
+          "concern": "Redness",
+          "outcome": "Skin discomfort and irritation appear reduced"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM251",
+          "name": "Calm Skin Chamomile Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM002",
+          "name": "Hawthorn Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 56,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM238",
+          "name": "Strawberry Rhubarb Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM168",
+          "name": "Kombucha Microbiome Luminosity Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 110,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM016",
+          "name": "Apricot Whip Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Eye Care",
+          "sku": "EM104",
+          "name": "Wild Plum Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Organic Category, Best Product Awards, LNE & Spa’s, 2021"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/hawthorn-tonique/EM002.html?variant=5102",
+      "image": "/images/product-images/facials/cleansing/hawthorn-tonique.jpg"
+    }
+  ]
+}

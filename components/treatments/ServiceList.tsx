@@ -80,7 +80,10 @@ export function ServiceList({ category }: { category: CategoryType }) {
 
   return (
     <div data-group-stack>
-      <GroupTabs groupOf={groupOf} defaultValue={blocks[0].slug}>
+      <GroupTabs
+        groupOf={groupOf}
+        order={blocks.map((block) => block.slug)}
+      >
         <TabsList aria-label={`${category.label} by what they do`}>
           {blocks.map((block) => (
             <TabsTab key={block.slug} value={block.slug}>

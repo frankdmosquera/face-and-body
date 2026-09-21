@@ -1,0 +1,118 @@
+{
+  "scrapedAt": "2026-09-21",
+  "category": "body-sun-care",
+  "tab": "other-treatments/body",
+  "sourceListing": "https://eminenceorganics.com/ca/body/sun-care?sz=100",
+  "products": [
+    {
+      "slug": "lilikoi-mineral-defense-sport-sunscreen-spf-30",
+      "name": "Lilikoi Mineral Defense Sport Sunscreen SPF 30",
+      "itemNo": "2120",
+      "sku": "EM120",
+      "priceCad": 58,
+      "retailSize": "5 oz / 147 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Gentle, balancing facial cleanser",
+      "tagline": "Easy-to-apply, non-greasy, water-resistant SPF 30 mineral sunscreen with zinc oxide. Stays on when swimming or sweating, lightweight finish.",
+      "description": "An easy-to-apply sport formulation for face and body, this SPF 30 mineral filter sunscreen is non-greasy and water-resistant up to 40 minutes. Highly effective for outdoor activities like swimming and high-performance sports where perspiration can impact standard sunscreen efficacy, this zinc oxide sunscreen protects from head to toe.",
+      "howToUse": "Apply a liberal layer over the face and body 15 minutes before sun exposure and leave on. Reapply at least every 2 hours. Reapply after 40 minutes of swimming or sweating and immediately after towel drying.",
+      "ingredients": [
+        {
+          "name": "Zinc Oxide",
+          "note": "natural mineral; protects from UVA and UVB rays"
+        },
+        {
+          "name": "Lilikoi (Passion Fruit) Seed Oil",
+          "note": "contains Vitamin C and antioxidants which help with the visible signs of aging"
+        },
+        {
+          "name": "Raspberry Seed Oil",
+          "note": "moisturizer; antioxidant and rich in Vitamin C which minimize the appearance of aging"
+        },
+        {
+          "name": "Aloe Vera",
+          "note": "moisturizer; soothes dry skin, alleviates the appearance of damage from sun exposure, hydrates and softens the skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Antioxidants minimizes the appearance of accelerated aging"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Water-resistant 'sport' formulation helps protect skin from UV damage, even when swimming or sweating"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Delivers a lightweight finish with a fresh, natural look to the skin"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "988154329",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/988154329?h=6dc46153e3",
+          "watchUrl": "https://vimeo.com/988154329/6dc46153e3"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM325",
+          "name": "Stone Crop Cleansing Oil",
+          "category": "Cleansers",
+          "priceCad": 68,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM326",
+          "name": "Stone Crop Oxygenating Fizzofoliant™",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Treat",
+          "sku": "EM300",
+          "name": "Citrus & Kale Potent C+E Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Protect SPF",
+          "sku": "EM120",
+          "name": "Lilikoi Mineral Defense Sport Sunscreen SPF 30",
+          "category": "Sun Care",
+          "priceCad": 58,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM054",
+          "name": "Stone Crop Body Lotion",
+          "category": "Body Lotions & Oils",
+          "priceCad": 39,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Favorite Body Sunscreen, Dermascope Aestheticians’ Choice Awards, 2023"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/lilikoi-mineral-defense-sport-sunscreen-spf-30/EM120.html?variant=2120",
+      "image": "/images/product-images/other-treatments/body/lilikoi-mineral-defense-sport-sunscreen-spf-30.jpg"
+    }
+  ]
+}

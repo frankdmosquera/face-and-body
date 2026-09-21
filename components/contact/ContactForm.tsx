@@ -205,14 +205,17 @@ export function ContactForm({ topics, generalTopic, prefills }: Props) {
           instead.
         </p>
       )}
-      <div className="mt-7 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-        <small className="text-[13px] text-muted-foreground">
-          We reply within a day. Nothing is stored beyond the message itself.
-        </small>
+      {/* Send alone. The icons that were here moved into the hero beside
+          this card, where they are the page's one set; a second copy inside
+          the form put the same three actions twice inside one screen. The
+          line that was here before them, "We reply within a day. Nothing is
+          stored beyond the message itself.", went with the same reasoning:
+          the reply promise stands once, under the number. */}
+      <div className="mt-7 flex justify-end">
         <button
           type="submit"
           disabled={isSubmitting}
-          className={buttonVariants({ className: "self-start lg:self-auto" })}
+          className={buttonVariants()}
         >
           {isSubmitting ? "Sending" : "Send"}
         </button>

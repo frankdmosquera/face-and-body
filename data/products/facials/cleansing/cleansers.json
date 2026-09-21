@@ -1,0 +1,1948 @@
+{
+  "scrapedAt": "2026-09-21",
+  "category": "cleansers",
+  "tab": "facials/cleansing",
+  "sourceListing": "https://eminenceorganics.com/ca/face/cleansers?sz=100",
+  "products": [
+    {
+      "slug": "stone-crop-cleansing-oil",
+      "name": "Stone Crop Cleansing Oil",
+      "itemNo": "2325",
+      "sku": "EM325",
+      "priceCad": 68,
+      "retailSize": "5 oz / 150 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Gentle, balancing facial cleanser",
+      "tagline": "Non-greasy oil, gently cleanses & removes makeup. Infused with sunflower, jojoba, stone crop for soft, dewy skin.",
+      "description": "Gently remove impurities and restore the look of balance with this non-greasy cleansing oil. Infused with moisturizing sunflower and jojoba oils, brightening stone crop and supercharged microgreens, this light and luxurious formula gently removes makeup and deeply cleanses to deliver dewier, softer looking skin after every use.\n\r\n\n\r\nAlso, perfect for men – this cleanser softens and adds shine to beard hair or can be used for a close, comfortable shave.",
+      "howToUse": "Apply a small amount of product to skin and massage gently with fingertips in a circular motion covering the face and neck areas. Wet face to emulsify oil, if desired, and rinse thoroughly.",
+      "ingredients": [
+        {
+          "name": "Jojoba Oil",
+          "note": "supports and hydrates with one of the best absorption rates"
+        },
+        {
+          "name": "Sunflower Oil",
+          "note": "rich in Vitamins A, D and E; protects and soothes dry skin"
+        },
+        {
+          "name": "Detoxifying Microgreens Complex (Broccoli, Radish and Clover, and Detoxophane from Swiss cress sprouts)",
+          "note": "a potent blend of microgreens that protects against the drying effects of environmental stressors and reduces the signs of aging for brighter, younger looking skin"
+        },
+        {
+          "name": "Stone Crop",
+          "note": "hydrates, moisturizes and heals dry skin; brightens and revitalizes the look of uneven skin tone; reduces the appearance of redness due to dryness"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Complexion appears clear, smooth and bright"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is left feeling fresh, dewy and soft"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin is perfectly cleansed and moisturized without feeling greasy"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Surface build-up and impurities are removed"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free",
+        "Soy Free"
+      ],
+      "videos": [
+        {
+          "id": "1133696404",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1133696404?h=5748eac9ea",
+          "watchUrl": "https://vimeo.com/1133696404/5748eac9ea"
+        },
+        {
+          "id": "987834289",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987834289?h=c337094f43",
+          "watchUrl": "https://vimeo.com/987834289/c337094f43"
+        },
+        {
+          "id": "987834606",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987834606?h=8ddde85188",
+          "watchUrl": "https://vimeo.com/987834606/8ddde85188"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM325",
+          "name": "Stone Crop Cleansing Oil",
+          "category": "Cleansers",
+          "priceCad": 68,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM173",
+          "name": "Pineapple Refining Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM048",
+          "name": "Stone Crop Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 62,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM011",
+          "name": "Cornflower Recovery Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM053",
+          "name": "Stone Crop Whip Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Daily Cleanser, Social & Personal Best Beauty Buys, 2026",
+        "Winner of Best Teen Skincare – Normal Skin: Stone Crop Collection, Spa & Wellness MexiCaribe Product Awards, 2019",
+        "Winner of Soaps and Suds: 10 Natural Cleansers, The Beauty 100, Insider's Guide to Spas, 2017"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/stone-crop-cleansing-oil/EM325.html?variant=2325",
+      "image": "/images/product-images/facials/cleansing/stone-crop-cleansing-oil.jpg"
+    },
+    {
+      "slug": "monoi-age-corrective-exfoliating-cleanser",
+      "name": "Monoi Age Corrective Exfoliating Cleanser",
+      "itemNo": "8302",
+      "sku": "EM302",
+      "priceCad": 57,
+      "retailSize": "8.4 oz / 250 ml",
+      "skinType": "Normal to dry skin types",
+      "cardBlurb": "Multi-action exfoliating cleanser",
+      "tagline": "Wash away impurities and debris. Monoi oil and Natural Retinol Alternative rejuvenate skin for a smooth, youthful and lifted appearance.",
+      "description": "Wash away impurities and remove surface debris to experience smooth skin like never before. Infused with exotic monoi oil and made with our unique Natural Retinol Alternative, this refining cleanser rejuvenates skin for a smooth and lifted appearance.",
+      "howToUse": "Apply a small amount of product to skin and massage gently with fingertips in a circular motion covering the face and neck areas. Rinse thoroughly and pat dry. For a lighter application, dilute with a few drops of water before application. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Natural Retinol Alternative",
+          "note": "skin appears immediately lifted and tightened; contains chicory root oligosaccharides and tara tree gum"
+        },
+        {
+          "name": "Fruit AHAs",
+          "note": "acids and enzymes derived from fruits (pineapple, lemon, passion fruit and grape) to gently help break down buildup on the skin and chemically exfoliate to remove dead skin cells"
+        },
+        {
+          "name": "Finely Ground Olive Seeds",
+          "note": "finely ground seeds which, when massaged onto skin, gently provide a medium exfoliation for a softer and more refined-looking skin"
+        },
+        {
+          "name": "Monoi",
+          "note": "fragrant Tahitian oil derived from soaking the petals of Tahitian gardenias in oil; hydrates and helps improve the appearance of skin’s surface resulting in firmer-looking skin"
+        },
+        {
+          "name": "Swiss Green Apples",
+          "note": "plant stem cells derived from apples to help maintain skin’s elasticity to address signs of aging, firm and tighten your look; Improves the appearance of the skin overall"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Dullness",
+          "outcome": "Cream-based cleanser that combines physical and chemical exfoliation to help refine skin’s texture"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Refines the skin’s texture to reveal a fresh, youthful-looking complexion"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Washes away impurities, removes surface debris"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "990774585",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/990774585?h=7e299006ba",
+          "watchUrl": "https://vimeo.com/990774585/7e299006ba"
+        },
+        {
+          "id": "987830966",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987830966?h=d431a361fb",
+          "watchUrl": "https://vimeo.com/987830966/d431a361fb"
+        },
+        {
+          "id": "987819583",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987819583?h=d8288b4b3f",
+          "watchUrl": "https://vimeo.com/987819583/d8288b4b3f"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM302",
+          "name": "Monoi Age Corrective Exfoliating Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM255",
+          "name": "Neroli Age Corrective Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM303",
+          "name": "Bamboo Age Corrective Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM328",
+          "name": "Marine Flower Peptide Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Body Care",
+          "sku": "EM274",
+          "name": "Monoi Age Corrective Night Body Cream",
+          "category": "Body Lotions & Oils",
+          "priceCad": 47,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Cleanser - Eco-Friendly, HiStyle Best Beauty Buys, 202​​2",
+        "Winner of Favorite Anti-Aging Line, ASCP Skin Deep Readers' Choice Awards, 2022",
+        "Winner of Best Cleanser, Skin Inc. Readers' Choice Awards, 2021",
+        "Winner of Best Anti-Aging Range, Natural Health International Beauty Awards, 2019",
+        "Winner of Best Anti-Aging Collection, ASCP Skin Deep Readers’ Choice Awards, 2018 ​​",
+        "Winner of Best Cleanser, Beauty Shortlist Awards, UK, 2017"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/monoi-age-corrective-exfoliating-cleanser/EM302.html?variant=8302",
+      "image": "/images/product-images/facials/cleansing/monoi-age-corrective-exfoliating-cleanser.jpg"
+    },
+    {
+      "slug": "stone-crop-gel-wash",
+      "name": "Stone Crop Gel Wash",
+      "itemNo": "466",
+      "sku": "EM066",
+      "priceCad": 49,
+      "retailSize": "4.2 oz / 125 ml",
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": "Gentle wash for all skin types",
+      "tagline": "Gentle gel wash for sensitive skin. Washes away impurities without drying.",
+      "description": "For those with even the most sensitive skin, our Stone Crop Gel Wash washes away impurities without drying out the skin. Botanical extracts help even skin tone and minimize the appearance of blemishes to leave a healthy complexion. Cruelty-free and formulated without parabens, sodium lauryl sulfates, synthetic dyes, petrochemicals, animal by-products, phthalates, GMOs and triclosan.",
+      "howToUse": "Mix (dilute) a small amount of the product (pea size) with water in hands, apply and massage into skin with fingertips in a circular motion covering the face and neck for 1—3 minutes. Completely remove with a damp face cloth and then finish with an application of toner. As an eye make-up remover, gently use in a circular motion away from the eyes and rinse thoroughly with water.",
+      "ingredients": [
+        {
+          "name": "Shea Butter",
+          "note": "high in triglycerides and fatty acids, it is an excellent emollient that revitalizes and helps to repair the skin"
+        },
+        {
+          "name": "Chamomile",
+          "note": "revitalizes, soothes and balances the appearance of dry skin"
+        },
+        {
+          "name": "Stone Crop",
+          "note": "hydrates, moisturizes and heals dry skin; brightens and revitalizes the look of uneven skin tone; reduces the appearance of redness due to dryness"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "The skin is perfectly cleansed without feeling dehydrated"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "The complexion appears clear, smooth and bright"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "The appearance of surface build-up and impurities are removed"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "990774159",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/990774159?h=76af4de4e2",
+          "watchUrl": "https://vimeo.com/990774159/76af4de4e2"
+        },
+        {
+          "id": "987804723",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987804723?h=88067737ba",
+          "watchUrl": "https://vimeo.com/987804723/88067737ba"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM066",
+          "name": "Stone Crop Gel Wash",
+          "category": "Cleansers",
+          "priceCad": 49,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EMA07",
+          "name": "Stone Crop Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM048",
+          "name": "Stone Crop Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 62,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM147",
+          "name": "Strawberry Rhubarb Hyaluronic Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM164",
+          "name": "Strawberry Rhubarb Hyaluronic Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Teen Skincare – Normal Skin: Stone Crop Collection, Spa & Wellness MexiCaribe Product Awards, 2019",
+        "Winner of Best Men’s Cleanser, Spa & Wellness MexiCaribe Product Awards, 2019",
+        "Winner of Favorite Sensitive Cleanser, Aestheticians’ Choice Awards, Dermascope, 2019",
+        "Winner of Best Men's Line, Best Product Awards, LNE & Spa's, 2019",
+        "Winner of Best Cleanser, Associated Skin Care Professionals’ & Skin Deep Readers’ Choice Awards​, 2017",
+        "Winner of Best Cleanser, Beauty with a Conscience Awards, 2016"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/stone-crop-gel-wash/EM066.html?variant=466",
+      "image": "/images/product-images/facials/cleansing/stone-crop-gel-wash.jpg"
+    },
+    {
+      "slug": "mangosteen-daily-resurfacing-cleanser",
+      "name": "Mangosteen Daily Resurfacing Cleanser",
+      "itemNo": "4330",
+      "sku": "EM330",
+      "priceCad": 54,
+      "retailSize": "4.2 oz / 125 ml",
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": "Restore and smooth",
+      "tagline": "Extend treatment benefits at home. Milky gel lightly lathers, sloughing off dead skin with lactic acid for a smooth, radiant complexion.",
+      "description": "Extend the benefits of a treatment or peel at home with a resurfacing cleanser. This milky gel lightly lathers to slough off dead skin without manual exfoliation or over-stripping. The Lactic Acid Complex and mangosteen in this cleanser work together to restore a smooth, radiant complexion.",
+      "howToUse": "Mix a small amount of product with water in hands, apply and massage gently with fingertips in a circular motion covering the face and neck areas. Rinse thoroughly and pat dry. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Mangosteen",
+          "note": "an antioxidant-rich super fruit that helps the appearance of skin and minimizes the look of environmental stress, all while promoting natural radiance"
+        },
+        {
+          "name": "Lactic Acid Complex (Lactic Acid, Ribose, Red Clover Flower Extract)",
+          "note": "a proprietary blend of actives; gently resurfaces skin and refines pores for a more luminous, even, and youthful looking complexion"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Breakout Prone",
+          "outcome": "The skin feels fresh and perfectly cleansed"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Surface buildup, impurities and blockages are removed"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "Pore size is minimized"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "The complexion looks clear, smooth and radiant"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "990774958",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/990774958?h=50c31b32cf",
+          "watchUrl": "https://vimeo.com/990774958/50c31b32cf"
+        },
+        {
+          "id": "987833381",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987833381?h=d4d676c610",
+          "watchUrl": "https://vimeo.com/987833381/d4d676c610"
+        },
+        {
+          "id": "987833001",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987833001?h=60266dd70c",
+          "watchUrl": "https://vimeo.com/987833001/60266dd70c"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM330",
+          "name": "Mangosteen Daily Resurfacing Cleanser",
+          "category": "Cleansers",
+          "priceCad": 54,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM128",
+          "name": "Mangosteen Revitalizing Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM178",
+          "name": "Charcoal & Black Seed Clay Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM331",
+          "name": "Mangosteen Daily Resurfacing Concentrate",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM164",
+          "name": "Strawberry Rhubarb Hyaluronic Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 7,
+          "action": "Body Care",
+          "sku": "EM130",
+          "name": "Mangosteen Body Lotion",
+          "category": "Body Lotions & Oils",
+          "priceCad": 47,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Favorite Exfoliating Cleanser, Dermascope Aestheticians’ Choice Awards, 2021",
+        "Winner of Best Cleanser, Healing Lifestyles Earth Day Beauty Awards, 2020",
+        "Winner of Best Gel Cleanser, Spa & Wellness MexiCaribe Product Awards, 2019",
+        "Winner of Best Exfoliating Cleanser, Beauty Shortlist Awards, 2019",
+        "Winner of Best Gel Cleanser, Spa & Wellness Mexicaribe Product Awards, 2018"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/mangosteen-daily-resurfacing-cleanser/EM330.html?variant=4330",
+      "image": "/images/product-images/facials/cleansing/mangosteen-daily-resurfacing-cleanser.jpg"
+    },
+    {
+      "slug": "clear-skin-probiotic-cleanser",
+      "name": "Clear Skin Probiotic Cleanser",
+      "itemNo": "8249",
+      "sku": "EM249",
+      "priceCad": 57,
+      "retailSize": "8.4 oz / 250 ml",
+      "skinType": "Oily to normal skin types, especially acne-prone skin",
+      "cardBlurb": "For problem prone skin types",
+      "tagline": "Gentle clear skin and probiotic cleanser. Cruelty-free, no parabens or sulfates.",
+      "description": "Cool and balance your skin with our Clear Skin Probiotic Cleanser. This clarifying cream-gel cleanser treats oily and problem skin with cucumber and tea tree oil. Sweet almond milk and yogurt reduce the visible signs of problem skin and breakouts without stripping the skin of moisture. Cruelty-free and formulated without parabens, sodium lauryl sulfates, synthetic dyes, petrochemicals, phthalates, GMOs and triclosan.",
+      "howToUse": "Mix (dilute) a small amount of the product (pea size) with water in hands, apply and massage into skin with fingertips in a circular motion covering the face and neck for 1–3 minutes. Completely remove with a damp face cloth and then finish with an application of toner.",
+      "ingredients": [
+        {
+          "name": "Willow Bark Extract",
+          "note": "astringent"
+        },
+        {
+          "name": "Cucumber Juice",
+          "note": "revitalizer, toner; tones and shrinks the appearance of skin pores while purifying the skin"
+        },
+        {
+          "name": "Tea Tree Oil",
+          "note": "essential oil"
+        },
+        {
+          "name": "Yogurt",
+          "note": "exfoliating; contains lactic acid; moisturizing and nourishing"
+        },
+        {
+          "name": "Sweet Almond Milk",
+          "note": "softening, nourishing and sweet-smelling"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Breakout Prone",
+          "outcome": "The skin is perfectly cleansed and calmed"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Appearance of Blemished areas are improved"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Skin is purified and detoxified"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "Pore size appears minimized"
+        }
+      ],
+      "features": [
+        "Soy Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "990773644",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/990773644?h=d358617053",
+          "watchUrl": "https://vimeo.com/990773644/d358617053"
+        },
+        {
+          "id": "987819116",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987819116?h=229940f44c",
+          "watchUrl": "https://vimeo.com/987819116/229940f44c"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM249",
+          "name": "Clear Skin Probiotic Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM206",
+          "name": "Lime Refresh Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM326",
+          "name": "Stone Crop Oxygenating Fizzofoliant™",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Mask",
+          "sku": "EM178",
+          "name": "Charcoal & Black Seed Clay Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Treat",
+          "sku": "EM168",
+          "name": "Kombucha Microbiome Luminosity Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 110,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Moisturize",
+          "sku": "EM116",
+          "name": "Acne Advanced Clarifying Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 7,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Favorite Acne Cleanser, Dermascope Aestheticians’ Choice Awards, 2023",
+        "Winner of Best Cleanser, Skin Inc. Readers' Choice Awards, 2022",
+        "Winner of Best Teen Skincare – Acne, Spa & Wellness MexiCaribe Product Awards, 2019",
+        "Winner of Best Acne Collection, ASCP Skin Deep Readers’ Choice Awards, 2018",
+        "Winner of Best Acne Cleanser, 1st Place - Aesthetician's Choice Awards, Dermascope, 2017",
+        "Winner of Best Acne Collection, DaySpa Professional Choice Awards, 2017",
+        "Winner of Top 10 Best Facewash, Spirituality & Health The Beauty 100, 2016"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/clear-skin-probiotic-cleanser/EM249.html?variant=8249",
+      "image": "/images/product-images/facials/cleansing/clear-skin-probiotic-cleanser.jpg"
+    },
+    {
+      "slug": "barbados-cherry-enzyme-cleansing-powder",
+      "name": "Barbados Cherry Enzyme Cleansing Powder",
+      "itemNo": "2185",
+      "sku": "EM185",
+      "priceCad": 82,
+      "retailSize": "2.8 oz / 80 g",
+      "skinType": "All skin types",
+      "cardBlurb": "Enzymatic powder cleanser",
+      "tagline": "Gently exfoliate & deeply cleanse with this 2-in-1 powder-to-foam wash. Vitamin C-rich Barbados cherry & Kakadu plum reveal radiant skin.",
+      "description": "Gently exfoliate and deeply cleanse skin with the enzymatic power of actinidin and papain. Infused with vitamin C-rich fruits like Barbados cherry and Kakadu plum, this 2-in-1 powder-to-foam wash unveils a revitalized and radiant complexion.",
+      "howToUse": "Dispense 1-2 shakes of powder into dry hands. Mix with water and rub together to create a creamy lather. Recommended ratio is 2 parts water to 1 part powder. Apply to skin and massage gently with fingertips in a circular motion covering the face and neck. Rinse thoroughly and pat dry. Use 2-3 times per week, or as often as desired. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Kakadu Plum",
+          "note": "potent source of vitamin C and antioxidants that minimize the appearance of dark spots to leave skin healthy-looking"
+        },
+        {
+          "name": "Actinidin",
+          "note": "an exfoliating enzyme derived from kiwi that refines even the most sensitive skin without irritation"
+        },
+        {
+          "name": "Papain",
+          "note": "enzyme derived from papaya; gently resurfaces skin for a smooth and glowy complexion"
+        },
+        {
+          "name": "Barbados Cherry (Acerola)",
+          "note": "rich in vitamin C and polyphenols, this superfood leaves the skin looking bright, even and radiant"
+        },
+        {
+          "name": "Diatomaceous Earth",
+          "note": "a natural, finely-milled and absorbent ingredient that targets dirt and excess sebum to minimize the look of pores and leave skin balanced"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Large Pores",
+          "outcome": "Appearance of large pores is minimized"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin is brightened and glowing"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Texture looks smoother and more refined"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Improves the look of dark spots and uneven skin tone"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Gently exfoliates to remove dead skin cells"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin feels fresh and clean"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "996840439",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/996840439?h=cdfa35ddf6",
+          "watchUrl": "https://vimeo.com/996840439/cdfa35ddf6"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM185",
+          "name": "Barbados Cherry Enzyme Cleansing Powder",
+          "category": "Cleansers",
+          "priceCad": 82,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM173",
+          "name": "Pineapple Refining Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM186",
+          "name": "Mango Exfoliating Enzyme Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Protect SPF",
+          "sku": "EM177",
+          "name": "Radiant Protection SPF Fluid",
+          "category": "Sun Care",
+          "priceCad": 66,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Body Care",
+          "sku": "EM170",
+          "name": "Yuzu Solid Body Oil",
+          "category": "Body Lotions & Oils",
+          "priceCad": 59,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Powder Cleanser, Spa & Wellness MexiCaribe Product Awards, 2025",
+        "Winner of Best Cleansing Powder, NewBeauty Awards, 2025",
+        "Winner of New Product Launches: Facial Skin Care, ISPA Innovate Awards, ISPA, 2024"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/barbados-cherry-enzyme-cleansing-powder/EM185.html?variant=2185",
+      "image": "/images/product-images/facials/cleansing/barbados-cherry-enzyme-cleansing-powder.jpg"
+    },
+    {
+      "slug": "kombucha-microbiome-foaming-cleanser",
+      "name": "Kombucha Microbiome Foaming Cleanser",
+      "itemNo": "2166",
+      "sku": "EM166",
+      "priceCad": 57,
+      "retailSize": "5 oz / 150 ml",
+      "skinType": "All skin types including sensitive skin",
+      "cardBlurb": "With micellar technology",
+      "tagline": "Liquid-to-foam cleanser with micellar technology. Gently purifies and balances skin, soothes redness from dryness without stripping moisture.",
+      "description": "Refresh and purify skin to reveal a healthy-looking glow. Crafted with targeted micellar technology, this liquid-to-foam cleanser gently removes impurities without over-stripping moisture from the skin. Kombucha, ginger, white tea and jasmine work in unison to refresh and balance the microbiome and look of the skin without compromising the moisture barrier. Suitable for all skin types.",
+      "howToUse": "Pump a small amount of product to transform the liquid into a lightweight foam. Apply to skin and massage gently with fingertips in a circular motion covering the face and neck. Rinse thoroughly and pat dry.",
+      "ingredients": [
+        {
+          "name": "Prebiotic (Inulin)",
+          "note": "a substrate (fuel) that is utilized by host microorganisms to support a balanced skin microbiome"
+        },
+        {
+          "name": "Micelles",
+          "note": "aggregate of mild surfactants gently trap and lift oil, dirt and debris from the skin without drying"
+        },
+        {
+          "name": "Jasmine Flower",
+          "note": "soothes and relieves redness caused by dry skin to bring out a soft, even skin tone"
+        },
+        {
+          "name": "Probiotic (Lactococcus Ferment Lysate — does not contain live cultures)",
+          "note": "supports and balances the skin microbiota and replenishes the skin's moisture barrier to repair dry skin and maintain healthy-looking skin"
+        },
+        {
+          "name": "Kombucha Ferment (Postbiotic)",
+          "note": "derived from fermenting black tea, this superfood is rich in postbiotics and nourishes the skin microbiota, enhancing the look of skin smoothness, luminosity and clarity"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Other Benefits",
+          "outcome": "Leaves the skin clean, refreshed and healthy-looking"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Introduces beneficial prebiotics, probiotics* and postbiotics that help maintain the skin’s microbiome"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Primes the skin to receive further treatment"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "990774814",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/990774814?h=871e8a0d5a",
+          "watchUrl": "https://vimeo.com/990774814/871e8a0d5a"
+        },
+        {
+          "id": "987838333",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987838333?h=5c2d42d64c",
+          "watchUrl": "https://vimeo.com/987838333/5c2d42d64c"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM166",
+          "name": "Kombucha Microbiome Foaming Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM312",
+          "name": "Calm Skin Chamomile Exfoliating Peel",
+          "category": "Exfoliants",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM000",
+          "name": "Seabuckthorn Balancing Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 62,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM010",
+          "name": "Facial Recovery Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM104",
+          "name": "Wild Plum Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Cleanser, Skin Inc. Readers' Choice Awards, 2023"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/kombucha-microbiome-foaming-cleanser/EM166.html?variant=2166",
+      "image": "/images/product-images/facials/cleansing/kombucha-microbiome-foaming-cleanser.jpg"
+    },
+    {
+      "slug": "tulsi-snow-mushroom-cleansing-milk",
+      "name": "Tulsi & Snow Mushroom Cleansing Milk",
+      "itemNo": "2193",
+      "sku": "EM193",
+      "priceCad": 68,
+      "retailSize": "5 fl oz / 150 ml",
+      "skinType": "All skin types",
+      "cardBlurb": "Facial cleansing milk",
+      "tagline": "Eminence Organics Tulsi & Snow Mushroom Cleansing Milk gently removes impurities and calms the look of redness with adaptogenic ingredients.",
+      "description": "Find calm with this uplifting, milky cleanser. Massage into the skin to achieve a light lather that sweeps away impurities and offers a deep, replenishing cleanse without overstripping the skin. Adaptogenic ingredients, like tulsi, minimize the look of redness and the drying effects of environmental pollutants on the skin.",
+      "howToUse": "Mix a small amount of product with water in hands, apply and massage gently with fingertips in a circular motion, covering the face and neck areas. Rinse thoroughly and pat dry. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Reishi Mushroom",
+          "note": "contains a high concentration of polysaccharides which improve hydration; powerful source of antioxidants which help reduce puffiness"
+        },
+        {
+          "name": "Snow Mushroom",
+          "note": "super-humectant; enhances elasticity; improves skin barrier function"
+        },
+        {
+          "name": "Birch Water",
+          "note": "nutrient-rich; purifies and hydrates skin, leaving it toned and tightened; helps minimize the visible effects of pollution; hydrates to restore skin’s natural balance"
+        },
+        {
+          "name": "Tulsi (Holy Basil)",
+          "note": "antioxidant-rich adaptogen; minimizes the appearance of blemishes; reduces the look of inflammation; reduces the appearance of redness"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Gently removes impurities"
+        },
+        {
+          "concern": "Lack of Hydration",
+          "outcome": "Leaves skin feeling soft, smooth and never stripped"
+        },
+        {
+          "concern": "Redness",
+          "outcome": "Helps soothe redness due to dryness. Helps minimize stress-related blemishes"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1101675766",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1101675766?h=f82b351fee",
+          "watchUrl": "https://vimeo.com/1101675766/f82b351fee"
+        },
+        {
+          "id": "1109464369",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/1109464369?h=c62b05b177",
+          "watchUrl": "https://vimeo.com/1109464369/c62b05b177"
+        },
+        {
+          "id": "1109511266",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/1109511266?h=2d949c52cb",
+          "watchUrl": "https://vimeo.com/1109511266/2d949c52cb"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM193",
+          "name": "Tulsi & Snow Mushroom Cleansing Milk",
+          "category": "Cleansers",
+          "priceCad": 68,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM127",
+          "name": "Snow Mushroom & Reishi Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM168",
+          "name": "Kombucha Microbiome Luminosity Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 110,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM126",
+          "name": "Snow Mushroom Moisture Cloud Eye Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Cleanser for Dry Skin, The Beauty Awards, 2026",
+        "Winner of Best Hydrating Cleanser, Dermascope Aestheticians’ Choice Awards, 2026",
+        "Winner of Best Cream Cleanser, Spa & Wellness MexiCaribe Product Awards, 2025"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/tulsi-snow-mushroom-cleansing-milk/EM193.html?variant=2193",
+      "image": "/images/product-images/facials/cleansing/tulsi-snow-mushroom-cleansing-milk.jpg"
+    },
+    {
+      "slug": "coconut-milk-cleanser",
+      "name": "Coconut Milk Cleanser",
+      "itemNo": "8207",
+      "sku": "EM207",
+      "priceCad": 57,
+      "retailSize": "8.4 oz / 250 ml",
+      "skinType": "Normal to dry skin types",
+      "cardBlurb": "Gentle cleansing and hydration",
+      "tagline": "Gentle cream cleanser with rich coconut milk soothes dry, irritated skin for a dewy finish. Cruelty-free and formulated without harsh chemicals.",
+      "description": "Created to comfort dry, irritated or sunburned skin, this gentle cream cleanser uses rich coconut milk to nurture skin for a dewy, fresh finish. Cruelty-free and formulated without parabens, sodium lauryl sulfates, synthetic dyes, petrochemicals, animal by-products, phthalates, GMOs and triclosan.",
+      "howToUse": "Apply cleanser to the skin, emulsifying with fingertips and diluting with water, if necessary. Remove with a damp face cloth and follow with the appropriate toner for skin type.",
+      "ingredients": [
+        {
+          "name": "Coconut Milk",
+          "note": "moisturizes and softens the skin’s appearance"
+        },
+        {
+          "name": "Coconut Oil",
+          "note": "antioxidant: moisturizes to protect the skin"
+        },
+        {
+          "name": "Calendula Oil",
+          "note": "antioxidant; soothing"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "The skin is left feeling hydrated"
+        },
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "The skin looks and feels more youthful"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "The skin is perfectly cleansed and appears balanced"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "988509052",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/988509052?h=9e83986db4",
+          "watchUrl": "https://vimeo.com/988509052/9e83986db4"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM207",
+          "name": "Coconut Milk Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM255",
+          "name": "Neroli Age Corrective Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM314",
+          "name": "Firm Skin Acai Exfoliating Peel",
+          "category": "Exfoliants",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Mask",
+          "sku": "EM303",
+          "name": "Bamboo Age Corrective Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM256",
+          "name": "Coconut Age Corrective Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Cleansing Cream, HiStyle Best Beauty Buys, 202​​1"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/coconut-milk-cleanser/EM207.html?variant=8207",
+      "image": "/images/product-images/facials/cleansing/coconut-milk-cleanser.jpg"
+    },
+    {
+      "slug": "charcoal-exfoliating-gel-cleanser",
+      "name": "Charcoal Exfoliating Gel Cleanser",
+      "itemNo": "2132",
+      "sku": "EM132",
+      "priceCad": 68,
+      "retailSize": "5 oz / 150 ml",
+      "skinType": "Oily to normal skin types including congested, dull and large pores",
+      "cardBlurb": "Exfoliating gel cleanser",
+      "tagline": "Purifying cleanser with charcoal, malachite and blue matcha. Exfoliates to reveal balanced skin.",
+      "description": "Formulated with charcoal, malachite gemstones and blue matcha, this supercharged purifying cleanser transforms from a gel to an exfoliating lather to wash away impurities and reveal a balanced complexion.",
+      "howToUse": "Mix a small amount of product with water in hands, apply and massage gently with fingertips in a circular motion covering the face and neck areas. Rinse thoroughly and pat dry. Do not use on broken or abraded skin.",
+      "ingredients": [
+        {
+          "name": "Blue Matcha (Butterfly Pea Flower)",
+          "note": "rich in antioxidants that improve the visible signs of aging; increases the appearance of skin’s vitality"
+        },
+        {
+          "name": "Peppermint",
+          "note": "rich in antioxidants and Vitamins A and C that target and improve the appearance of aging"
+        },
+        {
+          "name": "Charcoal",
+          "note": "draws out oil, dirt and other harmful substances from clogged pores due to its absorption powers; improves the appearance of skin health"
+        },
+        {
+          "name": "Malachite Gemstones",
+          "note": "stone of transformation, helps the mind release stress and feel optimistic and balanced"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Dullness",
+          "outcome": "Skin is left invigorated and looking energized"
+        },
+        {
+          "concern": "Large Pores",
+          "outcome": "Pores are refined and minimized"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Excess oil is removed from the surface of the skin"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1133695315",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1133695315?h=39e5b3dc46",
+          "watchUrl": "https://vimeo.com/1133695315/39e5b3dc46"
+        },
+        {
+          "id": "987838702",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987838702?h=dfc846f9c7",
+          "watchUrl": "https://vimeo.com/987838702/dfc846f9c7"
+        },
+        {
+          "id": "987836592",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987836592?h=2235edfe23",
+          "watchUrl": "https://vimeo.com/987836592/2235edfe23"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM132",
+          "name": "Charcoal Exfoliating Gel Cleanser",
+          "category": "Cleansers",
+          "priceCad": 68,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM125",
+          "name": "Birch Water Purifying Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM178",
+          "name": "Charcoal & Black Seed Clay Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM179",
+          "name": "Charcoal & Black Seed Clarifying Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 118,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM129",
+          "name": "Mangosteen Gel Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Top Facial Cleanser, Organic Spa Media Beauty Awards, 2025"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/charcoal-exfoliating-gel-cleanser/EM132.html?variant=2132",
+      "image": "/images/product-images/facials/cleansing/charcoal-exfoliating-gel-cleanser.jpg"
+    },
+    {
+      "slug": "lemon-grass-cleanser",
+      "name": "Lemon Grass Cleanser",
+      "itemNo": "5101",
+      "sku": "EM001",
+      "priceCad": 68,
+      "retailSize": "1.7 oz / 50 ml",
+      "skinType": "All skin types including sensitive",
+      "cardBlurb": "Mild cleanser for all skin types",
+      "tagline": "Hypoallergenic cream cleanser with olive, sunflower, flax seed oils and herbs. Gently removes impurities, calms sensitive or dehydrated skin.",
+      "description": "The olive oil, sunflower and flax seed in our Lemon Grass Cleanser gently remove impurities from skin while organic and biodynamic herbal ingredients help calm and soothe. This hypoallergenic cream cleanser is perfect for sensitive or dehydrated skin.\n\nMade with Biodynamic® ingredients from Demeter International Certified Biodynamic® farms.",
+      "howToUse": "Mix (dilute) a small amount of product (pea sized) with water in hands. Apply and massage into the skin with fingertips in a circular motion, covering the face and neck for 1–3 minutes, avoiding the eye area. Completely remove with warm water and a damp face cloth and finish with an application of toner.",
+      "ingredients": [
+        {
+          "name": "Wheat Extract",
+          "note": "hydrates and lubricates the skin"
+        },
+        {
+          "name": "Eucalyptus Oil",
+          "note": "tones and tightens skin; cools and invigorates"
+        },
+        {
+          "name": "Olive Oil",
+          "note": "soothes the skin"
+        },
+        {
+          "name": "Sunflower",
+          "note": "rich in vitamins to reduce the visible signs of aging"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Skin is cleansed and impurities are gently removed"
+        },
+        {
+          "concern": "Redness",
+          "outcome": "Skin irritation appears reduced and calmed"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Soy Free",
+        "Nut Free"
+      ],
+      "videos": [],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM001",
+          "name": "Lemon Grass Cleanser",
+          "category": "Cleansers",
+          "priceCad": 68,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM167",
+          "name": "Kombucha Microbiome Balancing Essence",
+          "category": "Toners & Mists",
+          "priceCad": 67,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM048",
+          "name": "Stone Crop Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 62,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM010",
+          "name": "Facial Recovery Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM252",
+          "name": "Calm Skin Chamomile Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 74,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Organic Category, Best Product Awards, LNE & Spa’s, 2021"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/lemon-grass-cleanser/EM001.html?variant=5101",
+      "image": "/images/product-images/facials/cleansing/lemon-grass-cleanser.jpg"
+    },
+    {
+      "slug": "firm-skin-acai-cleanser",
+      "name": "Firm Skin Acai Cleanser",
+      "itemNo": "8253",
+      "sku": "EM253",
+      "priceCad": 57,
+      "retailSize": "8.4 oz / 250 ml",
+      "skinType": "All skin types, especially mature",
+      "cardBlurb": "Anti-aging cleanser",
+      "tagline": "Antioxidant-rich cream cleanser revitalizes mature skin. Acai, hyaluronic acid and seabuckthorn restore elasticity for a youthful look.",
+      "description": "Antioxidant-rich acai berries are perfect for revitalizing mature skin. This cream cleanser also blends hyaluronic acid and seabuckthorn oil to restore the appearance of elasticity to the skin and present a more youthful look. Cruelty-free and formulated without parabens, sodium lauryl sulfates, synthetic dyes, petrochemicals, animal by-products, phthalates, GMOs and triclosan.",
+      "howToUse": "Mix (dilute) a small amount of the product (pea size) with water in hands, apply and massage into skin with fingertips in a circular motion covering the face and neck for 1–3 minutes. Completely remove with a damp face cloth and then finish with an application of toner.",
+      "ingredients": [
+        {
+          "name": "Seabuckthorn Berry",
+          "note": "vitamin and nutrient-rich; protects skin's moisture barrier and fights the look of wrinkles"
+        },
+        {
+          "name": "Blueberry Juice",
+          "note": "nutrient, antioxidant"
+        },
+        {
+          "name": "Botanical Hyaluronic Acid (from marshmallow plant extract)",
+          "note": "deeply hydrating; natural substance that smooths and plumps skin to minimize the appearance of fine lines and wrinkles"
+        },
+        {
+          "name": "Acai Berry Juice",
+          "note": "antioxidant; phytonutrient and rich in vitamin content; nourishes and moisturizes to improve skin tone"
+        },
+        {
+          "name": "Raspberry Juice",
+          "note": "antioxidant; source of vitamin C and bioflavonoids"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Signs Of Aging",
+          "outcome": "Reduction in the appearance of visible Signs Of Aging"
+        },
+        {
+          "concern": "Lack Of Hydration",
+          "outcome": "Skin is left feeling hydrated and noticeably smoother"
+        },
+        {
+          "concern": "Lack Of Firmness",
+          "outcome": "Skin feels firmed and revitalized"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "The skin is perfectly cleansed and appears balanced"
+        }
+      ],
+      "features": [
+        "Vegan",
+        "Nut Free",
+        "Gluten Free"
+      ],
+      "videos": [
+        {
+          "id": "1133695419",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/1133695419?h=5bddc1b71d",
+          "watchUrl": "https://vimeo.com/1133695419/5bddc1b71d"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM253",
+          "name": "Firm Skin Acai Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EMA07",
+          "name": "Stone Crop Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM241",
+          "name": "Firm Skin Acai Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM157",
+          "name": "Bamboo Firming Fluid",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Moisturize",
+          "sku": "EM176",
+          "name": "Bakuchiol + Niacinamide Moisturizer",
+          "category": "Moisturizers",
+          "priceCad": 84,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/firm-skin-acai-cleanser/EM253.html?variant=8253",
+      "image": "/images/product-images/facials/cleansing/firm-skin-acai-cleanser.jpg"
+    },
+    {
+      "slug": "calm-skin-chamomile-cleanser",
+      "name": "Calm Skin Chamomile Cleanser",
+      "itemNo": "8251",
+      "sku": "EM251",
+      "priceCad": 57,
+      "retailSize": "8.4 oz / 250 ml",
+      "skinType": "All skin types, especially sensitive and those with rosacea",
+      "cardBlurb": "For sensitive prone skin types",
+      "tagline": "Gently remove impurities with this calming cream cleanser. Chamomile, arnica and rosemary are perfect for sensitive, redness-prone skin.",
+      "description": "Gently remove impurities from your skin with our Calm Skin Chamomile Cleanser. Infused with chamomile, arnica and rosemary, this calming cream cleanser is perfect for sensitive skin that is prone to redness. It is cruelty-free and formulated without parabens, sodium lauryl sulfates, synthetic dyes, petrochemicals, animal by-products, phthalates, GMOs and triclosan.",
+      "howToUse": "Mix (dilute) a small amount of the product (pea size) with water in hands, apply and massage into skin with fingertips in a circular motion covering the face and neck for 1–3 minutes. Completely remove with a damp face cloth and then finish with an application of toner.",
+      "ingredients": [
+        {
+          "name": "Calendula Oil",
+          "note": "antioxidant, essential oil"
+        },
+        {
+          "name": "Rosemary",
+          "note": "antioxidant, rejuvenating and soothing"
+        },
+        {
+          "name": "Grape Leaf Extract",
+          "note": "antioxidant; rich in polyphenols"
+        },
+        {
+          "name": "Sunflower Oil",
+          "note": "protective; rich in vitamins A, D and E for healthy-looking skin"
+        },
+        {
+          "name": "Arnica Extract",
+          "note": "cleanser"
+        },
+        {
+          "name": "Chamomile",
+          "note": "revitalizes, soothes and balances the appearance of dry skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Redness",
+          "outcome": "Reduced appearance of redness"
+        },
+        {
+          "concern": "Redness",
+          "outcome": "Reduced irritation and inflammation"
+        },
+        {
+          "concern": "Other Benefits",
+          "outcome": "Skin is perfectly cleansed and balanced"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "990773868",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/990773868?h=2b1bd6a3a5",
+          "watchUrl": "https://vimeo.com/990773868/2b1bd6a3a5"
+        },
+        {
+          "id": "987835291",
+          "orientation": "portrait",
+          "embedUrl": "https://player.vimeo.com/video/987835291?h=ee58b0e8d2",
+          "watchUrl": "https://vimeo.com/987835291/ee58b0e8d2"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM251",
+          "name": "Calm Skin Chamomile Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EM002",
+          "name": "Hawthorn Tonique",
+          "category": "Toners & Mists",
+          "priceCad": 56,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM009",
+          "name": "Yellow Sweet Clover Anti-Redness Masque",
+          "category": "Natural Oils",
+          "priceCad": 62,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Treat",
+          "sku": "EM315",
+          "name": "Rosehip Triple C+E Firming Oil",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM007",
+          "name": "Bearberry Eye Repair Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Honorable Mention of ASCP Readers' Choice Awards: Favorite Sensitive Skin Line, ASCP Skin Deep, 2019",
+        "Winner of Best Organic Facial, Harper's Bazaar Malaysia Spa Awards, 2017"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/calm-skin-chamomile-cleanser/EM251.html?variant=8251",
+      "image": "/images/product-images/facials/cleansing/calm-skin-chamomile-cleanser.jpg"
+    },
+    {
+      "slug": "acne-advanced-cleansing-foam",
+      "name": "Acne Advanced Cleansing Foam",
+      "itemNo": "2114",
+      "sku": "EM114",
+      "priceCad": 59,
+      "retailSize": "5 oz / 150 ml",
+      "skinType": "Acne-prone skin",
+      "cardBlurb": "Unique liquid-to-foam cleanser",
+      "tagline": "Lightweight liquid-to-foam cleanser prevents breakouts & clears pores. Salicylic acid & herbs soothe & tone for even, refreshed skin.",
+      "description": "This unique liquid-to-foam cleanser provides lightweight acne cleansing action, effectively preventing acne breakouts and clearing blocked pores. Featuring time-release encapsulated salicylic acid combined with a natural herb blend, this cleanser soothes and tones to address the look of uneven skin.",
+      "howToUse": "Use one to three times daily. Pump a small amount of product to transform the liquid into a lightweight foam. Apply to skin and massage gently with fingertips in a circular motion covering the face and neck areas. Rinse thoroughly and pat dry.",
+      "ingredients": [
+        {
+          "name": "Caffeine (from Green Tea)",
+          "note": "helps revitalize skin’s appearance"
+        },
+        {
+          "name": "Natural Herb Blend",
+          "note": "blend of natural herbs to protect and calm skin’s appearance"
+        },
+        {
+          "name": "Encapsulated Salicylic Acid",
+          "note": "beta-hydroxy-acid; delivers time-release protection against acne breakouts by encouraging exfoliation and unclogging pores"
+        },
+        {
+          "name": "Panthenol (Provitamin B5)",
+          "note": "helps maintain moisture balance and protect the skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Treat acne and prevent breakouts with encapsulated salicylic acid"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Effectively cleanses skin without over-drying"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Surface build-up, impurities, and blockages are removed"
+        },
+        {
+          "concern": "Breakout Prone",
+          "outcome": "Leaves skin clear and feeling clean, cool and refreshed"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Soy Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "990775387",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/990775387?h=ea7e9a328e",
+          "watchUrl": "https://vimeo.com/990775387/ea7e9a328e"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM114",
+          "name": "Acne Advanced Cleansing Foam",
+          "category": "Cleansers",
+          "priceCad": 59,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Exfoliate",
+          "sku": "EM313",
+          "name": "Clear Skin Willow Bark Exfoliating Peel",
+          "category": "Exfoliants",
+          "priceCad": 98,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Mask",
+          "sku": "EM115",
+          "name": "Acne Advanced Clarifying Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Moisturize",
+          "sku": "EM116",
+          "name": "Acne Advanced Clarifying Hydrator",
+          "category": "Moisturizers",
+          "priceCad": 79,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Eye Care",
+          "sku": "EM007",
+          "name": "Bearberry Eye Repair Cream",
+          "category": "Eye Care",
+          "priceCad": 89,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Winner of Best Acne Cleanser, Her Campus College Beauty Awards, 2021",
+        "Winner of Best Teen Skincare – Acne, Spa & Wellness Mexicaribe Product Awards, 2020",
+        "Winner of Best Face Cleanser, AskMen Grooming Awards, 2019",
+        "Winner of Innovate Award for Products: Acne Advanced Collection, International Spa Association Awards, 2019",
+        "Winner of ASCP Readers' Choice Awards: Favorite Acne Line, ASCP Skin Deep, 2019",
+        "Winner of Best Acne Cleanser, NewBeauty Awards, 2019",
+        "Winner of Best Skincare Product for Acne, Beauty Shortlist Awards, 2019 - Acne Advanced Treatment System​"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/acne-advanced-cleansing-foam/EM114.html?variant=2114",
+      "image": "/images/product-images/facials/cleansing/acne-advanced-cleansing-foam.jpg"
+    },
+    {
+      "slug": "bright-skin-cleanser",
+      "name": "Bright Skin Cleanser",
+      "itemNo": "8270",
+      "sku": "EM270",
+      "priceCad": 57,
+      "retailSize": "8.4 oz / 250 ml",
+      "skinType": "Normal to dry skin types, especially those with hyperpigmentation",
+      "cardBlurb": "Uneven skin corrective cleanser",
+      "tagline": "Brighten skin and reduce signs of aging. Swiss Alpine Plant Extracts and Natural Hydroquinone Alternative for brighter, younger-looking skin.",
+      "description": "Brighten the appearance of skin and reduce the signs of aging with the help of our Bright Skin Cleanser. For normal to dry skin types, this cleanser uses two actives – Swiss Alpine Plant Extracts and a Natural Hydroquinone Alternative – to give skin the appearance of being brighter and younger looking. Cruelty-free and formulated without parabens, sodium lauryl sulfates, synthetic dyes, petrochemicals, animal by-products, phthalates, GMOs and triclosan.",
+      "howToUse": "Mix (dilute) a small amount of the product (pea size) with water in hands, apply and massage in to skin with fingertips in a circular motion covering the face and neck for 1–3 minutes. Completely remove with a damp face cloth and then finish with an application of toner.",
+      "ingredients": [
+        {
+          "name": "Licorice Root",
+          "note": "soothes dry skin; antioxidant and addresses the appearance of uneven skin tone"
+        },
+        {
+          "name": "Bearberry Extract",
+          "note": "antioxidant; brightens the appearance of dark spots"
+        },
+        {
+          "name": "Natural Hydroquinone Alternative",
+          "note": "a natural brightening agent made with African potato and tara tree for the appearance of a smooth, radiant complexion"
+        },
+        {
+          "name": "Swiss Alpine Plant Extracts",
+          "note": "a powerful and antioxidant blend that restores the appearance of luminosity to the skin"
+        }
+      ],
+      "benefits": [
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Skin is perfectly cleansed and balanced"
+        },
+        {
+          "concern": "Uneven Skin Tone",
+          "outcome": "Complexion is clear, and appears smooth and even"
+        },
+        {
+          "concern": "Dullness",
+          "outcome": "Skin appears luminous and bright"
+        }
+      ],
+      "features": [
+        "Gluten Free",
+        "Nut Free",
+        "Soy Free",
+        "Vegan"
+      ],
+      "videos": [
+        {
+          "id": "990775861",
+          "orientation": "landscape",
+          "embedUrl": "https://player.vimeo.com/video/990775861?h=52d8260e80",
+          "watchUrl": "https://vimeo.com/990775861/52d8260e80"
+        }
+      ],
+      "routine": [
+        {
+          "step": 1,
+          "action": "Cleanse",
+          "sku": "EM270",
+          "name": "Bright Skin Cleanser",
+          "category": "Cleansers",
+          "priceCad": 57,
+          "isCurrentProduct": true
+        },
+        {
+          "step": 2,
+          "action": "Tone",
+          "sku": "EMA07",
+          "name": "Stone Crop Hydrating Mist",
+          "category": "Toners & Mists",
+          "priceCad": 49,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 3,
+          "action": "Exfoliate",
+          "sku": "EM237",
+          "name": "Strawberry Rhubarb Dermafoliant",
+          "category": "Exfoliants",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 4,
+          "action": "Mask",
+          "sku": "EM271",
+          "name": "Bright Skin Masque",
+          "category": "Masks & Treatments",
+          "priceCad": 69,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 5,
+          "action": "Treat",
+          "sku": "EM300",
+          "name": "Citrus & Kale Potent C+E Serum",
+          "category": "Serums, Oils & Concentrates",
+          "priceCad": 125,
+          "isCurrentProduct": false
+        },
+        {
+          "step": 6,
+          "action": "Protect SPF",
+          "sku": "EMSDM",
+          "name": "Sun Defense Minerals",
+          "category": "Sun Care",
+          "priceCad": 64,
+          "isCurrentProduct": false
+        }
+      ],
+      "awards": [
+        "Honorable Mention of ASCP Readers' Choice Awards: Favorite Hyperpigmentation Line, ASCP Skin Deep, 2019",
+        "Winner of Best Hyperpigmentation Collection, ASCP Skin Deep Readers’ Choice Awards, 2018"
+      ],
+      "sourceUrl": "https://eminenceorganics.com/ca/product/bright-skin-cleanser/EM270.html?variant=8270",
+      "image": "/images/product-images/facials/cleansing/bright-skin-cleanser.jpg"
+    }
+  ]
+}

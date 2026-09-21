@@ -112,9 +112,17 @@ export default function OtherTreatmentsPage() {
         </Container>
       </Section>
 
-      <Section className="pt-0">
+      {/* Not the full `py-section-sm`, and not `pt-0` either. The dark band
+          above carries its own 48px of floor, so a second 64 on top of it
+          opened a canyon - but zero put the chips against the band with
+          nothing between them, and a row of controls touching a coloured
+          edge reads as part of that edge. */}
+      <Section className="pt-8 lg:pt-12">
         <Container>
-          <GroupTabs groupOf={ANCHOR_TO_TAB} defaultValue={OTHERS[0].segment}>
+          <GroupTabs
+            groupOf={ANCHOR_TO_TAB}
+            order={OTHERS.map((category) => category.segment)}
+          >
             <TabsList aria-label="Other treatments by kind">
               {OTHERS.map((category) => (
                 <TabsTab key={category.slug} value={category.segment}>
