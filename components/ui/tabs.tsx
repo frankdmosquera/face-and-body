@@ -84,7 +84,29 @@ function TabsPanel({ className, ...props }: TabsPrimitive.Panel.Props) {
     <TabsPrimitive.Panel
       data-slot="tabs-panel"
       keepMounted
-      className={cn("outline-none", className)}
+      className={cn(
+        "outline-none",
+        /**
+         * 180ms of fade and rise when a panel opens.
+         *
+         * Both groups are rows of cards that look alike, so an instant swap
+         * reads as a flicker or as nothing at all: you click, and you cannot
+         * tell whether the page heard you. Starting the cards 8px low and
+         * transparent means the eye watches them arrive, which is what says
+         * "this is different content" rather than "the screen blinked".
+         *
+         * Base UI puts `data-starting-style` on the panel for the first frame
+         * after it opens, which is the only hook this needs. It runs on a tab
+         * change and never on first paint, so nothing is slowed down or
+         * delayed for someone arriving on the page.
+         */
+        "transition-[opacity,translate] duration-180 ease-out data-starting-style:translate-y-2 data-starting-style:opacity-0",
+        /* Off for anyone who asked their system for less motion. Vestibular
+           disorders make movement like this genuinely unpleasant, and the
+           tabs work identically without it. */
+        "motion-reduce:transition-none motion-reduce:data-starting-style:translate-y-0 motion-reduce:data-starting-style:opacity-100",
+        className,
+      )}
       {...props}
     />
   );
