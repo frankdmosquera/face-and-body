@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { PhotoByPath } from "@/components/media/PhotoByPath";
 import { Badge } from "@/components/ui/badge";
 
 /**
@@ -189,17 +190,37 @@ export function ReviewCard({ review }: { review: ReviewCardDataType }) {
             Decorative on purpose. The name is rendered right beside it, so
             alt text would make a screen reader say it twice. */}
         {review.avatarUrl ? (
-          <Image
-            src={review.avatarUrl}
-            alt=""
-            width={36}
-            height={36}
-            // Eager, not lazy. Five of the eight start off-screen inside the
-            // carousel, so lazy loading fetches them as they slide in and the
-            // face pops into a card someone is already reading.
-            priority
-            className="size-9 shrink-0 rounded-full object-cover"
-          />
+          /* Two kinds of value arrive here. A library path like
+             `/reviews/abigail-l.jpg` is ours, uploaded to ImageKit alongside
+             every other photograph on the site. An absolute URL is a live
+             Google profile picture from the Places fetch, which is parked
+             rather than removed, and hotlinking it through ImageKit would put
+             a rotating third-party URL behind our CDN. So the source decides
+             the renderer.
+
+             Eager in both cases, not lazy. Five of the eight start off-screen
+             inside the carousel, so lazy loading fetches them as they slide in
+             and the face pops into a card someone is already reading. */
+          review.avatarUrl.startsWith("http") ? (
+            <Image
+              src={review.avatarUrl}
+              alt=""
+              width={36}
+              height={36}
+              priority
+              className="size-9 shrink-0 rounded-full object-cover"
+            />
+          ) : (
+            <PhotoByPath
+              path={review.avatarUrl}
+              alt=""
+              width={160}
+              height={160}
+              sizes="36px"
+              priority
+              className="size-9 shrink-0 rounded-full object-cover"
+            />
+          )
         ) : (
           <span
             aria-hidden="true"

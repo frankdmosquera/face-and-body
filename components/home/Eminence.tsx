@@ -2,7 +2,8 @@ import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
-import Image from "next/image";
+import { PhotoByPath } from "@/components/media/PhotoByPath";
+import { productsData } from "@/data/productsData";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 
@@ -11,31 +12,29 @@ import { buttonVariants } from "@/components/ui/button";
  * products in the order you would use them is a routine, and three jars in no
  * order is a shelf.
  *
- * The pick is editorial rather than catalogue data, which is why it lives here
- * and not in `data/`. Nothing else reads it, and the reason a given product is
- * on the home page is a design decision about this band, not a fact about the
- * product.
+ * Which three, and what each one is called here, is editorial: nothing else
+ * reads it, and the reason a product is on the home page is a decision about
+ * this band rather than a fact about the product. The product itself is not
+ * editorial, so the name and the photograph are read from the catalogue. This
+ * band used to carry its own copy of both, in three files under `public/`, and
+ * a band that disagrees with `/products` about what a product is called is the
+ * failure that arrangement was always going to produce.
  */
 const PICKS = [
-  {
-    src: "/eminence-gel-wash.jpg",
-    name: "Stone Crop Gel Wash",
-    role: "Cleanse",
-    alt: "Eminence Stone Crop Gel Wash, a tall olive green bottle with a botanical print label",
-  },
-  {
-    src: "/eminence-serum.jpg",
-    name: "Bright Skin Licorice Root Booster-Serum",
-    role: "Treat",
-    alt: "Eminence Bright Skin Licorice Root Booster-Serum in an amber glass dropper bottle",
-  },
-  {
-    src: "/eminence-moisturizer.jpg",
-    name: "Stone Crop Whip Moisturizer",
-    role: "Hydrate",
-    alt: "Eminence Stone Crop Whip Moisturizer in a squat pale green glass jar",
-  },
+  { slug: "stone-crop-gel-wash", role: "Cleanse" },
+  { slug: "bright-skin-licorice-root-booster-serum", role: "Treat" },
+  { slug: "stone-crop-whip-moisturizer", role: "Hydrate" },
 ] as const;
+
+/* Thrown at module load rather than rendered around, because a pick that is
+   not in the catalogue is a broken constant, not a state this band should
+   degrade into. Same reasoning as `facialCategory` in `Facials`. */
+const PRODUCTS = PICKS.map((pick) => {
+  const product = productsData.find((entry) => entry.slug === pick.slug);
+  if (!product)
+    throw new Error(`The Eminence band picks ${pick.slug}, which is not stocked`);
+  return { ...pick, product };
+});
 
 /**
  * THE STOCKIST BAND, SHOWING THE STOCK.
@@ -96,8 +95,8 @@ export function Eminence() {
           </Lede>
         </div>
         <ul className="mt-12 grid gap-5 sm:grid-cols-3 lg:mt-14 lg:gap-8">
-          {PICKS.map((pick) => (
-            <li key={pick.src} className="contents">
+          {PRODUCTS.map(({ slug, role, product }) => (
+            <li key={slug} className="contents">
               {/* THE CARD IS THE LINK, and until now nothing here was. The
                   band claimed a brand, showed its products and gave the
                   visitor nowhere to go; the only route to /products was the
@@ -129,22 +128,23 @@ export function Eminence() {
                     make it without cropping. Re-measure this if the shots are
                     ever reshot at another ratio. */}
                 <div className="relative aspect-[4/3]">
-                  <Image
-                    src={pick.src}
-                    alt={pick.alt}
-                    fill
+                  <PhotoByPath
+                    path={product.image}
+                    alt={product.name}
+                    width={1500}
+                    height={1125}
                     sizes="(min-width: 640px) 30vw, 80vw"
-                    className="object-contain"
+                    className="absolute inset-0 h-full w-full object-contain"
                   />
                 </div>
                 <span className="mt-5 block text-[11px] tracking-[0.14em] text-copper uppercase">
-                  {pick.role}
+                  {role}
                 </span>
                 {/* Nothing pins this to the floor, and it does not need it:
                     grid items stretch, so the two-line name on the serum sets
                     the height and all three cards take it. */}
                 <h3 className="mt-2 font-serif text-[19px] leading-snug group-hover:text-accent-foreground">
-                  {pick.name}
+                  {product.name}
                 </h3>
               </Link>
             </li>
