@@ -37,7 +37,7 @@ export function Categories() {
   );
 
   return (
-    <Section>
+    <Section tone="sand">
       <Container>
         <Eyebrow>Also at the clinic</Eyebrow>
         <h2 className="mt-4">Massage, body and skin treatments</h2>

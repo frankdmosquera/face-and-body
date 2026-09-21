@@ -133,11 +133,11 @@ export async function Reviews() {
   const listingUrl = `https://www.google.com/maps/place/?q=place_id:${siteConfig.reviews.placeId}`;
 
   return (
-    <Section className="relative overflow-hidden bg-gradient-to-b from-primary/5 via-primary/5 via-70% to-background">
+    <Section tone="dark" className="relative overflow-hidden">
       {/* LATAM's soft depth, kept low and to the sides, clear of the heading. */}
-      <div className="pointer-events-none absolute top-1/4 -left-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-      <div className="pointer-events-none absolute top-1/4 -right-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+      <div className="pointer-events-none absolute top-1/4 -left-24 h-72 w-72 rounded-full bg-primary/25 blur-3xl" />
+      <div className="pointer-events-none absolute top-1/4 -right-24 h-72 w-72 rounded-full bg-primary/25 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-primary/25 blur-3xl" />
 
       <StarSprite />
       <Container className="relative">
@@ -166,8 +166,8 @@ export async function Reviews() {
               {/* Unrounded on purpose: 4.7 draws four full stars and 70% of
                   a fifth. Math.round() here claimed a flat 5.0. */}
               <StarRating rating={rating} size={30} />
-              <span className="text-[15px] text-muted-foreground">
-                <b className="text-xl font-medium text-foreground">
+              <span className="text-[15px] text-muted-foreground in-data-[tone=dark]:text-on-dark-muted">
+                <b className="text-xl font-medium text-foreground in-data-[tone=dark]:text-on-dark">
                   {rating.toFixed(1)}
                 </b>{" "}
                 &middot; showing {cards.length} of {total} Google reviews

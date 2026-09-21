@@ -67,13 +67,30 @@ export default function HomePage() {
           parallel set of landing pages competing with this one for the same
           searches, on a site with no authority to spend on both. The concern
           taxonomy stays in the data and still labels the results below. */}
-      <Reviews />
       {/* The full facial menu, moved here from /treatments/facials on
-          2026-09-20. It is below the proof rather than above it because most
-          visitors today arrive from her Google listing or her Instagram
-          already knowing the business; Google reads the whole document, so
-          nothing is lost by making them meet the reviews first. */}
+          2026-09-20, and moved above the reviews later the same day. This
+          page is built to rank for facials and that is what its visitors
+          come for, so it is what the page opens on. */}
       <Facials />
+      {/* Reviews, below the menu rather than above it as of 2026-09-20.
+
+          The earlier order put them first because "most visitors arrive from
+          her Google listing already knowing the business". That is the
+          argument against leading with them: her Google listing is where
+          these reviews already live, so anyone arriving that way has just
+          read them, and the page opened by handing them the one thing they
+          already had.
+
+          They also do more work down here. Above the menu they are
+          sentiment. Directly after someone has read $153, $159 and $189 they
+          answer whether she is worth it. Proof is still above the fold - the
+          hero keeps the stars and the 4.7 - so this band is the
+          reinforcement rather than the only copy of it.
+
+          It suits the dark band as well. Third on the page it was the
+          largest contrast event barely a screen in; here it breaks up a long
+          middle instead of interrupting the arrival. */}
+      <Reviews />
       <Categories />
       {/* Eminence moved up to sit directly under "Also at the clinic", on
           Frank's call: the retail line should get more exposure than the
@@ -94,12 +111,20 @@ export default function HomePage() {
           two were folded together, and the footer carries the full NAP on
           every page, so a "Find us" band here was the third copy of the same
           facts on one scroll. */}
+      <Consultation />
       {/* Objection handling, which every other section on this page lacks:
           the rest showcase, this one answers the reasons someone closes the
-          tab. It sits where Find us used to, directly before the consultation
-          CTA, so the last thing before the ask is the answer to why not. */}
+          tab.
+
+          It sat directly BEFORE the consultation CTA until 2026-09-21, on the
+          reasoning that the last thing before the ask should be the answer to
+          why not. Moved after it on Frank's call. The trade is real and worth
+          naming: the ask is no longer the last thing on the page, so a reader
+          who runs out of patience in the questions leaves without passing it
+          again. What it buys is that nobody has to scroll through six
+          objections to reach the booking button. Both sections are sand, so
+          the band is unchanged either way. */}
       <Faq />
-      <Consultation />
     </>
   );
 }
