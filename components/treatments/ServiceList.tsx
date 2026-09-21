@@ -111,7 +111,14 @@ export function ServiceList({ category }: { category: CategoryType }) {
             loser. */}
         <TabsList
           aria-label={`${category.label} by what they do`}
-          className="sticky top-0 z-10 bg-background py-3"
+          /* `bg-secondary`, not `bg-background`, because the only caller with
+             groups is the home page's facials section and that Section is
+             `tone="sand"`. A pinned strip needs an opaque background or the
+             cards scroll through it, and the first attempt used the cream that
+             `/products` and `/other-treatments` sit on - which showed as a
+             cream band across the sand. It has to match the ground it pins
+             over, so the token follows the Section rather than the default. */
+          className="sticky top-0 z-10 bg-secondary py-3"
         >
           {blocks.map((block) => (
             <TabsTab key={block.slug} value={block.slug}>
