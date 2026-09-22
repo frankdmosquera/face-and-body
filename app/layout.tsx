@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
+import { BookingPopup } from "@/components/booking/BookingPopup";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
@@ -39,6 +40,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <SiteHeader />
           <main className="flex-1">{children}</main>
           <SiteFooter />
+          {/* Renders nothing. It arms every data-cal-link on the page and
+              warms the booker, so a Book click opens an overlay that is
+              already loaded rather than starting to load. */}
+          <BookingPopup />
         </ThemeProvider>
       </body>
     </html>

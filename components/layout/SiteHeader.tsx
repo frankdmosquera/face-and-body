@@ -7,6 +7,7 @@ import { HeaderScrollHider } from "@/components/layout/HeaderScrollHider";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { ModeToggle } from "@/components/theme/ModeToggle";
 import { buttonVariants } from "@/components/ui/button";
+import { bookingHref, bookingTrigger } from "@/lib/bookingConfig";
 import { NAV } from "@/data/nav";
 import { siteConfig } from "@/data/siteConfig";
 
@@ -89,7 +90,8 @@ export function SiteHeader() {
               one screen means neither is the loud one. Outlined keeps it
               always-there without competing; the hero stays the primary. */}
           <Link
-            href="/contact"
+            href={bookingHref()}
+            {...bookingTrigger()}
             className={buttonVariants({
               variant: "outline",
               className:

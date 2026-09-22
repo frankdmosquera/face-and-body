@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import { bookingHref, bookingTrigger } from "@/lib/bookingConfig";
 import type { ServiceType } from "@/types/servicesTypes";
 import { cn } from "@/lib/cn";
 
@@ -103,8 +104,18 @@ export function ServiceCard({ service }: { service: ServiceType }) {
             )}
           </span>
         </div>
+        {/* Book goes to the booker, Enquire stays on the contact form. A
+            treatment priced at consultation has no time to pick yet: she has
+            to look at your skin before anyone knows how long it takes. Until
+            an account is configured `bookingHref` returns the contact page
+            too, so both buttons behave exactly as they did before /book. */}
         <Link
-          href={`/contact?treatment=${service.slug}`}
+          href={
+            unpriced
+              ? `/contact?treatment=${service.slug}`
+              : bookingHref(service.slug)
+          }
+          {...(unpriced ? {} : bookingTrigger(service.slug))}
           className={cn(
             buttonVariants({
               variant: unpriced ? "outline" : "default",
