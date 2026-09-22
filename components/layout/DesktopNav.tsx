@@ -64,20 +64,24 @@ export function DesktopNav({ items }: { items: NavItemType[] }) {
                 {item.label}
               </NavigationMenuTrigger>
               <NavigationMenuContent className="p-0">
-                <div
-                  className={cn(
-                    "grid max-w-[calc(100vw-2rem)] gap-7 p-7",
-                    PANEL_WIDTH[Math.min(item.sections.length, 4)],
-                  )}
-                >
-                  {item.sections.map((section, index) => (
-                    <Column
-                      key={section.label ?? index}
-                      section={section}
-                      pathname={pathname}
-                    />
-                  ))}
-                </div>
+                {item.layout === "row" ? (
+                  <Row item={item} pathname={pathname} />
+                ) : (
+                  <div
+                    className={cn(
+                      "grid max-w-[calc(100vw-2rem)] gap-7 p-7",
+                      PANEL_WIDTH[Math.min(item.sections.length, 4)],
+                    )}
+                  >
+                    {item.sections.map((section, index) => (
+                      <Column
+                        key={section.label ?? index}
+                        section={section}
+                        pathname={pathname}
+                      />
+                    ))}
+                  </div>
+                )}
                 {item.more && (
                   <div className="border-t border-border px-7 py-3">
                     <NavigationMenuLink
@@ -111,6 +115,42 @@ export function DesktopNav({ items }: { items: NavItemType[] }) {
         )}
       </NavigationMenuList>
     </NavigationMenu>
+  );
+}
+
+/**
+ * A panel holding category names and nothing else, laid across the box rather
+ * than down it.
+ *
+ * Every section's links are flattened into one row on purpose. A row panel's
+ * sections carry no headings - there is nothing to head - so keeping them as
+ * separate blocks would only put gaps in a line of words.
+ *
+ * `whitespace-nowrap` on each link and `flex-wrap` on the row: a label breaks
+ * between the row's items, never inside one, so "Hydrating and brightening"
+ * cannot end up on two lines while "Resurfacing" sits beside it on one.
+ */
+function Row({ item, pathname }: { item: NavGroupType; pathname: string }) {
+  const links = item.sections.flatMap((section) => section.links);
+
+  return (
+    <div className="flex max-w-[calc(100vw-2rem)] flex-wrap items-center gap-1 p-3">
+      {links.map((link) => (
+        <NavigationMenuLink
+          key={link.href}
+          closeOnClick
+          className="rounded-sm px-3 py-2 text-[13px] whitespace-nowrap text-muted-foreground hover:bg-muted hover:text-foreground focus:bg-muted aria-[current=page]:text-accent-foreground"
+          render={
+            <Link
+              href={link.href}
+              aria-current={isActive(link.href, pathname) ? "page" : undefined}
+            />
+          }
+        >
+          {link.label}
+        </NavigationMenuLink>
+      ))}
+    </div>
   );
 }
 
