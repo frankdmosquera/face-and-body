@@ -42,7 +42,7 @@ export function Facials() {
        rather than alternating every section: cream arrival, dark reviews,
        this sand band holding the menu and the other treatments, cream for
        Eminence, sand for the FAQ and the ask. */
-    <Section id="facials" tone="sand" className="scroll-mt-24">
+    <Section id="facials" tone="sand" className="scroll-mt-44 xsm:scroll-mt-24">
       <Container>
         <Eyebrow>{count} treatments</Eyebrow>
         <h2 className="mt-4">Facials in Calgary SE</h2>

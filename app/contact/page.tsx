@@ -124,7 +124,7 @@ export default function ContactPage() {
           </div>
           <div
             id="form"
-            className="scroll-mt-24 rounded-lg border border-border bg-card p-7 lg:p-11"
+            className="scroll-mt-44 xsm:scroll-mt-24 rounded-lg border border-border bg-card p-7 lg:p-11"
           >
             {/* The heading lives inside `ContactForm`, not here. It used to sit
                 at this level, which left "Send a message" standing over the
@@ -165,10 +165,12 @@ export default function ContactPage() {
       </Section>
 
       {/* Hours and location, moved here from the page that used to hold them
-          on its own. `scroll-mt-24` keeps the heading clear of the sticky
+          on its own. The scroll-mt pair keeps the heading clear of the sticky
           header when someone arrives on #hours from the link above, from the
-          menu, or from the old /hours URL. */}
-      <Section id="hours" className="scroll-mt-24">
+          menu, or from the old /hours URL - 172px of header below `xsm`, where
+          Book now takes its own row, and 96px from there up. One value of 96
+          put every anchor on the site 76px behind the header on a phone. */}
+      <Section id="hours" className="scroll-mt-44 xsm:scroll-mt-24">
         <Container className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
           <div>
             <Eyebrow>When we&apos;re here</Eyebrow>

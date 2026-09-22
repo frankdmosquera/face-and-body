@@ -13,7 +13,9 @@ export function ProductCard({ product }: { product: ProductType }) {
       data-product=""
       data-name={product.name}
       data-price={product.priceCad}
-      className="flex scroll-mt-24 flex-col rounded-lg border border-border bg-card p-4 transition-transform duration-200 hover:-translate-y-0.5"
+      /* scroll-mt pair matches `ServiceCard` and the tab strip: the header is
+         172px below `xsm` and 96px from there up. */
+      className="flex scroll-mt-44 xsm:scroll-mt-24 flex-col rounded-lg border border-border bg-card p-4 transition-transform duration-200 hover:-translate-y-0.5"
     >
       {/* A white well rather than a white card. The packshots are the product
           centred on pure rgb(255,255,255) and `bg-card` is rgb(255,253,249),

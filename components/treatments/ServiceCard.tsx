@@ -57,8 +57,11 @@ export function ServiceCard({ service }: { service: ServiceType }) {
        * that does not break the row it sits in.
        */
       className={cn(
-        // scroll-mt clears the sticky header when the nav jumps to this card.
-        "flex scroll-mt-24 flex-col rounded-lg border border-border bg-card p-4 transition-transform duration-200 hover:-translate-y-0.5",
+        // scroll-mt clears the sticky header when a link jumps to this card.
+        // Two values because the header has two heights: 172px below `xsm`,
+        // where Book now sits on its own row, and 96px from there up. Same
+        // pair as the tab strip in `GroupTabs`, for the same reason.
+        "flex scroll-mt-44 xsm:scroll-mt-24 flex-col rounded-lg border border-border bg-card p-4 transition-transform duration-200 hover:-translate-y-0.5",
       )}
     >
       {/**
