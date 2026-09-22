@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
-import { bookingHref, bookingTrigger } from "@/lib/bookingConfig";
+import { BookLink } from "@/components/booking/BookLink";
 import type { ServiceType } from "@/types/servicesTypes";
 import { cn } from "@/lib/cn";
 
@@ -109,23 +109,24 @@ export function ServiceCard({ service }: { service: ServiceType }) {
             to look at your skin before anyone knows how long it takes. Until
             an account is configured `bookingHref` returns the contact page
             too, so both buttons behave exactly as they did before /book. */}
-        <Link
-          href={
-            unpriced
-              ? `/contact?treatment=${service.slug}`
-              : bookingHref(service.slug)
-          }
-          {...(unpriced ? {} : bookingTrigger(service.slug))}
-          className={cn(
-            buttonVariants({
-              variant: unpriced ? "outline" : "default",
-              size: "sm",
-            }),
-            "shrink-0",
-          )}
-        >
-          {unpriced ? "Enquire" : "Book"}
-        </Link>
+        {unpriced ? (
+          <Link
+            href={`/contact?treatment=${service.slug}`}
+            className={cn(
+              buttonVariants({ variant: "outline", size: "sm" }),
+              "shrink-0",
+            )}
+          >
+            Enquire
+          </Link>
+        ) : (
+          <BookLink
+            treatmentSlug={service.slug}
+            className={cn(buttonVariants({ size: "sm" }), "shrink-0")}
+          >
+            Book
+          </BookLink>
+        )}
       </div>
     </li>
   );

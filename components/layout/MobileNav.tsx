@@ -24,7 +24,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { isNavGroup, siteConfig, type NavItemType } from "@/data/siteConfig";
-import { bookingHref, bookingTrigger } from "@/lib/bookingConfig";
+import { BookLink } from "@/components/booking/BookLink";
 import { cn } from "@/lib/cn";
 
 const ROW =
@@ -236,7 +236,10 @@ export function MobileNav({ items }: { items: NavItemType[] }) {
           <SheetClose
             nativeButton={false}
             className={buttonVariants({ className: "w-full" })}
-            render={<Link href={bookingHref()} {...bookingTrigger()} />}
+            /* A plain anchor via BookLink, not Link: Cal cancels the click
+               and opens the overlay, and a Next Link would navigate as well
+               and stack the two bookers. */
+            render={<BookLink />}
           >
             Book now
           </SheetClose>

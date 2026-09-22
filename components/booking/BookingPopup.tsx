@@ -40,6 +40,8 @@ export function BookingPopup() {
     if (!CALCOM_USERNAME || !resolvedTheme) return;
     let cancelled = false;
     let warmed = false;
+    /* Cal is loaded and configured, so it can take a click from here. */
+    let ready = false;
 
     /**
      * Cal's script, once the browser is idle.
@@ -66,6 +68,41 @@ export function BookingPopup() {
         hideEventTypeDetails: false,
         layout: "month_view",
       });
+      ready = true;
+    }
+
+    /**
+     * Stops a Book link navigating once Cal is there to open the overlay.
+     *
+     * CAL DOES NOT CANCEL THE CLICK ITSELF. Their documentation puts
+     * `data-cal-link` on a `<button>`, which has nothing to cancel, so their
+     * handler never needed to - and on an anchor both things happen. Measured:
+     * clicking Book took the visitor to /book, which renders the inline
+     * booker, and the overlay opened on top of it. Two calendars stacked, and
+     * you had to dismiss one to use the other.
+     *
+     * Only after `ready`, which is the point. Before Cal's script has loaded,
+     * or if it never does, the anchor stays a working link to /book - so the
+     * button is never dead, it just stops being an overlay.
+     *
+     * Modified clicks are left alone. Ctrl or Cmd click opens /book in a new
+     * tab and middle click does the same, which is exactly what someone doing
+     * it expects; hijacking those is what makes a link feel broken.
+     */
+    function stopNavigation(event: MouseEvent) {
+      if (!ready || event.defaultPrevented) return;
+      if (
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      )
+        return;
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      if (!target.closest("a[data-cal-link]")) return;
+      event.preventDefault();
     }
 
     /**
@@ -97,6 +134,9 @@ export function BookingPopup() {
     document.addEventListener("pointerenter", warm, options);
     document.addEventListener("focusin", warm, options);
     document.addEventListener("touchstart", warm, options);
+    /* Capture, so the navigation is cancelled before anything else handles
+       the click. preventDefault does not stop Cal own listener running. */
+    document.addEventListener("click", stopNavigation, true);
 
     return () => {
       cancelled = true;
@@ -105,6 +145,7 @@ export function BookingPopup() {
       document.removeEventListener("pointerenter", warm, options);
       document.removeEventListener("focusin", warm, options);
       document.removeEventListener("touchstart", warm, options);
+      document.removeEventListener("click", stopNavigation, true);
     };
   }, [resolvedTheme]);
 

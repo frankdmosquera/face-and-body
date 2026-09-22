@@ -1,5 +1,4 @@
 import { Phone } from "lucide-react";
-import Link from "next/link";
 import { Brand } from "@/components/layout/Brand";
 import { Container } from "@/components/layout/Container";
 import { DesktopNav } from "@/components/layout/DesktopNav";
@@ -7,7 +6,7 @@ import { HeaderScrollHider } from "@/components/layout/HeaderScrollHider";
 import { MobileNav } from "@/components/layout/MobileNav";
 import { ModeToggle } from "@/components/theme/ModeToggle";
 import { buttonVariants } from "@/components/ui/button";
-import { bookingHref, bookingTrigger } from "@/lib/bookingConfig";
+import { BookLink } from "@/components/booking/BookLink";
 import { NAV } from "@/data/nav";
 import { siteConfig } from "@/data/siteConfig";
 
@@ -89,9 +88,7 @@ export function SiteHeader() {
               "Book a treatment" on the home page, and two shouting buttons in
               one screen means neither is the loud one. Outlined keeps it
               always-there without competing; the hero stays the primary. */}
-          <Link
-            href={bookingHref()}
-            {...bookingTrigger()}
+          <BookLink
             className={buttonVariants({
               variant: "outline",
               className:
@@ -99,7 +96,7 @@ export function SiteHeader() {
             })}
           >
             Book now
-          </Link>
+          </BookLink>
         </div>
         <MobileNav items={NAV} />
       </Container>
