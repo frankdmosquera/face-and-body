@@ -26,6 +26,16 @@ export type NavGroupType = {
   href: string;
   sections: NavSectionType[];
   more?: string;
+  /**
+   * How the panel lays its links out. Columns is the default and is what a
+   * panel listing treatments under group headings wants.
+   *
+   * `row` is for a panel holding nothing but category names. Stacked, four
+   * words make a narrow ladder hanging off the header, which is the shape a
+   * panel exists to avoid; in a row they read as what they are, a set of
+   * choices across the box. It wraps, so a longer set stays inside the width.
+   */
+  layout?: "columns" | "row";
 };
 
 export type NavItemType = SiteLinkType | NavGroupType;

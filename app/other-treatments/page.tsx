@@ -153,7 +153,7 @@ export default function OtherTreatmentsPage() {
                 key={category.slug}
                 value={category.segment}
                 id={category.segment}
-                className="scroll-mt-24"
+                className="scroll-mt-44 xsm:scroll-mt-24"
               >
                 {/* The label is the tab now, so a visible h2 would say it
                     twice. It stays in the outline for screen readers and for

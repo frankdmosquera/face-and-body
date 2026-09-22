@@ -17,6 +17,17 @@ import { Tabs } from "@/components/ui/tabs";
 const SWIPE_MIN = 50;
 
 /**
+ * What a hash asked for, held until the panel holding it is genuinely open.
+ *
+ * `card` is a single treatment or product - `/#chemical-peel` - and lands on
+ * that card. `group` is a whole group - `/#hydrating`, which is what the
+ * header's panels link to - and lands on the top of this component, so you
+ * arrive looking at the chip strip with your group lit rather than partway
+ * down a list you did not choose the start of.
+ */
+type PendingType = { kind: "card"; slug: string } | { kind: "group" };
+
+/**
  * The client half of the grouped service list: it owns which tab is open, and
  * nothing else.
  *
@@ -44,10 +55,24 @@ export function GroupTabs({
   children: ReactNode;
 }) {
   const [value, setValue] = useState(order[0]);
-  /* A ref, not state: the card waiting to be scrolled to is a note to the next
-     render, not something the UI shows. As state, clearing it would be a
-     setState in an effect body and a second render for nothing. */
-  const pendingRef = useRef<string | null>(null);
+  /**
+   * Bumped every time a hash is read, and in the scroll effect's deps
+   * alongside `value`.
+   *
+   * Without it the header's own links are dead on arrival. Clicking
+   * "Hydrating and brightening" while that tab is already open sets the value
+   * it already holds, React skips the render, the effect never runs and
+   * nothing scrolls - so the one link most likely to be clicked twice is the
+   * one that appears broken.
+   */
+  const [arrival, setArrival] = useState(0);
+  /* A ref, not state: the thing waiting to be scrolled to is a note to the
+     next render, not something the UI shows. As state, clearing it would be a
+     setState in an effect body and a second render for nothing.
+
+     Two kinds, because the hash names either one treatment or a whole group,
+     and they land in different places. */
+  const pendingRef = useRef<PendingType | null>(null);
   const rootRef = useRef<HTMLDivElement | null>(null);
   /* Where the finger went down, or null when this touch is not a candidate. */
   const touchRef = useRef<{ x: number; y: number } | null>(null);
@@ -168,25 +193,67 @@ export function GroupTabs({
    * without this the tabs would silently break every one of those links. The
    * hash names a treatment; this finds the group holding it and opens it.
    *
-   * `hashchange` as well as mount, because clicking a same-page anchor while
-   * already on the page fires that and nothing else.
+   * A group slug is accepted as well as a treatment one, and that is what the
+   * header's panels are built on. `groupOf` answers "which group holds this
+   * card"; `order` is every group there is, so a hash matching one of those
+   * opens it directly. Checking `groupOf` first matters: a treatment could one
+   * day be slugged the same as a group, and the more specific answer should
+   * win.
+   *
+   * THREE WAYS IN, because no one of them covers the others.
+   *
+   * - On mount, for anyone arriving from another page or on a pasted link.
+   * - On `hashchange`, for the back button and for a plain `<a>`.
+   * - On a click, and this one is not belt and braces. A same-page `Link`
+   *   updates the URL with `history.pushState`, and pushState fires NOTHING -
+   *   not `hashchange`, not `popstate`. Measured: clicking "Hydrating and
+   *   brightening" in the header while on the home page left the URL reading
+   *   `/#hydrating` with the Cleansing tab still open and the page at the top.
+   *   Dispatching the event by hand in the console opened the right tab and
+   *   scrolled 1,228px, which is how we know the rest of this was never the
+   *   problem.
+   *
+   *   So the click is read from the anchor rather than from the URL. No
+   *   waiting a frame for the router to catch up and no guessing how many:
+   *   the link already says where it is going. Only same-page clicks are taken
+   *   here, because a click that changes page is answered by the mount above.
    */
   useEffect(() => {
-    function openTabForHash() {
-      const slug = decodeURIComponent(window.location.hash.slice(1));
-      const group = slug ? groupOf[slug] : undefined;
+    function open(slug: string) {
+      if (!slug) return;
+      const holding = groupOf[slug];
+      const group = holding ?? (order.includes(slug) ? slug : undefined);
       if (!group) return;
-      pendingRef.current = slug;
+      pendingRef.current = holding ? { kind: "card", slug } : { kind: "group" };
       setValue(group);
+      setArrival((count) => count + 1);
     }
 
-    openTabForHash();
-    window.addEventListener("hashchange", openTabForHash);
-    return () => window.removeEventListener("hashchange", openTabForHash);
-  }, [groupOf]);
+    function openForHash() {
+      open(decodeURIComponent(window.location.hash.slice(1)));
+    }
+
+    function openForClick(event: MouseEvent) {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const anchor = target.closest("a[href]");
+      if (!(anchor instanceof HTMLAnchorElement)) return;
+      const url = new URL(anchor.href, window.location.href);
+      if (url.pathname !== window.location.pathname) return;
+      open(decodeURIComponent(url.hash.slice(1)));
+    }
+
+    openForHash();
+    window.addEventListener("hashchange", openForHash);
+    document.addEventListener("click", openForClick);
+    return () => {
+      window.removeEventListener("hashchange", openForHash);
+      document.removeEventListener("click", openForClick);
+    };
+  }, [groupOf, order]);
 
   /**
-   * Scrolls to the card once its panel is genuinely open.
+   * Scrolls to what the hash asked for, once its panel is genuinely open.
    *
    * Waiting a frame at a time rather than trusting this render is the whole
    * point. On mount this effect runs in the same commit as the `setValue`
@@ -202,8 +269,8 @@ export function GroupTabs({
    * gives up instead of spinning.
    */
   useEffect(() => {
-    const slug = pendingRef.current;
-    if (!slug) return;
+    const pending = pendingRef.current;
+    if (!pending) return;
 
     let frame = 0;
     let tries = 0;
@@ -218,8 +285,17 @@ export function GroupTabs({
      * link looked dead. Nobody arriving on a link has a scroll position worth
      * animating away from.
      */
-    const land = (card: HTMLElement) =>
-      card.scrollIntoView({ block: "start", behavior: "instant" });
+    const land = (target: HTMLElement) =>
+      target.scrollIntoView({ block: "start", behavior: "instant" });
+
+    /* A group lands on this component rather than on any one card, and the
+       root is the same element the swipe returns to, so both ways of changing
+       group arrive in the same place. It carries the header clearance below,
+       which `scrollIntoView` honours. */
+    const find = () =>
+      pending.kind === "card"
+        ? document.getElementById(pending.slug)
+        : rootRef.current;
 
     /**
      * One jump is not enough on a first visit. The hero and review images
@@ -232,8 +308,8 @@ export function GroupTabs({
      * someone for control of their own scroll position is worse than landing
      * in the wrong place.
      */
-    function startSettling(card: HTMLElement) {
-      const observer = new ResizeObserver(() => land(card));
+    function startSettling(target: HTMLElement) {
+      const observer = new ResizeObserver(() => land(target));
       const done = () => {
         observer.disconnect();
         clearTimeout(timer);
@@ -254,17 +330,20 @@ export function GroupTabs({
     }
 
     const attempt = () => {
-      const card = document.getElementById(slug);
+      const target = find();
       /* `offsetParent` is null inside a hidden ancestor, which is the signal to
          wait: on mount this effect runs in the same commit as the `setValue`
          above, and the panel does not drop its `hidden` attribute on the next
          render either. A card with no layout cannot be scrolled to, and the
          failure is silent - right tab open, page at the top, link looking
-         broken. Bounded at 20 frames so a slug that never appears gives up. */
-      if (card && card.offsetParent !== null) {
+         broken. Bounded at 20 frames so a slug that never appears gives up.
+
+         A group's target is the root, which is never hidden, so it passes on
+         the first frame and the wait costs it nothing. */
+      if (target && target.offsetParent !== null) {
         pendingRef.current = null;
-        land(card);
-        settling = startSettling(card);
+        land(target);
+        settling = startSettling(target);
         return;
       }
       if (tries++ < 20) frame = requestAnimationFrame(attempt);
@@ -276,7 +355,7 @@ export function GroupTabs({
       cancelAnimationFrame(frame);
       settling?.done();
     };
-  }, [value]);
+  }, [value, arrival]);
 
   return (
     <Tabs
@@ -285,9 +364,20 @@ export function GroupTabs({
       onValueChange={(next) => setValue(next as string)}
       onTouchStart={onTouchStart}
       onTouchEnd={onTouchEnd}
-      /* `scroll-mt-24` is the clearance the cards already use for the header
-         that returns on scroll up, and the swipe scrolls to this element. */
-      className="scroll-mt-24 gap-10"
+      /* Clearance for the header that returns on scroll up. This is where
+         every group link in the header lands, and where a swipe returns to.
+
+         TWO VALUES, because the header has two heights. Below `xsm` it wraps
+         Book now onto its own full-width row and stands 172px tall; from
+         `xsm` it is one row and the 96px that every card uses is right.
+         Measured on a 375px viewport: one value of 96px put the chip strip at
+         y=96 under a 172px header, so you arrived on the correct group with
+         the chips that prove it hidden behind the logo.
+
+         `xsm` is 440px, which is wider than every current phone - the 15 Pro
+         Max is 430 - so the tall header is the one virtually all her visitors
+         get, not an edge case. */
+      className="scroll-mt-44 xsm:scroll-mt-24 gap-10"
     >
       {children}
     </Tabs>
