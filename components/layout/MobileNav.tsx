@@ -24,6 +24,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { isNavGroup, siteConfig, type NavItemType } from "@/data/siteConfig";
+import { bookingHref, bookingTrigger } from "@/lib/bookingConfig";
 import { cn } from "@/lib/cn";
 
 const ROW =
@@ -235,7 +236,7 @@ export function MobileNav({ items }: { items: NavItemType[] }) {
           <SheetClose
             nativeButton={false}
             className={buttonVariants({ className: "w-full" })}
-            render={<Link href="/contact" />}
+            render={<Link href={bookingHref()} {...bookingTrigger()} />}
           >
             Book now
           </SheetClose>

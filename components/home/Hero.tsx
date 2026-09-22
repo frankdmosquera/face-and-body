@@ -6,6 +6,7 @@ import { Lede } from "@/components/layout/Lede";
 import { Watermark } from "@/components/layout/Watermark";
 import { Photo } from "@/components/media/Photo";
 import { buttonVariants } from "@/components/ui/button";
+import { bookingHref, bookingTrigger } from "@/lib/bookingConfig";
 import { siteConfig } from "@/data/siteConfig";
 import { primaryRating } from "@/lib/ratings";
 
@@ -57,7 +58,11 @@ export function Hero() {
           </h1>
           <Lede>{siteConfig.description}</Lede>
           <div className="mt-10 flex flex-wrap items-center gap-5">
-            <Link href="/contact" className={buttonVariants()}>
+            <Link
+              href={bookingHref()}
+              {...bookingTrigger()}
+              className={buttonVariants()}
+            >
               Book a treatment
             </Link>
             <Link
