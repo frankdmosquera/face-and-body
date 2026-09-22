@@ -73,7 +73,6 @@ export function Booker({
       )}
 
       <BookingEmbed
-        bookable={bookable}
         eventSlug={bookable ? bookable.eventSlug : BOOKING_INDEX_EVENT}
       />
     </div>

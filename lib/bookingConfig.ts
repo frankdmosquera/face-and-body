@@ -17,12 +17,25 @@ import { servicesData } from "@/data/servicesData";
 /**
  * The account the booker belongs to, as it appears in `cal.com/<username>`.
  *
- * Public by design: it is in every booking URL. It is an env var rather than a
- * constant because the account moves - it is created on Frank's email to build
- * against and handed to the clinic by changing the email on it, and a
- * different account during that swap must not need a deploy to a data file.
+ * A CONSTANT, NOT AN ENV VAR, for the same reason `IMAGEKIT_FOLDER` is one:
+ * this is a fact about the project rather than about a deployment, and hiding
+ * a fact in an env var is what lets local and production drift apart.
+ *
+ * It shipped as `NEXT_PUBLIC_CALCOM_USERNAME` first and did exactly that
+ * within the hour - booking worked locally and the live site quietly sent
+ * every Book button to /contact, because `.env.local` is not deployed and
+ * Vercel had nothing. Twenty minutes went into a bug that `imagekitConfig.ts`
+ * already had a paragraph warning about.
+ *
+ * The reasoning for the env var was that the account moves. It does not: the
+ * account is handed over by changing the email on it, which keeps the same
+ * account and the same username. There was never a deployment for this to vary
+ * across.
+ *
+ * Public by design either way - it is in every booking URL, and visible at
+ * cal.com/face-and-body-wellness-centre to anyone who looks.
  */
-export const CALCOM_USERNAME = process.env.NEXT_PUBLIC_CALCOM_USERNAME;
+export const CALCOM_USERNAME = "face-and-body-wellness-centre";
 
 /**
  * What the booker needs about one treatment, and nothing else.
@@ -70,21 +83,18 @@ export function buildBookables(): Record<string, BookableType> {
 export const BOOKING_INDEX_EVENT = "";
 
 /**
- * Where a Book control points, and the reason the swap needs no code change.
+ * Where a Book control points.
  *
- * Without an account configured this returns the contact page, which is
- * exactly where every Book control went before `/book` existed. So the page
- * can ship, be reviewed and sit on main without a half-connected calendar
- * reaching a visitor: set `NEXT_PUBLIC_CALCOM_USERNAME` and every Book button
- * on the site moves at once, unset it and they all move back.
+ * The href is what the overlay is layered on top of: Cal cancels the click and
+ * opens the booker, and this is where the visitor goes when it cannot - no
+ * JavaScript, a middle click, or copy link address.
  *
  * Enquiry is not booking and does not come through here. A treatment priced at
  * consultation cannot be booked by picking a time, so `ServiceCard` keeps
  * those on `/contact` deliberately rather than calling this.
  */
 export function bookingHref(treatmentSlug?: string): string {
-  const base = CALCOM_USERNAME ? "/book" : "/contact";
-  return treatmentSlug ? `${base}?treatment=${treatmentSlug}` : base;
+  return treatmentSlug ? `/book?treatment=${treatmentSlug}` : "/book";
 }
 
 /**
@@ -95,14 +105,10 @@ export function bookingHref(treatmentSlug?: string): string {
  * clicked, so the element stays a working link for everything a link does and
  * the overlay is simply what happens when you click it.
  *
- * Returns nothing when no account is configured, which is what keeps the site
- * honest before the swap: no attribute, no interception, and the href goes to
- * the contact page exactly as it did before booking existed.
  */
 export function bookingTrigger(
   treatmentSlug?: string,
 ): Record<string, string> {
-  if (!CALCOM_USERNAME) return {};
   const eventSlug = treatmentSlug
     ? (buildBookables()[treatmentSlug]?.eventSlug ?? null)
     : null;
