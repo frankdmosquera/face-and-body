@@ -37,7 +37,7 @@ export function BookingPopup() {
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    if (!CALCOM_USERNAME || !resolvedTheme) return;
+    if (!resolvedTheme) return;
     let cancelled = false;
     let warmed = false;
     /* Cal is loaded and configured, so it can take a click from here. */
@@ -126,7 +126,7 @@ export function BookingPopup() {
       warmed = true;
       const cal = await getCalApi();
       if (cancelled) return;
-      cal("preload", { calLink: CALCOM_USERNAME as string });
+      cal("preload", { calLink: CALCOM_USERNAME });
     }
 
     /* Capture, because `pointerenter` does not bubble. */

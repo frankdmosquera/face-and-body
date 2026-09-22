@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { useTheme } from "next-themes";
-import { CALCOM_USERNAME, type BookableType } from "@/lib/bookingConfig";
+import { CALCOM_USERNAME } from "@/lib/bookingConfig";
 
 /**
  * The booker, inline on our own page.
@@ -26,12 +26,9 @@ import { CALCOM_USERNAME, type BookableType } from "@/lib/bookingConfig";
  * publish the adapter for it. Do not re-litigate this by removing the package.
  */
 export function BookingEmbed({
-  bookable,
   eventSlug,
 }: {
-  /** The treatment being booked, or null for the full menu. */
-  bookable: BookableType | null;
-  /** Explicit event slug, so a bare `/book` can pass the account's own page. */
+  /** Which event type to open. Empty opens the account page, the full menu. */
   eventSlug: string;
 }) {
   /* `resolvedTheme`, not `theme`: the site's default is "system" and Cal needs
@@ -39,7 +36,7 @@ export function BookingEmbed({
   const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    if (!CALCOM_USERNAME || !resolvedTheme) return;
+    if (!resolvedTheme) return;
     let cancelled = false;
 
     (async () => {
@@ -59,27 +56,6 @@ export function BookingEmbed({
       cancelled = true;
     };
   }, [resolvedTheme]);
-
-  /* A labelled box rather than a broken embed, the same way `Photo` handles a
-     missing ImageKit endpoint. Without an account this is what /book shows,
-     and it says so instead of rendering an empty white rectangle. */
-  if (!CALCOM_USERNAME) {
-    return (
-      <div className="grid min-h-[28rem] place-items-center rounded-lg border border-dashed border-border bg-placeholder p-8 text-center">
-        <div>
-          <p className="text-[11px] tracking-[0.14em] text-placeholder-text uppercase">
-            Booking not connected
-          </p>
-          <p className="mt-3 max-w-sm text-[14px] text-muted-foreground">
-            {bookable
-              ? `${bookable.name}, ${bookable.durationMin} minutes.`
-              : "The full treatment menu."}{" "}
-            Set NEXT_PUBLIC_CALCOM_USERNAME to show the calendar here.
-          </p>
-        </div>
-      </div>
-    );
-  }
 
   const calLink = eventSlug
     ? `${CALCOM_USERNAME}/${eventSlug}`
