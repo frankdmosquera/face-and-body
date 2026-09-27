@@ -11,23 +11,25 @@
      per feature; /implement adds entries and republishes before every
      commit. Edit this file in the repo and republish to the same URL.
 
-     Palette is a neutral cool graphite on purpose: pick this project's
-     own colours in /onboard or /overview so sibling logs never read as
-     the same page. Semantic colours follow the standing convention:
+     Palette: the clinic copper as the accent, set below. Semantic colours follow the standing convention:
      red = blocked on you, amber = open question, green = done or
      approved, violet = a real fault found and repaired.
      --------------------------------------------------------------- */
+  /* face-and-body's own colours: the clinic's copper as the accent, on
+     neutrals leaning very slightly warm, so this log never reads as the
+     indigo scheduleads-app one beside it. Semantic colours unchanged. */
   :root {
-    --ground: #F4F5F7;
+    --ground: #EEEBE8;
+    --section-ground: #FAF9F8;
     --surface: #FFFFFF;
-    --surface-2: #E9EBEF;
-    --ink: #15181D;
-    --ink-2: #4A5160;
-    --ink-3: #7A8290;
-    --rule: #D6DAE1;
-    --rule-soft: #E6E9EE;
-    --accent: #3B5BDB;
-    --accent-soft: #E4E9FA;
+    --surface-2: #EBE7E3;
+    --ink: #1B1714;
+    --ink-2: #51483F;
+    --ink-3: #82776E;
+    --rule: #DAD3CC;
+    --rule-soft: #E8E3DE;
+    --accent: #96492A;
+    --accent-soft: #F6E6DC;
     --done: #1E7A4E;
     --done-soft: #DDEEE5;
     --pending: #8C6414;
@@ -36,6 +38,13 @@
     --alert-soft: #F7E1DE;
     --fixed: #5B37B8;
     --fixed-soft: #E8E2F8;
+    /* Diagram boxes only: teal = the site itself, purple = later, in scheduleads. */
+    --fig-teal: #0F6E56;
+    --fig-teal-ink: #085041;
+    --fig-teal-soft: #E1F5EE;
+    --fig-purple: #534AB7;
+    --fig-purple-ink: #3C3489;
+    --fig-purple-soft: #EEEDFE;
     --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
     --body: "Instrument Sans", "Helvetica Neue", Arial, sans-serif;
     --mono: "JetBrains Mono", Consolas, "SF Mono", ui-monospace, monospace;
@@ -43,16 +52,18 @@
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --ground: #0E1116;
-      --surface: #151A21;
-      --surface-2: #1C222B;
-      --ink: #E6EAF0;
-      --ink-2: #A3ACBB;
-      --ink-3: #737D8C;
-      --rule: #262D38;
-      --rule-soft: #1C222B;
-      --accent: #8DA3FF;
-      --accent-soft: #1A2244;
+      color-scheme: dark;
+      --ground: #0D0B0A;
+      --section-ground: #15120F;
+      --surface: #1A1612;
+      --surface-2: #231E19;
+      --ink: #EDE7E1;
+      --ink-2: #B3A79D;
+      --ink-3: #83776D;
+      --rule: #2E2721;
+      --rule-soft: #231E19;
+      --accent: #E9A47F;
+      --accent-soft: #3A241A;
       --done: #62C797;
       --done-soft: #11291E;
       --pending: #DDB266;
@@ -61,20 +72,28 @@
       --alert-soft: #2F1815;
       --fixed: #B39CF3;
       --fixed-soft: #201938;
+      --fig-teal: #5DCAA5;
+      --fig-teal-ink: #9FE1CB;
+      --fig-teal-soft: #0A3D33;
+      --fig-purple: #AFA9EC;
+      --fig-purple-ink: #CECBF6;
+      --fig-purple-soft: #2E2870;
     }
   }
 
   :root[data-theme="dark"] {
-    --ground: #0E1116;
-    --surface: #151A21;
-    --surface-2: #1C222B;
-    --ink: #E6EAF0;
-    --ink-2: #A3ACBB;
-    --ink-3: #737D8C;
-    --rule: #262D38;
-    --rule-soft: #1C222B;
-    --accent: #8DA3FF;
-    --accent-soft: #1A2244;
+    color-scheme: dark;
+    --ground: #0D0B0A;
+    --section-ground: #15120F;
+    --surface: #1A1612;
+    --surface-2: #231E19;
+    --ink: #EDE7E1;
+    --ink-2: #B3A79D;
+    --ink-3: #83776D;
+    --rule: #2E2721;
+    --rule-soft: #231E19;
+    --accent: #E9A47F;
+    --accent-soft: #3A241A;
     --done: #62C797;
     --done-soft: #11291E;
     --pending: #DDB266;
@@ -83,7 +102,14 @@
     --alert-soft: #2F1815;
     --fixed: #B39CF3;
     --fixed-soft: #201938;
+    --fig-teal: #5DCAA5;
+    --fig-teal-ink: #9FE1CB;
+    --fig-teal-soft: #0A3D33;
+    --fig-purple: #AFA9EC;
+    --fig-purple-ink: #CECBF6;
+    --fig-purple-soft: #2E2870;
   }
+
 
   * { box-sizing: border-box; }
 
@@ -96,75 +122,98 @@
   }
 
   .shell {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 24px 80px;
-    display: grid;
-    grid-template-columns: 224px minmax(0, 1fr);
-    gap: 48px;
-    align-items: start;
+    max-width: calc(1180px + 1rem);
+    margin: 0; /* on the left, not centred, so the page sits beside the chat */
+    padding: 0 0 70px 1rem; /* no gap on the right: the content uses the width before it shrinks */
   }
 
-  /* ---------- sidebar ---------- */
+  /* ---------- top bar ----------
+     One bar across the full window, outside the shell, because it is read
+     on a large screen and the whole plan should fit in it. It carries the
+     view switch, every item as a chip by phase, the item being built opened
+     into its steps, and a Now line. A chip jumps to its row. */
 
-  .side {
+  .topbar {
     position: sticky;
     top: env(safe-area-inset-top, 0px);
-    padding: 34px 0;
+    z-index: 10;
+    background: var(--surface);
+    padding: 10px 16px 9px;
     display: flex;
     flex-direction: column;
-    gap: 26px;
-    max-height: 100vh;
-    overflow-y: auto;
-  }
-
-  .brand { display: flex; flex-direction: column; gap: 6px; }
-
-  .brand-name {
-    font-family: var(--mono);
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--ink);
-  }
-
-  .brand-sub {
-    font-family: var(--mono);
-    font-size: 10.5px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--ink-3);
-    line-height: 1.6;
-  }
-
-  .nav-group { display: flex; flex-direction: column; gap: 2px; }
-
-  .nav-head {
-    font-family: var(--mono);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--ink-3);
-    padding-bottom: 8px;
-    margin-bottom: 5px;
+    gap: 8px;
     border-bottom: 1px solid var(--rule);
   }
+
+  .bar { display: flex; flex-wrap: nowrap; align-items: flex-end; justify-content: center; gap: 10px 12px; }
+  /* On a screen too narrow for one row, the last phases wrap under the rest; the buttons stay put. */
+  .bar .bar-plan { gap: 8px 4px; flex: 0 1 auto; min-width: 0; }
+  .bar .strip-label { letter-spacing: 0.06em; } /* tighter than the old strip, so the whole plan fits one row */
+  .bar .switch { margin-left: 0; margin-right: 14px; align-self: flex-end; flex: none; flex-wrap: nowrap; }
+  .bar .nav-link { padding: 5px 7px; letter-spacing: 0.03em; }
+  .bar .cell { min-width: 23px; padding: 4px 4px; }
+  .bar .cell--step { min-width: 26px; }
+  /* What is happening now, written above the item being built. */
+  .bar .now-note { color: var(--pending); }
+  .bar .strip-phase:has(.cell-open) .strip-label { color: var(--pending); }
+
+  a.cell { text-decoration: none; cursor: pointer; }
+  /* The Project and Architecture menus: the same chips, holding words instead of numbers. */
+  .cell--text { padding: 4px 9px; white-space: nowrap; }
+  .bar nav[data-menu][hidden] { display: none; }
+  .bar nav[data-menu="project"] .strip-cells, .bar nav[data-menu="architecture"] .strip-cells { flex-wrap: wrap; }
+  /* Each Project and Architecture section is outlined in its own color (below), no fill, so
+     a glance says where one ends. The one being read gets a thicker left edge in its color, and its menu button
+     turns that color: you always know where you are without closing anything. */
+  #view-project > section, #view-architecture > section { padding: 18px 20px 22px; border: 1px solid var(--rule-soft); border-left: 3px solid transparent; border-radius: 10px; }
+  /* One color per section, worn by its menu button too, so a jump lands on the color it came from. */
+  [data-color="blue"] { --sec: #3B6FD8; }
+  [data-color="teal"] { --sec: #0F8A6E; }
+  [data-color="amber"] { --sec: #B7791F; }
+  [data-color="violet"] { --sec: #6B4FC8; }
+  [data-color="rose"] { --sec: #C2416E; }
+  [data-color="slate"] { --sec: #5B6678; }
+  [data-color="green"] { --sec: #2F8A4C; }
+  /* A step in from the page, and a step darker than the white of a diagram. */
+  #view-project > section[data-color], #view-architecture > section[data-color] { background: var(--section-ground); border-color: color-mix(in srgb, var(--sec) 55%, var(--ground)); }
+  #view-project > section[data-color] > h2, #view-architecture > section[data-color] > h2 { color: color-mix(in srgb, var(--sec) 75%, var(--ink)); border-bottom-color: color-mix(in srgb, var(--sec) 35%, var(--ground)); }
+  .cell--text[data-color] { background: transparent; }
+  #view-architecture .map-what { font-size: 14px; color: var(--ink-3); }
+  #view-project > section.is-current-section, #view-architecture > section.is-current-section { border-left-color: var(--sec); }
+  /* A button stays plain until its section is on screen; then it wears that section's color. */
+  .cell--text[data-color].is-current { border-color: var(--sec); color: color-mix(in srgb, var(--sec) 75%, var(--ink)); }
+  #view-architecture section, #view-project section { scroll-margin-top: 150px; }
+  #arch-booking-model, #arch-versions, #arch-not-in-model, #arch-folders { scroll-margin-top: 150px; }
+  a.cell:hover { border-color: var(--ink-3); color: var(--ink); }
+  a.cell:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  /* The item being built, opened into its steps beside its own chip. */
+  .cell-open { display: inline-flex; gap: 3px; padding: 3px 4px; margin: -4px 8px; background: color-mix(in srgb, var(--pending-soft) 50%, var(--surface)); border: 1px solid color-mix(in srgb, var(--pending) 40%, var(--surface)); border-radius: 6px; }
+  .cell--step { min-width: 30px; font-size: 10px; }
+  .cell[data-state="next"] { border-color: var(--pending); color: var(--pending); font-weight: 700; }
+
+  /* A jump lands below the sticky bar, not under it. */
+  .item, .rstep { scroll-margin-top: 150px; }
+
+
+  .switch { display: flex; gap: 4px; margin-left: auto; flex-wrap: wrap; }
 
   .nav-link {
     all: unset;
     cursor: pointer;
-    display: grid;
-    grid-template-columns: 18px 1fr;
-    gap: 10px;
+    display: inline-flex;
     align-items: baseline;
-    padding: 7px 9px 7px 6px;
-    border-radius: 5px;
+    gap: 7px;
+    padding: 6px 12px;
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    background: var(--surface);
     color: var(--ink-2);
-    font-family: var(--body);
-    font-size: 14.5px;
-    line-height: 1.35;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 
   .nav-link:hover { background: var(--surface-2); color: var(--ink); }
@@ -172,36 +221,30 @@
 
   .nav-link[aria-current="page"] {
     background: var(--accent-soft);
-    color: var(--ink);
-    font-weight: 600;
+    border-color: var(--accent);
+    color: var(--accent);
   }
 
-  .nav-num {
-    font-family: var(--mono);
-    font-size: 11px;
-    font-weight: 500;
-    color: var(--ink-3);
-    text-align: right;
-    font-variant-numeric: tabular-nums;
-  }
-
+  .nav-num { font-variant-numeric: tabular-nums; color: var(--ink-3); }
   .nav-link[aria-current="page"] .nav-num { color: var(--accent); }
-  .nav-link[data-state="active"] .nav-num { color: var(--pending); font-weight: 700; }
-  .nav-link[data-state="done"] .nav-num { color: var(--done); font-weight: 700; }
+  .nav-link[data-state="active"] .nav-num { color: var(--pending); }
+  .nav-link[data-state="done"] .nav-num { color: var(--done); }
 
-  .nav-dot {
-    width: 7px; height: 7px;
-    border-radius: 50%;
-    justify-self: center; align-self: center;
-    background: var(--rule);
+  /* ---------- key, as a footer strip ---------- */
+
+  .keyrow {
+    margin-top: 40px;
+    padding-top: 16px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+    align-items: center;
   }
-
-  .legend { display: flex; flex-direction: column; gap: 8px; }
 
   .legend-row {
-    display: grid;
-    grid-template-columns: 18px 1fr;
-    gap: 10px;
+    display: inline-flex;
+    gap: 8px;
     align-items: center;
     font-family: var(--mono);
     font-size: 10.5px;
@@ -210,12 +253,13 @@
   }
 
   .legend-mark {
-    width: 18px; height: 18px;
+    width: 17px; height: 17px;
     border-radius: 50%;
     display: grid; place-items: center;
     font-family: var(--mono);
-    font-size: 9.5px; font-weight: 700; line-height: 1;
+    font-size: 10px; font-weight: 700; line-height: 1;
     color: var(--ground);
+    flex: none;
   }
 
   .legend-mark--ask  { background: var(--alert); }
@@ -223,19 +267,49 @@
   .legend-mark--done { background: var(--done); }
   .legend-mark--fix  { background: var(--fixed); }
 
-  .nav-note {
-    font-family: var(--mono);
-    font-size: 10.5px;
-    line-height: 1.65;
-    color: var(--ink-3);
-    padding: 9px 6px 0;
-    border-top: 1px dashed var(--rule);
-    margin-top: 6px;
-  }
-
   /* ---------- main ---------- */
 
   main { padding: 34px 0 0; min-width: 0; }
+
+
+  /* ---------- substeps ----------
+     What a step actually contained. A step is one reviewable change, but
+     it is rarely one edit, and "step 1 done" hides which pieces landed. */
+
+  .substeps {
+    margin: 2px 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+
+  .substeps li {
+    position: relative;
+    padding-left: 21px;
+    font-family: var(--body);
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink-2);
+  }
+
+  .substeps li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 13px;
+    content: "\2013";
+    color: var(--ink-3);
+    text-align: left;
+    font-weight: 400;
+    font-family: var(--mono);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .substeps li[data-done="yes"] { color: var(--done); }
+  .substeps li[data-done="yes"]::before { content: "\2713"; color: var(--done); }
+
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
   .eyebrow {
     font-family: var(--mono);
@@ -440,7 +514,7 @@
 
   .kind-tag {
     font-family: var(--mono);
-    font-size: 9.5px; font-weight: 700;
+    font-size: 10.5px; font-weight: 700;
     letter-spacing: 0.1em; text-transform: uppercase;
     padding: 2px 7px;
     border-radius: 3px;
@@ -513,8 +587,8 @@
   .step-text { font-size: 15px; color: var(--ink-2); }
 
   .verify {
-    font-family: var(--mono);
-    font-size: 11.5px;
+    font-family: var(--body);
+    font-size: 14px;
     line-height: 1.6;
     color: var(--ink-3);
     padding-left: 11px;
@@ -573,7 +647,7 @@
 
   .stage-head {
     display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px;
-    padding-bottom: 9px; margin-bottom: 6px;
+    padding: 0 0.75rem 9px 0.375rem; margin-bottom: 6px;
     border-bottom: 1px solid var(--rule);
   }
 
@@ -582,14 +656,24 @@
 
   .item {
     display: grid;
-    grid-template-columns: 32px minmax(0, 1fr) auto;
-    gap: 4px 12px;
-    padding: 13px 0;
+    grid-template-columns: 24px minmax(0, 1fr) auto;
+    gap: 4px 10px;
+    padding: 13px 0.75rem 13px 0.375rem; /* text never touches the edge; a little more on the right, where the pills sit */
     border-bottom: 1px solid var(--rule-soft);
     align-items: baseline;
   }
 
   .item:last-child { border-bottom: none; }
+  /* An open item uses the full width: its status pill leaves its own column and sits on the
+     title line, so the steps and drawers below reach the right edge instead of stopping short. */
+  .item { position: relative; }
+  .item:has(> .item-body > .item-fold[open]) > .item-body { grid-column: 2 / -1; }
+  .item:has(> .item-body > .item-fold[open]) > .pill { position: absolute; top: 13px; right: 0.75rem; }
+  .item-fold[open] > .drawer { margin-right: -0.75rem; } /* an open item's boxes reach the row's right edge; its text keeps the gap */
+  .item-fold[open] > .gates { padding: 5px 0; } /* a little air around the three gate chips */
+  /* Below the title, an open item's contents start under its number, not under its title. */
+  .item-fold[open] > :not(summary) { margin-left: -34px; } /* the number column (24px) plus the gap (10px) */
+  .item:has(> .item-body > .item-fold[open]) .item-fold > summary { padding-right: 130px; }
   .item-num { font-family: var(--mono); font-size: 12px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
   .item-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
   .item-name { font-family: var(--display); font-size: 16.5px; font-weight: 600; }
@@ -598,6 +682,452 @@
   .item-was { font-family: var(--mono); font-size: 10.5px; color: var(--ink-3); letter-spacing: 0.03em; }
   .item[data-state="active"] .item-num { color: var(--pending); font-weight: 700; }
   .item[data-state="done"] .item-num { color: var(--done); font-weight: 700; }
+
+  /* ---------- diagrams ----------
+     Drawn with this page's own colour tokens so they follow light and
+     dark. Structure diagrams are inline SVG; table diagrams are Mermaid
+     source, rendered by the script at the bottom, and readable as text
+     if that script cannot load. */
+
+  .fig { margin: 2px 0; padding: 12px; border: 1px solid var(--rule-soft); border-radius: 5px; background: var(--surface); display: flex; flex-direction: column; gap: 8px; }
+  .fig { overflow-x: auto; }
+  /* Every diagram is drawn 680 wide and shown at that size, its caption lined up under it. Stretched to the full page it grew up to 1.6 times and read as crowded. */
+  .fig > * { width: 100%; max-width: 680px; margin-left: auto; margin-right: auto; }
+  /* Below this width the labels get too small to read, so the figure scrolls sideways instead of shrinking further. */
+  .fig svg { display: block; width: 100%; min-width: 520px; height: auto; }
+  .fig figcaption { font-size: 13.5px; line-height: 1.55; color: var(--ink-3); }
+  .fig { --s: var(--ink-3); --b: var(--rule); }
+  .fig svg .th { fill: var(--ink); font-family: var(--body); font-size: 14px; font-weight: 600; }
+  .fig svg .ts { fill: var(--ink-3); font-family: var(--body); font-size: 12px; }
+  .fig svg .tag { font-family: var(--mono); }
+  .fig svg .arr { stroke: var(--ink-3); stroke-width: 1; fill: none; }
+  .fig svg [class^="c-"] > rect { stroke-width: 0.75px; }
+  /* Solid, never dashed: most boxes are later features, and dashed they made the page read as unfinished. Titles and subtitles take their box's colour. */
+  .fig svg .c-gray > rect { fill: var(--surface-2); stroke: color-mix(in srgb, var(--ink-3) 45%, var(--surface)); }
+  .fig svg .c-teal > rect { fill: var(--fig-teal-soft); stroke: var(--fig-teal); }
+  .fig svg .c-teal > .th { fill: var(--fig-teal-ink); }
+  .fig svg .c-teal > .ts { fill: var(--fig-teal); }
+  .fig svg .c-purple > rect { fill: var(--fig-purple-soft); stroke: var(--fig-purple); }
+  .fig svg .c-purple > .th { fill: var(--fig-purple-ink); }
+  .fig svg .c-purple > .ts { fill: var(--fig-purple); }
+  .fig table.states { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  .fig table.states th, .fig table.states td { padding: 9px 10px; border-bottom: 1px solid var(--rule-soft); text-align: center; color: var(--ink-2); }
+  .fig table.states th:first-child, .fig table.states td:first-child { text-align: left; }
+  .fig table.states th { font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); }
+  .fig table.states td small { display: block; font-size: 13px; color: var(--ink-3); }
+  .fig table.states td.yes { color: var(--done); font-weight: 700; }
+  .fig table.states td.no { color: var(--ink-3); }
+  .fig table.states tr.hl td { background: var(--accent-soft); }
+  .callout h4 { font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); margin: 10px 0 0; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
+  .callout .map-what { font-size: 14px; color: var(--ink-3); }
+  .fig pre[data-mermaid] { margin: 0; font-family: var(--mono); font-size: 12px; color: var(--ink-2); white-space: pre-wrap; }
+
+  /* ---------- folding rows ----------
+     A row with drawers folds down to its name, so a finished item is one
+     line in the list and the one being built can be shut when reading
+     something else. The name is the click target. */
+
+  .item-fold > summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 10px; }
+  .item-fold > summary::-webkit-details-marker { display: none; }
+  .item-fold > summary::after { content: "+"; margin-left: auto; font-family: var(--mono); font-size: 13px; color: var(--ink-3); }
+  .item-fold[open] > summary::after { content: "\2212"; }
+  .item-fold > summary:hover { color: var(--accent); }
+  .item-fold > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+  .item-fold[open] { display: flex; flex-direction: column; gap: 8px; }
+
+  details.callout > summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 10px; }
+  details.callout > summary::-webkit-details-marker { display: none; }
+  details.callout > summary::after { content: "+"; margin-left: auto; font-family: var(--mono); font-size: 13px; color: var(--ink-3); }
+  details.callout[open] > summary::after { content: "\2212"; }
+  details.callout:not([open]) { padding-top: 11px; padding-bottom: 11px; }
+  .callout--map { border-left-color: var(--accent); }
+  .callout--map .callout-count { color: var(--accent); }
+  .callout-count { font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pending); }
+
+  /* ---------- the whole plan, as chips ----------
+     28 items, grouped by phase, each chip carrying its own number.
+     Counts were the problem this replaces: "2 done / 1 in progress /
+     25 to go" put bare digits beside a list numbered with the same
+     digits, so "2 done" read as "item 2 is done" when item 2 has not
+     started. A chip cannot be misread: it *is* the item. */
+
+  .strip { display: flex; flex-wrap: wrap; gap: 14px 18px; }
+
+  .strip-phase { display: flex; flex-direction: column; gap: 5px; }
+
+  .strip-label {
+    font-family: var(--mono);
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .strip-cells { display: flex; gap: 4px; }
+
+  .cell {
+    min-width: 27px;
+    padding: 4px 6px;
+    border-radius: 3px;
+    border: 1px solid var(--rule);
+    background: var(--surface);
+    color: var(--ink-3);
+    font-family: var(--mono);
+    font-size: 10.5px; font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .cell[data-state="done"] {
+    background: var(--done-soft);
+    border-color: var(--done);
+    color: var(--done);
+    font-weight: 700;
+  }
+
+  .cell[data-state="active"] {
+    background: var(--pending-soft);
+    border-color: var(--pending);
+    color: var(--pending);
+    font-weight: 700;
+    box-shadow: 0 0 0 2px var(--pending-soft);
+  }
+
+  .tally {
+    display: flex; flex-wrap: wrap;
+    gap: 6px 16px; align-items: baseline;
+    font-family: var(--mono);
+    font-size: 11.5px;
+  }
+
+  .tally-part { display: inline-flex; align-items: baseline; gap: 7px; }
+
+  .tally-key {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.13em; text-transform: uppercase;
+  }
+
+  .tally-part[data-state="done"]    .tally-key { color: var(--done); }
+  .tally-part[data-state="active"]  .tally-key { color: var(--pending); }
+  .tally-part[data-state="planned"] .tally-key { color: var(--ink-3); }
+  .tally-val { color: var(--ink); font-weight: 500; }
+
+
+  /* ---------- steps, shown on the roadmap itself ----------
+     The roadmap is the map. An item that is being built shows its own
+     steps right here, with the same numbers, labels and states as the
+     feature group. Two places showing the same thing differently is
+     what made the page unreadable; the feature group is the detail of
+     what is already visible here, never a second version of it. */
+
+  .item-steps {
+    margin: 9px 0 2px;
+    display: flex; flex-direction: column;
+    border-left: 2px solid var(--rule);
+    padding-left: 10px;
+  }
+
+  /* Each step opens into its own plan. Collapsed, the roadmap stays a
+     list you can scan; open, it answers "what is 1.2 actually" without
+     sending the reader to another view. Native details, no script. */
+
+  .rstep { border-bottom: 1px solid var(--rule-soft); }
+  .rstep:last-child { border-bottom: none; }
+
+  .rstep > summary {
+    display: grid;
+    grid-template-columns: 34px 14px minmax(0, 1fr) auto;
+    gap: 11px;
+    align-items: baseline;
+    padding: 9px 0;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--body);
+    font-size: 15.5px;
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--ink-2);
+  }
+
+  .rstep > summary::-webkit-details-marker { display: none; }
+  .rstep > summary:hover { color: var(--ink); }
+  .rstep > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 3px; }
+
+  .rstep .sn { font-family: var(--mono); font-size: 12.5px; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .rstep .sm { text-align: center; }
+  .rstep .ss { font-family: var(--mono); text-align: right; letter-spacing: 0.08em; text-transform: uppercase; font-size: 10px; font-weight: 700; }
+
+  .rstep[data-state="done"] > summary { color: var(--done); }
+  .rstep[data-state="done"] .sm::before { content: "\2713"; }
+  .rstep[data-state="active"] > summary { color: var(--pending); }
+  .rstep[data-state="active"] .sm::before { content: "\25b8"; }
+  .rstep[data-state="planned"] .sm::before { content: "\00b7"; color: var(--rule); }
+
+  /* A closed step says there is more; an open one stops saying it. */
+  .rstep > summary .ss::after { content: " +"; color: var(--rule); }
+  .rstep[open] > summary .ss::after { content: " \2212"; }
+
+  .rstep-body {
+    padding: 4px 0 16px 16px;
+    display: flex; flex-direction: column; gap: 11px;
+  }
+
+  .rstep-what { font-size: 15.5px; line-height: 1.65; color: var(--ink-2); }
+
+  .rstep-body .substeps { margin: 0; }
+
+  .rstep-when {
+    font-family: var(--body);
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--ink-2);
+    padding: 9px 12px;
+    border-left: 3px solid var(--rule);
+    background: var(--surface);
+    border: 1px solid var(--rule-soft);
+    border-left: 3px solid var(--rule);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .rstep[data-state="done"] .rstep-when { border-left-color: var(--done); color: var(--done); }
+  .rstep[data-state="active"] .rstep-when { border-left-color: var(--pending); }
+
+  /* What actually happened. A step that only lists what was built reads
+     like a plan that went perfectly, and none of them do. The snags are
+     the part worth reading back in six months. */
+
+  .snags { display: flex; flex-direction: column; gap: 7px; padding: 9px 12px; border: 1px solid color-mix(in srgb, var(--fixed) 30%, var(--surface)); border-radius: 5px; background: color-mix(in srgb, var(--fixed) 7%, var(--surface)); }
+
+  .snags-head {
+    font-family: var(--mono);
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.13em; text-transform: uppercase;
+    color: var(--fixed);
+  }
+
+  .snags ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 7px; }
+
+  .snags li {
+    position: relative;
+    padding-left: 26px;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-2);
+  }
+
+  .snags li::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    text-align: center;
+    content: "\21bb";
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--fixed);
+    line-height: 1.6;
+  }
+
+  .snags b { color: var(--ink); font-weight: 600; }
+
+  /* A step's tests, in their own blue box, apart from the planned pieces: what was
+     added, how it was proved it can fail, and what was only proved by hand. */
+  .tests { display: flex; flex-direction: column; gap: 7px; padding: 11px 13px; border: 1px solid color-mix(in srgb, #3994BC 40%, var(--surface)); border-radius: 5px; background: color-mix(in srgb, #3994BC 8%, var(--surface)); }
+  .tests-head { font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: #2B7DA3; }
+  .tests ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+  .tests li { font-size: 14.5px; line-height: 1.6; color: var(--ink-2); }
+  .tests b { color: var(--ink); font-weight: 600; }
+  .tests .rstep-when { margin-top: 4px; }
+
+  /* Inside the blue box, one white card per kind of proof: the saved tests and checks by
+     hand, then the independent review. Each card carries its own What bit when it had one. */
+  .proof-card { display: flex; flex-direction: column; gap: 8px; padding: 11px 13px; border: 1px solid color-mix(in srgb, #3994BC 35%, var(--surface)); border-radius: 5px; background: var(--surface); }
+  .card-head { margin: -11px -13px 4px; padding: 9px 13px; border-radius: 4px 4px 0 0; background: var(--ink); color: var(--surface); font-family: var(--display); font-size: 17px; font-weight: 600; letter-spacing: -0.01em; } /* a black bar, white text: where one kind of proof starts */
+  .proof-card ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+
+  /* ---------- plan vs reality ----------
+     The planned pieces, kept as planned, and marked with what actually
+     became of each. Rewriting the plan to match the outcome hides the
+     only interesting part: where the two differed and why. */
+
+  .substeps li[data-outcome] { color: var(--ink-2); }
+  .substeps li[data-outcome="kept"]    { color: var(--done); }
+  .substeps li[data-outcome="kept"]::before    { content: "\2713"; color: var(--done); font-weight: 700; }
+  .substeps li[data-outcome="changed"] { color: var(--fixed); }
+  .substeps li[data-outcome="changed"]::before { content: "\21bb"; color: var(--fixed); }
+  /* Added means done, just not in the plan: the same green check as kept, in the same
+     column, with "added" in front of its reason. A yellow plus read as "not done". */
+  .substeps li[data-outcome="added"]   { color: var(--done); }
+  .substeps li[data-outcome="added"]::before   { content: "\2713"; color: var(--done); font-weight: 700; }
+  .substeps li[data-outcome="added"] .why::before { content: "added \00b7  "; font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--done); }
+  .substeps li[data-outcome="dropped"] { color: var(--ink-3); }
+  .substeps li[data-outcome="dropped"]::before { content: "\2717"; color: var(--ink-3); }
+  .substeps li[data-outcome="dropped"] > s { text-decoration-color: var(--ink-3); }
+
+  /* The reason sits under the piece, in the body face, because it is
+     the sentence actually worth reading. */
+  .substeps li .why {
+    display: block;
+    padding-left: 1px;
+    font-family: var(--body);
+    font-style: normal;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-2);
+    margin-top: 4px;
+  }
+
+  .verdict {
+    display: flex; flex-wrap: wrap; gap: 5px 8px;
+    font-family: var(--mono);
+    font-size: 10.5px; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+
+  /* ---------- plan / reality, as two drawers ----------
+     A step's plan and its outcome are different documents. Side by side
+     in one blob they blur; as two drawers you can read either alone, and
+     the summaries alone tell you whether it drifted. */
+
+  .drawer {
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    background: var(--surface);
+    overflow: visible; /* a code block inside may grow past the drawer's right edge */
+  }
+  .drawer > summary { border-radius: 4px 4px 0 0; }
+  .drawer:not([open]) > summary { border-radius: 4px; }
+
+  /* Open drawers are tinted so a glance shows what is expanded, which
+     matters once six of them nest three deep. */
+  /* ---------- three levels of tint ----------
+     A drawer reads at rest, under the cursor, and open, and each has to
+     look different from the one before it. Mixed from the theme's own
+     ink and green, so light and dark both work from one rule and the
+     card keeps its tint on the body, not just the bar: an open drawer
+     should look like an open card, not a heading with loose text under
+     it. Plan drawers run grey, outcome drawers green, because green
+     already means "this passed" everywhere else on the page. */
+
+  .drawer[data-kind="plan"] > summary {
+    background: color-mix(in srgb, var(--ink) 4%, var(--surface));
+  }
+  .drawer[data-kind="plan"] > summary:hover {
+    background: color-mix(in srgb, var(--ink) 10%, var(--surface));
+  }
+  .drawer[data-kind="plan"][open] {
+    background: color-mix(in srgb, var(--ink) 3%, var(--surface));
+    border-color: color-mix(in srgb, var(--ink) 18%, var(--surface));
+  }
+  .drawer[data-kind="plan"][open] > summary {
+    background: color-mix(in srgb, var(--ink) 9%, var(--surface));
+  }
+  .drawer[data-kind="plan"][open] > .drawer-body {
+    background: color-mix(in srgb, var(--ink) 2%, var(--surface));
+  }
+
+  /* Only the plan card inside a step. It sits next to the green outcome
+     card and has to hold its own against it; the outer grey drawers
+     (Steps, Why, Contracts, Notes) stay light so the page does not turn
+     into one flat slab. */
+
+  .rstep-body > .drawer[data-kind="plan"] > summary {
+    background: color-mix(in srgb, var(--ink) 9%, var(--surface));
+  }
+  .rstep-body > .drawer[data-kind="plan"] > summary:hover {
+    background: color-mix(in srgb, var(--ink) 16%, var(--surface));
+  }
+  .rstep-body > .drawer[data-kind="plan"][open] {
+    background: color-mix(in srgb, var(--ink) 8%, var(--surface));
+    border-color: color-mix(in srgb, var(--ink) 28%, var(--surface));
+  }
+  .rstep-body > .drawer[data-kind="plan"][open] > summary {
+    background: color-mix(in srgb, var(--ink) 15%, var(--surface));
+  }
+  .rstep-body > .drawer[data-kind="plan"][open] > .drawer-body {
+    background: color-mix(in srgb, var(--ink) 5%, var(--surface));
+  }
+
+  .drawer[data-kind="reality"] > summary {
+    background: color-mix(in srgb, var(--done) 9%, var(--surface));
+  }
+  .drawer[data-kind="reality"] > summary:hover {
+    background: color-mix(in srgb, var(--done) 20%, var(--surface));
+  }
+  .drawer[data-kind="reality"][open] {
+    background: color-mix(in srgb, var(--done) 7%, var(--surface));
+    border-color: color-mix(in srgb, var(--done) 40%, var(--surface));
+  }
+  .drawer[data-kind="reality"][open] > summary {
+    background: color-mix(in srgb, var(--done) 18%, var(--surface));
+  }
+  .drawer[data-kind="reality"][open] > .drawer-body {
+    background: color-mix(in srgb, var(--done) 4%, var(--surface));
+  }
+
+  .drawer + .drawer { margin-top: 8px; }
+
+  .drawer > summary {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 10px;
+    padding: 10px 14px;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--mono);
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .drawer > summary::-webkit-details-marker { display: none; }
+  .drawer > summary:hover { color: var(--ink); }
+  .drawer > summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .drawer > summary::after { content: "+"; margin-left: auto; color: var(--ink-3); font-size: 13px; }
+  .drawer[open] > summary::after { content: "\2212"; }
+  .drawer[open] > summary { border-bottom: 1px solid var(--rule); }
+
+  .drawer-body > h3 {
+    font-family: var(--mono);
+    font-size: 10.5px; font-weight: 700;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink-3);
+    margin-top: 6px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .drawer-body > h3:first-of-type { margin-top: 0; }
+
+  .drawer-body { padding: 13px 12px; display: flex; flex-direction: column; gap: 13px; }
+
+  /* Every drawer says what it is for. Two of them, Steps and Log, cover
+     the same work from different angles, and without this the second
+     one reads as a duplicate of the first. */
+  .drawer-what {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--ink-3);
+    padding-bottom: 11px;
+    border-bottom: 1px dashed var(--rule);
+  }
+
+  .drawer[data-kind="reality"] > summary { color: var(--done); }
+  .drawer[data-kind="plan"] > summary .tag-drift {
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: var(--ink-3);
+  }
+
+  .verdict span { padding: 2px 7px; border-radius: 3px; border: 1px solid; }
+  .verdict .v-kept    { color: var(--done);    border-color: var(--done);    background: var(--done-soft); }
+  .verdict .v-changed { color: var(--fixed);   border-color: var(--fixed);   background: var(--fixed-soft); }
+  .verdict .v-added   { color: var(--done);    border-color: var(--done);    background: var(--surface); }
+  .verdict .v-dropped { color: var(--ink-3);   border-color: var(--rule);    background: var(--surface); }
 
   /* ---------- design option wireframes ----------
      For a feature that compares layouts, draw the options as flat CSS
@@ -636,7 +1166,7 @@
 
   .btn {
     font-family: var(--mono);
-    font-size: 8.5px; font-weight: 500;
+    font-size: 9.5px; font-weight: 500;
     letter-spacing: 0.05em;
     padding: 3px 6px;
     border: 1px solid var(--rule);
@@ -681,59 +1211,205 @@
     gap: 6px 14px;
   }
 
+  /* A large screen has room to spread the phases and set the feature being built further apart. */
+  @media (min-width: 1700px) {
+    .bar .bar-plan { gap: 8px 13px; }
+    .bar .strip-phase + .strip-phase { border-left: 1px solid var(--rule-soft); padding-left: 13px; }
+    .cell-open { margin: -4px 22px; padding: 4px 6px; }
+    .bar .switch { margin-right: 24px; }
+  }
+
   @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
 
   @media (max-width: 880px) {
-    .shell { grid-template-columns: minmax(0, 1fr); gap: 0; padding: 0 16px 60px; }
-    .side { position: static; max-height: none; padding: 24px 0 0; gap: 18px; }
-    .nav-group { flex-direction: row; flex-wrap: wrap; gap: 6px; }
-    .nav-head { width: 100%; }
-    .nav-link { grid-template-columns: auto auto; gap: 8px; border: 1px solid var(--rule); padding: 6px 11px; font-size: 13.5px; }
-    .nav-note { width: 100%; }
-    main { padding-top: 26px; }
+    .shell { padding: 0 16px 60px; }
+    .switch { margin-left: 0; width: 100%; }
+    .nav-link { padding: 6px 10px; font-size: 10.5px; }
     h1 { font-size: 33px; }
     .lede { font-size: 17px; }
     .scope { grid-template-columns: 1fr; gap: 22px; }
     .row { grid-template-columns: 1fr; }
     .item { grid-template-columns: 28px minmax(0, 1fr); }
+    .item-fold[open] > :not(summary) { margin-left: -38px; } /* 28px number column here */
     .item .pill { grid-column: 2; justify-self: start; margin-top: 4px; }
+    /* iPad and phone: the bar stays sticky but slides away while you scroll down and comes
+       back the moment you scroll up, as on the Face and Body site (useScrollDirection). */
+    .topbar { position: sticky; padding: 10px 16px; transition: transform 0.3s ease; }
+    .topbar.is-hidden { transform: translateY(-100%); }
+    .bar { flex-wrap: wrap; justify-content: flex-start; }
+    .strip { gap: 12px 14px; }
+    .cell { min-width: 24px; padding: 4px; font-size: 10px; }
   }
+
+  /* ---------- the code drawer ----------
+     Every closing step shows its real code, file by file. Coloured by Shiki with VS Code's
+     Dark 2026 exactly as Frank's editor resolves it (the theme is in #code-theme below), so
+     the page reads like his editor in both page themes. New lines get a green bar, removed
+     lines a red one; no + or - signs. */
+
+  /* Independent review issues: violet, the page's colour for a fault found and repaired. */
+  /* The independent review card in five numbered parts: what it checked, verdict, issues found, earlier issues closed, after the fixes. */
+  .review-part { display: flex; flex-direction: column; gap: 5px; }
+  .review-part-head { font-family: var(--body); font-size: 15px; font-weight: 600; color: var(--ink); }
+  .review-part p { font-size: 14.5px; line-height: 1.6; color: var(--ink-2); }
+  .review-fixed { display: flex; flex-direction: column; gap: 5px; padding: 9px 12px; border: 1px solid color-mix(in srgb, var(--done) 35%, var(--surface)); border-radius: 5px; background: color-mix(in srgb, var(--done) 7%, var(--surface)); }
+  .review-fixed .review-part-head { color: var(--done); }
+  .review-fixed[data-state="waiting"] { border-color: var(--rule); background: var(--surface); }
+  .review-fixed[data-state="waiting"] .review-part-head { color: var(--ink-3); }
+  /* The independent review's issues, inside its own card: violet like What bit, one row per finding. */
+  .review-issues { display: flex; flex-direction: column; gap: 6px; padding: 9px 12px; border: 1px solid color-mix(in srgb, var(--fixed) 30%, var(--surface)); border-radius: 5px; background: color-mix(in srgb, var(--fixed) 7%, var(--surface)); }
+  .review-issues-head { font-family: var(--body); font-size: 15px; font-weight: 600; color: var(--fixed); } /* same size as the other four parts */
+  .review-issues .row { grid-template-columns: 150px minmax(0, 1fr); padding: 8px 0; font-size: 14.5px; }
+  .drawer[data-kind="issues"] > summary { background: color-mix(in srgb, var(--fixed) 9%, var(--surface)); color: var(--fixed); }
+  .drawer[data-kind="issues"] > summary:hover { background: color-mix(in srgb, var(--fixed) 18%, var(--surface)); }
+  .drawer[data-kind="issues"][open] { border-color: color-mix(in srgb, var(--fixed) 40%, var(--surface)); }
+  .drawer[data-kind="code"] > summary { background: color-mix(in srgb, #3994BC 12%, var(--surface)); color: var(--ink-2); }
+  .drawer[data-kind="code"] > summary:hover { background: color-mix(in srgb, #3994BC 22%, var(--surface)); }
+  .drawer[data-kind="code"][open] { border-color: color-mix(in srgb, #3994BC 45%, var(--surface)); }
+  .codefile { position: relative; z-index: 3; border: 1px solid var(--rule); border-radius: 5px; overflow: visible; background: var(--surface); } /* an open file stretches to the screen's right edge (script below) */
+  .codefile > summary { border-radius: 4px; }
+  .codefile + .codefile { margin-top: 6px; }
+  .codefile > summary { cursor: pointer; list-style: none; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; padding: 8px 12px; font-size: 13px; }
+  .codefile > summary::-webkit-details-marker { display: none; }
+  .codefile > summary::after { content: "+"; margin-left: auto; font-family: var(--mono); color: var(--ink-3); }
+  .codefile[open] > summary::after { content: "\2212"; }
+  .codefile > summary code { background: none; padding: 0; }
+  .codefile > summary .tag-drift { font-family: var(--mono); font-size: 11px; color: var(--ink-3); }
+  .codefile-body { padding: 10px; display: flex; flex-direction: column; gap: 6px; border-top: 1px solid var(--rule); }
+  .code-label { font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-3); }
+  /* A step's plan in three chunks, each its own color: what it builds, open questions, the checks. */
+  .plan-part { border: 1px solid var(--rule); border-left: 4px solid var(--pc); border-radius: 8px; padding: 12px 14px 14px; background: color-mix(in srgb, var(--pc) 6%, var(--surface)); display: flex; flex-direction: column; gap: 10px; }
+  .plan-part + .plan-part { margin-top: 12px; }
+  .plan-part[data-part="build"] { --pc: var(--accent); }
+  .plan-part[data-part="question"] { --pc: var(--pending); }
+  .plan-part[data-part="proof"] { --pc: var(--fig-teal); }
+  .plan-part-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; }
+  .plan-part-title { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pc); }
+  /* A piece that needed Frank's call: amber while open, then the answer and its date. */
+  .piece-state { font-family: var(--mono); font-size: 10px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 1px 7px; border-radius: 3px; border: 1px solid var(--pending); color: var(--pending); white-space: nowrap; }
+  .piece-state[data-state="answered"] { border-color: var(--done); color: var(--done); }
+  .plan-part-state { font-family: var(--mono); font-size: 10.5px; color: var(--ink-3); }
+  /* A plan piece's own picture, closed under the piece it explains. */
+  .piece-fig { margin-top: 8px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); }
+  .piece-fig > summary { cursor: pointer; list-style: none; padding: 6px 12px; font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+  .piece-fig > summary::-webkit-details-marker { display: none; }
+  .piece-fig > summary::before { content: "+ "; }
+  .piece-fig[open] > summary::before { content: "\2212  "; }
+  .piece-fig[open] > summary { border-bottom: 1px solid var(--rule); }
+  .piece-fig > .fig, .piece-fig > .ftree { margin: 10px; }
+  .substeps li .piece-fig { color: var(--ink-2); }
+  /* A piece's own code, under it in "What actually happened". */
+  .piece-code > summary { color: #2B7DA3; }
+  .piece-code-body { padding: 8px 10px 10px; display: flex; flex-direction: column; gap: 6px; }
+  .substeps li .no-code { display: block; margin-top: 4px; font-family: var(--mono); font-size: 10.5px; color: var(--ink-3); }
+  /* A step's file tree: each row indented by its depth with faint guide lines, a tag saying
+     new or changed, and one line saying what the file is for. */
+  .ftree { display: flex; flex-direction: column; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); padding: 6px 0; }
+  .ft-row { display: grid; grid-template-columns: minmax(220px, max-content) 64px minmax(0, 1fr); align-items: baseline; gap: 0 12px; padding: 4px 14px 4px calc(14px + var(--d) * 20px); background-image: repeating-linear-gradient(to right, var(--rule) 0 1px, transparent 1px 20px); background-size: calc(var(--d) * 20px) 100%; background-position: 20px 0; background-repeat: no-repeat; }
+  .ft-row:hover { background-color: color-mix(in srgb, var(--accent) 5%, var(--surface)); }
+  .ft-name { font-family: var(--mono); font-size: 13px; color: var(--ink); white-space: nowrap; }
+  .ft-dir .ft-name { font-weight: 700; color: var(--ink-2); }
+  .ft-tag { font-family: var(--mono); font-size: 9.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 1px 6px; border-radius: 3px; border: 1px solid; justify-self: start; }
+  .ft-tag[data-change="new"] { color: var(--done); border-color: var(--done); background: var(--done-soft); }
+  .ft-tag[data-change="changed"] { color: var(--pending); border-color: var(--pending); background: var(--pending-soft); }
+  .ft-what { font-size: 14px; color: var(--ink-2); line-height: 1.5; }
+  @media (max-width: 880px) { .ft-row { grid-template-columns: 1fr; } .ft-row > span:nth-child(2):empty { display: none; } }
+  pre.code { margin: 0; padding: 10px 0; position: relative; z-index: 3; box-sizing: border-box; min-width: 100%; background: #121314; color: #BBBEBF; border: 1px solid #2A2B2C; border-radius: 8px; overflow-x: auto; font-family: Consolas, "Courier New", var(--mono); font-variant-ligatures: none; font-size: 12.5px; line-height: 1.6; tab-size: 2; } /* VS Code's own default font on Windows, and no ligatures, as in Frank's editor */
+  pre.code code { background: none; padding: 0; font-size: inherit; word-break: normal; white-space: pre; display: block; }
+  pre.code .ln { display: flex; padding-right: 14px; border-left: 3px solid transparent; }
+  /* A line longer than the screen wraps at the screen's edge, under its own text, never under the number. */
+  pre.code .ln .src { flex: 1; min-width: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+  pre.code .ln .n { flex: none; display: inline-block; width: 3.4em; padding-right: 1.1em; text-align: right; color: #858889; user-select: none; }
+  pre.code .ln.added { background: rgba(52, 125, 57, 0.18); border-left-color: #72C892; }
+  pre.code .ln.removed { background: rgba(201, 60, 55, 0.18); border-left-color: #F28772; }
+  /* face-and-body: a long environment variable name wraps inside its key column. */
+  .row-key { overflow-wrap: anywhere; }
+
 </style>
+
+<!-- One bar, one row, across the whole window: the three views, then the
+     open view's own menu. On the roadmap that is every item as a chip
+     grouped by phase. A chip jumps to its row. -->
+<header class="topbar">
+  <div class="bar">
+    <nav class="switch" aria-label="Views">
+      <button class="nav-link" data-view="roadmap">Roadmap</button>
+      <button class="nav-link" data-view="project">Project</button>
+      <button class="nav-link" data-view="architecture">Architecture</button>
+    </nav>
+    <nav class="strip bar-plan" data-menu="roadmap" aria-label="Every item, by phase">
+          <div class="strip-phase">
+            <div class="strip-label">Ph 1 The site <span class="now-note">&middot; now: nothing in progress</span></div>
+            <div class="strip-cells">
+                <a class="cell" href="#item-1" data-goto="item-1" data-state="done" title="1 Design foundation - done">1</a>
+                <a class="cell" href="#item-2" data-goto="item-2" data-state="done" title="2 Business facts and services data - done">2</a>
+                <a class="cell" href="#item-3" data-goto="item-3" data-state="done" title="3 Home page - done">3</a>
+                <a class="cell" href="#item-4" data-goto="item-4" data-state="done" title="4 Treatment category pages - done, then replaced">4</a>
+                <a class="cell" href="#item-5" data-goto="item-5" title="5 Treatment detail pages - closed until the home page ranks">5</a>
+                <a class="cell" href="#item-6" data-goto="item-6" data-state="done" title="6 Browse by concern - done, then removed">6</a>
+                <a class="cell" href="#item-8" data-goto="item-8" data-state="done" title="8 Hours and location - done">8</a>
+                <a class="cell" href="#item-9" data-goto="item-9" data-state="done" title="9 Contact and enquiry - done">9</a>
+                <a class="cell" href="#item-10" data-goto="item-10" title="10 Local SEO foundations">10</a>
+                <a class="cell" href="#item-11" data-goto="item-11" data-state="done" title="11 Booking integration - live since Sep 21">11</a>
+            </div>
+          </div>
+          <div class="strip-phase">
+            <div class="strip-label">Ph 1b After launch</div>
+            <div class="strip-cells">
+                <a class="cell" href="#item-7" data-goto="item-7" title="7 About page - closed for now">7</a>
+                <a class="cell" href="#item-12" data-goto="item-12" title="12 Before and after gallery - waiting on photos">12</a>
+                <a class="cell" href="#item-13" data-goto="item-13" title="13 Deployment readiness - mostly there">13</a>
+                <a class="cell" href="#item-14" data-goto="item-14" title="14 Reviews - mostly there">14</a>
+                <a class="cell" href="#item-15" data-goto="item-15" title="15 Gift cards and series">15</a>
+            </div>
+          </div>
+          <div class="strip-phase">
+            <div class="strip-label">Ph 2 AI</div>
+            <div class="strip-cells">
+                <a class="cell" href="#item-16" data-goto="item-16" title="16 After-hours enquiry assistant">16</a>
+                <a class="cell" href="#item-17" data-goto="item-17" title="17 Booking handoff">17</a>
+                <a class="cell" href="#item-18" data-goto="item-18" title="18 Enquiry triage for her">18</a>
+            </div>
+          </div>
+          <div class="strip-phase">
+            <div class="strip-label">Off the plan</div>
+            <div class="strip-cells">
+                <a class="cell" href="#item-a" data-goto="item-a" data-state="done" title="A Facials rank from the home page - done">A</a>
+                <a class="cell" href="#item-b" data-goto="item-b" data-state="done" title="B The Eminence catalogue - done">B</a>
+                <a class="cell" href="#item-c" data-goto="item-c" data-state="done" title="C Her own domain and email - done">C</a>
+                <a class="cell" href="#item-d" data-goto="item-d" data-state="done" title="D Her logo as the favicon - done">D</a>
+            </div>
+          </div>
+    </nav>
+    <nav class="strip bar-plan" data-menu="project" aria-label="The project" hidden>
+          <div class="strip-phase">
+            <div class="strip-label">The project</div>
+            <div class="strip-cells">
+                <a class="cell cell--text" href="#project-plan" data-goto="project-plan" data-color="blue">From the project plan</a>
+                <a class="cell cell--text" href="#project-decisions" data-goto="project-decisions" data-color="teal">Locked decisions</a>
+                <a class="cell cell--text" href="#project-blockers" data-goto="project-blockers" data-color="amber">Waiting on the clinic</a>
+            </div>
+          </div>
+    </nav>
+    <nav class="strip bar-plan" data-menu="architecture" aria-label="Architecture" hidden>
+          <div class="strip-phase">
+            <div class="strip-label">Architecture</div>
+            <div class="strip-cells">
+                <a class="cell cell--text" href="#arch-services" data-goto="arch-services" data-color="blue">What it talks to</a>
+                <a class="cell cell--text" href="#arch-pages" data-goto="arch-pages" data-color="teal">The pages</a>
+                <a class="cell cell--text" href="#arch-folders" data-goto="arch-folders" data-color="amber">Where things live</a>
+                <a class="cell cell--text" href="#arch-env" data-goto="arch-env" data-color="rose">What it reads from the environment</a>
+            </div>
+          </div>
+    </nav>
+  </div>
+</header>
 
 <div class="shell">
 
-  <aside class="side">
-    <div class="brand">
-      <div class="brand-name">face-and-body</div>
-      <div class="brand-sub">Build log<br>18 Sep 2026</div>
-    </div>
-
-    <nav class="nav-group" aria-label="Project sections">
-      <div class="nav-head">Project</div>
-      <button class="nav-link" data-view="project"><span class="nav-dot"></span><span>The project</span></button>
-      <button class="nav-link" data-view="roadmap"><span class="nav-dot"></span><span>Roadmap</span></button>
-    </nav>
-
-    <nav class="nav-group" aria-label="Features">
-      <div class="nav-head">Features</div>
-      <div class="nav-note">A group lands here each time <code>/feature</code> specs one. Features 1 to 3 shipped 18 Sep, plus a theme-toggle fix. Feature 4, the category pages, is next.</div>
-    </nav>
-
-    <div class="legend" aria-label="What the markers mean">
-      <div class="nav-head">Key</div>
-      <div class="legend-row"><span class="legend-mark legend-mark--ask">!</span><span>Blocked on you &mdash; the build stops until you answer</span></div>
-      <div class="legend-row"><span class="legend-mark legend-mark--open">?</span><span>Open question &mdash; the build continues</span></div>
-      <div class="legend-row"><span class="legend-mark legend-mark--done">&#10003;</span><span>Done, or a decision you approved</span></div>
-      <div class="legend-row"><span class="legend-mark legend-mark--fix">&#8635;</span><span>A real fault found and repaired</span></div>
-    </div>
-  </aside>
-
   <main>
 
-    <!-- ================= THE PROJECT =================
-         /overview fills every row below from project-plan.md, one row per
-         section, then removes the placeholder class. Keep the row keys;
-         they mirror the plan's eight questions so the two never drift. -->
+    <!-- ================= THE PROJECT ================= -->
     <div id="view-project">
       <header class="head">
         <div>
@@ -741,216 +1417,280 @@
           <h1>face-and-body</h1>
         </div>
         <p class="lede">
-          This page is the project's status board. It answers where things stand in a few seconds,
-          without reading a transcript. <code>/overview</code> writes this view and the roadmap
-          from the two plan docs; every feature adds its own group as it starts.
+          The first website for Face and Body Wellness Centre, a medical aesthetics clinic in
+          Midnapore, Calgary SE. Live at <code>faceandbodywellnesscentre.com</code>. This page is the
+          project's status board: where things stand, in a few seconds, without reading a transcript.
         </p>
       </header>
 
-      <section>
+      <section id="project-plan" data-color="blue">
         <h2>From the project plan</h2>
         <div class="rows">
           <div class="row">
             <div class="row-key">1 &middot; Problem</div>
-            <div class="row-val">A licensed medical aesthetics clinic running since 2023 with <strong>no website</strong>. Its whole web presence is a bare Square menu: 45 services in one flat list, no photographs, no reason to choose her. Her $290 and $350 treatments are line items in a dropdown, and her Google profile publishes wrong hours on six of seven days.</div>
+            <div class="row-val">She had no website. Her whole web presence was a bare Square booking menu of 45 services with no photographs and no reason to choose her. High-intent searches like "microneedling Calgary" found nothing, her Google hours were wrong on six days of seven, and her Eminence stockist status and 5.0 reviews were visible nowhere. A first website, not a redesign.</div>
           </div>
           <div class="row">
             <div class="row-key">2 &middot; Users</div>
-            <div class="row-val">Primary: a woman in SE Calgary, roughly 30&ndash;55, with a specific skin concern, comparison-shopping clinics on her phone at night. Secondary: the local regular rebooking every four to six weeks. Tertiary: the gift buyer. No accounts, every visitor anonymous.</div>
+            <div class="row-val">A woman in southeast Calgary, roughly 30 to 55, with a specific skin concern, comparing two or three local clinics on her phone at night. Then the local regular who needs the fastest path to booked, and the gift buyer who does not know what any treatment is. Assumed, not yet confirmed with the clinic.</div>
           </div>
           <div class="row">
             <div class="row-key">3 &middot; Features</div>
-            <div class="row-val">Eleven Phase&nbsp;1 features: design foundation, services data, home, category pages, treatment detail, browse by concern, about, hours and location, contact, SEO, and booking. Out of scope: product sales, accounts, consent forms, records, blog.</div>
+            <div class="row-val">Home page, treatments, correct seven-day hours with an open-now state, text-first contact, booking on our own pages, local SEO. Since Sep 20 facials rank from the home page and the rest sit on <code>/other-treatments</code>; <code>/products</code> was added Sep 21. Out of scope: online sales, client accounts, consent forms, a blog.</div>
           </div>
           <div class="row">
             <div class="row-key">4 &middot; Data</div>
-            <div class="row-val"><strong>No database.</strong> Typed constants in the repo: Service, Concern, BusinessFacts, Review. Bookings live in Cal.com, deposits in Stripe. Nothing about a visitor is stored.</div>
+            <div class="row-val">No database. Typed data in the repo: 40 treatments in <code>servicesData.ts</code>, one <code>siteConfig</code> for address, phone and hours, 62 hand-carried reviews, and the Eminence catalogue (194 records for 152 products, images gitignored). Bookings live in Cal.com; nothing about a visitor is stored.</div>
           </div>
           <div class="row">
             <div class="row-key">5 &middot; Tech</div>
-            <div class="row-val">Next.js&nbsp;16, React&nbsp;19, TypeScript, Tailwind&nbsp;v4, shadcn. ImageKit for images, Resend for the contact fallback, Cal.com for booking behind a swappable component. No database, no auth, no backend.</div>
+            <div class="row-val">Next.js 16, React 19, TypeScript, Tailwind v4, shadcn. ImageKit for every photograph, Resend for the contact form, Cal.com behind one booking component. The unused auth and database packages were removed Sep 20.</div>
           </div>
           <div class="row">
             <div class="row-key">6 &middot; Monetize</div>
-            <div class="row-val">Not in v1. The site earns nothing directly; success is booked appointments. Commercially an agency client project, with the arrangement still unverified.</div>
+            <div class="row-val">The site makes no money directly; success is booked appointments. The commercial arrangement for the build and its upkeep is still unverified.</div>
           </div>
           <div class="row">
             <div class="row-key">7 &middot; UI/UX</div>
-            <div class="row-val">Warm editorial with clinic credibility. Palette sampled from her real logo: copper <code>#c0704f</code>, cream <code>#f7f2ea</code>, near-black ink. Cormorant Garamond over Inter, the orchid as watermark, motion in CSS only. <strong>Mobile matters more than desktop.</strong></div>
+            <div class="row-val">Warm editorial with clinic credibility. Copper <code>#c0704f</code> from her logo on a settled cream, Cormorant Garamond with Inter, the orchid from her logo as watermark and divider, motion in CSS only. Mobile first: the main visitor is on a phone at night.</div>
           </div>
           <div class="row">
             <div class="row-key">8 &middot; Deployment</div>
-            <div class="row-val">Vercel, <code>npm run build</code>, single deploy unit. One env var, <code>RESEND_API_KEY</code>, for feature&nbsp;9 only. No database, storage, workers or cron. <strong>No domain owned yet.</strong></div>
+            <div class="row-val">Vercel, deployed on every push to <code>main</code>, on her own domain since Sep 21. Four environment variables, listed under Architecture. The old <code>face-and-body.vercel.app</code> address answers 404.</div>
           </div>
         </div>
       </section>
 
-      <section>
+      <section id="project-decisions" data-color="teal">
         <h2>Locked decisions</h2>
+        <div class="notes">
+          <ul>
+            <li><strong>A marketing site, nothing more.</strong> No database, no auth, no backend. Her booking, store and dashboards will be built as scheduleads modules, never here.</li>
+            <li><strong>Booking sits behind one component.</strong> No Cal.com call or id appears outside <code>components/booking/</code>, so replacing Cal.com with scheduleads later changes one place.</li>
+            <li><strong>Facials rank from the home page.</strong> Decided Sep 20, reversing Sep 18: on a new domain only the home page has authority, and two similar pages make Google pick neither. Five pages total; branch out only once the home page ranks.</li>
+            <li><strong>One source for her facts.</strong> Address, phone and hours live in <code>siteConfig</code> only, and hours always render as seven rows, never collapsed into ranges.</li>
+            <li><strong>Products in the site's own words.</strong> Seven headings matching the facial tabs, Eminence's Canadian list prices, spa-only products kept off the page, no per-product pages yet.</li>
+            <li><strong>Reviews are hand-carried.</strong> The live Google fetch is built and deliberately unused; Google caps it at five and the curated set reads better.</li>
+            <li><strong>Every photograph on ImageKit</strong>, with only the two logos kept in <code>public/</code>.</li>
+            <li><strong>The business speaks as "we".</strong> No apologising, no explaining the obvious.</li>
+            <li><strong>No <code>.env.example</code>, ever.</strong> A file that pairs a key name with a blank invites a secret into git.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="project-blockers" data-color="amber">
+        <h2>Waiting on the clinic</h2>
+        <p class="drawer-what">Not code. Each of these holds back quality or a feature, and each is a question for her rather than work for us. Hours and the postal code, once on this list, are settled.</p>
         <div class="rows">
-          <div class="row"><div class="row-key">Service shape</div><div class="row-val">Features 3&ndash;11 and all of Phase&nbsp;2 read it. <code>durationMin</code> blocks her calendar and <code>price</code> is legitimately <code>null</code> on three services.</div></div>
-          <div class="row"><div class="row-key">Seven-day hours</div><div class="row-val">Her hours differ every day and total about 24 hours a week. They render as seven explicit rows, never collapsed into ranges.</div></div>
-          <div class="row"><div class="row-key">Booking is swappable</div><div class="row-val">Cal.com is the first provider, not a commitment. No Cal.com import, call or id appears outside the booking component, so Frank&rsquo;s own booker can replace it in one file.</div></div>
-          <div class="row"><div class="row-key">Positioning</div><div class="row-val">Medical aesthetics clinic, not wellness sanctuary. Results and expertise lead.</div></div>
-          <div class="row"><div class="row-key">No database</div><div class="row-val">Marketing site. Adding one is a project-plan change, not a feature decision.</div></div>
+          <div class="row"><div class="row-key">Photography</div><div class="row-val">The biggest one. No wide shot of the room, no portrait of her, no product shelf, one usable before and after. Stock photographs stand in until real ones arrive. Feature 12 is blocked on it entirely.</div></div>
+          <div class="row"><div class="row-key">The logo file</div><div class="row-val">All we have is her 150px Instagram avatar. The favicon and the header both came from it; the original vector or a large PNG would sharpen both.</div></div>
+          <div class="row"><div class="row-key">Missing prices</div><div class="row-val">Laser, IPL and fractional microneedling still have no price anywhere.</div></div>
+          <div class="row"><div class="row-key">Copy sign-off</div><div class="row-val">Treatment descriptions were rewritten from supplier marketing and need her approval, especially anything medical. No treatment has a story of its own yet, which is what feature 5 is really waiting on.</div></div>
+          <div class="row"><div class="row-key">Advertising claims</div><div class="row-val">Detox, fat-reduction and cellulite language from her Square copy, not yet checked against Alberta's rules.</div></div>
+          <div class="row"><div class="row-key">About page facts</div><div class="row-val">Her name as she wants it published, her qualification, when she started, a photograph. Feature 7 needs all four.</div></div>
         </div>
       </section>
 
       <footer>
-        <span>18 Sep 2026</span>
+        <span>Restarted Sep 27, 2026</span>
         <span>&middot;</span>
-        <span>Sources: blueprint/project-plan.md, build-plan.md, project-overview.md</span>
+        <span>Sources: blueprint/project-plan.md, project-overview.md</span>
       </footer>
     </div>
 
-    <!-- ================= ROADMAP =================
-         /overview fills this from build-plan.md. One .item per build-plan
-         line, data-state planned | active | done, grouped by the plan's
-         milestone headings. -->
-    <div id="view-roadmap" hidden>
+    <!-- ================= ARCHITECTURE ================= -->
+    <div id="view-architecture" hidden>
       <header class="head">
         <div>
-          <div class="eyebrow">Build order</div>
-          <h1>Roadmap</h1>
+          <div class="eyebrow">How it is built</div>
+          <h1>Architecture</h1>
         </div>
         <p class="lede">
-          Every line of <code>build-plan.md</code>, in build order. Each becomes its own group in
-          this log the moment it starts.
+          What the site talks to, every page it serves, where each part of the code lives, and what it
+          reads from the environment. A change that adds a page, a folder or a
+          service updates this tab when it is published.
         </p>
-        <div class="facts">
-          <span class="pill pill--plan">15 planned</span>
-          <span class="sep">/</span>
-          <span class="pill pill--live">0 in progress</span>
-          <span class="sep">/</span>
-          <span class="pill pill--done">3 done</span>
-        </div>
       </header>
 
-      <section>
-        <h2>Phase 1 &mdash; the site that books appointments</h2>
-        <div class="item" data-state="done"><div class="item-num">01</div><div class="item-body"><div class="item-name">Design foundation</div><div class="item-text">Port <code>prototypes/theme.css</code> into <code>globals.css</code> <code>@theme</code>, fonts, orchid motif, nav and footer shell.</div></div></div>
-        <div class="item" data-state="done"><div class="item-num">02</div><div class="item-body"><div class="item-name">Business facts and services data</div><div class="item-text">One typed module for hours, address and the 45 services. Everything downstream reads it.</div></div></div>
-        <div class="item" data-state="done"><div class="item-num">03</div><div class="item-body"><div class="item-name">Home page</div><div class="item-text">Hero, trust strip, browse by concern, categories, signature treatment, results, Eminence, reviews, hours, location.</div></div></div>
-        <div class="item" data-state="planned"><div class="item-num">04</div><div class="item-body"><div class="item-name">Treatment category pages</div><div class="item-text">Five categories, grouped within each page, with concern filtering.</div></div></div>
-        <div class="item" data-state="planned"><div class="item-num">05</div><div class="item-body"><div class="item-name">Treatment detail pages</div><div class="item-text">One template for every service, deep for the high-value ones.</div></div></div>
-        <div class="item" data-state="planned"><div class="item-num">06</div><div class="item-body"><div class="item-name">Browse by concern</div><div class="item-text">Landing pages per concern, for visitors who know the problem and not the treatment name.</div></div></div>
-        <div class="item" data-state="planned"><div class="item-num">07</div><div class="item-body"><div class="item-name">About page</div><div class="item-text">Her story, credentials, the room, Eminence partnership.</div></div></div>
-        <div class="item" data-state="planned"><div class="item-num">08</div><div class="item-body"><div class="item-name">Hours and location</div><div class="item-text">Seven-day hours with an open-now state, map, directions, parking, click-to-call and text.</div></div></div>
-        <div class="item" data-state="planned"><div class="item-num">09</div><div class="item-body"><div class="item-name">Contact and enquiry</div><div class="item-text">Text-first, Resend form as fallback, and the ask-about-pricing path for treatments with no published price.</div></div></div>
-        <div class="item" data-state="planned"><div class="item-num">10</div><div class="item-body"><div class="item-name">Local SEO foundations</div><div class="item-text">LocalBusiness and Service schema, metadata, Open Graph, sitemap, robots.</div></div></div>
-        <div class="item" data-state="planned"><div class="item-num">11</div><div class="item-body"><div class="item-name">Booking integration</div><div class="item-text">One booking component with a service-shaped interface, Cal.com behind it, plus the event-type generator. <strong>The headline feature.</strong></div></div></div>
+      <section id="arch-services" data-color="blue">
+        <h2>What it talks to</h2>
+        <figure class="fig"><svg viewBox="0 0 680 330" role="img"><title>The site and the services around it</title><desc>The site runs on Vercel. It loads every photograph from ImageKit, sends the contact form through Resend, and can read Google reviews but does not. Booking opens Cal.com in an overlay. Square still takes bookings at the clinic, so Cal.com and Square can sell the same hour. Later, scheduleads replaces Cal.com behind the same component.</desc>
+          <defs><marker id="fa" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" style="stroke:context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+          <g class="c-teal"><rect x="250" y="126" width="180" height="66" rx="8"/><text class="th" x="340" y="150" text-anchor="middle" dominant-baseline="central">The site</text><text class="ts" x="340" y="170" text-anchor="middle" dominant-baseline="central">Next.js on Vercel</text></g>
+          <g class="c-gray"><rect x="20" y="30" width="170" height="50" rx="8"/><text class="th" x="105" y="48" text-anchor="middle" dominant-baseline="central">ImageKit</text><text class="ts" x="105" y="66" text-anchor="middle" dominant-baseline="central">every photograph</text></g>
+          <g class="c-gray"><rect x="20" y="134" width="170" height="50" rx="8"/><text class="th" x="105" y="152" text-anchor="middle" dominant-baseline="central">Resend</text><text class="ts" x="105" y="170" text-anchor="middle" dominant-baseline="central">contact form email</text></g>
+          <g class="c-gray"><rect x="20" y="238" width="170" height="50" rx="8"/><text class="th" x="105" y="256" text-anchor="middle" dominant-baseline="central">Google Places</text><text class="ts" x="105" y="274" text-anchor="middle" dominant-baseline="central">built, parked</text></g>
+          <g class="c-gray"><rect x="490" y="30" width="170" height="50" rx="8"/><text class="th" x="575" y="48" text-anchor="middle" dominant-baseline="central">Cal.com</text><text class="ts" x="575" y="66" text-anchor="middle" dominant-baseline="central">the booking overlay</text></g>
+          <g><rect x="490" y="134" width="170" height="50" rx="8" style="fill:var(--alert-soft);stroke:var(--alert)" stroke-width="0.75"/><text class="th" x="575" y="152" text-anchor="middle" dominant-baseline="central">Square</text><text class="ts" x="575" y="170" text-anchor="middle" dominant-baseline="central">still books at the clinic</text></g>
+          <g class="c-purple"><rect x="490" y="238" width="170" height="50" rx="8"/><text class="th" x="575" y="256" text-anchor="middle" dominant-baseline="central">scheduleads</text><text class="ts" x="575" y="274" text-anchor="middle" dominant-baseline="central">later, replaces Cal.com</text></g>
+          <path d="M250 140 L220 140 L220 55 L192 55" class="arr" marker-end="url(#fa)"/>
+          <line x1="250" y1="159" x2="192" y2="159" class="arr" marker-end="url(#fa)"/>
+          <path d="M250 178 L220 178 L220 263 L192 263" class="arr" marker-end="url(#fa)"/>
+          <path d="M430 140 L460 140 L460 55 L488 55" class="arr" marker-end="url(#fa)"/>
+          <path d="M490 263 L460 263 L460 178 L432 178" class="arr" style="stroke:var(--fig-purple)" marker-end="url(#fa)"/>
+          <line x1="575" y1="82" x2="575" y2="132" style="stroke:var(--alert)" stroke-width="1.5" marker-start="url(#fa)" marker-end="url(#fa)"/>
+          <text class="ts" x="583" y="107" dominant-baseline="central" style="fill:var(--alert)">same hours</text>
+          <text class="ts" x="340" y="316" text-anchor="middle" dominant-baseline="central">Nothing is stored about a visitor. The site owns no data; every service above owns its own.</text>
+        </svg><figcaption>Red is the open risk: Cal.com cannot see Square's bookings and Square cannot see Cal.com's. Purple is later work, in the scheduleads project.</figcaption></figure>
       </section>
 
-      <section>
-        <h2>Phase 1b &mdash; after launch</h2>
-        <div class="item" data-state="planned"><div class="item-num">12</div><div class="item-body"><div class="item-name">Before and after gallery</div><div class="item-text">Filterable by treatment and concern, built to grow as she photographs more.</div></div></div>
-        <div class="item" data-state="planned"><div class="item-num">13</div><div class="item-body"><div class="item-name">Deployment readiness</div><div class="item-text">Vercel config, production build check, domain, smoke-test path.</div></div></div>
-        <div class="item" data-state="planned"><div class="item-num">14</div><div class="item-body"><div class="item-name">Reviews</div><div class="item-text">A maintainable way to add reviews as they accumulate.</div></div></div>
-        <div class="item" data-state="planned"><div class="item-num">15</div><div class="item-body"><div class="item-name">Gift cards and series</div><div class="item-text">Present the packages, link to Square for purchase.</div></div></div>
+      <section id="arch-pages" data-color="teal">
+        <h2>The pages</h2>
+        <div class="rows">
+          <div class="row"><div class="row-key"><code>/</code></div><div class="row-val">Home, and the page that ranks for facials: hero, trust strip, the 22 facials in four tabbed groups, Eminence, reviews, FAQ, consultation. <code>app/page.tsx</code></div></div>
+          <div class="row"><div class="row-key"><code>/other-treatments</code></div><div class="row-val">The other 18: skin, massage, body, laser. <code>app/other-treatments/page.tsx</code></div></div>
+          <div class="row"><div class="row-key"><code>/products</code></div><div class="row-val">The Eminence catalogue in seven groups, with search, sorting and sticky group chips. <code>app/products/page.tsx</code></div></div>
+          <div class="row"><div class="row-key"><code>/contact</code></div><div class="row-val">Text first, then call, then the form through Resend. Hours and location live here too, since Sep 19. <code>app/contact/page.tsx</code></div></div>
+          <div class="row"><div class="row-key"><code>/book</code></div><div class="row-val">One booking page for every treatment, reading <code>?treatment=</code>. Kept out of search on purpose. Most Book buttons open the overlay instead. <code>app/book/page.tsx</code></div></div>
+        </div>
       </section>
 
-      <section>
-        <h2>Phase 2 &mdash; AI automation</h2>
-        <div class="item" data-state="planned"><div class="item-num">16</div><div class="item-body"><div class="item-name">After-hours enquiry assistant</div><div class="item-text">Answers which treatment suits which concern, cost, what happens in a session, where she is. <strong>Must not give medical advice.</strong></div></div></div>
-        <div class="item" data-state="planned"><div class="item-num">17</div><div class="item-body"><div class="item-name">Booking handoff</div><div class="item-text">Hands a qualified enquiry into the booking component rather than ending in a dead end.</div></div></div>
-        <div class="item" data-state="planned"><div class="item-num">18</div><div class="item-body"><div class="item-name">Enquiry triage</div><div class="item-text">Summarises what came in overnight, so she opens one list not a week of unread texts.</div></div></div>
+      <section id="arch-folders" data-color="amber">
+        <h2>Where things live</h2>
+        <div class="rows">
+          <div class="row"><div class="row-key"><code>data/</code></div><div class="row-val">Everything the pages say: <code>servicesData</code>, <code>siteConfig</code>, <code>categoriesData</code>, <code>reviewsData</code>, <code>faqData</code>, <code>imagesData</code>, <code>productsData</code>, and the parked <code>concernsData</code>.</div></div>
+          <div class="row"><div class="row-key"><code>components/</code></div><div class="row-val">By area: <code>home</code>, <code>treatments</code>, <code>products</code>, <code>contact</code>, <code>business</code> (hours, open now, directions), <code>booking</code> (the one seam), <code>layout</code>, <code>media</code>, <code>brand</code>, <code>theme</code>, and shadcn's <code>ui</code>.</div></div>
+          <div class="row"><div class="row-key"><code>lib/</code></div><div class="row-val">Small logic the pages share: hours and open-now, service and product queries, contact validation and prefills, booking config, the parked Google reviews fetch.</div></div>
+          <div class="row"><div class="row-key"><code>actions/</code></div><div class="row-val"><code>contactAction.ts</code>, the only server code: validates the form and sends it through Resend.</div></div>
+          <div class="row"><div class="row-key"><code>blueprint/</code></div><div class="row-val">The plans, the coding standards, this page's source (<code>context/project-log.html</code>), and every finished feature and fix under <code>history/</code>.</div></div>
+        </div>
+      </section>
+
+      <section id="arch-env" data-color="rose">
+        <h2>What it reads from the environment</h2>
+        <p class="drawer-what">Secrets live in <code>.env.local</code> and in Vercel's settings, nowhere else. <code>grep -rn "process.env" app components lib data actions</code> gives the four below, plus Vercel&#39;s own <code>VERCEL</code> flag.</p>
+        <div class="rows">
+          <div class="row"><div class="row-key">NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT</div><div class="row-val">Public by design, it shows in every image URL. Missing on Vercel, the build fails rather than serve broken images.</div></div>
+          <div class="row"><div class="row-key">RESEND_API_KEY</div><div class="row-val">Missing, every enquiry fails with the same generic error and nothing explains why.</div></div>
+          <div class="row"><div class="row-key">RESEND_FROM</div><div class="row-val"><code>hello@faceandbodywellnesscentre.com</code>, verified in Resend Sep 21.</div></div>
+          <div class="row"><div class="row-key">GOOGLE_MAPS_API_KEY</div><div class="row-val">Optional. Without it the reviews fall back to the hand-carried set, which is the intended state.</div></div>
+          <div class="row"><div class="row-key">Not read</div><div class="row-val"><code>IMAGE_KIT_PRIVATE_KEY</code> sits in <code>.env.local</code> with no code reading it, kept by your decision on Sep 20. <code>CONTACT_TO</code> was deleted Sep 21 when enquiries moved to the clinic address.</div></div>
+        </div>
       </section>
 
       <footer>
-        <span>18 Sep 2026</span>
+        <span>Restarted Sep 27, 2026</span>
         <span>&middot;</span>
-        <span>Source: blueprint/build-plan.md</span>
+        <span>Sources: the code, AGENTS.md</span>
       </footer>
     </div>
 
-    <!-- ================= FEATURE GROUP TEMPLATE =================
-         /feature copies this block once per feature, replaces N and the
-         name, fills the steps from the spec, and adds a nav-link for it.
-         Keep it hidden and out of the nav; it is a stencil, not a view.
-
-    <div id="view-feature-N" hidden>
+    <!-- ================= ROADMAP ================= -->
+    <div id="view-roadmap" hidden>
       <header class="head">
-        <div>
-          <div class="eyebrow">Feature N of M &middot; milestone</div>
-          <h1>Feature name</h1>
+        <h1 class="visually-hidden">Roadmap</h1>
+        <p class="lede">
+          Eighteen planned features and four pieces of work that were never in the plan. The site is
+          live and books appointments. Nothing is being built right now. States here follow what is
+          actually on the site, which is ahead of the ticks in <code>build-plan.md</code>.
+        </p>
+        <div class="tally">
+          <span class="tally-part" data-state="done"><span class="tally-key">Done</span><span class="tally-val">1, 2, 3, 4, 6, 8, 9, 11, and A to D</span></span>
+          <span class="tally-part" data-state="active"><span class="tally-key">Mostly there</span><span class="tally-val">13, 14</span></span>
+          <span class="tally-part" data-state="planned"><span class="tally-key">To go</span><span class="tally-val">10, 12, 15, 16 to 18</span></span>
+          <span class="tally-part" data-state="planned"><span class="tally-key">Closed</span><span class="tally-val">5, 7</span></span>
         </div>
-        <div class="facts">
-          <span class="pill pill--live">In progress</span>
-          <span class="sep">/</span>
-          <span>branch <code>feature/slug</code></span>
-          <span class="sep">/</span>
-          <span>0 of K steps done</span>
-        </div>
-        <div class="gates">
-          <span class="gate-chip" data-state="pass">Gate 1 &mdash; spec agreed</span>
-          <span class="gate-chip">Gate 2 &mdash; built &amp; verified</span>
-          <span class="gate-chip">Gate 3 &mdash; commit granted</span>
-        </div>
-        <div class="rail">
-          <div class="rail-item" data-state="active"><div class="rail-bar"></div><div class="rail-label">1 Step</div></div>
-          <div class="rail-item"><div class="rail-bar"></div><div class="rail-label">2 Step</div></div>
-        </div>
+        <details class="callout callout--open" open>
+          <summary class="callout-title">Open for you <span class="callout-count">4 open</span></summary>
+          <p>None of these stops the site. Each is a decision or a loose end that only you can close.</p>
+          <div class="notes">
+            <ul>
+              <li><strong>Cal.com and Square can sell the same hour.</strong> Neither sees the other's bookings. Three ways out: move everything off Square on a date, connect both to one Google Calendar if Square writes to it, or narrow Cal.com's hours to ones Square is not selling.</li>
+              <li><strong>The build plan is behind the site.</strong> Booking (11) went live Sep 21 but the file still says "not now", and 13 and 14 are mostly there. Its ticks are yours to update.</li>
+              <li><strong><code>face-and-body.vercel.app</code> answers 404.</strong> The real domain works. Likely harmless, not yet explained.</li>
+              <li><strong>Resend receiving is half set up.</strong> Switched on without its MX records, so the domain reads partly verified. Sending is unaffected. Finish it or switch it off.</li>
+            </ul>
+          </div>
+        </details>
       </header>
 
       <section>
-        <h2>Build log &middot; newest first</h2>
-        <div class="log">
-          <div class="entry" data-kind="decided">
-            <div class="dot"></div>
-            <div class="entry-body">
-              <div class="entry-top">
-                <span class="entry-title">Spec approved</span>
-                <span class="kind-tag">Decided</span>
-                <span class="stamp">Mon D</span>
-              </div>
-              <p class="entry-text">What was chosen, and why the other option lost.</p>
-            </div>
-          </div>
+        <h2>Build plan</h2>
+
+        <div class="stage">
+          <div class="stage-head"><span class="stage-name">Phase 1 &middot; The site that books appointments</span><span class="stage-note">Exit: a working, findable website with no AI</span></div>
+          <div class="item" id="item-1" data-state="done"><div class="item-num">1</div><div class="item-body"><div class="item-name">Design foundation</div><p class="item-text">The prototype theme ported into <code>globals.css</code>, the fonts, the orchid, and the shared shell of header, footer and sections. A theme toggle followed the same day.</p><p class="item-was">Sep 18. Archive: <code>history/features/01-design-foundation.md</code></p></div><span class="pill pill--done">Done</span></div>
+          <div class="item" id="item-2" data-state="done"><div class="item-num">2</div><div class="item-body"><div class="item-name">Business facts and services data</div><p class="item-text">One typed module for address, phone, hours and socials, and every treatment with its price, duration and group, so nothing is written twice.</p><p class="item-was">Sep 18. Archive: <code>history/features/02-business-facts-and-services-data.md</code></p></div><span class="pill pill--done">Done</span></div>
+          <div class="item" id="item-3" data-state="done"><div class="item-num">3</div><div class="item-body"><div class="item-name">Home page</div><p class="item-text">Hero, trust strip, treatments, Eminence, reviews, consultation. Reworked many times since; it now carries the facials too.</p><p class="item-was">Sep 18. Archive: <code>history/features/03-home-page.md</code></p></div><span class="pill pill--done">Done</span></div>
+          <div class="item" id="item-4" data-state="done"><div class="item-num">4</div><div class="item-body"><div class="item-name">Treatment category pages</div><p class="item-text">Five category pages with concern filtering.</p><p class="item-was">Sep 18, then replaced Sep 20 when facials moved to the home page and the rest to <code>/other-treatments</code> (item A). The tick stands for the work, not for pages that exist.</p></div><span class="pill pill--done">Done</span></div>
+          <div class="item" id="item-5" data-state="planned"><div class="item-num">5</div><div class="item-body"><div class="item-name">Treatment detail pages</div><p class="item-text">Pages for the ten or so treatments with their own search demand.</p><p class="item-was">Closed with a condition, not a date: not until the home page ranks for facials. The real blocker is copy, since no treatment has a story written yet. <code>/treatments/&lt;slug&gt;</code> stays free for it.</p></div><span class="pill pill--plan">Closed</span></div>
+          <div class="item" id="item-6" data-state="done"><div class="item-num">6</div><div class="item-body"><div class="item-name">Browse by concern</div><p class="item-text">Landing pages per skin concern, routing to the treatments that address it.</p><p class="item-was">Sep 19, then removed Sep 20: nine thin pages were splitting the signal the home page needs. The taxonomy is kept, parked, in <code>concernsData.ts</code>. A section on an existing page instead is your open thought.</p></div><span class="pill pill--done">Done</span></div>
+          <div class="item" id="item-8" data-state="done"><div class="item-num">8</div><div class="item-body"><div class="item-name">Hours and location</div><p class="item-text">Seven-day hours with an open-now state, map, directions, parking, call and text.</p><p class="item-was">Sep 19, and folded into the contact page the same day.</p></div><span class="pill pill--done">Done</span></div>
+          <div class="item" id="item-9" data-state="done"><div class="item-num">9</div><div class="item-body"><div class="item-name">Contact and enquiry</div><p class="item-text">Text first with a prefilled message, then call, then a short form through Resend, and a pricing enquiry for treatments with no price.</p><p class="item-was">Sep 18. Rebuilt Sep 21 with designed enquiry emails and two contact fields; a real enquiry reached the clinic's inbox that day.</p></div><span class="pill pill--done">Done</span></div>
+          <div class="item" id="item-10" data-state="planned"><div class="item-num">10</div><div class="item-body"><div class="item-name">Local SEO foundations</div><p class="item-text">LocalBusiness and Service schema, per-page metadata, Open Graph, sitemap and robots, all fed from <code>siteConfig</code>.</p><p class="item-was">Not now, but it has to happen: there is still no sitemap, robots file or schema, and the Sep 20 restructure bet the site on the home page ranking.</p></div><span class="pill pill--plan">Planned</span></div>
+          <div class="item" id="item-11" data-state="done"><div class="item-num">11</div><div class="item-body"><div class="item-name">Booking integration</div><p class="item-text">Every Book button opens Cal.com in an overlay on our own page, themed to the site. Its event types are named after the treatments in the services data, and the provider sits behind one component.</p><p class="item-was">Live Sep 21, plus two fixes that day: a Book link opened the calendar twice, and the booking account became a constant. Built outside the Blueprint workflow, so it has no archive. The build plan still reads "not now".</p></div><span class="pill pill--done">Live</span></div>
         </div>
-      </section>
 
-      <section>
-        <h2>Goal</h2>
-        <p>One paragraph from the spec.</p>
-      </section>
-
-      <section>
-        <h2>Build steps</h2>
-        <div class="steps">
-          <div class="step">
-            <div class="box">&#10003;</div>
-            <div class="step-body">
-              <div class="step-name">1 &middot; Step name</div>
-              <p class="step-text">What it does.</p>
-              <div class="verify">Done when: the gate, as written in the spec.</div>
-            </div>
-          </div>
+        <div class="stage">
+          <div class="stage-head"><span class="stage-name">Phase 1b &middot; After launch</span><span class="stage-note">Numbers are identifiers, not an order</span></div>
+          <div class="item" id="item-7" data-state="planned"><div class="item-num">7</div><div class="item-body"><div class="item-name">About page</div><p class="item-text">Her story, credentials, the room, how she works.</p><p class="item-was">"Maybe next year, but for now nope." Blocked on facts nobody has asked her for yet, listed under Project.</p></div><span class="pill pill--plan">Closed</span></div>
+          <div class="item" id="item-12" data-state="planned"><div class="item-num">12</div><div class="item-body"><div class="item-name">Before and after gallery</div><p class="item-text">Filterable by treatment and concern, built to grow.</p><p class="item-was">Blocked on photographs, not code. <code>resultsData.ts</code> is empty on purpose and the section hides itself while it is.</p></div><span class="pill pill--plan">Needs photos</span></div>
+          <div class="item" id="item-13" data-state="planned"><div class="item-num">13</div><div class="item-body"><div class="item-name">Deployment readiness</div><p class="item-text">Vercel config, a production build check, the domain, and a smoke-test path.</p><p class="item-was">Mostly there: live on her own domain since Sep 21 with sending email verified. Not yet written: a smoke-test path to run after each deploy.</p></div><span class="pill pill--live">Mostly there</span></div>
+          <div class="item" id="item-14" data-state="planned"><div class="item-num">14</div><div class="item-body"><div class="item-name">Reviews</div><p class="item-text">A maintainable way to add reviews as they come in.</p><p class="item-was">Mostly there: the dark reviews band shows 62 hand-carried Google reviews, and the live Google fetch is built and parked. Adding one is an edit to <code>reviewsData.ts</code>.</p></div><span class="pill pill--live">Mostly there</span></div>
+          <div class="item" id="item-15" data-state="planned"><div class="item-num">15</div><div class="item-body"><div class="item-name">Gift cards and series</div><p class="item-text">Present the packages and link to Square to buy them.</p></div><span class="pill pill--plan">Planned</span></div>
         </div>
-      </section>
 
-      <section>
-        <h2>Scope</h2>
-        <div class="scope">
-          <div class="scope-in"><div class="scope-head">In</div><ul><li>...</li></ul></div>
-          <div class="scope-out"><div class="scope-head">Out</div><ul><li>...</li></ul></div>
+        <div class="stage">
+          <div class="stage-head"><span class="stage-name">Phase 2 &middot; AI automation</span><span class="stage-note">After launch, never alongside it. Must never give medical advice.</span></div>
+          <div class="item" id="item-16" data-state="planned"><div class="item-num">16</div><div class="item-body"><div class="item-name">After-hours enquiry assistant</div><p class="item-text">Answers the questions the contact page collects, at the hours she cannot: which treatment suits which concern, what it costs, what happens in a session. Grounded on the services data.</p></div><span class="pill pill--plan">Planned</span></div>
+          <div class="item" id="item-17" data-state="planned"><div class="item-num">17</div><div class="item-body"><div class="item-name">Booking handoff</div><p class="item-text">The assistant hands a qualified enquiry straight into booking instead of ending in a dead end.</p></div><span class="pill pill--plan">Planned</span></div>
+          <div class="item" id="item-18" data-state="planned"><div class="item-num">18</div><div class="item-body"><div class="item-name">Enquiry triage for her</div><p class="item-text">What came in overnight, summarised into one list.</p></div><span class="pill pill--plan">Planned</span></div>
+        </div>
+
+        <div class="stage">
+          <div class="stage-head"><span class="stage-name">Off the plan</span><span class="stage-note">Real work that no build-plan line covers, kept here so it is not invisible</span></div>
+          <div class="item" id="item-a" data-state="done"><div class="item-num">A</div><div class="item-body"><div class="item-name">Facials rank from the home page</div><p class="item-text">The 22 facials moved onto the home page in four tabbed groups, the other 18 treatments onto <code>/other-treatments</code>, the concern pages removed, and the header cut to one link per page.</p><p class="item-was">Sep 20, reversing the Sep 18 page plan. Facials are the business, and on a new domain only the home page ranks quickly.</p></div><span class="pill pill--done">Done</span></div>
+          <div class="item" id="item-b" data-state="done"><div class="item-num">B</div><div class="item-body"><div class="item-name">The Eminence catalogue</div><p class="item-text"><code>/products</code> with the real Eminence range in seven groups at Canadian list prices, with search, sorting and sticky group chips, and real products in the home page's stockist band.</p><p class="item-was">Sep 21. Replaced a page of 21 invented products.</p></div><span class="pill pill--done">Done</span></div>
+          <div class="item" id="item-c" data-state="done"><div class="item-num">C</div><div class="item-body"><div class="item-name">Her own domain and email</div><p class="item-text"><code>faceandbodywellnesscentre.com</code> bought through Vercel and verified in Resend, so enquiries arrive from <code>hello@</code> the clinic's own address.</p><p class="item-was">Sep 21. Most of feature 13's domain work, done ahead of it.</p></div><span class="pill pill--done">Done</span></div>
+          <div class="item" id="item-d" data-state="done"><div class="item-num">D</div><div class="item-body"><div class="item-name">Her logo as the favicon</div><p class="item-text">The default Next.js icon replaced with her orchid and profile, zoomed in so it fills the tab like the icons beside it, plus the iPhone home-screen icon.</p><p class="item-was">Sep 23, commit <code>67d5341</code>.</p></div><span class="pill pill--done">Done</span></div>
         </div>
       </section>
 
       <footer>
-        <span>Updated Mon D, YYYY</span>
+        <span>Restarted Sep 27, 2026</span>
         <span>&middot;</span>
-        <span>Source: blueprint/context/current-feature.md</span>
+        <span>Sources: blueprint/build-plan.md, git log of main, the live site</span>
       </footer>
     </div>
-    -->
 
   </main>
+
+  <div class="keyrow" aria-label="What the markers mean">
+    <span class="legend-row"><span class="legend-mark legend-mark--ask">!</span><span>Blocked on you</span></span>
+    <span class="legend-row"><span class="legend-mark legend-mark--open">?</span><span>Open question, build continues</span></span>
+    <span class="legend-row"><span class="legend-mark legend-mark--done">&#10003;</span><span>Done, or a decision you approved</span></span>
+    <span class="legend-row"><span class="legend-mark legend-mark--fix">&#8635;</span><span>A real fault found and repaired</span></span>
+  </div>
 </div>
 
+
+<script>
+  // Hide-on-scroll for the top bar at iPad and phone widths, ported from Face and Body's
+  // useScrollDirection: shown at the top of the page and while scrolling up, hidden while
+  // scrolling down. Desktop widths keep the bar always visible.
+  (function () {
+    var bar = document.querySelector(".topbar");
+    var narrow = window.matchMedia("(max-width: 880px)");
+    var threshold = 10;
+    var lastY = window.scrollY;
+    window.addEventListener("scroll", function () {
+      var y = window.scrollY;
+      var visible = !narrow.matches || y < threshold || y < lastY;
+      bar.classList.toggle("is-hidden", !visible);
+      lastY = y;
+    }, { passive: true });
+    // Keyboard focus landing in a hidden bar brings it back, so Tab never targets an invisible link.
+    bar.addEventListener("focusin", function () { bar.classList.remove("is-hidden"); });
+    narrow.addEventListener("change", function () { bar.classList.remove("is-hidden"); });
+  })();
+</script>
 <script>
   function selectView(view) {
     document.querySelectorAll("main > div[id^='view-']").forEach(function (el) {
       el.hidden = el.id !== "view-" + view;
+    });
+    document.querySelectorAll(".bar nav[data-menu]").forEach(function (menu) {
+      menu.hidden = menu.dataset.menu !== view;
     });
     document.querySelectorAll(".nav-link").forEach(function (link) {
       if (link.dataset.view === view) {
@@ -966,11 +1706,64 @@
     link.addEventListener("click", function () { selectView(link.dataset.view); });
   });
 
-  var initial = "project";
+  var initial = "roadmap";
   try {
     var saved = localStorage.getItem("face-and-body-log-view");
     if (saved && document.getElementById("view-" + saved)) initial = saved;
   } catch (e) {}
 
+  function markCurrentSection() {
+    var menu = document.querySelector(".bar nav[data-menu]:not([hidden])");
+    document.querySelectorAll("main section.is-current-section").forEach(function (section) {
+      section.classList.remove("is-current-section");
+    });
+    if (!menu || menu.dataset.menu === "roadmap") return;
+    var links = Array.prototype.slice.call(menu.querySelectorAll("a[data-goto]"));
+    var bar = document.querySelector(".topbar").getBoundingClientRect();
+    // A jump lands its target 150px down (scroll-margin-top), so the line sits just below that.
+    var line = Math.max(bar.bottom + 60, 170);
+    var current = links[0];
+    links.forEach(function (link) {
+      var target = document.getElementById(link.dataset.goto);
+      if (target && target.getBoundingClientRect().top <= line) current = link;
+    });
+    // At the very bottom the last sections can never reach the line, so the last link wins.
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) current = links[links.length - 1];
+    links.forEach(function (link) {
+      link.classList.toggle("is-current", link === current);
+    });
+    var currentTarget = current && document.getElementById(current.dataset.goto);
+    var section = currentTarget && currentTarget.closest("section");
+    if (section) section.classList.add("is-current-section");
+  }
+
+  window.addEventListener("scroll", markCurrentSection, { passive: true });
+  // A tab switch starts at the top of that tab, so its first section is the current one.
+  document.querySelectorAll(".nav-link").forEach(function (link) {
+    link.addEventListener("click", function () {
+      window.scrollTo(0, 0);
+      markCurrentSection();
+    });
+  });
+
   selectView(initial);
+  markCurrentSection();
+
+  // A chip in the bar jumps to its item or step: switch to the roadmap,
+  // open every drawer around the target, then scroll to it.
+  document.querySelectorAll("[data-goto]").forEach(function (chip) {
+    chip.addEventListener("click", function (event) {
+      var target = document.getElementById(chip.dataset.goto);
+      if (!target) return;
+      event.preventDefault();
+      var holder = target.closest("main > div[id^='view-']");
+      selectView(holder ? holder.id.replace("view-", "") : "roadmap");
+      for (var node = target; node; node = node.parentElement) {
+        if (node.tagName === "DETAILS") node.open = true;
+      }
+      var fold = target.querySelector(":scope > .item-body > .item-fold");
+      if (fold) fold.open = true;
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
 </script>
