@@ -123,6 +123,21 @@ Deployment is also explicit. `/release` can prepare local Render or Vercel confi
 and run readiness checks, but it must stop before deploy, remote service changes,
 push, or publish unless the user gives a separate yes in the current chat.
 
+## The build log
+
+**It lives in the buildlogs app**, in `ai-web-agency/buildlogs`, folder
+`buildlogs/logs/face-and-body/`. Frank reads it at http://localhost:3100 on the
+laptop and online on his phone. How to write it, what a step looks like and
+when to save it are in `buildlogs/logs/README.md`: read that before writing
+any entry. Decided by Frank, 2026-09-29: the single-page `project-log.html`
+and its Artifact are retired.
+
+**The rule.** No build step is reported in chat until its log entry is written
+in `buildlogs/logs/face-and-body/`; when the step closes, that folder is committed
+to buildlogs' `main` and pushed, as the guide says, before the step is
+reported. `/feature` writes the feature's entry when it writes a spec,
+`/implement` at every step, `/complete` before the final commit.
+
 ## Dashboard activity
 
 The dashboard can show the active or most recent substantial Blueprint command
