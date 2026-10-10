@@ -44,9 +44,13 @@ export function Facials() {
        Eminence, sand for the FAQ and the ask. */
     <Section id="facials" tone="sand" className="scroll-mt-44 xsm:scroll-mt-24">
       <Container>
-        <Eyebrow>{count} treatments</Eyebrow>
-        <h2 className="mt-4">Facials in Calgary SE</h2>
-        <Lede className="mt-5 max-w-2xl">{FACIAL.intro}</Lede>
+        <div className="reveal">
+          <Eyebrow>{count} treatments</Eyebrow>
+          <h2 className="mt-4">
+            Facials in <em className="text-copper">Calgary SE</em>
+          </h2>
+          <Lede className="mt-5 max-w-2xl">{FACIAL.intro}</Lede>
+        </div>
         <div className="mt-14">
           <ServiceList category={FACIAL} />
         </div>

@@ -7,6 +7,8 @@ import { Faq } from "@/components/home/Faq";
 import { Hero } from "@/components/home/Hero";
 import { Results } from "@/components/home/Results";
 import { Reviews } from "@/components/home/Reviews";
+import { TreatmentRibbon } from "@/components/home/TreatmentRibbon";
+import { VisitStory } from "@/components/home/VisitStory";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { Divider } from "@/components/layout/Divider";
 
@@ -62,6 +64,7 @@ export default function HomePage() {
     <>
       <Hero />
       <TrustStrip />
+      <TreatmentRibbon />
       {/* Browse-by-concern came out on 2026-09-20 with the nine
           /what-we-treat pages it linked to. It was the entry point to a
           parallel set of landing pages competing with this one for the same
@@ -91,6 +94,7 @@ export default function HomePage() {
           largest contrast event barely a screen in; here it breaks up a long
           middle instead of interrupting the arrival. */}
       <Reviews />
+      <VisitStory />
       <Categories />
       {/* Eminence moved up to sit directly under "Also at the clinic", on
           Frank's call: the retail line should get more exposure than the

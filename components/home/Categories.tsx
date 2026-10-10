@@ -39,9 +39,13 @@ export function Categories() {
   return (
     <Section tone="sand">
       <Container>
-        <Eyebrow>Also at the clinic</Eyebrow>
-        <h2 className="mt-4">Massage, body and skin treatments</h2>
-        <div className="mt-14 grid grid-cols-2 gap-[22px] lg:grid-cols-4">
+        <div className="reveal">
+          <Eyebrow>Also at the clinic</Eyebrow>
+          <h2 className="mt-4">
+            Massage, body and <em className="text-copper">skin</em> treatments
+          </h2>
+        </div>
+        <div className="reveal mt-14 grid grid-cols-2 gap-[22px] lg:grid-cols-4">
           {OTHERS.map((category) => {
             const from = getCategoryFromPrice(category.slug);
             return (
@@ -50,30 +54,41 @@ export function Categories() {
                 href={categoryHref(category)}
                 className="group"
               >
-                <div className="relative mb-[18px] aspect-[3/4.2] overflow-hidden rounded-sm transition-transform duration-300 group-hover:-translate-y-1">
+                <div className="relative aspect-[3/4.2] overflow-hidden rounded-lg">
                   <Photo
                     slot={PHOTO[category.slug]}
                     fill
                     sizes="(min-width: 1024px) 25vw, 50vw"
-                    className="object-cover"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-linear-to-t from-dark/85 via-dark/20 to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-4 text-on-dark lg:p-6">
+                    <div className="mb-3 h-px w-9 bg-copper-soft transition-[width] duration-300 group-hover:w-16" />
+                    <h3 className="text-2xl lg:text-[28px]">
+                      {category.label}
+                    </h3>
+                    <p className="mt-1 text-[13px] text-on-dark-muted max-xsm:hidden">
+                      {category.blurb}
+                    </p>
+                    <span className="mt-2.5 flex items-center justify-between text-[13px]">
+                      {from === null ? (
+                        <span>
+                          <b className="font-medium">Consult</b> for pricing
+                        </span>
+                      ) : (
+                        <span>
+                          from <b className="font-medium">${from}</b>
+                        </span>
+                      )}
+                      <span
+                        aria-hidden="true"
+                        className="grid size-8 place-items-center rounded-full border border-on-dark/40 transition-[background-color,border-color,translate] duration-300 group-hover:translate-x-0.5 group-hover:border-copper group-hover:bg-copper"
+                      >
+                        &rarr;
+                      </span>
+                    </span>
+                  </div>
                 </div>
-                <div className="mb-3 h-px w-9 bg-copper transition-[width] duration-300 group-hover:w-16" />
-                <h3 className="text-2xl">{category.label}</h3>
-                <p className="mt-1 text-[13px] text-muted-foreground">
-                  {category.blurb}
-                </p>
-                <span className="mt-2.5 block text-[13px]">
-                  {from === null ? (
-                    <>
-                      <b className="font-medium">Consult</b> for pricing
-                    </>
-                  ) : (
-                    <>
-                      from <b className="font-medium">${from}</b>
-                    </>
-                  )}
-                </span>
               </Link>
             );
           })}

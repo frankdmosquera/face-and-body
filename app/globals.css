@@ -25,6 +25,11 @@
   --color-copper-tint: #fbeade;
   --color-copper-ink: #fffdf9;
   --color-copper-text: #96492a;
+  /* Champagne gold, the lift's second metal (2026-10-10): the seal and fine
+     details only. Copper stays the action colour. */
+  --color-gold-soft: #ecd9b0;
+  --color-gold: #c9a467;
+  --color-gold-deep: #9a7638;
 
   --color-placeholder: #e6ddd0;
   --color-placeholder-text: #8f867a;
@@ -319,5 +324,119 @@
   ::view-transition-old(root),
   ::view-transition-new(root) {
     animation: none;
+  }
+}
+
+/**
+ * THE DESIGN LIFT (2026-10-10). Motion that makes the pages feel alive, all in
+ * CSS, all switched off under reduced motion.
+ *
+ * Mount animations (the hero) run once on load, which is right for the first
+ * screen because it is on screen when they play. Everything further down uses
+ * `.reveal`, scroll driven like `.reveal-step`, for the reason written above
+ * it: a mount animation half a page down has finished before anyone gets
+ * there. Same `@supports` guard, so where scroll timelines are missing the
+ * content simply shows.
+ */
+@keyframes lift-rise {
+  from {
+    opacity: 0;
+    translate: 0 0.6em;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes lift-settle {
+  from {
+    scale: 1.12;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes lift-float {
+  50% {
+    translate: 0 -8px;
+  }
+}
+
+@keyframes lift-spin {
+  to {
+    rotate: 360deg;
+  }
+}
+
+@keyframes lift-marquee {
+  to {
+    translate: -50% 0;
+  }
+}
+
+@keyframes lift-reveal {
+  from {
+    opacity: 0;
+    translate: 0 28px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@layer components {
+  /* One line of the hero headline; a [--i:n] class on each staggers them. */
+  .lift-line {
+    display: inline-block;
+    animation: lift-rise 900ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: calc(120ms + 110ms * var(--i, 0));
+  }
+  /* The rest of the hero copy follows the headline in. */
+  .lift-after {
+    animation: lift-rise 900ms cubic-bezier(0.22, 1, 0.36, 1) 520ms both;
+  }
+  .lift-settle {
+    animation: lift-settle 2400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .lift-float {
+    animation: lift-float 6s ease-in-out infinite;
+  }
+  .lift-float-late {
+    animation: lift-float 6s ease-in-out 3s infinite;
+  }
+  .lift-spin {
+    animation: lift-spin 28s linear infinite;
+  }
+  /* The track holds the list twice; moving it half its width loops it. */
+  .lift-marquee {
+    animation: lift-marquee 60s linear infinite;
+  }
+  .lift-marquee-wrap:hover .lift-marquee {
+    animation-play-state: paused;
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .reveal {
+        animation: lift-reveal linear both;
+        animation-timeline: view();
+        animation-range: entry 0% cover 22%;
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lift-line,
+    .lift-after,
+    .lift-settle,
+    .lift-float,
+    .lift-float-late,
+    .lift-spin,
+    .lift-marquee {
+      animation: none;
+    }
   }
 }

@@ -30,8 +30,12 @@ export function Faq() {
     <Section tone="sand" className="relative overflow-hidden">
       <Watermark className="-top-[120px] -right-[160px]" />
       <Container className="relative max-w-3xl">
-        <Eyebrow>Before you book</Eyebrow>
-        <h2 className="mt-4">Questions we get asked</h2>
+        <div className="reveal">
+          <Eyebrow>Before you book</Eyebrow>
+          <h2 className="mt-4">
+            Questions we get <em className="text-copper">asked</em>
+          </h2>
+        </div>
 
         <Accordion className="mt-10">
           {faqData.map((item) => (

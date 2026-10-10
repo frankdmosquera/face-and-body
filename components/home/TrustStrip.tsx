@@ -1,52 +1,58 @@
 import { Container } from "@/components/layout/Container";
 import { servicesData } from "@/data/servicesData";
 import { siteConfig } from "@/data/siteConfig";
+import { primaryRating } from "@/lib/ratings";
 
+/**
+ * Four facts set as numbers, the way an editorial page states a record: big
+ * serif figures, a quiet line under each. Parking moved out of here with the
+ * lift; the FAQ answers it and the footer carries the address on every page.
+ */
 export function TrustStrip() {
-  const { address, consultation, founded } = siteConfig;
+  const { consultation, founded } = siteConfig;
+  const rating = primaryRating();
   const items = [
     {
-      glyph: "✓",
-      title: `Licensed since ${founded}`,
-      text: "City of Calgary registered clinic",
+      figure: rating.value,
+      unit: "★",
+      label: `${rating.source} rating, ${rating.count} reviews`,
     },
     {
-      glyph: "◆",
-      title: `${servicesData.length} treatments`,
-      text: "Face, body, skin and massage",
+      figure: String(servicesData.length),
+      unit: "",
+      label: "Treatments, face to body",
     },
     {
-      glyph: "✦",
-      title: "Free consultation",
-      text: `${consultation.durationMin} minutes, no commitment`,
+      figure: String(consultation.durationMin),
+      unit: "min",
+      label: "Free consultation, no commitment",
     },
     {
-      glyph: "●",
-      title: "Free parking at the door",
-      text: `${address.unit}, ${address.street}`,
+      figure: String(founded),
+      unit: "",
+      label: "Licensed City of Calgary clinic since",
     },
   ];
 
   return (
     <div className="border-y border-border bg-card">
-      <Container className="grid grid-cols-2 px-0 max-xsm:grid-cols-1 lg:grid-cols-4 lg:px-0">
+      <Container className="grid grid-cols-2 px-0 lg:grid-cols-4 lg:px-0">
         {items.map((item) => (
           <div
-            key={item.title}
-            className="flex items-center gap-3.5 border-b border-border px-5 py-5 text-sm lg:border-r lg:border-b-0 lg:px-6 lg:py-[26px] lg:last:border-r-0"
+            key={item.label}
+            className="border-border px-5 py-7 odd:border-r max-lg:nth-[-n+2]:border-b lg:border-r lg:px-8 lg:py-9 lg:last:border-r-0"
           >
-            <i
-              aria-hidden="true"
-              className="grid size-9 shrink-0 place-items-center rounded-full border border-copper font-serif text-lg text-copper not-italic"
-            >
-              {item.glyph}
-            </i>
-            <div>
-              <b className="block font-medium">{item.title}</b>
-              <span className="text-[13px] text-muted-foreground">
-                {item.text}
-              </span>
-            </div>
+            <b className="block font-serif text-[44px] leading-none font-medium text-copper lg:text-[56px]">
+              {item.figure}
+              {item.unit && (
+                <span className="ml-1.5 align-top font-sans text-[15px] font-normal tracking-[0.04em] text-accent-foreground lg:text-[17px]">
+                  {item.unit}
+                </span>
+              )}
+            </b>
+            <span className="mt-3 block text-[13px] leading-snug text-muted-foreground">
+              {item.label}
+            </span>
           </div>
         ))}
       </Container>

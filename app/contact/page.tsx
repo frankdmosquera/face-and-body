@@ -195,7 +195,7 @@ export default function ContactPage() {
         </Container>
       </Section>
 
-      <Section className="pt-0 lg:pt-0">
+      <Section className="pt-0! lg:pt-0!">
         <Container className="pt-4 lg:pt-8">
           <Directions />
         </Container>

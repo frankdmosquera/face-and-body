@@ -18,7 +18,7 @@ export function PricingEnquiry() {
   const { durationMin } = siteConfig.consultation;
 
   return (
-    <Section className="pt-0">
+    <Section className="pt-0! lg:pt-0!">
       <Container className="grid gap-10 lg:grid-cols-[1fr_1.2fr] lg:items-center lg:gap-16">
         <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
           <Photo
