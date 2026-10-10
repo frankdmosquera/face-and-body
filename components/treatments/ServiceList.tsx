@@ -1,12 +1,69 @@
+import { Photo } from "@/components/media/Photo";
 import { GroupTabs } from "@/components/treatments/GroupTabs";
 import { ServiceCard } from "@/components/treatments/ServiceCard";
 import { TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs";
 import { getServicesByCategory } from "@/lib/serviceQueries";
+import type { ImageSlotType } from "@/data/imagesData";
 import type { CategoryType, ServiceType } from "@/types/servicesTypes";
 
-function Grid({ services }: { services: readonly ServiceType[] }) {
+/**
+ * A photograph opens every grid, so a menu is never a wall of text cards. The
+ * facial groups take the concern photographs that were already uploaded for
+ * the deleted concern pages; the other categories take their category shots.
+ * Every one is a treatment in progress, the rule those photographs were picked
+ * against in `imagesData`.
+ */
+const FEATURE: Record<string, ImageSlotType> = {
+  cleansing: "concernAcne",
+  resurfacing: "concernScarringTexture",
+  hydrating: "concernPigmentation",
+  lifting: "concernFineLines",
+  skin: "catSkin",
+  body: "catBody",
+  massage: "catMassage",
+  laser: "catLaser",
+};
+
+type FeatureType = { key: string; title: string; text: string };
+
+function Grid({
+  services,
+  feature,
+}: {
+  services: readonly ServiceType[];
+  feature?: FeatureType;
+}) {
+  const slot = feature ? FEATURE[feature.key] : undefined;
   return (
     <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10 xl:grid-cols-4">
+      {feature && slot && (
+        /* Decorative: the title is the open tab, and the line under it is in
+           the panel too. Two rows tall when there are cards enough to fill
+           beside it, one when there are not. */
+        <li
+          aria-hidden="true"
+          className={`group relative min-h-[260px] overflow-hidden rounded-lg ${services.length > 3 ? "lg:row-span-2" : ""}`}
+        >
+          <Photo
+            slot={slot}
+            fill
+            sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-linear-to-t from-dark/85 via-dark/25 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 p-6 text-on-dark">
+            <span className="mb-3 block h-px w-9 bg-copper-soft transition-[width] duration-300 group-hover:w-16" />
+            <b className="block font-serif text-[28px] leading-[1.1] font-medium">
+              {feature.title}
+            </b>
+            {feature.text && (
+              <span className="mt-2 block text-[13px] leading-snug text-on-dark-muted">
+                {feature.text}
+              </span>
+            )}
+          </div>
+        </li>
+      )}
       {services.map((service) => (
         <ServiceCard key={service.slug} service={service} />
       ))}
@@ -43,7 +100,14 @@ export function ServiceList({ category }: { category: CategoryType }) {
   if (groups.length === 0) {
     return (
       <div data-group>
-        <Grid services={services} />
+        <Grid
+          services={services}
+          feature={{
+            key: category.slug,
+            title: category.label,
+            text: category.blurb,
+          }}
+        />
       </div>
     );
   }
@@ -80,10 +144,7 @@ export function ServiceList({ category }: { category: CategoryType }) {
 
   return (
     <div data-group-stack>
-      <GroupTabs
-        groupOf={groupOf}
-        order={blocks.map((block) => block.slug)}
-      >
+      <GroupTabs groupOf={groupOf} order={blocks.map((block) => block.slug)}>
         {/* PINNED, at every width, exactly as `/products` is.
 
             This reverses the "Only here" line in the commit that pinned the
@@ -136,7 +197,14 @@ export function ServiceList({ category }: { category: CategoryType }) {
 
         {blocks.map((block) => (
           <TabsPanel key={block.slug} value={block.slug} data-group>
-            <Grid services={block.services} />
+            <Grid
+              services={block.services}
+              feature={{
+                key: block.slug,
+                title: block.label,
+                text: block.heading,
+              }}
+            />
             {/* Below the cards, not above them. This line carries the words
                 people actually search - congested, breakout-prone, dull, dry -
                 which the group labels do not, so it earns its place on the

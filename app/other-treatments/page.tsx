@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/layout/Container";
-import { Divider } from "@/components/layout/Divider";
 import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
+import { PhotoCta } from "@/components/layout/PhotoCta";
 import { Watermark } from "@/components/layout/Watermark";
+import { PhotoFan } from "@/components/treatments/PhotoFan";
 import { GroupTabs } from "@/components/treatments/GroupTabs";
 import { ServiceList } from "@/components/treatments/ServiceList";
-import { buttonVariants } from "@/components/ui/button";
 import { TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs";
 import { categoriesData } from "@/data/categoriesData";
 import { siteConfig } from "@/data/siteConfig";
@@ -81,8 +81,8 @@ export default function OtherTreatmentsPage() {
        * a clinic. Signalling "different page" is worth a band, not a second
        * palette.
        */}
-      <Section tone="dark" className="relative overflow-hidden py-0 lg:py-0">
-        <Container className="relative py-12 lg:py-[84px]">
+      <Section tone="dark" className="relative overflow-hidden py-0! lg:py-0!">
+        <Container className="relative grid items-center gap-10 py-12 lg:grid-cols-[1fr_420px] lg:py-[84px]">
           <Watermark className="-top-[140px] -left-[180px] opacity-[0.07]" />
           <div className="relative max-w-2xl">
             <nav
@@ -109,6 +109,10 @@ export default function OtherTreatmentsPage() {
               , where there are another 22.
             </Lede>
           </div>
+          <PhotoFan
+            slots={["catBody", "catLaser", "catMassage"]}
+            className="hidden lg:block"
+          />
         </Container>
       </Section>
 
@@ -117,7 +121,7 @@ export default function OtherTreatmentsPage() {
           opened a canyon - but zero put the chips against the band with
           nothing between them, and a row of controls touching a coloured
           edge reads as part of that edge. */}
-      <Section className="pt-8 lg:pt-12">
+      <Section className="pt-8! lg:pt-12!">
         <Container>
           <GroupTabs
             groupOf={ANCHOR_TO_TAB}
@@ -169,24 +173,20 @@ export default function OtherTreatmentsPage() {
         </Container>
       </Section>
 
-      <Divider className="pb-section-sm lg:pb-section" />
-
-      <Section tone="sand" className="pt-0 lg:pt-0">
-        <Container className="max-w-3xl pt-16 text-center lg:pt-24">
-          <Eyebrow>Not sure which one</Eyebrow>
-          <h2 className="mt-4">Let us look first</h2>
-          <Lede className="mt-5">
-            The free {durationMin} minute consultation is the fastest way to
-            find out what your skin actually needs, and what it will cost.
-          </Lede>
-          <Link
-            href="/contact"
-            className={`${buttonVariants()} mt-8 inline-flex`}
-          >
-            Book a consultation
-          </Link>
-        </Container>
-      </Section>
+      <PhotoCta
+        slot="concernMuscleTension"
+        eyebrow="Not sure which one"
+        title={
+          <>
+            Let us look <em className="text-gold">first</em>
+          </>
+        }
+        href="/contact"
+        action="Book a consultation"
+      >
+        The free {durationMin} minute consultation is the fastest way to find
+        out what your skin actually needs, and what it will cost.
+      </PhotoCta>
     </>
   );
 }

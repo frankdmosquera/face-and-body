@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ProductList } from "@/components/products/ProductList";
 import { Container } from "@/components/layout/Container";
-import { Divider } from "@/components/layout/Divider";
 import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
+import { PhotoCta } from "@/components/layout/PhotoCta";
 import { Watermark } from "@/components/layout/Watermark";
-import { buttonVariants } from "@/components/ui/button";
+import { ProductTrio } from "@/components/products/ProductTrio";
 import { productsData } from "@/data/productsData";
 import { getLowestProductPrice } from "@/lib/productQueries";
 
@@ -28,7 +28,7 @@ export default function ProductsPage() {
   return (
     <>
       <section className="relative overflow-hidden">
-        <Container className="relative py-10 lg:py-[72px]">
+        <Container className="relative grid items-center gap-16 py-10 lg:grid-cols-[1fr_380px] lg:py-[72px]">
           <Watermark className="-top-[140px] -left-[180px]" />
           <div className="relative max-w-2xl">
             <nav
@@ -65,33 +65,36 @@ export default function ProductsPage() {
               actually need, which is usually fewer than you think.
             </p>
           </div>
+          {/* Decorative: the same three products are named in the list below. */}
+          <div
+            aria-hidden="true"
+            className="relative hidden aspect-square overflow-hidden rounded-full shadow-[0_40px_80px_-40px_rgba(28,26,23,0.4)] ring-1 ring-gold/40 ring-offset-8 ring-offset-background lg:block"
+          >
+            <ProductTrio />
+          </div>
         </Container>
       </section>
 
-      <Section className="pt-0">
+      <Section className="pt-0! lg:pt-0!">
         <Container>
           <ProductList />
         </Container>
       </Section>
 
-      <Divider className="pb-section-sm lg:pb-section" />
-
-      <Section tone="sand" className="pt-0 lg:pt-0">
-        <Container className="max-w-3xl pt-16 text-center lg:pt-24">
-          <Eyebrow>Not sure what you need</Eyebrow>
-          <h2 className="mt-4">Ask before you buy</h2>
-          <Lede className="mt-5">
-            A shelf of the wrong products is expensive and does nothing. Come in
-            and we will work out what your skin is actually short of.
-          </Lede>
-          <Link
-            href="/contact"
-            className={`${buttonVariants()} mt-8 inline-flex`}
-          >
-            Book a consultation
-          </Link>
-        </Container>
-      </Section>
+      <PhotoCta
+        slot="concernFineLines"
+        eyebrow="Not sure what you need"
+        title={
+          <>
+            Ask <em className="text-gold">before</em> you buy
+          </>
+        }
+        href="/contact"
+        action="Book a consultation"
+      >
+        A shelf of the wrong products is expensive and does nothing. Come in and
+        we will work out what your skin is actually short of.
+      </PhotoCta>
     </>
   );
 }

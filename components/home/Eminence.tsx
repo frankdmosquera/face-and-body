@@ -32,7 +32,9 @@ const PICKS = [
 const PRODUCTS = PICKS.map((pick) => {
   const product = productsData.find((entry) => entry.slug === pick.slug);
   if (!product)
-    throw new Error(`The Eminence band picks ${pick.slug}, which is not stocked`);
+    throw new Error(
+      `The Eminence band picks ${pick.slug}, which is not stocked`,
+    );
   return { ...pick, product };
 });
 
@@ -66,9 +68,15 @@ const PRODUCTS = PICKS.map((pick) => {
  */
 export function Eminence() {
   return (
-    <Section>
-      <Container>
-        <div className="max-w-2xl">
+    <Section className="relative overflow-hidden">
+      {/* A warm pool of light behind the shelf, so three white cards sit in
+          something rather than on a flat page. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-1/2 left-1/2 h-[30rem] w-[60rem] -translate-x-1/2 rounded-full bg-copper-tint blur-[100px] dark:bg-copper/15"
+      />
+      <Container className="relative">
+        <div className="reveal max-w-2xl">
           <Eyebrow>Products we trust</Eyebrow>
           <h2 className="mt-4">Authorised Eminence Organics stockist</h2>
           <Lede className="mt-5">
@@ -94,7 +102,7 @@ export function Eminence() {
             .
           </Lede>
         </div>
-        <ul className="mt-12 grid gap-5 sm:grid-cols-3 lg:mt-14 lg:gap-8">
+        <ul className="reveal mt-12 grid gap-5 sm:grid-cols-3 lg:mt-14 lg:gap-8">
           {PRODUCTS.map(({ slug, role, product }) => (
             <li key={slug} className="contents">
               {/* THE CARD IS THE LINK, and until now nothing here was. The
@@ -105,7 +113,7 @@ export function Eminence() {
                   already works exactly this way. */}
               <Link
                 href="/products"
-              /* WHITE, NOT `bg-card`, AND FIXED IN BOTH THEMES. Measured:
+                /* WHITE, NOT `bg-card`, AND FIXED IN BOTH THEMES. Measured:
                   `bg-card` is rgb(255,253,249) and the packshot background is
                   pure rgb(255,255,255). Six points apart is nothing as a
                   colour and very visible as a hard edge across a large square,
@@ -118,7 +126,7 @@ export function Eminence() {
                   a surface that flips with the theme cannot hold it. That
                   means the text colour has to be pinned too, or dark mode
                   would put near-white type on a white card. */
-                className="group flex flex-col rounded-lg border border-border bg-white p-6 text-center text-dark transition-transform duration-200 hover:-translate-y-0.5 lg:p-8"
+                className="group flex flex-col rounded-lg border border-border bg-white p-6 text-center text-dark shadow-[0_18px_40px_-28px_rgba(28,26,23,0.35)] transition-[translate,box-shadow] duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_30px_60px_-30px_rgba(150,73,42,0.5)] lg:p-8"
               >
                 {/* THE WELL MATCHES THE ASSET, 4:3 against 1500x1125. It was
                     a square, which letterboxed every photograph and left about

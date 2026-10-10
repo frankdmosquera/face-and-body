@@ -146,9 +146,11 @@ export async function Reviews() {
             made the section a wall of cut-off text. At 6xl a card is ~370px
             and most reviews fit whole. */}
         <div className="mx-auto max-w-6xl">
-          <div className="relative z-10 text-center">
+          <div className="reveal relative z-10 text-center">
             <Eyebrow>Client love</Eyebrow>
-            <h2 className="mt-4">What clients say</h2>
+            <h2 className="mt-4">
+              What clients <em className="text-copper-soft">say</em>
+            </h2>
 
             {/* Says what it is showing and out of how many. The 4.7 is
                 Google's average across all 79, negative ones included. */}

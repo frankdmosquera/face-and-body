@@ -1,14 +1,20 @@
 import Link from "next/link";
 import { Orchid } from "@/components/brand/Orchid";
+import { ConsultSeal } from "@/components/home/ConsultSeal";
 import { Stars } from "@/components/home/Stars";
 import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Watermark } from "@/components/layout/Watermark";
 import { Photo } from "@/components/media/Photo";
+import { PhotoByPath } from "@/components/media/PhotoByPath";
 import { buttonVariants } from "@/components/ui/button";
 import { BookLink } from "@/components/booking/BookLink";
+import { reviewsData } from "@/data/reviewsData";
 import { siteConfig } from "@/data/siteConfig";
 import { primaryRating } from "@/lib/ratings";
+
+/* Four real reviewers' faces on the rating card: the 4.7 with people behind it. */
+const FACES = reviewsData.filter((review) => review.avatar).slice(0, 4);
 
 export function Hero() {
   const rating = primaryRating();
@@ -50,31 +56,33 @@ export function Hero() {
         <div className="relative">
           <Eyebrow>Medical aesthetics &middot; Midnapore, Calgary SE</Eyebrow>
           <h1 className="my-6 text-[48px] lg:mt-6 lg:mb-7 lg:text-[60px] xl:text-[80px]">
-            Skin that shows
-            <br />
-            the <em className="text-copper">work</em> you
-            <br />
-            put into it.
-          </h1>
-          <Lede>{siteConfig.description}</Lede>
-          <div className="mt-10 flex flex-wrap items-center gap-5">
-            <BookLink className={buttonVariants()}>Book a treatment</BookLink>
-            <Link
-              href="/contact"
-              className={buttonVariants({ variant: "link" })}
-            >
-              Free consultation &rarr;
-            </Link>
-          </div>
-          <div className="mt-12 flex flex-col gap-2.5 text-[13px] text-muted-foreground lg:flex-row lg:items-center lg:gap-7">
-            <span>
-              <Stars
-                label={`${rating.value} out of 5 on ${rating.source}`}
-                className="mr-1.5"
-              />
-              <b className="font-medium text-foreground">{rating.value}</b> on{" "}
-              {rating.source}, {rating.count} reviews
+            <span className="lift-line block">Skin that shows</span>
+            <span className="lift-line block [--i:1]">
+              the <em className="text-copper">work</em> you
             </span>
+            <span className="lift-line block [--i:2]">put into it.</span>
+          </h1>
+          <div className="lift-after">
+            <Lede>{siteConfig.description}</Lede>
+            <div className="mt-10 flex flex-wrap items-center gap-5">
+              <BookLink className={buttonVariants()}>Book a treatment</BookLink>
+              <Link
+                href="/contact"
+                className={buttonVariants({ variant: "link" })}
+              >
+                Free consultation &rarr;
+              </Link>
+            </div>
+            <div className="mt-12 flex flex-col gap-2.5 text-[13px] text-muted-foreground lg:flex-row lg:items-center lg:gap-7">
+              <span>
+                <Stars
+                  label={`${rating.value} out of 5 on ${rating.source}`}
+                  className="mr-1.5"
+                />
+                <b className="font-medium text-foreground">{rating.value}</b> on{" "}
+                {rating.source}, {rating.count} reviews
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -97,8 +105,36 @@ export function Hero() {
 
              Desktop only. The mobile box is 4:3, where the same rule would
              crop 280px off the top and leave a pillow where her face was. */
-          className="object-cover object-center lg:object-[50%_88%]"
+          className="lift-settle object-cover object-center lg:object-[50%_88%]"
         />
+        {/* Desktop only, where the photograph is a tall column and its lower
+            left is blanket. On the 4:3 phone crop there is no corner left
+            that is not her face. */}
+        <ConsultSeal className="absolute top-44 -left-14 z-10 hidden lg:grid" />
+        <div className="lift-float-late absolute bottom-44 -left-6 z-10 hidden items-center gap-3 rounded-sm bg-card px-4 py-3 shadow-[0_12px_40px_rgba(28,26,23,0.14)] lg:flex">
+          <div className="flex -space-x-2.5">
+            {FACES.map((face) => (
+              <PhotoByPath
+                key={face.author}
+                path={face.avatar ?? ""}
+                alt=""
+                width={64}
+                height={64}
+                sizes="32px"
+                className="size-8 rounded-full border-2 border-card object-cover"
+              />
+            ))}
+          </div>
+          <div className="text-[12px] leading-tight">
+            <b className="block font-serif text-[20px] leading-none font-medium">
+              {rating.value}
+              <span className="ml-1 text-[13px] text-copper">&#9733;</span>
+            </b>
+            <span className="text-muted-foreground">
+              {rating.count} {rating.source} reviews
+            </span>
+          </div>
+        </div>
         {/* TOP LEFT UNTIL `lg`, BOTTOM RIGHT FROM IT, and the photograph is
             why. Below `lg` the image is a 4:3 crop of a woman lying down, and
             bottom right is her chin and mouth: the badge is 312px wide in a
@@ -111,7 +147,7 @@ export function Hero() {
             high and the bottom right corner is blanket again. The corner the
             badge wants is wherever the face is not, and that moves with the
             crop. */}
-        <div className="absolute top-5 left-5 z-10 flex items-center gap-3.5 rounded-sm bg-card px-[18px] py-3.5 shadow-[0_12px_40px_rgba(28,26,23,0.12)] lg:top-auto lg:right-8 lg:bottom-8 lg:left-auto">
+        <div className="lift-float absolute top-5 left-5 z-10 flex items-center gap-3.5 rounded-sm bg-card px-[18px] py-3.5 shadow-[0_12px_40px_rgba(28,26,23,0.12)] lg:top-auto lg:right-8 lg:bottom-8 lg:left-auto">
           <Orchid className="h-8 w-[30px] shrink-0 text-copper" />
           <div>
             <b className="block text-[13px] font-medium">

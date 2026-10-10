@@ -62,7 +62,7 @@ export function ServiceCard({ service }: { service: ServiceType }) {
         // Two values because the header has two heights: 172px below `xsm`,
         // where Book now sits on its own row, and 96px from there up. Same
         // pair as the tab strip in `GroupTabs`, for the same reason.
-        "flex scroll-mt-44 xsm:scroll-mt-24 flex-col rounded-lg border border-border bg-card p-4 transition-transform duration-200 hover:-translate-y-0.5",
+        "flex scroll-mt-44 xsm:scroll-mt-24 flex-col rounded-lg border border-border bg-card p-4 transition-[translate,box-shadow,border-color] duration-300 ease-out hover:-translate-y-1 hover:border-copper/40 hover:shadow-[0_22px_44px_-22px_rgba(150,73,42,0.45)]",
       )}
     >
       {/**
