@@ -52,7 +52,7 @@ export function Facials() {
           <Lede className="mt-5 max-w-2xl">{FACIAL.intro}</Lede>
         </div>
         <div className="mt-14">
-          <ServiceList category={FACIAL} />
+          <ServiceList category={FACIAL} cards="fx" />
         </div>
       </Container>
     </Section>

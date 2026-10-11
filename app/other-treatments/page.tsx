@@ -227,7 +227,7 @@ export default function OtherTreatmentsPage() {
                     h3s. */}
                 <h2 className="sr-only">{category.label}</h2>
                 <Lede className="mb-10 max-w-2xl">{category.intro}</Lede>
-                <ServiceList category={category} />
+                <ServiceList category={category} cards="ot" />
               </TabsPanel>
             ))}
           </GroupTabs>

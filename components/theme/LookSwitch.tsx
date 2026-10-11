@@ -53,7 +53,8 @@ export function LookSwitch() {
     <div
       role="group"
       aria-label="Colours"
-      className="fixed bottom-[calc(4.5rem+env(safe-area-inset-bottom))] left-4 z-50 flex gap-1 rounded-full border border-border bg-card p-1 text-sm shadow-lg"
+      /* Beside the round options button (`DesignPicker`), on one row. */
+      className="fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] left-[4.25rem] z-50 flex h-11 items-center gap-1 rounded-full border border-border bg-card p-1 text-sm shadow-lg"
     >
       {LOOKS.map((option) => (
         <button

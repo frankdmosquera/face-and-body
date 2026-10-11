@@ -66,7 +66,10 @@ export function ProductList() {
             way out of the page and these chips are not. */}
         <TabsList
           aria-label="Products by what they do"
-          className="sticky top-0 z-10 bg-background py-3"
+          /* Seven chips run past the right edge at every width. The fade says
+             "scroll for more" where a hard cut looked broken, and the extra
+             right padding lets the last chip scroll clear of it. */
+          className="sticky top-0 z-10 bg-background/75 py-3 pr-16 backdrop-blur-md mask-r-from-[calc(100%-4rem)] lg:pr-20"
         >
           {blocks.map((block) => (
             <TabsTab key={block.slug} value={block.slug}>
@@ -92,6 +95,14 @@ export function ProductList() {
             data-group
             data-group-slug={block.slug}
           >
+            {/* Above the grid as the group's caption. Under it, after up to
+                forty cards, it sat alone at the bottom and read as left behind. */}
+            <p
+              data-group-head
+              className="mb-6 font-serif text-[22px] text-muted-foreground italic"
+            >
+              {block.heading}
+            </p>
             <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-8">
               {block.products.map((product) => (
                 <ProductCard key={product.slug} product={product} />
@@ -109,9 +120,6 @@ export function ProductList() {
             >
               Nothing in {block.label} matches. Check the numbers on the other
               groups above.
-            </p>
-            <p data-group-head className="mt-8 text-[14px] text-muted-foreground">
-              {block.heading}
             </p>
           </TabsPanel>
         ))}

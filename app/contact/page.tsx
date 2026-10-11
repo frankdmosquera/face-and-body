@@ -4,6 +4,8 @@ import { FileText, MessageCircle, ScanFace } from "lucide-react";
 import { Directions } from "@/components/business/Directions";
 import { HoursTable } from "@/components/business/HoursTable";
 import { OpenNow } from "@/components/business/OpenNow";
+import { ConsultSeal } from "@/components/home/ConsultSeal";
+import { buttonVariants } from "@/components/ui/button";
 import { ContactChannels } from "@/components/contact/ContactChannels";
 import { ContactForm } from "@/components/contact/ContactForm";
 import { PricingEnquiry } from "@/components/contact/PricingEnquiry";
@@ -17,6 +19,7 @@ import { Photo } from "@/components/media/Photo";
 import { Backdrop } from "@/components/theme/Backdrop";
 import { DesignPicker } from "@/components/theme/DesignPicker";
 import { siteConfig } from "@/data/siteConfig";
+import { cn } from "@/lib/cn";
 import {
   buildPrefills,
   CONTACT_TOPICS,
@@ -184,7 +187,9 @@ export default function ContactPage() {
               small grey sentences the band read as a footnote; this is the
               answer to "what am I signing up for", so it gets the weight of
               the treatment cards. */}
-          <ol className="reveal mt-12 grid gap-6 md:grid-cols-3 lg:gap-8">
+          {/* A dashed thread runs behind the three cards at the height of
+              their icons, showing in the gaps, so they read as one path. */}
+          <ol className="reveal relative mt-12 grid gap-6 md:grid-cols-3 md:before:absolute md:before:inset-x-[10%] md:before:top-[52px] md:before:border-t md:before:border-dashed md:before:border-copper/45 md:before:content-[''] lg:gap-8 lg:before:top-[56px]">
             {STEPS.map(({ icon: Icon, text }, index) => (
               <li
                 key={text}
@@ -219,12 +224,42 @@ export default function ContactPage() {
             card it sits with its address and its one action, and the hours
             get a card of the same weight beside it. */}
         <Container className="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-start lg:gap-10">
-          <div className="rounded-2xl bg-card p-7 shadow-[0_1px_2px_rgba(28,26,23,0.04),0_14px_32px_-20px_rgba(28,26,23,0.22)] lg:p-9">
-            <Eyebrow>When we&apos;re here</Eyebrow>
-            <h2 className="mt-4 mb-6">Hours</h2>
-            <OpenNow>
-              <HoursTable />
-            </OpenNow>
+          {/* The hours, and under them the ask, dark with the turning seal.
+              The map card beside them is taller, and the space it left under
+              the hours read as a gap (2026-10-11). */}
+          <div className="grid gap-8 lg:gap-10">
+            <div className="rounded-2xl bg-card p-7 shadow-[0_1px_2px_rgba(28,26,23,0.04),0_14px_32px_-20px_rgba(28,26,23,0.22)] lg:p-9">
+              <Eyebrow>When we&apos;re here</Eyebrow>
+              <h2 className="mt-4 mb-6">Hours</h2>
+              <OpenNow>
+                <HoursTable />
+              </OpenNow>
+            </div>
+            <div
+              data-tone="dark"
+              className="relative flex items-center gap-6 overflow-hidden rounded-2xl bg-dark-surface p-7 text-on-dark lg:p-9"
+            >
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-20 -bottom-24 size-64 rounded-full bg-copper/25 blur-3xl"
+              />
+              <ConsultSeal className="relative size-24 shrink-0" />
+              <div className="relative">
+                <p className="font-serif text-[24px] leading-tight">
+                  Not sure yet? Start with a{" "}
+                  <em className="text-gold">free</em> look.
+                </p>
+                <a
+                  href="#form"
+                  className={cn(
+                    buttonVariants({ variant: "link" }),
+                    "mt-3 text-xs text-gold-soft",
+                  )}
+                >
+                  Ask for a consultation
+                </a>
+              </div>
+            </div>
           </div>
           <div className="rounded-2xl bg-card p-7 shadow-[0_1px_2px_rgba(28,26,23,0.04),0_14px_32px_-20px_rgba(28,26,23,0.22)] lg:p-9">
             <Eyebrow>Where to find us</Eyebrow>

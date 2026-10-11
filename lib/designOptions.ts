@@ -38,6 +38,22 @@ const BACKDROPS = [
    as a mistake, not a choice. */
 const NO_PLATE = BACKDROPS.filter((option) => option.id !== "plate");
 
+/* The treatment cards. One set of markup restyled by the card styles at the
+   end of app/globals.css rather than three copies, because a card carries an
+   `id` that links jump to and the facials are the text Google reads. */
+const CARDS = [
+  { id: "cards", label: "Cards" },
+  { id: "photo", label: "Photo" },
+  { id: "menu", label: "Menu" },
+] as const;
+
+/* How dark the veil over a background photograph is. */
+const VEILS = [
+  { id: "light", label: "Light" },
+  { id: "medium", label: "Medium" },
+  { id: "deep", label: "Deep" },
+] as const;
+
 export const DESIGN_OPTIONS: readonly DesignGroupType[] = [
   {
     key: "hero",
@@ -45,6 +61,32 @@ export const DESIGN_OPTIONS: readonly DesignGroupType[] = [
     label: "Top of the page",
     fallback: "plate",
     options: BACKDROPS,
+  },
+  {
+    key: "fx-cards",
+    page: "home",
+    label: "Facial treatment cards",
+    fallback: "cards",
+    options: CARDS,
+  },
+  {
+    key: "rv-photo",
+    page: "home",
+    label: "Reviews background",
+    fallback: "facial",
+    options: [
+      { id: "none", label: "None" },
+      { id: "facial", label: "Facial" },
+      { id: "mask", label: "Mask" },
+      { id: "massage", label: "Massage" },
+    ],
+  },
+  {
+    key: "rv-veil",
+    page: "home",
+    label: "Reviews background, how dark",
+    fallback: "medium",
+    options: VEILS,
   },
   {
     key: "shelf",
@@ -76,11 +118,29 @@ export const DESIGN_OPTIONS: readonly DesignGroupType[] = [
     options: BACKDROPS,
   },
   {
+    key: "ot-cards",
+    page: "other-treatments",
+    label: "Treatment cards",
+    fallback: "photo",
+    options: CARDS,
+  },
+  {
     key: "pr-hero",
     page: "products",
     label: "Top of the page",
     fallback: "glow",
     options: NO_PLATE,
+  },
+  {
+    key: "pr-bg",
+    page: "products",
+    label: "Background behind the products",
+    fallback: "warm",
+    options: [
+      { id: "none", label: "None" },
+      { id: "warm", label: "Warm" },
+      { id: "globes", label: "Globes" },
+    ],
   },
   {
     key: "ct-hero",
@@ -98,15 +158,19 @@ export const DESIGN_OPTIONS: readonly DesignGroupType[] = [
   },
 ];
 
-/** Puts remembered options back on <html> before the page draws. */
-export const designBootScript = `try{var d=document.documentElement,g=${JSON.stringify(
+/**
+ * Puts remembered options back on <html> before the page draws, and the
+ * fallback where nothing is remembered, so the card styles in globals.css can
+ * key on the attribute alone. Without script the cards stay plain "Cards".
+ */
+export const designBootScript = `var d=document.documentElement,g=${JSON.stringify(
   Object.fromEntries(
     DESIGN_OPTIONS.map((group) => [
       group.key,
-      group.options.map((option) => option.id),
+      [group.fallback, ...group.options.map((option) => option.id)],
     ]),
   ),
-)};for(var k in g){var v=localStorage.getItem("option-"+k);if(v&&g[k].indexOf(v)>-1)d.setAttribute("data-"+k,v)}}catch(e){}`;
+)};for(var k in g){var v=null;try{v=localStorage.getItem("option-"+k)}catch(e){}d.setAttribute("data-"+k,v&&g[k].indexOf(v)>0?v:g[k][0])}`;
 
 /**
  * Every option hidden, the chosen one shown. Served as a plain <style> tag,

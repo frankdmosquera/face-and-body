@@ -172,7 +172,7 @@ export function ReviewCard({ review }: { review: ReviewCardDataType }) {
         : [review.service as string];
 
   return (
-    <figure className="flex h-full flex-col rounded-2xl border border-border bg-card/90 p-6 shadow-sm backdrop-blur-sm sm:p-7 in-data-[tone=dark]:border-on-dark/10 in-data-[tone=dark]:bg-on-dark/[0.055] in-data-[tone=dark]:shadow-none">
+    <figure className="flex h-full flex-col rounded-2xl border border-border bg-card/90 p-6 shadow-sm backdrop-blur-sm sm:p-7 in-data-[tone=dark]:border-on-dark/10 in-data-[tone=dark]:bg-dark/35 in-data-[tone=dark]:shadow-none in-data-[tone=dark]:backdrop-blur-md">
       <div className="flex items-start gap-3">
         {/* `next/image`, not the shadcn Avatar and not a plain `img`.
             `AvatarImage` mounts only once the file has loaded in the browser,
@@ -285,8 +285,12 @@ export function ReviewCard({ review }: { review: ReviewCardDataType }) {
           to read and only the display is capped. There is no per-card "read
           more" because expanding one card inside a carousel grows it
           mid-autoplay and shunts everything around it; the button under the
-          carousel goes to the same review on Google, where it is whole. */}
-      <blockquote className="mt-3.5 line-clamp-4 flex-1 text-[14.5px] leading-[1.55] text-pretty text-foreground in-data-[tone=dark]:text-on-dark">
+          carousel goes to the same review on Google, where it is whole.
+
+          Not `flex-1`, which it was: stretched to the tallest card, the box
+          grew past four lines and showed the top half of a fifth under the
+          clamp. The tag row takes the slack with `mt-auto` instead. */}
+      <blockquote className="mt-3.5 mb-4 line-clamp-4 text-[14.5px] leading-[1.55] text-pretty text-foreground in-data-[tone=dark]:text-on-dark">
         {review.text}
       </blockquote>
 
@@ -295,7 +299,7 @@ export function ReviewCard({ review }: { review: ReviewCardDataType }) {
           disappears entirely when a review names no treatment, rather than
           leaving an empty rule across the bottom of the card. */}
       {services.length > 0 && (
-        <div className="mt-4 flex flex-wrap gap-1.5 border-t border-border/60 pt-4 in-data-[tone=dark]:border-on-dark/10">
+        <div className="mt-auto flex flex-wrap gap-1.5 border-t border-border/60 pt-4 in-data-[tone=dark]:border-on-dark/10">
           {services.map((service) => (
             <Badge
               key={service}

@@ -10,6 +10,8 @@ import {
   type ReviewCardDataType,
 } from "@/components/home/ReviewCard";
 import { ReviewsCarousel } from "@/components/home/ReviewsCarousel";
+import { Photo } from "@/components/media/Photo";
+import type { ImageSlotType } from "@/data/imagesData";
 import { reviewsData } from "@/data/reviewsData";
 import { siteConfig } from "@/data/siteConfig";
 import { getGoogleReviews } from "@/lib/googleReviews";
@@ -61,6 +63,13 @@ const SHOWN = 8;
  * since none of the live five uploaded a profile picture.
  */
 const LIVE_ON_TOP = 2;
+
+/** The background photographs offered in the design options. */
+const BACKGROUNDS: readonly { id: string; slot: ImageSlotType }[] = [
+  { id: "facial", slot: "catFacial" },
+  { id: "mask", slot: "consultation" },
+  { id: "massage", slot: "concernMuscleTension" },
+];
 
 export async function Reviews() {
   const live = await getGoogleReviews();
@@ -133,7 +142,23 @@ export async function Reviews() {
   const listingUrl = `https://www.google.com/maps/place/?q=place_id:${siteConfig.reviews.placeId}`;
 
   return (
-    <Section tone="dark" className="relative overflow-hidden">
+    <Section tone="dark" className="relative isolate overflow-hidden">
+      {/* A photograph behind the band, the way the consultation band carries
+          one, chosen in the design options with how dark its veil is ("None"
+          shows the plain espresso). Hidden ones are never fetched. */}
+      {BACKGROUNDS.map(({ id, slot }) => (
+        <div
+          key={id}
+          data-option={`rv-photo-${id}`}
+          aria-hidden="true"
+          className="absolute inset-0 -z-10"
+        >
+          <Photo slot={slot} fill sizes="100vw" className="object-cover" />
+        </div>
+      ))}
+      <div data-option="rv-veil-light" className="absolute inset-0 -z-10 bg-dark/55" />
+      <div data-option="rv-veil-medium" className="absolute inset-0 -z-10 bg-dark/72" />
+      <div data-option="rv-veil-deep" className="absolute inset-0 -z-10 bg-dark/88" />
       {/* LATAM's soft depth, kept low and to the sides, clear of the heading. */}
       <div className="pointer-events-none absolute top-1/4 -left-24 h-72 w-72 rounded-full bg-primary/25 blur-3xl" />
       <div className="pointer-events-none absolute top-1/4 -right-24 h-72 w-72 rounded-full bg-primary/25 blur-3xl" />

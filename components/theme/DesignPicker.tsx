@@ -1,8 +1,9 @@
 "use client";
 
 // The panel that flips the design options (lib/designOptions.ts) on the page
-// it sits on, bottom right, folded on a phone. Goes with that file once the
-// picks are made.
+// it sits on. Bottom left, folded to a round icon beside the colour switch
+// (Frank, 2026-10-11: no "Options" label, both controls on the left). Goes
+// with that file once the picks are made.
 
 import { useState, useSyncExternalStore } from "react";
 import { SlidersHorizontal, X } from "lucide-react";
@@ -27,9 +28,7 @@ function subscribe(change: () => void) {
 }
 
 export function DesignPicker({ page }: { page: DesignPageType }) {
-  /* null until tapped: open from `md`, folded on a phone, where the panel
-     would sit over the colour switch and most of the screen. */
-  const [open, setOpen] = useState<boolean | null>(null);
+  const [open, setOpen] = useState(false);
   const current = useSyncExternalStore(subscribe, snapshot, serverSnapshot);
   const chosen = current.split("|");
   const groups = DESIGN_OPTIONS.map((group, index) => ({
@@ -47,68 +46,59 @@ export function DesignPicker({ page }: { page: DesignPageType }) {
     }
   }
 
-  const folded = (
-    <button
-      type="button"
-      onClick={() => setOpen(true)}
-      className="fixed right-4 bottom-[calc(1rem+env(safe-area-inset-bottom))] z-50 flex items-center gap-2 rounded-full border border-border bg-card px-4 py-2 text-sm shadow-lg"
-    >
-      <SlidersHorizontal aria-hidden="true" className="size-4" />
-      Options
-    </button>
-  );
-  if (open === false) return folded;
-
   return (
     <>
-      {open === null && <span className="md:hidden">{folded}</span>}
-      <div
-        role="group"
-        aria-label="Design options"
+      <button
+        type="button"
+        onClick={() => setOpen((was) => !was)}
+        aria-expanded={open}
+        aria-label={open ? "Hide design options" : "Design options"}
         className={cn(
-          "fixed right-4 bottom-[calc(1rem+env(safe-area-inset-bottom))] z-50 w-[min(19rem,calc(100vw-2rem))] rounded-2xl border border-border bg-card p-3 text-sm shadow-lg",
-          open === null && "hidden md:block",
+          "fixed bottom-[calc(1rem+env(safe-area-inset-bottom))] left-4 z-50 grid size-11 place-items-center rounded-full border border-border shadow-lg transition-colors duration-150",
+          open
+            ? "bg-foreground text-background"
+            : "bg-card text-foreground hover:text-accent-foreground",
         )}
       >
-        <div className="mb-2 flex items-center justify-between pl-1">
-          <span className="text-[11px] tracking-[0.12em] text-muted-foreground uppercase">
-            Options
-          </span>
-          <button
-            type="button"
-            onClick={() => setOpen(false)}
-            aria-label="Hide options"
-            className="rounded-full p-1 text-muted-foreground hover:text-foreground"
-          >
-            <X aria-hidden="true" className="size-4" />
-          </button>
-        </div>
-        {groups.map((group) => (
-          <div key={group.key} className="mt-2 first-of-type:mt-0">
-            <span className="block pl-1 text-xs text-muted-foreground">
-              {group.label}
-            </span>
-            <div className="mt-1 flex flex-wrap gap-1">
-              {group.options.map((option) => (
-                <button
-                  key={option.id}
-                  type="button"
-                  onClick={() => pick(group.key, option.id)}
-                  aria-pressed={group.chosen === option.id}
-                  className={cn(
-                    "rounded-full px-3 py-1 transition-colors duration-150",
-                    group.chosen === option.id
-                      ? "bg-foreground text-background"
-                      : "bg-secondary text-muted-foreground hover:text-foreground",
-                  )}
-                >
-                  {option.label}
-                </button>
-              ))}
+        {open ? (
+          <X aria-hidden="true" className="size-4" />
+        ) : (
+          <SlidersHorizontal aria-hidden="true" className="size-4" />
+        )}
+      </button>
+      {open && (
+        <div
+          role="group"
+          aria-label="Design options"
+          className="fixed bottom-[calc(4.25rem+env(safe-area-inset-bottom))] left-4 z-50 max-h-[calc(100svh-6rem)] w-[min(19rem,calc(100vw-2rem))] overflow-y-auto rounded-2xl border border-border bg-card p-3 text-sm shadow-lg"
+        >
+          {groups.map((group) => (
+            <div key={group.key} className="mt-3 first:mt-0">
+              <span className="block pl-1 text-xs text-muted-foreground">
+                {group.label}
+              </span>
+              <div className="mt-1 flex flex-wrap gap-1">
+                {group.options.map((option) => (
+                  <button
+                    key={option.id}
+                    type="button"
+                    onClick={() => pick(group.key, option.id)}
+                    aria-pressed={group.chosen === option.id}
+                    className={cn(
+                      "rounded-full px-3 py-1 transition-colors duration-150",
+                      group.chosen === option.id
+                        ? "bg-foreground text-background"
+                        : "bg-secondary text-muted-foreground hover:text-foreground",
+                    )}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      )}
     </>
   );
 }

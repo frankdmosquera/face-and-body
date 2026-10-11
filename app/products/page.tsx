@@ -10,8 +10,16 @@ import { Watermark } from "@/components/layout/Watermark";
 import { ProductTrio } from "@/components/products/ProductTrio";
 import { Backdrop } from "@/components/theme/Backdrop";
 import { DesignPicker } from "@/components/theme/DesignPicker";
+import { Photo } from "@/components/media/Photo";
+import type { ImageSlotType } from "@/data/imagesData";
 import { productsData } from "@/data/productsData";
 import { getLowestProductPrice } from "@/lib/productQueries";
+
+/** The photographs offered behind the catalogue in the design options. */
+const SHELF_BACKGROUNDS: readonly { id: string; slot: ImageSlotType }[] = [
+  { id: "warm", slot: "hero" },
+  { id: "globes", slot: "catFacial" },
+];
 
 /**
  * Prices are Eminence's Canadian list price, carried through from
@@ -80,7 +88,29 @@ export default function ProductsPage() {
         </Container>
       </section>
 
-      <Section className="pt-0! lg:pt-0!">
+      {/* Not `pt-0` any more: flush, the search bar sat on the foot of the
+          hero's "Revitalize". */}
+      <Section className="relative isolate pt-6! lg:pt-10!">
+        {/* One photograph behind the whole catalogue, pinned while the cards
+            scroll over it under a cream veil, chosen in the design options
+            ("None" leaves the plain cream). A sticky child inside an absolute
+            box rather than `background-attachment: fixed`, which iPhones
+            ignore. */}
+        {SHELF_BACKGROUNDS.map(({ id, slot }) => (
+          <div
+            key={id}
+            data-option={`pr-bg-${id}`}
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 -z-10"
+          >
+            <div className="sticky top-0 h-svh">
+              <Photo slot={slot} fill sizes="100vw" className="object-cover" />
+              <div className="absolute inset-0 bg-background/80" />
+            </div>
+            <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-background to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-background to-transparent" />
+          </div>
+        ))}
         <Container>
           <ProductList />
         </Container>
