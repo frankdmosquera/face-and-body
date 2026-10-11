@@ -34,40 +34,51 @@ function Grid({
   feature?: FeatureType;
 }) {
   const slot = feature ? FEATURE[feature.key] : undefined;
-  return (
-    <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 xl:gap-10 xl:grid-cols-4">
-      {feature && slot && (
-        /* Decorative: the title is the open tab, and the line under it is in
-           the panel too. Two rows tall when there are cards enough to fill
-           beside it, one when there are not. */
-        <li
-          aria-hidden="true"
-          className={`group relative min-h-[260px] overflow-hidden rounded-lg ${services.length > 3 ? "lg:row-span-2" : ""}`}
-        >
-          <Photo
-            slot={slot}
-            fill
-            sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
-            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-linear-to-t from-dark/85 via-dark/25 to-transparent" />
-          <div className="absolute inset-x-0 bottom-0 p-6 text-on-dark">
-            <span className="mb-3 block h-px w-9 bg-copper-soft transition-[width] duration-300 group-hover:w-16" />
-            <b className="block font-serif text-[28px] leading-[1.1] font-medium">
-              {feature.title}
-            </b>
-            {feature.text && (
-              <span className="mt-2 block text-[13px] leading-snug text-on-dark-muted">
-                {feature.text}
-              </span>
-            )}
-          </div>
-        </li>
-      )}
+  const cards = (
+    <ul className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 xl:gap-10">
       {services.map((service) => (
         <ServiceCard key={service.slug} service={service} />
       ))}
     </ul>
+  );
+  if (!feature || !slot) return cards;
+
+  /* THE PHOTOGRAPH HAS A COLUMN OF ITS OWN NOW, AND STAYS. It used to be the
+     first cell of the card grid, two rows tall, so it scrolled away after
+     the first six cards and Massage's eight left it far behind. In its own
+     column it pins beside the cards for as long as they run, and the group's
+     picture is beside every treatment in it rather than only the first few.
+
+     On a phone it is a short banner above the cards: pinned there it would
+     cover the one column the cards have. */
+  return (
+    <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] xl:gap-10">
+      {/* Decorative: the title is the open tab. */}
+      <div
+        aria-hidden="true"
+        className="group relative h-[220px] self-start overflow-hidden rounded-2xl sm:h-[280px] lg:sticky lg:top-24 lg:h-[min(560px,calc(100svh-8rem))]"
+      >
+        <Photo
+          slot={slot}
+          fill
+          sizes="(min-width: 1024px) 25vw, 100vw"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-linear-to-t from-dark/85 via-dark/25 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 p-6 text-on-dark">
+          <span className="mb-3 block h-px w-9 bg-copper-soft transition-[width] duration-300 group-hover:w-16" />
+          <b className="block font-serif text-[28px] leading-[1.1] font-medium">
+            {feature.title}
+          </b>
+          {feature.text && (
+            <span className="mt-2 block text-[13px] leading-snug text-on-dark-muted">
+              {feature.text}
+            </span>
+          )}
+        </div>
+      </div>
+      {cards}
+    </div>
   );
 }
 
@@ -199,10 +210,13 @@ export function ServiceList({ category }: { category: CategoryType }) {
           <TabsPanel key={block.slug} value={block.slug} data-group>
             <Grid
               services={block.services}
+              /* No text on the photograph here. The group's line is printed
+                 under the cards, and on the photograph as well it was the
+                 same sentence twice in one view. */
               feature={{
                 key: block.slug,
                 title: block.label,
-                text: block.heading,
+                text: "",
               }}
             />
             {/* Below the cards, not above them. This line carries the words
