@@ -4,6 +4,8 @@ import { Orchid } from "@/components/brand/Orchid";
 import { buttonVariants } from "@/components/ui/button";
 import { BookLink } from "@/components/booking/BookLink";
 import type { ServiceType } from "@/types/servicesTypes";
+import { Photo } from "@/components/media/Photo";
+import type { ImageSlotType } from "@/data/imagesData";
 import { cn } from "@/lib/cn";
 
 function Price({ service }: { service: ServiceType }) {
@@ -30,7 +32,20 @@ function Price({ service }: { service: ServiceType }) {
   );
 }
 
-export function ServiceCard({ service }: { service: ServiceType }) {
+/* Where the card sits in its group, so the "Photo" option can show each card
+   a different part of the group's photograph. */
+const CROPS = ["20% 25%", "75% 40%", "40% 85%", "85% 15%", "15% 70%", "60% 10%"];
+
+export function ServiceCard({
+  service,
+  photo,
+  index = 0,
+}: {
+  service: ServiceType;
+  /** The group's photograph, shown only by the "Photo" card option. */
+  photo?: ImageSlotType;
+  index?: number;
+}) {
   const unpriced = service.price === null;
 
   return (
@@ -42,6 +57,7 @@ export function ServiceCard({ service }: { service: ServiceType }) {
          `data/concernsData.ts`. Left in place because it costs one attribute
          and is exactly what the filter would need again. */
       data-concerns={service.concerns.join(" ")}
+      data-card
       /**
        * `featured` no longer changes how a card looks, and the flag stays in
        * the data.
@@ -82,6 +98,24 @@ export function ServiceCard({ service }: { service: ServiceType }) {
        * `leading-relaxed`, a 22.75px line box for 14px text, so the tails on
        * g, y and p sit well above the cut.
        */}
+      {/* Hidden unless the "Photo" card option is on (the card styles at the
+          end of app/globals.css): the group's photograph under a dark veil,
+          a different part of it on each card. Hidden, it is never fetched. */}
+      {photo && (
+        <div data-card-photo aria-hidden="true">
+          <div
+            className="absolute inset-0 scale-150 transition-transform duration-700 ease-out group-hover/card:scale-[1.6]"
+            style={{ transformOrigin: CROPS[index % CROPS.length] }}
+          >
+            <Photo
+              slot={photo}
+              fill
+              sizes="(min-width: 1280px) 22vw, (min-width: 768px) 40vw, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </div>
+      )}
       {/* A copper-to-gold rule that draws across the top edge on hover, the
           same gesture as the rule on the photo tile beside the cards. */}
       <span
@@ -98,7 +132,7 @@ export function ServiceCard({ service }: { service: ServiceType }) {
           it, and a badge row of its own would mean 36 cards reserving empty
           space or 4 cards standing taller than the rest. Sharing the row with
           the time, it is free. */}
-      <div className="flex items-center justify-between gap-3 text-[11px] tracking-[0.14em] text-muted-foreground uppercase">
+      <div data-card-meta className="relative flex items-center justify-between gap-3 text-[11px] tracking-[0.14em] text-muted-foreground uppercase">
         <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary px-2.5 py-1">
           <Clock aria-hidden="true" className="size-3.5" />
           {service.durationMin} min
@@ -110,16 +144,16 @@ export function ServiceCard({ service }: { service: ServiceType }) {
           </span>
         )}
       </div>
-      <h3 className="mt-4 line-clamp-2 min-h-[1lh] text-[24px] leading-[1.12] transition-colors duration-300 group-hover/card:text-accent-foreground xl:min-h-[2lh]">
+      <h3 data-card-name className="mt-4 line-clamp-2 min-h-[1lh] text-[24px] leading-[1.12] transition-colors duration-300 group-hover/card:text-accent-foreground xl:min-h-[2lh]">
         {service.name}
       </h3>
-      <p className="mt-2 mb-5 line-clamp-4 min-h-[4lh] text-[14px] leading-relaxed text-muted-foreground">
+      <p data-card-text className="mt-2 mb-5 line-clamp-4 min-h-[4lh] text-[14px] leading-relaxed text-muted-foreground">
         {service.description}
       </p>
       {/* Wraps because "At consultation" beside "Ask about pricing" exceeds a
           phone-width card, and neither is allowed to shrink. `mt-auto` pins
           it to the floor, so the rules line up across a row. */}
-      <div className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-border pt-4">
+      <div data-card-foot className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-border pt-4">
         <Price service={service} />
         {/* Book goes to the booker, Enquire stays on the contact form. A
             treatment priced at consultation has no time to pick yet: she has

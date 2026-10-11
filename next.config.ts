@@ -44,6 +44,10 @@ const CATEGORY_DESTINATIONS: Record<string, string> = {
 };
 
 const nextConfig: NextConfig = {
+  // The "N" badge next dev puts in the bottom-left corner sat on top of the
+  // design controls, which live there (Frank, 2026-10-11). Dev only; the
+  // live site never showed it.
+  devIndicators: false,
   async redirects() {
     return [
       {

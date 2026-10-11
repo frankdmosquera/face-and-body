@@ -35,9 +35,17 @@ function Grid({
 }) {
   const slot = feature ? FEATURE[feature.key] : undefined;
   const cards = (
-    <ul className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 xl:gap-10">
-      {services.map((service) => (
-        <ServiceCard key={service.slug} service={service} />
+    <ul
+      data-card-grid
+      className="grid gap-8 md:grid-cols-2 xl:grid-cols-3 xl:gap-10"
+    >
+      {services.map((service, index) => (
+        <ServiceCard
+          key={service.slug}
+          service={service}
+          photo={slot}
+          index={index}
+        />
       ))}
     </ul>
   );
@@ -53,21 +61,27 @@ function Grid({
      cover the one column the cards have. */
   return (
     <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] xl:gap-10">
-      {/* Decorative: the title is the open tab. */}
-      <div
-        aria-hidden="true"
-        className="group relative h-[220px] self-start overflow-hidden rounded-2xl sm:h-[280px] lg:sticky lg:top-24 lg:h-[min(560px,calc(100svh-8rem))]"
-      >
-        <Photo
-          slot={slot}
-          fill
-          sizes="(min-width: 1024px) 25vw, 100vw"
-          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-linear-to-t from-dark/85 via-dark/25 to-transparent" />
+      {/* Decorative, all but the group's sentence: the title is the open
+          tab, and the sentence is the one thing here a reader needs. */}
+      <div className="group relative h-[220px] self-start overflow-hidden rounded-2xl sm:h-[280px] lg:sticky lg:top-24 lg:h-[min(560px,calc(100svh-8rem))]">
+        <div aria-hidden="true">
+          <Photo
+            slot={slot}
+            fill
+            sizes="(min-width: 1024px) 25vw, 100vw"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          />
+          <div className="absolute inset-0 bg-linear-to-t from-dark/85 via-dark/25 to-transparent" />
+        </div>
         <div className="absolute inset-x-0 bottom-0 p-6 text-on-dark">
-          <span className="mb-3 block h-px w-9 bg-copper-soft transition-[width] duration-300 group-hover:w-16" />
-          <b className="block font-serif text-[28px] leading-[1.1] font-medium">
+          <span
+            aria-hidden="true"
+            className="mb-3 block h-px w-9 bg-copper-soft transition-[width] duration-300 group-hover:w-16"
+          />
+          <b
+            aria-hidden="true"
+            className="block font-serif text-[28px] leading-[1.1] font-medium"
+          >
             {feature.title}
           </b>
           {feature.text && (
@@ -104,13 +118,20 @@ const UNGROUPED = "more";
  * than the old one, where a group `h3` and a treatment `h3` were siblings at
  * the same level.
  */
-export function ServiceList({ category }: { category: CategoryType }) {
+export function ServiceList({
+  category,
+  cards,
+}: {
+  category: CategoryType;
+  /** Which design-option group restyles these cards (Cards, Photo, Menu). */
+  cards?: "fx" | "ot";
+}) {
   const services = getServicesByCategory(category.slug);
   const groups = category.groups ?? [];
 
   if (groups.length === 0) {
     return (
-      <div data-group>
+      <div data-group data-cards={cards}>
         <Grid
           services={services}
           feature={{
@@ -154,7 +175,7 @@ export function ServiceList({ category }: { category: CategoryType }) {
   );
 
   return (
-    <div data-group-stack>
+    <div data-group-stack data-cards={cards}>
       <GroupTabs groupOf={groupOf} order={blocks.map((block) => block.slug)}>
         {/* PINNED, at every width, exactly as `/products` is.
 
@@ -210,32 +231,16 @@ export function ServiceList({ category }: { category: CategoryType }) {
           <TabsPanel key={block.slug} value={block.slug} data-group>
             <Grid
               services={block.services}
-              /* No text on the photograph here. The group's line is printed
-                 under the cards, and on the photograph as well it was the
-                 same sentence twice in one view. */
+              /* The group's line rides on the photograph now, once. It carries
+                 the words people search - congested, breakout-prone, dull,
+                 dry - which the labels do not. Printed under the cards it sat
+                 alone after the last row and read as left behind (2026-10-11). */
               feature={{
                 key: block.slug,
                 title: block.label,
-                text: "",
+                text: block.heading,
               }}
             />
-            {/* Below the cards, not above them. This line carries the words
-                people actually search - congested, breakout-prone, dull, dry -
-                which the group labels do not, so it earns its place on the
-                page. Between the tabs and the cards it bought that at the
-                price of pushing the cards down and reading as leftover
-                furniture under a row of chips. Down here it costs the visitor
-                nothing: the cards are the first thing under the tabs, and the
-                sentence is still in the document for anyone, or anything,
-                reading it. */}
-            {block.heading && (
-              <p
-                data-group-head
-                className="mt-8 text-[14px] text-muted-foreground"
-              >
-                {block.heading}
-              </p>
-            )}
           </TabsPanel>
         ))}
       </GroupTabs>
