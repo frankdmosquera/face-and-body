@@ -105,7 +105,15 @@ export default function ProductsPage() {
           >
             <div className="sticky top-0 h-svh">
               <Photo slot={slot} fill sizes="100vw" className="object-cover" />
-              <div className="absolute inset-0 bg-background/80" />
+              {/* How much of the photograph shows, chosen in the options. */}
+              {[85, 70, 55, 40, 25].map((veil, index) => (
+                <div
+                  key={veil}
+                  data-option={`pr-veil-${index + 1}`}
+                  className="absolute inset-0 bg-background"
+                  style={{ opacity: veil / 100 }}
+                />
+              ))}
             </div>
             <div className="absolute inset-x-0 top-0 h-40 bg-linear-to-b from-background to-transparent" />
             <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-background to-transparent" />

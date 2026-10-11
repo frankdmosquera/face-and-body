@@ -143,6 +143,13 @@ export const DESIGN_OPTIONS: readonly DesignGroupType[] = [
     ],
   },
   {
+    key: "pr-veil",
+    page: "products",
+    label: "How much of the photo shows",
+    fallback: "3",
+    options: ["1", "2", "3", "4", "5"].map((id) => ({ id, label: id })),
+  },
+  {
     key: "ct-hero",
     page: "contact",
     label: "Top of the page",
