@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowDownRight } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
@@ -8,6 +9,9 @@ import { PhotoCta } from "@/components/layout/PhotoCta";
 import { Watermark } from "@/components/layout/Watermark";
 import { PhotoFan } from "@/components/treatments/PhotoFan";
 import { GroupTabs } from "@/components/treatments/GroupTabs";
+import { OtherReviews } from "@/components/treatments/OtherReviews";
+import { Backdrop } from "@/components/theme/Backdrop";
+import { DesignPicker } from "@/components/theme/DesignPicker";
 import { ServiceList } from "@/components/treatments/ServiceList";
 import { TabsList, TabsPanel, TabsTab } from "@/components/ui/tabs";
 import { categoriesData } from "@/data/categoriesData";
@@ -66,6 +70,8 @@ export default function OtherTreatmentsPage() {
 
   return (
     <>
+      {/* Until the design options are picked. */}
+      <DesignPicker page="other-treatments" />
       {/**
        * A dark header band, so arriving here reads as somewhere else.
        *
@@ -82,7 +88,8 @@ export default function OtherTreatmentsPage() {
        * palette.
        */}
       <Section tone="dark" className="relative overflow-hidden py-0! lg:py-0!">
-        <Container className="relative grid items-center gap-10 py-12 lg:grid-cols-[1fr_420px] lg:py-[84px]">
+        <Backdrop group="ot-hero" tone="dark" plate="right" word="Renew" />
+        <Container className="relative grid items-center gap-10 pt-12 pb-10 lg:grid-cols-[1fr_420px] lg:pt-[84px] lg:pb-14">
           <Watermark className="-top-[140px] -left-[180px] opacity-[0.07]" />
           <div className="relative max-w-2xl">
             <nav
@@ -96,7 +103,9 @@ export default function OtherTreatmentsPage() {
               <span aria-current="page">Other treatments</span>
             </nav>
             <Eyebrow>{total} treatments</Eyebrow>
-            <h1 className="my-5 lg:text-[66px]">Other treatments</h1>
+            <h1 className="my-5 lg:text-[66px]">
+              Other <em className="text-gold">treatments</em>
+            </h1>
             <Lede className="text-on-dark-muted">
               Massage, body work, skin treatments and laser. The facials are on
               the{" "}
@@ -113,6 +122,58 @@ export default function OtherTreatmentsPage() {
             slots={["catBody", "catLaser", "catMassage"]}
             className="hidden lg:block"
           />
+        </Container>
+        {/* AN INDEX IN THE HERO. The four kinds were only chips under the
+            band, so the page opened on a heading and three photographs and
+            said nothing about what was here or what it cost until you
+            scrolled. Each card is a plain `#segment` link, which `GroupTabs`
+            already answers by opening that tab and scrolling to it. No
+            photographs: the fan above and the tile beside the cards already
+            use them, and a third copy would be the same picture three times
+            on one page. */}
+        <Container className="relative pb-12 lg:pb-16">
+          <ul className="grid grid-cols-2 gap-3 lg:grid-cols-4 lg:gap-4">
+            {OTHERS.map((category) => {
+              const services = getServicesByCategory(category.slug);
+              const prices = services.flatMap((service) =>
+                service.price === null ? [] : [service.price],
+              );
+              const from = prices.length > 0 ? Math.min(...prices) : null;
+              return (
+                <li key={category.slug}>
+                  <a
+                    href={`#${category.segment}`}
+                    className="group flex h-full flex-col justify-between gap-6 rounded-2xl border border-on-dark/10 bg-on-dark/[0.05] p-5 transition-[background-color,border-color,translate] duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-on-dark/[0.09] lg:p-6"
+                  >
+                    <span className="flex items-start justify-between gap-3">
+                      <span className="font-serif text-[22px] leading-tight lg:text-[26px]">
+                        {category.label}
+                      </span>
+                      <ArrowDownRight
+                        aria-hidden="true"
+                        className="mt-1 size-5 shrink-0 text-gold transition-transform duration-300 group-hover:translate-x-0.5 group-hover:translate-y-0.5"
+                      />
+                    </span>
+                    <span className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 text-[13px] text-on-dark-muted">
+                      {services.length} treatments
+                      {from === null ? (
+                        <span className="font-serif text-[16px] text-gold">
+                          At consultation
+                        </span>
+                      ) : (
+                        <span className="font-serif text-[18px] text-gold">
+                          <small className="mr-1 font-sans text-[11px] tracking-[0.04em] text-on-dark-muted">
+                            from
+                          </small>
+                          ${from}
+                        </span>
+                      )}
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
         </Container>
       </Section>
 
@@ -172,6 +233,8 @@ export default function OtherTreatmentsPage() {
           </GroupTabs>
         </Container>
       </Section>
+
+      <OtherReviews />
 
       <PhotoCta
         slot="concernMuscleTension"

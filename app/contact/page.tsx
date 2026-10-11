@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { FileText, MessageCircle, ScanFace } from "lucide-react";
 import { Directions } from "@/components/business/Directions";
 import { HoursTable } from "@/components/business/HoursTable";
 import { OpenNow } from "@/components/business/OpenNow";
@@ -12,6 +13,9 @@ import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
 import { Section } from "@/components/layout/Section";
 import { Watermark } from "@/components/layout/Watermark";
+import { Photo } from "@/components/media/Photo";
+import { Backdrop } from "@/components/theme/Backdrop";
+import { DesignPicker } from "@/components/theme/DesignPicker";
 import { siteConfig } from "@/data/siteConfig";
 import {
   buildPrefills,
@@ -61,13 +65,21 @@ export default function ContactPage() {
      change to the wording lands on two of the three and nobody notices the
      one that was missed. */
   const STEPS = [
-    "Tell us what you are hoping to change.",
-    `We look at your skin in person, ${consultation.durationMin} minutes, free, no commitment.`,
-    "You leave with a plan and real prices, in writing.",
+    { icon: MessageCircle, text: "Tell us what you are hoping to change." },
+    {
+      icon: ScanFace,
+      text: `We look at your skin in person, ${consultation.durationMin} minutes, free, no commitment.`,
+    },
+    {
+      icon: FileText,
+      text: "You leave with a plan and real prices, in writing.",
+    },
   ];
 
   return (
     <>
+      {/* Until the design options are picked. */}
+      <DesignPicker page="contact" />
       {/* ONE PLACE TO REACH US, NOT FOUR. The page carried the same two
           actions in four separate blocks: buttons in the hero, a number and a
           heading in a band of its own, icons under the form, and icons again
@@ -80,8 +92,22 @@ export default function ContactPage() {
           takes the photograph's place: on the one page whose job is being
           contactable, a form above the fold beats a picture, and the page is
           not left without one because the pricing section below carries its
-          own. */}
+          own.
+
+          The photograph came back on desktop, BEHIND the form rather than
+          instead of it: a treatment in progress fills the right edge and the
+          form card floats over its left side, so the form keeps its place
+          above the fold and the page stops opening on two flat columns. Below
+          `lg` there is no room beside the form, so there is no photograph. */}
       <section className="relative overflow-hidden">
+        <Backdrop group="ct-hero" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-y-0 right-0 hidden w-[46%] rounded-l-[40px] overflow-hidden lg:block"
+        >
+          <Photo slot="catFacial" fill sizes="46vw" className="object-cover" />
+          <div className="absolute inset-0 bg-dark/15" />
+        </div>
         <Container className="relative grid gap-10 py-10 lg:grid-cols-[1fr_1.05fr] lg:items-start lg:gap-[72px] lg:py-[72px]">
           <Watermark className="-top-[140px] -left-[180px]" />
           <div className="relative">
@@ -124,7 +150,7 @@ export default function ContactPage() {
           </div>
           <div
             id="form"
-            className="scroll-mt-44 xsm:scroll-mt-24 rounded-lg border border-border bg-card p-7 lg:p-11"
+            className="relative scroll-mt-44 xsm:scroll-mt-24 rounded-2xl border border-border bg-card p-7 lg:border-transparent lg:p-11 lg:shadow-[0_40px_90px_-40px_rgba(28,26,23,0.45)]"
           >
             {/* The heading lives inside `ContactForm`, not here. It used to sit
                 at this level, which left "Send a message" standing over the
@@ -148,16 +174,32 @@ export default function ContactPage() {
           just scattered across three other pages. */}
       <Section tone="sand">
         <Container>
-          <Eyebrow>What happens next</Eyebrow>
-          <ol className="mt-7 grid gap-8 md:grid-cols-3 md:gap-10">
-            {STEPS.map((step, index) => (
-              <li key={step} className="reveal-step relative pt-5">
-                <span className="block font-serif text-[26px] text-copper">
-                  {index + 1}
+          <div className="reveal">
+            <Eyebrow>What happens next</Eyebrow>
+            <h2 className="mt-4">
+              From a message to a <em className="text-copper">plan</em>
+            </h2>
+          </div>
+          {/* Cards rather than three bare numbers on the sand. As a row of
+              small grey sentences the band read as a footnote; this is the
+              answer to "what am I signing up for", so it gets the weight of
+              the treatment cards. */}
+          <ol className="reveal mt-12 grid gap-6 md:grid-cols-3 lg:gap-8">
+            {STEPS.map(({ icon: Icon, text }, index) => (
+              <li
+                key={text}
+                className="relative overflow-hidden rounded-2xl bg-card p-7 shadow-[0_1px_2px_rgba(28,26,23,0.04),0_14px_32px_-20px_rgba(28,26,23,0.22)] lg:p-8"
+              >
+                <span
+                  aria-hidden="true"
+                  className="absolute top-4 right-6 font-serif text-[64px] leading-none text-copper/15 italic"
+                >
+                  0{index + 1}
                 </span>
-                <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">
-                  {step}
-                </p>
+                <span className="grid size-12 place-items-center rounded-full bg-copper-tint text-copper">
+                  <Icon aria-hidden="true" className="size-5" />
+                </span>
+                <p className="mt-6 text-[17px] leading-relaxed">{text}</p>
               </li>
             ))}
           </ol>
@@ -171,15 +213,20 @@ export default function ContactPage() {
           Book now takes its own row, and 96px from there up. One value of 96
           put every anchor on the site 76px behind the header on a phone. */}
       <Section id="hours" className="scroll-mt-44 xsm:scroll-mt-24">
-        <Container className="grid gap-12 lg:grid-cols-2 lg:items-start lg:gap-16">
-          <div>
+        {/* TWO CARDS, AND THE MAP MOVED INTO THE SECOND. The map used to be
+            a section of its own under both columns, a full-width frame a
+            screen away from the address it shows. Inside the Getting here
+            card it sits with its address and its one action, and the hours
+            get a card of the same weight beside it. */}
+        <Container className="grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-start lg:gap-10">
+          <div className="rounded-2xl bg-card p-7 shadow-[0_1px_2px_rgba(28,26,23,0.04),0_14px_32px_-20px_rgba(28,26,23,0.22)] lg:p-9">
             <Eyebrow>When we&apos;re here</Eyebrow>
             <h2 className="mt-4 mb-6">Hours</h2>
             <OpenNow>
               <HoursTable />
             </OpenNow>
           </div>
-          <div>
+          <div className="rounded-2xl bg-card p-7 shadow-[0_1px_2px_rgba(28,26,23,0.04),0_14px_32px_-20px_rgba(28,26,23,0.22)] lg:p-9">
             <Eyebrow>Where to find us</Eyebrow>
             <h2 className="mt-4 mb-6">Getting here</h2>
             <address className="text-[17px] not-italic">
@@ -187,17 +234,12 @@ export default function ContactPage() {
               <br />
               {address.city}, {address.province} {address.postalCode}
             </address>
-            <p className="mt-5 text-[15px] leading-relaxed text-muted-foreground">
+            <p className="mt-3 mb-7 text-[15px] leading-relaxed text-muted-foreground">
               Off Macleod Trail at Midlake Boulevard, next to the Midnapore
               lake. Free parking right outside the door.
             </p>
+            <Directions />
           </div>
-        </Container>
-      </Section>
-
-      <Section className="pt-0! lg:pt-0!">
-        <Container className="pt-4 lg:pt-8">
-          <Directions />
         </Container>
       </Section>
 

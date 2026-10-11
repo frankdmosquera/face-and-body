@@ -11,6 +11,7 @@ import { TreatmentRibbon } from "@/components/home/TreatmentRibbon";
 import { VisitStory } from "@/components/home/VisitStory";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { Divider } from "@/components/layout/Divider";
+import { DesignPicker } from "@/components/theme/DesignPicker";
 
 /**
  * THE PAGE CACHE. Ported from primo-painters, where this export sits beside
@@ -62,6 +63,8 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      {/* Until Frank picks the hero, products and consultation options. */}
+      <DesignPicker page="home" />
       <Hero />
       <TrustStrip />
       <TreatmentRibbon />

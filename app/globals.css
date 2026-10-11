@@ -34,7 +34,8 @@
   --color-placeholder: #e6ddd0;
   --color-placeholder-text: #8f867a;
 
-  --font-serif: var(--font-cormorant), "Cormorant Garamond", "Times New Roman", serif;
+  --font-serif:
+    var(--font-cormorant), "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: var(--font-inter), "Inter", system-ui, sans-serif;
 
   --radius-sm: 4px;
@@ -176,14 +177,14 @@
   h3,
   h4 {
     @apply font-serif font-medium;
-    line-height: 1.1;
-    letter-spacing: -0.01em;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
   }
   h1 {
     font-size: 44px;
   }
   h2 {
-    font-size: 34px;
+    font-size: 38px;
   }
   h3 {
     font-size: 28px;
@@ -193,7 +194,7 @@
       font-size: 72px;
     }
     h2 {
-      font-size: 48px;
+      font-size: 58px;
     }
   }
 }
@@ -439,4 +440,37 @@
       animation: none;
     }
   }
+}
+
+/**
+ * Three looks on a switch (components/theme/LookSwitch.tsx), kept live until
+ * the client picks one (Frank, 2026-10-10). "copper" is the base above. Both new looks
+ * move to a cooler bone ground and deeper bands; gold swaps copper for an
+ * antique gold, espresso makes the actions near-black and keeps gold for the
+ * fine details. Once she picks, the winner's values move into @theme and these
+ * go with the switch.
+ */
+:root[data-look="gold"],
+:root[data-look="espresso"] {
+  --color-cream: #f5f2ed;
+  --color-surface: #ffffff;
+  --color-sand: #ebe6de;
+  --color-line: #ddd5c9;
+  --color-dark: #171513;
+  --color-dark-surface: #24201d;
+  --color-placeholder: #e4ddd2;
+}
+:root[data-look="gold"] {
+  --color-copper: #8f6f3a;
+  --color-copper-hover: #735828;
+  --color-copper-soft: #d9c59b;
+  --color-copper-tint: #f3ecdd;
+  --color-copper-text: #6e5427;
+}
+:root[data-look="espresso"] {
+  --color-copper: #2b2522;
+  --color-copper-hover: #000000;
+  --color-copper-soft: #d9c59b;
+  --color-copper-tint: #efe9df;
+  --color-copper-text: #8a6a35;
 }

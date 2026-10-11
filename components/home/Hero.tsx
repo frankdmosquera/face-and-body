@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Orchid } from "@/components/brand/Orchid";
 import { ConsultSeal } from "@/components/home/ConsultSeal";
+import { Backdrop } from "@/components/theme/Backdrop";
 import { Stars } from "@/components/home/Stars";
 import { Eyebrow } from "@/components/layout/Eyebrow";
 import { Lede } from "@/components/layout/Lede";
@@ -52,6 +53,7 @@ export function Hero() {
           strip peeks there too. Above 850 nothing changes, which is where it
           already lands right. */}
       <div className="relative flex flex-col justify-center px-gutter-sm py-14 lg:py-16 lg:pr-gutter lg:pl-[max(var(--spacing-gutter),calc((100vw-var(--container-site))/2+var(--spacing-gutter)))] lg:[@media(min-height:850px)]:py-20">
+        <Backdrop group="hero" />
         <Watermark className="-top-[60px] -left-[140px]" />
         <div className="relative">
           <Eyebrow>Medical aesthetics &middot; Midnapore, Calgary SE</Eyebrow>
@@ -111,7 +113,7 @@ export function Hero() {
             left is blanket. On the 4:3 phone crop there is no corner left
             that is not her face. */}
         <ConsultSeal className="absolute top-44 -left-14 z-10 hidden lg:grid" />
-        <div className="lift-float-late absolute bottom-44 -left-6 z-10 hidden items-center gap-3 rounded-sm bg-card px-4 py-3 shadow-[0_12px_40px_rgba(28,26,23,0.14)] lg:flex">
+        <div className="lift-float-late absolute bottom-44 -left-6 z-10 hidden items-center gap-3 rounded-xl bg-card px-4 py-3 shadow-[0_12px_40px_rgba(28,26,23,0.14)] lg:flex">
           <div className="flex -space-x-2.5">
             {FACES.map((face) => (
               <PhotoByPath
@@ -147,7 +149,7 @@ export function Hero() {
             high and the bottom right corner is blanket again. The corner the
             badge wants is wherever the face is not, and that moves with the
             crop. */}
-        <div className="lift-float absolute top-5 left-5 z-10 flex items-center gap-3.5 rounded-sm bg-card px-[18px] py-3.5 shadow-[0_12px_40px_rgba(28,26,23,0.12)] lg:top-auto lg:right-8 lg:bottom-8 lg:left-auto">
+        <div className="lift-float absolute top-5 left-5 z-10 flex items-center gap-3.5 rounded-xl bg-card px-[18px] py-3.5 shadow-[0_12px_40px_rgba(28,26,23,0.12)] lg:top-auto lg:right-8 lg:bottom-8 lg:left-auto">
           <Orchid className="h-8 w-[30px] shrink-0 text-copper" />
           <div>
             <b className="block text-[13px] font-medium">

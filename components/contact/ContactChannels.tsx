@@ -2,17 +2,15 @@ import { MessageSquare, Phone } from "lucide-react";
 import type { ReactElement } from "react";
 import { siteConfig } from "@/data/siteConfig";
 import { cn } from "@/lib/cn";
-import {
-  GENERAL_OPENER,
-  smsLink,
-  whatsappLink,
-} from "@/lib/contactPrefills";
+import { GENERAL_OPENER, smsLink, whatsappLink } from "@/lib/contactPrefills";
 
 type ChannelType = {
   key: string;
   href: string;
   /** Doubles as the accessible name and the hover tooltip. */
   title: string;
+  /** The word on the button; `title` stays the full name for screen readers. */
+  short: string;
   icon: ReactElement;
   external: boolean;
 };
@@ -85,6 +83,7 @@ export function ContactChannels({
          empty box. Both come from `GENERAL_OPENER`, so they cannot drift. */
       href: whatsappLink(GENERAL_OPENER),
       title: "WhatsApp",
+      short: "WhatsApp",
       /**
        * BIGGER THAN THE OTHER TWO, AND NOT BY EYE. 32px against their 21, in
        * the same 48px circle, so it carries noticeably less padding than they
@@ -103,7 +102,7 @@ export function ContactChannels({
        * any other colour stops being recognisable, which is the entire reason
        * to carry the icon at all.
        */
-      icon: <WhatsAppIcon className="size-[32px] text-[#25D366]" />,
+      icon: <WhatsAppIcon className="size-5 text-[#25D366]" />,
       external: true,
     });
   }
@@ -112,14 +111,16 @@ export function ContactChannels({
       key: "sms",
       href: smsLink(GENERAL_OPENER),
       title: `Text ${phone.display}`,
-      icon: <MessageSquare className="size-[21px] text-copper" />,
+      short: "Text",
+      icon: <MessageSquare className="size-[18px] text-copper" />,
       external: false,
     },
     {
       key: "tel",
       href: phone.tel,
       title: `Call ${phone.display}`,
-      icon: <Phone className="size-[21px] text-copper" />,
+      short: "Call",
+      icon: <Phone className="size-[18px] text-copper" />,
       external: false,
     },
   );
@@ -131,7 +132,7 @@ export function ContactChannels({
           {label}
         </span>
       )}
-      <div className={cn("flex gap-4", label && "mt-3")}>
+      <div className={cn("flex flex-wrap gap-3", label && "mt-3")}>
         {channels.map((channel) => (
           <a
             key={channel.key}
@@ -149,12 +150,13 @@ export function ContactChannels({
                border is what still reacts to hover, so the affordance survives
                icons that no longer inherit `currentColor`. */
             className={cn(
-              "flex size-12 items-center justify-center rounded-full border border-border bg-card transition-colors",
+              "flex h-12 items-center gap-2.5 rounded-full border border-border bg-card pr-5 pl-4 text-[13px] font-medium tracking-[0.06em] uppercase shadow-[0_10px_24px_-18px_rgba(28,26,23,0.4)] transition-[color,background-color,border-color,translate] hover:-translate-y-0.5",
               "hover:border-copper hover:bg-secondary",
               "focus-visible:border-copper focus-visible:ring-2 focus-visible:ring-copper/40 focus-visible:outline-none",
             )}
           >
             {channel.icon}
+            {channel.short}
           </a>
         ))}
       </div>

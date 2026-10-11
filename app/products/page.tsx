@@ -8,6 +8,8 @@ import { Section } from "@/components/layout/Section";
 import { PhotoCta } from "@/components/layout/PhotoCta";
 import { Watermark } from "@/components/layout/Watermark";
 import { ProductTrio } from "@/components/products/ProductTrio";
+import { Backdrop } from "@/components/theme/Backdrop";
+import { DesignPicker } from "@/components/theme/DesignPicker";
 import { productsData } from "@/data/productsData";
 import { getLowestProductPrice } from "@/lib/productQueries";
 
@@ -27,7 +29,10 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
   return (
     <>
+      {/* Until the design options are picked. */}
+      <DesignPicker page="products" />
       <section className="relative overflow-hidden">
+        <Backdrop group="pr-hero" word="Revitalize" />
         <Container className="relative grid items-center gap-16 py-10 lg:grid-cols-[1fr_380px] lg:py-[72px]">
           <Watermark className="-top-[140px] -left-[180px]" />
           <div className="relative max-w-2xl">
