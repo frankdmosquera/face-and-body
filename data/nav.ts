@@ -127,7 +127,7 @@ export const FOOTER: { heading: string; links: SiteLinkType[] }[] = [
   {
     heading: "Book",
     links: [
-      { label: "Book now", href: "/contact" },
+      { label: "Book now", href: "/book" }, // the page opens the booking window
       { label: "Instagram", href: siteConfig.social.instagram },
       { label: "Facebook", href: siteConfig.social.facebook },
     ],

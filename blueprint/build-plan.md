@@ -45,7 +45,7 @@ Three of those need explaining, because the site contradicts the tick:
 | # | | When |
 |---|---|---|
 | 10 | Local SEO foundations | Not now, but it has to happen. No sitemap, no robots, no schema, and the restructure bet the site on the home page ranking |
-| 11 | Booking integration | Not now |
+| 11 | Booking integration | Done 2026-10-26: Booking CRM replaces Cal.com. Goes live with 13 |
 | 12 | Before and after gallery | Blocked on photographs, not on code. `resultsData.ts` is empty on purpose and `Results` hides itself when it is |
 | 13 | Deployment readiness | Open. The `RESEND_FROM` question inside it is known to Frank and does not need raising again |
 | 14 | Reviews | Open. Widget built, live Google fetch deliberately unused |
@@ -88,9 +88,12 @@ Everything needed for her to have a working, findable website. No AI.
 - [ ] 10. **Local SEO foundations** - LocalBusiness and Service schema,
   per-page metadata, Open Graph, sitemap, robots, one canonical set of
   business facts feeding all of it
-- [ ] 11. **Booking integration** - one booking component with a
-  service-shaped interface, Cal.com behind it as the first provider, themed to
-  match, plus the script that generates event types from the services data
+- [x] 11. **Booking integration** - one booking component with a
+  service-shaped interface. Cal.com was its first provider; Booking CRM, the
+  clinic's own booking system, replaced it on 2026-10-26 (scheduleads-app
+  feature 17): every Book control opens Booking CRM's window on its treatment,
+  in its standard look for now, and `scripts/checkBookingLinks.mjs` proves
+  every bookable treatment has its booking link
 
 ## Phase 1b - after launch
 

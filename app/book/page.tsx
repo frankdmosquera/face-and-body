@@ -24,13 +24,13 @@ import { siteConfig } from "@/data/siteConfig";
  * uses for its prefill. Forty routes would be forty prerendered copies of one
  * layout differing by a name and a number.
  *
- * INLINE, NOT A LINK OUT. Every Book control on the site lands here rather
- * than on a booking provider's own page. The visitor stays on the domain, the
- * page keeps the site's header, footer and theme, and what changes underneath
- * when the clinic's own booking system replaces Cal.com is one component.
+ * ON OUR OWN PAGE, NOT A LINK OUT. A Book control opens Booking CRM's window
+ * in place; this page is where it lands when it could not (no JavaScript yet,
+ * a middle click, a copied link), and it opens the same window itself. The
+ * visitor stays on the domain with the site's header, footer and theme.
  *
  * `noindex`, deliberately. This page is a tool for someone who has already
- * chosen, not a landing page: its content is an iframe Google cannot read, and
+ * chosen, not a landing page: it holds a button and a window, and
  * 40 query-string variants of it competing with the treatment cards on the
  * home page is exactly the signal-splitting the 2026-09-20 restructure existed
  * to undo.
@@ -60,8 +60,7 @@ export default function BookPage() {
           Book an <em className="text-copper">appointment</em>
         </h1>
         <Lede className="mt-5 max-w-2xl">
-          Pick a time that suits you. You will get a confirmation by email, and
-          a reminder before your appointment.
+          Pick a time that suits you, and you will get a confirmation by email.
         </Lede>
         {/* THE CALENDAR AND THE VISIT, SIDE BY SIDE. The page was a heading
             over an embed, and the embed is someone else's design: the one

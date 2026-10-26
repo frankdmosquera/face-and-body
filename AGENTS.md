@@ -208,7 +208,14 @@ checks do not make the Blueprint unusable.
 
 ## Commands
 
-- Dev server: `npm run dev` (http://localhost:3000)
+- Dev server: `npm run dev` (http://localhost:3000). Started from scheduleads-app's preview
+  config it runs on http://localhost:3402 instead, which Booking CRM's local API allows
+- Install: `npm install` needs `NODE_AUTH_TOKEN` in the shell (a GitHub token with
+  `read:packages`, e.g. `NODE_AUTH_TOKEN=$(gh auth token)` in Git Bash), because
+  `@frankdmosquera/booking-component` comes from GitHub Packages (`.npmrc`); Vercel needs the
+  same variable in its settings
+- Check every bookable treatment has its booking link: `node scripts/checkBookingLinks.mjs`
+  (the live API) or `node scripts/checkBookingLinks.mjs --api http://localhost:3401`
 - Build: `npm run build`
 - Production server: `npm run start`
 - Lint: `npm run lint`
@@ -234,11 +241,13 @@ or the next hurried commit fills it in from the real file, and a secret reaches
 GitHub where nothing can take it back. This section is prose for exactly that
 reason. There is no blank here to complete.
 
-The whole project reads five variables. `grep -rn "process.env" app components
+The whole project reads six variables. `grep -rn "process.env" app components
 lib data actions` returns the current list in full, and is the answer to "which
-ones do we need" rather than any file. The first three are below; `CONTACT_TO`
+ones do we need" rather than any file. The first four are below; `CONTACT_TO`
 and `GOOGLE_MAPS_API_KEY` are covered further down, with the settled decisions:
 
+- **NEXT_PUBLIC_BOOKING_API_URL**, read in `lib/bookingConfig.ts`. Laptop only: points
+  the booking window at a local Booking CRM API. Unset, as on Vercel, the site books live.
 - **NEXT_PUBLIC_IMAGEKIT_URL_ENDPOINT**, read in `components/media/Photo.tsx`.
   The ImageKit URL endpoint, public by design and visible in every image URL.
   It works with or without the `/face-and-body` folder appended; `Photo`

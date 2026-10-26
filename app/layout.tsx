@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
-import { BookingPopup } from "@/components/booking/BookingPopup";
+import { BookingHost } from "@/components/booking/BookingHost";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { LookSwitch, lookBootScript } from "@/components/theme/LookSwitch";
 import { designBootScript, designOptionsCss } from "@/lib/designOptions";
 import { siteConfig } from "@/data/siteConfig";
+import { BOOKING_API_URL, BOOKING_SLUG } from "@/lib/bookingConfig";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -46,14 +47,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       </head>
       <body className="flex min-h-full flex-col">
         <ThemeProvider>
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
-          {/* Renders nothing. It arms every data-cal-link on the page and
-              warms the booker, so a Book click opens an overlay that is
-              already loaded rather than starting to load. */}
-          <BookingPopup />
-          <LookSwitch />
+          {/* Every Book anchor on the page opens Booking CRM's window. */}
+          <BookingHost apiUrl={BOOKING_API_URL} slug={BOOKING_SLUG}>
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+            <SiteFooter />
+            <LookSwitch />
+          </BookingHost>
         </ThemeProvider>
       </body>
     </html>
