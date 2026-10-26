@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ComponentPropsWithRef, ReactNode } from "react";
 import { bookingHref, bookingTrigger } from "@/lib/bookingConfig";
 
 /**
@@ -22,6 +22,7 @@ export function BookLink({
   treatmentSlug,
   className,
   children,
+  ...rendered
 }: {
   /** The treatment to open. Omitted for a general Book control. */
   treatmentSlug?: string;
@@ -29,9 +30,13 @@ export function BookLink({
   /* Optional because Base UI render props inject their own children: the
      sheet's SheetClose passes "Book now" in when it clones this. */
   children?: ReactNode;
-}) {
+} & Omit<ComponentPropsWithRef<"a">, "href" | "className" | "children">) {
   return (
+    /* `rendered` first: SheetClose's onClick and ref must reach the anchor, or
+       the phone menu stays open under the window (F-522). Its own href and
+       booking attribute come after, so nothing passed in replaces them. */
     <a
+      {...rendered}
       href={bookingHref(treatmentSlug)}
       {...bookingTrigger(treatmentSlug)}
       className={className}
