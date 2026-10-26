@@ -2,20 +2,19 @@ import type { ReactNode } from "react";
 import { bookingHref, bookingTrigger } from "@/lib/bookingConfig";
 
 /**
- * A Book control: a real link that Cal turns into an overlay.
+ * A Book control: a real link that `BookingHost` turns into the booking window.
  *
  * A PLAIN `<a>`, NEVER NEXT'S `<Link>`, and that is the whole reason this
  * component exists rather than four call sites spreading the attributes
  * themselves.
  *
- * Both were firing. `Link` handles the click in React and navigates to /book,
- * which renders the inline booker; Cal's own document listener opens the
- * overlay. The visitor got the calendar twice, one on top of the other, and
- * had to dismiss the overlay to reach the page underneath it. On a plain
- * anchor Cal cancels the click and only the overlay happens.
+ * With Cal.com both were firing: `Link` navigated to /book while the
+ * provider's own listener opened its overlay, and the visitor got two
+ * calendars stacked. On a plain anchor `BookingHost` cancels the click and
+ * only the window opens.
  *
  * The `href` still matters and is not decoration. Without JavaScript, or
- * before Cal's script has loaded, the anchor does what an anchor does and the
+ * before the page has hydrated, the anchor does what an anchor does and the
  * visitor lands on /book - so middle-click, copy link address and sharing keep
  * working, and a Book button is never a dead control.
  */

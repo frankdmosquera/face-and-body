@@ -236,9 +236,9 @@ export function MobileNav({ items }: { items: NavItemType[] }) {
           <SheetClose
             nativeButton={false}
             className={buttonVariants({ className: "w-full" })}
-            /* A plain anchor via BookLink, not Link: Cal cancels the click
-               and opens the overlay, and a Next Link would navigate as well
-               and stack the two bookers. */
+            /* A plain anchor via BookLink, not Link: BookingHost cancels
+               the click and opens the window, where a Next Link would
+               navigate as well. */
             render={<BookLink />}
           >
             Book now

@@ -473,7 +473,7 @@ export const servicesData: readonly ServiceType[] = [
     description:
       "The relaxation massage with fifteen more minutes for the back and shoulders.",
     concerns: ["muscle-tension"],
-    bookingId: null,
+    bookingId: "relaxation-massage-75-min", // Booking CRM's slug, made from the name
     featured: false,
     variantOf: "relaxation-massage",
   },
@@ -487,7 +487,7 @@ export const servicesData: readonly ServiceType[] = [
     description:
       "The full ninety minutes, head to feet, for when an hour is not enough.",
     concerns: ["muscle-tension"],
-    bookingId: null,
+    bookingId: "relaxation-massage-90-min", // Booking CRM's slug, made from the name
     featured: false,
     variantOf: "relaxation-massage",
   },
