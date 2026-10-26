@@ -25,6 +25,10 @@ import { servicesData } from "../data/servicesData.ts";
 const BUSINESS = "face-and-body-wellness-centre";
 
 const apiAt = process.argv.indexOf("--api");
+if (apiAt > -1 && !process.argv[apiAt + 1]) {
+  console.error("--api needs an address, e.g. --api http://localhost:3401");
+  process.exit(1);
+}
 const api = (
   apiAt > -1 ? process.argv[apiAt + 1] : "https://api.booking-crm.com"
 ).replace(/\/+$/, "");

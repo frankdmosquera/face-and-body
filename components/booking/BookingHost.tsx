@@ -15,13 +15,14 @@ import "@frankdmosquera/booking-component/booking-component.css";
  * Booking CRM's booking window, for the whole site.
  *
  * ONE PROVIDER, MOUNTED IN THE ROOT LAYOUT, so the 40 Book buttons stay
- * ordinary server-rendered anchors: no client component per card and no
- * catalogue crossing into the browser. Each anchor carries `data-booking`
- * (`bookingTrigger` in `lib/bookingConfig.ts`) and one click listener here
- * opens the window on that service.
+ * ordinary server-rendered anchors, with no client component per card. Each
+ * anchor carries `data-booking` (`bookingTrigger` in `lib/bookingConfig.ts`)
+ * and one click listener here opens the window on that service.
  *
  * The address and the business come in as props from the server layout, so
- * the catalogue `bookingConfig` imports never reaches this bundle.
+ * this file imports nothing from `bookingConfig`. (The catalogue still reaches
+ * the browser another way: `MobileNav`, a client component, imports `BookLink`
+ * and through it `bookingConfig`. That predates this file.)
  *
  * The standard look for now: the window's own neutral tokens, none of hers.
  * After a booking the window shows its own confirmation; the site has no
@@ -73,9 +74,13 @@ export function useOpenTreatment(): OpenTreatmentType {
  * slug the list lacks, or a list that will not load, opens her whole list
  * rather than nothing.
  *
+ * A request that fails or takes more than five seconds opens her list this
+ * time and is tried again on the next click. When two clicks overlap, the
+ * last one wins.
+ *
  * Modified clicks are left alone: Ctrl or Cmd click and middle click open
- * /book in a new tab, which is what someone doing them expects. Capture, so
- * the navigation is cancelled before anything else handles the click.
+ * /book in a new tab, which is what someone doing them expects. Bubble, not
+ * capture, so the phone menu's own close (SheetClose) runs first.
  */
 function OpenTreatment({
   apiUrl,
@@ -88,23 +93,31 @@ function OpenTreatment({
 }) {
   const { open } = useBooking();
   const ids = useRef<Promise<Map<string, string>> | null>(null);
+  const latestClick = useRef(0);
 
   const openTreatment = useCallback<OpenTreatmentType>(
     (bookingId) => {
+      const click = ++latestClick.current;
       if (!bookingId) return open();
-      ids.current ??= fetch(`${apiUrl}/public/${slug}/booking-links`)
-        .then((response) => (response.ok ? response.json() : null))
+      ids.current ??= fetch(
+        `${apiUrl.replace(/\/+$/, "")}/public/${slug}/booking-links`,
+        { credentials: "omit", signal: AbortSignal.timeout(5000) },
+      )
+        .then((response) => {
+          if (!response.ok) throw new Error(`${response.status}`);
+          return response.json();
+        })
         .then(
-          (list: { bookingLinks?: { id: string; slug: string }[] } | null) =>
-            new Map(
-              (list?.bookingLinks ?? []).map((link) => [link.slug, link.id]),
-            ),
+          (list: { bookingLinks: { id: string; slug: string }[] }) =>
+            new Map(list.bookingLinks.map((link) => [link.slug, link.id])),
         )
         .catch(() => {
-          ids.current = null; // a dropped request is tried again on the next click
+          ids.current = null; // failed or too slow: tried again on the next click
           return new Map<string, string>();
         });
-      void ids.current.then((found) => open(found.get(bookingId)));
+      void ids.current.then((found) => {
+        if (click === latestClick.current) open(found.get(bookingId));
+      });
     },
     [apiUrl, slug, open],
   );
@@ -121,8 +134,8 @@ function OpenTreatment({
       openTreatment(anchor.dataset.booking || undefined); // empty: her whole list
     }
 
-    document.addEventListener("click", openFromAnchor, true);
-    return () => document.removeEventListener("click", openFromAnchor, true);
+    document.addEventListener("click", openFromAnchor);
+    return () => document.removeEventListener("click", openFromAnchor);
   }, [openTreatment]);
 
   return (
