@@ -8,7 +8,11 @@ import {
   useRef,
   type ReactNode,
 } from "react";
-import { BookingProvider, useBooking } from "@frankdmosquera/booking-component";
+import {
+  BookingProvider,
+  useBooking,
+  type BookedType,
+} from "@frankdmosquera/booking-component";
 import "@frankdmosquera/booking-component/booking-component.css";
 
 /**
@@ -24,9 +28,9 @@ import "@frankdmosquera/booking-component/booking-component.css";
  * the browser another way: `MobileNav`, a client component, imports `BookLink`
  * and through it `bookingConfig`. That predates this file.)
  *
- * The standard look for now: the window's own neutral tokens, none of hers.
- * After a booking the window shows its own confirmation; the site has no
- * thank-you page.
+ * Its colours are hers, from Booking CRM's Look page. After a booking the
+ * visitor goes to /thank-you with the treatment and the time
+ * (`thankYouHref`), the one page every booking lands on (2026-10-29).
  */
 export function BookingHost({
   apiUrl,
@@ -42,13 +46,24 @@ export function BookingHost({
       apiUrl={apiUrl}
       slug={slug}
       language="en"
-      afterBooking="stay"
+      afterBooking={{ redirectTo: thankYouHref }}
     >
       <OpenTreatment apiUrl={apiUrl} slug={slug}>
         {children}
       </OpenTreatment>
     </BookingProvider>
   );
+}
+
+/** The thank-you page for a booking just made: its treatment and time, never
+ *  the visitor's own details (the window hands over none). */
+function thankYouHref(booked: BookedType): string {
+  const query = new URLSearchParams({
+    service: booked.serviceName,
+    when: booked.startsAt,
+    zone: booked.timeZone,
+  });
+  return `/thank-you?${query}`;
 }
 
 /** Opens the window on a treatment by its booking id; none opens her list. */
