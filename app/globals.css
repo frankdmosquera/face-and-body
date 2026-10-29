@@ -443,11 +443,42 @@
 }
 
 /**
- * Her colours from Booking CRM's Look page (app/layout.tsx sets the --site-*
- * tokens and names which she saved in data-site-colours). Each of her own
- * tokens above is worked out from them, in the proportions the copper set
- * has; a colour she did not save leaves its tokens as they are. The champagne
- * gold stays: it is the seal's metal, not a theme colour.
+ * Her three hand-made looks, picked by her main colour on Booking CRM's Look
+ * page (app/layout.tsx). "copper" is the base above. Both others move to a
+ * cooler bone ground and deeper bands; gold swaps copper for an antique gold,
+ * espresso makes the actions near-black and keeps gold for the fine details.
+ */
+:root[data-look="gold"],
+:root[data-look="espresso"] {
+  --color-cream: #f5f2ed;
+  --color-surface: #ffffff;
+  --color-sand: #ebe6de;
+  --color-line: #ddd5c9;
+  --color-dark: #171513;
+  --color-dark-surface: #24201d;
+  --color-placeholder: #e4ddd2;
+}
+:root[data-look="gold"] {
+  --color-copper: #8f6f3a;
+  --color-copper-hover: #735828;
+  --color-copper-soft: #d9c59b;
+  --color-copper-tint: #f3ecdd;
+  --color-copper-text: #6e5427;
+}
+:root[data-look="espresso"] {
+  --color-copper: #2b2522;
+  --color-copper-hover: #000000;
+  --color-copper-soft: #d9c59b;
+  --color-copper-tint: #efe9df;
+  --color-copper-text: #8a6a35;
+}
+
+/**
+ * Any other colours she saves (app/layout.tsx sets the --site-* tokens and
+ * names which she saved in data-site-colours). Each of her own tokens above
+ * is worked out from them, in the proportions the copper set has; a colour
+ * she did not save leaves its tokens as they are. The champagne gold stays:
+ * it is the seal's metal, not a theme colour.
  */
 :root[data-site-colours~="main"] {
   --color-copper: var(--site-main);

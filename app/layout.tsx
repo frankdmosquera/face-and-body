@@ -35,15 +35,27 @@ export const metadata: Metadata = {
   description: siteConfig.description,
 };
 
+/** Her three hand-made looks (globals.css), by the main colour that picks
+ *  each on Booking CRM's Look page. Copper is the base, so it sets nothing. */
+const HAND_MADE_LOOKS: Record<string, "copper" | "gold" | "espresso"> = {
+  "#c0704f": "copper",
+  "#8f6f3a": "gold",
+  "#2b2522": "espresso",
+};
+
+/** Her own lightest and darkest, for words on any other main colour. */
+const SITE_INKS = { light: "#fffdf9", dark: "#1c1a17" };
+
 export default async function RootLayout({ children }: LayoutProps<"/">) {
   // Her colours from Booking CRM's Look page, read again once a minute so the
   // pages stay static. None saved, or the API unreachable, leaves her own
-  // copper in globals.css.
-  const siteColours = siteColourTokens(
-    await fetchSiteColours(BOOKING_API_URL, BOOKING_SLUG, {
-      next: { revalidate: 60 },
-    }),
-  );
+  // copper in globals.css. Her main colour picking one of her hand-made looks
+  // shows that look shade for shade; any other is worked out from the three.
+  const theme = await fetchSiteColours(BOOKING_API_URL, BOOKING_SLUG, {
+    next: { revalidate: 60 },
+  });
+  const look = HAND_MADE_LOOKS[theme?.main?.toLowerCase() ?? ""];
+  const siteColours = look ? {} : siteColourTokens(theme, SITE_INKS);
   // Which of the three she saved, for globals.css: "main bg text".
   const savedColours = [
     siteColours["--site-main"] && "main",
@@ -60,6 +72,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
       className={`${cormorant.variable} ${inter.variable} h-full`}
       style={siteColours as CSSProperties}
       data-site-colours={savedColours || undefined}
+      data-look={look === "copper" ? undefined : look}
     >
       <head>
         {/* With DesignPicker on each page, until the options are picked. */}
