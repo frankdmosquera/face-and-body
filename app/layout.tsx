@@ -1,10 +1,14 @@
+import type { CSSProperties } from "react";
 import type { Metadata } from "next";
+import {
+  fetchSiteColours,
+  siteColourTokens,
+} from "@frankdmosquera/booking-component/site-colours";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { BookingHost } from "@/components/booking/BookingHost";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
-import { LookSwitch, lookBootScript } from "@/components/theme/LookSwitch";
 import { designBootScript, designOptionsCss } from "@/lib/designOptions";
 import { siteConfig } from "@/data/siteConfig";
 import { BOOKING_API_URL, BOOKING_SLUG } from "@/lib/bookingConfig";
@@ -31,16 +35,33 @@ export const metadata: Metadata = {
   description: siteConfig.description,
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  // Her colours from Booking CRM's Look page, read again once a minute so the
+  // pages stay static. None saved, or the API unreachable, leaves her own
+  // copper in globals.css.
+  const siteColours = siteColourTokens(
+    await fetchSiteColours(BOOKING_API_URL, BOOKING_SLUG, {
+      next: { revalidate: 60 },
+    }),
+  );
+  // Which of the three she saved, for globals.css: "main bg text".
+  const savedColours = [
+    siteColours["--site-main"] && "main",
+    siteColours["--site-bg"] && "bg",
+    siteColours["--site-text"] && "text",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <html
       lang="en"
       suppressHydrationWarning
       className={`${cormorant.variable} ${inter.variable} h-full`}
+      style={siteColours as CSSProperties}
+      data-site-colours={savedColours || undefined}
     >
       <head>
-        {/* With LookSwitch below, until the client picks a look. */}
-        <script dangerouslySetInnerHTML={{ __html: lookBootScript }} />
         {/* With DesignPicker on each page, until the options are picked. */}
         <style dangerouslySetInnerHTML={{ __html: designOptionsCss }} />
         <script dangerouslySetInnerHTML={{ __html: designBootScript }} />
@@ -52,7 +73,6 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
             <SiteHeader />
             <main className="flex-1">{children}</main>
             <SiteFooter />
-            <LookSwitch />
           </BookingHost>
         </ThemeProvider>
       </body>

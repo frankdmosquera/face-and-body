@@ -443,36 +443,68 @@
 }
 
 /**
- * Three looks on a switch (components/theme/LookSwitch.tsx), kept live until
- * the client picks one (Frank, 2026-10-10). "copper" is the base above. Both new looks
- * move to a cooler bone ground and deeper bands; gold swaps copper for an
- * antique gold, espresso makes the actions near-black and keeps gold for the
- * fine details. Once she picks, the winner's values move into @theme and these
- * go with the switch.
+ * Her colours from Booking CRM's Look page (app/layout.tsx sets the --site-*
+ * tokens and names which she saved in data-site-colours). Each of her own
+ * tokens above is worked out from them, in the proportions the copper set
+ * has; a colour she did not save leaves its tokens as they are. The champagne
+ * gold stays: it is the seal's metal, not a theme colour.
  */
-:root[data-look="gold"],
-:root[data-look="espresso"] {
-  --color-cream: #f5f2ed;
-  --color-surface: #ffffff;
-  --color-sand: #ebe6de;
-  --color-line: #ddd5c9;
-  --color-dark: #171513;
-  --color-dark-surface: #24201d;
-  --color-placeholder: #e4ddd2;
+:root[data-site-colours~="main"] {
+  --color-copper: var(--site-main);
+  --color-copper-hover: color-mix(in oklab, var(--site-main) 82%, black);
+  --color-copper-soft: color-mix(in oklab, var(--site-main) 55%, white);
+  --color-copper-tint: color-mix(
+    in oklab,
+    var(--site-main) 14%,
+    var(--site-bg, #f7f2ea)
+  );
+  --color-copper-ink: var(--site-main-ink);
+  --color-copper-text: var(--site-main-text);
 }
-:root[data-look="gold"] {
-  --color-copper: #8f6f3a;
-  --color-copper-hover: #735828;
-  --color-copper-soft: #d9c59b;
-  --color-copper-tint: #f3ecdd;
-  --color-copper-text: #6e5427;
+:root[data-site-colours~="bg"] {
+  --color-cream: var(--site-bg);
+  --color-surface: color-mix(in oklab, var(--site-bg) 40%, white);
+  --color-sand: color-mix(
+    in oklab,
+    var(--site-text, #1c1a17) 5%,
+    var(--site-bg)
+  );
+  --color-line: color-mix(
+    in oklab,
+    var(--site-text, #1c1a17) 11%,
+    var(--site-bg)
+  );
+  --color-placeholder: color-mix(
+    in oklab,
+    var(--site-text, #1c1a17) 8%,
+    var(--site-bg)
+  );
+  --color-on-dark: var(--site-bg);
+  --color-on-dark-muted: color-mix(
+    in oklab,
+    var(--site-bg) 70%,
+    var(--site-text, #1c1a17)
+  );
 }
-:root[data-look="espresso"] {
-  --color-copper: #2b2522;
-  --color-copper-hover: #000000;
-  --color-copper-soft: #d9c59b;
-  --color-copper-tint: #efe9df;
-  --color-copper-text: #8a6a35;
+:root[data-site-colours~="text"] {
+  --color-ink: var(--site-text);
+  --color-ink-muted: color-mix(
+    in oklab,
+    var(--site-text) 65%,
+    var(--site-bg, #f7f2ea)
+  );
+  --color-faint: color-mix(
+    in oklab,
+    var(--site-text) 40%,
+    var(--site-bg, #f7f2ea)
+  );
+  --color-placeholder-text: color-mix(
+    in oklab,
+    var(--site-text) 50%,
+    var(--site-bg, #f7f2ea)
+  );
+  --color-dark: var(--site-text);
+  --color-dark-surface: color-mix(in oklab, var(--site-text) 90%, white);
 }
 
 /**
@@ -611,7 +643,8 @@
     content: "";
     flex: 1;
     min-width: 2rem;
-    border-bottom: 1px dotted color-mix(in oklab, var(--color-foreground) 30%, transparent);
+    border-bottom: 1px dotted
+      color-mix(in oklab, var(--color-foreground) 30%, transparent);
     translate: 0 -0.3em;
   }
   & [data-card-text] {
