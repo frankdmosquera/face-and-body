@@ -1,9 +1,8 @@
 "use client";
 
 // The panel that flips the design options (lib/designOptions.ts) on the page
-// it sits on. Bottom left, folded to a round icon beside the colour switch
-// (Frank, 2026-10-11: no "Options" label, both controls on the left). Goes
-// with that file once the picks are made.
+// it sits on. Bottom left, folded to a round icon (Frank, 2026-10-11: no
+// "Options" label). Goes with that file once the picks are made.
 
 import { useState, useSyncExternalStore } from "react";
 import { SlidersHorizontal, X } from "lucide-react";
