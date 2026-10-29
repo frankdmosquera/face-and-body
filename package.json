@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
-    "@frankdmosquera/booking-component": "file:vendor/frankdmosquera-booking-component-0.2.7.tgz",
+    "@frankdmosquera/booking-component": "file:vendor/frankdmosquera-booking-component-0.2.8.tgz",
     "@hookform/resolvers": "^5.9.1",
     "@imagekit/next": "^2.1.6",
     "@react-email/components": "^1.0.12",
