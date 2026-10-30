@@ -6,6 +6,7 @@ import {
 } from "@frankdmosquera/booking-component/site-colours";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { BookingHost } from "@/components/booking/BookingHost";
+import { ChatHost } from "@/components/chat/ChatHost";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
@@ -86,6 +87,9 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
             <SiteHeader />
             <main className="flex-1">{children}</main>
             <SiteFooter />
+            {/* The AI chat in the corner, inside BookingHost so its "Book a
+                treatment" opens the same window. */}
+            <ChatHost apiUrl={BOOKING_API_URL} slug={BOOKING_SLUG} />
           </BookingHost>
         </ThemeProvider>
       </body>
