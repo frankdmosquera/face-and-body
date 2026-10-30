@@ -7,6 +7,7 @@ import {
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { BookingHost } from "@/components/booking/BookingHost";
 import { ChatHost } from "@/components/chat/ChatHost";
+import { chatTreatmentTiles } from "@/data/chatTiles";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
@@ -89,7 +90,11 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
             <SiteFooter />
             {/* The AI chat in the corner, inside BookingHost so its "Book a
                 treatment" opens the same window. */}
-            <ChatHost apiUrl={BOOKING_API_URL} slug={BOOKING_SLUG} />
+            <ChatHost
+              apiUrl={BOOKING_API_URL}
+              slug={BOOKING_SLUG}
+              tiles={chatTreatmentTiles()}
+            />
           </BookingHost>
         </ThemeProvider>
       </body>
