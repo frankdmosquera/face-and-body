@@ -704,3 +704,16 @@
     align-self: center;
   }
 }
+
+/* The AI chat in the corner (@frankdmosquera/site-chat). Its CSS reads these
+   tokens and nothing else of the site's: her main colour and its ink, her text
+   and card colours, so it follows her Look page and dark mode like the rest. */
+:root {
+  --sc-accent: var(--primary);
+  --sc-accent-ink: var(--primary-foreground);
+  --sc-text: var(--foreground);
+  --sc-muted: var(--muted-foreground);
+  --sc-surface: var(--card);
+  --sc-bg: var(--muted);
+  --sc-border: var(--border);
+}
