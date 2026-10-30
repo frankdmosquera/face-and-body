@@ -2,7 +2,7 @@ import type {
   ChatAnswersType,
   StoredAnswerType,
 } from "@frankdmosquera/site-chat/words";
-import { categoriesData, categoryHref } from "@/data/categoriesData";
+import { categoriesData } from "@/data/categoriesData";
 import { faqData } from "@/data/faqData";
 
 // What the corner chat answers without the AI, all in her own words: her FAQ,
@@ -10,7 +10,7 @@ import { faqData } from "@/data/faqData";
 // its place, so the order is fixed. The chat downloads this file on its first
 // open; the server reads the same one.
 
-const TREATMENTS_QUESTION = "What treatments do you offer?";
+export const TREATMENTS_QUESTION = "What treatments do you offer?";
 
 const treatmentsAnswer: StoredAnswerType = {
   question: TREATMENTS_QUESTION,
@@ -37,14 +37,7 @@ export const chatAnswers: ChatAnswersType = {
       "Do you do massages?",
     ],
   },
-  tiles: [
-    {
-      question: TREATMENTS_QUESTION,
-      tiles: categoriesData.map((c) => ({
-        label: c.label,
-        note: c.blurb,
-        href: categoryHref(c),
-      })),
-    },
-  ],
+  // Her treatment groups as tiles, each opening to its treatments: built on the
+  // server (data/chatTiles.ts) and added by ChatHost, so the catalogue stays off
+  // the browser.
 };
