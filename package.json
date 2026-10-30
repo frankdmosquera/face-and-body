@@ -13,7 +13,7 @@
     "@ai-sdk/openai": "^4.0.106",
     "@base-ui/react": "^1.8.0",
     "@frankdmosquera/booking-component": "file:vendor/frankdmosquera-booking-component-0.2.12.tgz",
-    "@frankdmosquera/site-chat": "file:vendor/frankdmosquera-site-chat-0.2.4.tgz",
+    "@frankdmosquera/site-chat": "file:vendor/frankdmosquera-site-chat-0.2.5.tgz",
     "@hookform/resolvers": "^5.9.1",
     "@imagekit/next": "^2.1.6",
     "@react-email/components": "^1.0.12",

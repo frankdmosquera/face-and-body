@@ -30,13 +30,14 @@ const hours = siteConfig.hours
   })
   .join(", ");
 
-/** One treatment as her menu shows it: its price, its length, its line. */
+/** One treatment as her menu shows it: its price, its length, its line. One priced at
+ *  consultation gets no length: how long it takes is known only once she has looked. */
 function treatmentLine(service: (typeof servicesData)[number]): string {
-  const price =
+  const priceAndLength =
     service.price === null
       ? "priced at a free consultation"
-      : `${service.priceFrom ? "from " : ""}$${service.price}`;
-  return `${service.name}: ${price}, ${service.durationMin} minutes. ${service.description}`;
+      : `${service.priceFrom ? "from " : ""}${service.price}, ${service.durationMin} minutes`;
+  return `${service.name}: ${priceAndLength}. ${service.description}`;
 }
 
 export const chatSite: ChatSiteType = {
