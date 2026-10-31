@@ -35,8 +35,8 @@ const hours = siteConfig.hours
 function treatmentLine(service: (typeof servicesData)[number]): string {
   const priceAndLength =
     service.price === null
-      ? "priced at a free consultation"
-      : `${service.priceFrom ? "from " : ""}${service.price}, ${service.durationMin} minutes`;
+      ? "no listed price, it is priced at the free consultation"
+      : `${service.priceFrom ? "from " : ""}$${service.price}, ${service.durationMin} minutes`;
   return `${service.name}: ${priceAndLength}. ${service.description}`;
 }
 
@@ -44,6 +44,14 @@ export const chatSite: ChatSiteType = {
   lang: "en",
   answers: chatAnswers,
   words: chatWords,
+  // Every treatment and group by name (and "facial", "massage" said singly): a
+  // question naming one is answered from its own price, length and line, never
+  // from an FAQ that only sounds close.
+  detailWords: [
+    ...servicesData.map((s) => s.name),
+    ...categoriesData.map((c) => c.label),
+    ...categoriesData.map((c) => c.label.replace(/s$/, "")),
+  ],
   brief: {
     business: {
       name: siteConfig.name,
