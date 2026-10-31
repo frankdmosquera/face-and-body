@@ -46,7 +46,8 @@ export function ChatHost({
       words={chatWords}
       loadAnswers={loadAnswers}
       links={chatLinks}
-      booking={{ apiUrl, slug }}
+      // Her next three open days, three times on each (Frank, Oct 31).
+      booking={{ apiUrl, slug, times: { days: 3, perDay: 3 } }}
       onWay={(path) => {
         if (path === "book") openTreatment();
       }}
