@@ -56,6 +56,7 @@ const ANCHOR_TO_TAB: Record<string, string> = Object.fromEntries(
 );
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/other-treatments" },
   title: "Other treatments",
   description:
     "Massage, body contouring, skin treatments and laser at Face and Body Wellness Centre in Midnapore, Calgary SE. Eighteen treatments with prices.",

@@ -56,6 +56,7 @@ const LEDE =
  * table, so nothing that pointed at the old URL breaks.
  */
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact, hours and location",
   description:
     "Text or message Face and Body Wellness Centre in Midnapore, Calgary SE. Seven-day hours, directions and parking.",

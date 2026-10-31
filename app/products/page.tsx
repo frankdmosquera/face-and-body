@@ -29,6 +29,7 @@ const SHELF_BACKGROUNDS: readonly { id: string; slot: ImageSlotType }[] = [
  * knowing the price is not the same as knowing which one you need.
  */
 export const metadata: Metadata = {
+  alternates: { canonical: "/products" },
   title: "Eminence Organics",
   description:
     "Authorised Eminence Organics stockist in Midnapore, Calgary SE. Cleansers, serums, moisturisers and SPF, with prices, sold in the clinic.",
