@@ -36,6 +36,7 @@ import { siteConfig } from "@/data/siteConfig";
  * to undo.
  */
 export const metadata: Metadata = {
+  alternates: { canonical: "/book" },
   title: "Book an appointment",
   description: `Book a treatment at ${siteConfig.name} in Midnapore, Calgary SE.`,
   robots: { index: false, follow: true },

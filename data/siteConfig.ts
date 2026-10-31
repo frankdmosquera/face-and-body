@@ -60,6 +60,8 @@ export type DayHoursType =
 
 export type SiteConfigType = {
   name: string;
+  /** The live address, with www: the bare domain redirects there. Canonicals, the sitemap and the business details use it. */
+  url: string;
   shortName: string;
   subName: string;
   tagline: string;
@@ -101,6 +103,7 @@ const social = {
 
 export const siteConfig: SiteConfigType = {
   name: "Face and Body Wellness Centre",
+  url: "https://www.faceandbodywellnesscentre.com",
   shortName: "Face & Body",
   subName: "Wellness Centre",
   tagline: "Renew. Revitalize. Radiate.",

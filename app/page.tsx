@@ -1,3 +1,4 @@
+import { BusinessJsonLd } from "@/components/business/BusinessJsonLd";
 import type { Metadata } from "next";
 import { Categories } from "@/components/home/Categories";
 import { Consultation } from "@/components/home/Consultation";
@@ -53,6 +54,7 @@ export const revalidate = 86400;
  * page added later that sets nothing, so nothing home-specific belongs in it.
  */
 export const metadata: Metadata = {
+  alternates: { canonical: "/" },
   title: {
     absolute: "Facials in Midnapore, Calgary SE | Face & Body Wellness",
   },
@@ -65,6 +67,7 @@ export default function HomePage() {
     <>
       {/* Until Frank picks the hero, products and consultation options. */}
       <DesignPicker page="home" />
+      <BusinessJsonLd />
       <Hero />
       <TrustStrip />
       <TreatmentRibbon />
